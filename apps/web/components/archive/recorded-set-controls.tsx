@@ -73,7 +73,6 @@ export function RecordedSetControls({
   const gaps = total > 0
     ? (coverage?.gaps ?? []).filter((gap) => Number.isFinite(gap.at) && gap.at >= 0 && gap.at <= total)
     : [];
-  const notes = (coverage?.notes ?? []).filter((note) => note.trim().length > 0);
 
   const playButton = (
     <button
@@ -136,7 +135,6 @@ export function RecordedSetControls({
                     className="recorded-set-gap"
                     key={`${gap.at}-${index}`}
                     style={{ left: `${(gap.at / total) * 100}%` }}
-                    title={`${gap.label} at ${formatDuration(gap.at)}`}
                   />
                 ))}
               </div>
@@ -147,14 +145,6 @@ export function RecordedSetControls({
       {error ? <p className="recorded-set-error" role="alert">{error}</p> : (
         <p className="recorded-set-sr" role="status" aria-live="polite">{status}</p>
       )}
-      {gaps.length > 0 || notes.length > 0 ? (
-        <ul className="recorded-set-coverage" aria-label="Recording coverage">
-          {notes.map((note, index) => <li key={`note-${index}`}>{note}</li>)}
-          {gaps.map((gap, index) => (
-            <li key={`gap-${index}`}>{gap.label} at {formatDuration(gap.at)}</li>
-          ))}
-        </ul>
-      ) : null}
     </div>
   );
 }

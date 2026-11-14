@@ -2753,8 +2753,7 @@ export function ArchiveSetExplorer({
       <main className="shell detail-shell">
         <section className="section" id="overview">
           <div className="section-inner">
-            <div className="kicker">{privateContext ? "Private Yoon Fest recording" : "Set Intelligence Deck"}</div>
-            {privateContext ? <><p role="note">{privateContext.boundaryNote}</p><p>Audio streams directly from Dropbox. Anyone who receives an audio link can play it.</p></> : null}
+            <div className="kicker">Set Intelligence Deck</div>
             <div className="set-hero">
               <div className="set-hero-grid">
                 <div className="set-hero-main" ref={heroMainRef}>

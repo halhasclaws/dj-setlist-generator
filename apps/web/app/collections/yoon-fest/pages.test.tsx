@@ -10,6 +10,7 @@ vi.mock("@/lib/yoon-fest/data.server", () => ({ getYoonSets: mocks.sets, getYoon
 vi.mock("next/navigation", () => ({
   notFound: () => { throw new Error("NOT_FOUND"); }, redirect: mocks.redirect,
 }));
+vi.mock("@/lib/yoon-fest/collection-summary", () => ({ buildYoonCollectionSummary: () => ({}) }));
 vi.mock("@/components/yoon-fest/yoon-access-boundary", () => ({ YoonAccessBoundary: () => null }));
 vi.mock("@/components/yoon-fest/yoon-collection", () => ({ YoonCollection: () => null }));
 vi.mock("@/components/archive/archive-set-explorer", () => ({ ArchiveSetExplorer: () => null }));
@@ -67,7 +68,7 @@ describe("private page and RSC entry gates", () => {
     const element = await run();
     expect(element.props.viewerId).toBe(actor().userId);
     expect(mocks.access).toHaveBeenCalledExactlyOnceWith(actor());
-    expect(mocks.detail).toHaveBeenCalledOnce();
+    expect(mocks.detail).toHaveBeenCalledTimes(mocks.sets.mock.calls.length ? fixture.sets.length : 1);
     expect(mocks.redirect).not.toHaveBeenCalled();
     const dataCallOrder = [...mocks.set.mock.invocationCallOrder, ...mocks.sets.mock.invocationCallOrder][0];
     expect(mocks.access.mock.invocationCallOrder[0]).toBeLessThan(dataCallOrder);

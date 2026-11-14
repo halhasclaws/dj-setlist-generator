@@ -225,8 +225,19 @@ const trackMatchesConfidence = (
   return Number(confidenceCounts[filter] ?? 0) > 0;
 };
 
-const buildTrackAnchorHref = (setSlug: string, trackPosition: number) =>
-  `${buildSetHref({ slug: setSlug })}#track-${trackPosition}`;
+type SetHrefBuilder = (slug: string) => string;
+const defaultSetHref: SetHrefBuilder = (slug) => buildSetHref({ slug });
+
+/** A private collection (Yoon Fest) shown with the artist layout. */
+export type ArtistExplorerCollection = {
+  kicker: string;
+  setHref: SetHrefBuilder;
+  navLinks: Array<{ label: string; href: string }>;
+  spotifyExport: { entityType: "festival"; slug: string; endpoint: "/api/yoon-fest/spotify/export"; label?: string };
+};
+
+const buildTrackAnchorHref = (setSlug: string, trackPosition: number, setHref: SetHrefBuilder = defaultSetHref) =>
+  `${setHref(setSlug)}#track-${trackPosition}`;
 
 const buildRecurringCards = (artist: ArchiveArtistSummary): RecurringCardModel[] =>
   artist.recurringTracks.map((track) => ({
@@ -235,9 +246,9 @@ const buildRecurringCards = (artist: ArchiveArtistSummary): RecurringCardModel[]
     spotifyTrackId: extractSpotifyTrackId(track.spotifyUrl),
   }));
 
-const buildSetCards = (artist: ArchiveArtistSummary): SetCardModel[] =>
+const buildSetCards = (artist: ArchiveArtistSummary, setHref: SetHrefBuilder = defaultSetHref): SetCardModel[] =>
   artist.sets.map((setItem) => {
-    const previewHref = buildSetHref({ slug: setItem.slug });
+    const previewHref = setHref(setItem.slug);
 
     return {
       ...setItem,
@@ -254,10 +265,10 @@ const buildSetCards = (artist: ArchiveArtistSummary): SetCardModel[] =>
     };
   });
 
-const buildAtlasTracks = (artist: ArchiveArtistSummary): AtlasTrackModel[] =>
+const buildAtlasTracks = (artist: ArchiveArtistSummary, setHref: SetHrefBuilder = defaultSetHref): AtlasTrackModel[] =>
   artist.atlasTracks.map((track) => ({
     ...track,
-    previewAnchorHref: buildTrackAnchorHref(track.setSlug, track.idx),
+    previewAnchorHref: buildTrackAnchorHref(track.setSlug, track.idx, setHref),
     searchBlob: buildSearchBlob(
       track.artist,
       track.title,
@@ -573,11 +584,13 @@ export function ArchiveArtistExplorer({
   initialQuery,
   management,
   scope,
+  collection,
 }: {
   artist: ArchiveArtistSummary;
   initialQuery: string;
   management: ArtistManagement;
   scope: "global" | "mine";
+  collection?: ArtistExplorerCollection;
 }) {
   const heroMainRef = useRef<HTMLDivElement | null>(null);
   const heroVisualRef = useRef<HTMLDivElement | null>(null);
@@ -587,8 +600,9 @@ export function ArchiveArtistExplorer({
   const heroRailTrackRef = useRef<HTMLDivElement | null>(null);
   const atlasRailRef = useRef<HTMLDivElement | null>(null);
   const recurringCards = buildRecurringCards(artist);
-  const setCards = buildSetCards(artist);
-  const atlasTracks = buildAtlasTracks(artist);
+  const setHref = collection?.setHref ?? defaultSetHref;
+  const setCards = buildSetCards(artist, setHref);
+  const atlasTracks = buildAtlasTracks(artist, setHref);
   const spotifyExportCounts = useMemo(() => buildArtistSpotifyExportCounts(artist), [artist]);
   const heroRail = buildArtistHeroRail(setCards);
   const heroVisualImageUrl = pickFirstImageUrl([
@@ -1348,7 +1362,8 @@ export function ArchiveArtistExplorer({
 
   useEffect(() => {
     const setIds = visibleSetIdsKey.split(",").filter(Boolean);
-    if (setIds.length === 0) {
+    // Private collections keep listening history out of the public archive API.
+    if (setIds.length === 0 || collection) {
       return;
     }
 
@@ -1396,6 +1411,7 @@ export function ArchiveArtistExplorer({
     return () => {
       controller.abort();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visibleSetIdsKey]);
 
   const jumpToSetExplorer = () => {
@@ -1434,18 +1450,22 @@ export function ArchiveArtistExplorer({
     <div className={styles.root}>
       <ArchiveScrollRoot />
       <ArchiveHeader
+        hideScopeToggle={Boolean(collection)}
+        hideSearch={Boolean(collection)}
+        hideSubmit={Boolean(collection)}
         navLinks={[
+          ...(collection?.navLinks ?? []),
           { label: "Recurring", href: "#recurring-section" },
           { label: "Set Atlas", href: "#set-atlas-section" },
           { label: "Set Explorer", href: "#sets-section" },
-          { label: "Status", href: "#status-section" },
+          ...(collection ? [] : [{ label: "Status", href: "#status-section" }]),
         ]}
       />
 
       <main className="shell">
         <section className="section" id="overview">
           <div className="section-inner">
-            <div className="kicker">Artist Intelligence Deck</div>
+            <div className="kicker">{collection?.kicker ?? "Artist Intelligence Deck"}</div>
             <div className="artist-hero">
               <div className="artist-hero-main" ref={heroMainRef}>
                 <div className="artist-hero-visual" ref={heroVisualRef}>
@@ -1520,7 +1540,7 @@ export function ArchiveArtistExplorer({
           <div className="section-inner">
             <div className="section-head">
               <h2 className="recurring-heading">Recurring Tracks</h2>
-              <p>Repeated track appearances across this artist’s sets.</p>
+              <p>Repeated track appearances across {collection ? "the festival’s" : "this artist’s"} sets.</p>
             </div>
 
             <div className="recurring-controls">
@@ -1625,13 +1645,19 @@ export function ArchiveArtistExplorer({
 
         <section className="section" id="set-atlas-section" style={{ position: "relative" }}>
           <div className="set-atlas-actions" style={{ display: "flex", gap: 8, position: "absolute", right: 24, top: 18, zIndex: 500 }}>
-            <SpotifyExportButton
-              counts={spotifyExportCounts}
-              entityType="artist"
-              scope={scope}
-              slug={artist.slug}
-            />
-            <InlineSubmitButton mode="add-sets" artistName={artist.name} />
+            {collection ? (
+              <SpotifyExportButton counts={spotifyExportCounts} {...collection.spotifyExport} />
+            ) : (
+              <>
+                <SpotifyExportButton
+                  counts={spotifyExportCounts}
+                  entityType="artist"
+                  scope={scope}
+                  slug={artist.slug}
+                />
+                <InlineSubmitButton mode="add-sets" artistName={artist.name} />
+              </>
+            )}
           </div>
           <div className="section-inner">
             <div className="section-head">
@@ -2197,12 +2223,12 @@ export function ArchiveArtistExplorer({
 
         <section className="section" id="sets-section" style={{ position: "relative" }}>
           <div style={{ position: "absolute", top: 18, right: 24, zIndex: 500 }}>
-            <InlineSubmitButton mode="add-sets" artistName={artist.name} />
+            {collection ? null : <InlineSubmitButton mode="add-sets" artistName={artist.name} />}
           </div>
           <div className="section-inner">
             <div className="section-head">
               <h2>Set Explorer</h2>
-              <p>Search across all of this artist&apos;s sets and inspect tracklists.</p>
+              <p>Search across all of {collection ? "the festival" : "this artist"}&apos;s sets and inspect tracklists.</p>
             </div>
 
             <div className="set-panel">
@@ -2345,7 +2371,7 @@ export function ArchiveArtistExplorer({
                       }
                       tracklist={setItem.visibleTracks.map((track) => ({
                         confidence: track.confidence,
-                        href: buildTrackAnchorHref(setItem.slug, track.position),
+                        href: buildTrackAnchorHref(setItem.slug, track.position, setHref),
                         id: `${setItem.id}:${track.position}`,
                         label: `${track.artist} - ${track.title}`,
                         shared: sharedTrackKeySet.has(normalizeSearchText(track.trackKey)),
@@ -2389,6 +2415,11 @@ export function ArchiveArtistExplorer({
           </div>
         </section>
 
+        {collection ? (
+          <div className="footer-note">
+            Generated {formatGeneratedAt(artist.generatedAt)} · Set Signal Explorer
+          </div>
+        ) : (
         <section className="section" id="status-section">
           <div className="section-inner">
             <div className="section-head">
@@ -2421,6 +2452,7 @@ export function ArchiveArtistExplorer({
             </div>
           </div>
         </section>
+        )}
       </main>
     </div>
   );

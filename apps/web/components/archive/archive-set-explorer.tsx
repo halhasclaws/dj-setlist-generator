@@ -2176,10 +2176,16 @@ export function ArchiveSetExplorer({
     playPlayer();
   };
 
+  // Skips keep the current play/pause state, as in Spotify and Apple Music:
+  // skipping while paused moves the playhead without starting playback.
+  const isSetPlayRequested = () => activeSource.kind === "native-audio"
+    ? nativeControllerRef.current?.isPlayRequested() ?? false
+    : isPlayingRef.current || pendingAutoplayRef.current;
+
   const nextTrack = () => {
     const next = nextSkipTarget(skipTargets, currentTimeRef.current);
     if (next != null) {
-      jumpTo(next, false, true);
+      jumpTo(next, false, isSetPlayRequested());
     }
   };
 
@@ -2192,7 +2198,7 @@ export function ArchiveSetExplorer({
       // a repeat press whose restart seek has not been applied yet.
       now - prevTrackPressTsRef.current < PREVIOUS_REPEAT_PRESS_MS,
     );
-    jumpTo(target, false, true);
+    jumpTo(target, false, isSetPlayRequested());
     prevTrackPressTsRef.current = now;
   };
 
@@ -2692,10 +2698,7 @@ export function ArchiveSetExplorer({
       persistLatestPlayerPosition(true);
     },
     seekTo: (seconds) => {
-      const keepPlaying = activeSource.kind === "native-audio"
-        ? nativeControllerRef.current?.isPlayRequested() ?? false
-        : isPlayingRef.current;
-      jumpTo(clamp(seconds, 0, Math.max(0, detail.duration)), false, keepPlaying);
+      jumpTo(clamp(seconds, 0, Math.max(0, detail.duration)), false, isSetPlayRequested());
     },
     previousTrack,
     nextTrack,

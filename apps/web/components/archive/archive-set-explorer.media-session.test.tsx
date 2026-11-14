@@ -135,6 +135,22 @@ describe("system media controls for recordings", () => {
       album: "Synthetic DJ" });
   });
 
+  it("skips while paused without starting playback, like Spotify", async () => {
+    await tick(3121);
+    await press("nexttrack");
+    expect(audio.currentTime).toBe(3128); expect(paused).toBe(true);
+    await press("nexttrack");
+    expect(audio.getAttribute("src")).toBe("/synthetic-b");
+    await metadata();
+    expect(audio.currentTime).toBe(24); expect(paused).toBe(true);
+    await press("previoustrack");
+    await metadata();
+    expect(paused).toBe(true);
+    const next = container.querySelector<HTMLButtonElement>('button[title="Next track"]')!;
+    await act(async () => { next.click(); });
+    expect(paused).toBe(true);
+  });
+
   it("restarts the current track, then goes back a track on a quick second press", async () => {
     let clock = 1_000_000;
     vi.spyOn(Date, "now").mockImplementation(() => clock);

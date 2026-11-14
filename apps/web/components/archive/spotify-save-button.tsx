@@ -11,6 +11,33 @@ function reconnectCallbackUrl() {
   return url.toString();
 }
 
+// Remembers what this browser saved, so closing and reopening a track's Spotify
+// player (or reloading the page) keeps the green check. The site can't ask
+// Spotify which songs are liked without an extra read permission, so a track
+// removed in the Spotify app still shows the check here until pressed.
+const SAVED_KEY = "spotify-saved-tracks";
+const savedTracks = (() => {
+  let cache: Set<string> | null = null;
+  const load = () => {
+    if (cache) return cache;
+    cache = new Set();
+    try {
+      const raw = window.localStorage.getItem(SAVED_KEY);
+      const parsed: unknown = raw ? JSON.parse(raw) : [];
+      if (Array.isArray(parsed)) for (const id of parsed) if (typeof id === "string") cache.add(id);
+    } catch { /* storage unavailable: keep in memory only */ }
+    return cache;
+  };
+  return {
+    has: (id: string) => load().has(id),
+    set: (id: string, saved: boolean) => {
+      const set = load();
+      if (saved) set.add(id); else set.delete(id);
+      try { window.localStorage.setItem(SAVED_KEY, JSON.stringify([...set])); } catch { /* ignore */ }
+    },
+  };
+})();
+
 const PlusIcon = () => (
   <svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true">
     <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1.6" />
@@ -31,7 +58,7 @@ const CheckIcon = () => (
 // built-in "+" cannot be driven from here (cross-origin iframe, separate login).
 // Pressing it again after saving removes the track.
 export function SpotifySaveButton({ trackId, label }: { trackId: string; label: string }) {
-  const [state, setState] = useState<SaveState>("idle");
+  const [state, setState] = useState<SaveState>(() => (savedTracks.has(trackId) ? "saved" : "idle"));
   const [message, setMessage] = useState<string | null>(null);
   const { status } = useSession();
 
@@ -46,6 +73,7 @@ export function SpotifySaveButton({ trackId, label }: { trackId: string; label: 
       });
       const payload = (await response.json().catch(() => ({}))) as { error?: string; reason?: string };
       if (response.ok) {
+        savedTracks.set(trackId, saved);
         setState(saved ? "saved" : "idle");
         return;
       }

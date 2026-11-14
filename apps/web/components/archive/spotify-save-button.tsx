@@ -3,7 +3,7 @@
 import { signIn, useSession } from "next-auth/react";
 import { useState } from "react";
 
-type SaveState = "idle" | "busy" | "saved" | "connect" | "signin" | "error";
+type SaveState = "idle" | "busy" | "saved" | "connect" | "error";
 
 function reconnectCallbackUrl() {
   const url = new URL(window.location.href);
@@ -11,9 +11,25 @@ function reconnectCallbackUrl() {
   return url.toString();
 }
 
-// Saves the track to the viewer's Spotify "Liked Songs" through the site's own
+const PlusIcon = () => (
+  <svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true">
+    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1.6" />
+    <path d="M12 7.5v9M7.5 12h9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true">
+    <circle cx="12" cy="12" r="11" fill="#1db954" />
+    <path d="M7.2 12.3l3.2 3.2 6.4-6.6" fill="none" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+// A small "+" beside the track's Spotify button, shown while its player is
+// open. It saves the track to the viewer's Liked Songs through the site's own
 // Spotify connection, so the listener never leaves the set page. The embed's
 // built-in "+" cannot be driven from here (cross-origin iframe, separate login).
+// Pressing it again after saving removes the track.
 export function SpotifySaveButton({ trackId, label }: { trackId: string; label: string }) {
   const [state, setState] = useState<SaveState>("idle");
   const [message, setMessage] = useState<string | null>(null);
@@ -33,9 +49,7 @@ export function SpotifySaveButton({ trackId, label }: { trackId: string; label: 
         setState(saved ? "saved" : "idle");
         return;
       }
-      if (payload.reason === "connect") { setState("connect"); setMessage(payload.error ?? null); return; }
-      if (payload.reason === "signin") { setState("signin"); return; }
-      setState("error");
+      setState(payload.reason === "connect" ? "connect" : "error");
       setMessage(payload.error ?? "Spotify could not save this track.");
     } catch {
       setState("error");
@@ -45,28 +59,37 @@ export function SpotifySaveButton({ trackId, label }: { trackId: string; label: 
 
   if (status !== "authenticated") return null;
 
-  return <div className="spotify-save" data-state={state}>
-    {state === "saved" ? <>
-      <span className="spotify-save-done" role="status">Saved to your Spotify library</span>
-      <button type="button" className="btn track-tool-btn spotify-save-undo" onClick={() => void update(false)}>Undo</button>
-    </> : state === "connect" ? <>
-      <button type="button" className="btn track-tool-btn spotify-save-btn" onClick={() => void signIn("spotify", { callbackUrl: reconnectCallbackUrl() })}>
-        Allow saving in Spotify
-      </button>
-      {message ? <span className="spotify-save-note">{message}</span> : null}
-    </> : state === "signin" ? (
-      <span className="spotify-save-note">Sign in to save tracks to Spotify.</span>
-    ) : <>
-      <button
-        type="button"
-        className="btn track-tool-btn spotify-save-btn"
-        aria-label={`Save ${label} to your Spotify library`}
-        disabled={state === "busy"}
-        onClick={() => void update(true)}
-      >
-        {state === "busy" ? "Saving…" : "+ Save to Spotify"}
-      </button>
-      {state === "error" && message ? <span className="spotify-save-note" role="alert">{message}</span> : null}
-    </>}
-  </div>;
+  const saved = state === "saved";
+  const title = saved
+    ? "In your Liked Songs. Press to remove."
+    : state === "connect"
+      ? "Allow saving to Spotify (reconnects Spotify once)"
+      : state === "error" && message
+        ? message
+        : "Save to your Spotify Liked Songs";
+
+  return (
+    <button
+      type="button"
+      className="spotify-save-chip"
+      data-state={state}
+      aria-label={saved ? `Remove ${label} from your Spotify Liked Songs` : `Save ${label} to your Spotify Liked Songs`}
+      aria-pressed={saved}
+      title={title}
+      disabled={state === "busy"}
+      onClick={(event) => {
+        event.stopPropagation();
+        if (state === "connect") {
+          void signIn("spotify", { callbackUrl: reconnectCallbackUrl() });
+          return;
+        }
+        void update(!saved);
+      }}
+    >
+      <span className="ico">{saved ? <CheckIcon /> : <PlusIcon />}</span>
+      <span className="visually-hidden" role="status">
+        {saved ? "Saved to Liked Songs" : state === "error" || state === "connect" ? message ?? "" : ""}
+      </span>
+    </button>
+  );
 }

@@ -10,6 +10,42 @@ const formatArchiveGenre = (value: string) =>
     .trim()
     .toLowerCase()
     .replace(/\b[a-z]/g, (letter) => letter.toUpperCase());
+const MIN_PROVISIONAL_GAP_SECONDS = 30;
+
+/**
+ * Read provisional in-span boundaries (N04) from entry metadata. Only values
+ * strictly inside the entry, at least 30s from its edges and from each other,
+ * survive; anything malformed is dropped rather than trusted.
+ */
+export const readProvisionalStarts = (
+  metadata: Record<string, unknown>,
+  start: number,
+  end: number | null,
+): number[] => {
+  const raw = metadata.provisional_boundaries;
+  if (!Array.isArray(raw) || end == null || !(end > start)) return [];
+  const values = raw
+    .map((item) => {
+      if (typeof item === "number") return item;
+      const record = asRecord(item);
+      return getNumber(record.start_seconds);
+    })
+    .filter((value): value is number => typeof value === "number" && Number.isFinite(value))
+    .map((value) => Math.round(value))
+    .filter(
+      (value) =>
+        value >= start + MIN_PROVISIONAL_GAP_SECONDS && value <= end - MIN_PROVISIONAL_GAP_SECONDS,
+    )
+    .sort((left, right) => left - right);
+  const result: number[] = [];
+  for (const value of values) {
+    if (result.length === 0 || value - result[result.length - 1] >= MIN_PROVISIONAL_GAP_SECONDS) {
+      result.push(value);
+    }
+  }
+  return result;
+};
+
 export const mapSetTrack = (row: {
   position: number;
   displayArtist: string;
@@ -106,7 +142,42 @@ export const mapSetTrack = (row: {
     clusterDensity: getNumber(row.clusterDensity),
     clusterSpan: row.clusterSpan,
     sourceDeepLink: row.sourceDeepLink ?? getString(merged.source_deep_link),
+    provisionalStarts: readProvisionalStarts(entryMetadata, row.startTimeSeconds, row.endTimeSeconds),
   };
+};
+
+/**
+ * N04: show an Unknown entry with provisional in-span starts as N consecutive
+ * Unknown rows, one per estimated track. Split starts are estimates from the
+ * audio, so those rows carry `estimatedStart`. Track numbers are renumbered
+ * from the first row's number so they stay consecutive.
+ */
+export const expandProvisionalTracks = (tracks: ArchiveSetTrack[]): ArchiveSetTrack[] => {
+  if (!tracks.some((track) => (track.provisionalStarts?.length ?? 0) > 0)) return tracks;
+  const out: ArchiveSetTrack[] = [];
+  for (const track of tracks) {
+    const starts = track.provisionalStarts ?? [];
+    if (starts.length === 0 || track.title !== "Unknown Track" || track.end == null) {
+      out.push(track);
+      continue;
+    }
+    const edges = [track.start, ...starts, track.end];
+    for (let part = 0; part < edges.length - 1; part += 1) {
+      const start = edges[part];
+      const end = edges[part + 1];
+      out.push({
+        ...track,
+        start,
+        end,
+        startFmt: part === 0 ? track.startFmt : formatDuration(start),
+        endFmt: part === edges.length - 2 ? track.endFmt : formatDuration(end),
+        provisionalStarts: [],
+        estimatedStart: part > 0 ? true : undefined,
+      });
+    }
+  }
+  const base = tracks[0]?.idx ?? 1;
+  return out.map((track, index) => ({ ...track, idx: base + index }));
 };
 
 export const buildTimeline = (

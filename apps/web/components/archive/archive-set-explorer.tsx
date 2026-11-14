@@ -3405,6 +3405,14 @@ export function ArchiveSetExplorer({
                             </div>
                             <div className="track-actions">
                               {showSpotifyButton ? (
+                                <span className="spotify-action-group">
+                                {isSpotifyOpen && track.spotifyTrackId ? (
+                                  <SpotifySaveButton
+                                    key={`save:${track.spotifyTrackId}`}
+                                    trackId={track.spotifyTrackId}
+                                    label={`${track.artist} – ${track.title}`}
+                                  />
+                                ) : null}
                                 <button
                                   className="btn track-tool-btn embed-btn js-spotify-embed"
                                   onClick={(event) => {
@@ -3419,6 +3427,7 @@ export function ArchiveSetExplorer({
                                 >
                                   Spotify
                                 </button>
+                                </span>
                               ) : null}
                               {showYouTubeButton ? (
                                 <a
@@ -3468,13 +3477,6 @@ export function ArchiveSetExplorer({
                                 onRegister={(pause) => audioFocus.register(String(track.idx), pause)}
                                 onPlaying={() => audioFocus.playing(String(track.idx))}
                                 onStopped={() => audioFocus.stopped(String(track.idx))}
-                              />
-                            ) : null}
-                            {isSpotifyOpen && track.spotifyTrackId ? (
-                              <SpotifySaveButton
-                                key={`save:${track.spotifyTrackId}`}
-                                trackId={track.spotifyTrackId}
-                                label={`${track.artist} – ${track.title}`}
                               />
                             ) : null}
                           </div>

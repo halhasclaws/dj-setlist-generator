@@ -1266,43 +1266,59 @@
   display: none;
 }
 
-.root :global(.spotify-save) {
-  display: flex;
-  flex-wrap: wrap;
+.root :global(.spotify-action-group) {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-  font-size: 11px;
+  gap: 5px;
+  flex: none;
 }
 
-.root :global(.spotify-save .spotify-save-btn) {
-  min-height: 28px;
-  height: 28px;
-  padding: 0 10px;
-  font-size: 11px;
-  border-color: #1db954;
-  color: #1db954;
-  background: rgb(12 48 24 / 45%);
+.root :global(.spotify-save-chip) {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #b3b3b3;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
 }
 
-.root :global(.spotify-save .spotify-save-btn:disabled) {
-  opacity: 0.6;
+.root :global(.spotify-save-chip .ico) {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.root :global(.spotify-save-chip:hover),
+.root :global(.spotify-save-chip:focus-visible) {
+  color: #fff;
+}
+
+.root :global(.spotify-save-chip:disabled) {
+  opacity: 0.5;
   cursor: wait;
 }
 
-.root :global(.spotify-save .spotify-save-undo) {
-  min-height: 28px;
-  height: 28px;
-  padding: 0 10px;
-  font-size: 11px;
-}
-
-.root :global(.spotify-save-done) {
+.root :global(.spotify-save-chip[data-state="connect"]) {
   color: #1db954;
 }
 
-.root :global(.spotify-save-note) {
-  color: #a9a9a9;
+.root :global(.spotify-save-chip[data-state="error"]) {
+  color: #ff6b6b;
+}
+
+.root :global(.spotify-save-chip .visually-hidden) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .root :global(.details-grid) {

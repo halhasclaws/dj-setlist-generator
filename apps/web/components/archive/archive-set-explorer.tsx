@@ -3390,8 +3390,8 @@ export function ArchiveSetExplorer({
                                       ? "❚❚"
                                       : "▶"}
                                 </button>
-                                <span className="track-time-label" title={track.estimatedStart ? "Estimated track start" : "Track timestamp"}>
-                                  {track.estimatedStart ? "~" : ""}{track.startFmt}
+                                <span className="track-time-label" title="Track timestamp">
+                                  {track.startFmt}
                                 </span>
                               </div>
                               <div className="track-main">
@@ -3402,14 +3402,6 @@ export function ArchiveSetExplorer({
                                 </div>
                                 <div className="track-meta">
                                   <span className={joinClasses("pill", "confidence-pill", confidenceClass)}>{track.conf}</span>
-                                  {track.estimatedStart ? (
-                                    <span
-                                      className="pill provisional-pill"
-                                      title="Estimated from changes in the audio, not identified. The start time is approximate."
-                                    >
-                                      estimated start
-                                    </span>
-                                  ) : null}
                               </div>
                             </div>
                             <div className="track-actions">

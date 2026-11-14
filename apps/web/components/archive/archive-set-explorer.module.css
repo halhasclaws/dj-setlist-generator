@@ -2544,8 +2544,3 @@
   outline-offset: 3px;
 }
 
-/* N04: Unknown rows split at an estimated track change. Dashed to read as provisional. */
-.root :global(.provisional-pill) {
-  border-style: dashed;
-  opacity: 0.85;
-}

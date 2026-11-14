@@ -204,6 +204,18 @@ describe("system media controls for recordings", () => {
     expect(session.playbackState).toBe("playing"); expect(session.positions.at(-1)!.playbackRate).toBe(1);
   });
 
+  it("calls play() before any other work on a lock-screen Play", async () => {
+    await press("play"); await tick(3125); await press("pause");
+    const order: string[] = [];
+    vi.stubGlobal("MediaMetadata", class { constructor(init: MediaMetadataInit) { order.push("metadata"); Object.assign(this, init); } });
+    const play = vi.mocked(HTMLMediaElement.prototype.play);
+    const original = play.getMockImplementation()!;
+    play.mockImplementation(function (this: HTMLMediaElement) { order.push("play"); return original.call(this); });
+    await press("play");
+    expect(order[0]).toBe("play");
+    expect(paused).toBe(false); expect(audio.currentTime).toBe(3125);
+  });
+
   it("resumes from the lock screen after a pause while the recording reloads", async () => {
     await press("play"); await tick(3125);
     await press("pause");

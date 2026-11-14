@@ -2041,17 +2041,24 @@ export function ArchiveSetExplorer({
     awaitingPlaybackProgressRef.current = true;
     playbackStartedRef.current = true;
     const startAtSeconds = clamp(pendingSeekRef.current ?? seekOnPlayRef.current ?? currentTimeRef.current, 0, Math.max(0, detail.duration));
-    updateFromTime(startAtSeconds, false);
-    publishNowPlayingMetadata();
     if (activeSource.kind === "native-audio") {
-      setNativeAudioError(null);
       if (seekOnPlayRef.current !== null || pendingSeekRef.current !== null || !nativeControllerRef.current) {
+        updateFromTime(startAtSeconds, false);
         seekPlayer(startAtSeconds >= detail.duration ? 0 : startAtSeconds, false, true);
       } else {
+        // Call play() before any other work. A lock-screen Play reaches a
+        // suspended background page that iOS wakes only briefly; on Hal's
+        // Simulator the bookkeeping below ran first and delayed play() by
+        // 1.6s, after which iOS gave the lock screen to another app.
         nativeControllerRef.current.resume(replayAtEnd);
+        updateFromTime(nativeControllerRef.current.position(), false);
       }
+      setNativeAudioError(null);
+      publishNowPlayingMetadata();
       return;
     }
+    updateFromTime(startAtSeconds, false);
+    publishNowPlayingMetadata();
 
     if (activeSource.kind === "youtube") {
       if (ytEmbedBlocked) {

@@ -59,6 +59,17 @@ describe("SpotifySaveButton (N07)", () => {
     expect(button()!.dataset.state).toBe("idle");
   });
 
+  it("shows no icon until Spotify answers, then the right one", async () => {
+    let answer!: (response: Response) => void;
+    fetchMock.mockImplementation(() => new Promise<Response>((resolve) => { answer = resolve; }));
+    await act(async () => root.render(<></>));
+    await act(async () => root.render(<SpotifySaveButton trackId="1td1eyIYb2x6ooPiSn2TTG" label="y" />));
+    expect(host.querySelector("button")).toBeNull();
+    expect(host.querySelector(".spotify-save-chip")!.getAttribute("data-state")).toBe("checking");
+    await act(async () => answer(reply({ saved: true })));
+    expect(host.querySelector("button")!.dataset.state).toBe("saved");
+  });
+
   it("asks to reconnect when the read permission is missing", async () => {
     fetchMock.mockImplementation(async () => reply({ reason: "connect", error: "Reconnect" }, 409));
     await remount();

@@ -1295,6 +1295,10 @@
   cursor: wait;
 }
 
+.root :global(.spotify-save-chip[data-state="checking"]) {
+  visibility: hidden;
+}
+
 .root :global(.spotify-save-chip[data-state="connect"]) {
   color: #1db954;
 }

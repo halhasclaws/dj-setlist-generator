@@ -3,7 +3,7 @@
 import { signIn, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 
-type SaveState = "idle" | "busy" | "saved" | "connect" | "error";
+type SaveState = "checking" | "idle" | "busy" | "saved" | "connect" | "error";
 
 function reconnectCallbackUrl() {
   const url = new URL(window.location.href);
@@ -36,7 +36,12 @@ const CheckIcon = () => (
 // built-in "+" cannot be driven from here (cross-origin iframe, separate login).
 // Pressing it again after saving removes the track.
 export function SpotifySaveButton({ trackId, label }: { trackId: string; label: string }) {
-  const [state, setState] = useState<SaveState>(() => (knownSaved.get(trackId) ? "saved" : "idle"));
+  const [state, setState] = useState<SaveState>(() => {
+    // Until Spotify answers, show nothing rather than a "+" that may flip to
+    // the check a moment later. A state seen earlier on this page shows at once.
+    const known = knownSaved.get(trackId);
+    return known === undefined ? "checking" : known ? "saved" : "idle";
+  });
   const [message, setMessage] = useState<string | null>(null);
   const { status } = useSession();
   const changed = useRef(false);
@@ -56,8 +61,13 @@ export function SpotifySaveButton({ trackId, label }: { trackId: string; label: 
         } else if (payload.reason === "connect") {
           setState("connect");
           setMessage(payload.error ?? null);
+        } else {
+          setState((current) => (current === "checking" ? "idle" : current));
         }
-      } catch { /* keep the last known state */ }
+      } catch {
+        // Spotify unreachable: fall back to a plain "+" (saving still works).
+        if (!cancelled) setState((current) => (current === "checking" ? "idle" : current));
+      }
     })();
     return () => { cancelled = true; };
   }, [status, trackId]);
@@ -87,6 +97,8 @@ export function SpotifySaveButton({ trackId, label }: { trackId: string; label: 
   };
 
   if (status !== "authenticated") return null;
+  // Hold the space so the Spotify button doesn't shift when the icon appears.
+  if (state === "checking") return <span className="spotify-save-chip" data-state="checking" aria-hidden="true" />;
 
   const saved = state === "saved";
   const title = saved

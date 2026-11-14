@@ -44,7 +44,7 @@ function ReplayIcon() {
 // never renders the private audio URL.
 export function RecordedSetControls({
   currentTime, duration, isPlaying, ready, buffering, unavailable, error,
-  onTogglePlay, onSeek, title, artworkUrl, nowPlaying, coverage, variant = "widget",
+  onTogglePlay, onSeek, title, artworkUrl, nowPlaying, variant = "widget",
 }: {
   currentTime: number;
   duration: number;
@@ -58,6 +58,7 @@ export function RecordedSetControls({
   title?: string;
   artworkUrl?: string | null;
   nowPlaying?: { title: string; artist: string } | null;
+  /** Accepted for compatibility; gap markers are intentionally not drawn. */
   coverage?: RecordedSetCoverage | null;
   variant?: RecordedSetVariant;
 }) {
@@ -70,9 +71,6 @@ export function RecordedSetControls({
   const status = error ? null : !ready ? "Loading recording. Press Play to start." :
     buffering ? "Buffering…" : isPlaying ? "Playing" : ended ? "End of set" : "Paused";
   const waiting = !error && (buffering || (!ready && isPlaying));
-  const gaps = total > 0
-    ? (coverage?.gaps ?? []).filter((gap) => Number.isFinite(gap.at) && gap.at >= 0 && gap.at <= total)
-    : [];
 
   const playButton = (
     <button
@@ -128,17 +126,6 @@ export function RecordedSetControls({
               disabled={disabled || !ready}
               onCommit={onSeek}
             />
-            {gaps.length > 0 ? (
-              <div className="recorded-set-gaps" aria-hidden="true">
-                {gaps.map((gap, index) => (
-                  <span
-                    className="recorded-set-gap"
-                    key={`${gap.at}-${index}`}
-                    style={{ left: `${(gap.at / total) * 100}%` }}
-                  />
-                ))}
-              </div>
-            ) : null}
           </div>
         </div>
       </div>

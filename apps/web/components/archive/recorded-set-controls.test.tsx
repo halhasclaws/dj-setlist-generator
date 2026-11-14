@@ -85,13 +85,12 @@ describe("set-relative recording controls", () => {
     expect(html.match(/aria-label="Play set"/g)).toHaveLength(1);
   });
 
-  it("marks in-range gaps on the set clock without disclaimer text", () => {
+  it("draws no gap markers or coverage text on the timeline", () => {
     const html = renderToStaticMarkup(<RecordedSetControls {...base} coverage={{
       notes: ["This set is partial: the recording starts after the scheduled start."],
       gaps: [{ at: 1800, label: "Recording gap (modeled, length unknown)" }, { at: 9000, label: "Out of range" }, { at: Number.NaN, label: "Bad" }],
     }} />);
-    expect(html.match(/class="recorded-set-gap"/g)).toHaveLength(1);
-    expect(html).toContain("left:25%");
+    expect(html).not.toContain("recorded-set-gap");
     expect(html).not.toContain("This set is partial");
     expect(html).not.toContain("Recording gap");
     expect(html).not.toContain("Recording coverage");

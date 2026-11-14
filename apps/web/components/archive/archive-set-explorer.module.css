@@ -2308,25 +2308,6 @@
   height: 44px;
 }
 
-.root :global(.recorded-set-gaps) {
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  right: 0;
-  bottom: -3px;
-  height: 12px;
-  pointer-events: none;
-}
-
-.root :global(.recorded-set-gap) {
-  position: absolute;
-  top: 0;
-  width: 3px;
-  height: 12px;
-  margin-left: -1.5px;
-  background: var(--violet);
-}
-
 /* Widget: the SoundCloud embed footprint (art left, play beside the title). */
 .root :global(.recorded-set-controls.is-widget .recorded-set-window) {
   display: grid;

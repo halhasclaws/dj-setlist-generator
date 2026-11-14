@@ -4,7 +4,7 @@ name: sampling-compare
 # development database only, read-only). Each arm is a (window, stride) grid
 # re-recognized on the same master audio through the production throttle-aware
 # recognizer; the baseline arm is the recorded 30s/15s evidence. Logs carry
-# counts only; shard hits pass between jobs only as encrypted one-day artifacts.
+# counts only; shard hits pass between jobs only as encrypted three-day artifacts.
 # Runs only when the owner commits .github/sampling-compare-request.json.
 on:
   push:
@@ -82,19 +82,18 @@ jobs:
         env:
           DATABASE_URL_DIRECT: ${{ secrets.DEVELOPMENT_DATABASE_URL_DIRECT }}
           SAMPLING_SOURCE_LINKS: ${{ secrets.SAMPLING_SOURCE_LINKS }}
-          HITS_KEY: ${{ secrets.SAMPLING_HITS_KEY }}
           HITS_OUTPUT: ${{ runner.temp }}/hits.bin
         run: python -m worker.jobs.yoon_sampling_compare recognize
       - uses: actions/upload-artifact@v4
         with:
           name: hits-${{ matrix.shard.set }}-${{ matrix.shard.arm }}-${{ matrix.shard.index }}
           path: ${{ runner.temp }}/hits.bin
-          retention-days: 1
+          retention-days: 3
           if-no-files-found: ignore
 
   combine:
     needs: [plan, recognize]
-    if: ${{ always() && needs.plan.result == 'success' }}
+    if: ${{ !cancelled() && needs.plan.result == 'success' }}
     strategy:
       fail-fast: false
       matrix:
@@ -118,6 +117,6 @@ jobs:
       - name: Cluster and count every arm (counts only)
         env:
           DATABASE_URL_DIRECT: ${{ secrets.DEVELOPMENT_DATABASE_URL_DIRECT }}
-          HITS_KEY: ${{ secrets.SAMPLING_HITS_KEY }}
+          SAMPLING_SOURCE_LINKS: ${{ secrets.SAMPLING_SOURCE_LINKS }}
           HITS_DIR: ${{ runner.temp }}/hits
         run: python -m worker.jobs.yoon_sampling_compare combine

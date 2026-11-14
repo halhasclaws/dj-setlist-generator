@@ -17,7 +17,7 @@ Safety and privacy:
     once a family is released (the DB seals them).
   * The repository and its logs are public: logs carry counts only. Shard hits
     pass between jobs only as AES-256 encrypted artifacts (key: HITS_KEY secret
-    material), are reduced to what clustering needs, and expire after one day.
+    material), are reduced to what clustering needs, and expire after three days.
 
   python -m worker.jobs.yoon_sampling_compare plan       # writes matrix JSON
   python -m worker.jobs.yoon_sampling_compare recognize  # one (set, arm, shard)
@@ -46,7 +46,8 @@ STUDY_DEADLINE_SECONDS = int(os.getenv('STUDY_DEADLINE_SECONDS', '19800'))
 MAX_RETRY_SECONDS = int(os.getenv('MAX_RETRY_SECONDS', '1800'))
 SHARD_WINDOWS = int(os.getenv('SHARD_WINDOWS', '120'))
 MAX_ARM_WINDOWS = int(os.getenv('MAX_ARM_WINDOWS', '2000'))
-MAX_JOBS = 250
+MAX_JOBS = 80  # 4 waves of 20 x 5.5 h fits the 3-day artifact retention
+MAX_WINDOW_PASSES = 6  # non-throttle failures per window before it counts as unresolved
 BASELINE = {'name': 'w30s15', 'window': 30, 'stride': 15}
 
 
@@ -115,29 +116,60 @@ def reduce_hit(index: int, recognized: bool, raw: dict) -> dict:
     slim = {'matches': [{}] if recognized else []}
     if recognized:
         slim['track'] = {k: track[k] for k in ('key', 'title', 'subtitle') if k in track}
-        if track.get('isrc'):
-            slim['track']['isrc'] = track['isrc']
     return {'index': index, 'response': {'recognized': recognized, 'raw_data': slim}}
 
 
+def time_normalised_min_cluster(arm: dict) -> int:
+    """Production needs MIN_CLUSTER_SIZE detections at a 15 s stride; keep that
+    span of evidence in seconds instead of in detections."""
+    from config import Config
+    return max(Config.MIN_CLUSTER_SIZE,
+               math.ceil(Config.MIN_CLUSTER_SIZE * BASELINE['stride'] / arm['stride']))
+
+
 def identified(grid: list[dict], hits: list[dict], arm: dict) -> dict:
-    with grid_constants(*arm_frames(arm)), contextlib.redirect_stdout(io.StringIO()):
-        entries = base.cluster(grid, hits)  # SetlistBuilder prints titles: silenced
+    """Clustering counts in detections and segment indices, so denser grids pass
+    its thresholds with less audio. Report the production rule and a
+    time-normalised rule; distinct_tracks is threshold-free."""
+    from config import Config
+    def count(min_cluster):
+        with grid_constants(*arm_frames(arm)), contextlib.redirect_stdout(io.StringIO()), \
+                patch_attr(Config, 'MIN_CLUSTER_SIZE', min_cluster):
+            return len(base.cluster(grid, hits))  # SetlistBuilder prints titles: silenced
     recognized = [h for h in hits if h['response']['recognized']]
     keys = {h['response']['raw_data']['track']['key'] for h in recognized}
     return {'windows': len(grid), 'recognized_windows': len(recognized),
-            'distinct_tracks': len(keys), 'identified_entries': len(entries)}
+            'distinct_tracks': len(keys),
+            'identified_entries': count(Config.MIN_CLUSTER_SIZE),
+            'identified_entries_time_normalised': count(time_normalised_min_cluster(arm))}
+
+
+@contextlib.contextmanager
+def patch_attr(owner, name, value):
+    saved = getattr(owner, name)
+    setattr(owner, name, value)
+    try:
+        yield
+    finally:
+        setattr(owner, name, saved)
 
 
 # ---------------------------------------------------------------- encryption
 
+def hits_key() -> str:
+    """Derived from the SAMPLING_SOURCE_LINKS secret, so no further secret exists."""
+    import hashlib
+    material = os.environ.get('SAMPLING_SOURCE_LINKS') or ''
+    if len(material) < 32:
+        raise SystemExit('hits_key_material_missing')
+    return hashlib.sha256(b'd07-sampling-hits-v1|' + material.encode()).hexdigest()
+
+
 def _openssl(args: list[str], data: bytes) -> bytes:
-    key = os.environ.get('HITS_KEY') or ''
-    if len(key) < 32:
-        raise SystemExit('hits_key_missing')
+    env = {'PATH': os.environ.get('PATH', '/usr/bin:/bin'), 'HITS_KEY': hits_key()}
     return subprocess.run(['openssl', 'enc', '-aes-256-cbc', '-pbkdf2', '-iter', '200000',
                            '-salt', *args, '-pass', 'env:HITS_KEY'],
-                          input=data, capture_output=True, check=True).stdout
+                          input=data, capture_output=True, check=True, env=env).stdout
 
 
 def seal(payload: dict) -> bytes:
@@ -216,6 +248,7 @@ async def recognize_windows(grid: list[dict], window_frames: int, links: dict,
         recognizer = TrackRecognizer(quiet=True, on_attempt=on_attempt,
                                      max_retry_seconds=MAX_RETRY_SECONDS,
                                      continuation_deadline=deadline)
+        failures: dict[int, int] = {}
         try:
             while len(done) < len(grid):
                 if deadline - time.monotonic() < 1:
@@ -238,13 +271,18 @@ async def recognize_windows(grid: list[dict], window_frames: int, links: dict,
                     with contextlib.redirect_stdout(io.StringIO()):
                         results = await recognizer.recognize_batch(segments, total_segments=len(grid))
                     for segment, result in zip(segments, results):
-                        if not result.is_valid or not isinstance(result.raw_data, dict):
+                        track = (result.raw_data or {}).get('track') or {} if isinstance(result.raw_data, dict) else {}
+                        incomplete = (result.is_valid and isinstance(result.raw_data, dict) and result.recognized
+                                      and not all(str(track.get(k) or '').strip() for k in ('key', 'title', 'subtitle')))
+                        if not result.is_valid or not isinstance(result.raw_data, dict) or incomplete:
+                            stats['identity_incomplete'] += bool(incomplete)
+                            if result.http_status != 429:
+                                failures[segment['index']] = failures.get(segment['index'], 0) + 1
+                                if failures[segment['index']] >= MAX_WINDOW_PASSES:
+                                    # Persistently failing (not throttled): count it, treat as unrecognized.
+                                    stats['unresolved'] += 1
+                                    done[segment['index']] = reduce_hit(segment['index'], False, {})
                             continue
-                        track = result.raw_data.get('track') or {}
-                        if result.recognized and not all(str(track.get(k) or '').strip()
-                                                         for k in ('key', 'title', 'subtitle')):
-                            stats['identity_incomplete'] += 1
-                            continue  # retried like any unresolved window
                         done[segment['index']] = reduce_hit(segment['index'], bool(result.recognized),
                                                             result.raw_data)
                 base.say(f'pass {stats["passes"]}: {len(done)}/{len(grid)} windows, '
@@ -293,10 +331,12 @@ async def recognize() -> int:
     if sid not in sets or not 0 <= index < count:
         raise SystemExit('shard_bounds')
     progress = base.call('yoon_partial_progress', sid)
+    if progress is None:
+        raise SystemExit('unknown partial family')
     grid = arm_grid(progress['fragments'], arm)
     lo, hi = base.shard_bounds(len(grid), index, count)
     stats = {'calls': 0, 'throttled': 0, 'backoff_seconds': 0.0, 'passes': 0,
-             'identity_incomplete': 0}
+             'identity_incomplete': 0, 'unresolved': 0}
     started = time.monotonic()
     hits = await recognize_windows(grid[lo:hi], arm_frames(arm)[0], source_links(sid, progress),
                                    stats, started + STUDY_DEADLINE_SECONDS)
@@ -317,10 +357,13 @@ def combine() -> int:
     if len(grid_a) != progress['expected']:
         raise SystemExit('window_grid_mismatch')
     evidence = base.call('yoon_partial_hits_for', sid)
-    results = {BASELINE['name']: {**identified(grid_a, evidence['hits'], BASELINE),
-                                  'window': 30, 'stride': 15,
-                                  'analysed_overlap': analysed_overlap(BASELINE),
-                                  'recorded': True}}
+    baseline = {'window': 30, 'stride': 15, 'analysed_overlap': analysed_overlap(BASELINE),
+                'recorded': True}
+    if sorted(h['index'] for h in evidence['hits']) == [w['index'] for w in grid_a]:
+        baseline.update(identified(grid_a, evidence['hits'], BASELINE))
+    else:
+        baseline['status'] = 'incomplete recorded evidence'
+    results = {BASELINE['name']: baseline}
     shards: dict[str, list[dict]] = {}
     for blob in sorted(Path(os.environ.get('HITS_DIR', 'hits')).rglob('*.bin')):
         payload = unseal(blob.read_bytes())
@@ -329,7 +372,10 @@ def combine() -> int:
     for arm in arms:
         grid = arm_grid(progress['fragments'], arm)
         parts = sorted(shards.get(arm['name'], []), key=lambda p: p['index'])
-        complete = bool(parts) and len(parts) == parts[0]['count'] and (
+        complete = bool(parts) and len(parts) == parts[0]['count'] and all(
+            p['count'] == parts[0]['count'] and len(p['hits']) == p['hi'] - p['lo']
+            and [h['index'] for h in p['hits']] == [w['index'] for w in grid[p['lo']:p['hi']]]
+            for p in parts) and (
             [(p['index'], p['lo'], p['hi']) for p in parts]
             == [(i, *base.shard_bounds(len(grid), i, parts[0]['count']))
                 for i in range(parts[0]['count'])])
@@ -340,7 +386,7 @@ def combine() -> int:
         else:
             hits = [h for p in parts for h in p['hits']]
             row.update(identified(grid, hits, arm))
-            for key in ('calls', 'throttled', 'identity_incomplete'):
+            for key in ('calls', 'throttled', 'identity_incomplete', 'unresolved'):
                 row[key] = sum(p['stats'][key] for p in parts)
             row['backoff_seconds'] = round(sum(p['stats']['backoff_seconds'] for p in parts))
             row['shard_runtime_max_seconds'] = max(p['stats']['runtime_seconds'] for p in parts)
@@ -368,7 +414,10 @@ def main(argv: list[str]) -> int:
     base.quiet_process()
     try:
         return run(argv)
-    except SystemExit:
+    except SystemExit as stop:
+        if isinstance(stop.code, str):
+            base.say(f'stopped: {stop.code}')  # every reason here is counts-only text
+            raise SystemExit(2)
         raise
     except BaseException as error:  # Only the class name: messages can carry private data.
         base.say(f'failed: {type(error).__name__}')

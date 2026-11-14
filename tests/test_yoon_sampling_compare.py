@@ -15,7 +15,7 @@ from worker.jobs import yoon_sampling_compare as compare
 
 RATE = base.RATE
 SET = sorted(base.SET_IDS)[0]
-KEY = 'k' * 40
+KEY = '{"links": [{"name": "m.wav", "href": "x"}]}'
 
 
 def fragment(seconds, start=0, index=0):
@@ -78,26 +78,38 @@ class CountTests(unittest.TestCase):
             result = compare.identified(grid, hits, a)
         self.assertEqual(out.getvalue(), '')  # nothing private printed
         self.assertEqual(result, {'windows': len(grid), 'recognized_windows': 16,
-                                  'distinct_tracks': 2, 'identified_entries': 2})
+                                  'distinct_tracks': 2, 'identified_entries': 2,
+                                  'identified_entries_time_normalised': 2})
+
+    def test_time_normalised_rule_requires_same_seconds_of_evidence(self):
+        from config import Config
+        a = arm('a', 12, 3)
+        self.assertEqual(compare.time_normalised_min_cluster(a), Config.MIN_CLUSTER_SIZE * 5)
+        self.assertEqual(compare.time_normalised_min_cluster(compare.BASELINE), Config.MIN_CLUSTER_SIZE)
+        grid = compare.arm_grid([fragment(300)], a)
+        hits = [hit(w['index'], 'k1' if w['index'] < 4 else None) for w in grid]  # 4 detections = ~12 s
+        result = compare.identified(grid, hits, a)
+        self.assertEqual((result['identified_entries'], result['identified_entries_time_normalised']), (1, 0))
+        self.assertEqual(Config.MIN_CLUSTER_SIZE, 3)  # restored
 
     def test_reduce_hit_keeps_only_cluster_fields(self):
         raw = {'matches': [{'offset': 1}], 'track': {'key': 'k', 'title': 't', 'subtitle': 's',
                                                      'isrc': 'I', 'images': {'x': 'y'}}, 'location': {}}
         self.assertEqual(compare.reduce_hit(4, True, raw)['response']['raw_data'],
-                         {'matches': [{}], 'track': {'key': 'k', 'title': 't', 'subtitle': 's', 'isrc': 'I'}})
+                         {'matches': [{}], 'track': {'key': 'k', 'title': 't', 'subtitle': 's'}})
         self.assertEqual(compare.reduce_hit(4, False, {'matches': []})['response']['raw_data'], {'matches': []})
 
 
 @unittest.skipUnless(shutil.which('openssl'), 'openssl required')
 class SealTests(unittest.TestCase):
     def test_round_trip_and_ciphertext_hides_content(self):
-        with patch.dict(os.environ, {'HITS_KEY': KEY}):
+        with patch.dict(os.environ, {'SAMPLING_SOURCE_LINKS': KEY}):
             blob = compare.seal({'title': 'Secret Song'})
             self.assertNotIn(b'Secret', blob)
             self.assertEqual(compare.unseal(blob), {'title': 'Secret Song'})
 
     def test_short_key_refused(self):
-        with patch.dict(os.environ, {'HITS_KEY': 'short'}):
+        with patch.dict(os.environ, {'SAMPLING_SOURCE_LINKS': 'short'}):
             with self.assertRaises(SystemExit):
                 compare.seal({})
 
@@ -133,7 +145,8 @@ def result(status=200, recognized=False, raw=None, throttles=0):
 
 
 def new_stats():
-    return {'calls': 0, 'throttled': 0, 'backoff_seconds': 0.0, 'passes': 0, 'identity_incomplete': 0}
+    return {'calls': 0, 'throttled': 0, 'backoff_seconds': 0.0, 'passes': 0, 'identity_incomplete': 0,
+            'unresolved': 0}
 
 
 class RecognizeTests(unittest.TestCase):
@@ -180,6 +193,18 @@ class RecognizeTests(unittest.TestCase):
         grid, hits, stats = self.run_windows(lambda s, n: result(200, True, bad) if n == 1 else result())
         self.assertEqual(len(hits), len(grid))
         self.assertEqual(stats['identity_incomplete'], 1)
+        self.assertEqual(stats['unresolved'], 0)
+
+    def test_persistent_non_throttle_failure_becomes_unresolved(self):
+        grid, hits, stats = self.run_windows(lambda s, n: result(500) if s['index'] == 0 else result())
+        self.assertEqual(len(hits), len(grid))
+        self.assertEqual(stats['unresolved'], 1)
+        self.assertEqual(stats['passes'], compare.MAX_WINDOW_PASSES)
+        self.assertFalse(hits[0]['response']['recognized'])
+
+    def test_throttled_window_never_counts_as_unresolved(self):
+        with self.assertRaisesRegex(compare.Inconclusive, 'deadline_with_'):
+            self.run_windows(lambda s, n: result(429) if s['index'] == 0 else result(), deadline=2)
 
     def test_deadline_reports_unresolved_windows(self):
         with self.assertRaisesRegex(compare.Inconclusive, 'deadline_with_'):
@@ -196,6 +221,30 @@ class RecognizeTests(unittest.TestCase):
                     patch.object(base, 'fetch_range', fetch):
                 asyncio.run(compare.recognize_windows(grid, 30 * RATE, {'m.wav': 'x'}, new_stats(),
                                                       compare.time.monotonic() + 60))
+
+
+class MainTests(unittest.TestCase):
+    def test_stop_reason_reaches_log_as_counts_only_text(self):
+        printed = []
+        with patch.object(base, 'quiet_process'), patch.object(base, 'say', printed.append), \
+                patch.object(compare, 'run', side_effect=SystemExit('arm_parameters_invalid')):
+            with self.assertRaises(SystemExit):
+                compare.main(['plan'])
+        self.assertEqual(printed, ['stopped: arm_parameters_invalid'])
+
+    def test_unexpected_error_logs_class_name_only(self):
+        printed = []
+        with patch.object(base, 'quiet_process'), patch.object(base, 'say', printed.append), \
+                patch.object(compare, 'run', side_effect=KeyError('private name')):
+            self.assertEqual(compare.main(['plan']), 1)
+        self.assertEqual(printed, ['failed: KeyError'])
+
+    def test_inconclusive_shard_writes_no_hits(self):
+        printed = []
+        with patch.object(compare, 'recognize', side_effect=compare.Inconclusive('deadline_with_3_windows_unresolved')), \
+                patch.object(base, 'say', printed.append):
+            self.assertEqual(compare.run(['recognize']), 4)
+        self.assertEqual(printed, ['INCONCLUSIVE: deadline_with_3_windows_unresolved'])
 
 
 class SourceLinkTests(unittest.TestCase):
@@ -235,8 +284,8 @@ class CommandTests(unittest.TestCase):
         return {'yoon_partial_progress': self.progress, 'yoon_partial_hits_for': self.evidence}[name]
 
     def test_end_to_end_counts_only(self):
-        env = {'HITS_KEY': KEY, 'YOON_PARTIAL_SET_ID': SET, 'PLAN_OUTPUT': str(self.dir / 'plan.json'),
-               'SAMPLING_SOURCE_LINKS': '{"links": [{"name": "m.wav", "href": "x"}]}'}
+        env = {'SAMPLING_SOURCE_LINKS': KEY, 'YOON_PARTIAL_SET_ID': SET,
+               'PLAN_OUTPUT': str(self.dir / 'plan.json')}
         printed = []
         async def fake_windows(grid, frames, links, stats, deadline):
             stats.update(calls=len(grid), runtime_seconds=0)
@@ -266,13 +315,23 @@ class CommandTests(unittest.TestCase):
         self.assertNotIn('Tk', ''.join(printed))
 
     def test_missing_shard_reports_incomplete(self):
-        env = {'HITS_KEY': KEY, 'YOON_PARTIAL_SET_ID': SET, 'HITS_DIR': str(self.dir / 'none')}
+        env = {'SAMPLING_SOURCE_LINKS': KEY, 'YOON_PARTIAL_SET_ID': SET, 'HITS_DIR': str(self.dir / 'none')}
         printed = []
         with patch.dict(os.environ, env), patch.object(base, 'call', self.db), \
                 patch.object(base, 'say', printed.append):
             compare.combine()
         arms = json.loads(printed[-1][len('RESULT '):])['arms']
         self.assertTrue(arms['w12s6']['status'].startswith('incomplete'))
+
+    def test_incomplete_baseline_marks_only_baseline(self):
+        self.evidence['hits'] = self.evidence['hits'][1:]
+        printed = []
+        with patch.dict(os.environ, {'SAMPLING_SOURCE_LINKS': KEY, 'YOON_PARTIAL_SET_ID': SET,
+                                     'HITS_DIR': str(self.dir / 'none')}), \
+                patch.object(base, 'call', self.db), patch.object(base, 'say', printed.append):
+            compare.combine()
+        arms = json.loads(printed[-1][len('RESULT '):])['arms']
+        self.assertEqual(arms['w30s15']['status'], 'incomplete recorded evidence')
 
 
 if __name__ == '__main__':

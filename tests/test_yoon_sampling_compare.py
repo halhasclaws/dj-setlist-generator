@@ -1,15 +1,21 @@
 import asyncio
-import os
-import unittest
-from types import SimpleNamespace
-from unittest.mock import AsyncMock, patch
 import contextlib
 import io
+import json
+import os
+import shutil
+import tempfile
+import unittest
+from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import AsyncMock, patch
 
 from worker.jobs import yoon_partial_runner as base
 from worker.jobs import yoon_sampling_compare as compare
 
 RATE = base.RATE
+SET = sorted(base.SET_IDS)[0]
+KEY = 'k' * 40
 
 
 def fragment(seconds, start=0, index=0):
@@ -23,54 +29,77 @@ def hit(index, key=None):
     return {'index': index, 'response': {'recognized': key is not None, 'raw_data': raw}}
 
 
-class StudyGridTests(unittest.TestCase):
-    def test_twelve_second_hop_tiles_centred_analysis(self):
-        grid = compare.study_windows([fragment(120)], compare.STUDY_HOP_FRAMES)
-        self.assertEqual(len(grid), (120 - 30) // 12 + 1)
-        centres = [(w['start_frame'] + 15 * RATE) / RATE for w in grid]
-        for left, right in zip(centres, centres[1:]):
-            self.assertEqual(right - 6, left + 6)  # contiguous 12 s analyses
+def arm(name, window, stride):
+    return {'name': name, 'window': window, 'stride': stride}
 
-    def test_hop_is_restored_and_arm_a_grid_unchanged(self):
-        before = base.windows([fragment(120)])
-        compare.study_windows([fragment(120)], compare.STUDY_HOP_FRAMES)
-        self.assertEqual(base.HOP_FRAMES, 15 * RATE)
-        self.assertEqual(base.windows([fragment(120)]), before)
 
-    def test_windows_never_span_fragments(self):
-        grid = compare.study_windows([fragment(40, 0, 0), fragment(50, 100 * RATE, 1)],
-                                     compare.STUDY_HOP_FRAMES)
-        for w in grid:
-            self.assertEqual(len(w['parts']), 1)
+class GridTests(unittest.TestCase):
+    def test_arm_grid_uses_window_and_stride(self):
+        grid = compare.arm_grid([fragment(120)], arm('a', 12, 6))
+        self.assertEqual(len(grid), (120 - 12) // 6 + 1)
+        self.assertEqual([w['start_frame'] for w in grid[:3]], [0, 6 * RATE, 12 * RATE])
+        self.assertEqual(grid[0]['parts'][0]['end'] - grid[0]['parts'][0]['start'], 12 * RATE)
+
+    def test_constants_restored(self):
+        compare.arm_grid([fragment(120)], arm('a', 12, 3))
+        self.assertEqual((base.WINDOW_FRAMES, base.HOP_FRAMES), (30 * RATE, 15 * RATE))
+
+    def test_analysed_overlap(self):
+        self.assertEqual(compare.analysed_overlap(compare.BASELINE), -0.25)
+        self.assertEqual(compare.analysed_overlap(arm('a', 12, 12)), 0)
+        self.assertEqual(compare.analysed_overlap(arm('a', 12, 3)), 0.75)
+        self.assertEqual(compare.analysed_overlap(arm('a', 30, 6)), 0.5)
+
+    def test_invalid_and_unaligned_arms_rejected(self):
+        for bad in (arm('a', 2, 1), arm('a', 12, 13), arm('a', 12, 0), arm('a', '12', 6),
+                    arm('a', 12, 1 / 3)):
+            with self.assertRaises(SystemExit):
+                compare.arm_frames(bad)
+        self.assertEqual(compare.arm_frames(arm('a', 30, 7.5)), (30 * RATE, int(7.5 * RATE)))
+
+    def test_request_validation(self):
+        ok = {'sets': [SET], 'arms': [arm('w12s6', 12, 6)]}
+        self.assertEqual(compare.validate_request(ok)[0], [SET])
+        for bad in ({'sets': ['00000000-0000-0000-0000-000000000000'], 'arms': ok['arms']},
+                    {'sets': [SET], 'arms': [arm('w30s15', 30, 15)]},
+                    {'sets': [SET], 'arms': [arm('a b', 12, 6)]},
+                    {'sets': [SET], 'arms': [arm('x', 12, 6), arm('x', 12, 3)]}):
+            with self.assertRaises(SystemExit):
+                compare.validate_request(bad)
 
 
 class CountTests(unittest.TestCase):
-    def test_identified_counts_clusters_and_distinct_tracks(self):
-        grid = compare.study_windows([fragment(300)], compare.STUDY_HOP_FRAMES)
-        hits = [hit(w['index'], 'k1' if w['index'] < 8 else 'k2' if w['index'] < 16 else None)
-                for w in grid]
-        result = compare.identified(grid, hits)
-        self.assertEqual(result['windows'], len(grid))
-        self.assertEqual(result['recognized_windows'], 16)
-        self.assertEqual(result['distinct_tracks'], 2)
-        self.assertEqual(result['identified_entries'], 2)
-
-    def test_counting_prints_nothing_publicly(self):
-        grid = compare.study_windows([fragment(300)], compare.STUDY_HOP_FRAMES)
-        hits = [hit(w['index'], 'k1' if w['index'] < 8 else None) for w in grid]
+    def test_identified_counts_with_arm_constants(self):
+        a = arm('a', 12, 6)
+        grid = compare.arm_grid([fragment(300)], a)
+        hits = [hit(w['index'], 'k1' if w['index'] < 8 else 'k2' if w['index'] < 16 else None) for w in grid]
         out = io.StringIO()
         with contextlib.redirect_stdout(out):
-            compare.identified(grid, hits)
-        self.assertEqual(out.getvalue(), '')
+            result = compare.identified(grid, hits, a)
+        self.assertEqual(out.getvalue(), '')  # nothing private printed
+        self.assertEqual(result, {'windows': len(grid), 'recognized_windows': 16,
+                                  'distinct_tracks': 2, 'identified_entries': 2})
 
-    def test_drift_check_compares_identical_start_windows(self):
-        frag = [fragment(300)]
-        ga, gb = base.windows(frag), compare.study_windows(frag, compare.STUDY_HOP_FRAMES)
-        ha = [hit(w['index'], 'k') for w in ga]
-        hb = [hit(w['index'], 'k' if w['start_frame'] % (120 * RATE) == 0 else None) for w in gb]
-        result = compare.shared_window_agreement(ga, ha, gb, hb)
-        self.assertEqual(result['shared_windows'], len([w for w in ga if w['start_frame'] % (60 * RATE) == 0]))
-        self.assertEqual(result['same_result'], len([w for w in ga if w['start_frame'] % (120 * RATE) == 0]))
+    def test_reduce_hit_keeps_only_cluster_fields(self):
+        raw = {'matches': [{'offset': 1}], 'track': {'key': 'k', 'title': 't', 'subtitle': 's',
+                                                     'isrc': 'I', 'images': {'x': 'y'}}, 'location': {}}
+        self.assertEqual(compare.reduce_hit(4, True, raw)['response']['raw_data'],
+                         {'matches': [{}], 'track': {'key': 'k', 'title': 't', 'subtitle': 's', 'isrc': 'I'}})
+        self.assertEqual(compare.reduce_hit(4, False, {'matches': []})['response']['raw_data'], {'matches': []})
+
+
+@unittest.skipUnless(shutil.which('openssl'), 'openssl required')
+class SealTests(unittest.TestCase):
+    def test_round_trip_and_ciphertext_hides_content(self):
+        with patch.dict(os.environ, {'HITS_KEY': KEY}):
+            blob = compare.seal({'title': 'Secret Song'})
+            self.assertNotIn(b'Secret', blob)
+            self.assertEqual(compare.unseal(blob), {'title': 'Secret Song'})
+
+    def test_short_key_refused(self):
+        with patch.dict(os.environ, {'HITS_KEY': 'short'}):
+            with self.assertRaises(SystemExit):
+                compare.seal({})
 
 
 class FakeRecognizer:
@@ -87,7 +116,6 @@ class FakeRecognizer:
         for s in segments:
             FakeRecognizer.calls += 1
             r = FakeRecognizer.results(s, FakeRecognizer.calls)
-            # Mirror the production path: report each throttled attempt, then the final one.
             for _ in range(getattr(r, 'throttles', 0)):
                 self.kwargs['on_attempt'](result(429), None, 5.0)
             self.kwargs['on_attempt'](r, None, 0)
@@ -104,64 +132,70 @@ def result(status=200, recognized=False, raw=None, throttles=0):
                            raw_data=raw if raw is not None else ({'matches': []} if status == 200 else None))
 
 
-class ArmBTests(unittest.TestCase):
-    def run_arm(self, results, deadline=7800):
-        grid = compare.study_windows([fragment(90)], compare.STUDY_HOP_FRAMES)
+def new_stats():
+    return {'calls': 0, 'throttled': 0, 'backoff_seconds': 0.0, 'passes': 0, 'identity_incomplete': 0}
+
+
+class RecognizeTests(unittest.TestCase):
+    def run_windows(self, results, deadline=7800, a=arm('a', 12, 6)):
+        grid = compare.arm_grid([fragment(90)], a)
         FakeRecognizer.calls = 0
         FakeRecognizer.instances = []
         FakeRecognizer.results = results
-        stats = {'attempts': 0, 'throttled': 0, 'backoff_seconds': 0.0, 'passes': 0}
-        fake_module = SimpleNamespace(TrackRecognizer=FakeRecognizer)
+        stats = new_stats()
         def fetch(url, first, last, path):
             size = last - first + 1
             path.write_bytes(b'data' + b'\0' * (size - 4) if first == base.DATA_OFFSET - 8 else b'\0' * size)
-        with patch.dict('sys.modules', {'track_recognizer': fake_module}), \
+        with patch.dict('sys.modules', {'track_recognizer': SimpleNamespace(TrackRecognizer=FakeRecognizer)}), \
                 patch.object(base, 'fetch_range', fetch), \
-                patch.object(compare, 'STUDY_DEADLINE_SECONDS', deadline), \
                 patch.object(compare.asyncio, 'sleep', new_callable=AsyncMock) as sleep:
             self.sleep = sleep
-            hits = asyncio.run(compare.recognize_arm_b(grid, {'m.wav': 'https://example.invalid/m'}, stats))
+            hits = asyncio.run(compare.recognize_windows(
+                grid, compare.arm_frames(a)[0], {'m.wav': 'x'}, stats,
+                compare.time.monotonic() + deadline))
         return grid, hits, stats
 
-    def test_every_window_recognized_through_production_retry_path(self):
-        grid, hits, stats = self.run_arm(lambda s, n: result())
+    def test_every_window_through_production_retry_path(self):
+        grid, hits, stats = self.run_windows(lambda s, n: result())
         self.assertEqual([h['index'] for h in hits], [w['index'] for w in grid])
-        recognizer = FakeRecognizer.instances[0]
-        self.assertNotIn('single_attempt', recognizer.kwargs)
-        self.assertGreater(recognizer.kwargs['max_retry_seconds'], 0)
-        self.assertIsNotNone(recognizer.kwargs['continuation_deadline'])
-        self.assertEqual(stats['passes'], 1)
+        kwargs = FakeRecognizer.instances[0].kwargs
+        self.assertNotIn('single_attempt', kwargs)
+        self.assertIsNotNone(kwargs['continuation_deadline'])
+        self.assertEqual((stats['passes'], stats['calls']), (1, len(grid)))
 
     def test_throttling_is_survived_and_counted(self):
-        grid, hits, stats = self.run_arm(lambda s, n: result(throttles=3 if n == 1 else 0))
+        grid, hits, stats = self.run_windows(lambda s, n: result(throttles=3 if n == 1 else 0))
         self.assertEqual(len(hits), len(grid))
-        self.assertEqual(stats['throttled'], 3)
-        self.assertEqual(stats['backoff_seconds'], 15.0)
+        self.assertEqual((stats['throttled'], stats['backoff_seconds']), (3, 15.0))
 
-    def test_unresolved_windows_are_retried_in_another_pass(self):
-        grid, hits, stats = self.run_arm(lambda s, n: result(429) if n == 2 else result())
+    def test_unresolved_window_retried_after_pause_with_same_recognizer(self):
+        grid, hits, stats = self.run_windows(lambda s, n: result(429) if n == 2 else result())
         self.assertEqual(len(hits), len(grid))
         self.assertEqual(stats['passes'], 2)
-        self.assertEqual(FakeRecognizer.calls, len(grid) + 1)
-        self.assertEqual(len(FakeRecognizer.instances), 1)  # cooldown survives passes
-        self.assertGreaterEqual(self.sleep.await_args.args[0], 60)  # no immediate re-send
+        self.assertEqual(len(FakeRecognizer.instances), 1)
+        self.assertGreaterEqual(self.sleep.await_args.args[0], 60)
 
-    def test_wrong_master_header_stops_before_recognition(self):
-        grid = compare.study_windows([fragment(90)], compare.STUDY_HOP_FRAMES)
-        FakeRecognizer.calls = 0
-        with patch.dict('sys.modules', {'track_recognizer': SimpleNamespace(TrackRecognizer=FakeRecognizer)}), \
-                patch.object(base, 'fetch_range', lambda u, f, l, p: p.write_bytes(b'\0' * (l - f + 1))):
-            with self.assertRaisesRegex(RuntimeError, 'source_data_offset_changed'):
-                asyncio.run(compare.recognize_arm_b(grid, {'m.wav': 'x'}, {}))
-        self.assertEqual(FakeRecognizer.calls, 0)
+    def test_incomplete_identity_is_retried_not_fatal(self):
+        bad = {'matches': [{}], 'track': {'key': 'x'}}
+        grid, hits, stats = self.run_windows(lambda s, n: result(200, True, bad) if n == 1 else result())
+        self.assertEqual(len(hits), len(grid))
+        self.assertEqual(stats['identity_incomplete'], 1)
 
     def test_deadline_reports_unresolved_windows(self):
         with self.assertRaisesRegex(compare.Inconclusive, 'deadline_with_'):
-            self.run_arm(lambda s, n: result(429), deadline=0)
+            self.run_windows(lambda s, n: result(429), deadline=0)
 
-    def test_incomplete_identity_is_inconclusive(self):
-        with self.assertRaisesRegex(compare.Inconclusive, 'provider_identity_incomplete'):
-            self.run_arm(lambda s, n: result(200, True, {'matches': [{}], 'track': {'key': 'x'}}))
+    def test_window_length_checked(self):
+        with self.assertRaisesRegex(RuntimeError, 'window_size_changed'):
+            grid = compare.arm_grid([fragment(90)], arm('a', 12, 6))
+            FakeRecognizer.results = lambda s, n: result()
+            def fetch(url, first, last, path):
+                size = last - first + 1
+                path.write_bytes(b'data' + b'\0' * (size - 4) if first == base.DATA_OFFSET - 8 else b'\0' * size)
+            with patch.dict('sys.modules', {'track_recognizer': SimpleNamespace(TrackRecognizer=FakeRecognizer)}), \
+                    patch.object(base, 'fetch_range', fetch):
+                asyncio.run(compare.recognize_windows(grid, 30 * RATE, {'m.wav': 'x'}, new_stats(),
+                                                      compare.time.monotonic() + 60))
 
 
 class SourceLinkTests(unittest.TestCase):
@@ -172,20 +206,73 @@ class SourceLinkTests(unittest.TestCase):
         with patch.dict(os.environ, {'SAMPLING_SOURCE_LINKS': links}):
             self.assertEqual(compare.source_links('s', self.progress), {'m.wav': 'https://x/m'})
 
-    def test_released_family_without_secret_stops(self):
-        with patch.dict(os.environ, {'SAMPLING_SOURCE_LINKS': ''}):
-            with self.assertRaises(SystemExit):
-                compare.source_links('s', self.progress)
-
     def test_missing_master_stops_without_naming_it(self):
         with patch.dict(os.environ, {'SAMPLING_SOURCE_LINKS': '{"links": []}'}):
             with self.assertRaisesRegex(SystemExit, '^1 master link'):
                 compare.source_links('s', self.progress)
 
-    def test_open_family_uses_database_links(self):
-        with patch.object(base, 'call', return_value={'m.wav': 'db'}) as call:
-            self.assertEqual(compare.source_links('s', {'released': False}), {'m.wav': 'db'})
-        call.assert_called_once_with('yoon_partial_sources_for', 's')
+
+@unittest.skipUnless(shutil.which('openssl'), 'openssl required')
+class CommandTests(unittest.TestCase):
+    """plan -> recognize shards -> combine, with the database and provider faked."""
+
+    def setUp(self):
+        self.dir = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.dir)
+        (self.dir / '.github').mkdir()
+        self.arms = [arm('w12s6', 12, 6), arm('w30s6', 30, 6)]
+        (self.dir / '.github/sampling-compare-request.json').write_text(
+            json.dumps({'sets': [SET], 'arms': self.arms}))
+        self.fragments = [fragment(600)]
+        grid_a = base.windows(self.fragments)
+        self.progress = {'released': True, 'fragments': self.fragments, 'expected': len(grid_a)}
+        self.evidence = {'hits': [hit(w['index'], 'k%d' % (w['start_frame'] // (120 * RATE))) for w in grid_a]}
+        cwd = os.getcwd()
+        os.chdir(self.dir)
+        self.addCleanup(os.chdir, cwd)
+
+    def db(self, name, *args):
+        return {'yoon_partial_progress': self.progress, 'yoon_partial_hits_for': self.evidence}[name]
+
+    def test_end_to_end_counts_only(self):
+        env = {'HITS_KEY': KEY, 'YOON_PARTIAL_SET_ID': SET, 'PLAN_OUTPUT': str(self.dir / 'plan.json'),
+               'SAMPLING_SOURCE_LINKS': '{"links": [{"name": "m.wav", "href": "x"}]}'}
+        printed = []
+        async def fake_windows(grid, frames, links, stats, deadline):
+            stats.update(calls=len(grid), runtime_seconds=0)
+            return [hit(w['index'], 'k%d' % (w['start_frame'] // (120 * RATE))) for w in grid]
+        with patch.dict(os.environ, env), patch.object(base, 'call', self.db), \
+                patch.object(compare, 'SHARD_WINDOWS', 40), \
+                patch.object(base, 'say', printed.append), \
+                patch.object(compare, 'recognize_windows', fake_windows):
+            self.assertEqual(compare.plan(), 0)
+            shards = json.loads((self.dir / 'plan.json').read_text())['shards']
+            self.assertTrue(all(s['count'] > 1 for s in shards))
+            (self.dir / 'hits').mkdir()
+            for i, s in enumerate(shards):
+                with patch.dict(os.environ, {'SAMPLING_ARM': s['arm'], 'SHARD_INDEX': str(s['index']),
+                                             'SHARD_COUNT': str(s['count']),
+                                             'HITS_OUTPUT': str(self.dir / 'hits' / f'{i}.bin')}):
+                    self.assertEqual(asyncio.run(compare.recognize()), 0)
+            with patch.dict(os.environ, {'HITS_DIR': str(self.dir / 'hits')}):
+                self.assertEqual(compare.combine(), 0)
+        result = json.loads(printed[-1][len('RESULT '):])
+        arms = result['arms']
+        self.assertEqual(set(arms), {'w30s15', 'w12s6', 'w30s6'})
+        self.assertEqual(arms['w30s15']['identified_entries'], 5)
+        for name in ('w12s6', 'w30s6'):
+            self.assertEqual(arms[name]['identified_entries'], 5)
+            self.assertEqual(arms[name]['calls'], arms[name]['windows'])
+        self.assertNotIn('Tk', ''.join(printed))
+
+    def test_missing_shard_reports_incomplete(self):
+        env = {'HITS_KEY': KEY, 'YOON_PARTIAL_SET_ID': SET, 'HITS_DIR': str(self.dir / 'none')}
+        printed = []
+        with patch.dict(os.environ, env), patch.object(base, 'call', self.db), \
+                patch.object(base, 'say', printed.append):
+            compare.combine()
+        arms = json.loads(printed[-1][len('RESULT '):])['arms']
+        self.assertTrue(arms['w12s6']['status'].startswith('incomplete'))
 
 
 if __name__ == '__main__':

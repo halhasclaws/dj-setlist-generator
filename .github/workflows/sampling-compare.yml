@@ -1,9 +1,11 @@
 name: sampling-compare
 
-# D07 bounded sampling comparison on sealed partial Yoon families (Preview
-# development database only, read-only). Arm A reuses the recorded 30s/15s
-# evidence; arm B re-recognizes the same audio at 30s/12s in memory. Logs carry
-# counts only. Runs only when the owner commits .github/sampling-compare-request.json.
+# D07 sampling-grid comparison on sealed partial Yoon families (Preview
+# development database only, read-only). Each arm is a (window, stride) grid
+# re-recognized on the same master audio through the production throttle-aware
+# recognizer; the baseline arm is the recorded 30s/15s evidence. Logs carry
+# counts only; shard hits pass between jobs only as encrypted one-day artifacts.
+# Runs only when the owner commits .github/sampling-compare-request.json.
 on:
   push:
     branches: [preview]
@@ -23,44 +25,83 @@ env:
   WORKER_DEPLOYMENT_TARGET: development
   ENABLE_CHECKPOINTS: 'false'
   NTFY_TOPIC: ''
+  SHARD_WINDOWS: '120'
 
 jobs:
   plan:
     if: ${{ github.repository == 'russell-algeo/dj-setlist-generator' && github.ref == 'refs/heads/preview' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     outputs:
+      shards: ${{ steps.plan.outputs.shards }}
       sets: ${{ steps.plan.outputs.sets }}
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-base.txt -r requirements-private-recognize.txt
       - id: plan
+        env:
+          DATABASE_URL_DIRECT: ${{ secrets.DEVELOPMENT_DATABASE_URL_DIRECT }}
+          PLAN_OUTPUT: ${{ runner.temp }}/plan.json
         run: |
-          python3 - <<'PY' >> "$GITHUB_OUTPUT"
-          import json, uuid
-          r = json.load(open('.github/sampling-compare-request.json'))
-          sets = [str(uuid.UUID(s)) for s in r['sets']]
-          assert 1 <= len(sets) <= 2 and len(set(sets)) == len(sets)
-          print('sets=' + json.dumps(sets))
-          PY
+          python -m worker.jobs.yoon_sampling_compare plan
+          python3 -c "import json,sys; p=json.load(open(sys.argv[1])); print('shards='+json.dumps(p['shards'])); print('sets='+json.dumps(p['sets']))" "$PLAN_OUTPUT" >> "$GITHUB_OUTPUT"
 
-  compare:
+  recognize:
     needs: plan
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 20
       matrix:
-        set: ${{ fromJson(needs.plan.outputs.sets) }}
+        shard: ${{ fromJson(needs.plan.outputs.shards) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 350
     env:
       CONCURRENT_RECOGNITIONS: '2'
       BATCH_SIZE: '10'
-      MAX_STUDY_WINDOWS: '600'
-      STUDY_DEADLINE_SECONDS: '7800'
-      MAX_RETRY_SECONDS: '1800'
       QUOTA_COOLDOWN_DURATION: '60'
+      MAX_RETRY_SECONDS: '1800'
+      STUDY_DEADLINE_SECONDS: '19800'
+      YOON_PARTIAL_SET_ID: ${{ matrix.shard.set }}
+      SAMPLING_ARM: ${{ matrix.shard.arm }}
+      SHARD_INDEX: ${{ matrix.shard.index }}
+      SHARD_COUNT: ${{ matrix.shard.count }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-base.txt -r requirements-private-recognize.txt
+      - name: Recognize one shard of one arm (counts only)
+        env:
+          DATABASE_URL_DIRECT: ${{ secrets.DEVELOPMENT_DATABASE_URL_DIRECT }}
+          SAMPLING_SOURCE_LINKS: ${{ secrets.SAMPLING_SOURCE_LINKS }}
+          HITS_KEY: ${{ secrets.SAMPLING_HITS_KEY }}
+          HITS_OUTPUT: ${{ runner.temp }}/hits.bin
+        run: python -m worker.jobs.yoon_sampling_compare recognize
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hits-${{ matrix.shard.set }}-${{ matrix.shard.arm }}-${{ matrix.shard.index }}
+          path: ${{ runner.temp }}/hits.bin
+          retention-days: 1
+          if-no-files-found: ignore
+
+  combine:
+    needs: [plan, recognize]
+    if: ${{ always() && needs.plan.result == 'success' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        set: ${{ fromJson(needs.plan.outputs.sets) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
       YOON_PARTIAL_SET_ID: ${{ matrix.set }}
     steps:
       - uses: actions/checkout@v4
@@ -70,8 +111,13 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -r requirements-base.txt -r requirements-private-recognize.txt
-      - name: Compare sampling arms (counts only)
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hits-${{ matrix.set }}-*
+          path: ${{ runner.temp }}/hits
+      - name: Cluster and count every arm (counts only)
         env:
           DATABASE_URL_DIRECT: ${{ secrets.DEVELOPMENT_DATABASE_URL_DIRECT }}
-          SAMPLING_SOURCE_LINKS: ${{ secrets.SAMPLING_SOURCE_LINKS }}
-        run: python -m worker.jobs.yoon_sampling_compare
+          HITS_KEY: ${{ secrets.SAMPLING_HITS_KEY }}
+          HITS_DIR: ${{ runner.temp }}/hits
+        run: python -m worker.jobs.yoon_sampling_compare combine

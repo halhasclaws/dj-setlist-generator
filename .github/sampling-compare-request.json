@@ -1,3 +1,10 @@
 {
-  "sets": ["6fce4eb8-27f5-5966-9185-dfc9622fcb35", "c24afb76-a453-5c85-9a4f-e6de2e151a68"]
+  "sets": ["6fce4eb8-27f5-5966-9185-dfc9622fcb35", "c24afb76-a453-5c85-9a4f-e6de2e151a68"],
+  "arms": [
+    {"name": "w12s12", "window": 12, "stride": 12},
+    {"name": "w12s9", "window": 12, "stride": 9},
+    {"name": "w12s6", "window": 12, "stride": 6},
+    {"name": "w12s3", "window": 12, "stride": 3},
+    {"name": "w30s6", "window": 30, "stride": 6}
+  ]
 }

@@ -6,6 +6,7 @@ import { startTransition, useDeferredValue, useEffect, useLayoutEffect, useMemo,
 import { ArchiveDeleteControl, SubmittedByYouBadge } from "@/components/archive/archive-delete-control";
 import { buildArtistHref } from "@/components/archive/archive-hrefs";
 import { ArchiveHeader } from "@/components/archive/archive-header";
+import { SetSeekControl } from "@/components/archive/set-seek-control";
 import { ArchiveScrollRoot } from "@/components/archive/archive-scroll-root";
 import { SpotifyTrackPreview } from "@/components/archive/spotify-track-preview";
 import { traceAudioTiming } from "@/lib/archive/audio-timing";
@@ -953,6 +954,10 @@ export function ArchiveSetExplorer({
   const soundCloudFrameRef = useRef<HTMLIFrameElement | null>(null);
   const currentTimeRef = useRef(currentTime);
   const isPlayingRef = useRef(isPlaying);
+  // Scrubbing preserves playback intent even when a provider temporarily
+  // reports buffering instead of playing. This does not drive provider state.
+  const scrubPlaybackIntentRef = useRef(false);
+  const scrubPausePendingRef = useRef(false);
   const activeIdxRef = useRef<number | null>(activeIdx);
   const lastPlaybackSaveRef = useRef({ time: -1, updatedAt: 0 });
   const listenIntervalsRef = useRef<ListenInterval[]>([]);
@@ -1724,6 +1729,8 @@ export function ArchiveSetExplorer({
 
   const seekPlayer = (seconds: number, scroll: boolean, autoplay: boolean) => {
     traceAudioTiming("seek-command", activeSource.kind);
+    scrubPausePendingRef.current = !autoplay && (scrubPausePendingRef.current || scrubPlaybackIntentRef.current);
+    scrubPlaybackIntentRef.current = autoplay;
     const safeSeconds = clamp(seconds, 0, Math.max(0, detail.duration));
     seekOnPlayRef.current = null;
     pendingSeekRef.current = null;
@@ -1811,6 +1818,8 @@ export function ArchiveSetExplorer({
 
   const pausePlayer = (reason: "user" | "preview" = "user") => {
     traceAudioTiming("pause-command", activeSource.kind);
+    scrubPausePendingRef.current = scrubPausePendingRef.current || scrubPlaybackIntentRef.current;
+    scrubPlaybackIntentRef.current = false;
     awaitingPlaybackProgressRef.current = false;
     if (reason === "user") audioFocus.setIntent();
     pendingAutoplayRef.current = false;
@@ -1839,6 +1848,8 @@ export function ArchiveSetExplorer({
   };
 
   const playPlayer = (reason: "user" | "preview" = "user") => {
+    scrubPausePendingRef.current = false;
+    scrubPlaybackIntentRef.current = true;
     if (reason === "user") {
       traceAudioTiming("user-play-request", activeSource.kind);
       audioFocus.requestSetPlayback(() => playPlayer("preview"));
@@ -2142,6 +2153,8 @@ export function ArchiveSetExplorer({
     setYtEmbedBlocked(false);
     setScEmbedBlocked(false);
     destroyPlayers();
+    scrubPausePendingRef.current = false;
+    scrubPlaybackIntentRef.current = false;
     setIsPlaying(false);
 
     const youtubeEmbedId = activeSource.kind === "youtube" ? activeSource.embedId : null;
@@ -2189,6 +2202,7 @@ export function ArchiveSetExplorer({
                   if (playing) {
                     traceAudioTiming("playing-event", "youtube");
                     if (audioFocus.guardSetPlayback()) return;
+                    if (!scrubPausePendingRef.current) scrubPlaybackIntentRef.current = true;
                     playbackStartedRef.current = true;
                     publishNowPlayingMetadata();
                     setIsPlaying(true);
@@ -2202,6 +2216,8 @@ export function ArchiveSetExplorer({
                     event?.data === YT?.PlayerState?.ENDED ||
                     event?.data === YT?.PlayerState?.CUED;
                   if (paused) {
+                    scrubPausePendingRef.current = false;
+                    scrubPlaybackIntentRef.current = false;
                     audioFocus.setPaused();
                     setIsPlaying(false);
                     pollPlayerTime();
@@ -2292,6 +2308,7 @@ export function ArchiveSetExplorer({
             }
             traceAudioTiming("playing-event", "soundcloud");
             if (audioFocus.guardSetPlayback()) return;
+            if (!scrubPausePendingRef.current) scrubPlaybackIntentRef.current = true;
             playbackStartedRef.current = true;
             publishNowPlayingMetadata();
             setIsPlaying(true);
@@ -2303,12 +2320,16 @@ export function ArchiveSetExplorer({
               restoreSoundCloudAfterWarmup(widget, enableSoundCloudControls);
               return;
             }
+            scrubPausePendingRef.current = false;
+            scrubPlaybackIntentRef.current = false;
             audioFocus.setPaused();
             setIsPlaying(false);
             pollPlayerTime();
             persistLatestPlayerPosition(true);
           });
           widget.bind(playerWindow.SC.Widget.Events.FINISH, () => {
+            scrubPausePendingRef.current = false;
+            scrubPlaybackIntentRef.current = false;
             setIsPlaying(false);
             pollPlayerTime();
             persistLatestPlayerPosition(true);
@@ -2488,9 +2509,9 @@ export function ArchiveSetExplorer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const progressPercent =
-    detail.duration > 0 ? clamp((currentTime / detail.duration) * 100, 0, 100) : 0;
-  const currentTimeLabel = formatDuration(currentTime);
+  const seekSourceKey = JSON.stringify([detail.id, detail.duration, activeSource.kind, activeSource.sourceUrl]);
+  // Resolve intent at release, not at drag start: a later Pause must win.
+  const commitScrub = (seconds: number) => jumpTo(seconds, false, scrubPlaybackIntentRef.current);
   const deleteRedirectHref = detail.artists[0]?.slug
     ? buildArtistHref({ slug: detail.artists[0].slug })
     : "/";
@@ -3326,21 +3347,23 @@ export function ArchiveSetExplorer({
               </div>
 
               <div className="dock-range">
-                <div className="dock-time">
-                  <span id="dockCurrentTime">{currentTimeLabel}</span>
-                  <span>{detail.durationFmt}</span>
-                </div>
-                <div
+                <SetSeekControl
+                  key={seekSourceKey}
                   className="dock-progress"
+                  appearance="timeline"
+                  renderBefore={(displayedTime) => (
+                    <div className="dock-time">
+                      <span id="dockCurrentTime">{formatDuration(displayedTime)}</span>
+                      <span>{detail.durationFmt}</span>
+                    </div>
+                  )}
                   id="dockProgress"
-                  onClick={(event) => {
-                    const rect = event.currentTarget.getBoundingClientRect();
-                    const fraction = clamp((event.clientX - rect.left) / rect.width, 0, 1);
-                    jumpTo(fraction * detail.duration, false, true);
-                  }}
-                >
-                  <div className="dock-progress-fill" id="dockProgressFill" style={{ width: `${progressPercent}%` }} />
-                </div>
+                  label="Seek within set from playback dock"
+                  currentTime={currentTime}
+                  duration={detail.duration}
+                  disabled={playbackControlsDisabled}
+                  onCommit={commitScrub}
+                />
               </div>
             </div>
 

@@ -12,6 +12,8 @@ export const SPOTIFY_AUTH_SCOPES = [
   "playlist-modify-public",
   // Lets the set page save a track to Liked Songs in place (N07).
   "user-library-modify",
+  // Lets the "+" show whether a track is already in Liked Songs (N07).
+  "user-library-read",
 ] as const;
 
 export const SPOTIFY_AUTH_SCOPE = SPOTIFY_AUTH_SCOPES.join(" ");

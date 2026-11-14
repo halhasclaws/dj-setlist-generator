@@ -10,6 +10,7 @@ import "server-only";
 // https://developer.spotify.com/documentation/web-api/reference/save-library-items
 
 export const SPOTIFY_LIBRARY_SCOPE = "user-library-modify";
+export const SPOTIFY_LIBRARY_READ_SCOPE = "user-library-read";
 
 export class SpotifyLibraryScopeError extends Error {}
 export class SpotifyLibraryRemoteError extends Error {}
@@ -19,8 +20,8 @@ const SPOTIFY_TRACK_ID = /^[A-Za-z0-9]{22}$/;
 export const isSpotifyTrackId = (value: unknown): value is string =>
   typeof value === "string" && SPOTIFY_TRACK_ID.test(value);
 
-export const ensureSpotifyLibraryScope = (scopes: string[]) => {
-  if (!scopes.includes(SPOTIFY_LIBRARY_SCOPE)) {
+export const ensureSpotifyLibraryScope = (scopes: string[], scope = SPOTIFY_LIBRARY_SCOPE) => {
+  if (!scopes.includes(scope)) {
     throw new SpotifyLibraryScopeError(
       "Spotify needs permission to save to your library. Reconnect Spotify to allow it.",
     );
@@ -63,4 +64,45 @@ export const setSpotifyTrackSaved = async ({
       `Spotify library ${saved ? "save" : "removal"} failed (${response.status}): ${errorText.slice(0, 200)}`,
     );
   }
+};
+
+// Whether the track is in the user's Liked Songs, read from Spotify itself so
+// the site's "+" matches Spotify everywhere (saved on another device, removed
+// in the app). https://developer.spotify.com/documentation/web-api/reference/check-library-contains
+export const getSpotifyTrackSaved = async ({
+  accessToken,
+  fetchFn = fetch,
+  trackId,
+}: {
+  accessToken: string;
+  fetchFn?: typeof fetch;
+  trackId: string;
+}): Promise<boolean> => {
+  if (!isSpotifyTrackId(trackId)) {
+    throw new SpotifyLibraryRemoteError("Invalid Spotify track id");
+  }
+
+  const url = new URL("https://api.spotify.com/v1/me/library/contains");
+  url.searchParams.set("uris", `spotify:track:${trackId}`);
+
+  const response = await fetchFn(url, { headers: { authorization: `Bearer ${accessToken}` } });
+
+  if (response.status === 401 || response.status === 403) {
+    throw new SpotifyLibraryScopeError(
+      "Spotify refused the library check. Reconnect Spotify to allow it.",
+    );
+  }
+
+  if (!response.ok) {
+    const errorText = await response.text().catch(() => "unknown error");
+    throw new SpotifyLibraryRemoteError(
+      `Spotify library check failed (${response.status}): ${errorText.slice(0, 200)}`,
+    );
+  }
+
+  const payload: unknown = await response.json();
+  if (!Array.isArray(payload) || typeof payload[0] !== "boolean") {
+    throw new SpotifyLibraryRemoteError("Spotify library check returned an unexpected response");
+  }
+  return payload[0];
 };

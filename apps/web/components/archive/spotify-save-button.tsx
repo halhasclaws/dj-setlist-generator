@@ -1,7 +1,7 @@
 "use client";
 
 import { signIn, useSession } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type SaveState = "idle" | "busy" | "saved" | "connect" | "error";
 
@@ -11,32 +11,10 @@ function reconnectCallbackUrl() {
   return url.toString();
 }
 
-// Remembers what this browser saved, so closing and reopening a track's Spotify
-// player (or reloading the page) keeps the green check. The site can't ask
-// Spotify which songs are liked without an extra read permission, so a track
-// removed in the Spotify app still shows the check here until pressed.
-const SAVED_KEY = "spotify-saved-tracks";
-const savedTracks = (() => {
-  let cache: Set<string> | null = null;
-  const load = () => {
-    if (cache) return cache;
-    cache = new Set();
-    try {
-      const raw = window.localStorage.getItem(SAVED_KEY);
-      const parsed: unknown = raw ? JSON.parse(raw) : [];
-      if (Array.isArray(parsed)) for (const id of parsed) if (typeof id === "string") cache.add(id);
-    } catch { /* storage unavailable: keep in memory only */ }
-    return cache;
-  };
-  return {
-    has: (id: string) => load().has(id),
-    set: (id: string, saved: boolean) => {
-      const set = load();
-      if (saved) set.add(id); else set.delete(id);
-      try { window.localStorage.setItem(SAVED_KEY, JSON.stringify([...set])); } catch { /* ignore */ }
-    },
-  };
-})();
+// Last known Liked Songs state per track for this page visit, so reopening a
+// player shows the right icon at once. Spotify is asked again on every open
+// and always wins, so a song liked or removed elsewhere shows correctly.
+const knownSaved = new Map<string, boolean>();
 
 const PlusIcon = () => (
   <svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true">
@@ -58,11 +36,34 @@ const CheckIcon = () => (
 // built-in "+" cannot be driven from here (cross-origin iframe, separate login).
 // Pressing it again after saving removes the track.
 export function SpotifySaveButton({ trackId, label }: { trackId: string; label: string }) {
-  const [state, setState] = useState<SaveState>(() => (savedTracks.has(trackId) ? "saved" : "idle"));
+  const [state, setState] = useState<SaveState>(() => (knownSaved.get(trackId) ? "saved" : "idle"));
   const [message, setMessage] = useState<string | null>(null);
   const { status } = useSession();
+  const changed = useRef(false);
+
+  useEffect(() => {
+    if (status !== "authenticated") return;
+    let cancelled = false;
+    void (async () => {
+      try {
+        const response = await fetch(`/api/spotify/library?trackId=${encodeURIComponent(trackId)}`, { cache: "no-store" });
+        const payload = (await response.json().catch(() => ({}))) as { saved?: unknown; error?: string; reason?: string };
+        // A press while this check was in flight is newer than its answer.
+        if (cancelled || changed.current) return;
+        if (response.ok && typeof payload.saved === "boolean") {
+          knownSaved.set(trackId, payload.saved);
+          setState(payload.saved ? "saved" : "idle");
+        } else if (payload.reason === "connect") {
+          setState("connect");
+          setMessage(payload.error ?? null);
+        }
+      } catch { /* keep the last known state */ }
+    })();
+    return () => { cancelled = true; };
+  }, [status, trackId]);
 
   const update = async (saved: boolean) => {
+    changed.current = true;
     setState("busy");
     setMessage(null);
     try {
@@ -73,7 +74,7 @@ export function SpotifySaveButton({ trackId, label }: { trackId: string; label: 
       });
       const payload = (await response.json().catch(() => ({}))) as { error?: string; reason?: string };
       if (response.ok) {
-        savedTracks.set(trackId, saved);
+        knownSaved.set(trackId, saved);
         setState(saved ? "saved" : "idle");
         return;
       }

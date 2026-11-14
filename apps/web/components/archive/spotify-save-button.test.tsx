@@ -20,9 +20,9 @@ describe("SpotifySaveButton (N07)", () => {
 
   beforeEach(async () => {
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
-    localStorage.clear();
     vi.stubGlobal("fetch", fetchMock);
     useSession.mockReturnValue({ status: "authenticated" });
+    fetchMock.mockImplementation(async () => new Response(JSON.stringify({ saved: false }), { status: 200 }));
     host = document.createElement("div"); document.body.append(host); root = createRoot(host);
     await act(async () => root.render(<SpotifySaveButton trackId={TRACK} label="Chambray – Feelin' Good" />));
   });
@@ -35,24 +35,34 @@ describe("SpotifySaveButton (N07)", () => {
     fetchMock.mockImplementation(async () => new Response(JSON.stringify({}), { status: 200 }));
     expect(button()!.getAttribute("aria-pressed")).toBe("false");
     await click();
-    expect(JSON.parse(fetchMock.mock.calls[0][1].body)).toEqual({ trackId: TRACK, saved: true });
+    expect(JSON.parse(fetchMock.mock.calls[1][1].body)).toEqual({ trackId: TRACK, saved: true });
     expect(button()!.dataset.state).toBe("saved");
     expect(button()!.getAttribute("aria-pressed")).toBe("true");
     await click();
-    expect(JSON.parse(fetchMock.mock.calls[1][1].body)).toEqual({ trackId: TRACK, saved: false });
+    expect(JSON.parse(fetchMock.mock.calls[2][1].body)).toEqual({ trackId: TRACK, saved: false });
     expect(button()!.dataset.state).toBe("idle");
   });
 
-  it("stays checked after the player is closed and reopened, until removed", async () => {
-    fetchMock.mockImplementation(async () => new Response(JSON.stringify({}), { status: 200 }));
-    await click();
+  const reply = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status });
+  const remount = async () => {
     await act(async () => root.render(<></>));
     await act(async () => root.render(<SpotifySaveButton trackId={TRACK} label="x" />));
+  };
+
+  it("shows Spotify's own Liked Songs state when the player opens", async () => {
+    expect(fetchMock.mock.calls[0][0]).toBe(`/api/spotify/library?trackId=${TRACK}`);
+    fetchMock.mockImplementation(async () => reply({ saved: true }));
+    await remount();
     expect(button()!.dataset.state).toBe("saved");
-    await click();
-    await act(async () => root.render(<></>));
-    await act(async () => root.render(<SpotifySaveButton trackId={TRACK} label="x" />));
+    fetchMock.mockImplementation(async () => reply({ saved: false }));
+    await remount();
     expect(button()!.dataset.state).toBe("idle");
+  });
+
+  it("asks to reconnect when the read permission is missing", async () => {
+    fetchMock.mockImplementation(async () => reply({ reason: "connect", error: "Reconnect" }, 409));
+    await remount();
+    expect(button()!.dataset.state).toBe("connect");
   });
 
   it("offers to reconnect Spotify when the library permission is missing", async () => {
@@ -61,7 +71,7 @@ describe("SpotifySaveButton (N07)", () => {
     expect(button()!.dataset.state).toBe("connect");
     await click();
     expect(signIn).toHaveBeenCalledWith("spotify", expect.objectContaining({ callbackUrl: expect.stringContaining("spotify=connected") }));
-    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
   });
 
   it("is hidden when signed out", async () => {

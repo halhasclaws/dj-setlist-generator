@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 
 import {
   ensureSpotifyLibraryScope,
+  getSpotifyTrackSaved,
   isSpotifyTrackId,
   setSpotifyTrackSaved,
   SpotifyLibraryRemoteError,
@@ -55,5 +56,19 @@ describe("Spotify library save", () => {
       setSpotifyTrackSaved({ accessToken: "tok", fetchFn, saved: true, trackId: "../me" }),
     ).rejects.toBeInstanceOf(SpotifyLibraryRemoteError);
     expect(fetchFn).toHaveBeenCalledTimes(1);
+  });
+
+  it("reads Liked Songs state from /me/library/contains", async () => {
+    const fetchFn = vi.fn().mockResolvedValue(new Response("[true]", { status: 200 }));
+    await expect(getSpotifyTrackSaved({ accessToken: "tok", fetchFn, trackId: TRACK })).resolves.toBe(true);
+    expect(String(fetchFn.mock.calls[0][0])).toBe(
+      `https://api.spotify.com/v1/me/library/contains?uris=spotify%3Atrack%3A${TRACK}`,
+    );
+    fetchFn.mockResolvedValue(new Response("[false]", { status: 200 }));
+    await expect(getSpotifyTrackSaved({ accessToken: "tok", fetchFn, trackId: TRACK })).resolves.toBe(false);
+    fetchFn.mockResolvedValue(new Response("{}", { status: 403 }));
+    await expect(getSpotifyTrackSaved({ accessToken: "tok", fetchFn, trackId: TRACK })).rejects.toBeInstanceOf(SpotifyLibraryScopeError);
+    fetchFn.mockResolvedValue(new Response("{}", { status: 200 }));
+    await expect(getSpotifyTrackSaved({ accessToken: "tok", fetchFn, trackId: TRACK })).rejects.toBeInstanceOf(SpotifyLibraryRemoteError);
   });
 });

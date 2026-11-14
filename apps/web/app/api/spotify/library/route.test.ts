@@ -75,4 +75,19 @@ describe("POST /api/spotify/library", () => {
     expect(response.status).toBe(400);
     expect(refreshSpotifyAccessTokenForUser).not.toHaveBeenCalled();
   });
+
+  it("GET reports Spotify's saved state, and asks to reconnect without the read scope", async () => {
+    const { GET } = await import("./route");
+    const get = () => GET(new Request(`https://example.test/api/spotify/library?trackId=${TRACK}`));
+    refreshSpotifyAccessTokenForUser.mockResolvedValue({ accessToken: "tok", scopes: ["user-library-modify"] });
+    let response = await get();
+    expect(response.status).toBe(409);
+    expect(fetchMock).not.toHaveBeenCalled();
+    refreshSpotifyAccessTokenForUser.mockResolvedValue({ accessToken: "tok", scopes: ["user-library-modify", "user-library-read"] });
+    fetchMock.mockResolvedValue(new Response("[true]", { status: 200 }));
+    response = await get();
+    expect(await response.json()).toEqual({ saved: true });
+    const bad = await GET(new Request("https://example.test/api/spotify/library?trackId=nope"));
+    expect(bad.status).toBe(400);
+  });
 });

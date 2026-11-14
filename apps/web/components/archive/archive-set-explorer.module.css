@@ -2157,6 +2157,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .root :global(.recorded-set-backdrop img),
@@ -2177,7 +2178,10 @@
   font-size: 28px;
 }
 
+/* Above the decorative backdrop so the play button and timeline get input. */
 .root :global(.recorded-set-body) {
+  position: relative;
+  z-index: 1;
   min-width: 0;
 }
 
@@ -2200,17 +2204,13 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 1.25;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .root :global(.recorded-set-now) {
   color: var(--muted);
   font-size: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .root :global(.recorded-set-play) {
@@ -2318,6 +2318,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 12px;
   padding: 16px 18px 18px;
 }
 
@@ -2418,7 +2419,8 @@
 @media (max-width: 520px) {
   .root :global(.recorded-set-controls.is-widget .recorded-set-window) {
     grid-template-columns: 112px minmax(0, 1fr);
-    height: 120px;
+    height: auto;
+    min-height: 120px;
   }
 
   .root :global(.recorded-set-controls.is-widget .recorded-set-body) {

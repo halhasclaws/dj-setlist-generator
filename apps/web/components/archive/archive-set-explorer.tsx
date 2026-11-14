@@ -1159,6 +1159,8 @@ export function ArchiveSetExplorer({
   const activeTrack = model.tracks.find((track) => track.idx === activeIdx) ?? null;
   const skipTargets = useMemo(() => buildSkipTargets(model.tracks), [model.tracks]);
   const dockTrack = activeTrack ?? model.tracks[0] ?? null;
+  // Private recordings keep one set-wide cover throughout, like SoundCloud.
+  const dockArt = privateContext ? model.heroImageUrl ?? null : dockTrack?.albumArt ?? null;
   const showDock =
     (activeSource.kind === "youtube" || activeSource.kind === "soundcloud" || activeSource.kind === "native-audio") &&
     !ytEmbedBlocked &&
@@ -3612,16 +3614,16 @@ export function ArchiveSetExplorer({
         <div className="dock" id="playerDock">
           <div className="dock-grid">
             <div className="dock-art-frame">
-              {dockTrack?.albumArt ? (
+              {dockArt ? (
                 <img
                   alt=""
                   className={joinClasses("dock-art", "visible")}
                   id="dockArt"
                   loading="lazy"
-                  src={dockTrack.albumArt}
+                  src={dockArt}
                 />
               ) : null}
-              <div className={joinClasses("dock-art-fallback", dockTrack?.albumArt && "hidden")} id="dockArtFallback">
+              <div className={joinClasses("dock-art-fallback", dockArt && "hidden")} id="dockArtFallback">
                 ♫
               </div>
             </div>

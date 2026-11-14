@@ -2681,10 +2681,6 @@ export function ArchiveSetExplorer({
   // player state, source and tracks rather than the render that registered them.
   mediaSessionHandlersRef.current = {
     play: () => {
-      // While a recording buffers after a seek the lock screen shows Play (see
-      // below). Pressing it must not re-issue the seek and restart the load.
-      if (activeSource.kind === "native-audio" && nativeAudioBuffering &&
-        nativeControllerRef.current?.isPlayRequested()) return;
       if (detail.duration > 0 && currentTimeRef.current >= detail.duration) {
         jumpTo(0, false, true);
         return;
@@ -2707,12 +2703,13 @@ export function ArchiveSetExplorer({
 
   useEffect(() => registerMediaSessionActions(() => mediaSessionHandlersRef.current!), []);
 
-  // iOS advances the lock-screen clock on its own while we report "playing",
-  // so a recording that is still buffering after a seek is reported paused.
-  const systemPlaying = isPlaying && !(activeSource.kind === "native-audio" && nativeAudioBuffering);
+  // iOS advances the lock-screen clock on its own at the reported rate, so a
+  // recording still buffering (after a seek or a resume) reports a stalled rate
+  // while remaining "playing" to the system.
+  const systemStalled = activeSource.kind === "native-audio" && nativeAudioBuffering;
   useEffect(() => {
-    publishPlaybackState(detail.duration, currentTime, systemPlaying);
-  }, [currentTime, detail.duration, systemPlaying]);
+    publishPlaybackState(detail.duration, currentTime, isPlaying, systemStalled);
+  }, [currentTime, detail.duration, isPlaying, systemStalled]);
 
   useEffect(() => {
     return () => {

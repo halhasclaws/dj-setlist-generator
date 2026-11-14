@@ -97,7 +97,17 @@ export function clearNowPlaying(): void {
   if (session) session.metadata = null;
 }
 
-export function publishPlaybackState(duration: number, position: number, playing: boolean): void {
+// setPositionState rejects a zero rate. While a playing source is still
+// buffering, a negligible rate stops the lock-screen clock from running over
+// silence without telling the system playback stopped.
+const STALLED_PLAYBACK_RATE = 1e-6;
+
+/**
+ * `stalled`: play is requested but audio is still loading. The system must keep
+ * seeing "playing" then: reporting "paused" mid-resume lets iOS hand the lock
+ * screen to another app's media while the recording reloads.
+ */
+export function publishPlaybackState(duration: number, position: number, playing: boolean, stalled = false): void {
   const session = getSession();
   if (!session) return;
   session.playbackState = playing ? "playing" : "paused";
@@ -109,7 +119,7 @@ export function publishPlaybackState(duration: number, position: number, playing
     }
     session.setPositionState({
       duration,
-      playbackRate: 1,
+      playbackRate: playing && stalled ? STALLED_PLAYBACK_RATE : 1,
       position: Math.min(duration, Math.max(0, Number.isFinite(position) ? position : 0)),
     });
   } catch {

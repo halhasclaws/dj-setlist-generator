@@ -173,17 +173,36 @@ describe("system media controls for recordings", () => {
     expect(audio.currentTime).toBe(30);
   });
 
-  it("reports paused to the lock screen while a scrub target buffers, and ignores Play then", async () => {
+  it("stays playing with a frozen clock while a scrub target buffers", async () => {
     await press("play");
     expect(session.playbackState).toBe("playing");
     await press("seekto", { seekTime: 16 });
     expect(audio.getAttribute("src")).toBe("/synthetic-b");
-    expect(session.playbackState).toBe("paused");
+    expect(session.playbackState).toBe("playing");
+    expect(session.positions.at(-1)!.playbackRate).toBeLessThan(0.001);
     const loads = vi.mocked(HTMLMediaElement.prototype.load).mock.calls.length;
     await press("play");
     expect(vi.mocked(HTMLMediaElement.prototype.load).mock.calls.length).toBe(loads);
     await metadata(); await act(async () => { emit("playing"); });
-    expect(audio.currentTime).toBe(26); expect(session.playbackState).toBe("playing");
+    expect(audio.currentTime).toBe(26); expect(paused).toBe(false);
+    expect(session.playbackState).toBe("playing"); expect(session.positions.at(-1)!.playbackRate).toBe(1);
+  });
+
+  it("resumes from the lock screen after a pause while the recording reloads", async () => {
+    await press("play"); await tick(3125);
+    await press("pause");
+    expect(paused).toBe(true); expect(session.playbackState).toBe("paused");
+    // Away from the page, iOS can drop the buffered data.
+    readyState = 0;
+    await press("play");
+    expect(paused).toBe(false);
+    await act(async () => { emit("waiting"); });
+    // Still "playing" to iOS while loading, so it keeps this lock-screen session.
+    expect(session.playbackState).toBe("playing");
+    expect(session.positions.at(-1)!.playbackRate).toBeLessThan(0.001);
+    await metadata(); await act(async () => { emit("playing"); });
+    expect(audio.currentTime).toBe(3125); expect(paused).toBe(false);
+    expect(session.playbackState).toBe("playing"); expect(session.positions.at(-1)!.playbackRate).toBe(1);
   });
 
   it("publishes set-level position and track artwork", async () => {

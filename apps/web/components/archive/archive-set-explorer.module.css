@@ -2220,13 +2220,13 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 1.25;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .root :global(.recorded-set-now) {
   color: var(--muted);
   font-size: 12px;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .root :global(.recorded-set-play) {
@@ -2433,14 +2433,47 @@
 }
 
 @media (max-width: 520px) {
+  /* Phones: cover beside the names, then play beside the timeline, so the
+     names get the full text column and the cover is never squeezed. */
   .root :global(.recorded-set-controls.is-widget .recorded-set-window) {
-    grid-template-columns: 112px minmax(0, 1fr);
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
     height: auto;
-    min-height: 120px;
+    padding: 12px;
   }
 
-  .root :global(.recorded-set-controls.is-widget .recorded-set-body) {
-    padding: 10px 12px 12px;
+  .root :global(.recorded-set-controls.is-widget .recorded-set-body),
+  .root :global(.recorded-set-controls.is-widget .recorded-set-head) {
+    display: contents;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-art) {
+    grid-row: 1;
+    grid-column: 1;
+    aspect-ratio: 1;
+    align-self: start;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-meta) {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-play) {
+    position: relative;
+    z-index: 1;
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-track) {
+    z-index: 1;
+    grid-row: 2;
+    grid-column: 2;
+    align-self: center;
   }
 
   .root :global(.recorded-set-controls.is-widget .recorded-set-play),

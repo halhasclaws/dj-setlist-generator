@@ -20,6 +20,7 @@ describe("SpotifySaveButton (N07)", () => {
 
   beforeEach(async () => {
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+    localStorage.clear();
     vi.stubGlobal("fetch", fetchMock);
     useSession.mockReturnValue({ status: "authenticated" });
     host = document.createElement("div"); document.body.append(host); root = createRoot(host);
@@ -39,6 +40,18 @@ describe("SpotifySaveButton (N07)", () => {
     expect(button()!.getAttribute("aria-pressed")).toBe("true");
     await click();
     expect(JSON.parse(fetchMock.mock.calls[1][1].body)).toEqual({ trackId: TRACK, saved: false });
+    expect(button()!.dataset.state).toBe("idle");
+  });
+
+  it("stays checked after the player is closed and reopened, until removed", async () => {
+    fetchMock.mockImplementation(async () => new Response(JSON.stringify({}), { status: 200 }));
+    await click();
+    await act(async () => root.render(<></>));
+    await act(async () => root.render(<SpotifySaveButton trackId={TRACK} label="x" />));
+    expect(button()!.dataset.state).toBe("saved");
+    await click();
+    await act(async () => root.render(<></>));
+    await act(async () => root.render(<SpotifySaveButton trackId={TRACK} label="x" />));
     expect(button()!.dataset.state).toBe("idle");
   });
 

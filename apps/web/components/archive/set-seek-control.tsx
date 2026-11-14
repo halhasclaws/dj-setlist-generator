@@ -28,7 +28,7 @@ export function SetSeekControl({
   const position = Number.isFinite(currentTime) ? clampPosition(currentTime) : 0;
   const unavailable = disabled || total <= 0;
   const [draft, setDraft] = useState<number | null>(null);
-  const gesture = useRef<{ kind: "pointer" | "keyboard"; pointerId?: number; value: number | null; cancelled?: boolean; tracked?: boolean; startX?: number; startValue?: number; width?: number } | null>(null);
+  const gesture = useRef<{ kind: "pointer" | "keyboard"; pointerId?: number; value: number | null; cancelled?: boolean; tracked?: boolean; touch?: boolean; startX?: number; startValue?: number; tapValue?: number | null; left?: number; width?: number } | null>(null);
   const mounted = useRef(true);
 
   useEffect(() => {
@@ -49,14 +49,18 @@ export function SetSeekControl({
     setDraft(null);
     if (mounted.current && !unavailable && Number.isFinite(value)) onCommit(clampPosition(value));
   };
-  // Spotify-style relative scrubbing: a drag may start anywhere on the track
-  // (iOS Safari only moves a native range from its thumb) and moves the
-  // position by the distance dragged, without first jumping to the finger.
+  // Spotify-style scrubbing. A click or tap jumps to that spot. With a mouse or
+  // pen, dragging jumps to the press point and follows the cursor. With a
+  // finger, dragging moves relative to the current time, so the playhead does
+  // not jump under the thumb. The track handles this itself because iOS Safari
+  // only moves a native range from its thumb.
   const dragThreshold = 4;
-  const trackWidth = (element: HTMLElement) => {
-    const width = element.getBoundingClientRect().width;
-    return width > 0 ? width : null;
+  const trackRect = (element: HTMLElement) => {
+    const rect = element.getBoundingClientRect();
+    return rect.width > 0 ? rect : null;
   };
+  const valueAt = (clientX: number, left: number, width: number) =>
+    clampPosition(Math.round((clientX - left) / width * total));
   const displayed = unavailable ? position : draft ?? position;
   const valueText = `${formatDuration(displayed)} of ${formatDuration(total)}`;
 
@@ -77,18 +81,28 @@ export function SetSeekControl({
           disabled={unavailable}
           onPointerDown={(event) => {
             if (unavailable || event.button !== 0 || event.isPrimary === false || (gesture.current && !gesture.current.cancelled)) return;
-            const width = Number.isFinite(event.clientX) ? trackWidth(event.currentTarget) : null;
-            gesture.current = { kind: "pointer", pointerId: event.pointerId, value: null, tracked: width !== null,
-              startX: event.clientX, startValue: position, width: width ?? undefined };
-            setDraft(position);
+            const rect = Number.isFinite(event.clientX) ? trackRect(event.currentTarget) : null;
+            const touch = event.pointerType === "touch";
+            const pressed = rect ? valueAt(event.clientX, rect.left, rect.width) : null;
+            gesture.current = { kind: "pointer", pointerId: event.pointerId, tracked: rect !== null, touch,
+              startX: event.clientX, startValue: position, tapValue: pressed, left: rect?.left, width: rect?.width,
+              value: touch ? null : pressed };
+            setDraft(touch ? position : pressed ?? position);
             event.currentTarget.setPointerCapture?.(event.pointerId);
           }}
           onPointerMove={(event) => {
             const current = gesture.current;
             if (current?.kind !== "pointer" || !current.tracked || current.cancelled || current.pointerId !== event.pointerId) return;
-            const dx = event.clientX - (current.startX ?? event.clientX);
-            if (!Number.isFinite(dx) || (current.value === null && Math.abs(dx) < dragThreshold)) return;
-            const value = clampPosition(Math.round((current.startValue ?? position) + dx / (current.width ?? 1) * total));
+            const width = current.width ?? 1;
+            let value: number;
+            if (current.touch) {
+              const dx = event.clientX - (current.startX ?? event.clientX);
+              if (!Number.isFinite(dx) || (current.value === null && Math.abs(dx) < dragThreshold)) return;
+              value = clampPosition(Math.round((current.startValue ?? position) + dx / width * total));
+            } else {
+              if (!Number.isFinite(event.clientX)) return;
+              value = valueAt(event.clientX, current.left ?? 0, width);
+            }
             current.value = value;
             setDraft(value);
           }}
@@ -110,7 +124,8 @@ export function SetSeekControl({
           onPointerUp={(event) => {
             const current = gesture.current;
             if (current?.kind !== "pointer" || current.pointerId !== event.pointerId) return;
-            const value = current.value;
+            // A finger lifted without dragging is a tap: seek to where it landed.
+            const value = current.value ?? (current.tracked ? current.tapValue ?? null : null);
             if (current.cancelled || value === null) { cancel(); gesture.current = null; }
             else commit(value);
             if (event.currentTarget.hasPointerCapture?.(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);

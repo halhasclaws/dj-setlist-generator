@@ -2029,6 +2029,16 @@ export function ArchiveSetExplorer({
     persistPlaybackPositionForTime(currentTimeRef.current, true);
   };
 
+  // iOS can occasionally start a paused recording by itself, e.g. when
+  // unlocking into Safari after a lock-screen pause (seen once in Hal's
+  // Simulator). Every play the app wants goes through the controller, so an
+  // unrequested play is stopped to keep the audio, dock and lock screen in sync.
+  const stopUnrequestedNativePlay = (element: HTMLAudioElement) => {
+    if (element !== nativeAudioRef.current || element.paused) return;
+    traceAudioTiming("unrequested-play-stopped", "native-audio");
+    element.pause();
+  };
+
   const playPlayer = (reason: "user" | "preview" = "user", replayAtEnd = true) => {
     scrubPausePendingRef.current = false;
     scrubPlaybackIntentRef.current = true;
@@ -2907,14 +2917,16 @@ export function ArchiveSetExplorer({
                         flushPendingSeek();
                       }}
                       onPlay={(event) => {
-                        if (event.currentTarget.paused || !nativeControllerRef.current?.isPlayRequested()) return;
+                        if (event.currentTarget.paused) return;
+                        if (!nativeControllerRef.current?.isPlayRequested()) { stopUnrequestedNativePlay(event.currentTarget); return; }
                         if (audioFocus.guardSetPlayback()) return;
                         playbackStartedRef.current = true; setNativeAudioError(null); setIsPlaying(true);
                       }}
                       onPlaying={(event) => {
                         traceAudioTiming("playing-event", "native-audio");
                         clearNativeStallWatch();
-                        if (event.currentTarget.paused || !nativeControllerRef.current?.isPlayRequested()) return;
+                        if (event.currentTarget.paused) return;
+                        if (!nativeControllerRef.current?.isPlayRequested()) { stopUnrequestedNativePlay(event.currentTarget); return; }
                         if (audioFocus.guardSetPlayback()) return;
                         setNativeAudioBuffering(false); setIsPlaying(true);
                       }}

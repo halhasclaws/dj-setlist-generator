@@ -204,6 +204,19 @@ describe("system media controls for recordings", () => {
     expect(session.playbackState).toBe("playing"); expect(session.positions.at(-1)!.playbackRate).toBe(1);
   });
 
+  it("stops a play the app did not request after a lock-screen pause", async () => {
+    await press("play"); await tick(3125); await press("pause");
+    expect(paused).toBe(true);
+    // iOS starts the element by itself (no play() from the app).
+    await act(async () => { paused = false; emit("play"); emit("playing"); });
+    expect(paused).toBe(true);
+    expect(session.playbackState).toBe("paused");
+    expect(container.querySelector('button[aria-label="Pause set"]')).toBeNull();
+    // A real Play afterwards still works.
+    await press("play");
+    expect(paused).toBe(false); expect(session.playbackState).toBe("playing");
+  });
+
   it("calls play() before any other work on a lock-screen Play", async () => {
     await press("play"); await tick(3125); await press("pause");
     const order: string[] = [];

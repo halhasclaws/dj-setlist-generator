@@ -28,7 +28,7 @@ export function SetSeekControl({
   const position = Number.isFinite(currentTime) ? clampPosition(currentTime) : 0;
   const unavailable = disabled || total <= 0;
   const [draft, setDraft] = useState<number | null>(null);
-  const gesture = useRef<{ kind: "pointer" | "keyboard"; pointerId?: number; value: number | null; cancelled?: boolean; tracked?: boolean } | null>(null);
+  const gesture = useRef<{ kind: "pointer" | "keyboard"; pointerId?: number; value: number | null; cancelled?: boolean; tracked?: boolean; startX?: number; startValue?: number; width?: number } | null>(null);
   const mounted = useRef(true);
 
   useEffect(() => {
@@ -49,12 +49,13 @@ export function SetSeekControl({
     setDraft(null);
     if (mounted.current && !unavailable && Number.isFinite(value)) onCommit(clampPosition(value));
   };
-  // Map a pointer to the timeline position under it, so a drag may start
-  // anywhere on the track (iOS Safari only moves a native range from its thumb).
-  const valueAt = (element: HTMLElement, clientX: number) => {
-    const rect = element.getBoundingClientRect();
-    if (!(rect.width > 0) || !Number.isFinite(clientX)) return null;
-    return clampPosition(Math.round((clientX - rect.left) / rect.width * total));
+  // Spotify-style relative scrubbing: a drag may start anywhere on the track
+  // (iOS Safari only moves a native range from its thumb) and moves the
+  // position by the distance dragged, without first jumping to the finger.
+  const dragThreshold = 4;
+  const trackWidth = (element: HTMLElement) => {
+    const width = element.getBoundingClientRect().width;
+    return width > 0 ? width : null;
   };
   const displayed = unavailable ? position : draft ?? position;
   const valueText = `${formatDuration(displayed)} of ${formatDuration(total)}`;
@@ -76,16 +77,18 @@ export function SetSeekControl({
           disabled={unavailable}
           onPointerDown={(event) => {
             if (unavailable || event.button !== 0 || event.isPrimary === false || (gesture.current && !gesture.current.cancelled)) return;
-            const start = valueAt(event.currentTarget, event.clientX);
-            gesture.current = { kind: "pointer", pointerId: event.pointerId, value: start, tracked: start !== null };
-            setDraft(start ?? position);
+            const width = Number.isFinite(event.clientX) ? trackWidth(event.currentTarget) : null;
+            gesture.current = { kind: "pointer", pointerId: event.pointerId, value: null, tracked: width !== null,
+              startX: event.clientX, startValue: position, width: width ?? undefined };
+            setDraft(position);
             event.currentTarget.setPointerCapture?.(event.pointerId);
           }}
           onPointerMove={(event) => {
             const current = gesture.current;
             if (current?.kind !== "pointer" || !current.tracked || current.cancelled || current.pointerId !== event.pointerId) return;
-            const value = valueAt(event.currentTarget, event.clientX);
-            if (value === null) return;
+            const dx = event.clientX - (current.startX ?? event.clientX);
+            if (!Number.isFinite(dx) || (current.value === null && Math.abs(dx) < dragThreshold)) return;
+            const value = clampPosition(Math.round((current.startValue ?? position) + dx / (current.width ?? 1) * total));
             current.value = value;
             setDraft(value);
           }}

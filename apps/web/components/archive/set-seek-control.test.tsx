@@ -121,32 +121,34 @@ describe("commit-on-release set seek control", () => {
   });
 
 
-  describe("drag from anywhere on the track", () => {
+  describe("relative drag from anywhere on the track", () => {
     const at = async (type: string, clientX: number, pointerId = 1) => act(async () => {
       const event = new MouseEvent(type, { bubbles: true, button: 0, clientX });
       Object.defineProperties(event, { pointerId: { value: pointerId }, pointerType: { value: "touch" }, isPrimary: { value: true } });
+      input().getBoundingClientRect = () => ({ left: 100, width: 300, top: 0, height: 32, right: 400, bottom: 32, x: 100, y: 0, toJSON() {} }) as DOMRect;
       input().dispatchEvent(event);
     });
-    beforeEach(() => {
-      input().getBoundingClientRect = () => ({ left: 100, width: 300, top: 0, height: 32, right: 400, bottom: 32, x: 100, y: 0, toJSON() {} }) as DOMRect;
-    });
 
-    it("starts at the touched spot, follows the finger and commits once on release", async () => {
-      await at("pointerdown", 250); // middle of a 600 s set, far from the 10 s playhead
-      expect(input().value).toBe("300");
-      expect(host.querySelector("#dockCurrentTime")!.textContent).toBe("5:00");
+    it("does not jump to the finger; moves by the distance dragged and commits once", async () => {
+      await at("pointerdown", 250); // far from the 10 s playhead
+      expect(input().value).toBe("10");
+      expect(host.querySelector("#dockCurrentTime")!.textContent).toBe("0:10");
+      await at("pointermove", 300); // +50 px of 300 px = +100 s
+      await change(400); // a native thumb value cannot override the drag
+      expect(input().value).toBe("110");
       await at("pointermove", 325);
-      await change(20); // a native thumb value cannot override the finger position
-      expect(input().value).toBe("450");
+      expect(input().value).toBe("160");
       expect(onCommit).not.toHaveBeenCalled();
       await at("pointerup", 325);
-      expect(onCommit.mock.calls).toEqual([[450]]);
+      expect(onCommit.mock.calls).toEqual([[160]]);
     });
 
-    it("treats a tap as a seek, clamps outside the track and ignores other pointers", async () => {
-      await at("pointerdown", 40); await at("pointermove", 380, 2); await at("pointerup", 40);
-      expect(onCommit.mock.calls).toEqual([[0]]);
-      await at("pointerdown", 999); await at("pointerup", 999);
+    it("a tap or tiny jitter does not seek, and the range clamps at both ends", async () => {
+      await at("pointerdown", 250); await at("pointermove", 252); await at("pointerup", 252);
+      expect(onCommit).not.toHaveBeenCalled();
+      expect(input().value).toBe("10");
+      await at("pointerdown", 250); await at("pointermove", 0); await at("pointerup", 0);
+      await at("pointerdown", 100); await at("pointermove", 999); await at("pointermove", 999, 2); await at("pointerup", 999);
       expect(onCommit.mock.calls).toEqual([[0], [600]]);
     });
 

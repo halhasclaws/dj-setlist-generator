@@ -229,6 +229,19 @@ describe("system media controls for recordings", () => {
     expect(paused).toBe(false); expect(audio.currentTime).toBe(3125);
   });
 
+  it("freezes the lock-screen clock from a resume until audio is playing", async () => {
+    await press("play"); await tick(3125); await press("pause");
+    vi.mocked(HTMLMediaElement.prototype.play).mockImplementation(function (this: HTMLMediaElement) {
+      paused = false; return new Promise<void>(() => {});
+    });
+    paused = true;
+    await press("play");
+    expect(session.playbackState).toBe("playing");
+    expect(session.positions.at(-1)!.playbackRate).toBeLessThan(0.001);
+    await act(async () => { emit("playing"); });
+    expect(session.positions.at(-1)!.playbackRate).toBe(1);
+  });
+
   it("resumes from the lock screen after a pause while the recording reloads", async () => {
     await press("play"); await tick(3125);
     await press("pause");

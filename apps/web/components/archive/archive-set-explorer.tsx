@@ -2062,6 +2062,14 @@ export function ArchiveSetExplorer({
         // Simulator the bookkeeping below ran first and delayed play() by
         // 1.6s, after which iOS gave the lock screen to another app.
         nativeControllerRef.current.resume(replayAtEnd);
+        // A lock-screen resume of a recording can take seconds to re-buffer,
+        // with the play event itself delayed (Hal's Simulator: 3-5 s). Show
+        // the requested state at once, with a frozen clock, until "playing".
+        if (nativeControllerRef.current.isPlayRequested()) {
+          isPlayingRef.current = true;
+          setIsPlaying(true);
+          setNativeAudioBuffering(true);
+        }
         updateFromTime(nativeControllerRef.current.position(), false);
       }
       setNativeAudioError(null);

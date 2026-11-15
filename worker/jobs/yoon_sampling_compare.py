@@ -204,9 +204,7 @@ async def recognize_windows(grid: list[dict], window_frames: int, links: dict,
     unresolved when a retry budget ends get further passes, each after an
     exponential pause, until the deadline.
     """
-    from track_recognizer import TrackRecognizer
     work = Path(tempfile.mkdtemp(prefix='yoon-sampling-'))
-    done: dict[int, dict] = {}
     try:
         spans: dict[str, list[int]] = {}
         for w in grid:

@@ -11,7 +11,7 @@ abort on throttling).
 
 No database access at all. Logs carry counts only. Audio and hits pass between
 jobs only as AES-256 encrypted artifacts (key derived from the
-SAMPLING_SOURCE_LINKS secret) that expire after three days. Analysis and
+SAMPLING_SOURCE_LINKS secret) that expire after five days. Analysis and
 tracklist scoring happen offline.
 
   python -m worker.jobs.public_sampling_compare plan       # matrix JSON
@@ -142,6 +142,8 @@ def fetch() -> int:
         with contextlib.redirect_stdout(io.StringIO()):  # yt-dlp verbose output stays out of logs
             audio = downloader.download(item['url'], work / 'mix.mp3')
         seconds = study_duration(audio)
+        if abs(seconds - item['seconds']) > 0.02 * item['seconds'] + 5:
+            raise SystemExit(f'duration_mismatch: {round(seconds)} s vs {round(item["seconds"])} s')
         out = Path(os.environ.get('AUDIO_OUTPUT', 'audio.bin'))
         out.write_bytes(study._openssl([], audio.read_bytes()))
         base.say(f'{item["id"][:8]}: fetched {round(seconds)} s of audio '

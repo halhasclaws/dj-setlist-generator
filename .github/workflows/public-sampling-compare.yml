@@ -4,7 +4,7 @@ name: public-sampling-compare
 # No database access. Every arm (the production 30s/15s grid included) is
 # recognized fresh from one download through the production downloader,
 # segmenter and throttle-aware recognizer. Logs carry counts only; audio and
-# raw hits pass between jobs as encrypted three-day artifacts and are scored
+# raw hits pass between jobs as encrypted five-day artifacts and are scored
 # offline. Runs only when .github/public-sampling-request.json is pushed.
 on:
   push:
@@ -25,7 +25,6 @@ env:
   ENABLE_CHECKPOINTS: 'false'
   NTFY_TOPIC: ''
   SHARD_WINDOWS: '120'
-  FFMPEG_PORTABLE_DIR: '.runtime/ffmpeg'
 
 jobs:
   plan:
@@ -54,7 +53,7 @@ jobs:
     needs: plan
     strategy:
       fail-fast: false
-      max-parallel: 4
+      max-parallel: 2
       matrix:
         set: ${{ fromJson(needs.plan.outputs.sets) }}
     runs-on: ubuntu-latest
@@ -66,9 +65,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-bootstrap.txt
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
       - name: Ensure ffmpeg (production script)
         run: ./.github/scripts/ensure-ffmpeg.sh
-      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -r requirements-bootstrap.txt
       - name: Prepare YouTube auth
         id: youtube_auth
         env:
@@ -85,7 +89,7 @@ jobs:
         with:
           name: audio-${{ matrix.set }}
           path: ${{ runner.temp }}/audio.bin
-          retention-days: 3
+          retention-days: 5
           compression-level: 0
 
   recognize:
@@ -115,9 +119,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-recognize.txt
       - name: Ensure ffmpeg (production script)
         run: ./.github/scripts/ensure-ffmpeg.sh
-      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -r requirements-recognize.txt
       - uses: actions/download-artifact@v4
         with:
           name: audio-${{ matrix.shard.set }}
@@ -132,5 +138,5 @@ jobs:
         with:
           name: hits-${{ matrix.shard.set }}-${{ matrix.shard.arm }}-${{ matrix.shard.index }}
           path: ${{ runner.temp }}/hits.bin
-          retention-days: 3
+          retention-days: 5
           if-no-files-found: ignore

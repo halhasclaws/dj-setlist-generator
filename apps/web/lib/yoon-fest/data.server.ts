@@ -1,4 +1,5 @@
 import "server-only";
+import { lineupTitle } from "./lineup";
 import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import { unstable_noStore as noStore } from "next/cache";
 import type { SessionActor } from "@/lib/auth/session";
@@ -51,7 +52,7 @@ async function loadYoonVersions(actor: SessionActor, lookup: VersionLookup): Pro
   return yoonCollectionSchema.parse({ collection: "yoon-fest", revision: "neon", sets: rows.map((row) => {
     const metadata = record(row.metadata); const mixInfo = record(metadata.mixInfo);
     const coverage = record(metadata.summary).recognitionCoverage;
-    return { id: row.id, slug: row.slug, title: yoonDisplayTitle(row.title),
+    return { id: row.id, slug: row.slug, title: lineupTitle(row.slug) ?? yoonDisplayTitle(row.title),
       performer: typeof mixInfo.artist_name === "string" ? mixInfo.artist_name : "Unknown",
       generatedAt: getString(record(metadata.summary).generated_at) ?? row.updatedAt?.toISOString() ?? null,
       artistProfileImage: getString(mixInfo.artist_profile_image) ?? getString(mixInfo.artist_image),

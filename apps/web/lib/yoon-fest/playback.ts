@@ -303,12 +303,14 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
     // network error or a dead stall is terminal for the element. Re-request the
     // active source through the route and restore the set position and the
     // current play intent. A pause stays paused; nothing plays past the end.
-    recover() {
+    // `play` lets a resume start through a fresh source load (resume-reload
+    // experiment); without it the current play intent is kept.
+    recover(play = playRequested) {
       if (disposed) return false;
       const target = position();
       endBridge();
       const request = ++version;
-      playRequested = playRequested && target < duration;
+      playRequested = play && target < duration;
       pending = { seconds: target, autoplay: playRequested };
       awaitingMetadata = true;
       audio.pause();

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import type { MouseEvent as ReactMouseEvent } from "react";
 import { startTransition, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 import { ArchiveDeleteControl, SubmittedByYouBadge } from "@/components/archive/archive-delete-control";
@@ -801,7 +802,7 @@ const loadScript = (src: string) =>
   });
 
 const buildSourceLinkAt = (source: SetSourceModel, seconds: number) => {
-  const safeSeconds = Math.max(0, Math.floor(seconds));
+  const safeSeconds = Number.isFinite(seconds) ? Math.max(0, Math.floor(seconds)) : 0;
 
   if (source.kind === "youtube") {
     if (source.embedId) {
@@ -1488,6 +1489,31 @@ export function ArchiveSetExplorer({
     }
     ytPlayerRef.current = null;
     scWidgetRef.current = null;
+  };
+
+  // N06: Open Source on a YouTube set opens YouTube (the app on iPhone, which
+  // plays in the background for Premium members) at the live position, and
+  // pauses the page so the two don't play at once.
+  const readYouTubeHandoffSeconds = () => {
+    if (
+      Date.now() >= seekLockUntilRef.current &&
+      playerReadyRef.current &&
+      ytPlayerRef.current?.getCurrentTime
+    ) {
+      const seconds = ytPlayerRef.current.getCurrentTime();
+      if (Number.isFinite(seconds) && seconds >= 0) return seconds;
+    }
+    return currentTimeRef.current;
+  };
+
+  const openInYouTube = (event: ReactMouseEvent<HTMLAnchorElement>) => {
+    if (activeSource.kind !== "youtube") return;
+    const seconds = readYouTubeHandoffSeconds();
+    const link = buildSourceLinkAt(activeSource, seconds);
+    // Update href before the default navigation so iOS can route the tap to
+    // the YouTube app as a universal link.
+    if (link) event.currentTarget.href = link;
+    pausePlayer("user");
   };
 
   const showYouTubeBlockedFallback = () => {
@@ -2833,7 +2859,17 @@ export function ArchiveSetExplorer({
                   </div>
                 ) : null}
                 {activeSource.sourceUrl ? (
-                  <a className="source-player-open" href={activeSource.sourceUrl} rel="noopener" target="_blank">
+                  <a
+                    className="source-player-open"
+                    href={
+                      activeSource.kind === "youtube"
+                        ? buildSourceLinkAt(activeSource, currentTime)
+                        : activeSource.sourceUrl
+                    }
+                    onClick={activeSource.kind === "youtube" ? openInYouTube : undefined}
+                    rel="noopener"
+                    target="_blank"
+                  >
                     Open Source
                   </a>
                 ) : null}

@@ -1,0 +1,136 @@
+name: public-sampling-compare
+
+# D07 round 3: sampling grids on public sets with independent tracklists.
+# No database access. Every arm (the production 30s/15s grid included) is
+# recognized fresh from one download through the production downloader,
+# segmenter and throttle-aware recognizer. Logs carry counts only; audio and
+# raw hits pass between jobs as encrypted three-day artifacts and are scored
+# offline. Runs only when .github/public-sampling-request.json is pushed.
+on:
+  push:
+    branches: [preview]
+    paths: [.github/public-sampling-request.json]
+
+concurrency:
+  group: public-sampling-compare
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  PIP_DISABLE_PIP_VERSION_CHECK: '1'
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  PYTHONDONTWRITEBYTECODE: '1'
+  ENABLE_CHECKPOINTS: 'false'
+  NTFY_TOPIC: ''
+  SHARD_WINDOWS: '120'
+  FFMPEG_PORTABLE_DIR: '.runtime/ffmpeg'
+
+jobs:
+  plan:
+    if: ${{ github.repository == 'russell-algeo/dj-setlist-generator' && github.ref == 'refs/heads/preview' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      shards: ${{ steps.plan.outputs.shards }}
+      sets: ${{ steps.plan.outputs.sets }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-base.txt
+      - id: plan
+        env:
+          PLAN_OUTPUT: ${{ runner.temp }}/plan.json
+        run: |
+          python -m worker.jobs.public_sampling_compare plan
+          python3 -c "import json,sys; p=json.load(open(sys.argv[1])); print('shards='+json.dumps(p['shards'])); print('sets='+json.dumps(p['sets']))" "$PLAN_OUTPUT" >> "$GITHUB_OUTPUT"
+
+  fetch:
+    needs: plan
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        set: ${{ fromJson(needs.plan.outputs.sets) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Ensure ffmpeg (production script)
+        run: ./.github/scripts/ensure-ffmpeg.sh
+      - run: python -m pip install -r requirements.txt
+      - name: Prepare YouTube auth
+        id: youtube_auth
+        env:
+          YOUTUBE_COOKIES_B64: ${{ secrets.YOUTUBE_COOKIES_B64 }}
+          YOUTUBE_USER_AGENT: ${{ secrets.YOUTUBE_USER_AGENT }}
+        run: ./.github/scripts/prepare-youtube-auth.sh
+      - name: Download once, seal audio
+        env:
+          SAMPLING_SET_ID: ${{ matrix.set }}
+          SAMPLING_SOURCE_LINKS: ${{ secrets.SAMPLING_SOURCE_LINKS }}
+          AUDIO_OUTPUT: ${{ runner.temp }}/audio.bin
+        run: python -m worker.jobs.public_sampling_compare fetch
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audio-${{ matrix.set }}
+          path: ${{ runner.temp }}/audio.bin
+          retention-days: 3
+          compression-level: 0
+
+  recognize:
+    needs: [plan, fetch]
+    if: ${{ !cancelled() && needs.plan.result == 'success' }}
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        shard: ${{ fromJson(needs.plan.outputs.shards) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      CONCURRENT_RECOGNITIONS: '2'
+      BATCH_SIZE: '10'
+      QUOTA_COOLDOWN_DURATION: '60'
+      MAX_RETRY_SECONDS: '1800'
+      STUDY_DEADLINE_SECONDS: '19800'
+      SAMPLING_SET_ID: ${{ matrix.shard.set }}
+      SAMPLING_ARM: ${{ matrix.shard.arm }}
+      SHARD_INDEX: ${{ matrix.shard.index }}
+      SHARD_COUNT: ${{ matrix.shard.count }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Ensure ffmpeg (production script)
+        run: ./.github/scripts/ensure-ffmpeg.sh
+      - run: python -m pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: audio-${{ matrix.shard.set }}
+          path: ${{ runner.temp }}/audio
+      - name: Recognize one shard of one arm (counts only)
+        env:
+          SAMPLING_SOURCE_LINKS: ${{ secrets.SAMPLING_SOURCE_LINKS }}
+          AUDIO_INPUT: ${{ runner.temp }}/audio/audio.bin
+          HITS_OUTPUT: ${{ runner.temp }}/hits.bin
+        run: python -m worker.jobs.public_sampling_compare recognize
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hits-${{ matrix.shard.set }}-${{ matrix.shard.arm }}-${{ matrix.shard.index }}
+          path: ${{ runner.temp }}/hits.bin
+          retention-days: 3
+          if-no-files-found: ignore

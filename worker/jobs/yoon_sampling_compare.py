@@ -237,63 +237,80 @@ async def recognize_windows(grid: list[dict], window_frames: int, links: dict,
                 raise RuntimeError('window_size_changed')
             return bytes(pcm)
 
-        def on_attempt(result, ticket, delay):
-            stats['calls'] += 1
-            if result.http_status == 429:
-                stats['throttled'] += 1
-                stats['backoff_seconds'] += delay or 0
-            return None
+        def write_segment(w, path):
+            path.write_bytes(base.wav_bytes(window_pcm(w)))
 
-        batch_size = max(1, int(os.getenv('BATCH_SIZE', '10')))
-        recognizer = TrackRecognizer(quiet=True, on_attempt=on_attempt,
-                                     max_retry_seconds=MAX_RETRY_SECONDS,
-                                     continuation_deadline=deadline)
-        failures: dict[int, int] = {}
-        try:
-            while len(done) < len(grid):
-                if deadline - time.monotonic() < 1:
-                    raise Inconclusive(f'deadline_with_{len(grid) - len(done)}_windows_unresolved')
-                if stats['passes']:
-                    pause = max(throttle_delay(stats['passes']),
-                                recognizer._quota_cooldown_until - time.monotonic())
-                    await asyncio.sleep(max(0, min(pause, deadline - time.monotonic() - 1)))
-                stats['passes'] += 1
-                pending = [w for w in grid if w['index'] not in done]
-                for start in range(0, len(pending), batch_size):
-                    if time.monotonic() >= deadline:
-                        break
-                    segments = []
-                    for w in pending[start:start + batch_size]:
-                        path = work / f'w{w["index"]}.wav'
-                        path.write_bytes(base.wav_bytes(window_pcm(w)))
-                        segments.append({'file': path, 'index': w['index'],
-                                         'timestamp': w['start_frame'] / RATE})
-                    with contextlib.redirect_stdout(io.StringIO()):
-                        results = await recognizer.recognize_batch(segments, total_segments=len(grid))
-                    for segment, result in zip(segments, results):
-                        track = (result.raw_data or {}).get('track') or {} if isinstance(result.raw_data, dict) else {}
-                        incomplete = (result.is_valid and isinstance(result.raw_data, dict) and result.recognized
-                                      and not all(str(track.get(k) or '').strip() for k in ('key', 'title', 'subtitle')))
-                        if not result.is_valid or not isinstance(result.raw_data, dict) or incomplete:
-                            stats['identity_incomplete'] += bool(incomplete)
-                            if result.http_status != 429:
-                                failures[segment['index']] = failures.get(segment['index'], 0) + 1
-                                if failures[segment['index']] >= MAX_WINDOW_PASSES:
-                                    # Persistently failing (not throttled): count it, treat as unrecognized.
-                                    stats['unresolved'] += 1
-                                    done[segment['index']] = reduce_hit(segment['index'], False, {})
-                            continue
-                        done[segment['index']] = reduce_hit(segment['index'], bool(result.recognized),
-                                                            result.raw_data)
-                base.say(f'pass {stats["passes"]}: {len(done)}/{len(grid)} windows, '
-                         f'{stats["throttled"]} throttled so far')
-        finally:
-            await recognizer.close()
-        return [done[w['index']] for w in grid]
+        return await recognize_segments(grid, write_segment, '.wav', work, stats, deadline)
     finally:
         for path in work.iterdir():
             path.unlink(missing_ok=True)
         work.rmdir()
+
+
+async def recognize_segments(grid: list[dict], write_segment, suffix: str, work: Path,
+                             stats: dict, deadline: float, reduce=None) -> list[dict]:
+    """Shared loop: every window through the production throttle-aware recognizer.
+
+    write_segment(window, path) produces the provider input. One recognizer keeps
+    its shared cooldown for the whole shard; unresolved windows get further
+    passes, each after an exponential pause, until the deadline.
+    """
+    from track_recognizer import TrackRecognizer
+    reduce = reduce or reduce_hit
+    done: dict[int, dict] = {}
+    def on_attempt(result, ticket, delay):
+        stats['calls'] += 1
+        if result.http_status == 429:
+            stats['throttled'] += 1
+            stats['backoff_seconds'] += delay or 0
+        return None
+
+    batch_size = max(1, int(os.getenv('BATCH_SIZE', '10')))
+    recognizer = TrackRecognizer(quiet=True, on_attempt=on_attempt,
+                                 max_retry_seconds=MAX_RETRY_SECONDS,
+                                 continuation_deadline=deadline)
+    failures: dict[int, int] = {}
+    try:
+        while len(done) < len(grid):
+            if deadline - time.monotonic() < 1:
+                raise Inconclusive(f'deadline_with_{len(grid) - len(done)}_windows_unresolved')
+            if stats['passes']:
+                pause = max(throttle_delay(stats['passes']),
+                            recognizer._quota_cooldown_until - time.monotonic())
+                await asyncio.sleep(max(0, min(pause, deadline - time.monotonic() - 1)))
+            stats['passes'] += 1
+            pending = [w for w in grid if w['index'] not in done]
+            for start in range(0, len(pending), batch_size):
+                if time.monotonic() >= deadline:
+                    break
+                segments = []
+                for w in pending[start:start + batch_size]:
+                    path = work / f'w{w["index"]}{suffix}'
+                    write_segment(w, path)
+                    segments.append({'file': path, 'index': w['index'],
+                                     'timestamp': w['start_frame'] / RATE})
+                with contextlib.redirect_stdout(io.StringIO()):
+                    results = await recognizer.recognize_batch(segments, total_segments=len(grid))
+                for segment, result in zip(segments, results):
+                    track = (result.raw_data or {}).get('track') or {} if isinstance(result.raw_data, dict) else {}
+                    incomplete = (result.is_valid and isinstance(result.raw_data, dict) and result.recognized
+                                  and not all(str(track.get(k) or '').strip() for k in ('key', 'title', 'subtitle')))
+                    if not result.is_valid or not isinstance(result.raw_data, dict) or incomplete:
+                        stats['identity_incomplete'] += bool(incomplete)
+                        if result.http_status != 429:
+                            failures[segment['index']] = failures.get(segment['index'], 0) + 1
+                            if failures[segment['index']] >= MAX_WINDOW_PASSES:
+                                # Persistently failing (not throttled): count it, treat as unrecognized.
+                                stats['unresolved'] += 1
+                                done[segment['index']] = reduce(segment['index'], False, {})
+                        continue
+                    done[segment['index']] = reduce(segment['index'], bool(result.recognized),
+                                                    result.raw_data)
+            base.say(f'pass {stats["passes"]}: {len(done)}/{len(grid)} windows, '
+                     f'{stats["throttled"]} throttled so far')
+    finally:
+        await recognizer.close()
+    return [done[w['index']] for w in grid]
 
 
 # ---------------------------------------------------------------- commands

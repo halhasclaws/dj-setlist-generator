@@ -51,7 +51,7 @@ async function loadYoonVersions(actor: SessionActor, lookup: VersionLookup): Pro
   return yoonCollectionSchema.parse({ collection: "yoon-fest", revision: "neon", sets: rows.map((row) => {
     const metadata = record(row.metadata); const mixInfo = record(metadata.mixInfo);
     const coverage = record(metadata.summary).recognitionCoverage;
-    return { id: row.id, slug: row.slug, title: row.title,
+    return { id: row.id, slug: row.slug, title: yoonDisplayTitle(row.title),
       performer: typeof mixInfo.artist_name === "string" ? mixInfo.artist_name : "Unknown",
       generatedAt: getString(record(metadata.summary).generated_at) ?? row.updatedAt?.toISOString() ?? null,
       artistProfileImage: getString(mixInfo.artist_profile_image) ?? getString(mixInfo.artist_image),
@@ -91,6 +91,9 @@ export async function getYoonSet(actor: SessionActor, slug: string) {
 }
 
 // Explicit projection: never serialize the private source metadata into React props.
+/** Lineup-style name: drop the "(provisional)" marker the importer appended. */
+export const yoonDisplayTitle = (title: string) => title.replace(/\s*\(provisional\)\s*/gi, " ").trim() || title;
+
 export function toYoonSetDetail(set: YoonSet): ArchiveSetDetail {
   const tracks = set.tracks.map((track) => track.presentation ?? mapSetTrack({
     position: track.position, displayArtist: track.artist, displayTitle: track.title,

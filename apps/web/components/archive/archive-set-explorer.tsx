@@ -1161,7 +1161,7 @@ export function ArchiveSetExplorer({
   const skipTargets = useMemo(() => buildSkipTargets(model.tracks), [model.tracks]);
   const dockTrack = activeTrack ?? model.tracks[0] ?? null;
   // Private recordings keep one set-wide cover throughout, like SoundCloud.
-  const dockArt = privateContext ? model.heroImageUrl ?? null : dockTrack?.albumArt ?? null;
+  const dockArt = dockTrack?.albumArt ?? null;
   const showDock =
     (activeSource.kind === "youtube" || activeSource.kind === "soundcloud" || activeSource.kind === "native-audio") &&
     !ytEmbedBlocked &&

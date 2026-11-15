@@ -6,7 +6,7 @@ const { select, authorize, joins, predicates, queue } = vi.hoisted(() => ({ sele
 vi.mock("@/lib/db/client", () => ({ getDb: () => ({ select }) }));
 vi.mock("./access.server", () => ({ assertYoonAccess: authorize }));
 vi.mock("next/cache", () => ({ unstable_noStore: vi.fn() }));
-import { getYoonSet, getYoonSetByAsset, loadYoonCollection, toYoonSetDetail } from "./data.server";
+import { getYoonSet, getYoonSetByAsset, loadYoonCollection, toYoonSetDetail, yoonDisplayTitle } from "./data.server";
 const example = fixture.sets[0]!;
 describe("private collection reader", () => {
   it.skipIf(!process.env.YOON_PARITY_PLAN_FILE)("projects the local private production receipt end to end (fixture is never committed)", async () => {
@@ -161,5 +161,13 @@ describe("version identity query boundaries", () => {
     await expect(getYoonSet(viewer, example.slug)).rejects.toThrow("Not found");
     await expect(getYoonSetByAsset(viewer, example.audio.assetId)).rejects.toThrow("Not found");
     expect(select).not.toHaveBeenCalled();
+  });
+});
+
+describe("yoon display titles", () => {
+  it("drops the provisional marker in any case or position", () => {
+    expect(yoonDisplayTitle("Donald Saturday night (provisional)")).toBe("Donald Saturday night");
+    expect(yoonDisplayTitle("Crypt Kreepers (Provisional) Saturday")).toBe("Crypt Kreepers Saturday");
+    expect(yoonDisplayTitle("Jackson Algeo")).toBe("Jackson Algeo");
   });
 });

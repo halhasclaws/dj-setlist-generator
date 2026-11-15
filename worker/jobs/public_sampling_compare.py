@@ -53,7 +53,7 @@ def arm_seconds(arm: dict) -> tuple[int, int]:
 
 def validate_request(request: dict) -> tuple[list[dict], list[dict]]:
     sets = request['sets']
-    if not 1 <= len(sets) <= 16:
+    if not 1 <= len(sets) <= 50:
         raise SystemExit('request_sets_invalid')
     ids = []
     for item in sets:

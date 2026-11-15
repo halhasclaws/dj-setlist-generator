@@ -1,3 +1,4 @@
+import { traceAudioTiming } from "@/lib/archive/audio-timing";
 export type RecordingSpan = {
   recordingId: string;
   startSample: number;
@@ -169,9 +170,12 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
     // A seek may be applied while play() is still starting or being denied.
     const attempt = { version: request, settled: Promise.resolve() };
     playAttempt = attempt;
+    traceAudioTiming(`play() called rs=${audio.readyState}`, "native-audio");
     attempt.settled = audio.play().then(() => {
+      traceAudioTiming("play() resolved", "native-audio");
       if (playAttempt === attempt) playAttempt = null;
-    }, () => {
+    }, (error: unknown) => {
+      traceAudioTiming(`play() rejected ${error instanceof Error ? error.name : "unknown"}`, "native-audio");
       if (playAttempt === attempt) playAttempt = null;
       if (disposed || request !== version) return;
       playRequested = false;

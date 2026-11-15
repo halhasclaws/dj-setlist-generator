@@ -21,6 +21,7 @@ import { ArchiveScrollRoot } from "@/components/archive/archive-scroll-root";
 import { SpotifySaveButton } from "@/components/archive/spotify-save-button";
 import { SpotifyTrackPreview } from "@/components/archive/spotify-track-preview";
 import { traceAudioTiming } from "@/lib/archive/audio-timing";
+import { AudioDebugLog, useAudioDebugEvents } from "./audio-debug-log";
 import { createSetAudioFocus } from "@/lib/archive/audio-focus";
 import { SpotifyExportButton } from "@/components/archive/spotify-export-button";
 import {
@@ -2702,8 +2703,11 @@ export function ArchiveSetExplorer({
 
   // Read on every lock-screen press so the handlers always see this render's
   // player state, source and tracks rather than the render that registered them.
+  const traceSession = (action: string) => traceAudioTiming(`session:${action} playing=${isPlayingRef.current}` +
+    (activeSource.kind === "native-audio" ? ` requested=${nativeControllerRef.current?.isPlayRequested() ?? "none"}` : ""), activeSource.kind);
   mediaSessionHandlersRef.current = {
     play: () => {
+      traceSession("play");
       if (detail.duration > 0 && currentTimeRef.current >= detail.duration) {
         jumpTo(0, false, true);
         return;
@@ -2711,14 +2715,16 @@ export function ArchiveSetExplorer({
       playPlayer();
     },
     pause: () => {
+      traceSession("pause");
       pausePlayer();
       persistLatestPlayerPosition(true);
     },
     seekTo: (seconds) => {
+      traceSession(`seekto ${seconds.toFixed(1)}`);
       jumpTo(clamp(seconds, 0, Math.max(0, detail.duration)), false, isSetPlayRequested());
     },
-    previousTrack,
-    nextTrack,
+    previousTrack: () => { traceSession("previoustrack"); previousTrack(); },
+    nextTrack: () => { traceSession("nexttrack"); nextTrack(); },
   };
 
   useEffect(() => registerMediaSessionActions(() => mediaSessionHandlersRef.current!), []);
@@ -2741,6 +2747,7 @@ export function ArchiveSetExplorer({
 
   const seekSourceKey = JSON.stringify([detail.id, detail.duration, activeSource.kind,
     activeSource.sourceUrl, privateContext?.audio.revision, privateContext?.audio.segments]);
+  useAudioDebugEvents(nativeAudioRef, seekSourceKey);
   const commitScrub = (seconds: number) => {
     // Resolve intent at release, not at drag start: a later Pause must win.
     const shouldPlay = activeSource.kind === "native-audio"
@@ -3781,6 +3788,7 @@ export function ArchiveSetExplorer({
           <div className="jt-value">{journeyTooltip.value}</div>
         </div>
       ) : null}
+      <AudioDebugLog />
     </div>
   );
 }

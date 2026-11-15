@@ -1,0 +1,141 @@
+{
+ "sets": [
+  {
+   "id": "a7806c9d-5fcf-4ad4-8c5b-e01d6c8e75d4",
+   "url": "https://www.youtube.com/watch?v=qzQS2NNKdfc",
+   "seconds": 3466
+  },
+  {
+   "id": "b1f28f6d-eeb4-45b9-8604-272561f1189b",
+   "url": "https://www.youtube.com/watch?v=gJr0-IIl0Bk",
+   "seconds": 3454
+  },
+  {
+   "id": "86be71c2-1f80-432f-bee0-0ce9f2f7cb83",
+   "url": "https://www.youtube.com/watch?v=j4C6tWhGmnA",
+   "seconds": 4357
+  },
+  {
+   "id": "47b8f88a-7596-42b4-b05f-feceba933ea8",
+   "url": "https://www.youtube.com/watch?v=CGXjkJK-8sE",
+   "seconds": 9005
+  },
+  {
+   "id": "7a53bfa9-0b34-4b0b-bb99-6492d978cdb3",
+   "url": "https://www.youtube.com/watch?v=NexAjyRA1pU",
+   "seconds": 7196
+  },
+  {
+   "id": "73f5c70e-d6cd-4307-9ebe-0ec16ac03f43",
+   "url": "https://www.youtube.com/watch?v=83dkkrXeE3k",
+   "seconds": 3570
+  },
+  {
+   "id": "532d06ef-8102-4b59-962f-0a68c8bac3e2",
+   "url": "https://www.youtube.com/watch?v=Fktaircclck",
+   "seconds": 6473
+  },
+  {
+   "id": "150ba125-4a73-4a70-aadd-b7320012e9f2",
+   "url": "https://www.youtube.com/watch?v=3AGHWGwB5VQ",
+   "seconds": 2735
+  },
+  {
+   "id": "867d3cb4-8aa5-4283-825b-3160581017fc",
+   "url": "https://www.youtube.com/watch?v=Nir71J_3wHY",
+   "seconds": 3943
+  },
+  {
+   "id": "006efa4c-4d63-4b6a-b15b-ff45195a6857",
+   "url": "https://www.youtube.com/watch?v=XBNXqZTdeOk",
+   "seconds": 5140
+  },
+  {
+   "id": "aba1cf74-2e81-41d2-a36c-2ef5e0179632",
+   "url": "https://www.youtube.com/watch?v=Pmm2qLSlNVk",
+   "seconds": 4351
+  },
+  {
+   "id": "6e76925e-66b1-47c6-83ca-f0cb769c8891",
+   "url": "https://www.youtube.com/watch?v=FStVvTys_S8",
+   "seconds": 3875
+  },
+  {
+   "id": "6b13e7f3-54ee-4899-9d62-50dd76e5f025",
+   "url": "https://www.youtube.com/watch?v=oLrL27Zvf8E",
+   "seconds": 2733
+  },
+  {
+   "id": "61d03689-bcd7-47db-a110-6ac2e2dff493",
+   "url": "https://www.youtube.com/watch?v=NBv6QUhffVs",
+   "seconds": 4729
+  },
+  {
+   "id": "103b1928-410c-4ab4-a0b8-ae0d5f75cc57",
+   "url": "https://www.youtube.com/watch?v=etwEjl3a9As",
+   "seconds": 3752
+  },
+  {
+   "id": "941e005e-8d66-4c2a-80d9-3a694d855189",
+   "url": "https://www.youtube.com/watch?v=SBFAgXj9hW0",
+   "seconds": 6961
+  },
+  {
+   "id": "e5e51518-8a05-4d46-a3bb-1913cd559555",
+   "url": "https://www.youtube.com/watch?v=288tE-dh8Ww",
+   "seconds": 4028
+  },
+  {
+   "id": "27501b4c-f5c8-40d5-814f-9279a3820028",
+   "url": "https://www.youtube.com/watch?v=gQ7ufjgjxjI",
+   "seconds": 3035
+  },
+  {
+   "id": "5c0ea510-3e46-4ef0-8231-e4a3486da8fa",
+   "url": "https://www.youtube.com/watch?v=-bONtURnpmk",
+   "seconds": 6970
+  },
+  {
+   "id": "6a2bc130-5c7b-4504-976e-a7c5d859a4c5",
+   "url": "https://www.youtube.com/watch?v=TJ5TqjLwhro",
+   "seconds": 3477
+  },
+  {
+   "id": "ccd9fc67-670f-4bb5-93d0-c8174dadb85f",
+   "url": "https://www.youtube.com/watch?v=QJ7qqw9wCAo",
+   "seconds": 4786
+  },
+  {
+   "id": "d43926b4-3d89-4d0f-9489-27e31a0ee1b5",
+   "url": "https://www.youtube.com/watch?v=uMl9tS3SS7g",
+   "seconds": 7347
+  },
+  {
+   "id": "3ecc3291-3723-4cfb-9796-661457b52125",
+   "url": "https://www.youtube.com/watch?v=ZLrjwBXPj2I",
+   "seconds": 2957
+  }
+ ],
+ "arms": [
+  {
+   "name": "w30s15",
+   "window": 30,
+   "stride": 15
+  },
+  {
+   "name": "w12s12",
+   "window": 12,
+   "stride": 12
+  },
+  {
+   "name": "w12s9",
+   "window": 12,
+   "stride": 9
+  },
+  {
+   "name": "w12s6",
+   "window": 12,
+   "stride": 6
+  }
+ ]
+}

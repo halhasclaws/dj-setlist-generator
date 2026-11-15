@@ -53,3 +53,12 @@ export function formatLineupTitle([, name, day, start, end]: Slot): string {
 
 const TITLES = new Map(LINEUP.map((slot) => [slot[0], formatLineupTitle(slot)]));
 export const lineupTitle = (slug: string): string | null => TITLES.get(slug) ?? null;
+
+const ORDER = new Map(LINEUP.map((slot, index) => [slot[0], index]));
+/** Lineup order; sets missing from the lineup keep their order after it. */
+export function sortByLineup<T extends { slug: string }>(items: readonly T[]): T[] {
+  const rank = (item: T) => ORDER.get(item.slug) ?? LINEUP.length;
+  return items.map((item, index) => ({ item, index }))
+    .sort((left, right) => rank(left.item) - rank(right.item) || left.index - right.index)
+    .map(({ item }) => item);
+}

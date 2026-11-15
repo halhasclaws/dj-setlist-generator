@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { lineupTitle } from "./lineup";
+import { lineupTitle, sortByLineup } from "./lineup";
 
 describe("Yoon lineup titles", () => {
   it("uses the lineup name with day and time", () => {
@@ -9,4 +9,14 @@ describe("Yoon lineup titles", () => {
     expect(lineupTitle("yoon-fest-hank-friday-mean-gaps-v2")).toBe("Hank (Fri. 12:00 - 1:30 AM)");
   });
   it("leaves unknown slugs alone", () => expect(lineupTitle("synthetic-set")).toBeNull());
+});
+
+describe("Yoon lineup order", () => {
+  it("sorts by the lineup with Krane before Donald and unknown sets last", () => {
+    const slugs = ["synthetic-set", "yoon-fest-donald-saturday-night", "yoon-fest-jackson-sunday-pilot", "yoon-fest-krane-saturday", "yoon-fest-tompson-jake-cattani-partial"];
+    expect(sortByLineup(slugs.map((slug) => ({ slug }))).map((item) => item.slug)).toEqual([
+      "yoon-fest-tompson-jake-cattani-partial", "yoon-fest-krane-saturday", "yoon-fest-donald-saturday-night",
+      "yoon-fest-jackson-sunday-pilot", "synthetic-set",
+    ]);
+  });
 });

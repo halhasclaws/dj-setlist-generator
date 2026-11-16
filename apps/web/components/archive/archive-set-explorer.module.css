@@ -109,39 +109,6 @@
   max-width: 100%;
 }
 
-.root :global(.set-breadcrumb) {
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0 8px;
-}
-
-.root :global(.set-breadcrumb a) {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.root :global(.set-breadcrumb a.set-breadcrumb-parent) {
-  color: var(--dark-brand-lime, #d8ff5a);
-}
-
-.root :global(.set-breadcrumb a:hover),
-.root :global(.set-breadcrumb a:focus-visible) {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.root :global(.set-breadcrumb-sep),
-.root :global(.set-breadcrumb-amp) {
-  color: var(--dark-text-dim, #666);
-}
-
-@media (max-width: 640px) {
-  .root :global(.set-breadcrumb-root),
-  .root :global(.set-breadcrumb-root-sep) {
-    display: none;
-  }
-}
-
 .root :global(.stats-grid) {
   margin-top: 18px;
   display: grid;

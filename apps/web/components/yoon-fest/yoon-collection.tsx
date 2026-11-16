@@ -4,7 +4,6 @@ import type { ArchiveArtistSummary } from "@/lib/archive/types";
 import { YOON_COLLECTION_HREF, yoonSetHref } from "@/lib/yoon-fest/collection-summary";
 
 const collection: ArtistExplorerCollection = {
-  kicker: "Festival Intelligence Deck",
   setHref: yoonSetHref,
   navLinks: [{ label: "Yoon Fest", href: YOON_COLLECTION_HREF }],
   spotifyExport: { entityType: "festival", slug: "yoon-fest", endpoint: "/api/yoon-fest/spotify/export", label: "Export Festival to Spotify" },

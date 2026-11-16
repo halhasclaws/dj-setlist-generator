@@ -86,6 +86,17 @@ class Config:
     OVERLAP_RESOLUTION_ENABLED = os.getenv('OVERLAP_RESOLUTION_ENABLED', 'true').lower() == 'true'
     OVERLAP_THRESHOLD = float(os.getenv('OVERLAP_THRESHOLD', '0.3'))
 
+    # Offset agreement (D07): keep a cluster only when at least this many of its
+    # detections agree on where they are in the track, i.e. set time minus the
+    # provider's match offset lies within OFFSET_AGREEMENT_SECONDS of the
+    # cluster median. The cluster keeps only those agreeing detections.
+    # 0 disables (legacy behaviour).
+    OFFSET_AGREEMENT_MIN = int(os.getenv('OFFSET_AGREEMENT_MIN', '0'))
+    OFFSET_AGREEMENT_SECONDS = float(os.getenv('OFFSET_AGREEMENT_SECONDS', '4'))
+
+    # Named clustering profile. Empty keeps the settings above unchanged.
+    CLUSTERING_PROFILE = os.getenv('CLUSTERING_PROFILE', '').strip().lower()
+
     # Base Paths (changed from TEMP_DIR to ASSETS_DIR)
     ASSETS_DIR = Path('assets')
     OUTPUT_DIR = Path('output')
@@ -111,3 +122,27 @@ class Config:
         cls.OUTPUT_DIR.mkdir(exist_ok=True)
         cls.CHECKPOINT_DIR.mkdir(exist_ok=True)
     
+
+
+# D07 round 3 (45 public mixes scored against their own tracklists): offset
+# agreement replaces the detection-count, density and overlap rules.
+CLUSTERING_PROFILES = {
+    'offset_agreement': {
+        'MIN_CLUSTER_SIZE': 1,
+        'MIN_CLUSTER_DENSITY': 0.0,
+        'OVERLAP_RESOLUTION_ENABLED': False,
+        'OFFSET_AGREEMENT_MIN': 2,
+    },
+}
+
+
+def apply_clustering_profile(name: str) -> None:
+    if not name:
+        return
+    if name not in CLUSTERING_PROFILES:
+        raise ValueError(f'Unknown CLUSTERING_PROFILE: {name}')
+    for key, value in CLUSTERING_PROFILES[name].items():
+        setattr(Config, key, value)
+
+
+apply_clustering_profile(Config.CLUSTERING_PROFILE)

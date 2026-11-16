@@ -132,6 +132,14 @@ class SetlistBuilder:
         for track_id, recs in track_sequences.items():
             artist, title, _ = parse_track_id(track_id)
 
+            if Config.OFFSET_AGREEMENT_MIN > 0:
+                agreeing = self._offset_agreeing(recs)
+                if len(agreeing) < Config.OFFSET_AGREEMENT_MIN:
+                    print(f"✗ Skipped: {artist} - {title} ({len(agreeing)} offset-agreeing detections "
+                          f"< {Config.OFFSET_AGREEMENT_MIN} min)")
+                    continue
+                recs = agreeing
+
             # Only create cluster if we have minimum detections and density
             cluster = self._make_cluster_dict(track_id, recs)
             density = cluster['density']
@@ -148,6 +156,29 @@ class SetlistBuilder:
         print(f"\nCreated {len(clusters)} initial clusters")
         return clusters
     
+    @staticmethod
+    def _match_offset(rec) -> Optional[float]:
+        """Provider offset of the matched audio within the track, in seconds."""
+        matches = (rec.raw_data or {}).get('matches') if isinstance(rec.raw_data, dict) else None
+        if not isinstance(matches, list) or not matches or not isinstance(matches[0], dict):
+            return None
+        offset = matches[0].get('offset')
+        return float(offset) if type(offset) in (int, float) else None
+
+    def _offset_agreeing(self, recognitions: list) -> list:
+        """Detections from one continuous playback: set time minus track offset
+        stays constant while the track plays, so agreeing detections cluster
+        around the median of (timestamp - offset)."""
+        anchored = [(rec.timestamp - offset, rec) for rec in recognitions
+                    if (offset := self._match_offset(rec)) is not None]
+        if not anchored:
+            return []
+        anchors = sorted(anchor for anchor, _ in anchored)
+        mid = len(anchors) // 2
+        median = anchors[mid] if len(anchors) % 2 else (anchors[mid - 1] + anchors[mid]) / 2
+        return [rec for anchor, rec in anchored
+                if abs(anchor - median) <= Config.OFFSET_AGREEMENT_SECONDS]
+
     def _make_cluster_dict(self, track_id: str, recognitions: list) -> dict:
         """Create cluster dictionary from recognitions."""
         artist, title, shazam_id = parse_track_id(track_id)

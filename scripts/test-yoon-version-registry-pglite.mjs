@@ -12,6 +12,8 @@ const db=new PGlite({extensions:{pgcrypto}}), q=(s,p=[])=>db.query(s,p);
 await db.exec('CREATE ROLE set_list_worker');
 for(const f of readdirSync('drizzle/migrations').filter(f=>/^\d.*\.sql$/.test(f)).sort()) await db.exec(readFileSync('drizzle/migrations/'+f,'utf8'));
 let checks=0; const reject=async(s,p=[],pattern)=>{await assert.rejects(q(s,p),pattern);checks++};
+// 0030: the write guard keeps privacy only; formerly guarded overwrites now succeed (run and rolled back).
+const allowed=async(s,p=[])=>{await q('BEGIN');try{await q(s,p);checks++}finally{await q('ROLLBACK')}};
 const col=randomUUID();
 await q("INSERT INTO authn.users(id,email) VALUES('owner','owner@example.invalid'),('viewer','viewer@example.invalid')");
 await q("INSERT INTO app.archive_collections(id,slug,title) VALUES($1,'yoon-fest','Synthetic')",[col]);
@@ -29,8 +31,8 @@ for(const visibility of ['public','private']) for(const title of ['mean gaps v2'
  assert.equal((await q('SELECT app.yoon_submission_version_readable($1) ok',[sub])).rows[0].ok,true);checks++;
  await q('SELECT ops.assert_yoon_version_execution($1,\'admit\')',[run]);checks++;
 }
-await reject("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id,metadata) VALUES($1,'unknown-yoon-corrected','x','x','private',$2,'{\"timingModelVersion\":\"v2\"}')",[randomUUID(),col],/unregistered/);
-await reject("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id) VALUES($1,'fixed-wrong-collection','x','x','private',$2)",[reserved.set_id,otherCol],/unregistered/);
+await allowed("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id,metadata) VALUES($1,'unknown-yoon-corrected','x','x','private',$2,'{\"timingModelVersion\":\"v2\"}')",[randomUUID(),col]);
+await allowed("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id) VALUES($1,'fixed-wrong-collection','x','x','private',$2)",[reserved.set_id,otherCol]);
 const revision=reserved.media_revision;
 const ids=Array.from({length:27},(_,i)=>({set:i===0?reserved.logical_set_id:randomUUID(),run:randomUUID(),sub:randomUUID(),media:randomUUID(),source:'legacy'+i,slug:'legacy'+i}));
 const descriptor={...reserved.descriptor,source_url:'https://www.dropbox.com/scl/fi/SYNTHETIC/source.wav?dl=1'}; const legacyDescriptor={source_sha256:'a'.repeat(64),source_bytes:100,source_start_seconds:0,source_end_seconds:30};
@@ -43,7 +45,7 @@ async function insertRows(x){
 for(const x of ids)await insertRows(x);
 const readable=async(id,selected=false)=>(await q('SELECT app.yoon_version_readable($1,$2) ok',[id,selected])).rows[0].ok;
 assert.equal(await readable(ids[0].set),true);checks++;
-await reject("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id) VALUES($1,'unknown-v2','x','x','private',$2)",[reserved.set_id,col],/unregistered/);
+await allowed("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id) VALUES($1,'unknown-v2','x','x','private',$2)",[reserved.set_id,col]);
 const snapshots=[];for(const x of ids)snapshots.push({set_id:x.set,snapshot_sha256:(await q('SELECT ops.yoon_sha(ops.yoon_version_snapshot($1)) sha',[x.set])).rows[0].sha});
 const audience=(await q('SELECT ops.yoon_audience($1) sha',[col])).rows[0].sha;
 async function register(x,pred=null){
@@ -57,7 +59,7 @@ await db.exec('COMMIT');checks++;
 assert.equal(await readable(ids[0].set,true),true);checks++;
 await reject("UPDATE ops.yoon_versions SET source_id='tamper' WHERE set_id=$1",[ids[0].set],/immutable/);
 await reject("DELETE FROM app.archive_collection_members WHERE collection_id=$1 AND user_id='viewer'",[col],/audience/);
-await reject("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id) VALUES($1,'unknown','x','x','private',$2)",[randomUUID(),col],/unregistered/);
+await allowed("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id) VALUES($1,'unknown','x','x','private',$2)",[randomUUID(),col]);
 const x={set:reserved.set_id,run:reserved.run_id,sub:reserved.submission_id,media:reserved.media_id,source:reserved.source_id,slug:'synthetic-v2'};
 x.sourceSha=(await q("SELECT ops.yoon_sha(jsonb_build_object('source_url','local:synthetic','descriptor',$1::jsonb)) sha",[descriptor])).rows[0].sha;
 x.mediaSha=(await q(`SELECT ops.yoon_sha(jsonb_build_object('id',$1::uuid,'set_id',$2::uuid,'revision','${revision}','content_type','audio/wav','duration_seconds',30.000000::numeric(12,6),'recording_sources','[]'::jsonb,'source_spans','[]'::jsonb)) sha`,[x.media,x.set])).rows[0].sha;
@@ -74,7 +76,7 @@ const initialRows={
 };
 await db.exec(compile('stage_sql',[registry,initialRows]));checks++;
 await reject('SELECT ops.assert_yoon_version_execution($1,\'admit\')',[x.run],/approved/);
-await reject("UPDATE app.sets SET title='Unapproved import' WHERE id=$1",[x.set],/unapproved/);
+await allowed("UPDATE app.sets SET title='Unapproved import' WHERE id=$1",[x.set]);
 await db.exec(compile('approve_execution_sql',[x.set,registry]));checks++;
 
 assert.equal(await readable(x.set),false);checks++;
@@ -130,10 +132,10 @@ await q("UPDATE ops.set_runs SET status='private_resume_pending',source_metadata
 await q('DELETE FROM ops.set_run_leases WHERE set_run_id=$1',[x.run]);
 
 
-await reject("UPDATE ops.set_runs SET source_url='local:changed' WHERE id=$1",[x.run],/identity/);
+await allowed("UPDATE ops.set_runs SET source_url='local:changed' WHERE id=$1",[x.run]);
 await q('UPDATE ops.yoon_versions SET processing_approved=false WHERE set_id=$1',[x.set]);
 await reject('SELECT ops.assert_yoon_version_execution($1,\'admit\')',[x.run],/approved/);
-await reject("UPDATE app.sets SET title='bad' WHERE id=$1",[x.set],/unapproved/);
+await allowed("UPDATE app.sets SET title='bad' WHERE id=$1",[x.set]);
 await q('UPDATE ops.yoon_versions SET processing_approved=true WHERE set_id=$1',[x.set]);
 await q("UPDATE ops.set_runs SET status='private_resume_running' WHERE id=$1",[ids[0].run]);
 await reject('SELECT ops.assert_yoon_version_execution($1,\'admit\')',[x.run],/occupied/);
@@ -152,11 +154,25 @@ await reject('SELECT ops.select_yoon_version($1,$2,$3,$4,$5,$6,$7)',[...args.sli
 await q('SELECT ops.select_yoon_version($1,$2,$3,$4,$5,$6,$7)',args);checks++;
 assert.equal(await readable(ids[0].set,true),false);assert.equal(await readable(ids[0].set),true);assert.equal(await readable(x.set,true),true);checks+=3;
 await reject('SELECT ops.select_yoon_version($1,$2,$3,$4,$5,$6,$7)',args,/cas/);
-await reject("UPDATE app.sets SET title='bad' WHERE id=$1",[ids[0].set],/frozen/);
+await allowed("UPDATE app.sets SET title='bad' WHERE id=$1",[ids[0].set]);
 assert.equal(await hash(ids[0].set),old);checks++;
 await q('SELECT ops.select_yoon_version($1,$2,1,$3,$4,$5,$6,true)',[ids[0].set,x.set,ids[0].set,next,old,await review(x.set,ids[0].set,next,old)]);checks++;
 assert.equal(await readable(ids[0].set,true),true);checks++;
 await q("UPDATE ops.set_runs SET status='private_resume_running' WHERE id=$1",[ids[1].run]);checks++;
 await reject('SELECT ops.select_yoon_version($1,$2,NULL,$3,$4,$5,$6,true)',[ids[0].set,ids[0].set,x.set,old,next,args[6]],/cas/);
 await reject('DELETE FROM ops.yoon_version_history',[],/append/);
+// 0030 privacy-only guard: Yoon rows stay private and inside their collection; deletes are allowed.
+await reject("UPDATE app.sets SET visibility='public' WHERE id=$1",[ids[0].set],/yoon_must_stay_private|security scope is immutable/);
+await reject("UPDATE app.sets SET collection_id=$2 WHERE id=$1",[ids[0].set,otherCol],/yoon_leaves_private_collection|security scope is immutable/);
+await reject("UPDATE app.sets SET collection_id=NULL WHERE id=$1",[ids[0].set],/yoon_leaves_private_collection|security scope is immutable/);
+await reject("UPDATE ops.set_runs SET publication_visibility='public' WHERE id=$1",[ids[0].run],/yoon_must_stay_private|security scope is immutable/);
+await reject("UPDATE ops.submissions SET visibility='public' WHERE id=(SELECT submission_id FROM ops.set_runs WHERE id=$1)",[ids[0].run],/yoon_must_stay_private|security scope is immutable/);
+await reject("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id) VALUES($1,'public-in-yoon','x','x','public',$2)",[randomUUID(),col],/yoon_must_stay_private/);
+await allowed("DELETE FROM app.set_entries WHERE set_id=$1",[ids[0].set]);
+await allowed("UPDATE app.sets SET slug='renamed-yoon-set' WHERE id=$1",[ids[0].set]);
+await allowed("INSERT INTO app.sets(id,slug,title,normalized_title,visibility,collection_id) VALUES($1,'new-private-yoon','x','x','private',$2)",[randomUUID(),col]);
+const publicSet=randomUUID();await q("INSERT INTO app.sets(id,slug,title,normalized_title,visibility) VALUES($1,'public-target','x','x','public')",[publicSet]);
+await reject("UPDATE app.set_entries SET set_id=$2 WHERE set_id=$1",[x.set,publicSet],/yoon_evidence_reparent/);
+await allowed("UPDATE app.set_entries SET display_title='Re-clustered' WHERE set_id=$1",[x.set]);
+await allowed("DELETE FROM ops.segment_hits WHERE set_run_id=$1",[x.run]);
 console.log(`PASS ${checks} registry synthetic PostgreSQL checks, full migrations; no network or live data.`);await db.close();

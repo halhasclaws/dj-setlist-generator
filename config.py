@@ -131,12 +131,13 @@ class Config:
 
 
 # D07 round 3 (45 public mixes scored against their own tracklists): offset
-# agreement replaces the detection-count, density and overlap rules.
+# agreement replaces the detection-count and density rules. Overlap resolution
+# stays on: after the offset filter it is accuracy-neutral and keeps the
+# timeline free of overlapping entries.
 CLUSTERING_PROFILES = {
     'offset_agreement': {
         'MIN_CLUSTER_SIZE': 1,
         'MIN_CLUSTER_DENSITY': 0.0,
-        'OVERLAP_RESOLUTION_ENABLED': False,
         'OFFSET_AGREEMENT_MIN': 2,
     },
 }

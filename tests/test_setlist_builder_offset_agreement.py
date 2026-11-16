@@ -63,11 +63,12 @@ class OffsetAgreementTests(unittest.TestCase):
         self.assertEqual(track.segment_indices, [20, 21, 22])
         self.assertEqual(track.start_time, 300.0)
 
-    def test_overlapping_tracks_both_kept_without_overlap_resolution(self):
+    def test_overlap_resolution_still_applies_after_offset_filter(self):
         a = [rec(i, 'a', 15.0 * (i - 10)) for i in range(10, 20)]
-        b = [rec(i, 'b', 15.0 * (i - 17)) for i in range(17, 21)]
-        self.assertEqual({t.shazam_track_id for t in build(a + b, **PROFILE)}, {'a', 'b'})
-        self.assertEqual({t.shazam_track_id for t in build(a + b)}, {'a'})
+        b = [rec(i, 'b', 15.0 * (i - 14)) for i in range(14, 18)]
+        self.assertEqual({t.shazam_track_id for t in build(a + b, **PROFILE)}, {'a'})
+        self.assertEqual({t.shazam_track_id for t in build(a + b, **PROFILE, OVERLAP_RESOLUTION_ENABLED=False)},
+                         {'a', 'b'})
 
     def test_profiles(self):
         with patch.multiple(Config, **LEGACY):
@@ -76,7 +77,7 @@ class OffsetAgreementTests(unittest.TestCase):
             config.apply_clustering_profile('offset_agreement')
             self.assertEqual((Config.MIN_CLUSTER_SIZE, Config.MIN_CLUSTER_DENSITY,
                               Config.OVERLAP_RESOLUTION_ENABLED, Config.OFFSET_AGREEMENT_MIN),
-                             (1, 0.0, False, 2))
+                             (1, 0.0, True, 2))
             with self.assertRaises(ValueError):
                 config.apply_clustering_profile('typo')
 

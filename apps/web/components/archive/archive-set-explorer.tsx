@@ -2061,15 +2061,7 @@ export function ArchiveSetExplorer({
         // suspended background page that iOS wakes only briefly; on Hal's
         // Simulator the bookkeeping below ran first and delayed play() by
         // 1.6s, after which iOS gave the lock screen to another app.
-        // Experiment (?resumeReload=1): resume through a fresh source load
-        // instead of WebKit's own re-fetch, to compare lock-screen resume times.
-        const reloadOnResume = typeof window !== "undefined" &&
-          new URLSearchParams(window.location.search).get("resumeReload") === "1" &&
-          nativeControllerRef.current.position() < detail.duration;
-        if (reloadOnResume) {
-          traceAudioTiming("resume-via-reload", "native-audio");
-          nativeControllerRef.current.recover(true);
-        } else nativeControllerRef.current.resume(replayAtEnd);
+        nativeControllerRef.current.resume(replayAtEnd);
         // A lock-screen resume of a recording can take seconds to re-buffer,
         // with the play event itself delayed (Hal's Simulator: 3-5 s). Show
         // the requested state at once, with a frozen clock, until "playing".

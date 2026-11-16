@@ -94,6 +94,9 @@ jobs:
       FFMPEG_PORTABLE_DIR: ".runtime/ffmpeg"
       CONCURRENT_RECOGNITIONS: "2"
       RECOGNITION_SLOT_COUNT_REQUESTED: ${{ github.event.inputs.recognition_slot_count }}
+      # Preview throttle tuning: fewer concurrent slots trip fewer shared 429
+      # cooldowns. Production keeps the 12-slot auto cap.
+      AUTO_MAX_RECOGNITION_SLOTS: ${{ github.event.inputs.deployment_target == 'development' && '6' || '12' }}
       LEASE_SIZE_REQUESTED: ${{ github.event.inputs.lease_size }}
       BATCH_SIZE: "10"
       QUOTA_COOLDOWN_DURATION: "60"

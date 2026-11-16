@@ -20,6 +20,7 @@ import {
   type ArchiveEvidenceTrackCardSourceGroup,
 } from "@/components/archive/archive-evidence-track-card";
 import { ArchiveHeader } from "@/components/archive/archive-header";
+import { ArchiveBreadcrumb } from "@/components/archive/set-breadcrumb";
 import { ArchiveSetCard } from "@/components/archive/archive-set-card";
 import { SpotifyExportButton } from "@/components/archive/spotify-export-button";
 import { ArchiveScrollRoot } from "@/components/archive/archive-scroll-root";
@@ -230,7 +231,6 @@ const defaultSetHref: SetHrefBuilder = (slug) => buildSetHref({ slug });
 
 /** A private collection (Yoon Fest) shown with the artist layout. */
 export type ArtistExplorerCollection = {
-  kicker: string;
   setHref: SetHrefBuilder;
   navLinks: Array<{ label: string; href: string }>;
   spotifyExport: { entityType: "festival"; slug: string; endpoint: "/api/yoon-fest/spotify/export"; label?: string };
@@ -1465,7 +1465,7 @@ export function ArchiveArtistExplorer({
       <main className="shell">
         <section className="section" id="overview">
           <div className="section-inner">
-            <div className="kicker">{collection?.kicker ?? "Artist Intelligence Deck"}</div>
+            <ArchiveBreadcrumb current={artist.name} />
             <div className="artist-hero">
               <div className="artist-hero-main" ref={heroMainRef}>
                 <div className="artist-hero-visual" ref={heroVisualRef}>

@@ -20,7 +20,7 @@ describe("private archive UI reuse", () => {
   });
   it("renders the festival like an artist page with links only to the private set route", () => {
     const html = renderToStaticMarkup(<YoonCollection summary={buildYoonCollectionSummary([detail])} />);
-    expect(html).toContain("Festival Intelligence Deck"); expect(html).toContain("Set Atlas"); expect(html).toContain("Set Explorer");
+    expect(html).toContain('aria-label="Breadcrumb"'); expect(html).toContain(">Archive</a>"); expect(html).toContain("Set Atlas"); expect(html).toContain("Set Explorer");
     expect(html).toContain("/collections/yoon-fest/sets/synthetic-set"); expect(html).toContain("Export Festival to Spotify");
     expect(html).not.toContain('href="/sets/synthetic-set'); expect(html).not.toContain("Collection Status");
     expect(html).not.toContain("dropbox.com"); expect(html).not.toContain(set.boundaryNote);

@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { SetBreadcrumb, buildSetParentCrumbs } from "./set-breadcrumb";
+import { ArchiveBreadcrumb, SetBreadcrumb, buildSetParentCrumbs } from "./set-breadcrumb";
 
 describe("set breadcrumb", () => {
   it("links a public set back to its artist page", () => {
@@ -34,5 +34,14 @@ describe("set breadcrumb", () => {
     const html = renderToStaticMarkup(<SetBreadcrumb parents={buildSetParentCrumbs({ artists: [] })} />);
     expect(html).not.toContain("/artists/");
     expect(html).toContain("Set Intelligence Deck");
+  });
+});
+
+describe("artist page breadcrumb", () => {
+  it("shows Archive / artist with Archive linking home", () => {
+    const html = renderToStaticMarkup(<ArchiveBreadcrumb current="Fred Everything" />);
+    expect(html).toMatch(/<a[^>]*href="\/"[^>]*>Archive<\/a>/);
+    expect(html).toContain('aria-current="page">Fred Everything</span>');
+    expect(html).not.toContain("Intelligence Deck");
   });
 });

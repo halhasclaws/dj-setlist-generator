@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { buildArtistHref } from "@/components/archive/archive-hrefs";
+import styles from "./set-breadcrumb.module.css";
 
 type Crumb = { href: string; label: string };
 
@@ -21,25 +22,42 @@ export const buildSetParentCrumbs = ({
     .map((artist) => ({ href: buildArtistHref({ slug: artist.slug }), label: artist.name }));
 };
 
-export function SetBreadcrumb({ parents }: { parents: Crumb[] }) {
+/**
+ * Plain gray "Archive / … / current" trail used as the page kicker.
+ * The Archive root links home; parents link up one level.
+ */
+export function ArchiveBreadcrumb({
+  current,
+  hideRootOnPhone = false,
+  parents = [],
+}: {
+  current: string;
+  hideRootOnPhone?: boolean;
+  parents?: Crumb[];
+}) {
+  const rootClass = hideRootOnPhone ? styles.phoneHidden : undefined;
   return (
-    <nav aria-label="Breadcrumb" className="kicker set-breadcrumb">
-      <Link className="set-breadcrumb-root" href="/">Archive</Link>
-      <span aria-hidden="true" className="set-breadcrumb-sep set-breadcrumb-root-sep">/</span>
+    <nav aria-label="Breadcrumb" className={`kicker ${styles.breadcrumb}`}>
+      <Link className={rootClass} href="/">Archive</Link>
+      <span aria-hidden="true" className={[styles.sep, rootClass].filter(Boolean).join(" ")}>/</span>
       {parents.length > 0 ? (
         <>
-          <span className="set-breadcrumb-parents">
+          <span>
             {parents.map((parent, index) => (
               <span key={parent.href}>
-                {index > 0 ? <span aria-hidden="true" className="set-breadcrumb-amp"> &amp; </span> : null}
-                <Link className="set-breadcrumb-parent" href={parent.href}>{parent.label}</Link>
+                {index > 0 ? <span aria-hidden="true" className={styles.sep}> &amp; </span> : null}
+                <Link href={parent.href}>{parent.label}</Link>
               </span>
             ))}
           </span>
-          <span aria-hidden="true" className="set-breadcrumb-sep">/</span>
+          <span aria-hidden="true" className={styles.sep}>/</span>
         </>
       ) : null}
-      <span aria-current="page" className="set-breadcrumb-current">Set Intelligence Deck</span>
+      <span aria-current="page">{current}</span>
     </nav>
   );
+}
+
+export function SetBreadcrumb({ parents }: { parents: Crumb[] }) {
+  return <ArchiveBreadcrumb current="Set Intelligence Deck" hideRootOnPhone parents={parents} />;
 }

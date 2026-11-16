@@ -223,6 +223,9 @@ jobs:
       WORKER_VERCEL_OIDC_AUDIENCE: ${{ !(github.event.inputs.deployment_target == 'production') && format('https://github.com/{0}', github.repository_owner) || '' }}
       ENABLE_CHECKPOINTS: "false"
       FFMPEG_PORTABLE_DIR: ".runtime/ffmpeg"
+      # Shazam's 429 limit is per runner (per IP): a throttled slot backs off on
+      # its own instead of freezing every slot of the run.
+      SHARED_PROVIDER_COOLDOWN: "false"
       CONCURRENT_RECOGNITIONS: "2"
       RECOGNITION_SLOT_COUNT: ${{ needs.bootstrap.outputs.effective_slot_count }}
       LEASE_SIZE: ${{ needs.bootstrap.outputs.effective_lease_size }}

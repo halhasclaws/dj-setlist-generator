@@ -70,6 +70,13 @@ class OffsetAgreementTests(unittest.TestCase):
         self.assertEqual({t.shazam_track_id for t in build(a + b, **PROFILE, OVERLAP_RESOLUTION_ENABLED=False)},
                          {'a', 'b'})
 
+    def test_two_equal_groups_keep_one_instead_of_neither(self):
+        # a looped section: anchors 845 and 700 (five each); a median (772) matches neither
+        recs = [rec(i, 'n', 15.0 * i - 845) for i in range(60, 65)] + \
+               [rec(i, 'n', 15.0 * i - 700) for i in range(65, 70)]
+        [track] = build(recs, **PROFILE)
+        self.assertEqual(track.segment_indices, [60, 61, 62, 63, 64])
+
     def test_profiles(self):
         with patch.multiple(Config, **LEGACY):
             config.apply_clustering_profile('')

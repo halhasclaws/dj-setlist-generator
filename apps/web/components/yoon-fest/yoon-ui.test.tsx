@@ -16,7 +16,7 @@ describe("private archive UI reuse", () => {
     expect(html.match(/<audio[^>]*>/)?.[0]).toMatch(/playsinline/i);
     expect(html).toContain('aria-label="Set playback"');
     expect(html).toContain('aria-label="Seek within set"'); expect(html).toMatch(/controlslist="nodownload"/i); expect(html).not.toContain("download="); expect(html).toContain(`/api/yoon-fest/media/${set.audio.assetId}`); expect(html).toContain('id="track-2"'); expect(html).toContain("may be accessible by link");
-    expect(html).not.toContain("Embedded playback is unavailable"); expect(html).not.toContain("Open Source"); expect(html).not.toContain("startSample"); expect(html).not.toContain("synthetic-a"); expect(html).not.toContain("rlkey"); expect(html).not.toContain("dropbox.com"); expect(html).not.toContain("Anyone who receives an audio link"); expect(html).not.toContain(set.boundaryNote); expect(html).toContain("Set Intelligence Deck");
+    expect(html).not.toContain("Embedded playback is unavailable"); expect(html).not.toContain("Open Source"); expect(html).not.toContain("startSample"); expect(html).not.toContain("synthetic-a"); expect(html).not.toContain("rlkey"); expect(html).not.toContain("dropbox.com"); expect(html).not.toContain("Anyone who receives an audio link"); expect(html).not.toContain(set.boundaryNote); expect(html).toContain("Set Intelligence Deck"); expect(html).toContain('href="/collections/yoon-fest"');
   });
   it("renders the festival like an artist page with links only to the private set route", () => {
     const html = renderToStaticMarkup(<YoonCollection summary={buildYoonCollectionSummary([detail])} />);

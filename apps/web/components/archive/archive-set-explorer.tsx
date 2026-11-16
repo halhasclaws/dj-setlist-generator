@@ -15,6 +15,7 @@ import type { MouseEvent as ReactMouseEvent } from "react";
 import { ArchiveDeleteControl, SubmittedByYouBadge } from "@/components/archive/archive-delete-control";
 import { buildArtistHref } from "@/components/archive/archive-hrefs";
 import { ArchiveHeader } from "@/components/archive/archive-header";
+import { SetBreadcrumb, buildSetParentCrumbs } from "@/components/archive/set-breadcrumb";
 import { SetSeekControl } from "@/components/archive/set-seek-control";
 import { RecordedSetControls, type RecordedSetCoverage } from "@/components/archive/recorded-set-controls";
 import { ArchiveScrollRoot } from "@/components/archive/archive-scroll-root";
@@ -2785,7 +2786,12 @@ export function ArchiveSetExplorer({
       <main className="shell detail-shell">
         <section className="section" id="overview">
           <div className="section-inner">
-            <div className="kicker">Set Intelligence Deck</div>
+            <SetBreadcrumb
+              parents={buildSetParentCrumbs({
+                artists: detail.artists,
+                collection: privateContext ? { href: privateContext.collectionHref, label: "Yoon Fest" } : null,
+              })}
+            />
             <div className="set-hero">
               <div className="set-hero-grid">
                 <div className="set-hero-main" ref={heroMainRef}>

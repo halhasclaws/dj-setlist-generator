@@ -50,6 +50,14 @@ const PLAY_WATCHDOG_MS = 1200;
 // element switches files, then hands back at a buffered point.
 const PRELOAD_SECONDS = 20;
 const HANDOFF_LEAD_SECONDS = 1.5;
+// A set's last window can end at the very end of an original file whose final
+// sample frame is incomplete (a data chunk that is not a whole number of
+// frames). Decoding that frame raises a demuxer error instead of "ended", so
+// the set finishes at its mapped end frame, a little before the file's end.
+export const FINAL_END_GUARD_SECONDS = 0.05;
+// A media error this close to the active window's mapped end is the end of
+// that window, not a dead provider URL: move on (or finish), never reload.
+export const NEAR_END_ERROR_SECONDS = 2;
 
 export type NativeAudioSegment = { src: string; startSeconds: number; durationSeconds: number };
 export type StandbyAudio = NativeAudioPort & { preload: string;
@@ -77,6 +85,10 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
   let prepared: number | null = null;
   let bridge: { index: number; handoffAt: number | null } | null = null;
   let handoffTimer: ReturnType<typeof setInterval> | null = null;
+  // Stopped at the set's end without the element reaching its own end.
+  let parkedAtEnd = false;
+  // The element hit a media error: the next seek must reload its source.
+  let mustReload = false;
   const windowEnd = (index: number) => offsets[index]! + segments[index]!.durationSeconds;
   const bridgedPosition = () => {
     const part = segments[bridge!.index]!;
@@ -190,6 +202,7 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
   const seek = (seconds: number, autoplay: boolean) => {
     if (disposed || !Number.isFinite(seconds)) return;
     endBridge();
+    parkedAtEnd = false;
     const request = ++version;
     const target = Math.max(0, Math.min(duration, seconds));
     const index = segments.findIndex((part, index) => target < offsets[index]! + part.durationSeconds);
@@ -198,7 +211,8 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
     playRequested = autoplay && target < duration;
     pending = { seconds: target, autoplay: playRequested };
     audio.pause();
-    if (selected !== activeIndex) {
+    if (selected !== activeIndex || mustReload) {
+      mustReload = false;
       activeIndex = selected;
       awaitingMetadata = true;
       audio.src = segments[selected]!.src;
@@ -221,7 +235,7 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
       onError("This recording could not seek. Reload the page to try again.");
     }
   };
-  const position = (): number => bridge ? bridgedPosition() : pending?.seconds ?? Math.max(offsets[activeIndex]!, Math.min(offsets[activeIndex]! + segments[activeIndex]!.durationSeconds,
+  const position = (): number => parkedAtEnd ? duration : bridge ? bridgedPosition() : pending?.seconds ?? Math.max(offsets[activeIndex]!, Math.min(offsets[activeIndex]! + segments[activeIndex]!.durationSeconds,
     offsets[activeIndex]! + audio.currentTime - segments[activeIndex]!.startSeconds));
   const resume = (replayAtEnd = true) => {
     if (disposed || bridge) return;
@@ -230,7 +244,7 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
     const part = segments[activeIndex]!;
     const target = position();
     if (target >= duration && !replayAtEnd) { pause(); return; }
-    if (pending || awaitingMetadata || audio.readyState < 1 || audio.ended || audio.currentTime < part.startSeconds - SOURCE_TIME_TOLERANCE_SECONDS ||
+    if (parkedAtEnd || mustReload || pending || awaitingMetadata || audio.readyState < 1 || audio.ended || audio.currentTime < part.startSeconds - SOURCE_TIME_TOLERANCE_SECONDS ||
       audio.currentTime >= part.startSeconds + part.durationSeconds) {
       seek(target >= duration ? 0 : target, true);
       return;
@@ -238,8 +252,19 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
     playRequested = true;
     startPlayback(++version);
   };
+  // Stop at the set's endpoint without asking the element for more media.
+  const finish = () => {
+    endBridge();
+    version += 1;
+    playRequested = false;
+    pending = null;
+    parkedAtEnd = true;
+    audio.pause();
+    return duration;
+  };
   const ended = () => {
     if (disposed) return duration;
+    if (parkedAtEnd) return duration;
     // ended events can already be queued when a user or Spotify pauses us.
     // They cannot grant a new autoplay request after that pause.
     if (!playRequested || bridge) return position();
@@ -275,11 +300,14 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
       onPaused();
     },
     tick() {
-      if (bridge) return position();
+      if (parkedAtEnd || bridge) return position();
       if (disposed || pending || awaitingMetadata || audio.readyState < 1) { stalledSince = null; return position(); }
       const part = segments[activeIndex]!;
       checkDroppedPlay();
       prepareNext();
+      const last = activeIndex === segments.length - 1;
+      if (last && (!audio.paused || playRequested) && audio.currentTime < part.startSeconds + part.durationSeconds &&
+        audio.currentTime >= part.startSeconds + part.durationSeconds - FINAL_END_GUARD_SECONDS) return finish();
       if (audio.currentTime < part.startSeconds - SOURCE_TIME_TOLERANCE_SECONDS) seek(offsets[activeIndex]!, !audio.paused);
       else if (audio.currentTime >= part.startSeconds + part.durationSeconds) {
         // A window that ends at (or a few samples before) the end of its file
@@ -302,6 +330,8 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
     recover() {
       if (disposed) return false;
       const target = position();
+      parkedAtEnd = false;
+      mustReload = false;
       endBridge();
       const request = ++version;
       playRequested = playRequested && target < duration;
@@ -312,6 +342,22 @@ export function createNativeAudioController(audio: NativeAudioPort, duration: nu
       audio.load();
       if (playRequested) startPlayback(request);
       return true;
+    },
+    // A media error near the active window's mapped end (for example a
+    // truncated last sample frame) ends that window. Returns "advanced" when
+    // playback moved to the next window, "finished" when the set stopped at its
+    // end, or false when the error is not near an end and needs recovery.
+    endOnError(): "advanced" | "finished" | false {
+      if (disposed || bridge || parkedAtEnd || pending || awaitingMetadata) return false;
+      const part = segments[activeIndex]!;
+      if (!Number.isFinite(audio.currentTime) || audio.currentTime < part.startSeconds + part.durationSeconds - NEAR_END_ERROR_SECONDS) return false;
+      mustReload = true;
+      if (activeIndex < segments.length - 1) {
+        seek(offsets[activeIndex + 1]!, playRequested);
+        return "advanced";
+      }
+      finish();
+      return "finished";
     },
     pause,
     dispose() { endBridge(); disposed = true; version += 1; playRequested = false; pending = null; stopWatchdog(); audio.pause(); if (standby) { standby.src = ""; standby = null; } },

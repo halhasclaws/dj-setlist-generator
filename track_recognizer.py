@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Callable, TYPE_CHECKING
 
 from shazamio import Shazam
-from recognition_transport import (SingleAttemptHTTP, RequestAuthorizationError, classify_error,
+from recognition_transport import (SingleAttemptHTTP, RequestAuthorizationError, RequestDeferred, classify_error,
                                    validate_response)
 
 from recognition_retry_policy import RetryDirective, throttle_delay
@@ -55,6 +55,7 @@ class TrackRecognizer:
             statuses={429, 500, 502, 503, 504},
         )
         self._quota_cooldown_until = 0
+        self.cooldown_waits = 0
         self._throttle_lock = asyncio.Lock()
         self.transport = None
         self.shazam = self._create_shazam_client()
@@ -211,6 +212,20 @@ class TrackRecognizer:
                     except asyncio.TimeoutError:
                         result = Recognition(segment['timestamp'], None, None, None, None,
                                              False, segment['index'], error_type='RequestTimeout')
+            except RequestDeferred as deferred:
+                # A shared cooldown (another slot's 429) is backed off in-job
+                # with jitter; only long waits or the job deadline hand off.
+                wait = getattr(deferred, 'retry_in_seconds', None)
+                if (self.single_attempt or wait is None
+                        or wait > Config.IN_JOB_COOLDOWN_MAX_SECONDS
+                        or wait >= deadline - time.monotonic()):
+                    raise
+                self.cooldown_waits += 1
+                self._log(f"  ⏸️  Shared cooldown {wait:.0f}s; backing off in-job")
+                self._quota_cooldown_until = max(
+                    self._quota_cooldown_until,
+                    time.monotonic() + wait + random.uniform(0, max(1.0, Config.BASE_DELAY)))
+                continue
             finally:
                 self._attempt_context.reset(token)
             attempt += 1

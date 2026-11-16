@@ -36,6 +36,15 @@ class RecognitionPause(RequestDeferred):
     """Safe constant reason, never a provider/SQL message."""
 
 
+class CooldownPending(RecognitionPause):
+    """A shared cooldown is active; carries the remaining wait so a slot can back
+    off inside the running job instead of ending the workflow."""
+
+    def __init__(self, retry_in_seconds):
+        super().__init__('cooldown_pending')
+        self.retry_in_seconds = max(0.0, float(retry_in_seconds))
+
+
 class RecognitionFence(RuntimeError):
     pass
 
@@ -316,8 +325,9 @@ class RecognitionStore:
                 raise RequestAuthorizationError('shared_window_not_admissible')
             if non_throttle_attempts(attempts)>=WINDOW_ATTEMPTS:
                 raise RecognitionPause('window_attempt_budget')
-            if row['db_now'] < max(data.get('next_allowed_at',0), state.get('provider_next_allowed_at',0)):
-                raise RecognitionPause('cooldown_pending')
+            cooldown_until = max(data.get('next_allowed_at',0), state.get('provider_next_allowed_at',0))
+            if row['db_now'] < cooldown_until:
+                raise CooldownPending(cooldown_until - row['db_now'])
             token=str(uuid.uuid4())
             attempts.append(dict(token=token,owner=self.identity,number=state['requests']+1,
                                  started_at=row['db_now'],expires_at=row['db_now']+REQUEST_SECONDS,

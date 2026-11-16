@@ -69,6 +69,9 @@ class Config:
 
     # Quota-Aware Throttling Settings
     QUOTA_COOLDOWN_DURATION = int(os.getenv('QUOTA_COOLDOWN_DURATION', '60'))  # Seconds to wait when quota exhausted
+    # A shared provider cooldown at most this long is waited out inside the running
+    # recognition job; longer ones (or ones past the job deadline) hand off to a continuation.
+    IN_JOB_COOLDOWN_MAX_SECONDS = float(os.getenv('IN_JOB_COOLDOWN_MAX_SECONDS', '900'))
 
     # Artist image validation settings
     ARTIST_IMAGE_MIN_GENRE_OVERLAP = float(os.getenv('ARTIST_IMAGE_MIN_GENRE_OVERLAP', '0.2'))

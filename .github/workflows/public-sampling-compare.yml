@@ -97,7 +97,7 @@ jobs:
     if: ${{ !cancelled() && needs.plan.result == 'success' }}
     strategy:
       fail-fast: false
-      max-parallel: 20
+      max-parallel: 6  # leaves most of the ~20 Actions runners for real set processing
       matrix:
         shard: ${{ fromJson(needs.plan.outputs.shards) }}
     runs-on: ubuntu-latest

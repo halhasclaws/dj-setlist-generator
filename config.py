@@ -72,6 +72,9 @@ class Config:
     # A shared provider cooldown at most this long is waited out inside the running
     # recognition job; longer ones (or ones past the job deadline) hand off to a continuation.
     IN_JOB_COOLDOWN_MAX_SECONDS = float(os.getenv('IN_JOB_COOLDOWN_MAX_SECONDS', '900'))
+    # When false, a 429 cools down only the throttled slot (its own runner/IP) and
+    # that window; other slots keep recognizing. Preview tuning flag.
+    SHARED_PROVIDER_COOLDOWN = os.getenv('SHARED_PROVIDER_COOLDOWN', 'true').strip().lower() != 'false'
 
     # Artist image validation settings
     ARTIST_IMAGE_MIN_GENRE_OVERLAP = float(os.getenv('ARTIST_IMAGE_MIN_GENRE_OVERLAP', '0.2'))

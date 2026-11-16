@@ -96,7 +96,7 @@ jobs:
       RECOGNITION_SLOT_COUNT_REQUESTED: ${{ github.event.inputs.recognition_slot_count }}
       # Preview throttle tuning: fewer concurrent slots trip fewer shared 429
       # cooldowns. Production keeps the 12-slot auto cap.
-      AUTO_MAX_RECOGNITION_SLOTS: ${{ github.event.inputs.deployment_target == 'development' && '6' || '12' }}
+      AUTO_MAX_RECOGNITION_SLOTS: ${{ github.event.inputs.deployment_target == 'development' && '12' || '12' }}
       LEASE_SIZE_REQUESTED: ${{ github.event.inputs.lease_size }}
       BATCH_SIZE: "10"
       QUOTA_COOLDOWN_DURATION: "60"
@@ -252,6 +252,8 @@ jobs:
       WORKER_VERCEL_OIDC_AUDIENCE: ${{ !(github.event.inputs.deployment_target == 'production') && format('https://github.com/{0}', github.repository_owner) || '' }}
       ENABLE_CHECKPOINTS: "false"
       FFMPEG_PORTABLE_DIR: ".runtime/ffmpeg"
+      # Preview throttle tuning: per-slot (per-runner) 429 cooldown instead of run-wide.
+      SHARED_PROVIDER_COOLDOWN: ${{ github.event.inputs.deployment_target == 'development' && 'false' || 'true' }}
       CONCURRENT_RECOGNITIONS: "2"
       RECOGNITION_SLOT_COUNT: ${{ needs.bootstrap.outputs.effective_slot_count }}
       LEASE_SIZE: ${{ needs.bootstrap.outputs.effective_lease_size }}

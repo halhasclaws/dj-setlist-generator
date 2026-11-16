@@ -371,7 +371,8 @@ class RecognitionStore:
             if result.http_status == 429:
                 state['throttle_requests'] = state.get('throttle_requests', 0) + 1
                 delay_seconds = max(delay_seconds, throttle_delay(throttle_streak(attempts), result.retry_after_seconds))
-                state['provider_next_allowed_at'] = max(state.get('provider_next_allowed_at', 0), row['db_now']+delay_seconds)
+                if Config.SHARED_PROVIDER_COOLDOWN:
+                    state['provider_next_allowed_at'] = max(state.get('provider_next_allowed_at', 0), row['db_now']+delay_seconds)
             delay=max(0,delay_seconds,result.retry_after_seconds or 0) if not valid else 0
             data.update(valid=valid,in_flight=False,attempts=attempts,next_allowed_at=row['db_now']+delay)
             if valid: data['response']=asdict(result)

@@ -477,3 +477,72 @@ describe("seamless seams with a preloaded standby element", () => {
     expect(c.isPlayRequested()).toBe(true);
   });
 });
+
+// Tompson's only part is a window that ends at the end of an original WAV whose
+// data chunk stops 2 bytes into a 6-byte frame. Chrome raises a demuxer error
+// on that frame instead of "ended".
+describe("last window ending on a truncated final frame", () => {
+  const tompson = [{ src: "/part-only", startSeconds: 0, durationSeconds: 5930.91 }];
+  const make = (src = "/part-only") => ({ src, load: vi.fn(), paused: true, ended: false, currentTime: 0, readyState: 1,
+    play: vi.fn().mockResolvedValue(undefined), pause: vi.fn() });
+
+  it("finishes the set at the last part's mapped end frame without waiting for ended", async () => {
+    const audio = make(); const c = createNativeAudioController(audio, 5930.91, vi.fn(), tompson);
+    c.seek(5900, true); audio.paused = false; await Promise.resolve();
+    audio.currentTime = 5930.85; expect(c.tick()).toBeCloseTo(5930.85);
+    expect(c.isPlayRequested()).toBe(true);
+    audio.currentTime = 5930.87;
+    expect(c.tick()).toBe(5930.91);
+    expect(audio.pause).toHaveBeenCalled();
+    expect(c.isPlayRequested()).toBe(false);
+    expect(c.position()).toBe(5930.91);
+    // A late ended or timeupdate never restarts or moves it.
+    expect(c.ended()).toBe(5930.91); expect(c.tick()).toBe(5930.91);
+    audio.play.mockClear(); audio.load.mockClear();
+    c.resume(false); expect(audio.play).not.toHaveBeenCalled();
+    c.resume(); expect(audio.currentTime).toBe(0); expect(audio.play).toHaveBeenCalledOnce();
+  });
+
+  it("treats a media error near the last part's end as the end of the set, with no reload", async () => {
+    const audio = make(); const c = createNativeAudioController(audio, 5930.91, vi.fn(), tompson);
+    c.seek(5900, true); audio.paused = false; await Promise.resolve();
+    audio.currentTime = 5930.4; audio.load.mockClear(); audio.play.mockClear();
+    expect(c.endOnError()).toBe("finished");
+    expect(audio.load).not.toHaveBeenCalled(); expect(audio.play).not.toHaveBeenCalled();
+    expect(c.isPlayRequested()).toBe(false); expect(c.isPending()).toBe(false);
+    expect(c.position()).toBe(5930.91); expect(c.tick()).toBe(5930.91);
+    // Replay reloads the errored element and starts again from the beginning.
+    c.resume();
+    expect(audio.load).toHaveBeenCalledOnce(); expect(audio.src).toBe("/part-only");
+    expect(audio.play).toHaveBeenCalledOnce(); expect(c.isPending()).toBe(true);
+    c.ready(); expect(audio.currentTime).toBe(0); expect(c.position()).toBe(0);
+  });
+
+  it("moves to the next part when an earlier part errors near its mapped end", () => {
+    const parts = [{ src: "/part-a", startSeconds: 100, durationSeconds: 60 }, { src: "/part-b", startSeconds: 0, durationSeconds: 60 }];
+    const audio = make("/part-a"); const c = createNativeAudioController(audio, 120, vi.fn(), parts);
+    c.seek(50, true); audio.currentTime = 159.2; audio.play.mockClear();
+    expect(c.endOnError()).toBe("advanced");
+    expect(audio.src).toBe("/part-b"); expect(audio.load).toHaveBeenCalledOnce();
+    expect(audio.play).toHaveBeenCalledOnce(); expect(c.isPlayRequested()).toBe(true);
+    c.ready(); expect(audio.currentTime).toBe(0); expect(c.position()).toBe(60);
+  });
+
+  it("keeps a paused part paused when it errors near its end", () => {
+    const parts = [{ src: "/part-a", startSeconds: 100, durationSeconds: 60 }, { src: "/part-b", startSeconds: 0, durationSeconds: 60 }];
+    const audio = make("/part-a"); const c = createNativeAudioController(audio, 120, vi.fn(), parts);
+    c.seek(59, false); audio.play.mockClear();
+    expect(c.endOnError()).toBe("advanced");
+    expect(audio.src).toBe("/part-b"); expect(audio.play).not.toHaveBeenCalled(); expect(c.isPlayRequested()).toBe(false);
+  });
+
+  it("leaves an error away from any end to the normal reload recovery", () => {
+    const audio = make(); const c = createNativeAudioController(audio, 5930.91, vi.fn(), tompson);
+    c.seek(3000, true); audio.currentTime = 3000; audio.load.mockClear();
+    expect(c.endOnError()).toBe(false);
+    expect(audio.load).not.toHaveBeenCalled(); expect(c.isPlayRequested()).toBe(true);
+    // Errors while a new source is still loading are not window ends either.
+    c.seek(5929.5, true); audio.currentTime = 5929.5; c.recover();
+    expect(c.endOnError()).toBe(false);
+  });
+});

@@ -2970,6 +2970,19 @@ export function ArchiveSetExplorer({
                       }}
                       onError={(event) => {
                         if (event.currentTarget !== nativeAudioRef.current) return;
+                        // An error at a window's mapped end (a truncated last
+                        // frame) ends that window; reloading would only repeat it.
+                        const endedBy = nativeControllerRef.current?.endOnError();
+                        if (endedBy) {
+                          traceAudioTiming(`error-at-end-${endedBy}`, "native-audio");
+                          clearNativeStallWatch();
+                          if (endedBy === "finished") {
+                            audioFocus.setPaused();
+                            setNativeAudioBuffering(false); setIsPlaying(false);
+                            updateFromPolledTime(detail.duration);
+                          }
+                          return;
+                        }
                         if (recoverNativeAudio("error")) return;
                         clearNativeStallWatch();
                         nativeControllerRef.current?.pause();

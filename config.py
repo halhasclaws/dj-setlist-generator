@@ -87,9 +87,9 @@ class Config:
     OVERLAP_THRESHOLD = float(os.getenv('OVERLAP_THRESHOLD', '0.3'))
 
     # Offset agreement (D07): keep a cluster only when at least this many of its
-    # detections agree on where they are in the track, i.e. set time minus the
-    # provider's match offset lies within OFFSET_AGREEMENT_SECONDS of the
-    # cluster median. The cluster keeps only those agreeing detections.
+    # detections agree on where they are in the track, i.e. their set time minus
+    # the provider's match offset lies within OFFSET_AGREEMENT_SECONDS of one
+    # another. The cluster keeps only the largest such agreeing group.
     # 0 disables (legacy behaviour).
     OFFSET_AGREEMENT_MIN = int(os.getenv('OFFSET_AGREEMENT_MIN', '0'))
     OFFSET_AGREEMENT_SECONDS = float(os.getenv('OFFSET_AGREEMENT_SECONDS', '4'))

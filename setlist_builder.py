@@ -166,18 +166,23 @@ class SetlistBuilder:
         return float(offset) if type(offset) in (int, float) else None
 
     def _offset_agreeing(self, recognitions: list) -> list:
-        """Detections from one continuous playback: set time minus track offset
-        stays constant while the track plays, so agreeing detections cluster
-        around the median of (timestamp - offset)."""
+        """Largest group of detections from one continuous playback.
+
+        While a track plays, set time minus the provider's track offset stays
+        constant, so detections of the same playback share an anchor. Take the
+        largest group whose anchors lie within OFFSET_AGREEMENT_SECONDS of one
+        detection's anchor (earliest such group on ties). A median would fall
+        between two equal groups, e.g. a looped section.
+        """
         anchored = [(rec.timestamp - offset, rec) for rec in recognitions
                     if (offset := self._match_offset(rec)) is not None]
-        if not anchored:
-            return []
-        anchors = sorted(anchor for anchor, _ in anchored)
-        mid = len(anchors) // 2
-        median = anchors[mid] if len(anchors) % 2 else (anchors[mid - 1] + anchors[mid]) / 2
-        return [rec for anchor, rec in anchored
-                if abs(anchor - median) <= Config.OFFSET_AGREEMENT_SECONDS]
+        best: list = []
+        for anchor, _ in anchored:
+            group = [rec for other, rec in anchored
+                     if abs(other - anchor) <= Config.OFFSET_AGREEMENT_SECONDS]
+            if len(group) > len(best):
+                best = group
+        return best
 
     def _make_cluster_dict(self, track_id: str, recognitions: list) -> dict:
         """Create cluster dictionary from recognitions."""

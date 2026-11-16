@@ -13,15 +13,15 @@ const require=createRequire(resolve('apps/web/package.json'));
 const db=new PGlite({extensions:{pgcrypto}});
 await db.exec('CREATE ROLE set_list_worker');
 for(const f of readdirSync('drizzle/migrations').filter(f=>/^\d.*\.sql$/.test(f)).sort()) await db.exec(readFileSync('drizzle/migrations/'+f,'utf8'));
-await db.exec("INSERT INTO authn.users(id,email) VALUES('synthetic','synthetic@example.invalid'); INSERT INTO ops.submissions(id,requested_by,mode,status) VALUES('10000000-0000-4000-8000-000000000001','synthetic','set','queued')");
+await db.exec("INSERT INTO authn.users(id,email) VALUES('synthetic','synthetic@example.invalid'); INSERT INTO ops.submissions(id,requested_by,mode,status,visibility) VALUES('10000000-0000-4000-8000-000000000001','synthetic','set','queued','public')");
 const id='20000000-0000-4000-8000-000000000001',now=Date.now()/1000;
 const state={version:1,created_at:now,deadline:now+604800,continuations:1,requests:1,request_limit:16,geometry:{segment_count:2,segment_duration:30,segment_overlap:15},review_required:false,in_flight:false,paused:true,next_allowed_at:now-1};
 const metadata=s=>({segment_count:2,shared_recognition:s});
 const queries=JSON.parse(execFileSync(process.execPath,['--import',require.resolve('tsx'),'scripts/shared-continuation-queries.ts'],{encoding:'utf8',env:{...process.env,TSX_TSCONFIG_PATH:'apps/web/tsconfig.json',SHARED_FIXTURE_METADATA:JSON.stringify(metadata(state))}}));
-await db.query("INSERT INTO ops.set_runs(id,submission_id,requested_by,status,source_url,source_metadata) VALUES($1,'10000000-0000-4000-8000-000000000001','synthetic','queued','local:synthetic',$2)",[id,metadata(state)]);
+await db.query("INSERT INTO ops.set_runs(id,submission_id,requested_by,status,source_url,publication_visibility,source_metadata) VALUES($1,'10000000-0000-4000-8000-000000000001','synthetic','queued','local:synthetic','public',$2)",[id,metadata(state)]);
 let checks=0;
 const blocker='20000000-0000-4000-8000-000000000002';
-await db.query("INSERT INTO ops.set_runs(id,submission_id,requested_by,status,source_url,source_metadata) VALUES($1,'10000000-0000-4000-8000-000000000001','synthetic','cancelled','local:blocker',$2)",[blocker,metadata({...state,in_flight:true})]);
+await db.query("INSERT INTO ops.set_runs(id,submission_id,requested_by,status,source_url,publication_visibility,source_metadata) VALUES($1,'10000000-0000-4000-8000-000000000001','synthetic','cancelled','local:blocker','public',$2)",[blocker,metadata({...state,in_flight:true})]);
 assert.equal((await db.query('SELECT * FROM ops.claim_next_dispatchable_set_run(10)')).rows.length,0);checks++;
 assert.equal((await db.query("SELECT ops.shared_recognition_dispatchable($1,'{}'::jsonb) AS ok",[id])).rows[0].ok,true);checks++;
 await db.query("UPDATE ops.set_runs SET source_metadata=$2 WHERE id=$1",[blocker,metadata({...state,in_flight:true,in_flight_until:now-1})]);
@@ -68,7 +68,7 @@ assert.equal((await db.query(queries.validCount.sql,queries.validCount.params)).
 await db.query("UPDATE ops.segment_hits SET raw_data=$2 WHERE set_run_id=$1 AND segment_index=1",[id,{shared_recognition:{version:1,valid:true,in_flight:false,response:{segment_index:1,timestamp:15,http_status:200,error_type:null,was_rate_limited:false,raw_data:{matches:[]}}}}]);
 assert.equal((await db.query(queries.validCount.sql,queries.validCount.params)).rows[0].n,2);checks++;
 const malformed='20000000-0000-4000-8000-000000000003';
-await db.query("INSERT INTO ops.set_runs(id,submission_id,requested_by,status,source_url) VALUES($1,'10000000-0000-4000-8000-000000000001','synthetic','completed','local:malformed')",[malformed]);
+await db.query("INSERT INTO ops.set_runs(id,submission_id,requested_by,status,source_url,publication_visibility) VALUES($1,'10000000-0000-4000-8000-000000000001','synthetic','completed','local:malformed','public')",[malformed]);
 await db.query("INSERT INTO ops.segment_hits(set_run_id,segment_index,timestamp_seconds,raw_data) VALUES($1,0,0,'{}')",[malformed]);
 const goodResponse={segment_index:0,timestamp:0,http_status:200,error_type:null,was_rate_limited:false,raw_data:{matches:[]}};
 for(const patch of [{timestamp:15},{http_status:500},{error_type:'transport'},{was_rate_limited:true},{segment_index:1},{raw_data:{}},{raw_data:{matches:[{}]}},{raw_data:{matches:[],track:null}}]) {

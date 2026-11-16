@@ -2,6 +2,7 @@ import "server-only";
 
 import { and, desc, eq, inArray, isNotNull, sql } from "drizzle-orm";
 
+import { readableSubmissionPredicate } from "@/lib/archive/access-policy";
 import type { SessionActor } from "@/lib/auth/session";
 import { getDb } from "@/lib/db/client";
 import { setRuns, submissions, workerEvents } from "@/lib/db/schema";
@@ -23,6 +24,7 @@ import {
   type TimelineItemDto,
 } from "@/lib/jobs/public";
 import { getSubmissionDetail } from "@/lib/jobs/submissions";
+import { readRunEventsPage } from "@/lib/jobs/run-events-page.server";
 import {
   activeSetRunStatuses,
   isActiveSubmissionStatus,
@@ -211,7 +213,7 @@ export const listPublicSubmissionsForActor = async (
 ): Promise<SubmissionListItemDto[]> => {
   const filter = normalizePublicSubmissionFilter(requestedFilter);
   const whereClause = and(
-    actor.isAdmin ? undefined : eq(submissions.requestedBy, actor.userId),
+    readableSubmissionPredicate(actor.userId, actor.isAdmin, actor.authType === "session"),
     getFilterClause(filter),
   );
 
@@ -436,8 +438,8 @@ export const serializeSubmissionDetail = (
   };
 };
 
-export const getPublicSubmissionDetail = async (submissionId: string) => {
-  const detail = await getSubmissionDetail(submissionId);
+export const getPublicSubmissionDetail = async (submissionId: string, actor: SessionActor) => {
+  const detail = await getSubmissionDetail(submissionId, actor);
   if (!detail) {
     return null;
   }
@@ -485,11 +487,13 @@ export const getPublicSubmissionDetail = async (submissionId: string) => {
 };
 
 export const getPublicSubmissionRunEventsPage = async ({
+  actor,
   page,
   pageSize,
   setRunId,
   submissionId,
 }: {
+  actor: SessionActor;
   page: number;
   pageSize: number;
   setRunId: string;
@@ -498,43 +502,18 @@ export const getPublicSubmissionRunEventsPage = async ({
   const [run] = await db
     .select({ id: setRuns.id })
     .from(setRuns)
-    .where(and(eq(setRuns.id, setRunId), eq(setRuns.submissionId, submissionId)))
+    .innerJoin(submissions, eq(submissions.id, setRuns.submissionId))
+    .where(and(eq(setRuns.id, setRunId), eq(setRuns.submissionId, submissionId), readableSubmissionPredicate(actor.userId, actor.isAdmin, actor.authType === "session")))
     .limit(1);
 
   if (!run) {
     return null;
   }
 
-  const allEvents = await db
-    .select({
-      id: workerEvents.id,
-      eventType: workerEvents.eventType,
-      message: workerEvents.message,
-      createdAt: workerEvents.createdAt,
-      setRunId: workerEvents.setRunId,
-      details: workerEvents.details,
-    })
-    .from(workerEvents)
-    .where(
-      and(
-        eq(workerEvents.submissionId, submissionId),
-        eq(workerEvents.setRunId, setRunId),
-        inArray(workerEvents.eventType, [...publicRunTimelineEventTypes]),
-      ),
-    )
-    .orderBy(desc(workerEvents.createdAt));
-
-  const timelineItems = buildTimelineItems(selectCurrentAttemptEvents(allEvents));
-  const safePageSize = Math.max(1, Math.min(pageSize, 20));
-  const totalCount = timelineItems.length;
-  const totalPages = Math.max(1, Math.ceil(totalCount / safePageSize));
-  const currentPage = Math.max(1, Math.min(page, totalPages));
-
-  return {
-    events: timelineItems.slice((currentPage - 1) * safePageSize, currentPage * safePageSize),
-    page: currentPage,
-    pageSize: safePageSize,
-    totalCount,
-    totalPages,
-  };
+  const result = await readRunEventsPage({
+    db, submissionId, setRunId, page, pageSize,
+    eventTypes: [...publicRunTimelineEventTypes],
+    boundaryTypes: [...currentAttemptBoundaryEventTypes],
+  });
+  return { ...result, events: buildTimelineItems(result.events) };
 };

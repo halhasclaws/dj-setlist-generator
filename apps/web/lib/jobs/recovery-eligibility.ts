@@ -5,6 +5,7 @@ import { hasUncommittedPublication, matchesWorkflowOwner, matchesDispatchGenerat
 // Finalizer reads are snapshots. Recheck cancellation, publication and workflow
 // ownership in every recovery mutation so a late callback cannot revive a run.
 export const recoveryEligibility = (run: typeof setRuns.$inferSelect) => and(
+  eq(setRuns.publicationVisibility, "public"),
   eq(setRuns.id, run.id),
   eq(setRuns.status, run.status),
   eq(setRuns.attemptCount, run.attemptCount),

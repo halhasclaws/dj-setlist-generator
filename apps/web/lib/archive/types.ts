@@ -37,7 +37,7 @@ export type ArchiveSetTrack = {
   /**
    * Estimated starts of further unidentified tracks inside an Unknown entry
    * (N04). Derived from audio analysis, never from recognition, and always
-   * provisional.
+   * provisional: they are skip targets, not identified tracks.
    */
   provisionalStarts?: number[];
   /** N04: this row starts at an estimated (unidentified) track change. */

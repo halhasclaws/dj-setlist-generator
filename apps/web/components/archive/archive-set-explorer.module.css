@@ -572,6 +572,15 @@
   aspect-ratio: auto;
 }
 
+.root :global(.source-player-frame.is-native-audio) {
+  min-height: 110px;
+}
+
+.root :global(.source-player-frame.is-native-audio audio) {
+  display: block;
+  width: 100%;
+}
+
 .root :global(.source-player-frame.is-fallback) {
   min-height: 120px;
 }
@@ -2143,6 +2152,395 @@
   }
 }
 
+/* Private recordings share the existing set clock, not the source file clock.
+   The window follows the SoundCloud/YouTube frames used on ordinary sets. */
+.root :global(.source-player-frame.is-native-audio:has(.recorded-set-controls)) {
+  min-height: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.root :global(.recorded-set-controls) {
+  min-width: 0;
+}
+
+.root :global(.recorded-set-window) {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #090909;
+  color: var(--ink);
+}
+
+.root :global(.recorded-set-backdrop) {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.root :global(.recorded-set-backdrop img),
+.root :global(.recorded-set-art img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.root :global(.recorded-set-art) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #141414;
+  color: var(--muted);
+  font-size: 28px;
+}
+
+/* Above the decorative backdrop so the play button and timeline get input. */
+.root :global(.recorded-set-body) {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.root :global(.recorded-set-head) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.root :global(.recorded-set-meta) {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.root :global(.recorded-set-title) {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+}
+
+.root :global(.recorded-set-now) {
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: break-word;
+}
+
+.root :global(.recorded-set-play) {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--lime);
+  color: #0c1207;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgb(0 0 0 / 35%);
+}
+
+.root :global(.recorded-set-play svg) {
+  width: 20px;
+  height: 20px;
+}
+
+.root :global(.recorded-set-play.is-waiting) {
+  animation: recorded-set-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes recorded-set-pulse {
+  50% { opacity: 0.6; }
+}
+
+.root :global(.recorded-set-play:focus-visible) {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+.root :global(.recorded-set-play:disabled) {
+  background: rgb(216 255 90 / 25%);
+  color: rgb(12 18 7 / 70%);
+  cursor: not-allowed;
+}
+
+.root :global(.recorded-set-time) {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.root :global(.recorded-set-wait) {
+  color: var(--lime);
+}
+
+.root :global(.recorded-set-track) {
+  position: relative;
+}
+
+/* Same thin filled timeline as the dock, with a 44px invisible hit target. */
+.root :global(.recorded-set-track .set-seek-timeline) {
+  height: 6px;
+}
+
+.root :global(.recorded-set-track .dock-progress) {
+  height: 6px;
+  border: 0;
+  background: rgb(255 255 255 / 18%);
+}
+
+.root :global(.recorded-set-track .set-seek-input) {
+  top: -19px;
+  height: 44px;
+}
+
+/* Widget: the SoundCloud embed footprint (art left, play beside the title). */
+.root :global(.recorded-set-controls.is-widget .recorded-set-window) {
+  display: grid;
+  grid-template-columns: 166px minmax(0, 1fr);
+  height: 166px;
+}
+
+.root :global(.recorded-set-controls.is-widget .recorded-set-body) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px 18px;
+}
+
+/* Video: the YouTube frame (16:9, art centered, big centered play). */
+.root :global(.recorded-set-controls.is-video .recorded-set-window) {
+  aspect-ratio: 16 / 9;
+  max-height: 58vh;
+  margin: 0 auto;
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-backdrop img) {
+  filter: blur(28px) brightness(0.45);
+  transform: scale(1.2);
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-art) {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: 46%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 55%);
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-center) {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-center .recorded-set-play) {
+  width: 68px;
+  height: 68px;
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-center .recorded-set-play svg) {
+  width: 26px;
+  height: 26px;
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-center .recorded-set-play.is-playing) {
+  opacity: 0;
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-window:hover .recorded-set-play.is-playing),
+.root :global(.recorded-set-controls.is-video .recorded-set-play.is-playing:focus-visible) {
+  opacity: 1;
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-body),
+.root :global(.recorded-set-controls.is-artwork .recorded-set-body) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 16px 14px;
+  background: linear-gradient(transparent, rgb(0 0 0 / 82%));
+}
+
+/* Artwork: the cover fills the window, controls sit on the lower edge. */
+.root :global(.recorded-set-controls.is-artwork .recorded-set-window) {
+  aspect-ratio: 16 / 9;
+  max-height: 58vh;
+}
+
+.root :global(.recorded-set-controls.is-artwork .recorded-set-backdrop img) {
+  filter: brightness(0.85);
+}
+
+.root :global(.recorded-set-controls.is-artwork .recorded-set-art) {
+  display: none;
+}
+
+.root :global(.recorded-set-controls.is-artwork .recorded-set-body) {
+  padding-top: 64px;
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-title),
+.root :global(.recorded-set-controls.is-artwork .recorded-set-title) {
+  font-size: 16px;
+}
+
+.root :global(.recorded-set-controls.is-video .recorded-set-now),
+.root :global(.recorded-set-controls.is-artwork .recorded-set-now),
+.root :global(.recorded-set-controls.is-video .recorded-set-time),
+.root :global(.recorded-set-controls.is-artwork .recorded-set-time) {
+  color: rgb(255 255 255 / 75%);
+}
+
+@media (max-width: 520px) {
+  /* Phones: cover beside the names, then play beside the timeline, so the
+     names get the full text column and the cover is never squeezed. */
+  .root :global(.recorded-set-controls.is-widget .recorded-set-window) {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+    height: auto;
+    padding: 12px;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-body),
+  .root :global(.recorded-set-controls.is-widget .recorded-set-head) {
+    display: contents;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-art) {
+    grid-row: 1;
+    grid-column: 1;
+    aspect-ratio: 1;
+    align-self: start;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-meta) {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-play) {
+    position: relative;
+    z-index: 1;
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-track) {
+    z-index: 1;
+    grid-row: 2;
+    grid-column: 2;
+    align-self: center;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-play),
+  .root :global(.recorded-set-controls.is-artwork .recorded-set-play) {
+    width: 44px;
+    height: 44px;
+  }
+
+  .root :global(.recorded-set-controls.is-widget .recorded-set-title) {
+    font-size: 14px;
+  }
+
+  .root :global(.recorded-set-controls.is-artwork .recorded-set-window) {
+    aspect-ratio: 1;
+  }
+
+  .root :global(.recorded-set-controls.is-video .recorded-set-center .recorded-set-play) {
+    width: 56px;
+    height: 56px;
+  }
+
+  .root :global(.recorded-set-controls.is-video .recorded-set-art) {
+    top: 36%;
+    width: 36%;
+  }
+
+  .root :global(.recorded-set-controls.is-video .recorded-set-center) {
+    top: 36%;
+  }
+
+  /* Touch has no hover, so keep Pause reachable while playing. */
+  .root :global(.recorded-set-controls.is-video .recorded-set-center .recorded-set-play.is-playing) {
+    opacity: 0.85;
+  }
+
+  .root :global(.recorded-set-controls.is-video .recorded-set-body) {
+    padding: 24px 12px 10px;
+    gap: 6px;
+  }
+
+  .root :global(.recorded-set-controls.is-video .recorded-set-now) {
+    display: none;
+  }
+}
+
+.root :global(.recorded-set-error) {
+  margin: 8px 0 0;
+  color: #e8a0a0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.root :global(.recorded-set-sr) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.root :global(.recorded-set-coverage) {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (forced-colors: active) {
+  .root :global(.recorded-set-track .set-seek-input) {
+    opacity: 1;
+  }
+
+  .root :global(.recorded-set-progress) {
+    display: none;
+  }
+}
+
 .root :global(.set-seek-control) {
   position: relative;
   width: 100%;
@@ -2181,3 +2579,4 @@
   outline: 2px solid var(--lime);
   outline-offset: 3px;
 }
+

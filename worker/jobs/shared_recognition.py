@@ -115,7 +115,7 @@ class RecognitionStore:
                 # database-wide provider mutex or delay is introduced.
                 cur.execute('''SELECT r.*,extract(epoch FROM clock_timestamp())::float8 AS db_now
                   FROM ops.set_runs r JOIN ops.submissions u ON u.id=r.submission_id
-                  WHERE r.id=%s
+                  WHERE r.id=%s AND r.publication_visibility='public' AND u.visibility='public'
                     AND r.cancel_requested_at IS NULL AND u.cancel_requested_at IS NULL
                     AND r.status NOT IN ('cancelled','cancelling','completed')
                     AND r.published_set_id IS NULL AND r.stage IS DISTINCT FROM 'publishing_committed'

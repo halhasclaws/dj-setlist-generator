@@ -19,14 +19,14 @@ import {
 import { getDb } from "@/lib/db/client";
 import { getArchiveCacheNamespace } from "@/lib/db/cache-namespace.server";
 import {
-  artists,
-  setArtists,
-  setEntries,
-  setRuns,
-  setSourceLinks,
-  sets,
-  submissions,
-  tracks,
+  publicArtists as artists,
+  publicSetArtists as setArtists,
+  publicSetEntries as setEntries,
+  publicSetRuns as setRuns,
+  publicSetSourceLinks as setSourceLinks,
+  publicSets as sets,
+  publicSubmissions as submissions,
+  publicTracks as tracks,
 } from "@/lib/db/schema";
 import type {
   ArchiveArtistAtlasTrack,
@@ -43,7 +43,7 @@ import type {
   ArchiveSetTrack,
 } from "@/lib/archive/types";
 import { pickFirstImageUrl } from "@/lib/archive/artist-visuals";
-import { buildJourneyPoints, buildTimeline, expandProvisionalTracks, mapSetTrack } from "@/lib/archive/set-projection";
+import { mapSetTrack, buildTimeline, buildJourneyPoints, expandProvisionalTracks } from "@/lib/archive/set-projection";
 import {
   resolveSetVisualImageUrl,
 } from "@/lib/archive/set-images";

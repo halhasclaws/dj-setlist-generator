@@ -122,10 +122,80 @@
       "breakpoints": true
     },
     {
+      "idx": 17,
+      "version": "7",
+      "when": 1794268800000,
+      "tag": "0018_private_collection_access",
+      "breakpoints": true
+    },
+    {
       "idx": 18,
       "version": "7",
-      "when": 1794340800000,
-      "tag": "0018_shared_recognition_throttle",
+      "when": 1794268800001,
+      "tag": "0019_private_insert_defaults",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1794268800002,
+      "tag": "0020_private_recognition_retention",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1794268800003,
+      "tag": "0021_shared_recognition_continuation",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1794268800004,
+      "tag": "0022_shared_recognition_parallel",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1794268800005,
+      "tag": "0023_shared_recognition_throttle",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1794355200000,
+      "tag": "0024_yoon_version_registry",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1794355200001,
+      "tag": "0025_yoon_bounded_family_checks",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1794355200002,
+      "tag": "0026_yoon_partial_families",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1794355200003,
+      "tag": "0027_yoon_partial_release_review",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1794355200004,
+      "tag": "0028_yoon_production_app_acl",
       "breakpoints": true
     }
   ]

@@ -10,6 +10,7 @@ export const recoverStaleLeasesQuery = sql`
     from ops.set_runs run
     where lease.set_run_id = run.id
       and lease.status = 'claimed' and lease.claimed_at < now() - interval '15 minutes'
+      and run.publication_visibility = 'public'
       and not (coalesce(run.source_metadata, '{}'::jsonb) ? 'shared_recognition')
       and run.cancel_requested_at is null
       and run.status in ('dispatched', 'resolving', 'recognizing', 'aggregating', 'enriching')
@@ -31,7 +32,8 @@ export const recoverStaleRunsQuery = sql`
         source_metadata = case when cancel_requested_at is not null or status = 'cancelling'
                                then source_metadata else ${retireWorkflowOwner()} end,
         heartbeat_at = null, updated_at = now()
-    where not (coalesce(source_metadata, '{}'::jsonb) ? 'shared_recognition')
+    where publication_visibility = 'public'
+      and not (coalesce(source_metadata, '{}'::jsonb) ? 'shared_recognition')
       and status in ('dispatched', 'resolving', 'recognizing', 'aggregating', 'enriching', 'publishing', 'cancelling')
       and coalesce(heartbeat_at, updated_at, created_at) < now() - interval '30 minutes'
       and published_set_id is null
@@ -49,7 +51,7 @@ export const recoverStaleRunsQuery = sql`
     set status = 'failed', stage = 'recognition_budget_exhausted',
         error_summary = 'Durable recognition deadline exhausted',
         completed_at = now(), updated_at = now()
-    where run.status = 'queued'
+    where run.publication_visibility = 'public' and run.status = 'queued'
       and run.cancel_requested_at is null and run.published_set_id is null
       and run.stage is distinct from 'publishing_committed'
       and run.source_metadata->'shared_recognition'->>'version' = '1'

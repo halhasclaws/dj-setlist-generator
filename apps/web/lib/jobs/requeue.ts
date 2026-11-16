@@ -25,6 +25,7 @@ export const buildRequeueWithCleanupQuery = ({
         cancel_requested_at = ${resetCancellation ? sql`null` : sql`${setRuns.cancelRequestedAt}`},
         attempt_count = ${setRuns.attemptCount} + ${incrementAttempt ? 1 : 0}
     where ${predicate}
+      and ${setRuns.publicationVisibility} = 'public'
       and (not (coalesce(${setRuns.sourceMetadata}, '{}'::jsonb) ? 'shared_recognition')
         or (${setRuns.sourceMetadata}->'shared_recognition'->>'version' = '1'
           and ${setRuns.sourceMetadata}->'shared_recognition'->>'review_required' = 'false'

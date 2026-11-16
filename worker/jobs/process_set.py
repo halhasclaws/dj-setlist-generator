@@ -363,6 +363,34 @@ def _mark_published_with_errors(
     return resolved_published_set_id
 
 
+def _reuse_prepared_audio(run_row: dict[str, object], durable_state: dict | None):
+    """Continuation runs reuse the audio the first run prepared (restored from the
+    workflow cache) instead of downloading it again. Only an exact fingerprint
+    match is reused; anything else falls back to a normal download."""
+    from worker.jobs.shared_recognition import audio_fingerprint
+    from worker.pipeline.recognize import restore_set_context
+
+    expected = (durable_state or {}).get("audio_sha256")
+    source_url = (durable_state or {}).get("source_url")
+    metadata = run_row.get("source_metadata") or {}
+    if not expected or not source_url or not isinstance(metadata, dict) or not metadata.get("mix_info"):
+        return None
+    try:
+        context = restore_set_context(
+            str(source_url),
+            artist_name=str(run_row["artist_name"]) if run_row.get("artist_name") else None,
+            source_metadata=metadata,
+        )
+        if audio_fingerprint(context.audio_file) != expected:
+            print("Cached prepared audio does not match the durable fingerprint; downloading")
+            return None
+    except Exception as error:  # missing cache, malformed metadata: download instead
+        print(f"No reusable prepared audio ({type(error).__name__}); downloading")
+        return None
+    print(f"Reusing cached prepared audio ({context.total_segments} segments)")
+    return context
+
+
 async def _bootstrap_phase(set_run_id: str) -> dict[str, object]:
     from worker.pipeline.recognize import prepare_set_context, serialize_prepared_context
 
@@ -383,7 +411,7 @@ async def _bootstrap_phase(set_run_id: str) -> dict[str, object]:
     try:
         durable_store = RecognitionStore(set_run_id)
         durable_state = durable_store.begin()
-        context = prepare_set_context(
+        context = _reuse_prepared_audio(run_row, durable_state) or prepare_set_context(
             str(run_row["source_url"]),
             artist_name=str(run_row["artist_name"]) if run_row.get("artist_name") else None,
         )

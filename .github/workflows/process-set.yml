@@ -139,8 +139,44 @@ jobs:
           YOUTUBE_USER_AGENT: ${{ secrets.YOUTUBE_USER_AGENT }}
         run: ./.github/scripts/prepare-youtube-auth.sh
 
+      # Continuations reuse the audio the first run prepared instead of
+      # re-downloading it (slow, 403-prone, and a changed download parks the
+      # run as prepared_audio_changed). Keyed by run + durable fingerprint; the
+      # worker re-verifies the fingerprint and downloads on any mismatch.
+      - id: audio_cache_lookup
+        name: Look up prepared-audio cache key
+        continue-on-error: true
+        env:
+          SET_RUN_ID: ${{ github.event.inputs.set_run_id }}
+        run: python -m worker.jobs.prepared_audio_cache >> "$GITHUB_OUTPUT"
+
+      - id: audio_cache_restore
+        name: Restore prepared audio
+        if: ${{ steps.audio_cache_lookup.outputs.key != '' }}
+        continue-on-error: true
+        uses: actions/cache/restore@v4
+        with:
+          path: assets
+          key: ${{ steps.audio_cache_lookup.outputs.key }}
+
       - name: Bootstrap set run
         run: python -m worker.jobs.process_set --phase bootstrap --set-run-id "${{ github.event.inputs.set_run_id }}"
+
+      - id: audio_cache_save_lookup
+        name: Look up prepared-audio cache key to save
+        if: ${{ success() && steps.audio_cache_restore.outputs.cache-hit != 'true' }}
+        continue-on-error: true
+        env:
+          SET_RUN_ID: ${{ github.event.inputs.set_run_id }}
+        run: python -m worker.jobs.prepared_audio_cache >> "$GITHUB_OUTPUT"
+
+      - name: Save prepared audio
+        if: ${{ success() && steps.audio_cache_save_lookup.outputs.key != '' }}
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: assets
+          key: ${{ steps.audio_cache_save_lookup.outputs.key }}
 
       - name: Persist refreshed YouTube cookies
         if: ${{ success() && github.event.inputs.deployment_target == 'production' && steps.youtube_auth.outputs.cookies_present == 'true' }}

@@ -7,7 +7,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import AsyncMock, patch
 from worker.jobs.shared_recognition import (budget_reason, valid_coverage, valid_result,
-    recognize_continuation, audio_fingerprint, RecognitionPause)
+    recognize_continuation, audio_fingerprint, RecognitionPause, CooldownPending)
 from worker.pipeline.models import Recognition
 from config import Config
 
@@ -122,6 +122,63 @@ class RunnerTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(counts['lease_count'],0)
         self.store.pause.assert_called_with('cooldown_pending')
         self.store.finish.assert_not_called()
+
+    async def _run_with_reserve(self, reserve):
+        from recognition_transport import SingleAttemptHTTP
+        actual=self.real_recognizer
+        class HTTP:
+            calls=0
+            def request(self,*a,**k):
+                self.calls+=1
+                raise AssertionError('must not transmit')
+            async def close(self): pass
+        http=HTTP(); made=[]
+        def construct(**kwargs):
+            rec=actual(**kwargs); made.append(rec)
+            rec.transport=SingleAttemptHTTP(session_factory=lambda **k:http,before_request=rec.before_request)
+            async def recognize(_):
+                return await rec.transport.request('POST','https://provider.invalid')
+            rec.shazam=SimpleNamespace(recognize=recognize)
+            return rec
+        self.factory.side_effect=construct
+        self.store.reserve=reserve
+        async def extract(context,**kw):
+            return await kw['recognizer'].recognize_batch(
+                [{'index':0,'timestamp':0,'file':Path('/tmp/synthetic-no-file')}],cleanup_files=False)
+        self.extract.side_effect=extract
+        with patch.object(Config,'BASE_DELAY',0), patch('random.uniform',return_value=0):
+            counts=await recognize_continuation(self.store,self.context,check_active=lambda:None)
+        return counts,http,made[0]
+
+    async def test_short_shared_cooldown_backs_off_in_job(self):
+        waits=iter([CooldownPending(0.05), CooldownPending(10_000)])
+        calls=[]
+        def reserve(*a):
+            calls.append(a); raise next(waits)
+        counts,http,rec=await self._run_with_reserve(reserve)
+        # The short cooldown was waited out and retried; only the long one handed off.
+        self.assertEqual(len(calls),2)
+        self.assertEqual(rec.cooldown_waits,1)
+        self.assertEqual(http.calls,0)
+        self.store.pause.assert_called_with('cooldown_pending')
+
+    async def test_long_shared_cooldown_hands_off(self):
+        calls=[]
+        def reserve(*a):
+            calls.append(a); raise CooldownPending(Config.IN_JOB_COOLDOWN_MAX_SECONDS+1)
+        counts,http,rec=await self._run_with_reserve(reserve)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(rec.cooldown_waits,0)
+        self.store.pause.assert_called_with('cooldown_pending')
+
+    async def test_cooldown_past_job_deadline_hands_off(self):
+        calls=[]
+        def reserve(*a):
+            calls.append(a); raise CooldownPending(5)
+        self.saved['session_started']=150-3600+65+3  # ~3 s of job budget left
+        counts,http,rec=await self._run_with_reserve(reserve)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(rec.cooldown_waits,0)
 
     async def test_changed_audio_pauses_before_transport_or_request(self):
         self.context.audio_file.write_bytes(b'changed')

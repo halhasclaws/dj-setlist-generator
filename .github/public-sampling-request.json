@@ -1,6 +1,161 @@
 {
- "round": "3E",
+ "round": "3D-F",
  "sets": [
+  {
+   "id": "0226ee35-344a-4381-b3bc-405e629a7211",
+   "url": "https://soundcloud.com/dimensionsfestival/dim168-desert-sound-colony",
+   "seconds": 3806.113
+  },
+  {
+   "id": "0cc07a13-e85e-48fb-ba00-b5835bacf9a2",
+   "url": "https://soundcloud.com/fredeverything/lazy-days-podcast-14-fred-everything-september-2010",
+   "seconds": 3576.085
+  },
+  {
+   "id": "0d2e9f75-4d2f-4b14-9fff-f63fea9e6538",
+   "url": "https://soundcloud.com/traxsource/live-530-black-loops",
+   "seconds": 3600.111
+  },
+  {
+   "id": "11f6ba69-e00a-41b8-9240-bae3469fd5ff",
+   "url": "https://soundcloud.com/rareshrush/raresh-rush-epic-018-guest-mix-roberth",
+   "seconds": 9598.974
+  },
+  {
+   "id": "15eb5d25-0c10-4fbe-9c9d-acbe8acfc151",
+   "url": "https://soundcloud.com/holdinghandsrecords/holding-hands-records-podcast-013-martyn-desert-sound-colony-guava",
+   "seconds": 5066.678
+  },
+  {
+   "id": "17135ede-2254-4bd5-8932-70f98ba99988",
+   "url": "https://www.youtube.com/watch?v=3ZAFs4xctrU",
+   "seconds": 7115.0
+  },
+  {
+   "id": "1846a07f-690d-4ee8-9b23-2959d45183b5",
+   "url": "https://soundcloud.com/holdinghandsrecords/holding-hands-mix-001-desert-sound-colony",
+   "seconds": 3607.66
+  },
+  {
+   "id": "1bd7fcfe-da8f-470e-a600-772105510eb4",
+   "url": "https://soundcloud.com/fredeverything/fred-everything-guest-mix-on-metropolis-kcrw",
+   "seconds": 2957.394
+  },
+  {
+   "id": "1c0ee1d4-aaef-44db-bd8e-2b59c950ca9c",
+   "url": "https://soundcloud.com/fredeverything/lazy-days-podcast-54-fred-everything-march-2016",
+   "seconds": 3412.108
+  },
+  {
+   "id": "2105f4c7-2ffa-409b-9db6-01f7bd466511",
+   "url": "https://soundcloud.com/gomma/gomma-podcast-104-black-loops",
+   "seconds": 7380.447
+  },
+  {
+   "id": "21dbdf90-0b2a-41fb-ad89-506e96cd2779",
+   "url": "https://soundcloud.com/fieldmaneuvers/fm042-desert-sound-colony",
+   "seconds": 3664.023
+  },
+  {
+   "id": "21ea100c-e70f-425b-a1a7-6990ea339d60",
+   "url": "https://www.youtube.com/watch?v=Lgj0nXUa5xM",
+   "seconds": 3461.0
+  },
+  {
+   "id": "23540da5-8256-4371-a3b8-9d01fd74e07f",
+   "url": "https://soundcloud.com/gewaltlyon/jazzy-house-mix-maubourg-demuja-black-loops-bellaire-east-end-dubs-mixed-by-vesper",
+   "seconds": 4675.779
+  },
+  {
+   "id": "2980aee7-513a-4aac-976d-59b12f35eceb",
+   "url": "https://www.youtube.com/watch?v=unyUiMfu_Yc",
+   "seconds": 6914.0
+  },
+  {
+   "id": "2c738c0a-ef68-41b0-b89a-652e159422df",
+   "url": "https://soundcloud.com/holdinghandsrecords/holding-hands-podcast-001-desert-sound-colony-breaka-guava",
+   "seconds": 2220.114
+  },
+  {
+   "id": "2e5d2885-cca8-4dea-a194-74e3ef96f51d",
+   "url": "https://soundcloud.com/fredeverything/lazy-days-podcast-93-fred-everything-september-2020",
+   "seconds": 4969.398
+  },
+  {
+   "id": "331ed786-31d0-484b-871d-02c5147ec048",
+   "url": "https://www.youtube.com/watch?v=jJD2JEJB0oc",
+   "seconds": 4515.0
+  },
+  {
+   "id": "37556633-7b7c-4095-a89f-63244254a270",
+   "url": "https://soundcloud.com/vander-funkinhausen/ricardo-villalobos-live-fabric",
+   "seconds": 7684.695
+  },
+  {
+   "id": "3756414c-0932-412f-a032-01567362cfe5",
+   "url": "https://soundcloud.com/john_manhard/cruise-cast-001",
+   "seconds": 3659.715
+  },
+  {
+   "id": "39441cfc-b621-475c-9ab9-35648b92a812",
+   "url": "https://soundcloud.com/toytonics/podcast-nr-11-black-loops",
+   "seconds": 3354.978
+  },
+  {
+   "id": "3abbbc53-f41c-4a7b-8151-a6ca3db8ba01",
+   "url": "https://soundcloud.com/rareshrush/raresh-rush-epic-015-guest-mix-dan-medesan",
+   "seconds": 7629.489
+  },
+  {
+   "id": "3bac2efb-df14-410c-8f30-44a10a4679f5",
+   "url": "https://www.youtube.com/watch?v=9BHwxLYvvgw",
+   "seconds": 2548.0
+  },
+  {
+   "id": "3d6bde4f-876a-4248-b5de-61f31e3f4ce9",
+   "url": "https://www.youtube.com/watch?v=m7ImPIREp00",
+   "seconds": 5062.0
+  },
+  {
+   "id": "40c3bc06-da82-4b3b-a036-c3abbfc4f727",
+   "url": "https://soundcloud.com/tornadowallace/tornado-wallace-at-rainbow-serpent-festival-2015",
+   "seconds": 5098.103
+  },
+  {
+   "id": "411779b9-f30e-4b2e-a26e-78524385af68",
+   "url": "https://www.youtube.com/watch?v=gi_5tO0J7Ng",
+   "seconds": 7501.0
+  },
+  {
+   "id": "4470d190-269a-43c4-ade1-c936c9c3fff7",
+   "url": "https://soundcloud.com/fredeverything/fred-everything-guest-mix-on-kaysoul-show-orokolive-ghana",
+   "seconds": 1896.353
+  },
+  {
+   "id": "47752d01-3835-4316-a95e-3088dc2bb797",
+   "url": "https://soundcloud.com/rave_on/jay-tripwire-live-transitions-kiss-100-fm-26092003",
+   "seconds": 3488.49
+  },
+  {
+   "id": "4b159285-b656-40b1-93fc-05f72856569a",
+   "url": "https://soundcloud.com/rareshrush/raresh-rush-epic-023-guest-mix-carlos",
+   "seconds": 7730.279
+  },
+  {
+   "id": "4d4068da-78d9-4811-872a-d50ac3ba820b",
+   "url": "https://www.youtube.com/watch?v=KS6KPNusfFQ",
+   "seconds": 5422.0
+  },
+  {
+   "id": "59b79497-bbb5-4466-849d-d659916718de",
+   "url": "https://soundcloud.com/traxsource/live-30-feat-fred-everything",
+   "seconds": 7200.095
+  },
+  {
+   "id": "5a1bd5e5-2252-4aee-b986-5544cc9fb057",
+   "url": "https://soundcloud.com/cadenzarecords/cadenza-radio-013-jay-tripwire",
+   "seconds": 3600.189
+  },
   {
    "id": "61e2395b-486a-4d94-ae74-abb1ecdc1a02",
    "url": "https://www.youtube.com/watch?v=cGzCWK3tIP4",
@@ -95,66 +250,6 @@
    "id": "ce0a0e1d-3d95-4c44-8caf-bee355ebc89d",
    "url": "https://soundcloud.com/dj-tonyh/the-drive-thru-086-tony-h-live-this-ft-fred-everything-warm-up-set",
    "seconds": 5393.287
-  },
-  {
-   "id": "d39cf37e-f304-411b-a003-7535a04b7153",
-   "url": "https://soundcloud.com/scissorandthread/st-podcast-14-desert-sound-colony-1",
-   "seconds": 4584.118
-  },
-  {
-   "id": "d4ee00d3-3e22-4afa-bd97-99e198e4b826",
-   "url": "https://soundcloud.com/benufo/ben-ufo-bbc-r1-residency-3",
-   "seconds": 3585.968
-  },
-  {
-   "id": "d50d763e-38ba-4c8a-be5b-29a05f9685b8",
-   "url": "https://soundcloud.com/holdinghandsrecords/the-holding-hands-records-podcast-002-fred-quest-baby-rollen-desert-sound-colony",
-   "seconds": 1638.106
-  },
-  {
-   "id": "dcd51478-7f9d-465a-bb5b-cb5e2218dbac",
-   "url": "https://soundcloud.com/dancetelevision/dj-mix-564-djulz-paris-france",
-   "seconds": 3533.107
-  },
-  {
-   "id": "df323dd1-0884-498b-a6c5-0cfdb09583af",
-   "url": "https://soundcloud.com/fredeverything/fred-everything-the-goods-guest-mix-on-ckut-903-fm-pt-1",
-   "seconds": 3311.026
-  },
-  {
-   "id": "e8d85771-5583-4b52-9213-2d8d09a0bfee",
-   "url": "https://soundcloud.com/platform/nothing-new-001-ben-ufo-never",
-   "seconds": 3296.464
-  },
-  {
-   "id": "ed046526-456b-4780-9dea-c7f9efd6723d",
-   "url": "https://soundcloud.com/junodailyonline/juno-plus-podcast-57-tornado",
-   "seconds": 4748.767
-  },
-  {
-   "id": "ef97eaf6-5f26-4c3b-8e6d-7d4e5ce6bd20",
-   "url": "https://soundcloud.com/fredeverything/fred-everything-kcrw-mix-june-2018",
-   "seconds": 2698.745
-  },
-  {
-   "id": "f23c74d2-2557-4912-b54a-4cfee80bbce6",
-   "url": "https://soundcloud.com/holdinghandsrecords/the-holding-hands-records-podcast-006-nathan-micay-peach-desert-sound-colony",
-   "seconds": 3157.623
-  },
-  {
-   "id": "f3c64f62-8962-4661-906f-5b9cf3f11a81",
-   "url": "https://soundcloud.com/benufo/ben-ufo-bbc-r1-residency-2",
-   "seconds": 3586.303
-  },
-  {
-   "id": "f97964ed-4ad8-4dc8-ba82-4ba4c5853ade",
-   "url": "https://soundcloud.com/fredeverything/lazy-days-podcast-85-fred-everything-november-2019",
-   "seconds": 3479.112
-  },
-  {
-   "id": "fc3efb30-7d84-4cf0-b688-ac38f7d18791",
-   "url": "https://soundcloud.com/rareshrush/raresh-rush-epic-024-guest-mix-andrei-azzaro",
-   "seconds": 7620.774
   }
  ],
  "arms": [

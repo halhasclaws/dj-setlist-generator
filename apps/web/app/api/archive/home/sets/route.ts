@@ -21,11 +21,14 @@ export async function GET(request: NextRequest) {
   const safePage = Number.isFinite(page) ? page : 1;
 
   const actor = await getSessionActor();
+  // Liked filter (N10): needs a signed-in viewer; signed out it's ignored.
+  const likedOnly = Boolean(actor) && searchParams.get("liked") === "1";
 
   if (scope === "mine") {
     if (actor) {
       const payload = await getWorkspaceSetLibraryPayload({
         artistFilter,
+        likedOnly,
         page: safePage,
         query,
         sort: resolvedSort,
@@ -37,6 +40,7 @@ export async function GET(request: NextRequest) {
 
   const payload = await getArchiveHomeSetLibraryPayload({
     artistFilter,
+    likedOnly,
     page: safePage,
     query,
     sort: resolvedSort,

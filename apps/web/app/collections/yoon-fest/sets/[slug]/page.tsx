@@ -5,6 +5,7 @@ import { ArchiveSetExplorer } from "@/components/archive/archive-set-explorer";
 import { YoonAccessBoundary } from "@/components/yoon-fest/yoon-access-boundary";
 import { requireYoonPageActor } from "@/lib/yoon-fest/page-access.server";
 import { getYoonSet, toYoonSetDetail } from "@/lib/yoon-fest/data.server";
+import { listUserLikedSetIds } from "@/lib/archive/set-likes.server";
 import { partialCoverageView } from "@/lib/yoon-fest/partial-coverage";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -14,8 +15,9 @@ export default async function YoonSetPage({ params }: { params: Promise<{ slug: 
   const actor = await requireYoonPageActor(slug);
   const set = await getYoonSet(actor, slug);
   if (!set) notFound();
+  const likedIds = await listUserLikedSetIds(actor.userId, [set.id]);
   return <YoonAccessBoundary viewerId={actor.userId}><ArchiveSetExplorer
-    detail={toYoonSetDetail(set)} initialListened={null} initialQuery=""
+    detail={toYoonSetDetail(set)} initialLiked={likedIds.includes(set.id)} initialListened={null} initialQuery=""
     management={{ canDeleteSet: false, deleteImpact: null, setWillBeRemoved: false, submittedByViewer: false }}
     privateContext={{ collectionHref: "/collections/yoon-fest", boundaryNote: `${set.boundaryStatus}: ${set.boundaryNote}`,
       coverage: set.partialCoverage ? partialCoverageView(set.partialCoverage) : null,

@@ -380,6 +380,25 @@ export const userSetListenProgress = app.table(
   }),
 );
 
+export const userSetLikes = app.table(
+  "user_set_likes",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    setId: uuid("set_id")
+      .notNull()
+      .references(() => sets.id, { onDelete: "cascade" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+  },
+  (table) => ({
+    compoundPk: primaryKey({
+      columns: [table.userId, table.setId],
+    }),
+    setIdx: index("user_set_likes_set_id_idx").on(table.setId),
+  }),
+);
+
 export const submissions = ops.table(
   "submissions",
   {

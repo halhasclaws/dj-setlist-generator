@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import type { ArchiveConfidence } from "@/lib/archive/types";
 
 import styles from "./archive-set-card.module.css";
+import { SetLikePill } from "./set-likes";
 
 type ArchiveSetCardAction =
   | {
@@ -42,6 +43,8 @@ type ArchiveSetCardProps = {
   imageAlt: string;
   imageTarget?: "_blank" | "_self";
   imageUrl: string | null;
+  // When set, the card shows the viewer's like pill (N10) for this set id.
+  likeSetId?: string;
   miniTimeline: ArchiveSetCardMiniSegment[];
   metaPills: string[];
   selected?: boolean;
@@ -105,6 +108,7 @@ export function ArchiveSetCard({
   imageAlt,
   imageTarget,
   imageUrl,
+  likeSetId,
   miniTimeline,
   metaPills,
   selected = false,
@@ -212,6 +216,7 @@ export function ArchiveSetCard({
             </span>
           ))}
           {listened ? <span className={styles.listenedPill}>Listened</span> : null}
+          {likeSetId ? <SetLikePill setId={likeSetId} title={title} /> : null}
         </div>
         <div className={styles.actions}>{actionItems.map(renderAction)}</div>
         <div className={joinClasses(styles.tracklist, tracklistExpanded && styles.tracklistOpen)}>

@@ -54,6 +54,7 @@ import {
 
 import { ArchiveHeroEmpty, ArchiveRecognitionStat } from "./archive-recognition-stat";
 import styles from "./archive-set-explorer.module.css";
+import { SetLikePill } from "./set-likes";
 
 type JourneyMetric = "bpm" | "energy" | "dance";
 type ConfidenceFilter = ArchiveConfidence | "all";
@@ -924,12 +925,15 @@ type SoundCloudWidget = {
 
 export function ArchiveSetExplorer({
   detail,
+  initialLiked = null,
   initialListened,
   initialQuery,
   management,
   privateContext,
 }: {
   detail: ArchiveSetDetail;
+  // The signed-in viewer's like (N10); null when signed out.
+  initialLiked?: boolean | null;
   initialListened: boolean | null;
   initialQuery: string;
   management: SetManagement;
@@ -2892,6 +2896,7 @@ export function ArchiveSetExplorer({
               <span className="cluster-pill">{detail.durationFmt}</span>
               <span className="cluster-pill">{model.tempoSpan}</span>
               <span className="cluster-pill">Generated {model.generatedDisplay}</span>
+              <SetLikePill initialLiked={initialLiked} setId={detail.id} size="page" title={detail.title} />
             </div>
           </div>
         </section>

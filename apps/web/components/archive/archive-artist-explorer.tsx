@@ -40,6 +40,7 @@ import type {
 import { buildSearchBlob, extractSpotifyTrackId, normalizeSearchText } from "@/lib/archive/utils";
 
 import styles from "./archive-artist-explorer.module.css";
+import { LikedFilterButton, useSetLikes } from "./set-likes";
 
 type ConfidenceFilter = ArchiveConfidence | "all";
 type AtlasScope = "artist" | "set";
@@ -655,6 +656,8 @@ export function ArchiveArtistExplorer({
 
   const [setSearch, setSetSearch] = useState(initialQuery);
   const [setSort, setSetSort] = useState<SetSort>("default");
+  const [likedOnly, setLikedOnly] = useState(false);
+  const viewerLikes = useSetLikes();
   const deferredSetSearch = useDeferredValue(setSearch);
   const [setPage, setSetPage] = useState(0);
   const [compareSelection, setCompareSelection] = useState<string[]>([]);
@@ -1148,6 +1151,7 @@ export function ArchiveArtistExplorer({
   const setQuery = normalizeSearchText(deferredSetSearch);
   const filteredSetCards = [...setCards]
     .filter((setItem) => (setQuery ? setItem.searchBlob.includes(setQuery) : true))
+    .filter((setItem) => (likedOnly ? viewerLikes.likedSetIds.has(setItem.id) : true))
     .sort((left, right) => {
       if (setSort === "rate") {
         return Number(right.recognitionRate ?? 0) - Number(left.recognitionRate ?? 0);
@@ -2268,6 +2272,15 @@ export function ArchiveArtistExplorer({
                     <option value="duration">DURATION</option>
                   </select>
                 </div>
+                <div className="control set-explorer-liked">
+                  <LikedFilterButton
+                    active={likedOnly}
+                    onChange={(next) => {
+                      setSetPage(0);
+                      setLikedOnly(next);
+                    }}
+                  />
+                </div>
               </div>
 
               <div className="compare-panel" hidden={compareSelection.length === 0}>
@@ -2358,6 +2371,7 @@ export function ArchiveArtistExplorer({
                       miniTimeline={miniSegments}
                       selected={isCompared}
                       setHref={setItem.previewHref}
+                      likeSetId={setItem.id}
                       listened={listenedSetIds.has(setItem.id)}
                       sourceHref={setItem.sourceUrl}
                       title={setItem.title}

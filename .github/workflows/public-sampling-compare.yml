@@ -11,8 +11,10 @@ on:
     branches: [preview]
     paths: [.github/public-sampling-request.json]
 
+# Mirror a large Production artist discovery: each pushed request is its own
+# run (like a batch of submitted sets), all sharing the account's runner pool.
 concurrency:
-  group: public-sampling-compare
+  group: public-sampling-compare-${{ github.sha }}
   cancel-in-progress: false
 
 permissions:
@@ -25,6 +27,8 @@ env:
   ENABLE_CHECKPOINTS: 'false'
   NTFY_TOPIC: ''
   SHARD_WINDOWS: '450'
+  # Production slot sizing per set: min(12, ceil(windows / 20)) recognize slots.
+  SHARD_MODE: production
 
 jobs:
   plan:
@@ -53,7 +57,7 @@ jobs:
     needs: plan
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 10  # Production bootstraps up to PROCESS_SET_MAX_ACTIVE_RUNS (10) sets at once
       matrix:
         set: ${{ fromJson(needs.plan.outputs.sets) }}
     runs-on: ubuntu-latest
@@ -97,7 +101,7 @@ jobs:
     if: ${{ !cancelled() && needs.plan.result == 'success' }}
     strategy:
       fail-fast: false
-      max-parallel: 12  # matches Production: 12 recognize slots per set
+      max-parallel: 120  # Production: 10 active sets x 12 slots; the account runner pool (~40) caps it
       matrix:
         shard: ${{ fromJson(needs.plan.outputs.shards) }}
     runs-on: ubuntu-latest

@@ -120,7 +120,12 @@ def plan() -> int:
     for item in sets:
         for arm in arms:
             n = len(arm_grid(item['seconds'], arm))
-            count = math.ceil(n / SHARD_WINDOWS)
+            if os.getenv('SHARD_MODE') == 'production':
+                # worker/scheduler.py auto plan: AUTO_MAX_RECOGNITION_SLOTS=12,
+                # AUTO_TARGET_SEGMENTS_PER_SLOT=20.
+                count = max(1, min(12, n, math.ceil(n / 20)))
+            else:
+                count = math.ceil(n / SHARD_WINDOWS)
             shards += [{'set': item['id'], 'arm': arm['name'], 'index': i, 'count': count}
                        for i in range(count)]
             base.say(f'{item["id"][:8]} {arm["name"]}: ~{n} windows in {count} shard(s)')

@@ -1,0 +1,104 @@
+/* Liked sets (N10). Grey with an empty heart when off, lime with a filled
+   heart when on. The pill matches the set card's meta pills. */
+
+.likePill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  padding: 4px 8px;
+  border: 1px solid #2c2c2c;
+  border-radius: var(--dark-radius-badge);
+  background: transparent;
+  color: #8f8f8f;
+  cursor: pointer;
+  line-height: 1;
+  transition: border-color var(--dark-transition-fast), color var(--dark-transition-fast),
+    background var(--dark-transition-fast);
+}
+
+.likePill:hover {
+  border-color: #4a4a4a;
+  color: #d4d4d4;
+}
+
+.likePill:focus-visible,
+.likedFilter:focus-visible {
+  outline: 2px solid var(--dark-brand-lime);
+  outline-offset: 2px;
+}
+
+.likePill.on,
+.likedFilter.on {
+  border-color: var(--dark-brand-lime);
+  background: rgb(216 255 90 / 14%);
+  color: var(--dark-brand-lime);
+}
+
+.likePill.on:hover,
+.likedFilter.on:hover {
+  background: rgb(216 255 90 / 20%);
+}
+
+.likePill[aria-busy="true"] {
+  opacity: 0.7;
+}
+
+/* The set page's pill sits beside the cluster pills (duration, BPM, Generated). */
+.likePillLarge {
+  min-width: 44px;
+  align-self: stretch;
+}
+
+.heart {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+}
+
+.likePillLarge .heart {
+  width: 14px;
+  height: 14px;
+}
+
+.likedFilter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: var(--dark-control-height-dense);
+  min-height: var(--dark-control-height-dense);
+  padding: 0 14px;
+  border: 1px solid #2c2c2c;
+  border-radius: var(--dark-radius-control);
+  background: rgb(255 255 255 / 3%);
+  color: #8f8f8f;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "Space Mono", var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.likedFilter:hover {
+  color: #d4d4d4;
+  border-color: #4a4a4a;
+}
+
+.likedFilter .heart {
+  width: 13px;
+  height: 13px;
+}
+
+@media (width <= 480px) {
+  .likePill {
+    padding: 2px 6px;
+    min-width: 30px;
+  }
+
+  .heart {
+    width: 11px;
+    height: 11px;
+  }
+}

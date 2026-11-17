@@ -893,7 +893,7 @@ export const ARCHIVE_HOME_EXPLORER_CSS = String.raw`:root {
     }
 
     .controls-grid.set-library-controls {
-      grid-template-columns: minmax(0, 1fr) minmax(170px, 220px) minmax(150px, 180px);
+      grid-template-columns: minmax(0, 1fr) minmax(170px, 220px) minmax(150px, 180px) max-content;
       align-items: end;
     }
 
@@ -1108,6 +1108,11 @@ export const ARCHIVE_HOME_EXPLORER_CSS = String.raw`:root {
     .controls-grid.set-library-controls select,
     .controls-grid.set-library-controls select option {
       text-transform: uppercase;
+    }
+
+    .controls-grid.set-library-controls .set-library-liked button {
+      height: 26px;
+      min-height: 26px;
     }
 
     .control input:focus,
@@ -1886,7 +1891,7 @@ export const ARCHIVE_HOME_EXPLORER_CSS = String.raw`:root {
       }
       .focus-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .controls-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .controls-grid.set-library-controls { grid-template-columns: minmax(0, 1fr) minmax(180px, 220px); }
+      .controls-grid.set-library-controls { grid-template-columns: minmax(0, 1fr) minmax(180px, 220px) max-content; }
       .controls-grid.set-library-controls > .control:first-child { grid-column: 1 / -1; }
     }
 
@@ -1923,8 +1928,9 @@ export const ARCHIVE_HOME_EXPLORER_CSS = String.raw`:root {
       .pair-track-grid { grid-template-columns: 1fr; }
       .set-grid { column-count: 1; }
       .controls-grid { grid-template-columns: 1fr; }
-      .controls-grid.set-library-controls { grid-template-columns: 1fr; }
-      .controls-grid.set-library-controls > .control:first-child { grid-column: auto; }
+      .controls-grid.set-library-controls { grid-template-columns: minmax(0, 1fr) max-content; }
+      .controls-grid.set-library-controls > .control:first-child,
+      .controls-grid.set-library-controls > .control:nth-child(2) { grid-column: 1 / -1; }
       .focus-stats { grid-template-columns: 1fr 1fr; }
       .section-head h2 { font-size: clamp(34px, 15vw, 58px); }
       .hero-title-overlay { font-size: clamp(58px, 22vw, 120px); }

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArchiveSetPage } from "@/components/archive/archive-pages";
 import { getArchiveSetManagementBySlug } from "@/lib/archive/deletions";
 import { listUserSetListenProgress } from "@/lib/archive/listen-progress.server";
+import { listUserLikedSetIds } from "@/lib/archive/set-likes.server";
 import { buildArchiveMetadata } from "@/lib/archive/metadata";
 import { getSessionActor } from "@/lib/auth/session";
 
@@ -36,10 +37,16 @@ export default async function SetDetailPage({ params, searchParams }: SetDetailP
     getArchiveSetManagementBySlug(slug, actor),
   ]);
   if (!detail) notFound();
-  const [progress] = actor ? await listUserSetListenProgress(actor.userId, [detail.id]) : [];
+  const [[progress], likedIds] = actor
+    ? await Promise.all([
+        listUserSetListenProgress(actor.userId, [detail.id]),
+        listUserLikedSetIds(actor.userId, [detail.id]),
+      ])
+    : [[], []];
   return (
     <ArchiveSetPage
       detail={detail}
+      initialLiked={actor ? likedIds.includes(detail.id) : null}
       initialListened={actor ? progress?.listened ?? false : null}
       management={management}
       query={queryParams.q?.trim() ?? ""}

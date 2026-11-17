@@ -1053,17 +1053,26 @@ const orderByForSetSort = (sort: ArchiveHomeSetSort) => {
   return sql`ORDER BY sort_artist_name ASC, set_title ASC, set_slug ASC`;
 };
 
+// Liked filter (N10): only sets the viewer liked. The library index holds
+// public sets only, so private collection likes never appear here.
+const likedSetsClause = (userId: string | undefined) =>
+  userId
+    ? sql`set_id IN (SELECT liked.set_id FROM "app"."user_set_likes" liked WHERE liked.user_id = ${userId})`
+    : sql`true`;
+
 const getArchiveHomeSetLibraryPayloadUncached = async ({
   artistFilter = "ALL",
   page = 1,
   query = "",
   sort = "default",
+  likedOnly = false,
   viewerUserId,
 }: {
   artistFilter?: string;
   page?: number;
   query?: string;
   sort?: ArchiveHomeSetSort;
+  likedOnly?: boolean;
   viewerUserId?: string;
 }): Promise<ArchiveHomeSetLibraryPagePayload> => {
   const db = getDb();
@@ -1086,7 +1095,7 @@ const getArchiveHomeSetLibraryPayloadUncached = async ({
         OR COALESCE(track_search_text, '') ILIKE ${`%${safeQuery}%`}
       )`
     : sql`true`;
-  const whereClause = sql`${artistClause} AND ${queryClause}`;
+  const whereClause = sql`${artistClause} AND ${queryClause} AND ${likedSetsClause(likedOnly ? viewerUserId : undefined)}`;
   const orderByClause = orderByForSetSort(sort);
   const countResult = await db.execute(sql<{ totalItems: number | string }>`
     SELECT count(*)::int AS "totalItems"
@@ -1141,17 +1150,20 @@ export const getArchiveHomeSetLibraryPayload = async ({
   page = 1,
   query = "",
   sort = "default",
+  likedOnly = false,
   viewerUserId,
 }: {
   artistFilter?: string;
   page?: number;
   query?: string;
   sort?: ArchiveHomeSetSort;
+  likedOnly?: boolean;
   viewerUserId?: string;
 } = {}) => {
   if (viewerUserId) {
     return getArchiveHomeSetLibraryPayloadUncached({
       artistFilter,
+      likedOnly,
       page,
       query,
       sort,
@@ -1333,12 +1345,14 @@ export const getWorkspaceSetLibraryPayload = async ({
   page = 1,
   query = "",
   sort = "default",
+  likedOnly = false,
   userId,
 }: {
   artistFilter?: string;
   page?: number;
   query?: string;
   sort?: ArchiveHomeSetSort;
+  likedOnly?: boolean;
   userId: string;
 }): Promise<ArchiveHomeSetLibraryPagePayload> => {
   const db = getDb();
@@ -1373,7 +1387,7 @@ export const getWorkspaceSetLibraryPayload = async ({
     : sql`true`;
   const setIdValues = setIds.map((id) => sql`${id}::uuid`);
   const setIdClause = sql`set_id IN (${sql.join(setIdValues, sql`, `)})`;
-  const whereClause = sql`${setIdClause} AND ${artistClause} AND ${queryClause}`;
+  const whereClause = sql`${setIdClause} AND ${artistClause} AND ${queryClause} AND ${likedSetsClause(likedOnly ? userId : undefined)}`;
   const orderByClause = orderByForSetSort(sort);
 
   const countResult = await db.execute(sql<{ totalItems: number | string }>`

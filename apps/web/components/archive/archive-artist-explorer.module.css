@@ -853,8 +853,13 @@
   flex: 1 1 auto;
 }
 
-.root :global(.set-explorer-controls .control:last-child) {
+.root :global(.set-explorer-controls .control:nth-child(2)) {
   flex: 0 0 156px;
+}
+
+/* Liked filter (N10): keeps its natural width at the end of the row. */
+.root :global(.set-explorer-controls .control.set-explorer-liked) {
+  flex: 0 0 auto;
 }
 
 .root :global(.set-explorer-controls .control label) {
@@ -2486,5 +2491,21 @@
   .root :global(.spotify-inline iframe) {
     max-width: 100%;
     width: 100% !important;
+  }
+}
+
+/* Phones (N10): search gets its own row; sort and the Liked filter share the
+   next one, with sort taking whatever the button leaves. */
+@media (width <= 480px) {
+  .root :global(.set-explorer-controls) {
+    flex-wrap: wrap;
+  }
+
+  .root :global(.set-explorer-controls .control:first-child) {
+    flex: 1 1 100%;
+  }
+
+  .root :global(.set-explorer-controls .control:nth-child(2)) {
+    flex: 1 1 0;
   }
 }

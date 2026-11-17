@@ -42,6 +42,7 @@ import type {
 } from "@/lib/archive/home-explorer-types";
 import type { ArchiveConfidence } from "@/lib/archive/types";
 import { buildSearchBlob, extractSpotifyTrackId, normalizeSearchText } from "@/lib/archive/utils";
+import { LikedFilterButton, useSetLikes } from "@/components/archive/set-likes";
 
 type ConfidenceFilter = ArchiveConfidence | "all";
 type PairLens = "artists" | "genres" | "labels" | "tracks";
@@ -664,6 +665,14 @@ export function ArchiveHomeExplorer({
   const [setQuery, setSetQuery] = useState(initial.initialSetLibrary.query);
   const [setArtistFilter, setSetArtistFilter] = useState(initial.initialSetLibrary.artistFilter);
   const [setSort, setSetSort] = useState<ArchiveHomeSetSort>(initial.initialSetLibrary.sort);
+  // Liked filter (N10): the server returns only the viewer's liked sets.
+  const [setLikedOnly, setSetLikedOnly] = useState(false);
+  const viewerLikes = useSetLikes();
+  // An unlike while the filter is on hides that card at once.
+  const visibleSetLibraryItems =
+    setLikedOnly && viewerLikes.loaded
+      ? setLibrary.items.filter((setItem) => viewerLikes.likedSetIds.has(setItem.id))
+      : setLibrary.items;
   const [setPage, setSetPage] = useState(initial.initialSetLibrary.page);
   const [expandedSets, setExpandedSets] = useState<string[]>([]);
   const [setTracklists, setSetTracklists] = useState<Record<string, ArchiveHomeSetLibraryTrack[]>>(
@@ -1258,7 +1267,8 @@ export function ArchiveHomeExplorer({
 
   useEffect(() => {
     const requestKey = `${scope}::${setArtistFilter}::${setSort}::${setPage}::${deferredSetQuery}`;
-    const cached = setLibraryCacheRef.current.get(requestKey);
+    // Liked pages change whenever the viewer likes or unlikes, so they aren't cached.
+    const cached = setLikedOnly ? undefined : setLibraryCacheRef.current.get(requestKey);
 
     if (cached) {
       setSetLibrary(cached);
@@ -1276,8 +1286,12 @@ export function ArchiveHomeExplorer({
     if (scope === "mine") {
       searchParams.set("scope", "mine");
     }
+    if (setLikedOnly) {
+      searchParams.set("liked", "1");
+    }
 
     void fetch(`/api/archive/home/sets?${searchParams.toString()}`, {
+      cache: setLikedOnly ? "no-store" : "default",
       signal: controller.signal,
     })
       .then(async (response) => {
@@ -1287,7 +1301,7 @@ export function ArchiveHomeExplorer({
         return (await response.json()) as ArchiveHomeSetLibraryPagePayload;
       })
       .then((payload) => {
-        setLibraryCacheRef.current.set(requestKey, payload);
+        if (!setLikedOnly) setLibraryCacheRef.current.set(requestKey, payload);
         setSetLibrary(payload);
       })
       .catch((error) => {
@@ -1300,7 +1314,7 @@ export function ArchiveHomeExplorer({
     return () => {
       controller.abort();
     };
-  }, [deferredSetQuery, scope, setArtistFilter, setPage, setSort]);
+  }, [deferredSetQuery, scope, setArtistFilter, setLikedOnly, setPage, setSort]);
 
   const updateTrackCardState = ({
     openSources,
@@ -2781,11 +2795,20 @@ export function ArchiveHomeExplorer({
                     <option value="duration">DURATION</option>
                   </select>
                 </div>
+                <div className="control set-library-liked">
+                  <LikedFilterButton
+                    active={setLikedOnly}
+                    onChange={(next) => {
+                      setSetLikedOnly(next);
+                      setSetPage(1);
+                    }}
+                  />
+                </div>
               </div>
 
               <div className="set-grid" id="setGrid">
-                {setLibrary.items.length ? (
-                  setLibrary.items.map((setItem) => {
+                {visibleSetLibraryItems.length ? (
+                  visibleSetLibraryItems.map((setItem) => {
                     const expanded = expandedSets.includes(setItem.slug);
                     const tracklist = setTracklists[setItem.slug] ?? [];
                     const tracklistError = tracklistErrors[setItem.slug];
@@ -2807,6 +2830,7 @@ export function ArchiveHomeExplorer({
                         imageAlt={setItem.title}
                         imageUrl={setItem.thumbnailUrl}
                         key={setItem.id}
+                        likeSetId={setItem.id}
                         metaPills={[
                           `${fmt(setItem.totalTracks)} tracks`,
                           `${Math.round(setItem.recognitionRate ?? 0)}% match`,
@@ -2840,7 +2864,9 @@ export function ArchiveHomeExplorer({
                     );
                   })
                 ) : (
-                  <div className="empty">No sets match current filters.</div>
+                  <div className="empty">
+                    {setLikedOnly ? "No liked sets match current filters." : "No sets match current filters."}
+                  </div>
                 )}
               </div>
               <div className="pager" id="setPager">

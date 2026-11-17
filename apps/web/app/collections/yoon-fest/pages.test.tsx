@@ -6,6 +6,7 @@ const mocks = vi.hoisted(() => ({
 }));
 vi.mock("@/lib/auth/session", () => ({ getSessionActor: mocks.session }));
 vi.mock("@/lib/yoon-fest/access.server", () => ({ hasYoonAccess: mocks.access }));
+vi.mock("@/lib/archive/set-likes.server", () => ({ listUserLikedSetIds: async () => [] }));
 vi.mock("@/lib/yoon-fest/data.server", () => ({ getYoonSets: mocks.sets, getYoonSet: mocks.set, toYoonSetDetail: mocks.detail }));
 vi.mock("next/navigation", () => ({
   notFound: () => { throw new Error("NOT_FOUND"); }, redirect: mocks.redirect,

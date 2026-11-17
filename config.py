@@ -100,6 +100,13 @@ class Config:
     OFFSET_AGREEMENT_MIN = int(os.getenv('OFFSET_AGREEMENT_MIN', '0'))
     OFFSET_AGREEMENT_SECONDS = float(os.getenv('OFFSET_AGREEMENT_SECONDS', '4'))
 
+    # Duplicate-version merge (D07): entries with the same artist and the same
+    # title before any bracketed version tag, starting within this many seconds,
+    # collapse to the one with most detections (the later one on a tie). Catches
+    # the same track listed twice and the next track's remix bleeding in early.
+    # 0 disables.
+    DUPLICATE_MERGE_SECONDS = float(os.getenv('DUPLICATE_MERGE_SECONDS', '0'))
+
     # Named clustering profile. Empty keeps the settings above unchanged.
     CLUSTERING_PROFILE = os.getenv('CLUSTERING_PROFILE', '').strip().lower()
 
@@ -139,6 +146,7 @@ CLUSTERING_PROFILES = {
         'MIN_CLUSTER_SIZE': 1,
         'MIN_CLUSTER_DENSITY': 0.0,
         'OFFSET_AGREEMENT_MIN': 2,
+        'DUPLICATE_MERGE_SECONDS': 300.0,
     },
 }
 

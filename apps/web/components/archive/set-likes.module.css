@@ -86,6 +86,12 @@
   border-color: #4a4a4a;
 }
 
+/* Keep the on state lime while the pointer is still over the button. */
+.likedFilter.on:hover {
+  border-color: var(--dark-brand-lime);
+  color: var(--dark-brand-lime);
+}
+
 .likedFilter .heart {
   width: 13px;
   height: 13px;

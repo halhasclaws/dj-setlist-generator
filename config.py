@@ -107,6 +107,13 @@ class Config:
     # 0 disables.
     DUPLICATE_MERGE_SECONDS = float(os.getenv('DUPLICATE_MERGE_SECONDS', '0'))
 
+    # Combined false-positive score (D07, false_positive_score.py): drop final
+    # entries scoring below this. 0 disables. Corpus frontier (108 sets):
+    # 0.30 trims ~28 wrong entries for 2 real tracks; 0.50 trims ~95 for 40;
+    # 0.55 trims ~122 for 71 (first point at net false positives <= 0 vs
+    # Production live).
+    FALSE_POSITIVE_SCORE_MIN = float(os.getenv('FALSE_POSITIVE_SCORE_MIN', '0'))
+
     # Named clustering profile. Empty keeps the settings above unchanged.
     CLUSTERING_PROFILE = os.getenv('CLUSTERING_PROFILE', '').strip().lower()
 
@@ -147,6 +154,7 @@ CLUSTERING_PROFILES = {
         'MIN_CLUSTER_DENSITY': 0.0,
         'OFFSET_AGREEMENT_MIN': 2,
         'DUPLICATE_MERGE_SECONDS': 300.0,
+        'FALSE_POSITIVE_SCORE_MIN': 0.50,
     },
 }
 

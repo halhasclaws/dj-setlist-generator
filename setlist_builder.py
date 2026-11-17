@@ -8,6 +8,7 @@ from typing import List, Optional
 from config import Config
 from detail_explorer_common import UNKNOWN_ARTIST, UNKNOWN_TITLE
 from false_positive_policy import get_policy
+from false_positive_score import entry_features, score as false_positive_score
 
 CONFIDENCE_ICONS = {
     'HIGH': '🟢',
@@ -99,6 +100,10 @@ class SetlistBuilder:
         # Collapse duplicate versions of one track (D07)
         if Config.DUPLICATE_MERGE_SECONDS > 0:
             tracks = self._merge_duplicate_versions(tracks)
+
+        # Drop entries the combined false-positive score rates unlikely (D07)
+        if Config.FALSE_POSITIVE_SCORE_MIN > 0:
+            tracks = self._apply_false_positive_score(tracks, valid_recognitions)
 
         # Calculate confidence
         tracks = self._calculate_confidence(tracks)
@@ -396,6 +401,19 @@ class SetlistBuilder:
         if merged:
             print(f"Merged {merged} duplicate version {'entry' if merged == 1 else 'entries'}")
         return sorted(kept, key=lambda t: t.start_time)
+
+    def _apply_false_positive_score(self, tracks: list, recognitions: list) -> list:
+        """Keep entries whose combined false-positive score reaches FALSE_POSITIVE_SCORE_MIN."""
+        feats = entry_features(tracks, recognitions, float(Config.SEGMENT_DURATION), Config.OFFSET_AGREEMENT_SECONDS)
+        kept = []
+        for track, f in zip(tracks, feats):
+            value = false_positive_score(f)
+            if value >= Config.FALSE_POSITIVE_SCORE_MIN:
+                kept.append(track)
+            else:
+                print(f"✗ Score-filtered: {track.artist} - {track.title} (score {value:.2f} "
+                      f"< {Config.FALSE_POSITIVE_SCORE_MIN})")
+        return kept
 
     def _cluster_to_track(self, cluster: dict) -> Track:
         """Convert cluster to Track object."""

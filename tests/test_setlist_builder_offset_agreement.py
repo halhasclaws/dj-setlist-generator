@@ -18,7 +18,7 @@ def rec(index, key, offset=None, stride=15):
 
 LEGACY = {'MIN_CLUSTER_SIZE': 3, 'MIN_CLUSTER_DENSITY': 0.25, 'OVERLAP_RESOLUTION_ENABLED': True,
           'OVERLAP_THRESHOLD': 0.3, 'OFFSET_AGREEMENT_MIN': 0, 'OFFSET_AGREEMENT_SECONDS': 4.0,
-          'DUPLICATE_MERGE_SECONDS': 0.0}
+          'DUPLICATE_MERGE_SECONDS': 0.0, 'FALSE_POSITIVE_SCORE_MIN': 0.0}
 
 
 def build(recs, **values):
@@ -27,7 +27,9 @@ def build(recs, **values):
         return SetlistBuilder().build_setlist(recs)
 
 
-PROFILE = config.CLUSTERING_PROFILES['offset_agreement']
+# offset agreement alone; the score filter has its own tests below
+PROFILE = {**config.CLUSTERING_PROFILES['offset_agreement'], 'FALSE_POSITIVE_SCORE_MIN': 0.0}
+FULL_PROFILE = config.CLUSTERING_PROFILES['offset_agreement']
 
 
 class OffsetAgreementTests(unittest.TestCase):
@@ -87,6 +89,7 @@ class OffsetAgreementTests(unittest.TestCase):
                               Config.OVERLAP_RESOLUTION_ENABLED, Config.OFFSET_AGREEMENT_MIN),
                              (1, 0.0, True, 2))
             self.assertEqual(Config.DUPLICATE_MERGE_SECONDS, 300.0)
+            self.assertEqual(Config.FALSE_POSITIVE_SCORE_MIN, 0.50)
             with self.assertRaises(ValueError):
                 config.apply_clustering_profile('typo')
 
@@ -119,6 +122,32 @@ class DuplicateMergeTests(unittest.TestCase):
 
     def test_off_by_default_in_build(self):
         recs = [rec(i, 'k1') for i in range(4)]
+        self.assertEqual(len(build(recs)), 1)
+
+
+
+class FalsePositiveScoreTests(unittest.TestCase):
+    def test_isolated_intro_pair_is_dropped(self):
+        # two agreeing hits matched in the first seconds of the track, nothing nearby
+        recs = [rec(10, 'p', 5.0), rec(11, 'p', 20.0)]
+        self.assertEqual(len(build(recs, **PROFILE)), 1)
+        self.assertEqual(build(recs, **FULL_PROFILE), [])
+
+    def test_long_linear_run_is_kept(self):
+        recs = [rec(i, 'r', 60.0 + 15 * (i - 20)) for i in range(20, 30)]
+        self.assertEqual([t.detection_count for t in build(recs, **FULL_PROFILE)], [10])
+
+    def test_score_orders_strong_above_weak(self):
+        from false_positive_score import score
+        base = dict(g=2, n=2, bleed=False, other=0, near_dup=False, ctx=False, gap=300, intro=True,
+                    density=1.0, tskew=0.0, fskew=0.0)
+        strong = dict(base, g=12, n=12, gap=0, intro=False)
+        self.assertLess(score(base), 0.5)
+        self.assertGreater(score(strong), 0.5)
+        self.assertLess(score(dict(strong, bleed=True, near_dup=True)), score(strong))
+
+    def test_off_by_default_in_build(self):
+        recs = [rec(10, 'p', 5.0), rec(11, 'p', 20.0), rec(12, 'p', 35.0)]
         self.assertEqual(len(build(recs)), 1)
 
 

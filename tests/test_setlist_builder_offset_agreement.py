@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 import config
 from config import Config
-from setlist_builder import SetlistBuilder
+from setlist_builder import SetlistBuilder, Track
 from worker.pipeline.models import Recognition
 
 
@@ -17,7 +17,8 @@ def rec(index, key, offset=None, stride=15):
 
 
 LEGACY = {'MIN_CLUSTER_SIZE': 3, 'MIN_CLUSTER_DENSITY': 0.25, 'OVERLAP_RESOLUTION_ENABLED': True,
-          'OVERLAP_THRESHOLD': 0.3, 'OFFSET_AGREEMENT_MIN': 0, 'OFFSET_AGREEMENT_SECONDS': 4.0}
+          'OVERLAP_THRESHOLD': 0.3, 'OFFSET_AGREEMENT_MIN': 0, 'OFFSET_AGREEMENT_SECONDS': 4.0,
+          'DUPLICATE_MERGE_SECONDS': 0.0}
 
 
 def build(recs, **values):
@@ -85,8 +86,40 @@ class OffsetAgreementTests(unittest.TestCase):
             self.assertEqual((Config.MIN_CLUSTER_SIZE, Config.MIN_CLUSTER_DENSITY,
                               Config.OVERLAP_RESOLUTION_ENABLED, Config.OFFSET_AGREEMENT_MIN),
                              (1, 0.0, True, 2))
+            self.assertEqual(Config.DUPLICATE_MERGE_SECONDS, 300.0)
             with self.assertRaises(ValueError):
                 config.apply_clustering_profile('typo')
+
+
+def track(artist, title, start, n):
+    return Track(title=title, artist=artist, start_time=float(start), end_time=None, confidence='LOW',
+                 detection_count=n, shazam_track_id=None, isrc=None, cluster_density=0.0,
+                 cluster_span=1, segment_indices=[int(start // 15)])
+
+
+def merge(tracks, seconds=300.0):
+    with patch.multiple(Config, DUPLICATE_MERGE_SECONDS=seconds), contextlib.redirect_stdout(io.StringIO()):
+        return SetlistBuilder()._merge_duplicate_versions(tracks)
+
+
+class DuplicateMergeTests(unittest.TestCase):
+    def test_remix_bleeding_in_collapses_to_the_stronger_entry(self):
+        out = merge([track('Florence + the Machine', 'Spectrum', 510, 3),
+                     track('Florence + the Machine', 'Spectrum (Say My Name) [Maya Jane Coles Remix]', 585, 6)])
+        self.assertEqual([(t.title, t.start_time) for t in out],
+                         [('Spectrum (Say My Name) [Maya Jane Coles Remix]', 585.0)])
+
+    def test_tie_keeps_the_later_entry(self):
+        out = merge([track('Alan Morris', '7th Morning', 345, 4), track('Alan Morris', '7th Morning (Extended Mix)', 525, 4)])
+        self.assertEqual([t.start_time for t in out], [525.0])
+
+    def test_far_apart_or_different_tracks_are_kept(self):
+        tracks = [track('A', 'Song', 0, 3), track('A', 'Song', 900, 3), track('B', 'Song', 30, 3), track('A', 'Other', 60, 3)]
+        self.assertEqual(len(merge(tracks)), 4)
+
+    def test_off_by_default_in_build(self):
+        recs = [rec(i, 'k1') for i in range(4)]
+        self.assertEqual(len(build(recs)), 1)
 
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 """Build setlist from recognition results with advanced clustering."""
 
+import re
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import List, Optional
@@ -94,6 +95,10 @@ class SetlistBuilder:
 
         # Convert to tracks
         tracks = [self._cluster_to_track(cluster) for cluster in clusters]
+
+        # Collapse duplicate versions of one track (D07)
+        if Config.DUPLICATE_MERGE_SECONDS > 0:
+            tracks = self._merge_duplicate_versions(tracks)
 
         # Calculate confidence
         tracks = self._calculate_confidence(tracks)
@@ -369,6 +374,29 @@ class SetlistBuilder:
             print(f"  {cluster['artist']} - {cluster['title']}")
             print(f"  └─ {count} detections, {density:.0%} density, span {span} segments")
     
+    @staticmethod
+    def _base_key(text: Optional[str]) -> str:
+        text = re.sub(r'[\(\[].*?[\)\]]', ' ', (text or '').lower())
+        return ' '.join(re.sub(r'[^\w\s]', ' ', text).split())
+
+    def _merge_duplicate_versions(self, tracks: list) -> list:
+        """Same artist + same base title within DUPLICATE_MERGE_SECONDS: keep the
+        entry with most detections (the later one on a tie)."""
+        kept = []
+        for track in sorted(tracks, key=lambda t: t.start_time):
+            key = (self._base_key(track.artist), self._base_key(track.title))
+            twin = next((k for k in kept if key[1]
+                         and (self._base_key(k.artist), self._base_key(k.title)) == key
+                         and abs(k.start_time - track.start_time) <= Config.DUPLICATE_MERGE_SECONDS), None)
+            if twin is None:
+                kept.append(track)
+            elif track.detection_count >= twin.detection_count:
+                kept[kept.index(twin)] = track
+        merged = len(tracks) - len(kept)
+        if merged:
+            print(f"Merged {merged} duplicate version {'entry' if merged == 1 else 'entries'}")
+        return sorted(kept, key=lambda t: t.start_time)
+
     def _cluster_to_track(self, cluster: dict) -> Track:
         """Convert cluster to Track object."""
         first = cluster['recognitions'][0]

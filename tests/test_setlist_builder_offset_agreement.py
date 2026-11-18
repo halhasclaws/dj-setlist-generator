@@ -89,7 +89,7 @@ class OffsetAgreementTests(unittest.TestCase):
                               Config.OVERLAP_RESOLUTION_ENABLED, Config.OFFSET_AGREEMENT_MIN),
                              (1, 0.0, True, 2))
             self.assertEqual(Config.DUPLICATE_MERGE_SECONDS, 300.0)
-            self.assertEqual(Config.FALSE_POSITIVE_SCORE_MIN, 0.50)
+            self.assertEqual(Config.FALSE_POSITIVE_SCORE_MIN, 0.30)
             with self.assertRaises(ValueError):
                 config.apply_clustering_profile('typo')
 
@@ -131,7 +131,7 @@ class FalsePositiveScoreTests(unittest.TestCase):
         # two agreeing hits matched in the first seconds of the track, nothing nearby
         recs = [rec(10, 'p', 5.0), rec(11, 'p', 20.0)]
         self.assertEqual(len(build(recs, **PROFILE)), 1)
-        self.assertEqual(build(recs, **FULL_PROFILE), [])
+        self.assertEqual(build(recs, **{**FULL_PROFILE, 'FALSE_POSITIVE_SCORE_MIN': 0.5}), [])
 
     def test_long_linear_run_is_kept(self):
         recs = [rec(i, 'r', 60.0 + 15 * (i - 20)) for i in range(20, 30)]

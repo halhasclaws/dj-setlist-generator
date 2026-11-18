@@ -302,9 +302,9 @@ jobs:
 
       - name: Publish set run
         env:
-          # D07: Preview (development target) clusters with offset agreement;
-          # Production keeps the legacy rules until rollout flips this too.
-          CLUSTERING_PROFILE: ${{ github.event.inputs.deployment_target == 'development' && 'offset_agreement' || '' }}
+          # D07: both targets cluster with offset agreement + duplicate merge +
+          # the Light (0.30) false-positive score. Set '' to restore legacy rules.
+          CLUSTERING_PROFILE: offset_agreement
         run: python -m worker.jobs.process_set --phase publish --set-run-id "${{ github.event.inputs.set_run_id }}"
 
   finalize:

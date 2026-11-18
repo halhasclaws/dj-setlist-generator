@@ -1,0 +1,5 @@
+# N04 v2b boundary features and detector (boundaries_v2b.py)
+numpy>=1.26
+scipy>=1.11
+librosa==0.10.2.post1
+scikit-learn==1.5.2

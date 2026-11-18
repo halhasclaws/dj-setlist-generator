@@ -38,6 +38,7 @@ jobs:
     outputs:
       shards: ${{ steps.plan.outputs.shards }}
       sets: ${{ steps.plan.outputs.sets }}
+      features: ${{ steps.plan.outputs.features }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -51,7 +52,7 @@ jobs:
           PLAN_OUTPUT: ${{ runner.temp }}/plan.json
         run: |
           python -m worker.jobs.public_sampling_compare plan
-          python3 -c "import json,sys; p=json.load(open(sys.argv[1])); print('shards='+json.dumps(p['shards'])); print('sets='+json.dumps(p['sets']))" "$PLAN_OUTPUT" >> "$GITHUB_OUTPUT"
+          python3 -c "import json,sys; p=json.load(open(sys.argv[1])); print('shards='+json.dumps(p['shards'])); print('sets='+json.dumps(p['sets'])); print('features='+json.dumps(p.get('features', False)))" "$PLAN_OUTPUT" >> "$GITHUB_OUTPUT"
 
   fetch:
     needs: plan
@@ -98,7 +99,7 @@ jobs:
 
   recognize:
     needs: [plan, fetch]
-    if: ${{ !cancelled() && needs.plan.result == 'success' }}
+    if: ${{ !cancelled() && needs.plan.result == 'success' && needs.plan.outputs.features != 'true' }}
     strategy:
       fail-fast: false
       max-parallel: 120  # Production: 10 active sets x 12 slots; the account runner pool (~40) caps it
@@ -144,3 +145,44 @@ jobs:
           path: ${{ runner.temp }}/hits.bin
           retention-days: 5
           if-no-files-found: ignore
+
+  # N04 v2b training data: per-second boundary features from the fetched audio.
+  features:
+    needs: [plan, fetch]
+    if: ${{ !cancelled() && needs.plan.result == 'success' && needs.plan.outputs.features == 'true' }}
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        set: ${{ fromJson(needs.plan.outputs.sets) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-boundaries.txt
+      - name: Ensure ffmpeg (production script)
+        run: ./.github/scripts/ensure-ffmpeg.sh
+      - run: python -m pip install -r requirements-base.txt -r requirements-boundaries.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: audio-${{ matrix.set }}
+          path: ${{ runner.temp }}/audio
+      - name: Boundary features (counts only)
+        env:
+          SAMPLING_SET_ID: ${{ matrix.set }}
+          SAMPLING_SOURCE_LINKS: ${{ secrets.SAMPLING_SOURCE_LINKS }}
+          AUDIO_INPUT: ${{ runner.temp }}/audio/audio.bin
+          FEAT_OUTPUT: ${{ runner.temp }}/features.bin
+        run: python -m worker.jobs.public_sampling_compare features
+      - uses: actions/upload-artifact@v4
+        with:
+          name: features-${{ matrix.set }}
+          path: ${{ runner.temp }}/features.bin
+          retention-days: 5
+          compression-level: 0

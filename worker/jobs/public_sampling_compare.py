@@ -17,6 +17,10 @@ tracklist scoring happen offline.
   python -m worker.jobs.public_sampling_compare plan       # matrix JSON
   python -m worker.jobs.public_sampling_compare fetch      # one set -> sealed audio
   python -m worker.jobs.public_sampling_compare recognize  # one (set, arm, shard)
+  python -m worker.jobs.public_sampling_compare features   # one set -> sealed N04 frame features
+
+A request with "features_only": true plans no recognition shards; it only
+fetches each set and computes the N04 v2b boundary features (training data).
 """
 from __future__ import annotations
 
@@ -116,8 +120,9 @@ def reduce_public(index: int, recognized: bool, raw: dict) -> dict:
 
 def plan() -> int:
     sets, arms = load_request()
+    features_only = bool(json.loads(REQUEST.read_text()).get('features_only'))
     shards = []
-    for item in sets:
+    for item in ([] if features_only else sets):
         for arm in arms:
             n = len(arm_grid(item['seconds'], arm))
             if os.getenv('SHARD_MODE') == 'production':
@@ -132,7 +137,7 @@ def plan() -> int:
     if len(shards) > MAX_JOBS:
         raise SystemExit(f'{len(shards)} shard jobs exceed {MAX_JOBS}')
     Path(os.environ.get('PLAN_OUTPUT', 'plan.json')).write_text(json.dumps(
-        {'shards': shards, 'sets': [s['id'] for s in sets]}))
+        {'shards': shards, 'sets': [s['id'] for s in sets], 'features': features_only}))
     return 0
 
 
@@ -204,7 +209,33 @@ async def recognize() -> int:
         shutil.rmtree(work, ignore_errors=True)
 
 
+def features() -> int:
+    """N04 v2b frame features of one fetched set, sealed (float16 npz)."""
+    import subprocess
+    import numpy as np
+    import boundaries_v2b as v2b
+    sid = os.environ['SAMPLING_SET_ID']
+    work = Path(tempfile.mkdtemp(prefix='public-features-'))
+    try:
+        audio = work / 'mix.mp3'
+        audio.write_bytes(study._openssl(['-d'], Path(os.environ['AUDIO_INPUT']).read_bytes()))
+        wav = work / 'mix.wav'
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(audio), '-ac', '1', '-ar', '11025', str(wav)],
+                       check=True)
+        started = time.monotonic()
+        F = v2b.frame_features(v2b.audio_features(str(wav)))
+        buf = io.BytesIO()
+        np.savez_compressed(buf, F=F.astype(np.float16))
+        Path(os.environ.get('FEAT_OUTPUT', 'features.bin')).write_bytes(study._openssl([], buf.getvalue()))
+        base.say(f'{sid[:8]}: {F.shape[0]} s x {F.shape[1]} features in {round(time.monotonic() - started)} s')
+        return 0
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
+
+
 def run(argv: list[str]) -> int:
+    if argv == ['features']:
+        return features()
     if argv == ['plan']:
         return plan()
     if argv == ['fetch']:
@@ -215,7 +246,7 @@ def run(argv: list[str]) -> int:
         except study.Inconclusive as exc:  # counts only, no private data
             base.say(f'INCONCLUSIVE: {exc}')
             return 4
-    raise SystemExit('usage: plan | fetch | recognize')
+    raise SystemExit('usage: plan | fetch | recognize | features')
 
 
 def main(argv: list[str]) -> int:

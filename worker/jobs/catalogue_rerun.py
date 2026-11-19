@@ -215,6 +215,45 @@ def private_profile(cur) -> dict:
     return out
 
 
+def heal() -> int:
+    """Finish bookkeeping for re-runs whose publication committed but whose worker
+    lost the response (no page revalidation, no completed event)."""
+    from worker.callbacks import post_callback
+    from worker.config import get_settings
+    with _conn() as conn, conn.cursor() as cur:
+        cur.execute("""select r.id, r.submission_id, r.published_set_id, s.slug,
+                              r.source_metadata->'publication_result'->'affectedArtistSlugs' as artists
+                       from ops.set_runs r join app.sets s on s.id = r.published_set_id
+                       where r.source_metadata->>'catalogue_rerun' = %s and r.status = 'completed'
+                         and not (r.source_metadata ? 'published')""", (TAG,))
+        rows = cur.fetchall()
+    healed = 0
+    for row in rows:
+        paths, tags = ['/', '/archive-preview', f"/sets/{row['slug']}", f"/archive-preview/sets/{row['slug']}"], \
+            ['archive:home', 'archive:lists', f"archive:set:{row['slug']}"]
+        for artist in row['artists'] or []:
+            paths += [f'/artists/{artist}', f'/archive-preview/artists/{artist}']
+            tags.append(f'archive:artist:{artist}')
+        try:
+            post_callback(get_settings(), '/api/internal/revalidate',
+                          json={'paths': sorted(set(paths)), 'tags': sorted(set(tags))}, timeout=60).raise_for_status()
+            with _conn() as conn, conn.cursor() as cur:
+                cur.execute("""update ops.set_runs set source_metadata = source_metadata || %s::jsonb
+                               where id = %s""",
+                            (json.dumps({'published': {'set_id': str(row['published_set_id']), 'slug': row['slug'],
+                                                       'healed': True}}), row['id']))
+                cur.execute("""insert into ops.worker_events (submission_id, set_run_id, event_type, message, details)
+                               values (%s, %s, 'set_run.completed', 'Publication bookkeeping completed (D06 heal)',
+                               %s::jsonb)""", (row['submission_id'], row['id'],
+                                                json.dumps({'published_set_id': str(row['published_set_id'])})))
+                conn.commit()
+            healed += 1
+        except Exception as error:
+            print(f'heal failed ({type(error).__name__})')
+    print(json.dumps({'healed': healed, 'needing_heal': len(rows)}))
+    return 0
+
+
 def status() -> int:
     with _conn() as conn, conn.cursor() as cur:
         print(json.dumps(counts(cur)))
@@ -237,6 +276,7 @@ def status() -> int:
 def loop(limit: int, queue_target: int, interval: int, seconds: int) -> int:
     end = time.monotonic() + seconds
     while time.monotonic() < end:
+        heal()
         topup(limit, queue_target)
         with _conn() as conn, conn.cursor() as cur:
             c = counts(cur)
@@ -254,6 +294,7 @@ def main(argv: list[str]) -> int:
     if argv == ['topup']:
         return topup(limit, target)
     if argv == ['status']:
+        heal()
         return status()
     if argv == ['loop']:
         return loop(limit, target, int(os.getenv('RERUN_INTERVAL', '300')), int(os.getenv('RERUN_LOOP_SECONDS', '19800')))

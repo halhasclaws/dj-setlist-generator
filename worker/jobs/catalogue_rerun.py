@@ -28,6 +28,10 @@ from psycopg import connect
 from psycopg.rows import dict_row
 
 TAG = os.getenv('RERUN_TAG', 'd06')
+# The pipeline publishes under the canonical SoundCloud URL (https://soundcloud.com/..., share
+# params stripped). A set stored under another form would get a second page, so it is skipped.
+URL_OK = """(s.source_url not ilike '%%soundcloud%%'
+               or (s.source_url ~ '^https://soundcloud\\.com/[^?#]*$'))"""
 SUBMISSION_NAME = f'Catalogue re-run ({TAG.upper()})'
 
 
@@ -40,7 +44,7 @@ def counts(cur) -> dict:
                    where source_metadata->>'catalogue_rerun' = %s group by status""", (TAG,))
     by = {r['status']: r['n'] for r in cur.fetchall()}
     cur.execute("""select count(*) as n from app.sets s
-                   where s.visibility = 'public' and s.source_url is not null
+                   where s.visibility = 'public' and s.source_url is not null and """ + URL_OK + """
                      and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id
                                      and r.archive_removed_at is not null)
                      and not exists (select 1 from ops.set_runs r2 where r2.source_url = s.source_url
@@ -77,7 +81,7 @@ def topup(limit: int, queue_target: int) -> int:
             return 0
         submission_id, admin_id = _submission(cur)
         cur.execute("""select s.id, s.source_url, s.source_platform from app.sets s
-                       where s.visibility = 'public' and s.source_url is not null
+                       where s.visibility = 'public' and s.source_url is not null and """ + URL_OK + """
                          and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id
                                          and r.archive_removed_at is not null)
                          and not exists (select 1 from ops.set_runs r2 where r2.source_url = s.source_url
@@ -146,6 +150,18 @@ def breakdown(cur) -> dict:
                    where s.visibility = 'public' and not exists
                    (select 1 from ops.set_runs r where r.published_set_id = s.id) group by 1 order by 1""")
     out['unlinked_by_month'] = {r['m']: r['n'] for r in cur.fetchall()}
+    from source_url_normalizer import resolve_canonical_source_url, is_soundcloud_short_url
+    cur.execute("""select s.source_url, exists (select 1 from ops.set_runs r where r.published_set_id = s.id) as linked
+                   from app.sets s where s.visibility = 'public' and s.source_url ilike '%%soundcloud%%'""")
+    drift = {'linked': 0, 'unlinked': 0, 'short_links': 0}
+    for r in cur.fetchall():
+        if is_soundcloud_short_url(r['source_url']):
+            drift['short_links'] += 1
+        elif resolve_canonical_source_url(r['source_url']) != r['source_url']:
+            drift['linked' if r['linked'] else 'unlinked'] += 1
+    out['soundcloud_url_would_change'] = drift
+    cur.execute("select count(*) as n from app.sets s where s.visibility = 'public' and not " + URL_OK)
+    out['skipped_url_form'] = cur.fetchone()['n']
     return out
 
 

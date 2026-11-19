@@ -102,7 +102,7 @@ class PrivateEnrichmentTests(unittest.TestCase):
         text=Path('.github/workflows/process-set.yml').read_text()
         old=text.split('  private-enrichment:')[0]
         conditions=[line for line in old.splitlines() if line.startswith('    if:')]
-        self.assertEqual(len(conditions),8)
+        self.assertEqual(len(conditions),9)
         self.assertTrue(all("private_enrichment_only != 'true'" in line for line in conditions))
         job=text.split('  private-enrichment:')[1].split('  private-production-metadata:')[0]
         self.assertNotIn('upload-artifact',job)

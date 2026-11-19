@@ -20,10 +20,12 @@ needs only numpy and scipy.
 from __future__ import annotations
 
 import base64
+from pathlib import Path
 
 import numpy as np
 
 METHOD = 'audio-learned-v2b'
+MODEL_PATH = Path(__file__).resolve().parent / 'models' / 'boundaries_v2b.joblib'
 MIN_UNKNOWN_SECONDS = 240
 HOP_S = 1.0
 
@@ -147,6 +149,38 @@ def new_model():
     from sklearn.ensemble import HistGradientBoostingClassifier
     return HistGradientBoostingClassifier(max_iter=300, learning_rate=0.05, max_leaf_nodes=15,
                                           l2_regularization=1.0)
+
+
+def load_model(path: Path = MODEL_PATH):
+    """The shipped detector, or None when it (or scikit-learn) is unavailable."""
+    if not path.exists():
+        return None
+    try:
+        import joblib
+        return joblib.load(path)
+    except Exception as error:  # version skew or missing library: no curve, no boundaries
+        print(f'Boundary model unavailable ({type(error).__name__})')
+        return None
+
+
+def attach_to_payload(payload: dict, curve: dict | None, unknown_artist: str, unknown_title: str) -> int:
+    """Add provisional boundaries to each long Unknown entry of a set payload."""
+    if not isinstance(curve, dict) or curve.get('method') != METHOD or not curve.get('p'):
+        return 0
+    p = decode_curve(curve['p'])
+    count = 0
+    for track in payload.get('tracks') or []:
+        if track.get('artist') != unknown_artist or track.get('title') != unknown_title:
+            continue
+        start, end = track.get('start_time'), track.get('end_time')
+        if start is None or end is None or end - start < MIN_UNKNOWN_SECONDS:
+            continue
+        bounds = predict(p, int(start), int(min(end, len(p))))
+        track['provisional_boundaries'] = bounds
+        track['estimated_track_count'] = len(bounds) + 1
+        track['provisional_boundary_method'] = METHOD
+        count += 1
+    return count
 
 
 def probability_curve(model, F: np.ndarray) -> np.ndarray:

@@ -480,6 +480,50 @@ async def _bootstrap_phase(set_run_id: str) -> dict[str, object]:
         raise
 
 
+def _attach_boundaries(set_run_id: str, payload: dict) -> None:
+    """N04: split long Unknown entries with the run's boundary curve, if any."""
+    try:
+        import boundaries_v2b as v2b
+        from detail_explorer_common import UNKNOWN_ARTIST, UNKNOWN_TITLE
+        metadata = _load_run(set_run_id).get("source_metadata") or {}
+        count = v2b.attach_to_payload(payload, metadata.get("boundary_curve"), UNKNOWN_ARTIST, UNKNOWN_TITLE)
+        if count:
+            print(f"Provisional boundaries on {count} Unknown entries")
+    except Exception as error:  # boundaries are optional; never block publication
+        print(f"Provisional boundaries skipped ({type(error).__name__})")
+
+
+def _boundaries_phase(set_run_id: str) -> int:
+    """N04: per-second Unknown-boundary probability from the prepared audio.
+
+    Runs beside recognition and never fails the run: no prepared audio, no
+    model or any error just leaves the run without a curve, and the publish
+    phase then publishes Unknown entries without provisional boundaries.
+    """
+    import subprocess
+    import tempfile
+    from pathlib import Path
+    import boundaries_v2b as v2b
+
+    run_row = _load_run(set_run_id)
+    metadata = run_row.get("source_metadata") or {}
+    shared = metadata.get("shared_recognition") if isinstance(metadata, dict) else None
+    context = _reuse_prepared_audio(run_row, shared if isinstance(shared, dict) else None)
+    model = v2b.load_model() if context is not None else None
+    if context is None or model is None:
+        print("Boundary curve skipped (no prepared audio or model)")
+        return 0
+    with tempfile.TemporaryDirectory() as tmp:
+        wav = Path(tmp) / "mix.wav"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(context.audio_file), "-ac", "1",
+                        "-ar", "11025", str(wav)], check=True)
+        curve = v2b.probability_curve(model, v2b.frame_features(v2b.audio_features(str(wav))))
+    update_set_run_metadata(set_run_id, {"boundary_curve": {
+        "method": v2b.METHOD, "seconds": int(len(curve)), "p": v2b.encode_curve(curve)}})
+    print(f"Boundary curve stored ({len(curve)} s)")
+    return 0
+
+
 async def _recognize_phase(set_run_id: str, *, slot_index: int) -> dict[str, int]:
     from worker.pipeline.recognize import recognize_segment_range, restore_set_context
 
@@ -794,6 +838,7 @@ async def _publish_phase(set_run_id: str) -> str | None:
             enriched_tracks=enriched_tracks,
             mix_info=mix_info,
         )
+        _attach_boundaries(set_run_id, set_payload)
         published_row = _publish_set_run_payload(
             set_run_id=set_run_id,
             payload=set_payload,
@@ -961,7 +1006,7 @@ def main() -> None:
     parser.add_argument("--set-run-id", required=True)
     parser.add_argument(
         "--phase",
-        choices=["bootstrap", "recognize", "publish", "finalize", "run"],
+        choices=["bootstrap", "boundaries", "recognize", "publish", "finalize", "run"],
         default="run",
     )
     parser.add_argument("--slot-index", type=int)
@@ -972,6 +1017,10 @@ def main() -> None:
 
     if args.phase == "bootstrap":
         asyncio.run(bootstrap_phase(args.set_run_id))
+        return
+
+    if args.phase == "boundaries":
+        _boundaries_phase(args.set_run_id)
         return
 
     if args.phase == "recognize":

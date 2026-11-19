@@ -222,6 +222,15 @@ def status() -> int:
         print(json.dumps(private_profile(cur), default=str))
         for row in outcomes(cur):
             print('outcome ' + json.dumps(row, default=str))
+        cur.execute("""select left(r.source_metadata->>'rerun_of_set_id', 8) as set8,
+                          to_char(e.created_at, 'HH24:MI:SS') as t, e.event_type
+                       from ops.worker_events e join ops.set_runs r on r.id = e.set_run_id
+                       where r.source_metadata->>'catalogue_rerun' = %s
+                         and e.created_at > now() - interval '3 hours'
+                         and e.event_type not like '%%segment%%' and e.event_type not like '%%lease%%'
+                       order by e.created_at""", (TAG,))
+        for row in cur.fetchall():
+            print('event ' + json.dumps(row))
     return 0
 
 

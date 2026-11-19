@@ -24,7 +24,7 @@ on:
         options: [production, development]
 
 concurrency:
-  group: catalogue-rerun-${{ github.event.inputs.deployment_target }}
+  group: catalogue-rerun-${{ github.event.inputs.mode == 'status' && 'status' || 'work' }}-${{ github.event.inputs.deployment_target }}
   cancel-in-progress: false
 
 permissions:

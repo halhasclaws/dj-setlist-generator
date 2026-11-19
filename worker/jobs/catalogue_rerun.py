@@ -115,9 +115,35 @@ def _dispatch() -> None:
         print(f'dispatch request failed ({type(error).__name__}); scheduler will pick it up')
 
 
+def breakdown(cur) -> dict:
+    """Why public set pages are or are not eligible (counts only)."""
+    cur.execute("""
+        select
+          count(*) filter (where true) as public_pages,
+          count(*) filter (where s.source_url is null) as no_source_url,
+          count(*) filter (where s.source_url is not null and not exists
+              (select 1 from ops.set_runs r where r.published_set_id = s.id)) as no_publishing_run,
+          count(*) filter (where s.source_url is not null and exists
+              (select 1 from ops.set_runs r where r.published_set_id = s.id) and not exists
+              (select 1 from ops.set_runs r where r.published_set_id = s.id and r.archive_removed_at is null))
+              as only_removed_runs,
+          count(*) filter (where s.legacy_path is not null) as legacy_imported,
+          count(*) filter (where s.source_platform not in ('youtube', 'soundcloud') or s.source_platform is null)
+              as other_platform
+        from app.sets s where s.visibility = 'public'""")
+    out = dict(cur.fetchone())
+    cur.execute("select count(*) as n from app.sets where visibility = 'private'")
+    out['private_pages'] = cur.fetchone()['n']
+    cur.execute("""select count(*) as n from (select source_url from app.sets where visibility = 'public'
+                   and source_url is not null group by source_url having count(*) > 1) d""")
+    out['duplicate_source_urls'] = cur.fetchone()['n']
+    return out
+
+
 def status() -> int:
     with _conn() as conn, conn.cursor() as cur:
         print(json.dumps(counts(cur)))
+        print(json.dumps(breakdown(cur)))
     return 0
 
 

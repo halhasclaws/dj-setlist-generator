@@ -128,8 +128,9 @@ def train() -> int:
         if not p.exists():
             continue
         F[sid] = np.load(io.BytesIO(_unseal(p.read_bytes())))['F']
-        if not item.get('validation_only'):
-            KB[sid] = known_boundaries(item['entries'])
+        # learn2.py trained on the 71 listed sets AND the "pseudo" Production sets
+        # (the ones holding the stored v2b entries); held-out by fold.
+        KB[sid] = known_boundaries(item['entries'])
     SETS = sorted(s for s in KB if KB[s])
     print(f'features: {len(F)} sets; training sets with known boundaries: {len(SETS)}; '
           f'known boundaries: {sum(len(KB[s]) for s in SETS)}')

@@ -127,16 +127,25 @@ def breakdown(cur) -> dict:
               (select 1 from ops.set_runs r where r.published_set_id = s.id) and not exists
               (select 1 from ops.set_runs r where r.published_set_id = s.id and r.archive_removed_at is null))
               as only_removed_runs,
-          count(*) filter (where s.legacy_path is not null) as legacy_imported,
+          count(*) filter (where not exists (select 1 from ops.set_runs r where r.source_url = s.source_url))
+              as no_run_for_url,
+          count(*) filter (where exists (select 1 from ops.set_runs r where r.source_url = s.source_url)
+              and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id)) as runs_not_linked,
           count(*) filter (where s.source_platform not in ('youtube', 'soundcloud') or s.source_platform is null)
               as other_platform
         from app.sets s where s.visibility = 'public'""")
     out = dict(cur.fetchone())
     cur.execute("select count(*) as n from app.sets where visibility = 'private'")
     out['private_pages'] = cur.fetchone()['n']
-    cur.execute("""select count(*) as n from (select source_url from app.sets where visibility = 'public'
-                   and source_url is not null group by source_url having count(*) > 1) d""")
-    out['duplicate_source_urls'] = cur.fetchone()['n']
+    cur.execute("""select k, count(*) as n from app.sets s, jsonb_object_keys(s.metadata) k
+                   where s.visibility = 'public' and not exists
+                   (select 1 from ops.set_runs r where r.published_set_id = s.id)
+                   group by k order by n desc limit 15""")
+    out['unlinked_metadata_keys'] = {r['k']: r['n'] for r in cur.fetchall()}
+    cur.execute("""select date_trunc('month', s.created_at)::date::text as m, count(*) as n from app.sets s
+                   where s.visibility = 'public' and not exists
+                   (select 1 from ops.set_runs r where r.published_set_id = s.id) group by 1 order by 1""")
+    out['unlinked_by_month'] = {r['m']: r['n'] for r in cur.fetchall()}
     return out
 
 

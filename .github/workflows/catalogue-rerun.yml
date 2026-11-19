@@ -52,7 +52,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install -r requirements-base.txt
+      - run: python -m pip install -r requirements-base.txt 'requests>=2.31.0'
       - name: Status
         if: ${{ github.event.inputs.mode == 'status' }}
         run: python -m worker.jobs.catalogue_rerun status

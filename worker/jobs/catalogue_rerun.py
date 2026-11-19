@@ -188,10 +188,38 @@ def outcomes(cur, limit: int = 40) -> list:
     return cur.fetchall()
 
 
+def private_profile(cur) -> dict:
+    """Shape of private sets' latest publishing runs (counts only)."""
+    cur.execute("""
+        with last as (
+          select distinct on (s.id) s.id, r.source_url, r.source_metadata, r.submission_id, r.status
+          from app.sets s join ops.set_runs r on r.target_set_id = s.id or r.published_set_id = s.id
+          where s.visibility = 'private' order by s.id, r.created_at desc)
+        select count(*) as private_with_run,
+               count(*) filter (where source_url is null) as no_url,
+               count(*) filter (where source_url ilike '%%dropbox%%') as dropbox,
+               count(*) filter (where source_url ilike '%%youtu%%') as youtube,
+               count(*) filter (where source_url ilike '%%soundcloud%%') as soundcloud,
+               count(*) filter (where status = 'completed') as last_completed
+        from last""")
+    out = dict(cur.fetchone())
+    cur.execute("""
+        with last as (
+          select distinct on (s.id) r.source_metadata from app.sets s
+          join ops.set_runs r on r.target_set_id = s.id or r.published_set_id = s.id
+          where s.visibility = 'private' order by s.id, r.created_at desc)
+        select k, count(*) as n from last, jsonb_object_keys(source_metadata) k group by k order by n desc""")
+    out['metadata_keys'] = {r['k']: r['n'] for r in cur.fetchall()}
+    cur.execute("""select count(distinct collection_id) as n from app.sets where visibility = 'private'""")
+    out['collections'] = cur.fetchone()['n']
+    return out
+
+
 def status() -> int:
     with _conn() as conn, conn.cursor() as cur:
         print(json.dumps(counts(cur)))
         print(json.dumps(breakdown(cur)))
+        print(json.dumps(private_profile(cur), default=str))
         for row in outcomes(cur):
             print('outcome ' + json.dumps(row, default=str))
     return 0

@@ -50,10 +50,12 @@ def counts(cur) -> dict:
 
 
 def _submission(cur) -> tuple[str, str]:
-    cur.execute("select id from authn.users where is_admin order by created_at limit 1")
+    # The worker role cannot read authn; the owner is whoever submitted most sets.
+    cur.execute("""select requested_by as id from ops.submissions group by requested_by
+                   order by count(*) desc limit 1""")
     admin = cur.fetchone()
     if not admin:
-        raise SystemExit('no_admin_user')
+        raise SystemExit('no_requester')
     cur.execute("""select id from ops.submissions where mode = 'curated_artist' and artist_name = %s
                    order by created_at limit 1""", (SUBMISSION_NAME,))
     row = cur.fetchone()

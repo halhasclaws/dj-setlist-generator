@@ -83,16 +83,37 @@ def _publish_set_run_payload(
     if not settings.api_base_url or not settings.internal_secret:
         raise RuntimeError("APP_BASE_URL and INTERNAL_WORKER_SHARED_SECRET are required for publish")
 
-    response = post_callback(
-        settings,
-        "/api/internal/publish-set-run",
-        json={
-            "setRunId": set_run_id,
-            "payload": payload,
-            **({"workflowRunId": _workflow_run_id()} if _workflow_run_id() else {}),
-        },
-        timeout=120,
-    )
+    import time
+    import requests
+
+    # The route commits the publication before refreshing the home materialized
+    # views (about 90 s, serialised across concurrent publishes), and replays an
+    # already-committed publication idempotently. A lost or slow response is
+    # therefore retried rather than recorded as a failed run.
+    for attempt in range(4):
+        try:
+            response = post_callback(
+                settings,
+                "/api/internal/publish-set-run",
+                json={
+                    "setRunId": set_run_id,
+                    "payload": payload,
+                    **({"workflowRunId": _workflow_run_id()} if _workflow_run_id() else {}),
+                },
+                timeout=300,
+            )
+        except requests.exceptions.Timeout:
+            if attempt == 3:
+                raise
+            print("Publish response timed out; replaying")
+            continue
+        if response.status_code == 409 and attempt < 3:
+            with suppress(ValueError):
+                if (response.json() or {}).get("errorCode") == "publication_in_progress":
+                    print("Publication still in progress; waiting to replay")
+                    time.sleep(30)
+                    continue
+        break
 
     response_payload: dict[str, object] | None = None
     try:

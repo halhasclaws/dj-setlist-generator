@@ -165,16 +165,118 @@ def breakdown(cur) -> dict:
     return out
 
 
+def outcomes(cur, limit: int = 40) -> list:
+    """Latest finished D06 runs: entries / identified before and after, same page, boundaries."""
+    cur.execute("""
+        select r.status, r.stage, left(regexp_replace(coalesce(r.error_summary, ''), 'https?://\\S+', '<url>', 'g'), 160) as err, left(r.source_metadata->>'rerun_of_set_id', 8) as set8,
+               (r.published_set_id::text = r.source_metadata->>'rerun_of_set_id') as same_page,
+               round(extract(epoch from (r.updated_at - r.created_at)) / 60) as minutes,
+               jsonb_array_length(r.source_metadata->'rerun_snapshot'->'entries') as before_n,
+               (select count(*) from jsonb_array_elements(r.source_metadata->'rerun_snapshot'->'entries') x
+                 where x->>'track_id' is not null) as before_ids,
+               (select count(*) from app.set_entries e where e.set_id = r.published_set_id) as after_n,
+               (select count(*) from app.set_entries e where e.set_id = r.published_set_id
+                 and e.track_id is not null) as after_ids,
+               (select count(*) from app.set_entries e where e.set_id = r.published_set_id
+                 and e.metadata ? 'provisional_boundaries') as unknown_with_bounds,
+               (select count(*) from app.set_entries e where e.set_id = r.published_set_id
+                 and e.track_id is null and e.end_time_seconds - e.start_time_seconds >= 240) as long_unknowns,
+               (r.source_metadata ? 'boundary_curve') as curve
+        from ops.set_runs r where r.source_metadata->>'catalogue_rerun' = %s
+          and r.status in ('completed', 'failed', 'cancelled')
+        order by r.updated_at desc limit %s""", (TAG, limit))
+    return cur.fetchall()
+
+
+def private_profile(cur) -> dict:
+    """Shape of private sets' latest publishing runs (counts only)."""
+    cur.execute("""
+        with last as (
+          select distinct on (s.id) s.id, r.source_url, r.source_metadata, r.submission_id, r.status
+          from app.sets s join ops.set_runs r on r.target_set_id = s.id or r.published_set_id = s.id
+          where s.visibility = 'private' order by s.id, r.created_at desc)
+        select count(*) as private_with_run,
+               count(*) filter (where source_url is null) as no_url,
+               count(*) filter (where source_url ilike '%%dropbox%%') as dropbox,
+               count(*) filter (where source_url ilike '%%youtu%%') as youtube,
+               count(*) filter (where source_url ilike '%%soundcloud%%') as soundcloud,
+               count(*) filter (where status = 'completed') as last_completed
+        from last""")
+    out = dict(cur.fetchone())
+    cur.execute("""
+        with last as (
+          select distinct on (s.id) r.source_metadata from app.sets s
+          join ops.set_runs r on r.target_set_id = s.id or r.published_set_id = s.id
+          where s.visibility = 'private' order by s.id, r.created_at desc)
+        select k, count(*) as n from last, jsonb_object_keys(source_metadata) k group by k order by n desc""")
+    out['metadata_keys'] = {r['k']: r['n'] for r in cur.fetchall()}
+    cur.execute("""select count(distinct collection_id) as n from app.sets where visibility = 'private'""")
+    out['collections'] = cur.fetchone()['n']
+    return out
+
+
+def heal() -> int:
+    """Finish bookkeeping for re-runs whose publication committed but whose worker
+    lost the response (no page revalidation, no completed event)."""
+    from worker.callbacks import post_callback
+    from worker.config import get_settings
+    with _conn() as conn, conn.cursor() as cur:
+        cur.execute("""select r.id, r.submission_id, r.published_set_id, s.slug,
+                              r.source_metadata->'publication_result'->'affectedArtistSlugs' as artists
+                       from ops.set_runs r join app.sets s on s.id = r.published_set_id
+                       where r.source_metadata->>'catalogue_rerun' = %s and r.status = 'completed'
+                         and not (r.source_metadata ? 'published')""", (TAG,))
+        rows = cur.fetchall()
+    healed = 0
+    for row in rows:
+        paths, tags = ['/', '/archive-preview', f"/sets/{row['slug']}", f"/archive-preview/sets/{row['slug']}"], \
+            ['archive:home', 'archive:lists', f"archive:set:{row['slug']}"]
+        for artist in row['artists'] or []:
+            paths += [f'/artists/{artist}', f'/archive-preview/artists/{artist}']
+            tags.append(f'archive:artist:{artist}')
+        try:
+            post_callback(get_settings(), '/api/internal/revalidate',
+                          json={'paths': sorted(set(paths)), 'tags': sorted(set(tags))}, timeout=60).raise_for_status()
+            with _conn() as conn, conn.cursor() as cur:
+                cur.execute("""update ops.set_runs set source_metadata = source_metadata || %s::jsonb
+                               where id = %s""",
+                            (json.dumps({'published': {'set_id': str(row['published_set_id']), 'slug': row['slug'],
+                                                       'healed': True}}), row['id']))
+                cur.execute("""insert into ops.worker_events (submission_id, set_run_id, event_type, message, details)
+                               values (%s, %s, 'set_run.completed', 'Publication bookkeeping completed (D06 heal)',
+                               %s::jsonb)""", (row['submission_id'], row['id'],
+                                                json.dumps({'published_set_id': str(row['published_set_id'])})))
+                conn.commit()
+            healed += 1
+        except Exception as error:
+            print(f'heal failed ({type(error).__name__})')
+    print(json.dumps({'healed': healed, 'needing_heal': len(rows)}))
+    return 0
+
+
 def status() -> int:
     with _conn() as conn, conn.cursor() as cur:
         print(json.dumps(counts(cur)))
         print(json.dumps(breakdown(cur)))
+        print(json.dumps(private_profile(cur), default=str))
+        for row in outcomes(cur):
+            print('outcome ' + json.dumps(row, default=str))
+        cur.execute("""select left(r.source_metadata->>'rerun_of_set_id', 8) as set8,
+                          to_char(e.created_at, 'HH24:MI:SS') as t, e.event_type
+                       from ops.worker_events e join ops.set_runs r on r.id = e.set_run_id
+                       where r.source_metadata->>'catalogue_rerun' = %s
+                         and e.created_at > now() - interval '3 hours'
+                         and e.event_type not like '%%segment%%' and e.event_type not like '%%lease%%'
+                       order by e.created_at""", (TAG,))
+        for row in cur.fetchall():
+            print('event ' + json.dumps(row))
     return 0
 
 
 def loop(limit: int, queue_target: int, interval: int, seconds: int) -> int:
     end = time.monotonic() + seconds
     while time.monotonic() < end:
+        heal()
         topup(limit, queue_target)
         with _conn() as conn, conn.cursor() as cur:
             c = counts(cur)
@@ -192,6 +294,7 @@ def main(argv: list[str]) -> int:
     if argv == ['topup']:
         return topup(limit, target)
     if argv == ['status']:
+        heal()
         return status()
     if argv == ['loop']:
         return loop(limit, target, int(os.getenv('RERUN_INTERVAL', '300')), int(os.getenv('RERUN_LOOP_SECONDS', '19800')))

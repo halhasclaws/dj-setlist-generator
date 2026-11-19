@@ -106,8 +106,11 @@ def topup(limit: int, queue_target: int) -> int:
 
 def _dispatch() -> None:
     try:
-        from worker.jobs.process_set import _dispatch_pending
-        _dispatch_pending()
+        from worker.callbacks import post_callback
+        from worker.config import get_settings
+        settings = get_settings()
+        post_callback(settings, '/api/internal/dispatch-pending', timeout=30).raise_for_status()
+        print('dispatch requested')
     except Exception as error:  # the scheduler cron dispatches anyway
         print(f'dispatch request failed ({type(error).__name__}); scheduler will pick it up')
 

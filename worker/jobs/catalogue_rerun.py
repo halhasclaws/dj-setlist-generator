@@ -165,10 +165,35 @@ def breakdown(cur) -> dict:
     return out
 
 
+def outcomes(cur, limit: int = 40) -> list:
+    """Latest finished D06 runs: entries / identified before and after, same page, boundaries."""
+    cur.execute("""
+        select r.status, left(r.source_metadata->>'rerun_of_set_id', 8) as set8,
+               (r.published_set_id::text = r.source_metadata->>'rerun_of_set_id') as same_page,
+               round(extract(epoch from (r.updated_at - r.created_at)) / 60) as minutes,
+               jsonb_array_length(r.source_metadata->'rerun_snapshot'->'entries') as before_n,
+               (select count(*) from jsonb_array_elements(r.source_metadata->'rerun_snapshot'->'entries') x
+                 where x->>'track_id' is not null) as before_ids,
+               (select count(*) from app.set_entries e where e.set_id = r.published_set_id) as after_n,
+               (select count(*) from app.set_entries e where e.set_id = r.published_set_id
+                 and e.track_id is not null) as after_ids,
+               (select count(*) from app.set_entries e where e.set_id = r.published_set_id
+                 and e.metadata ? 'provisional_boundaries') as unknown_with_bounds,
+               (select count(*) from app.set_entries e where e.set_id = r.published_set_id
+                 and e.track_id is null and e.end_time_seconds - e.start_time_seconds >= 240) as long_unknowns,
+               (r.source_metadata ? 'boundary_curve') as curve
+        from ops.set_runs r where r.source_metadata->>'catalogue_rerun' = %s
+          and r.status in ('completed', 'failed', 'cancelled')
+        order by r.updated_at desc limit %s""", (TAG, limit))
+    return cur.fetchall()
+
+
 def status() -> int:
     with _conn() as conn, conn.cursor() as cur:
         print(json.dumps(counts(cur)))
         print(json.dumps(breakdown(cur)))
+        for row in outcomes(cur):
+            print('outcome ' + json.dumps(row, default=str))
     return 0
 
 

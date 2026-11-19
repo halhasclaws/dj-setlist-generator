@@ -41,8 +41,8 @@ def counts(cur) -> dict:
     by = {r['status']: r['n'] for r in cur.fetchall()}
     cur.execute("""select count(*) as n from app.sets s
                    where s.visibility = 'public' and s.source_url is not null
-                     and exists (select 1 from ops.set_runs r where r.published_set_id = s.id
-                                 and r.archive_removed_at is null)
+                     and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id
+                                     and r.archive_removed_at is not null)
                      and not exists (select 1 from ops.set_runs r2 where r2.source_url = s.source_url
                                      and r2.source_metadata->>'catalogue_rerun' = %s)""", (TAG,))
     by['not_started'] = cur.fetchone()['n']
@@ -78,8 +78,8 @@ def topup(limit: int, queue_target: int) -> int:
         submission_id, admin_id = _submission(cur)
         cur.execute("""select s.id, s.source_url, s.source_platform from app.sets s
                        where s.visibility = 'public' and s.source_url is not null
-                         and exists (select 1 from ops.set_runs r where r.published_set_id = s.id
-                                     and r.archive_removed_at is null)
+                         and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id
+                                         and r.archive_removed_at is not null)
                          and not exists (select 1 from ops.set_runs r2 where r2.source_url = s.source_url
                                          and r2.source_metadata->>'catalogue_rerun' = %s)
                          and not exists (select 1 from ops.set_runs r3 where r3.source_url = s.source_url

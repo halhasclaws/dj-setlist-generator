@@ -28,6 +28,10 @@ from psycopg import connect
 from psycopg.rows import dict_row
 
 TAG = os.getenv('RERUN_TAG', 'd06')
+# The pipeline publishes under the canonical SoundCloud URL (https://soundcloud.com/..., share
+# params stripped). A set stored under another form would get a second page, so it is skipped.
+URL_OK = """(s.source_url not ilike '%%soundcloud%%'
+               or (s.source_url ~ '^https://soundcloud\\.com/[^?#]*$'))"""
 SUBMISSION_NAME = f'Catalogue re-run ({TAG.upper()})'
 
 
@@ -40,7 +44,7 @@ def counts(cur) -> dict:
                    where source_metadata->>'catalogue_rerun' = %s group by status""", (TAG,))
     by = {r['status']: r['n'] for r in cur.fetchall()}
     cur.execute("""select count(*) as n from app.sets s
-                   where s.visibility = 'public' and s.source_url is not null
+                   where s.visibility = 'public' and s.source_url is not null and """ + URL_OK + """
                      and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id
                                      and r.archive_removed_at is not null)
                      and not exists (select 1 from ops.set_runs r2 where r2.source_url = s.source_url
@@ -77,7 +81,7 @@ def topup(limit: int, queue_target: int) -> int:
             return 0
         submission_id, admin_id = _submission(cur)
         cur.execute("""select s.id, s.source_url, s.source_platform from app.sets s
-                       where s.visibility = 'public' and s.source_url is not null
+                       where s.visibility = 'public' and s.source_url is not null and """ + URL_OK + """
                          and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id
                                          and r.archive_removed_at is not null)
                          and not exists (select 1 from ops.set_runs r2 where r2.source_url = s.source_url
@@ -156,6 +160,8 @@ def breakdown(cur) -> dict:
         elif resolve_canonical_source_url(r['source_url']) != r['source_url']:
             drift['linked' if r['linked'] else 'unlinked'] += 1
     out['soundcloud_url_would_change'] = drift
+    cur.execute("select count(*) as n from app.sets s where s.visibility = 'public' and not " + URL_OK)
+    out['skipped_url_form'] = cur.fetchone()['n']
     return out
 
 

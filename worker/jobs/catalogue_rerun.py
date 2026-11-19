@@ -212,6 +212,23 @@ def private_profile(cur) -> dict:
     out['metadata_keys'] = {r['k']: r['n'] for r in cur.fetchall()}
     cur.execute("""select count(distinct collection_id) as n from app.sets where visibility = 'private'""")
     out['collections'] = cur.fetchone()['n']
+    # Coverage of each private set's richest run vs today's 30 s / 15 s grid.
+    cur.execute("""
+        with runs as (
+          select s.id as sid, s.duration_seconds as dur, r.id as rid, r.created_at,
+                 (r.source_metadata ? 'yoon_partial_import') as partial,
+                 (select count(*) from ops.segment_hits h where h.set_run_id = r.id) as windows,
+                 (select count(*) from ops.segment_hits h where h.set_run_id = r.id and h.recognized) as matched,
+                 (select max(h.segment_index) from ops.segment_hits h where h.set_run_id = r.id) as max_idx
+          from app.sets s join ops.set_runs r on r.target_set_id = s.id or r.published_set_id = s.id
+          where s.visibility = 'private'),
+        best as (select distinct on (sid) * from runs order by sid, windows desc)
+        select left(sid::text, 8) as set8, dur, partial, windows, matched, max_idx,
+               (select count(*) from runs r2 where r2.sid = best.sid) as runs,
+               to_char(created_at, 'MM-DD') as run_date,
+               greatest(0, floor((coalesce(dur, 0) - 30) / 15) + 1)::int as expected
+        from best order by sid""")
+    out['coverage'] = [dict(r) for r in cur.fetchall()]
     return out
 
 

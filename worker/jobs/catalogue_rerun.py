@@ -146,6 +146,16 @@ def breakdown(cur) -> dict:
                    where s.visibility = 'public' and not exists
                    (select 1 from ops.set_runs r where r.published_set_id = s.id) group by 1 order by 1""")
     out['unlinked_by_month'] = {r['m']: r['n'] for r in cur.fetchall()}
+    from source_url_normalizer import resolve_canonical_source_url, is_soundcloud_short_url
+    cur.execute("""select s.source_url, exists (select 1 from ops.set_runs r where r.published_set_id = s.id) as linked
+                   from app.sets s where s.visibility = 'public' and s.source_url ilike '%%soundcloud%%'""")
+    drift = {'linked': 0, 'unlinked': 0, 'short_links': 0}
+    for r in cur.fetchall():
+        if is_soundcloud_short_url(r['source_url']):
+            drift['short_links'] += 1
+        elif resolve_canonical_source_url(r['source_url']) != r['source_url']:
+            drift['linked' if r['linked'] else 'unlinked'] += 1
+    out['soundcloud_url_would_change'] = drift
     return out
 
 

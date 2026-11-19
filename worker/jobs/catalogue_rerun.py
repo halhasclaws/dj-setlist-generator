@@ -168,7 +168,7 @@ def breakdown(cur) -> dict:
 def outcomes(cur, limit: int = 40) -> list:
     """Latest finished D06 runs: entries / identified before and after, same page, boundaries."""
     cur.execute("""
-        select r.status, left(r.source_metadata->>'rerun_of_set_id', 8) as set8,
+        select r.status, r.stage, left(regexp_replace(coalesce(r.error_summary, ''), 'https?://\\S+', '<url>', 'g'), 160) as err, left(r.source_metadata->>'rerun_of_set_id', 8) as set8,
                (r.published_set_id::text = r.source_metadata->>'rerun_of_set_id') as same_page,
                round(extract(epoch from (r.updated_at - r.created_at)) / 60) as minutes,
                jsonb_array_length(r.source_metadata->'rerun_snapshot'->'entries') as before_n,

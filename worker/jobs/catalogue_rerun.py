@@ -50,17 +50,19 @@ def counts(cur) -> dict:
 
 
 def _submission(cur) -> tuple[str, str]:
-    cur.execute("select id from authn.users where is_admin order by created_at limit 1")
+    # The worker role cannot read authn; the owner is whoever submitted most sets.
+    cur.execute("""select requested_by as id from ops.submissions group by requested_by
+                   order by count(*) desc limit 1""")
     admin = cur.fetchone()
     if not admin:
-        raise SystemExit('no_admin_user')
+        raise SystemExit('no_requester')
     cur.execute("""select id from ops.submissions where mode = 'curated_artist' and artist_name = %s
                    order by created_at limit 1""", (SUBMISSION_NAME,))
     row = cur.fetchone()
     if row:
         return str(row['id']), str(admin['id'])
-    cur.execute("""insert into ops.submissions (requested_by, mode, status, artist_name, source_urls,
-                   create_playlist) values (%s, 'curated_artist', 'running', %s, '[]'::jsonb, false)
+    cur.execute("""insert into ops.submissions (requested_by, visibility, mode, status, artist_name, source_urls,
+                   create_playlist) values (%s, 'public', 'curated_artist', 'running', %s, '[]'::jsonb, false)
                    returning id""", (admin['id'], SUBMISSION_NAME))
     return str(cur.fetchone()['id']), str(admin['id'])
 
@@ -104,8 +106,11 @@ def topup(limit: int, queue_target: int) -> int:
 
 def _dispatch() -> None:
     try:
-        from worker.jobs.process_set import _dispatch_pending
-        _dispatch_pending()
+        from worker.callbacks import post_callback
+        from worker.config import get_settings
+        settings = get_settings()
+        post_callback(settings, '/api/internal/dispatch-pending', timeout=30).raise_for_status()
+        print('dispatch requested')
     except Exception as error:  # the scheduler cron dispatches anyway
         print(f'dispatch request failed ({type(error).__name__}); scheduler will pick it up')
 

@@ -41,8 +41,8 @@ def counts(cur) -> dict:
     by = {r['status']: r['n'] for r in cur.fetchall()}
     cur.execute("""select count(*) as n from app.sets s
                    where s.visibility = 'public' and s.source_url is not null
-                     and exists (select 1 from ops.set_runs r where r.published_set_id = s.id
-                                 and r.archive_removed_at is null)
+                     and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id
+                                     and r.archive_removed_at is not null)
                      and not exists (select 1 from ops.set_runs r2 where r2.source_url = s.source_url
                                      and r2.source_metadata->>'catalogue_rerun' = %s)""", (TAG,))
     by['not_started'] = cur.fetchone()['n']
@@ -78,8 +78,8 @@ def topup(limit: int, queue_target: int) -> int:
         submission_id, admin_id = _submission(cur)
         cur.execute("""select s.id, s.source_url, s.source_platform from app.sets s
                        where s.visibility = 'public' and s.source_url is not null
-                         and exists (select 1 from ops.set_runs r where r.published_set_id = s.id
-                                     and r.archive_removed_at is null)
+                         and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id
+                                         and r.archive_removed_at is not null)
                          and not exists (select 1 from ops.set_runs r2 where r2.source_url = s.source_url
                                          and r2.source_metadata->>'catalogue_rerun' = %s)
                          and not exists (select 1 from ops.set_runs r3 where r3.source_url = s.source_url
@@ -115,9 +115,44 @@ def _dispatch() -> None:
         print(f'dispatch request failed ({type(error).__name__}); scheduler will pick it up')
 
 
+def breakdown(cur) -> dict:
+    """Why public set pages are or are not eligible (counts only)."""
+    cur.execute("""
+        select
+          count(*) filter (where true) as public_pages,
+          count(*) filter (where s.source_url is null) as no_source_url,
+          count(*) filter (where s.source_url is not null and not exists
+              (select 1 from ops.set_runs r where r.published_set_id = s.id)) as no_publishing_run,
+          count(*) filter (where s.source_url is not null and exists
+              (select 1 from ops.set_runs r where r.published_set_id = s.id) and not exists
+              (select 1 from ops.set_runs r where r.published_set_id = s.id and r.archive_removed_at is null))
+              as only_removed_runs,
+          count(*) filter (where not exists (select 1 from ops.set_runs r where r.source_url = s.source_url))
+              as no_run_for_url,
+          count(*) filter (where exists (select 1 from ops.set_runs r where r.source_url = s.source_url)
+              and not exists (select 1 from ops.set_runs r where r.published_set_id = s.id)) as runs_not_linked,
+          count(*) filter (where s.source_platform not in ('youtube', 'soundcloud') or s.source_platform is null)
+              as other_platform
+        from app.sets s where s.visibility = 'public'""")
+    out = dict(cur.fetchone())
+    cur.execute("select count(*) as n from app.sets where visibility = 'private'")
+    out['private_pages'] = cur.fetchone()['n']
+    cur.execute("""select k, count(*) as n from app.sets s, jsonb_object_keys(s.metadata) k
+                   where s.visibility = 'public' and not exists
+                   (select 1 from ops.set_runs r where r.published_set_id = s.id)
+                   group by k order by n desc limit 15""")
+    out['unlinked_metadata_keys'] = {r['k']: r['n'] for r in cur.fetchall()}
+    cur.execute("""select date_trunc('month', s.created_at)::date::text as m, count(*) as n from app.sets s
+                   where s.visibility = 'public' and not exists
+                   (select 1 from ops.set_runs r where r.published_set_id = s.id) group by 1 order by 1""")
+    out['unlinked_by_month'] = {r['m']: r['n'] for r in cur.fetchall()}
+    return out
+
+
 def status() -> int:
     with _conn() as conn, conn.cursor() as cur:
         print(json.dumps(counts(cur)))
+        print(json.dumps(breakdown(cur)))
     return 0
 
 

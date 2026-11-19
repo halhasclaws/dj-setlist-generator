@@ -61,8 +61,8 @@ def _submission(cur) -> tuple[str, str]:
     row = cur.fetchone()
     if row:
         return str(row['id']), str(admin['id'])
-    cur.execute("""insert into ops.submissions (requested_by, mode, status, artist_name, source_urls,
-                   create_playlist) values (%s, 'curated_artist', 'running', %s, '[]'::jsonb, false)
+    cur.execute("""insert into ops.submissions (requested_by, visibility, mode, status, artist_name, source_urls,
+                   create_playlist) values (%s, 'public', 'curated_artist', 'running', %s, '[]'::jsonb, false)
                    returning id""", (admin['id'], SUBMISSION_NAME))
     return str(cur.fetchone()['id']), str(admin['id'])
 

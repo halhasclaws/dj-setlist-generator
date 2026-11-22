@@ -12,6 +12,7 @@ on:
           - development
           - production
   schedule:
+    # Recovers stale leases/runs and dispatches queued work every 15 minutes.
     - cron: "*/15 * * * *"
 
 permissions:

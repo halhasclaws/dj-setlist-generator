@@ -1,0 +1,21 @@
+import unittest
+from unittest.mock import patch
+
+from worker.jobs import process_set
+
+
+class CatalogueRerunArtistTest(unittest.TestCase):
+    def test_rerun_submission_name_is_not_used_as_artist(self):
+        row = {"id": "r", "artist_name": "Catalogue re-run (D06)",
+               "source_metadata": {"catalogue_rerun": "d06", "rerun_of_set_id": "s"}}
+        with patch.object(process_set, "fetch_one", return_value=row):
+            self.assertIsNone(process_set._load_run("r")["artist_name"])
+
+    def test_curated_artist_name_is_kept(self):
+        row = {"id": "r", "artist_name": "Ben UFO", "source_metadata": {}}
+        with patch.object(process_set, "fetch_one", return_value=row):
+            self.assertEqual(process_set._load_run("r")["artist_name"], "Ben UFO")
+
+
+if __name__ == "__main__":
+    unittest.main()

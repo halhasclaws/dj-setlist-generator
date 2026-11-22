@@ -354,7 +354,7 @@ const summarizeResult = async (
     submissionId,
     setRunId,
     workflowRunId,
-    workflowUrl: `https://github.com/russell-algeo/dj-setlist-generator/actions/runs/${workflowRunId}`,
+    workflowUrl: `https://github.com/halhasclaws/dj-setlist-generator/actions/runs/${workflowRunId}`,
     totalSeconds,
     bootstrapSeconds: toSeconds(bootstrap?.startedAt, bootstrap?.completedAt),
     publishSeconds: toSeconds(publish?.startedAt, publish?.completedAt),

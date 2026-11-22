@@ -9,7 +9,7 @@ import { dispatchPrivateYoonWorkflow } from "@/lib/github/workflows";
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const owner = /^[1-9][0-9]{0,19}$/;
 export const privateYoonDispatchConfigured = () => env.deploymentTarget === "development"
-  && env.githubOwner === "russell-algeo" && env.githubRepo === "dj-setlist-generator"
+  && env.githubOwner === "halhasclaws" && env.githubRepo === "dj-setlist-generator"
   && env.githubWorkflowRef === "preview" && env.githubWorkflowProcessSet === "process-set.yml"
   && Boolean(env.githubDispatchToken);
 

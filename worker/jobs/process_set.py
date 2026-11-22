@@ -181,9 +181,21 @@ def _load_run(set_run_id: str) -> dict[str, object]:
         raise RuntimeError(f"Set run {set_run_id} was not found")
     metadata = run_row.get("source_metadata")
     if isinstance(metadata, dict) and metadata.get("catalogue_rerun"):
-        # The catalogue re-run's submission name is a label, not a performer: never
-        # pass it on as the set's artist (it was being linked as an artist on every page).
-        run_row["artist_name"] = None
+        # The catalogue re-run's submission name is a label, not a performer (it was being
+        # linked as an artist on every page). Re-publish under the set's existing artist.
+        artist = None
+        if metadata.get("rerun_of_set_id"):
+            artist = fetch_one(
+                """
+                select a.name from app.set_artists sa
+                inner join app.artists a on a.id = sa.artist_id
+                where sa.set_id = %s and sa.role = 'primary'
+                order by sa.created_at, a.name
+                limit 1
+                """,
+                (str(metadata["rerun_of_set_id"]),),
+            )
+        run_row["artist_name"] = artist["name"] if artist else None
     return run_row
 
 

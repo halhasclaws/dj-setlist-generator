@@ -179,6 +179,11 @@ def _load_run(set_run_id: str) -> dict[str, object]:
     )
     if not run_row:
         raise RuntimeError(f"Set run {set_run_id} was not found")
+    metadata = run_row.get("source_metadata")
+    if isinstance(metadata, dict) and metadata.get("catalogue_rerun"):
+        # The catalogue re-run's submission name is a label, not a performer: never
+        # pass it on as the set's artist (it was being linked as an artist on every page).
+        run_row["artist_name"] = None
     return run_row
 
 

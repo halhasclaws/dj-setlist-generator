@@ -44,7 +44,7 @@ class ControllerPollTests(TestCase):
         response.__enter__ = Mock(return_value=SimpleNamespace(status=200))
         response.__exit__ = Mock(return_value=False)
         env = dict(PROCESS_SET_MAX_ACTIVE_RUNS='2', GITHUB_ACTIONS='true', RUNNER_OS='Linux',
-                   GITHUB_REPOSITORY='russell-algeo/dj-setlist-generator',
+                   GITHUB_REPOSITORY='halhasclaws/dj-setlist-generator',
                    GITHUB_REF='refs/heads/preview', WORKER_DEPLOYMENT_TARGET='development',
                    GITHUB_RUN_ID='9001', GITHUB_RUN_ATTEMPT='1')
         if once is not None:

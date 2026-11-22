@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY = "russell-algeo/dj-setlist-generator"
+REPOSITORY = "halhasclaws/dj-setlist-generator"
 PREVIEW_REF = "refs/heads/preview"
 
 

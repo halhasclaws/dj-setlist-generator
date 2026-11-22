@@ -68,7 +68,7 @@ export const dispatchPrivateYoonWorkflow = async (
   setRunId: string,
   inputs: { dispatch_generation?: string; resume_mode?: "private_queue" },
 ) => {
-  if (env.deploymentTarget !== "development" || env.githubOwner !== "russell-algeo"
+  if (env.deploymentTarget !== "development" || env.githubOwner !== "halhasclaws"
     || env.githubRepo !== "dj-setlist-generator" || env.githubWorkflowRef !== "preview"
     || env.githubWorkflowProcessSet !== "process-set.yml") {
     return { dispatched: false, reason: "private_configuration_required" } as const;

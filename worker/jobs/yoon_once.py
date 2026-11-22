@@ -374,7 +374,7 @@ def main():
     os.dup2(fd, 1); os.dup2(fd, 2); os.close(fd)
     os.umask(0o077)
     if (os.getenv('GITHUB_ACTIONS') != 'true' or os.getenv('RUNNER_OS') != 'Linux'
-            or os.getenv('GITHUB_REPOSITORY') != 'russell-algeo/dj-setlist-generator'
+            or os.getenv('GITHUB_REPOSITORY') != 'halhasclaws/dj-setlist-generator'
             or os.getenv('WORKER_DEPLOYMENT_TARGET') != 'development'):
         return 2
     root = Path(os.environ['RUNNER_TEMP']) / 'fixed-analysis'

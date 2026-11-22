@@ -17,7 +17,7 @@ env:
 
 jobs:
   export:
-    if: ${{ github.repository == 'russell-algeo/dj-setlist-generator' }}
+    if: ${{ github.repository == 'halhasclaws/dj-setlist-generator' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:

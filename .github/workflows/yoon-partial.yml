@@ -26,7 +26,7 @@ env:
 
 jobs:
   plan:
-    if: ${{ github.repository == 'russell-algeo/dj-setlist-generator' && github.ref == 'refs/heads/preview' }}
+    if: ${{ github.repository == 'halhasclaws/dj-setlist-generator' && github.ref == 'refs/heads/preview' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     outputs:

@@ -336,7 +336,7 @@ def main():
     if once not in ('true', 'false'):
         return 2
     if (os.getenv('GITHUB_ACTIONS') != 'true' or os.getenv('RUNNER_OS') != 'Linux'
-            or os.getenv('GITHUB_REPOSITORY') != 'russell-algeo/dj-setlist-generator'
+            or os.getenv('GITHUB_REPOSITORY') != 'halhasclaws/dj-setlist-generator'
             or os.getenv('GITHUB_REF') != 'refs/heads/preview'
             or os.getenv('WORKER_DEPLOYMENT_TARGET') != 'development'):
         return 2

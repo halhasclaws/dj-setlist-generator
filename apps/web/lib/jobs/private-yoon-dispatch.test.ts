@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 const db = { execute: vi.fn() };
 const dispatch = vi.fn();
 const environment = {
-  deploymentTarget: "development", githubOwner: "russell-algeo", githubRepo: "dj-setlist-generator",
+  deploymentTarget: "development", githubOwner: "halhasclaws", githubRepo: "dj-setlist-generator",
   githubWorkflowRef: "preview", githubWorkflowProcessSet: "process-set.yml", githubDispatchToken: "synthetic",
 };
 vi.mock("server-only", () => ({}));

@@ -236,7 +236,7 @@ def main():
     # Fail before loading configuration, DB connection or any provider client.
     if (os.environ.get('WORKER_DEPLOYMENT_TARGET') != 'development'
             or os.environ.get('GITHUB_REF') != 'refs/heads/preview'
-            or os.environ.get('GITHUB_REPOSITORY') != 'russell-algeo/dj-setlist-generator'
+            or os.environ.get('GITHUB_REPOSITORY') != 'halhasclaws/dj-setlist-generator'
             or os.environ.get('PRIVATE_RUN_ID') not in REVIEWED_RUNS):
         raise RuntimeError('private_preview_only')
     expected = json.loads(os.environ['PRIVATE_ENRICHMENT_EXPECTED'])

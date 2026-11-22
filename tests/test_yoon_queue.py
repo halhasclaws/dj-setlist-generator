@@ -92,7 +92,7 @@ class QueueTests(unittest.TestCase):
     def test_controller_stops_on_blocker_without_sleep_or_rollover(self):
         from worker.jobs.yoon_queue import main
         fake=SimpleNamespace(tick=lambda send:{'pending':5,'reserved':0,'blocked':1})
-        env={'GITHUB_ACTIONS':'true','RUNNER_OS':'Linux','GITHUB_REPOSITORY':'russell-algeo/dj-setlist-generator',
+        env={'GITHUB_ACTIONS':'true','RUNNER_OS':'Linux','GITHUB_REPOSITORY':'halhasclaws/dj-setlist-generator',
              'GITHUB_REF':'refs/heads/preview','WORKER_DEPLOYMENT_TARGET':'development'}
         with patch.dict('os.environ',env,clear=True), patch('worker.jobs.yoon_queue.PrivateQueue',return_value=fake), \
              patch('worker.config.get_settings',return_value=SimpleNamespace(api_base_url='https://example.invalid')), \

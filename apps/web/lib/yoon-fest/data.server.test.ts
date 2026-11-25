@@ -6,7 +6,7 @@ const { select, authorize, joins, predicates, queue } = vi.hoisted(() => ({ sele
 vi.mock("@/lib/db/client", () => ({ getDb: () => ({ select }) }));
 vi.mock("./access.server", () => ({ assertYoonAccess: authorize }));
 vi.mock("next/cache", () => ({ unstable_noStore: vi.fn() }));
-import { getYoonSet, getYoonSetByAsset, loadYoonCollection, toYoonSetDetail, yoonDisplayTitle } from "./data.server";
+import { getYoonSet, getYoonSetByAsset, listYoonSetNames, loadYoonCollection, toYoonSetDetail, yoonDisplayTitle } from "./data.server";
 const example = fixture.sets[0]!;
 describe("private collection reader", () => {
   it.skipIf(!process.env.YOON_PARITY_PLAN_FILE)("projects the local private production receipt end to end (fixture is never committed)", async () => {
@@ -169,5 +169,35 @@ describe("yoon display titles", () => {
     expect(yoonDisplayTitle("Donald Saturday night (provisional)")).toBe("Donald Saturday night");
     expect(yoonDisplayTitle("Crypt Kreepers (Provisional) Saturday")).toBe("Crypt Kreepers Saturday");
     expect(yoonDisplayTitle("Jackson Algeo")).toBe("Jackson Algeo");
+  });
+});
+
+describe("private collection search names", () => {
+  beforeEach(() => {
+    vi.clearAllMocks(); joins.length = 0; predicates.length = 0; queue.length = 0;
+    authorize.mockResolvedValue(undefined);
+    select.mockImplementation(() => { const rows = queue.shift() ?? []; const builder = { innerJoin: (_table: unknown, condition: unknown) => { joins.push(condition); return builder; }, where: (condition: unknown) => { predicates.push(condition); return builder; }, orderBy: async () => rows }; return { from: () => builder }; });
+  });
+  it("authorizes before any lookup", async () => {
+    authorize.mockRejectedValue(new Error("Not found"));
+    await expect(listYoonSetNames(actor("outsider"))).rejects.toThrow("Not found");
+    expect(select).not.toHaveBeenCalled();
+  });
+  it("returns lineup names, performer and an https image only, under membership and the selected version", async () => {
+    queue.push([{ id: example.id, slug: "yoon-fest-jackson-sunday-pilot", title: "Jackson (provisional)",
+      metadata: { mixInfo: { artist_name: "Jackson Algeo", artist_profile_image: "https://i.scdn.co/image/x" }, privateRecognitionProvenance: "DO NOT SHIP" } },
+      { id: "10000000-0000-4000-8000-000000000002", slug: "other-set", title: "Other (provisional)",
+        metadata: { mixInfo: { artist_image: "http://insecure.invalid/x.jpg" } } }]);
+    const names = await listYoonSetNames(actor());
+    expect(names).toEqual([
+      { id: example.id, slug: "yoon-fest-jackson-sunday-pilot", title: "Jackson Algeo (Sun. 3:30 - 5:30 PM)", performer: "Jackson Algeo", imageUrl: "https://i.scdn.co/image/x" },
+      { id: "10000000-0000-4000-8000-000000000002", slug: "other-set", title: "Other", performer: null, imageUrl: null },
+    ]);
+    expect(JSON.stringify(names)).not.toContain("DO NOT SHIP");
+    const dialect = new PgDialect();
+    const where = dialect.sqlToQuery(predicates[0] as never).sql;
+    expect(where).toContain("yoon_version_readable");
+    expect(where).toContain("visibility");
+    expect(joins.map((join) => dialect.sqlToQuery(join as never).sql).join(" ")).toContain("user_id");
   });
 });

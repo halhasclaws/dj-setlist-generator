@@ -78,6 +78,30 @@ async function loadYoonVersions(actor: SessionActor, lookup: VersionLookup): Pro
   }) });
 }
 
+/** Search-panel listing: the selected version of each private set, names only.
+ * Same membership, visibility and version predicates as the full reader; no
+ * entries, audio sources or recognition evidence are selected. */
+export async function listYoonSetNames(actor: SessionActor): Promise<YoonSetName[]> {
+  noStore();
+  await assertYoonAccess(actor);
+  const membership = and(eq(archiveCollectionMembers.collectionId, sets.collectionId), eq(archiveCollectionMembers.userId, actor.userId));
+  const rows = await getDb().select({ id: sets.id, slug: sets.slug, title: sets.title, metadata: sets.metadata })
+    .from(sets).innerJoin(archiveCollections, eq(archiveCollections.id, sets.collectionId))
+    .innerJoin(archiveCollectionMembers, membership).innerJoin(setMedia, eq(setMedia.setId, sets.id))
+    .where(and(eq(sets.visibility, "private"), eq(archiveCollections.slug, "yoon-fest"),
+      sql`app.yoon_version_readable(${sets.id}, true)`))
+    .orderBy(asc(sets.createdAt), asc(sets.id));
+  return rows.map((row) => {
+    const mixInfo = record(record(row.metadata).mixInfo);
+    const image = getString(mixInfo.artist_profile_image) ?? getString(mixInfo.artist_image);
+    return { id: row.id, slug: row.slug, title: lineupTitle(row.slug) ?? yoonDisplayTitle(row.title),
+      performer: typeof mixInfo.artist_name === "string" ? mixInfo.artist_name : null,
+      imageUrl: image && image.startsWith("https://") ? image : null };
+  });
+}
+
+export type YoonSetName = { id: string; slug: string; title: string; performer: string | null; imageUrl: string | null };
+
 export async function loadYoonCollection(actor: SessionActor): Promise<YoonCollection> {
   return loadYoonVersions(actor, { kind: "selected" });
 }

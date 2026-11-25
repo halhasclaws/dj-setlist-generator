@@ -4,6 +4,8 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
+import { useYoonSearch } from "@/components/yoon-fest/use-yoon-search";
+
 import styles from "./archive-global-search.module.css";
 
 type SearchType = "all" | "artists" | "sets";
@@ -13,7 +15,7 @@ type SearchResult = {
   href: string;
   id: string;
   imageUrl: string | null;
-  kind: "artist" | "set";
+  kind: "artist" | "collection" | "set";
   meta: string;
   name: string;
   slug: string;
@@ -69,9 +71,14 @@ export function ArchiveGlobalSearch() {
 
   const scope: SearchScope = searchParams.get("scope") === "mine" ? "mine" : "global";
   const trimmedQuery = query.trim();
+  // Private collection matches; empty unless the signed-in viewer is a member.
+  const yoon = useYoonSearch(open, trimmedQuery);
 
   const visibleGroups = useMemo(() => {
     const groups: Array<{ label: string; results: SearchResult[] }> = [];
+    if (type !== "artists" && yoon.results.length > 0) {
+      groups.push({ label: "Private collection", results: yoon.results });
+    }
     if (type !== "sets") {
       groups.push({ label: "Artists", results: payload.artists });
     }
@@ -79,7 +86,7 @@ export function ArchiveGlobalSearch() {
       groups.push({ label: "Sets", results: payload.sets });
     }
     return groups;
-  }, [payload.artists, payload.sets, type]);
+  }, [payload.artists, payload.sets, type, yoon.results]);
 
   const flatResults = useMemo(
     () => visibleGroups.flatMap((group) => group.results),
@@ -260,7 +267,7 @@ export function ArchiveGlobalSearch() {
                   <div className={styles.empty}>Sign in to search My Workspace.</div>
                 ) : trimmedQuery.length < 2 ? (
                   null
-                ) : loading && flatResults.length === 0 ? (
+                ) : (loading || yoon.loading) && flatResults.length === 0 ? (
                   <div className={styles.empty}>Searching...</div>
                 ) : flatResults.length === 0 ? (
                   <div className={styles.empty}>No artists or sets match this search.</div>

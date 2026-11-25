@@ -109,6 +109,33 @@ class Config:
     OFFSET_TIMING_EXTEND_WINDOWS = int(os.getenv('OFFSET_TIMING_EXTEND_WINDOWS', '0'))
     OFFSET_TIMING_EXTEND_MODE = os.getenv('OFFSET_TIMING_EXTEND_MODE', 'span').strip().lower()
 
+    # D07c sample yield: a kept track whose detections wrap around another kept
+    # track's offset-agreeing group, with few of its own detections agreeing,
+    # is a sample inside that track (Highkin Sunday 1:15:15: Bar-Kays - Open
+    # Your Heart inside Funktastics - Lies In Paradise). D07b's timing extension
+    # let such a sample swallow the real track. The sample entry is dropped and
+    # the host track takes over its time span. Thresholds: the sample has at
+    # most SAMPLE_YIELD_MAX_AGREEING agreeing detections and at most
+    # SAMPLE_YIELD_SAMPLE_RATIO of its offset detections agree; the host has at
+    # least SAMPLE_YIELD_HOST_RATIO agreeing. Wrapping means sample detections
+    # within OFFSET_TIMING_EXTEND_WINDOWS before and after the host's group.
+    # 0 disables.
+    SAMPLE_YIELD_MAX_AGREEING = int(os.getenv('SAMPLE_YIELD_MAX_AGREEING', '0'))
+    SAMPLE_YIELD_SAMPLE_RATIO = float(os.getenv('SAMPLE_YIELD_SAMPLE_RATIO', '0.5'))
+    SAMPLE_YIELD_HOST_RATIO = float(os.getenv('SAMPLE_YIELD_HOST_RATIO', '0.75'))
+
+    # D07c loop rescue: a track that fails offset agreement is still kept when
+    # it is the only song recognised in at least LOOP_RESCUE_RUN consecutive
+    # windows, its offsets jump around (no step between consecutive windows
+    # moves less than LOOP_RESCUE_FROZEN_SECONDS, i.e. not one short fragment
+    # matched over and over) and it is not pitched (|frequencyskew| below
+    # LOOP_RESCUE_MAX_FSKEW). Looped D&B sections match different places in the
+    # track, so no two detections agree (Highkin Sunday 30:15, Pappa Gee &
+    # J-Rize - She Knew). 0 disables.
+    LOOP_RESCUE_RUN = int(os.getenv('LOOP_RESCUE_RUN', '0'))
+    LOOP_RESCUE_FROZEN_SECONDS = float(os.getenv('LOOP_RESCUE_FROZEN_SECONDS', '8'))
+    LOOP_RESCUE_MAX_FSKEW = float(os.getenv('LOOP_RESCUE_MAX_FSKEW', '0.01'))
+
     # Duplicate-version merge (D07): entries with the same artist and the same
     # title before any bracketed version tag, starting within this many seconds,
     # collapse to the one with most detections (the later one on a tie). Catches
@@ -165,6 +192,10 @@ CLUSTERING_PROFILES = {
         # D07b (Russell, 2026-11-25): time kept tracks from connected detections.
         'OFFSET_TIMING_EXTEND_WINDOWS': 8,
         'OFFSET_TIMING_EXTEND_MODE': 'span',
+        # D07c: a weak sample wrapped around a verified track yields to it, and a
+        # 5-window looped run is kept when nothing verified is playing.
+        'SAMPLE_YIELD_MAX_AGREEING': 6,
+        'LOOP_RESCUE_RUN': 5,
         'DUPLICATE_MERGE_SECONDS': 300.0,
         'FALSE_POSITIVE_SCORE_MIN': 0.30,
     },

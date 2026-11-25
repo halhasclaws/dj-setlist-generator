@@ -93,6 +93,12 @@ class SetlistBuilder:
         # Step 2: Suppress known false positives before overlap resolution.
         clusters = self._suppress_false_positive_clusters(clusters)
 
+        # Step 2b: A sample wrapped around its host track yields to it (D07c).
+        if Config.SAMPLE_YIELD_MAX_AGREEING > 0:
+            clusters = self._yield_wrapped_samples(clusters)
+        if Config.LOOP_RESCUE_RUN > 0:
+            clusters = self._drop_contested_rescues(clusters)
+
         # Step 3: Resolve temporal overlaps (competing tracks at same time)
         # Do this BEFORE filtering to choose dominant track among competitors
         if Config.OVERLAP_RESOLUTION_ENABLED:
@@ -149,12 +155,19 @@ class SetlistBuilder:
         for track_id, recs in track_sequences.items():
             artist, title, _ = parse_track_id(track_id)
 
+            all_recs = recs
+            loop_rescued = False
             if Config.OFFSET_AGREEMENT_MIN > 0:
                 agreeing = self._offset_agreeing(recs)
                 if len(agreeing) < Config.OFFSET_AGREEMENT_MIN:
-                    print(f"✗ Skipped: {artist} - {title} ({len(agreeing)} offset-agreeing detections "
-                          f"< {Config.OFFSET_AGREEMENT_MIN} min)")
-                    continue
+                    rescued = self._loop_rescue(recs)
+                    if not rescued:
+                        print(f"✗ Skipped: {artist} - {title} ({len(agreeing)} offset-agreeing detections "
+                              f"< {Config.OFFSET_AGREEMENT_MIN} min)")
+                        continue
+                    print(f"↺ Loop rescue: {artist} - {title} ({len(rescued)} consecutive windows)")
+                    agreeing = rescued
+                    loop_rescued = True
                 timing = self._extend_agreeing(recs, agreeing)
                 recs = agreeing
                 if Config.OFFSET_TIMING_EXTEND_MODE == 'cluster':
@@ -166,6 +179,9 @@ class SetlistBuilder:
             cluster = self._make_cluster_dict(track_id, recs)
             if timing is not None and timing is not recs:
                 cluster['timing_recognitions'] = timing
+            cluster['all_recognitions'] = all_recs
+            if loop_rescued:
+                cluster['loop_rescued'] = True
             density = cluster['density']
 
             if len(recs) < Config.MIN_CLUSTER_SIZE:
@@ -227,6 +243,99 @@ class SetlistBuilder:
                 break
             hi = i
         return sorted((r for r in recognitions if lo <= r.segment_index <= hi), key=lambda r: r.segment_index)
+
+    def _loop_rescue(self, recognitions: list) -> list:
+        """Longest run of consecutive windows for a track that fails offset agreement,
+        when it looks like a looped section rather than one fragment matched over and
+        over (D07c). Empty when the rule is off or nothing qualifies."""
+        need = Config.LOOP_RESCUE_RUN
+        if need <= 0:
+            return []
+        recs = sorted(recognitions, key=lambda r: r.segment_index)
+        runs, run = [], []
+        for r in recs:
+            if run and r.segment_index != run[-1].segment_index + 1:
+                runs.append(run)
+                run = []
+            run.append(r)
+        runs.append(run)
+        best = max(runs, key=len)
+        if len(best) < need:
+            return []
+        offsets = [self._match_offset(r) for r in best]
+        if any(o is None for o in offsets):
+            return []
+        if any(abs(b - a) < Config.LOOP_RESCUE_FROZEN_SECONDS for a, b in zip(offsets, offsets[1:])):
+            return []
+        fskews = [abs(v) for r in best if type(v := (((r.raw_data or {}).get('matches') or [{}])[0] or {})
+                                                   .get('frequencyskew')) in (int, float)]
+        if fskews and max(fskews) >= Config.LOOP_RESCUE_MAX_FSKEW:
+            return []
+        return best
+
+    def _drop_contested_rescues(self, clusters: list[dict]) -> list[dict]:
+        """A loop-rescued cluster only fills a gap: drop it if its run overlaps
+        any offset-agreeing cluster, so it never displaces a verified track (D07c)."""
+        def span(c, timed=False):
+            recs = (c.get('timing_recognitions') or c['recognitions']) if timed else c['recognitions']
+            idx = [r.segment_index for r in recs]
+            return min(idx), max(idx)
+
+        # Compare against each verified track's full timed span (D07b), so a
+        # rescue can't land in the middle of a track that is already listed.
+        agreeing = [span(c, timed=True) for c in clusters if not c.get('loop_rescued')]
+        kept = []
+        for c in clusters:
+            if c.get('loop_rescued'):
+                a0, a1 = span(c)
+                if any(a0 <= b1 and b0 <= a1 for b0, b1 in agreeing):
+                    print(f"  ✗ Rescue contested: {c['artist']} - {c['title']}")
+                    continue
+            kept.append(c)
+        return kept
+
+    def _yield_wrapped_samples(self, clusters: list[dict]) -> list[dict]:
+        """Drop a weakly agreeing cluster whose detections wrap around another
+        cluster's agreeing group; the host takes over its time span (D07c)."""
+        gap = max(Config.OFFSET_TIMING_EXTEND_WINDOWS, 1)
+
+        def ratio(c):
+            with_offset = [r for r in c.get('all_recognitions', c['recognitions'])
+                           if self._match_offset(r) is not None]
+            return len(c['recognitions']) / len(with_offset) if with_offset else 0.0
+
+        def base(c):
+            return (self._base_key(c['artist']), self._base_key(c['title']))
+
+        dropped = set()
+        for s_idx, sample in enumerate(clusters):
+            if (sample['detection_count'] > Config.SAMPLE_YIELD_MAX_AGREEING
+                    or ratio(sample) > Config.SAMPLE_YIELD_SAMPLE_RATIO):
+                continue
+            s_timing = sample.get('timing_recognitions') or sample['recognitions']
+            s0 = min(r.segment_index for r in s_timing)
+            s1 = max(r.segment_index for r in s_timing)
+            for h_idx, host in enumerate(clusters):
+                if h_idx == s_idx or h_idx in dropped or base(host) == base(sample):
+                    continue
+                if ratio(host) < Config.SAMPLE_YIELD_HOST_RATIO:
+                    continue
+                # The sample's timed span must start just before and end just
+                # after the host's agreeing group (within `gap` windows each
+                # side), i.e. it tightly wraps the host. Stray detections far
+                # away never count, so a host can't be stretched across a set.
+                h0 = min(r.segment_index for r in host['recognitions'])
+                h1 = max(r.segment_index for r in host['recognitions'])
+                if not (h0 - gap <= s0 < h0 and h1 < s1 <= h1 + gap):
+                    continue
+                timed = (host.get('timing_recognitions') or host['recognitions']) + \
+                        (sample.get('timing_recognitions') or sample['recognitions'])
+                host['timing_recognitions'] = sorted(timed, key=lambda r: r.segment_index)
+                dropped.add(s_idx)
+                print(f"  ⤵ SAMPLE YIELD: {sample['artist']} - {sample['title']} "
+                      f"inside {host['artist']} - {host['title']}")
+                break
+        return [c for i, c in enumerate(clusters) if i not in dropped]
 
     def _make_cluster_dict(self, track_id: str, recognitions: list) -> dict:
         """Create cluster dictionary from recognitions."""

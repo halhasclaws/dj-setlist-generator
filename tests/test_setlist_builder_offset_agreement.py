@@ -187,3 +187,80 @@ class TimingExtensionTest(unittest.TestCase):
     def test_profile_enables_d07b_span8(self):
         self.assertEqual(config.CLUSTERING_PROFILES['offset_agreement']['OFFSET_TIMING_EXTEND_WINDOWS'], 8)
         self.assertEqual(config.CLUSTERING_PROFILES['offset_agreement']['OFFSET_TIMING_EXTEND_MODE'], 'span')
+
+
+def rec_fs(index, key, offset, fskew=0.0):
+    r = rec(index, key, offset)
+    r.raw_data['matches'][0]['frequencyskew'] = fskew
+    return r
+
+
+D07C_OFF = {**PROFILE, 'SAMPLE_YIELD_MAX_AGREEING': 0, 'LOOP_RESCUE_RUN': 0}
+
+
+class SampleYieldTests(unittest.TestCase):
+    """D07c: Highkin Sunday 1:15:15, Bar-Kays sample wrapped around Funktastics."""
+
+    def recs(self):
+        # sample: 4 of 10 detections agree (windows 11-14), extended by D07b to 1-17
+        sample = [rec(1, 's', 25.7), rec(2, 's', 29.8), rec(3, 's', 33.9), rec(5, 's', 9.3),
+                  rec(7, 's', 180.6), rec(8, 's', 184.7), rec(9, 's', 36.4),
+                  rec(11, 's', 120.7), rec(12, 's', 135.6), rec(13, 's', 150.6), rec(14, 's', 165.6),
+                  rec(15, 's', 93.4), rec(16, 's', 108.3), rec(17, 's', 112.4)]
+        # host: 3 of 3 agree at windows 4, 6, 10
+        host = [rec(4, 'h', 80.9), rec(6, 'h', 111.0), rec(10, 'h', 171.2)]
+        return sample + host
+
+    def test_off_keeps_sample_on_top(self):
+        titles = [t.title for t in build(self.recs(), **D07C_OFF)]
+        self.assertIn('ts', titles)
+
+    def test_sample_yields_and_host_takes_its_span(self):
+        tracks = build(self.recs(), **PROFILE)
+        self.assertEqual([t.title for t in tracks], ['th'])
+        self.assertEqual((tracks[0].start_time, tracks[0].end_time), (15.0, 285.0))
+
+    def test_well_agreeing_track_never_yields(self):
+        # 8 agreeing detections is above the cap: no yield even when wrapped
+        recs = [rec(i, 's', 100.0 + 15 * i) for i in (1, 2, 3, 14, 15, 16, 17, 18)] + \
+               [rec(i, 'h', 15.0 * i) for i in (6, 7, 8)]
+        self.assertIn('ts', [t.title for t in build(recs, **PROFILE)])
+
+    def test_far_away_detections_do_not_stretch_host(self):
+        # the weak track's detections are far from the host: no wrap, no yield
+        recs = [rec(1, 's', 10.0), rec(2, 's', 25.0), rec(60, 's', 300.0), rec(61, 's', 1.0),
+                rec(62, 's', 400.0)] + [rec(i, 'h', 15.0 * i) for i in (30, 31, 32)]
+        tracks = build(recs, **PROFILE)
+        host = [t for t in tracks if t.title == 'th'][0]
+        self.assertEqual(host.start_time, 450.0)
+
+
+class LoopRescueTests(unittest.TestCase):
+    """D07c: Highkin Sunday 30:15, She Knew in looped D&B sections."""
+
+    she_knew = [(121, 10.98, 0.0021), (122, 163.99, 0.0027), (123, 21.77, 0.0015),
+                (124, 166.46, 0.0020), (125, 16.02, 0.0031), (131, 34.66, 0.0043)]
+
+    def test_looped_run_is_kept(self):
+        recs = [rec_fs(i, 'k', o, f) for i, o, f in self.she_knew]
+        self.assertEqual(build(recs, **D07C_OFF), [])
+        tracks = build(recs, **PROFILE)
+        self.assertEqual([(t.title, t.start_time) for t in tracks], [('tk', 1815.0)])
+
+    def test_frozen_fragment_is_not_rescued(self):
+        # one fragment matched over and over: offsets barely move
+        recs = [rec_fs(i, 'f', 200.0 + 2 * n) for n, i in enumerate(range(40, 46))]
+        self.assertEqual(build(recs, **PROFILE), [])
+
+    def test_pitched_run_is_not_rescued(self):
+        recs = [rec_fs(i, 'p', o, 0.03) for i, o, _ in self.she_knew]
+        self.assertEqual(build(recs, **PROFILE), [])
+
+    def test_short_run_is_not_rescued(self):
+        recs = [rec_fs(i, 'k', o, f) for i, o, f in self.she_knew[:4]]
+        self.assertEqual(build(recs, **PROFILE), [])
+
+    def test_rescue_never_lands_inside_a_listed_track(self):
+        verified = [rec(i, 'v', 15.0 * (i - 100)) for i in range(100, 140, 4)]
+        recs = [rec_fs(i, 'k', o, f) for i, o, f in self.she_knew] + verified
+        self.assertEqual([t.title for t in build(recs, **PROFILE)], ['tv'])

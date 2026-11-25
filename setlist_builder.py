@@ -148,10 +148,17 @@ class SetlistBuilder:
                     print(f"✗ Skipped: {artist} - {title} ({len(agreeing)} offset-agreeing detections "
                           f"< {Config.OFFSET_AGREEMENT_MIN} min)")
                     continue
+                timing = self._extend_agreeing(recs, agreeing)
                 recs = agreeing
+                if Config.OFFSET_TIMING_EXTEND_MODE == 'cluster':
+                    recs = timing
+            else:
+                timing = None
 
             # Only create cluster if we have minimum detections and density
             cluster = self._make_cluster_dict(track_id, recs)
+            if timing is not None and timing is not recs:
+                cluster['timing_recognitions'] = timing
             density = cluster['density']
 
             if len(recs) < Config.MIN_CLUSTER_SIZE:
@@ -193,6 +200,26 @@ class SetlistBuilder:
             if len(group) > len(best):
                 best = group
         return best
+
+    @staticmethod
+    def _extend_agreeing(recognitions: list, agreeing: list) -> list:
+        """The agreeing group plus every detection of the same track that connects
+        to it through gaps of at most OFFSET_TIMING_EXTEND_WINDOWS windows (D07b)."""
+        gap = Config.OFFSET_TIMING_EXTEND_WINDOWS
+        if gap <= 0 or not agreeing:
+            return agreeing
+        lo = min(r.segment_index for r in agreeing)
+        hi = max(r.segment_index for r in agreeing)
+        indices = sorted({r.segment_index for r in recognitions})
+        for i in reversed([i for i in indices if i < lo]):
+            if lo - i > gap:
+                break
+            lo = i
+        for i in [i for i in indices if i > hi]:
+            if i - hi > gap:
+                break
+            hi = i
+        return sorted((r for r in recognitions if lo <= r.segment_index <= hi), key=lambda r: r.segment_index)
 
     def _make_cluster_dict(self, track_id: str, recognitions: list) -> dict:
         """Create cluster dictionary from recognitions."""
@@ -417,8 +444,9 @@ class SetlistBuilder:
 
     def _cluster_to_track(self, cluster: dict) -> Track:
         """Convert cluster to Track object."""
-        first = cluster['recognitions'][0]
-        last = cluster['recognitions'][-1]
+        timed = cluster.get('timing_recognitions') or cluster['recognitions']
+        first = timed[0]
+        last = timed[-1]
         
         return Track(
             title=cluster['title'],

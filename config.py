@@ -99,6 +99,15 @@ class Config:
     # 0 disables (legacy behaviour).
     OFFSET_AGREEMENT_MIN = int(os.getenv('OFFSET_AGREEMENT_MIN', '0'))
     OFFSET_AGREEMENT_SECONDS = float(os.getenv('OFFSET_AGREEMENT_SECONDS', '4'))
+    # D07b timing: offset agreement decides whether a track is kept, but a kept
+    # track's start and end come from all of its detections that connect to the
+    # agreeing group with gaps of at most this many windows. Early detections of
+    # pitched tracks drift and looped sections match elsewhere in the track, so
+    # they rarely agree; timing from the agreeing group alone started tracks late
+    # (Russell's Yoon listening, 2026-11-25). 0 disables.
+    # Mode 'span' changes only start/end; 'cluster' also counts the detections.
+    OFFSET_TIMING_EXTEND_WINDOWS = int(os.getenv('OFFSET_TIMING_EXTEND_WINDOWS', '0'))
+    OFFSET_TIMING_EXTEND_MODE = os.getenv('OFFSET_TIMING_EXTEND_MODE', 'span').strip().lower()
 
     # Duplicate-version merge (D07): entries with the same artist and the same
     # title before any bracketed version tag, starting within this many seconds,
@@ -153,6 +162,7 @@ CLUSTERING_PROFILES = {
         'MIN_CLUSTER_SIZE': 1,
         'MIN_CLUSTER_DENSITY': 0.0,
         'OFFSET_AGREEMENT_MIN': 2,
+        'OFFSET_TIMING_EXTEND_WINDOWS': 0,  # D07b candidate: 8 (span); off until approved
         'DUPLICATE_MERGE_SECONDS': 300.0,
         'FALSE_POSITIVE_SCORE_MIN': 0.30,
     },

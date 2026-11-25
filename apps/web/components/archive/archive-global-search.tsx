@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import { flushSync } from "react-dom";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { useYoonSearch } from "@/components/yoon-fest/use-yoon-search";
@@ -95,11 +96,13 @@ export function ArchiveGlobalSearch() {
 
   const activeResult = flatResults[activeIndex] ?? flatResults[0] ?? null;
 
-  const openSearch = ({ focusInput = false }: { focusInput?: boolean } = {}) => {
-    setOpen(true);
-    if (focusInput) {
-      requestAnimationFrame(() => inputRef.current?.focus());
-    }
+  // Render the panel synchronously, then focus its input in the same call
+  // stack as the click, tap or key press. iOS Safari only raises the
+  // on-screen keyboard for a focus made inside the user gesture, so a
+  // deferred focus (requestAnimationFrame, useEffect) leaves it closed there.
+  const openSearch = () => {
+    flushSync(() => setOpen(true));
+    inputRef.current?.focus();
   };
 
   const closeSearch = () => {
@@ -117,7 +120,7 @@ export function ArchiveGlobalSearch() {
     const onKeyDown = (event: globalThis.KeyboardEvent) => {
       if (event.key === "/" && !event.metaKey && !event.ctrlKey && !event.altKey && !isTypingTarget(event.target)) {
         event.preventDefault();
-        openSearch({ focusInput: true });
+        openSearch();
       }
     };
 

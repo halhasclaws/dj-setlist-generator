@@ -836,6 +836,10 @@ async def _publish_phase(set_run_id: str) -> str | None:
 
     recognitions = recognitions_from_segment_hits(segment_hits)
     tracks, _ = build_tracks_from_recognitions(recognitions)
+    # Which clustering timing produced these entries, so sets published under an
+    # older rule can be found and re-timed from their saved hits.
+    from setlist_builder import clustering_timing_tag
+    update_set_run_metadata(set_run_id, {"clustering_timing": clustering_timing_tag()})
 
     _record_stage_change(
         run_row,

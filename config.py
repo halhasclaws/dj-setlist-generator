@@ -162,7 +162,9 @@ CLUSTERING_PROFILES = {
         'MIN_CLUSTER_SIZE': 1,
         'MIN_CLUSTER_DENSITY': 0.0,
         'OFFSET_AGREEMENT_MIN': 2,
-        'OFFSET_TIMING_EXTEND_WINDOWS': 0,  # D07b candidate: 8 (span); off until approved
+        # D07b (Russell, 2026-11-25): time kept tracks from connected detections.
+        'OFFSET_TIMING_EXTEND_WINDOWS': 8,
+        'OFFSET_TIMING_EXTEND_MODE': 'span',
         'DUPLICATE_MERGE_SECONDS': 300.0,
         'FALSE_POSITIVE_SCORE_MIN': 0.30,
     },

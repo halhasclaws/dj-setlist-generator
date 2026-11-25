@@ -20,6 +20,13 @@ CONFIDENCE_ICONS = {
 TRACK_ID_SEPARATOR = '|'
 
 
+def clustering_timing_tag() -> str:
+    """Short tag for the clustering timing rule in force (recorded on each publish)."""
+    if Config.OFFSET_AGREEMENT_MIN > 0 and Config.OFFSET_TIMING_EXTEND_WINDOWS > 0:
+        return f"d07b_{Config.OFFSET_TIMING_EXTEND_MODE}{Config.OFFSET_TIMING_EXTEND_WINDOWS}"
+    return "d07" if Config.OFFSET_AGREEMENT_MIN > 0 else "legacy"
+
+
 def make_track_id(artist: str, title: str, shazam_id: Optional[str]) -> str:
     """Build a track_id string from its components."""
     return f"{artist}{TRACK_ID_SEPARATOR}{title}{TRACK_ID_SEPARATOR}{shazam_id}"

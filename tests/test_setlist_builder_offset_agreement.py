@@ -153,3 +153,37 @@ class FalsePositiveScoreTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class TimingExtensionTest(unittest.TestCase):
+    """D07b: offset agreement keeps or drops; a kept track is timed from detections that
+    connect to the agreeing group (gaps <= OFFSET_TIMING_EXTEND_WINDOWS)."""
+
+    def recs(self):
+        # Track 'a' plays windows 0-9; windows 0-3 drift (offsets disagree), 4-9 agree.
+        out = [rec(i, 'a', offset=100.0 + i * 3) for i in range(4)]
+        out += [rec(i, 'a', offset=float(i * 15 - 30)) for i in range(4, 10)]
+        out += [rec(30, 'a', offset=999.0)]  # far-away stray, not connected
+        return out
+
+    def test_off_starts_at_agreeing_group(self):
+        t, = build(self.recs(), OFFSET_AGREEMENT_MIN=2, MIN_CLUSTER_SIZE=1, MIN_CLUSTER_DENSITY=0.0,
+                   OFFSET_TIMING_EXTEND_WINDOWS=0)
+        self.assertEqual(t.start_time, 60.0)
+
+    def test_span_extends_timing_but_not_counts(self):
+        t, = build(self.recs(), OFFSET_AGREEMENT_MIN=2, MIN_CLUSTER_SIZE=1, MIN_CLUSTER_DENSITY=0.0,
+                   OFFSET_TIMING_EXTEND_WINDOWS=8, OFFSET_TIMING_EXTEND_MODE='span')
+        self.assertEqual(t.start_time, 0.0)
+        self.assertEqual(t.end_time, 9 * 15 + 30)  # the stray at window 30 is not connected
+        self.assertEqual(t.detection_count, 6)
+
+    def test_cluster_mode_counts_connected(self):
+        t, = build(self.recs(), OFFSET_AGREEMENT_MIN=2, MIN_CLUSTER_SIZE=1, MIN_CLUSTER_DENSITY=0.0,
+                   OFFSET_TIMING_EXTEND_WINDOWS=8, OFFSET_TIMING_EXTEND_MODE='cluster')
+        self.assertEqual(t.start_time, 0.0)
+        self.assertEqual(t.detection_count, 10)
+
+    def test_profile_enables_d07b_span8(self):
+        self.assertEqual(config.CLUSTERING_PROFILES['offset_agreement']['OFFSET_TIMING_EXTEND_WINDOWS'], 8)
+        self.assertEqual(config.CLUSTERING_PROFILES['offset_agreement']['OFFSET_TIMING_EXTEND_MODE'], 'span')

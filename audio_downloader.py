@@ -33,10 +33,32 @@ class AudioDownloader:
     def _is_bot_detection_error(self, error: Exception) -> bool:
         """Check if error is YouTube's bot detection."""
         error_str = str(error).lower()
+        if self._is_dead_link_error(error):
+            return False
         return (
             "sign in to confirm you're not a bot" in error_str
             or ("cookies" in error_str and "authentication" in error_str)
         )
+
+    DEAD_LINK_MARKERS = (
+        "private video",
+        "video unavailable",
+        "this video is not available",
+        "account associated with this video has been terminated",
+        "members-only",
+        "drm protected",
+        "http error 404",
+        "this video has been removed",
+    )
+
+    def _is_dead_link_error(self, error: Exception) -> bool:
+        """Permanent failures (private, removed, DRM, 404). Never worth retrying.
+
+        yt-dlp's private-video message also says "use --cookies ... for the
+        authentication", so it must be ruled out before the bot-check match.
+        """
+        error_str = str(error).lower()
+        return any(marker in error_str for marker in self.DEAD_LINK_MARKERS)
 
     def _run_with_bot_retry(self, fn):
         """Run fn(), retrying up to MAX_BOT_RETRIES times on YouTube bot detection."""

@@ -30,6 +30,31 @@ class BotRetryTests(unittest.TestCase):
 
         self.assertEqual(fn.call_count, 1)
 
+
+    def test_private_video_is_dead_link_not_bot_check(self):
+        downloader = self._make_downloader()
+        msg = (
+            "ERROR: [youtube] abc: Private video. If the owner of this video has granted "
+            "you access, please sign in. Use --cookies-from-browser or --cookies for the authentication."
+        )
+        fn = MagicMock(side_effect=Exception(msg))
+
+        with patch("time.sleep") as sleep:
+            with self.assertRaises(Exception):
+                downloader._run_with_bot_retry(fn)
+
+        self.assertEqual(fn.call_count, 1)
+        sleep.assert_not_called()
+
+    def test_unavailable_and_404_are_not_retried(self):
+        downloader = self._make_downloader()
+        for msg in ("Video unavailable. This video is not available", "HTTP Error 404: Not Found",
+                    "This video is DRM protected"):
+            fn = MagicMock(side_effect=Exception(msg))
+            with self.assertRaises(Exception):
+                downloader._run_with_bot_retry(fn)
+            self.assertEqual(fn.call_count, 1)
+
     def test_returns_on_success_before_limit(self):
         downloader = self._make_downloader()
         bot_error = Exception("Sign in to confirm you're not a bot")

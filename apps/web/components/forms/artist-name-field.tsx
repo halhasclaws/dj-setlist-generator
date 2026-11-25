@@ -43,6 +43,7 @@ export function ArtistNameField({
   const [internalValue, setInternalValue] = useState("");
   const [hasFocus, setHasFocus] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [lookupFailed, setLookupFailed] = useState(false);
   const [suggestions, setSuggestions] = useState<ArtistSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const listId = useId();
@@ -61,6 +62,7 @@ export function ArtistNameField({
     if (!trimmedValue) {
       setSuggestions([]);
       setIsLoading(false);
+      setLookupFailed(false);
       return;
     }
 
@@ -79,9 +81,11 @@ export function ArtistNameField({
 
         const data = (await response.json()) as { artists?: ArtistSuggestion[] };
         setSuggestions(Array.isArray(data.artists) ? data.artists : []);
+        setLookupFailed(false);
       } catch {
         if (!controller.signal.aborted) {
           setSuggestions([]);
+          setLookupFailed(true);
         }
       } finally {
         if (!controller.signal.aborted) {
@@ -112,8 +116,13 @@ export function ArtistNameField({
       return existingArtistHelperText;
     }
 
+    // A failed lookup is not the same as "no match": don't tell the user a new page will be created.
+    if (lookupFailed) {
+      return "Couldn't check existing artist pages right now. If this artist already has a page, type the name exactly as it appears there.";
+    }
+
     return "No existing artist page starts with this prefix. Submitting will create a new artist page.";
-  }, [existingArtistHelperText, hasSuggestions, isLoading, trimmedValue]);
+  }, [existingArtistHelperText, hasSuggestions, isLoading, lookupFailed, trimmedValue]);
 
   return (
     <div className={joinClasses(styles.root, className)}>

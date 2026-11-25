@@ -797,7 +797,7 @@ const getHomeSummaryUncached = async ({
     .from(artists)
     .leftJoin(setArtists, eq(setArtists.artistId, artists.id))
     .where(isNotNull(setArtists.setId))
-    .groupBy(artists.id)
+    .groupBy(artists.id, artists.slug, artists.name, artists.imageUrl)
     .orderBy(desc(sql`count(distinct ${setArtists.setId})`), asc(artists.name))
     .limit(18);
 

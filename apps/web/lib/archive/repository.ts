@@ -84,7 +84,7 @@ export const listArtists = async (search?: string, userId?: string) => {
         ),
       )
       .where(searchFilter)
-      .groupBy(artists.id)
+      .groupBy(artists.id, artists.slug, artists.name, artists.imageUrl, artists.updatedAt)
       .orderBy(desc(sql`count(distinct ${sets.id})`), asc(artists.name))
       .limit(200);
 
@@ -110,7 +110,7 @@ export const listArtists = async (search?: string, userId?: string) => {
         ? and(visibilityFilter, searchFilter)
         : visibilityFilter,
     )
-    .groupBy(artists.id)
+    .groupBy(artists.id, artists.slug, artists.name, artists.imageUrl, artists.updatedAt)
     .orderBy(desc(sql`count(${setArtists.setId})`), asc(artists.name))
     .limit(200);
 
@@ -135,7 +135,7 @@ export const suggestArtistsByPrefix = async (query: string, limit = 5) => {
     .from(artists)
     .innerJoin(setArtists, eq(setArtists.artistId, artists.id))
     .where(and(like(artists.normalizedName, `${normalizedQuery}%`), eq(setArtists.role, "primary")))
-    .groupBy(artists.id)
+    .groupBy(artists.id, artists.slug, artists.name)
     .orderBy(desc(sql`count(distinct ${setArtists.setId})`), asc(artists.name))
     .limit(limit);
 

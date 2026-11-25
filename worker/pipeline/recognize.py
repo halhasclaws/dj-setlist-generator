@@ -54,8 +54,20 @@ def prepare_set_context(
     if duration <= 0:
         duration = segmenter.get_audio_duration_ffprobe(audio_file)
         resolved_mix_info["duration"] = duration
+        grid_duration = duration
+    else:
+        # The source's metadata duration can be longer than the downloaded audio (seen on SoundCloud:
+        # 25 s). A window starting past the real end can't be cut, records no Shazam attempt, and its
+        # lease would loop forever, so size the window grid by the real audio when it is shorter.
+        try:
+            real_duration = segmenter.get_audio_duration_ffprobe(audio_file)
+        except (RuntimeError, OSError, ValueError):  # no ffprobe or unreadable: keep the metadata grid
+            real_duration = 0.0
+        grid_duration = real_duration if 0 < real_duration < duration else duration
+        if grid_duration < duration:
+            print(f"Audio is {duration - grid_duration:.1f}s shorter than its metadata; windows follow the audio")
 
-    total_segments = segmenter.calculate_total_segments(duration)
+    total_segments = segmenter.calculate_total_segments(grid_duration)
 
     return PreparedSetContext(
         source_url=canonical_source_url,

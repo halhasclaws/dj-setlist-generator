@@ -43,6 +43,23 @@ python main.py --artist "Dyed Soundorom" --sets "url1" "url2" --no-resume
 - FFmpeg must be installed (`brew install ffmpeg` on macOS)
 - yt-dlp must be installed (`pip install yt-dlp`)
 
+## Setup and tests
+
+Same steps as `.github/workflows/shared-recognition-tests.yml`. A fresh cloud session finishes them in about a minute (installs about 30s, tests about 30s). No secrets or `.env` needed.
+
+```bash
+# Web app (Node 24 per .nvmrc; Node 22 works with an engine warning)
+pnpm install --frozen-lockfile --ignore-scripts
+pnpm --filter web test                 # vitest
+pnpm --filter web exec tsc --noEmit
+
+# Python worker (CI uses Python 3.11)
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python scripts/test-recognition-offline.py   # provider and database sockets blocked
+```
+
+Never point tests at the Production database.
+
 ## Architecture
 
 ### Pipeline Flow (main.py)

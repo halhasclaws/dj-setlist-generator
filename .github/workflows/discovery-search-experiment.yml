@@ -1,0 +1,72 @@
+name: discovery-search-experiment
+
+# Search-only experiment: runs candidate searches and commits the raw results
+# back to the experiment branch. Uses no secrets and touches no database.
+on:
+  push:
+    branches: [experiment/discovery-search]
+    paths:
+      - experiments/discovery/config.json
+      - experiments/discovery/search_experiment.py
+      - .github/workflows/discovery-search-experiment.yml
+
+concurrency:
+  group: discovery-search-experiment
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Install yt-dlp
+        run: pip install "yt-dlp[default,curl-cffi]>=2025.9.26"
+
+      - name: Start WARP proxy for YouTube
+        id: warp
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          docker run --detach --name set-list-warp --publish 127.0.0.1:9091:9091 monius/docker-warp-socks:v4
+          for delay in 2 4 8 16 32 32 32; do
+            if curl -fsSx socks5h://127.0.0.1:9091 https://cloudflare.com/cdn-cgi/trace | grep -q "warp=on"; then
+              echo "proxy=socks5h://127.0.0.1:9091" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep "$delay"
+          done
+          exit 1
+
+      - name: Run searches
+        env:
+          YT_PROXY: ${{ steps.warp.outputs.proxy }}
+          WORKERS: "6"
+        run: python experiments/discovery/search_experiment.py
+
+      - name: Commit results to the experiment branch
+        if: always()
+        run: |
+          git config user.name "discovery-experiment-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/discovery/results || true
+          if git diff --cached --quiet; then echo "no results"; exit 0; fi
+          git commit -m "experiment: discovery search results (run ${{ github.run_id }})"
+          for i in 1 2 3; do git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0; sleep 5; done
+          exit 1
+
+      - name: Stop WARP proxy
+        if: always()
+        run: docker rm -f set-list-warp >/dev/null 2>&1 || true

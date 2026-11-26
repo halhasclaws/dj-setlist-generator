@@ -1,0 +1,91 @@
+name: local-llm-profile-eval
+
+# Experiment: can a free local model on the GitHub runner judge discovery
+# candidates as well as the Claude check? Uses no secrets and no database.
+on:
+  push:
+    branches: [experiment/discovery-search]
+    paths:
+      - experiments/discovery/local_llm/run_profile_eval.py
+      - experiments/discovery/local_llm/candidates.json
+      - .github/workflows/local-llm-profile-eval.yml
+  workflow_dispatch:
+
+concurrency:
+  group: local-llm-profile-eval
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        model:
+          - {name: qwen3-4b, url: "https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/resolve/main/Qwen3-4B-Instruct-2507-Q4_K_M.gguf"}
+          - {name: qwen2.5-7b, url: "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf"}
+        shard: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Machine
+        run: nproc; free -g
+
+      - name: Build llama.cpp
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/ggml-org/llama.cpp llama
+          cmake -S llama -B llama/build -DGGML_NATIVE=ON -DLLAMA_CURL=OFF -DLLAMA_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release > /dev/null
+          cmake --build llama/build -j "$(nproc)" --target llama-server > /dev/null
+          SERVER=$(find "$PWD/llama/build" -type f -name llama-server | head -1)
+          ls -la "$SERVER"
+          echo "SERVER=$SERVER" >> "$GITHUB_ENV"
+          echo "LIBDIR=$(dirname "$SERVER")" >> "$GITHUB_ENV"
+
+      - name: Get model
+        run: curl -fsSL --retry 3 -o model.gguf "${{ matrix.model.url }}" && ls -la model.gguf
+
+      - name: Start llama-server
+        run: |
+          export LD_LIBRARY_PATH="$LIBDIR:${LD_LIBRARY_PATH:-}"
+          nohup "$SERVER" -m model.gguf -c 16384 -t "$(nproc)" --host 127.0.0.1 --port 8080 --jinja > server.log 2>&1 &
+          for i in $(seq 1 120); do curl -fs http://127.0.0.1:8080/health && exit 0; sleep 2; done
+          cat server.log; exit 1
+
+      - name: Judge the backtest sets
+        env:
+          MODEL_NAME: ${{ matrix.model.name }}
+          SHARD: ${{ matrix.shard }}
+          SHARDS: "6"
+        run: cd experiments/discovery/local_llm && python3 run_profile_eval.py
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: llmprof-${{ matrix.model.name }}-${{ matrix.shard }}
+          path: experiments/discovery/local_llm/results/
+
+  collect:
+    needs: eval
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: dl
+      - name: Commit results to the experiment branch
+        run: |
+          mkdir -p experiments/discovery/local_llm/results
+          find dl -name '*.json' -exec cp {} experiments/discovery/local_llm/results/ \;
+          git config user.name "discovery-experiment-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/discovery/local_llm/results || true
+          if git diff --cached --quiet; then echo "no results"; exit 0; fi
+          git commit -m "experiment: local profile results (run ${{ github.run_id }})"
+          for i in 1 2 3; do git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0; sleep 5; done
+          exit 1

@@ -98,7 +98,10 @@ def _run_claude(prompt: str, schema: dict, model: str, tools: Sequence[str] = ()
     ]
     if tools:
         cmd += ["--allowedTools", ",".join(tools)]
-    env = dict(os.environ)
+    # Discovery routes yt-dlp through a SOCKS proxy (WARP) via HTTPS_PROXY; the
+    # CLI cannot use SOCKS, so drop SOCKS proxies and keep any HTTP proxy.
+    env = {k: v for k, v in os.environ.items()
+           if not (k.lower() in ("https_proxy", "http_proxy", "all_proxy") and v.lower().startswith("socks"))}
     res = subprocess.run(cmd, capture_output=True, text=True, timeout=600, env=env)
     if res.returncode != 0:
         raise RuntimeError(f"claude CLI failed: {res.stderr.strip()[-400:] or res.stdout.strip()[-400:]}")

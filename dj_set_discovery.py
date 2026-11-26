@@ -618,6 +618,15 @@ def _deduplicate_near_duplicates(
 _DEEP_SOUNDCLOUD_QUERIES = [("", 200), ("live", 100), ("radio", 100), ("mix", 100)]
 
 
+def _deep_soundcloud_enabled() -> bool:
+    setting = Config.DISCOVERY_DEEP_SOUNDCLOUD
+    if setting == "auto":
+        import discovery_review
+
+        return Config.DISCOVERY_AI_REVIEW != "off" and discovery_review.available()
+    return setting == "true"
+
+
 def _build_search_queries(search_names: Sequence[str]) -> list[str]:
     """Build the list of yt-dlp search queries for an artist and aliases."""
     n = Config.DISCOVERY_RESULTS_PER_QUERY
@@ -628,7 +637,7 @@ def _build_search_queries(search_names: Sequence[str]) -> list[str]:
 
     queries = [f"ytsearch{n}:{term}" for term in terms]
     queries += [f"scsearch{n}:{term}" for term in terms]
-    if Config.DISCOVERY_DEEP_SOUNDCLOUD:
+    if _deep_soundcloud_enabled():
         for search_name in _unique_search_names(search_names):
             for term, limit in _DEEP_SOUNDCLOUD_QUERIES:
                 queries.append(f'scsearch{limit}:"{search_name}"' + (f" {term}" if term else ""))

@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import concurrent.futures as cf
 import json
+import os
 import sys
 import time
 from dataclasses import asdict
@@ -37,7 +38,7 @@ def discover(artist: dict) -> dict:
 
 
 def main() -> int:
-    config = json.loads((HERE / "config.json").read_text())
+    config = json.loads((HERE / os.environ.get("DISCOVERY_CONFIG", "config.json")).read_text())
     with cf.ThreadPoolExecutor(max_workers=3) as pool:
         out = list(pool.map(discover, config["artists"]))
     stamp = time.strftime("%Y%m%d-%H%M%S", time.gmtime())

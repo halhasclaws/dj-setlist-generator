@@ -7,6 +7,7 @@ on:
     branches: [experiment/discovery-search]
     paths:
       - experiments/discovery/config.json
+      - experiments/discovery/config_all.json
       - experiments/discovery/search_experiment.py
       - experiments/discovery/real_discovery.py
       - .github/workflows/discovery-search-experiment.yml
@@ -54,6 +55,8 @@ jobs:
       - name: Run the real discovery search code
         env:
           HTTPS_PROXY: ${{ steps.warp.outputs.proxy }}
+          DISCOVERY_CONFIG: config_all.json
+          DISCOVERY_DEEP_SOUNDCLOUD: "true"
         run: python experiments/discovery/real_discovery.py
 
       - name: Commit results to the experiment branch

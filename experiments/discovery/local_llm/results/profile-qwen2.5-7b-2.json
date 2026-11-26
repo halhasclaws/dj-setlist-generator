@@ -1,0 +1,656 @@
+{
+"model": "qwen2.5-7b",
+"shard": 2,
+"profiles": {
+"Baby Rollen": "Baby Rollen is an electronic music DJ and producer known for his work in the UK electronic music scene, particularly in the dubstep and bass music genres. He performs at various clubs and radio stations in the UK and collaborates with artists such as Suki and Salomo.\nPerforms as: Baby Rollen\nTheir channels, stations, shows, clubs, labels, collaborators: FOLD; Keep Hush; Gottwax / Gottwood; POLIFONIC; Rinse FM; SWU.FM; Planet GRN; Mulholland; Balamii; Bloop London Radio\nOther people with the name (not this artist): Baby Rollen (musician) - UK-based, known for electronic music and collaborations with artists like Suki and Salomo.; Baby Rollen (notable) - No specific information found to differentiate this person from the musician.",
+"DJ Pipe": "Performs as: DJ Pipe",
+"Frank and Tony": "Frank & Tony are an electronic music duo known for their deep house and tech house productions. They are based in Dallas, Texas, and are active in the electronic music scenes of Dallas and beyond, often performing at local clubs and residencies.\nPerforms as: Frank and Tony, Frank & Tony\nTheir channels, stations, shows, clubs, labels, collaborators: Boiler Room; Proton; Proton LTD; Creme de la Creme; Scissor And Thread; Deep Selector; Robot Heart; The BPM Festival; NTS - Dance; The Panther Room\nOther people with the name (not this artist): Frank and Tony (Vinyl Set) - Robot Heart Residency - Oakland 2023 | channel: Robot Heart | 130 min | soundcloud - This is a different Frank & Tony based in Oakland, California, performing vinyl sets.",
+"O.Bee": "O.BEE is an electronic music artist known for his deep house and techno sets. He is active in the New York and Ibiza scenes, collaborating with artists like Tomas Station and performing at festivals and clubs such as Circoloco and ReSolute. O.BEE is also associated with the label ReSolute and has a presence on SoundCloud and YouTube.\nPerforms as: O.Bee\nTheir channels, stations, shows, clubs, labels, collaborators: themuddshow; Lost Beach; CIRCOLOCO; Dance TV; Boiler Room; ReSoluteNYC; POLIFONIC; Dimensions Festival; Waking Life; Lion's Milk; Sheik 'N' Beik Records; Rinse FM; The Lot Radio; Yoyaku Record Store; Mu Raki (Muraki Yusuke / inipi / JP); 2HeartsMusic; aR.o.Bee (2HeartsMusic); Tomas Station\nOther people with the name (not this artist): aR.o.Bee (2HeartsMusic) - This is a different artist who performs under the name aR.o.Bee and is associated with the 2HeartsMusic label, primarily active in the deep house and techno genres.",
+"Taylor Houseman": "Taylor Houseman is an electronic DJ known for his live vinyl sets. He primarily operates in the Los Angeles scene, performing at clubs like Apotheke and Mindfruit. His style is associated with house and techno music.\nPerforms as: Taylor Houseman\nTheir channels, stations, shows, clubs, labels, collaborators: Sunday Sessions LA; Apotheke; Mindfruit Stream; Planet Umbrella 2; Condition; Umbrella Nights Online; Bloom SD; Afternoon Umbrella Friends; Hokum; Class-A Deviants\nOther people with the name (not this artist): Taylor Houseman (musician) - Los Angeles, California, electronic DJ; Taylor Houseman (actor) - United Kingdom, film and television actor"
+},
+"verdicts": {
+"6f384594": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on Rinse FM"
+},
+"92b7efba": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on Rinse FM"
+},
+"58ebd3d5": {
+"v": "keep",
+"kind": "set",
+"reason": "Keep Hush Live DJ set"
+},
+"ce803008": {
+"v": "keep",
+"kind": "set",
+"reason": "FOLD DJ set"
+},
+"5efef638": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on Rinse FM"
+},
+"572cfa3d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Baby Rollen"
+},
+"b67a3bd5": {
+"v": "reject",
+"kind": "other",
+"reason": "Soundcloud link, no clear info"
+},
+"8885e1e4": {
+"v": "keep",
+"kind": "set",
+"reason": "Keep Hush Live DJ set"
+},
+"6de5a96e": {
+"v": "keep",
+"kind": "set",
+"reason": "FOLD DJ set"
+},
+"2b3df618": {
+"v": "keep",
+"kind": "set",
+"reason": "Keep Hush Live DJ set"
+},
+"cd526ac0": {
+"v": "keep",
+"kind": "set",
+"reason": "FOLD DJ set"
+},
+"0ef9fabe": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Baby Rollen"
+},
+"ce9b6a34": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"1c8d1f81": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"a181089c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"691dd658": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"7dcc7e9a": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a DJ set"
+},
+"4f3d1d03": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"4291b641": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview"
+},
+"067d58f5": {
+"v": "reject",
+"kind": "other",
+"reason": "Live set by someone else"
+},
+"1fea8465": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"77a99756": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview"
+},
+"f4f4bc47": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"b3b301fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by DJ Pipe"
+},
+"86d21c8c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"38e8202b": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by someone else"
+},
+"9e0ec90c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"3a504874": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"1cf0214b": {
+"v": "reject",
+"kind": "other",
+"reason": "Live set by someone else"
+},
+"6310de1a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview"
+},
+"d8fa5fe7": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by DJ Pipe"
+},
+"ff465bf5": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"ecf9a588": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Pipe's mix of various genres."
+},
+"972fde98": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Pipe's bailable rancheras mix."
+},
+"92fbab4c": {
+"v": "keep",
+"kind": "set",
+"reason": "BBC Radio 1 Mix"
+},
+"715a48b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"26032e96": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Set"
+},
+"8948694a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview"
+},
+"97ec7456": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"eab16b48": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"bf572733": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix"
+},
+"e9fbe1d9": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix"
+},
+"d4988e83": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast"
+},
+"e21e5dc7": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast"
+},
+"ded1cc6d": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"e41f65e8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"84e52c21": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"d8fc1562": {
+"v": "reject",
+"kind": "track",
+"reason": "Promo mix"
+},
+"51e30549": {
+"v": "reject",
+"kind": "set",
+"reason": "Vinyl set"
+},
+"199cd9e1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"e518fe0c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview"
+},
+"dd53a569": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"b2a31ca2": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"3efc598a": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"c9323559": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set in Dallas."
+},
+"5f0ec5ce": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a DJ set."
+},
+"c922d1d0": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at festival"
+},
+"554b8e03": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with collaborator"
+},
+"78f4a879": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview/talk show"
+},
+"020d041a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with collaborator"
+},
+"938ab60f": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"3dbd08bb": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"c611c115": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist for others"
+},
+"005acadf": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with collaborator"
+},
+"fd22a14e": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"8c6ea0a4": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with collaborator"
+},
+"d1128344": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"6f5e3da5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with collaborator"
+},
+"ec738370": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set"
+},
+"f0ab3fab": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview/talk show"
+},
+"4039c193": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"f14de3a3": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with collaborator"
+},
+"d42eb715": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"ba1dfd6a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview/talk show"
+},
+"2514ccc6": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"0042e2e4": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"f985cd9e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Wonder Bar"
+},
+"44f355f2": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix with O.BEE"
+},
+"864ecf3e": {
+"v": "keep",
+"kind": "talk",
+"reason": "Radio show interview"
+},
+"1a1a1106": {
+"v": "keep",
+"kind": "set",
+"reason": "Opening party set"
+},
+"225f38b9": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Set at ReSolute"
+},
+"50fd4abf": {
+"v": "keep",
+"kind": "set",
+"reason": "Dreamscape mix"
+},
+"e73e0414": {
+"v": "keep",
+"kind": "set",
+"reason": "Set at Floresta"
+},
+"e85f459c": {
+"v": "keep",
+"kind": "talk",
+"reason": "Mix with others"
+},
+"e3b562c1": {
+"v": "reject",
+"kind": "other",
+"reason": "Mizo movie recap"
+},
+"095e88ea": {
+"v": "keep",
+"kind": "talk",
+"reason": "Radio show interview"
+},
+"82cba03f": {
+"v": "keep",
+"kind": "talk",
+"reason": "Radio show interview"
+},
+"4cccbacc": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix of the week"
+},
+"6c9295eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Resolute Stays Home"
+},
+"841d454b": {
+"v": "keep",
+"kind": "talk",
+"reason": "Radio show with multiple artists"
+},
+"1bc43659": {
+"v": "keep",
+"kind": "set",
+"reason": "Circoloco Radio"
+},
+"03e4173d": {
+"v": "keep",
+"kind": "set",
+"reason": "Instore session"
+},
+"86a2c676": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set"
+},
+"4c3dee9a": {
+"v": "keep",
+"kind": "talk",
+"reason": "Radio show interview"
+},
+"d11a642f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live @ Umbrella Nights"
+},
+"c34bac6a": {
+"v": "reject",
+"kind": "other",
+"reason": "Bubble Session mix"
+},
+"a21b8f57": {
+"v": "keep",
+"kind": "set",
+"reason": "Live @ Condition"
+},
+"a0cf4241": {
+"v": "keep",
+"kind": "set",
+"reason": "Live @ Umbrella Nights Online"
+},
+"4b0ecfce": {
+"v": "keep",
+"kind": "set",
+"reason": "Live vinyl dj set"
+},
+"e268318b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live @ Apotheke"
+},
+"27a21222": {
+"v": "keep",
+"kind": "set",
+"reason": "Live @ Bloom SD"
+},
+"dd9b4ab2": {
+"v": "reject",
+"kind": "other",
+"reason": "INDECENTE session"
+},
+"6567c54e": {
+"v": "reject",
+"kind": "other",
+"reason": "Untouched Session mix"
+},
+"baff6710": {
+"v": "keep",
+"kind": "set",
+"reason": "Live @ Planet Umbrella 2"
+},
+"5fed148c": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+}
+},
+"timings": [
+{
+"profile": "Baby Rollen",
+"sec": 63.6
+},
+{
+"n": 12,
+"sec": 102.2,
+"usage": {
+"completion_tokens": 377,
+"prompt_tokens": 747,
+"total_tokens": 1124,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"profile": "DJ Pipe",
+"sec": 450.8
+},
+{
+"n": 20,
+"sec": 152.4,
+"usage": {
+"completion_tokens": 581,
+"prompt_tokens": 905,
+"total_tokens": 1486,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 2,
+"sec": 22.5,
+"usage": {
+"completion_tokens": 97,
+"prompt_tokens": 274,
+"total_tokens": 371,
+"prompt_tokens_details": {
+"cached_tokens": 197
+}
+}
+},
+{
+"profile": "Frank and Tony",
+"sec": 73.6
+},
+{
+"n": 20,
+"sec": 145.4,
+"usage": {
+"completion_tokens": 507,
+"prompt_tokens": 1137,
+"total_tokens": 1644,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 2,
+"sec": 23.3,
+"usage": {
+"completion_tokens": 95,
+"prompt_tokens": 465,
+"total_tokens": 560,
+"prompt_tokens_details": {
+"cached_tokens": 367
+}
+}
+},
+{
+"profile": "O.Bee",
+"sec": 163.5
+},
+{
+"n": 20,
+"sec": 160.3,
+"usage": {
+"completion_tokens": 569,
+"prompt_tokens": 1201,
+"total_tokens": 1770,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 18,
+"sec": 146.9,
+"usage": {
+"completion_tokens": 556,
+"prompt_tokens": 1167,
+"total_tokens": 1723,
+"prompt_tokens_details": {
+"cached_tokens": 442
+}
+}
+},
+{
+"profile": "Taylor Houseman",
+"sec": 52.2
+},
+{
+"n": 11,
+"sec": 82.8,
+"usage": {
+"completion_tokens": 306,
+"prompt_tokens": 728,
+"total_tokens": 1034,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+}
+]
+}

@@ -1,0 +1,1169 @@
+{
+"model": "qwen2.5-7b",
+"shard": 4,
+"profiles": {
+"Black Loops": "Black Loops is an electronic DJ and producer known for his deep house and house music sets. He primarily operates in Berlin and has performed at various clubs and festivals in Europe, including H\u00d6R, Hush Hush, and Bass Coast. His music is also featured on labels like Toy Tonics and Gruuv.\nPerforms as: Black Loops\nTheir channels, stations, shows, clubs, labels, collaborators: H\u00d6R BERLIN; Keep Hush; Balamii; F\u00eate; Music is 4 Lovers; Djoon; Bangkok Community Radio; Paradiso Pop-Up Club; Sisyphos; Watergate; Standard Time Toronto; Toy Tonics; Gruuv; LINEA; Neovinyl Recordings; Shall Not Fade; It's Deep; Ben Gomori / Turned On; Kono Vidovic; Rinse FM; Shadow Child; Data Transmission Radio; Sunshine 101 Radio Media; Gomma; Gabu Records; eZo; QUERICO TOKYO; Parkett; Goutier; Buongiorno Classic\nOther people with the name (not this artist): Black Loops (Toy Tonics / Gruuv, It) - This Black Loops is associated with the Toy Tonics and Gruuv labels, based in Berlin, Germany.; Black Loops (Deep Town Jozi) - This Black Loops is based in Johannesburg, South Africa, and is known for his deep house sets.",
+"Desert Sound Colony": "Desert Sound Colony is an electronic DJ and producer known for their deep house and tech house sounds. They are based in London and are associated with the UK electronic music scene, collaborating with various DJs and producers and performing at notable clubs and festivals.\nPerforms as: Desert Sound Colony\nTheir channels, stations, shows, clubs, labels, collaborators: Holding Hands Records; PIRATE.COM; Bloop London Radio; Junction 2 Festival; LINEA; CDR; THUMP; Codex Natur\u00e6; Greg May; Adam Pits; Baby Roll\u00e9n; Rinse FM; DTRH; FH; Touching Bases; Le Protocole Radio; Slack's; Casino Times; Pressure Dome; Mr. Redley\nOther people with the name (not this artist): Desert Sound Colony (musician) - Based in London, known for their deep house and tech house sounds, active in the UK electronic music scene.; Desert Sound Colony (podcaster) - Not related to the musician, this name is used for a podcast channel.",
+"Gene on Earth": "Gene On Earth is an electronic DJ and producer known for his deep house and tech house sounds. He is active in the electronic music scene, performing at various clubs and festivals, and collaborating with other notable DJs and producers. Gene On Earth is based in Europe, particularly in cities like Brussels and Amsterdam.\nPerforms as: Gene on Earth\nTheir channels, stations, shows, clubs, labels, collaborators: The Lot Radio; themuddshow; Dimensions Festival; Oli Burns; Club Space Miami; Love International Festival; Fuse Brussels; After Caposile; Wildeburg; dekmantel; Gray Area; Dimensions Festival; OBSESSION RADIOSHOW; Boiler Room; MAHAR; Resident Advisor; VBX; Wildeburg; Club Chinois; ECLUD\nOther people with the name (not this artist): Gene On Earth (producer) - Based in the Netherlands, known for his tech house and deep house productions.; Gene On Earth (DJ) - Based in Belgium, known for his live DJ sets and collaborations with other DJs.",
+"Pierre Marty": "Pierre Marty is an electronic DJ and producer known for his live sets and performances. He is associated with the Enclave rooftop series in Rome and has been featured on channels like Esprit Occitanie and Curious?. His music is primarily electronic and he is active in the electronic music scene, particularly in Rome and other parts of Italy.\nPerforms as: Pierre Marty\nTheir channels, stations, shows, clubs, labels, collaborators: Enclave Rooftop Series; Rooftop Set in Rome; Esprit Occitanie; Curious?; Curiosity Freestyle 2 (LIVE ACT)\nOther people with the name (not this artist): Jean Pierre Marty (1981 performance) - This is a different person, a pianist who performed in 1981 with the Orchestra Scarlatti Rai.; Pierre Marty (TV5MONDE) - This is likely a different person, possibly a news anchor or presenter for TV5MONDE.",
+"Van Bellen": "Joost van Bellen is a Dutch electronic DJ and producer known for his work in house and trance music. He has performed in various clubs and festivals in Amsterdam and has been associated with the Dutch electronic music scene since the 1990s.\nPerforms as: Van Bellen\nTheir channels, stations, shows, clubs, labels, collaborators: RoXY Amsterdam; Holland Festival; 3voor12; Legendary DJ Sets; Classic DJ Sets; MARY GO WILD; TM Radio; FRISKY Radio; Powapete; Classic Windsurf Movies; Windsurf Podcast; Van Bellen; Joost van Bellen\nOther people with the name (not this artist): Paul van Bellen - A windsurfer and content creator, known for his classic windsurf movies and podcasts.; Van Bellen - A DJ and producer, known for his electronic music sets and collaborations in the Dutch electronic music scene."
+},
+"verdicts": {
+"45d385a8": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on Neovinyl Recordings"
+},
+"caea1e0f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Low Steppa"
+},
+"985f3e78": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist for someone else's mix"
+},
+"92e3e653": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Harrison BDP"
+},
+"0bc37207": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set at Djoon"
+},
+"d556ab4f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Black Loops"
+},
+"1ad5a9f9": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast with Black Loops"
+},
+"78ecb9a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast with Black Loops"
+},
+"bde6a691": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast with Black Loops"
+},
+"fb746ff8": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on Neovinyl Recordings"
+},
+"1d10f679": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with SlothBoogie"
+},
+"d2661bb6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Eekoethee"
+},
+"f8064ad4": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Sisyphos"
+},
+"5d48c6eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast with Black Loops"
+},
+"6d3a0f79": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast with Black Loops"
+},
+"b7f7fc2d": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Djoon"
+},
+"b282d22f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Future date, not a set"
+},
+"8fe34abc": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Ba Dum Tish"
+},
+"7f61e913": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Ben Gomori / Turned On"
+},
+"c6ffd4c1": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Puur Festival"
+},
+"f11963a9": {
+"v": "keep",
+"kind": "other",
+"reason": "Guest mix, not solo set."
+},
+"2769c831": {
+"v": "keep",
+"kind": "other",
+"reason": "Multiple artists, not solo set."
+},
+"21a63474": {
+"v": "keep",
+"kind": "other",
+"reason": "Special guest, not solo set."
+},
+"9677badd": {
+"v": "keep",
+"kind": "other",
+"reason": "Podcast, not solo set."
+},
+"5f7bf37d": {
+"v": "keep",
+"kind": "other",
+"reason": "Mix, not solo set."
+},
+"402ad61b": {
+"v": "keep",
+"kind": "other",
+"reason": "Live at venue, not solo set."
+},
+"09284bcd": {
+"v": "keep",
+"kind": "other",
+"reason": "Mix, not solo set."
+},
+"5b562c8d": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B, not solo set."
+},
+"83c6dca0": {
+"v": "keep",
+"kind": "other",
+"reason": "Live set, not solo set."
+},
+"c10ad308": {
+"v": "keep",
+"kind": "other",
+"reason": "Radio show, not solo set."
+},
+"04f6c02f": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B, not solo set."
+},
+"6a99be30": {
+"v": "keep",
+"kind": "other",
+"reason": "Live at festival, not solo set."
+},
+"f8ed1ff9": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B, not solo set."
+},
+"e6be7294": {
+"v": "reject",
+"kind": "other",
+"reason": "Not solo set."
+},
+"6c8a6389": {
+"v": "keep",
+"kind": "other",
+"reason": "Live at festival, not solo set."
+},
+"173abac7": {
+"v": "keep",
+"kind": "other",
+"reason": "Live set, not solo set."
+},
+"77ab10a4": {
+"v": "keep",
+"kind": "other",
+"reason": "Mix, not solo set."
+},
+"dbeeeca4": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B, not solo set."
+},
+"2eaee7b3": {
+"v": "keep",
+"kind": "other",
+"reason": "Live set, not solo set."
+},
+"d7070fb0": {
+"v": "keep",
+"kind": "other",
+"reason": "Live set, not solo set."
+},
+"1ad2a178": {
+"v": "keep",
+"kind": "set",
+"reason": "Berlin radio show"
+},
+"6d219f97": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B mix"
+},
+"7e45b08a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Future date, not available"
+},
+"7d34b3af": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set"
+},
+"7ac4d5b3": {
+"v": "reject",
+"kind": "set",
+"reason": "Not by this artist"
+},
+"3365ff50": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set"
+},
+"0329f3cc": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Shadow Child"
+},
+"37187e10": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"4de6199f": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist, not a set"
+},
+"25d83dcf": {
+"v": "keep",
+"kind": "set",
+"reason": "Brussels DJ set"
+},
+"19401777": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist, not a set"
+},
+"e2155220": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist, not a set"
+},
+"cdaf2d08": {
+"v": "keep",
+"kind": "set",
+"reason": "Deep House mix"
+},
+"5d62a5cd": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"57c37415": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set"
+},
+"1e5a4663": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"152d268b": {
+"v": "keep",
+"kind": "set",
+"reason": "BHM mix"
+},
+"c141339c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"3dcff972": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Koffain"
+},
+"02310061": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist, not a set"
+},
+"9f59d0c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Guestmix by Black Loops"
+},
+"8bb1c4e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Guestmix by Black Loops"
+},
+"cfe5f51c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Music is 4 Lovers"
+},
+"fd085236": {
+"v": "reject",
+"kind": "other",
+"reason": "B2b mix, not solo"
+},
+"50046ae7": {
+"v": "reject",
+"kind": "other",
+"reason": "B2b mix, not solo"
+},
+"b57eac95": {
+"v": "keep",
+"kind": "set",
+"reason": "Hype Mix by Black Loops"
+},
+"c160f86c": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix by Black Loops"
+},
+"58ea368a": {
+"v": "keep",
+"kind": "set",
+"reason": "B2b mix by Black Loops"
+},
+"c68f647a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at djoonclub"
+},
+"2b83f47b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast, not DJ set"
+},
+"9f42e623": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sisyphos"
+},
+"273efb0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sisyphos"
+},
+"6046a7ab": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Music is 4 Lovers"
+},
+"744c2b2b": {
+"v": "keep",
+"kind": "set",
+"reason": "Mega Mix by Black Loops"
+},
+"316283f9": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast, not DJ set"
+},
+"9c389c1b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Djoon"
+},
+"5fd026a9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist, not DJ set"
+},
+"338b001e": {
+"v": "keep",
+"kind": "set",
+"reason": "B2b mix by Black Loops"
+},
+"9705e268": {
+"v": "reject",
+"kind": "other",
+"reason": "Live recording, not solo"
+},
+"a4d0f34e": {
+"v": "keep",
+"kind": "set",
+"reason": "B2b mix by Black Loops"
+},
+"a0feb041": {
+"v": "keep",
+"kind": "other",
+"reason": "Collaborative set, not solo."
+},
+"95c51bc0": {
+"v": "keep",
+"kind": "other",
+"reason": "All night long, not solo."
+},
+"46eab399": {
+"v": "keep",
+"kind": "other",
+"reason": "Live set at Stereo Bar."
+},
+"46093b20": {
+"v": "keep",
+"kind": "other",
+"reason": "DJ Set at Bass Coast."
+},
+"cf41d8f9": {
+"v": "keep",
+"kind": "other",
+"reason": "Traxsource live mix."
+},
+"fbf46082": {
+"v": "keep",
+"kind": "other",
+"reason": "Live set by Black Loops."
+},
+"69367330": {
+"v": "keep",
+"kind": "other",
+"reason": "Live set by Black Loops."
+},
+"0c9e6713": {
+"v": "keep",
+"kind": "other",
+"reason": "Instore session."
+},
+"ccc104d4": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix with other artists."
+},
+"24dbd067": {
+"v": "reject",
+"kind": "other",
+"reason": "Guest mix, not solo."
+},
+"6623b421": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast, not solo."
+},
+"ee2d6098": {
+"v": "keep",
+"kind": "other",
+"reason": "Live set on Rinse FM."
+},
+"08b353ec": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast, not solo."
+},
+"f6bcef92": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set for Junction 2 Festival"
+},
+"e1bd4534": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Adam Pits"
+},
+"9668e3f3": {
+"v": "keep",
+"kind": "set",
+"reason": "Further Future mix"
+},
+"70624d82": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Set for Pirate Live"
+},
+"7132e4c2": {
+"v": "keep",
+"kind": "set",
+"reason": "DIM168 mix"
+},
+"1fca4bfd": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with multiple artists"
+},
+"a5455d1a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with multiple artists"
+},
+"7f50f1af": {
+"v": "keep",
+"kind": "set",
+"reason": "XLR8R+ Radio show"
+},
+"e33dd8b4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with multiple artists"
+},
+"442c3bc3": {
+"v": "keep",
+"kind": "set",
+"reason": "Self-Portrait mix"
+},
+"04dc7e77": {
+"v": "keep",
+"kind": "set",
+"reason": "Magnetic Mag mix"
+},
+"b5fcdf03": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM set"
+},
+"5d53cee2": {
+"v": "keep",
+"kind": "set",
+"reason": "DTRH set"
+},
+"49bd2658": {
+"v": "keep",
+"kind": "set",
+"reason": "DHA mix"
+},
+"4eeee2fd": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM set"
+},
+"f29798c7": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM set"
+},
+"637afc5f": {
+"v": "keep",
+"kind": "set",
+"reason": "Walk Through mix"
+},
+"2f978f3c": {
+"v": "keep",
+"kind": "set",
+"reason": "Codex Naturae mix"
+},
+"f8212e31": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"3dc03315": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"af338bba": {
+"v": "keep",
+"kind": "other",
+"reason": "b2b with others"
+},
+"59de86b9": {
+"v": "keep",
+"kind": "other",
+"reason": "live stream"
+},
+"7ad7272c": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"8875f877": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast interview"
+},
+"565821fc": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview"
+},
+"0aedbdba": {
+"v": "keep",
+"kind": "other",
+"reason": "live mix"
+},
+"88dc1cad": {
+"v": "keep",
+"kind": "talk",
+"reason": "podcast interview"
+},
+"86502462": {
+"v": "keep",
+"kind": "talk",
+"reason": "podcast interview"
+},
+"b18d8695": {
+"v": "keep",
+"kind": "talk",
+"reason": "podcast interview"
+},
+"cebf8a61": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"ee083a06": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"24e5f9b5": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast interview"
+},
+"2a53b7d1": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast interview"
+},
+"c00e1824": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"cec329ba": {
+"v": "keep",
+"kind": "other",
+"reason": "mix"
+},
+"dc697030": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on The Lot Radio"
+},
+"c9eef617": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Club Space Miami"
+},
+"a3d2a365": {
+"v": "reject",
+"kind": "other",
+"reason": "Namesake, not a set"
+},
+"3a1e9041": {
+"v": "keep",
+"kind": "set",
+"reason": "Coast 2 Coast live set"
+},
+"cfc212ac": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview, not a set"
+},
+"842dcf2e": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room set"
+},
+"9ee318d6": {
+"v": "keep",
+"kind": "set",
+"reason": "Exclusive set for OCHO"
+},
+"2696e4f3": {
+"v": "keep",
+"kind": "set",
+"reason": "VBX podcast"
+},
+"7f41ed66": {
+"v": "keep",
+"kind": "set",
+"reason": "themuddshow set"
+},
+"10de0b88": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on The Lot Radio"
+},
+"40724818": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set from Dimensions Festival"
+},
+"20fac57a": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"f68347fe": {
+"v": "reject",
+"kind": "other",
+"reason": "Namesake, not a set"
+},
+"b02c115e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist, not a set"
+},
+"ae972018": {
+"v": "keep",
+"kind": "set",
+"reason": "Dimensions Festival set"
+},
+"b7b9747c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview, not a set"
+},
+"6887d563": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a set"
+},
+"7a89a5a4": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a set"
+},
+"f0fe8d65": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a set"
+},
+"7365f61b": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"cce49a66": {
+"v": "keep",
+"kind": "set",
+"reason": "Opening set by Gene On Earth"
+},
+"b718a06b": {
+"v": "keep",
+"kind": "set",
+"reason": "Solo set by Gene On Earth"
+},
+"c7f3bb68": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set by Gene On Earth"
+},
+"93813adb": {
+"v": "keep",
+"kind": "set",
+"reason": "Solo set by Gene On Earth"
+},
+"f8a30311": {
+"v": "keep",
+"kind": "set",
+"reason": "Solo set by Gene On Earth"
+},
+"ea918579": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set in Rome"
+},
+"08e46d66": {
+"v": "reject",
+"kind": "track",
+"reason": "Pianist, not DJ"
+},
+"abf29969": {
+"v": "reject",
+"kind": "talk",
+"reason": "Psychology lecture"
+},
+"3baa6f99": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set for radio show"
+},
+"f96b1ab9": {
+"v": "reject",
+"kind": "talk",
+"reason": "TV news interview"
+},
+"5e3953c0": {
+"v": "reject",
+"kind": "track",
+"reason": "Pianist, not DJ"
+},
+"f5449280": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Paul van Bellen, windsurfer"
+},
+"19c58a67": {
+"v": "keep",
+"kind": "set",
+"reason": "Joost van Bellen & Dj Remy mix"
+},
+"c2cefc30": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with The Rad Pack"
+},
+"55bdfb0e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Amsterdam Open Air"
+},
+"6ee906e7": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sensation White"
+},
+"27721c88": {
+"v": "keep",
+"kind": "set",
+"reason": "Solo set at Rauw"
+},
+"f25f478c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast, not music"
+},
+"91ca32ae": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Paul van Bellen, windsurfer"
+},
+"42bf87e4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Free 4 you!"
+},
+"9e7f4c79": {
+"v": "keep",
+"kind": "set",
+"reason": "RoXY Amsterdam, 1996"
+},
+"8f138a97": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Paul van Bellen, windsurfer"
+},
+"8ec5348e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Roxy Amsterdam, 1990"
+},
+"19e2e229": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Rauw, 2014"
+},
+"eaa19ca2": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix of tracks by others"
+},
+"9d95a07f": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Paul van Bellen, windsurfer"
+},
+"1206cccb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at 3FM"
+},
+"57b29bb3": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at RoXY Amsterdam, 1995"
+},
+"fe3712b5": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Paul van Bellen, windsurfer"
+},
+"371b5bca": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix of tracks by others"
+},
+"77ef2616": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"1b7628b8": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at RoXY Amsterdam"
+},
+"418882e1": {
+"v": "reject",
+"kind": "other",
+"reason": "Collaboration, not solo"
+},
+"3e03009b": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix on FRISKY Radio"
+},
+"f419d8f8": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a set"
+},
+"6b51652e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"efc67a7a": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at RoXY Amsterdam"
+},
+"892d855a": {
+"v": "reject",
+"kind": "other",
+"reason": "Festival performance"
+},
+"64d80bcb": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at SPEEDFREAX"
+},
+"2a137184": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix with others"
+},
+"43907e68": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"904c23a0": {
+"v": "keep",
+"kind": "set",
+"reason": "Pride special"
+},
+"20cb3068": {
+"v": "keep",
+"kind": "set",
+"reason": "Melkweg Marathon"
+},
+"2ae4144b": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast interview"
+},
+"74ff3c76": {
+"v": "reject",
+"kind": "other",
+"reason": "Classic windsurf movie"
+},
+"847c31c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Free Your Mind Festival"
+},
+"675a4cc1": {
+"v": "keep",
+"kind": "set",
+"reason": "Marcello & Joost van Bellen"
+},
+"b24fce17": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix with others"
+},
+"cfdaf04d": {
+"v": "keep",
+"kind": "set",
+"reason": "Altruism Show on TM Radio"
+},
+"92071b83": {
+"v": "keep",
+"kind": "set",
+"reason": "Dance Department with guest"
+}
+},
+"timings": [
+{
+"profile": "Black Loops",
+"sec": 266.4
+},
+{
+"n": 20,
+"sec": 163.3,
+"usage": {
+"completion_tokens": 658,
+"prompt_tokens": 1177,
+"total_tokens": 1835,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 146.3,
+"usage": {
+"completion_tokens": 658,
+"prompt_tokens": 1227,
+"total_tokens": 1885,
+"prompt_tokens_details": {
+"cached_tokens": 496
+}
+}
+},
+{
+"n": 20,
+"sec": 140.1,
+"usage": {
+"completion_tokens": 624,
+"prompt_tokens": 1239,
+"total_tokens": 1863,
+"prompt_tokens_details": {
+"cached_tokens": 496
+}
+}
+},
+{
+"n": 20,
+"sec": 151.8,
+"usage": {
+"completion_tokens": 674,
+"prompt_tokens": 1302,
+"total_tokens": 1976,
+"prompt_tokens_details": {
+"cached_tokens": 496
+}
+}
+},
+{
+"n": 13,
+"sec": 89.7,
+"usage": {
+"completion_tokens": 423,
+"prompt_tokens": 961,
+"total_tokens": 1384,
+"prompt_tokens_details": {
+"cached_tokens": 496
+}
+}
+},
+{
+"profile": "Desert Sound Colony",
+"sec": 125.8
+},
+{
+"n": 20,
+"sec": 138.2,
+"usage": {
+"completion_tokens": 558,
+"prompt_tokens": 1024,
+"total_tokens": 1582,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 15,
+"sec": 97.6,
+"usage": {
+"completion_tokens": 440,
+"prompt_tokens": 940,
+"total_tokens": 1380,
+"prompt_tokens_details": {
+"cached_tokens": 404
+}
+}
+},
+{
+"profile": "Gene on Earth",
+"sec": 104.2
+},
+{
+"n": 20,
+"sec": 139.9,
+"usage": {
+"completion_tokens": 561,
+"prompt_tokens": 1085,
+"total_tokens": 1646,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 5,
+"sec": 40.2,
+"usage": {
+"completion_tokens": 209,
+"prompt_tokens": 585,
+"total_tokens": 794,
+"prompt_tokens_details": {
+"cached_tokens": 401
+}
+}
+},
+{
+"profile": "Pierre Marty",
+"sec": 50.8
+},
+{
+"n": 6,
+"sec": 56.7,
+"usage": {
+"completion_tokens": 189,
+"prompt_tokens": 654,
+"total_tokens": 843,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"profile": "Van Bellen",
+"sec": 118.2
+},
+{
+"n": 20,
+"sec": 163.0,
+"usage": {
+"completion_tokens": 645,
+"prompt_tokens": 1170,
+"total_tokens": 1815,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 19,
+"sec": 137.9,
+"usage": {
+"completion_tokens": 599,
+"prompt_tokens": 1140,
+"total_tokens": 1739,
+"prompt_tokens_details": {
+"cached_tokens": 378
+}
+}
+}
+]
+}

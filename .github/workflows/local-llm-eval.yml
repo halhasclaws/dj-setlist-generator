@@ -36,19 +36,16 @@ jobs:
       - name: Machine
         run: nproc; free -g
 
-      - name: Get llama.cpp
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Build llama.cpp
         run: |
           set -euo pipefail
-          mkdir -p llama && cd llama
-          gh release download --repo ggml-org/llama.cpp --pattern '*-bin-ubuntu-x64.zip' --pattern '*-bin-ubuntu-x64.tar.gz' || true
-          ls -la
-          for f in *.zip; do [ -e "$f" ] && unzip -q "$f"; done
-          for f in *.tar.gz; do [ -e "$f" ] && tar xzf "$f"; done
-          SERVER=$(find . -type f -name llama-server | head -1)
-          echo "SERVER=$PWD/${SERVER#./}" >> "$GITHUB_ENV"
-          echo "LIBDIR=$(dirname "$PWD/${SERVER#./}")" >> "$GITHUB_ENV"
+          git clone --depth 1 https://github.com/ggml-org/llama.cpp llama
+          cmake -S llama -B llama/build -DGGML_NATIVE=ON -DLLAMA_CURL=OFF -DLLAMA_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release > /dev/null
+          cmake --build llama/build -j "$(nproc)" --target llama-server > /dev/null
+          SERVER=$(find "$PWD/llama/build" -type f -name llama-server | head -1)
+          ls -la "$SERVER"
+          echo "SERVER=$SERVER" >> "$GITHUB_ENV"
+          echo "LIBDIR=$(dirname "$SERVER")" >> "$GITHUB_ENV"
 
       - name: Get model
         run: curl -fsSL --retry 3 -o model.gguf "${{ matrix.model.url }}" && ls -la model.gguf

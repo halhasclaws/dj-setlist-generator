@@ -89,6 +89,13 @@ class DjSetDiscoveryDedupTests(unittest.TestCase):
         self.assertTrue(any('"Motor City Drum Ensemble"' in query for query in queries))
         self.assertTrue(any('"Danilo Plessow"' in query for query in queries))
 
+    def test_build_search_queries_adds_deep_soundcloud_searches(self):
+        queries = _build_search_queries(["Fort Romeau"])
+
+        self.assertIn('scsearch200:"Fort Romeau"', queries)
+        self.assertIn('scsearch100:"Fort Romeau" live', queries)
+        self.assertFalse(any(q.startswith("ytsearch") and "100" in q.split(":")[0] for q in queries))
+
     def test_near_duplicate_dedup_strips_alias_tokens(self):
         discovered_sets = [
             DiscoveredSet(

@@ -26,6 +26,10 @@ class Config:
     DISCOVERY_RESULTS_PER_QUERY = int(os.getenv('DISCOVERY_RESULTS_PER_QUERY', '20'))
     MIN_SET_DURATION_MINUTES = int(os.getenv('MIN_SET_DURATION_MINUTES', '20'))
     MAX_SETS_PER_ARTIST = int(os.getenv('MAX_SETS_PER_ARTIST', '0'))  # 0 = no limit
+    # Extra name-only SoundCloud searches that look past the first 20 results.
+    DISCOVERY_DEEP_SOUNDCLOUD = os.getenv('DISCOVERY_DEEP_SOUNDCLOUD', 'true').lower() == 'true'
+    # AI review of discovery candidates: auto = run when the claude CLI is installed, off = never.
+    DISCOVERY_AI_REVIEW = os.getenv('DISCOVERY_AI_REVIEW', 'auto').lower()
     
     # Feature Toggles
     ENABLE_SPOTIFY = os.getenv('ENABLE_SPOTIFY', 'true').lower() == 'true'

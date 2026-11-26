@@ -1,0 +1,1921 @@
+{
+"model": "qwen3-4b",
+"shard": 0,
+"verdicts": {
+"0d66e26a": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Ext x Refinery, not solo set"
+},
+"cf11c6b3": {
+"v": "unsure",
+"kind": "other",
+"reason": "No clear set context or duration"
+},
+"9a66b001": {
+"v": "keep",
+"kind": "set",
+"reason": "Live club set with date and location"
+},
+"b29afccf": {
+"v": "keep",
+"kind": "set",
+"reason": "Space cast is a live show"
+},
+"89bce906": {
+"v": "keep",
+"kind": "set",
+"reason": "Space cast is a live show"
+},
+"709be3a2": {
+"v": "keep",
+"kind": "set",
+"reason": "Festival set at Dimensions"
+},
+"98bac0ac": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with title and date"
+},
+"40351e84": {
+"v": "keep",
+"kind": "set",
+"reason": "Closing set at NUDE Berlin"
+},
+"29b33d48": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix with multiple artists, not solo"
+},
+"457d0eca": {
+"v": "reject",
+"kind": "other",
+"reason": "Radio mini mix with multiple artists"
+},
+"6472f47e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live from Fabric with date"
+},
+"717422b5": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show, regular broadcast"
+},
+"da700015": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show, regular broadcast"
+},
+"bbb83f04": {
+"v": "keep",
+"kind": "set",
+"reason": "Fur:ther Sessions is a live show"
+},
+"5e970df1": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show, regular broadcast"
+},
+"b9636ecd": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Bradley Zero"
+},
+"4877eca2": {
+"v": "keep",
+"kind": "set",
+"reason": "Ambient sauna live set"
+},
+"cdf1a8ad": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show, regular broadcast"
+},
+"1105ae4d": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show, regular broadcast"
+},
+"23e881c6": {
+"v": "keep",
+"kind": "set",
+"reason": "Do\u00fcbious live set"
+},
+"22088714": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show, solo set"
+},
+"96385471": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B live set at Eastern Bloc"
+},
+"2288963c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Orb Podcast interview"
+},
+"1c6990ed": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with others at DJ Mag HQ"
+},
+"76aa1de3": {
+"v": "keep",
+"kind": "set",
+"reason": "Spotlight mix by Adam Pits"
+},
+"81051d6d": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show, solo"
+},
+"c75c6480": {
+"v": "keep",
+"kind": "set",
+"reason": "Live recording in Bengaluru"
+},
+"0be50397": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM live set"
+},
+"f5b5827c": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B live at Dimensions"
+},
+"14d0168c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Rinse FM show with others, not solo"
+},
+"3a3c68be": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM solo set"
+},
+"663675b5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Dimensions 2022"
+},
+"4eb5cdeb": {
+"v": "reject",
+"kind": "talk",
+"reason": "One Records podcast interview"
+},
+"1f5be378": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM solo set"
+},
+"8897fd1c": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM set with Aletha"
+},
+"05636971": {
+"v": "keep",
+"kind": "set",
+"reason": "Limbo Radio show, Adam Pits hosts"
+},
+"02001ab7": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM solo set"
+},
+"4fc690f5": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM solo set"
+},
+"040d6930": {
+"v": "keep",
+"kind": "set",
+"reason": "Space Cadets show with Lisene"
+},
+"aaa98af8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at KAUZ Zurich"
+},
+"1dab346d": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Mix series with his tracks, not his own set"
+},
+"32f379d9": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM monthly DJ set"
+},
+"495a9142": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Nowadays"
+},
+"45b43f30": {
+"v": "keep",
+"kind": "set",
+"reason": "Set at The Lab LDN"
+},
+"7765a8b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM monthly show"
+},
+"2aa5033c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not music set"
+},
+"5227c63a": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Ciel"
+},
+"d456987c": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with DJ G"
+},
+"873e453e": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM monthly show"
+},
+"efbdebe6": {
+"v": "reject",
+"kind": "other",
+"reason": "Compilation mix, not live or DJ set"
+},
+"a3e931fc": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with DJ set content"
+},
+"75fda636": {
+"v": "keep",
+"kind": "set",
+"reason": "Sonder London DJ set"
+},
+"aa45468b": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Jovonn, not solo set"
+},
+"dc6d7847": {
+"v": "reject",
+"kind": "other",
+"reason": "Feat. Kink, not solo set"
+},
+"20f09f5f": {
+"v": "reject",
+"kind": "other",
+"reason": "Feat. Kink, not solo set"
+},
+"69282cee": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview on roots and creativity"
+},
+"7d1a337a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at The Lot Radio NYC"
+},
+"f204c563": {
+"v": "reject",
+"kind": "other",
+"reason": "1993 mix, not live set"
+},
+"2d315921": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix titled 'House Masters'"
+},
+"dd4ae2b2": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview on roots and creativity"
+},
+"efe86e8c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Leeds birthday party"
+},
+"4fd209cc": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show segment"
+},
+"6848a9a1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Garito Cafe Palma"
+},
+"b531685d": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Garito Cafe"
+},
+"c3f263f1": {
+"v": "reject",
+"kind": "other",
+"reason": "SWOOSE loves, not DJ set"
+},
+"bb1fbafa": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix titled 'LWE Mix'"
+},
+"fc185717": {
+"v": "keep",
+"kind": "set",
+"reason": "REXCAST DJ set"
+},
+"0cdc455c": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set at Southport"
+},
+"422b1a6a": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B house set at event"
+},
+"84e0a15d": {
+"v": "keep",
+"kind": "set",
+"reason": "Opening mix, likely live"
+},
+"22010891": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix titled 'Back to Basics' by Chez Damier, likely a DJ set"
+},
+"088a6f1f": {
+"v": "keep",
+"kind": "set",
+"reason": "Livingroom session with Chez Damier, live performance"
+},
+"52fb1666": {
+"v": "keep",
+"kind": "set",
+"reason": "Livingroom session with Chez Damier, live performance"
+},
+"ff0ca833": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a music performance"
+},
+"a4328383": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set from 1994, clearly a performance"
+},
+"1bc98761": {
+"v": "reject",
+"kind": "other",
+"reason": "Set with Chez Damier as guest, not solo performance"
+},
+"f4269a48": {
+"v": "reject",
+"kind": "other",
+"reason": "Group set with multiple artists, not Chez Damier solo"
+},
+"855495d1": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a performance"
+},
+"c61af2ab": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with dESUS, performance by Chez Damier"
+},
+"2e056989": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a performance"
+},
+"340842cb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at festival, performance by Chez Damier"
+},
+"17b50e75": {
+"v": "reject",
+"kind": "other",
+"reason": "Side B of a recording, incomplete and not full set"
+},
+"f3112d2d": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Club La Gare, performance by Chez Damier"
+},
+"82c7165f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with dESUS, performance by Chez Damier"
+},
+"d865f0d1": {
+"v": "reject",
+"kind": "other",
+"reason": "Kai Galactic's set, Chez Damier not performing"
+},
+"05434e90": {
+"v": "keep",
+"kind": "set",
+"reason": "Live radio set with Chez Damier, performance"
+},
+"adaac28c": {
+"v": "reject",
+"kind": "other",
+"reason": "Collaborative mix, not a solo DJ set"
+},
+"604333af": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview on healing power of music"
+},
+"7be40dc9": {
+"v": "reject",
+"kind": "talk",
+"reason": "Academy talk, not a performance"
+},
+"ac7f9946": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set at FREAKIN nightclub"
+},
+"0e6c5ded": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix title and channel suggest DJ mix by Chez Damier"
+},
+"68b38a59": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at OBSESSION Strings Of Life 1993"
+},
+"91faf38d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a music set"
+},
+"649da9d5": {
+"v": "keep",
+"kind": "set",
+"reason": "RA feature of Chez Damier's set"
+},
+"9229d4d9": {
+"v": "reject",
+"kind": "other",
+"reason": "Feature with Perfecto Groove, not Chez Damier's solo set"
+},
+"ee0c2db8": {
+"v": "reject",
+"kind": "other",
+"reason": "Group set with multiple artists, not solo Chez Damier"
+},
+"a4dcd8bf": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set dated 12.2020"
+},
+"bdca08e1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at The Lot Radio 2025"
+},
+"1631528b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Corsica Studios, NTS"
+},
+"d7493c6b": {
+"v": "reject",
+"kind": "other",
+"reason": "Named after artist but not by them"
+},
+"451017a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set on THUMP Sessions"
+},
+"0a398a06": {
+"v": "keep",
+"kind": "set",
+"reason": "Live B2B at NTS Radio"
+},
+"e397588f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live B2B at NTS Radio"
+},
+"ece29212": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by AllyAl, not by Floating Points"
+},
+"4883529a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Dimensions Festival"
+},
+"c2692e0e": {
+"v": "reject",
+"kind": "other",
+"reason": "Bonus mix, not live set"
+},
+"9b3f8ef7": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room live set with friends"
+},
+"c80f5d38": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix on WKCR with Charlie King"
+},
+"8b8a00fe": {
+"v": "reject",
+"kind": "other",
+"reason": "Multiple artists, not solo set"
+},
+"82404041": {
+"v": "reject",
+"kind": "other",
+"reason": "Multiple artists, not solo set"
+},
+"cb609cf9": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at DGTL with others"
+},
+"155df719": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by SOUZZO, not by Floating Points"
+},
+"1f9a55c2": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by SOUZZO, not by Floating Points"
+},
+"c8f65654": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Plastic People"
+},
+"0dd62c8f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Plastic People"
+},
+"c923bf84": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Mode Festival Sydney"
+},
+"211dd4cd": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set in Japan"
+},
+"c1640a04": {
+"v": "keep",
+"kind": "set",
+"reason": "Essential Mix by Floating Points"
+},
+"0d350896": {
+"v": "reject",
+"kind": "namesake",
+"reason": "mentions staff and band; not Floating Points performing"
+},
+"0e2e4b5a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live in LA with Floating Points"
+},
+"87339b4a": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM b2b with Spencer"
+},
+"a013af90": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM b2b with Spencer"
+},
+"1f74bc25": {
+"v": "keep",
+"kind": "set",
+"reason": "Live closing set at Glastonbury"
+},
+"9620f864": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at The Lot Radio"
+},
+"048bc158": {
+"v": "reject",
+"kind": "other",
+"reason": "Live with Jamie xx, Daphni; not solo Floating Points"
+},
+"a949dfbc": {
+"v": "keep",
+"kind": "set",
+"reason": "Live b2b with Four Tet"
+},
+"fc4b2ebe": {
+"v": "reject",
+"kind": "other",
+"reason": "Floating Points on Rinse FM; not a DJ set"
+},
+"7c48b3d0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Far Away 2019"
+},
+"fd902dca": {
+"v": "reject",
+"kind": "other",
+"reason": "Mixed set with others; not Floating Points solo"
+},
+"426f808c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live on KEXP"
+},
+"b30c26a6": {
+"v": "reject",
+"kind": "other",
+"reason": "Boiler Room feature; not a set by Floating Points"
+},
+"3e7848d0": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Caribou and Palms Trax"
+},
+"5cc205c6": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sunflower Gala"
+},
+"c4d746e9": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Brilliant Corners"
+},
+"0bb8f88a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with multiple artists; not a music set"
+},
+"8c4eb1ba": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at The Shrine"
+},
+"cc460294": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at ADE HQ"
+},
+"cef02602": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B at Glastonbury"
+},
+"7a178f3f": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Named after Floating Points but features Caribou, not by Floating Points"
+},
+"f839b736": {
+"v": "keep",
+"kind": "set",
+"reason": "Fabric Mix by Floating Points"
+},
+"5b8bf208": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Set by Medina DJ, not Floating Points"
+},
+"efff72db": {
+"v": "reject",
+"kind": "track",
+"reason": "Full album with Pharoah Sanders and orchestra"
+},
+"33d34cca": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Mix by avion aka Takashi Sekiguchi"
+},
+"1e8fbbbb": {
+"v": "keep",
+"kind": "set",
+"reason": "NTS Monday set by Floating Points"
+},
+"f5053648": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix of multiple artists, not by Floating Points"
+},
+"191cc97e": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Live at Primavera 2025 not yet happened"
+},
+"1a525f98": {
+"v": "reject",
+"kind": "track",
+"reason": "Full album release"
+},
+"07426265": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with multiple guests"
+},
+"7b28772e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at The Lot Radio"
+},
+"e08b6716": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Special 30m segment, not a full set"
+},
+"d2208212": {
+"v": "reject",
+"kind": "set",
+"reason": "Live set with multiple artists, not solo"
+},
+"edab4a14": {
+"v": "reject",
+"kind": "set",
+"reason": "Multiple artists on sound system, not Floating Points solo"
+},
+"39fc0171": {
+"v": "reject",
+"kind": "set",
+"reason": "Four Tet + Floating Points, not solo"
+},
+"527ca495": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode"
+},
+"acde1e15": {
+"v": "keep",
+"kind": "set",
+"reason": "BBC 1Xtra Deviation Mix by Floating Points"
+},
+"319e48e9": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B live set with Oneman"
+},
+"ea93ac55": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Mr Wonderful"
+},
+"86fe753b": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Live at Lyon with Fred Again.. and Caribou"
+},
+"f4432acd": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "mix includes multiple artists, not solo set"
+},
+"c44a1f29": {
+"v": "keep",
+"kind": "set",
+"reason": "festival live set with Floating Points"
+},
+"27ed306d": {
+"v": "keep",
+"kind": "set",
+"reason": "BBC Radio Essential Mix"
+},
+"d2860381": {
+"v": "reject",
+"kind": "other",
+"reason": "group DJ set, not solo"
+},
+"3c1ba2d2": {
+"v": "keep",
+"kind": "set",
+"reason": "live set with Four Tet"
+},
+"6e1cbcd0": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room live set"
+},
+"a096776c": {
+"v": "keep",
+"kind": "set",
+"reason": "ADE in-store set with Twice"
+},
+"423ebd51": {
+"v": "keep",
+"kind": "set",
+"reason": "NTS Radio show with Four Tet"
+},
+"9c049c74": {
+"v": "reject",
+"kind": "track",
+"reason": "album release, not a set"
+},
+"1de4eedf": {
+"v": "unsure",
+"kind": "other",
+"reason": "Glastonbury 2025 not yet occurred"
+},
+"0555ab6e": {
+"v": "reject",
+"kind": "talk",
+"reason": "tutorial on music production"
+},
+"e59a78c4": {
+"v": "keep",
+"kind": "set",
+"reason": "Late Night Tales ambient mix"
+},
+"5dfc7e75": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview and talk show"
+},
+"7ea29125": {
+"v": "reject",
+"kind": "other",
+"reason": "group set with Caribou and Fred again.."
+},
+"23499d82": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "No tracklist, only title and channel"
+},
+"1a5546f5": {
+"v": "reject",
+"kind": "talk",
+"reason": "RTS.FM radio show, not DJ set"
+},
+"af169954": {
+"v": "keep",
+"kind": "set",
+"reason": "KaterCast live set at Kiosk"
+},
+"4041da40": {
+"v": "keep",
+"kind": "set",
+"reason": "Fusion Festival live set"
+},
+"2e91ca61": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not music set"
+},
+"acc4e825": {
+"v": "unsure",
+"kind": "other",
+"reason": "No clear content or format"
+},
+"feeb671c": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B live set at S\u00fcdpol"
+},
+"bdcf137c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Guestmix, not live set"
+},
+"d18dd105": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Katerblau"
+},
+"e0771a57": {
+"v": "keep",
+"kind": "set",
+"reason": "Afterhour live set"
+},
+"c4089e5c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode, not music set"
+},
+"e0519c4f": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio guest mix by Ida"
+},
+"08c4c4fc": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at MS Artville"
+},
+"33308c49": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast, not music set"
+},
+"d28c3f0e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast, not DJ set"
+},
+"4a85f003": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Unreleased Plattform"
+},
+"c8af9a5f": {
+"v": "keep",
+"kind": "set",
+"reason": "WITNESS THIS live set"
+},
+"448dd512": {
+"v": "keep",
+"kind": "set",
+"reason": "Live session at Kasheme"
+},
+"77737585": {
+"v": "keep",
+"kind": "set",
+"reason": "Livingroom session with Ida"
+},
+"2c50f9db": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"be6632e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set at Culture Box, Berlin"
+},
+"c9d231a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Beatverliebt, likely Berlin club"
+},
+"c53282ef": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Garbicz festival"
+},
+"a63d1776": {
+"v": "reject",
+"kind": "track",
+"reason": "Titled as a track by Trommel, not Ida Daugaard's set"
+},
+"e761021b": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show appearance on RTS.FM"
+},
+"c6a5f3ce": {
+"v": "keep",
+"kind": "set",
+"reason": "RecordMix featuring Ida Daugaard's DJ set"
+},
+"39c8998b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast series, not a music set"
+},
+"60e4b7c2": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at L.E.T. Zurich"
+},
+"39a78e3d": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Alonso, but hosted by Alonso, not Ida's solo set"
+},
+"c8d0dab6": {
+"v": "reject",
+"kind": "other",
+"reason": "Future date (2026), not real event"
+},
+"8f492a1d": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Fusion Festival"
+},
+"65c07be9": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix compilation, not live set"
+},
+"2480fa81": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Club der Visionaere"
+},
+"debbbf8c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Werkstatt, titled 'presents'"
+},
+"9620eef0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Fusion Festival Turmb\u00fchne"
+},
+"3ed0cb4e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "mentions 'Classic Mix' and not a live set"
+},
+"d5794e9b": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview with Luciano, not Villalobos set"
+},
+"863edd74": {
+"v": "keep",
+"kind": "set",
+"reason": "explicitly titled 'DJ Set' in Chile"
+},
+"bda27c03": {
+"v": "reject",
+"kind": "set",
+"reason": "features Richie Hawtin, not solo set"
+},
+"468a618d": {
+"v": "reject",
+"kind": "set",
+"reason": "mixed set with John Digweed, not solo"
+},
+"1d62abf3": {
+"v": "reject",
+"kind": "set",
+"reason": "mix titled 'DJ Set' but includes multiple artists"
+},
+"51fcc3f1": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Tel-Aviv, clear performance"
+},
+"31932b3b": {
+"v": "reject",
+"kind": "set",
+"reason": "1997, pre-techno era, likely not live"
+},
+"1b69d050": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Sonne Mond Sterne, 2002"
+},
+"aa0e8517": {
+"v": "reject",
+"kind": "set",
+"reason": "no clear performance context, likely archival"
+},
+"0feca59e": {
+"v": "reject",
+"kind": "set",
+"reason": "co-performed with Seth Troxler, not solo"
+},
+"d6d2666d": {
+"v": "reject",
+"kind": "set",
+"reason": "Steve Bug & Villalobos, not solo"
+},
+"5b600d0a": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b with Raresh, live at festival"
+},
+"524e1170": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b with Raresh at festival"
+},
+"bf77ec01": {
+"v": "keep",
+"kind": "set",
+"reason": "extended set at Ruta 5"
+},
+"e9e53495": {
+"v": "keep",
+"kind": "set",
+"reason": "explicitly labeled 'DJ SET' at Pyramid"
+},
+"d2538164": {
+"v": "reject",
+"kind": "set",
+"reason": "Rhadoo b2b, not Villalobos solo"
+},
+"7460d6d4": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b with tINI, live at Circoloco"
+},
+"f331219d": {
+"v": "reject",
+"kind": "track",
+"reason": "exclusive vinyl mix, not live set"
+},
+"0eab8729": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"81e97f39": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Tresor with Hawtin"
+},
+"ab45933d": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b at Pyramid Ibiza live set"
+},
+"b7c17a75": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "vs Marco Carola, not solo set"
+},
+"b2b304b6": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Cocoon club"
+},
+"c81b0603": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix, not live set"
+},
+"0260a117": {
+"v": "reject",
+"kind": "set",
+"reason": "Set with Sven V\u00e4th, not solo"
+},
+"26189c2d": {
+"v": "reject",
+"kind": "other",
+"reason": "Radio mix, not live performance"
+},
+"602636aa": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Fabric London"
+},
+"22c0e5a9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mixed CD, not live set"
+},
+"a68c477d": {
+"v": "reject",
+"kind": "other",
+"reason": "Minimal techno video, not live set"
+},
+"052820dc": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Kristal Glam Club, Bucharest"
+},
+"d3d65944": {
+"v": "keep",
+"kind": "set",
+"reason": "Live in Chicago"
+},
+"282fac45": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"bc4584fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Tresor closing part"
+},
+"4dfe452a": {
+"v": "reject",
+"kind": "set",
+"reason": "Live with Luciano, not solo"
+},
+"0bd6ca11": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Club Fabric"
+},
+"3f0234e4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Awakenings Festival"
+},
+"b5d4a325": {
+"v": "reject",
+"kind": "set",
+"reason": "With Sebbo, not solo"
+},
+"d1bb3e46": {
+"v": "reject",
+"kind": "other",
+"reason": "Taka Taka CoCoon, unclear content"
+},
+"12339779": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set, Oct 2006"
+},
+"e3ab5182": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix titled 'The Boom Room Special' with many artists"
+},
+"216a9594": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Vinyl-only special set, no live performance details"
+},
+"5c79df73": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Panorama Bar, Berghain"
+},
+"bcf49379": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set at Club La Feria, live performance"
+},
+"9799790c": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix with Loco Dice & others, not a live set"
+},
+"a519574c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at 538 Dance Department, Berlin"
+},
+"7204c3b7": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B at Pyramid, Amnesia Ibiza, live set"
+},
+"6d812644": {
+"v": "unsure",
+"kind": "other",
+"reason": "No event context, unclear if live or studio"
+},
+"7fbd8ef0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Awakenings Festival, Ireland"
+},
+"ad2ff3d7": {
+"v": "keep",
+"kind": "set",
+"reason": "Live B2B with Luciano at Mutek, Chile"
+},
+"484208e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Cockies Berlin, 2000"
+},
+"347c6004": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Life Festival, Ireland"
+},
+"e8c3b525": {
+"v": "unsure",
+"kind": "other",
+"reason": "Future date (2025), no event context"
+},
+"54ce1995": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Luciano at Magik Garden, Chile"
+},
+"d34afcbc": {
+"v": "reject",
+"kind": "set",
+"reason": "Live set with Ambiq, but labeled as 'Electronic Live Set' \u2013 unclear if solo"
+},
+"61ab68c4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview or talk show, not a music set"
+},
+"d9c28a43": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sunwaves Festival, Romania"
+},
+"22d697bc": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Fabric, Berlin"
+},
+"90033839": {
+"v": "reject",
+"kind": "other",
+"reason": "No clear performance, archive of event with no set details"
+},
+"c62b7e0a": {
+"v": "reject",
+"kind": "set",
+"reason": "Set with Luciano, but titled 'Love Family Park' \u2013 likely mix or event"
+},
+"6f09e355": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Luciano, live set at Love Parade"
+},
+"c3f0246b": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix titled 'All Villalobos Mix' with many artists"
+},
+"471f5fd5": {
+"v": "keep",
+"kind": "set",
+"reason": "Dance department set in Rome"
+},
+"72893e33": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Amore Music Experience"
+},
+"fb3462ee": {
+"v": "keep",
+"kind": "set",
+"reason": "First DJ set at XXL Clubnight"
+},
+"d96ea692": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix with unreleased Villalobos works, not solo set"
+},
+"fb20e40b": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on BigCityBeats FM"
+},
+"22ba7d2e": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Steve Bug, not solo set"
+},
+"a35700eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with Rhadoo/Raresh at Snagov"
+},
+"5cfe4bb4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Phlegmatic Dog Pub"
+},
+"44963d9c": {
+"v": "keep",
+"kind": "set",
+"reason": "Time Warp 2014 live set"
+},
+"605e12ce": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with others, not solo set"
+},
+"3a968392": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast, not music set"
+},
+"28fdc4c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at hybrid music fest"
+},
+"fb10078e": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast interview"
+},
+"504b9bd2": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Richie Hawtin, not solo"
+},
+"53591577": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at VOLTT Amsterdam"
+},
+"f9f64241": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Panorama Bar"
+},
+"ddcae608": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Raresh at ADE"
+},
+"cdf5988e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Exit Festival"
+},
+"3d631948": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Tresor Berlin"
+},
+"3616e42f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Time Warp festival"
+},
+"a095ac41": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with others, not solo set"
+},
+"902c7dbe": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sunwaves Romania"
+},
+"99396d9a": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with others, not solo set"
+},
+"c4df9299": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Voltt Paradiso"
+},
+"7a437bde": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Solid Loveparade"
+},
+"3aa56714": {
+"v": "reject",
+"kind": "track",
+"reason": "Unreleased single, not a set"
+},
+"021a6040": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Edward, not solo"
+},
+"ac43a0c7": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sonne Mond Sterne"
+},
+"24f3db66": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Lowlands Netherlands"
+},
+"d5a8e83d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Show titled 'long minimal techno tracks'"
+},
+"ae7bfd1b": {
+"v": "reject",
+"kind": "track",
+"reason": "Remix of single, not a set"
+},
+"e998ce5c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live b2b at Sunwaves"
+},
+"13f95dd1": {
+"v": "reject",
+"kind": "track",
+"reason": "Unreleased edit, not a set"
+},
+"8f474262": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Time Warp USA"
+},
+"2d473cc1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sunrise NYE"
+},
+"5de00b7e": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with others, not solo"
+},
+"8f9ab5dd": {
+"v": "keep",
+"kind": "set",
+"reason": "Live radio session"
+},
+"5c88830e": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Luciano, not solo"
+},
+"dda85c64": {
+"v": "reject",
+"kind": "track",
+"reason": "Edit of Fink, not a DJ set"
+},
+"8161d291": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Luciano, live set"
+},
+"fb8425a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Festival performance at Awakenings"
+},
+"69647099": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Raresh at Sunrise afterparty"
+},
+"d273e998": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sunrise Bucharest event"
+},
+"795e77d1": {
+"v": "reject",
+"kind": "other",
+"reason": "Festival title, no clear set content"
+},
+"ce982a46": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Berlin venue"
+},
+"4f8ddffe": {
+"v": "reject",
+"kind": "track",
+"reason": "Track titled 'Widodo'"
+},
+"e5fb4be7": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Fabric Weekender"
+},
+"54f11d5d": {
+"v": "reject",
+"kind": "other",
+"reason": "Mixed set, not by Villalobos"
+},
+"da45c6a1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Voltt Paradiso"
+},
+"347bdd05": {
+"v": "reject",
+"kind": "other",
+"reason": "Sven V\u00e4th set, not Villalobos"
+},
+"53dc001e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"6305ef94": {
+"v": "reject",
+"kind": "other",
+"reason": "Radio station with multiple artists"
+},
+"9d48ef4a": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix titled 'In The Mix'"
+},
+"b23e25fa": {
+"v": "keep",
+"kind": "set",
+"reason": "BBC Essential Mix performance"
+},
+"8cdf3b02": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Streetparade with kalabrese"
+},
+"78c5c887": {
+"v": "reject",
+"kind": "track",
+"reason": "Remix of single track"
+},
+"27b63d33": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode on artist"
+},
+"81269d27": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Fabric London"
+},
+"7b3e5422": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b live set with Franco Cinelli"
+},
+"111e8a4c": {
+"v": "keep",
+"kind": "set",
+"reason": "mix by Villalobos"
+},
+"9fc3887c": {
+"v": "keep",
+"kind": "set",
+"reason": "live b2b at Cocoon"
+},
+"89bbf81e": {
+"v": "keep",
+"kind": "set",
+"reason": "live set at festival"
+},
+"4e5baeaf": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b live at festival"
+},
+"43f9a5d5": {
+"v": "keep",
+"kind": "set",
+"reason": "radio deep mix by him"
+},
+"c4836a5d": {
+"v": "keep",
+"kind": "set",
+"reason": "live warm-up set"
+},
+"e000c58e": {
+"v": "keep",
+"kind": "set",
+"reason": "live b2b with Hawtin"
+},
+"0ceb0a17": {
+"v": "keep",
+"kind": "set",
+"reason": "live set at Awakenings"
+},
+"e0f15400": {
+"v": "keep",
+"kind": "set",
+"reason": "live b2b mix"
+}
+},
+"timings": [
+{
+"n": 20,
+"sec": 131.2,
+"usage": {
+"completion_tokens": 677,
+"prompt_tokens": 944,
+"total_tokens": 1621,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 183.3,
+"usage": {
+"completion_tokens": 960,
+"prompt_tokens": 992,
+"total_tokens": 1952,
+"prompt_tokens_details": {
+"cached_tokens": 307
+}
+}
+},
+{
+"n": 10,
+"sec": 165.5,
+"usage": {
+"completion_tokens": 956,
+"prompt_tokens": 642,
+"total_tokens": 1598,
+"prompt_tokens_details": {
+"cached_tokens": 307
+}
+}
+},
+{
+"n": 20,
+"sec": 130.5,
+"usage": {
+"completion_tokens": 669,
+"prompt_tokens": 1006,
+"total_tokens": 1675,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 197.7,
+"usage": {
+"completion_tokens": 1026,
+"prompt_tokens": 1050,
+"total_tokens": 2076,
+"prompt_tokens_details": {
+"cached_tokens": 307
+}
+}
+},
+{
+"n": 8,
+"sec": 91.2,
+"usage": {
+"completion_tokens": 574,
+"prompt_tokens": 577,
+"total_tokens": 1151,
+"prompt_tokens_details": {
+"cached_tokens": 307
+}
+}
+},
+{
+"n": 20,
+"sec": 130.6,
+"usage": {
+"completion_tokens": 662,
+"prompt_tokens": 1051,
+"total_tokens": 1713,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 204.2,
+"usage": {
+"completion_tokens": 1032,
+"prompt_tokens": 1117,
+"total_tokens": 2149,
+"prompt_tokens_details": {
+"cached_tokens": 313
+}
+}
+},
+{
+"n": 20,
+"sec": 194.6,
+"usage": {
+"completion_tokens": 1013,
+"prompt_tokens": 1038,
+"total_tokens": 2051,
+"prompt_tokens_details": {
+"cached_tokens": 313
+}
+}
+},
+{
+"n": 14,
+"sec": 84.8,
+"usage": {
+"completion_tokens": 470,
+"prompt_tokens": 844,
+"total_tokens": 1314,
+"prompt_tokens_details": {
+"cached_tokens": 313
+}
+}
+},
+{
+"n": 20,
+"sec": 128.0,
+"usage": {
+"completion_tokens": 642,
+"prompt_tokens": 1074,
+"total_tokens": 1716,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 15,
+"sec": 140.2,
+"usage": {
+"completion_tokens": 756,
+"prompt_tokens": 926,
+"total_tokens": 1682,
+"prompt_tokens_details": {
+"cached_tokens": 335
+}
+}
+},
+{
+"n": 20,
+"sec": 142.6,
+"usage": {
+"completion_tokens": 686,
+"prompt_tokens": 1222,
+"total_tokens": 1908,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 184.8,
+"usage": {
+"completion_tokens": 896,
+"prompt_tokens": 1180,
+"total_tokens": 2076,
+"prompt_tokens_details": {
+"cached_tokens": 344
+}
+}
+},
+{
+"n": 20,
+"sec": 218.3,
+"usage": {
+"completion_tokens": 1061,
+"prompt_tokens": 1173,
+"total_tokens": 2234,
+"prompt_tokens_details": {
+"cached_tokens": 344
+}
+}
+},
+{
+"n": 20,
+"sec": 139.3,
+"usage": {
+"completion_tokens": 695,
+"prompt_tokens": 1152,
+"total_tokens": 1847,
+"prompt_tokens_details": {
+"cached_tokens": 344
+}
+}
+},
+{
+"n": 20,
+"sec": 137.7,
+"usage": {
+"completion_tokens": 675,
+"prompt_tokens": 1230,
+"total_tokens": 1905,
+"prompt_tokens_details": {
+"cached_tokens": 344
+}
+}
+},
+{
+"n": 20,
+"sec": 139.1,
+"usage": {
+"completion_tokens": 689,
+"prompt_tokens": 1173,
+"total_tokens": 1862,
+"prompt_tokens_details": {
+"cached_tokens": 344
+}
+}
+},
+{
+"n": 10,
+"sec": 190.4,
+"usage": {
+"completion_tokens": 1032,
+"prompt_tokens": 786,
+"total_tokens": 1818,
+"prompt_tokens_details": {
+"cached_tokens": 345
+}
+}
+}
+]
+}

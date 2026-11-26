@@ -1,0 +1,629 @@
+{
+"model": "qwen3-4b",
+"shard": 2,
+"verdicts": {
+"6f384594": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM DJ set, solo"
+},
+"92b7efba": {
+"v": "keep",
+"kind": "set",
+"reason": "Duplicate of entry 0, Rinse FM"
+},
+"58ebd3d5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set at Keep Hush"
+},
+"ce803008": {
+"v": "reject",
+"kind": "track",
+"reason": "FOLD project, not solo DJ set"
+},
+"5efef638": {
+"v": "keep",
+"kind": "set",
+"reason": "Duplicate of entry 0, Rinse FM"
+},
+"572cfa3d": {
+"v": "reject",
+"kind": "other",
+"reason": "NDR Mix Series, not solo set"
+},
+"b67a3bd5": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as entry 2, Keep Hush live"
+},
+"8885e1e4": {
+"v": "reject",
+"kind": "track",
+"reason": "FOLD project, not DJ set"
+},
+"6de5a96e": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as entry 2, Keep Hush live"
+},
+"2b3df618": {
+"v": "reject",
+"kind": "track",
+"reason": "FOLD project, not DJ set"
+},
+"cd526ac0": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview, not music set"
+},
+"0ef9fabe": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"ce9b6a34": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "mix by someone else, not DJ Pipe"
+},
+"1c8d1f81": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Pipe at The Lot Radio"
+},
+"a181089c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Pipe on Room 303 Radio"
+},
+"691dd658": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Pipe w/ Submid"
+},
+"7dcc7e9a": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Pipe at Dimensions Festival"
+},
+"4f3d1d03": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Pipe & Taslo at themuddshow x Dimensions"
+},
+"4291b641": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different artist, DJ Pipe Sandoval"
+},
+"067d58f5": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Pipe on Submid Radio"
+},
+"1fea8465": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different person, DJ Pipe Pichara"
+},
+"77a99756": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different person, Dj Pipe Jimenez"
+},
+"f4f4bc47": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at The Lion & Lamb"
+},
+"b3b301fe": {
+"v": "reject",
+"kind": "other",
+"reason": "old set, no date or context"
+},
+"86d21c8c": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different DJ, DJ Pipe Pichara"
+},
+"38e8202b": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different person, Dj Pipe Jimenez"
+},
+"9e0ec90c": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different person, Dj Pipe Jimenez"
+},
+"3a504874": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different artist, DJ Pipe Sandoval"
+},
+"1cf0214b": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different artist, DJ Pipe Sandoval"
+},
+"6310de1a": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different person, Dj Pipe Sierra"
+},
+"d8fa5fe7": {
+"v": "reject",
+"kind": "namesake",
+"reason": "different artist, Jumpin Jay & DJ Pipe"
+},
+"ff465bf5": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"ecf9a588": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Wrong genre; not house/experimental; likely mix of his tracks"
+},
+"972fde98": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Wrong genre; not house/experimental; likely mix of his tracks"
+},
+"92fbab4c": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "only lists tracks, not a set"
+},
+"715a48b8": {
+"v": "keep",
+"kind": "set",
+"reason": "live club set at Cr\u00e8me de la Cr\u00e8me"
+},
+"26032e96": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room live DJ set"
+},
+"8948694a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Blues open mic, not music set"
+},
+"97ec7456": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Cr\u00e8me de la Cr\u00e8me"
+},
+"eab16b48": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Cr\u00e8me de la Cr\u00e8me"
+},
+"bf572733": {
+"v": "keep",
+"kind": "set",
+"reason": "FACT radio mix"
+},
+"e9fbe1d9": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast, not a music set"
+},
+"d4988e83": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast, not a set"
+},
+"e21e5dc7": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast, not a set"
+},
+"ded1cc6d": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Cr\u00e8me de la Cr\u00e8me"
+},
+"e41f65e8": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Cr\u00e8me de la Cr\u00e8me"
+},
+"84e52c21": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Cr\u00e8me de la Cr\u00e8me"
+},
+"d8fc1562": {
+"v": "keep",
+"kind": "set",
+"reason": "Robot Heart residency set"
+},
+"51e30549": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Robot Heart residency"
+},
+"199cd9e1": {
+"v": "reject",
+"kind": "talk",
+"reason": "SDEM session, not a set"
+},
+"e518fe0c": {
+"v": "reject",
+"kind": "talk",
+"reason": "session, not a set"
+},
+"dd53a569": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Treehouse Miami"
+},
+"b2a31ca2": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Cr\u00e8me de la Cr\u00e8me"
+},
+"3efc598a": {
+"v": "keep",
+"kind": "set",
+"reason": "Groove podcast mix"
+},
+"c9323559": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance at Cr\u00e8me de la Cr\u00e8me"
+},
+"5f0ec5ce": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a DJ set"
+},
+"c922d1d0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live festival set at Polifonic"
+},
+"554b8e03": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Lazarus, not O.Bee solo"
+},
+"78f4a879": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with O.Bee"
+},
+"020d041a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live b2b at Circoloco"
+},
+"938ab60f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at ReSolute NYC"
+},
+"3dbd08bb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Suma Beach"
+},
+"c611c115": {
+"v": "reject",
+"kind": "other",
+"reason": "Guest mix, not O.Bee's own set"
+},
+"005acadf": {
+"v": "reject",
+"kind": "other",
+"reason": "Festival live set, not attributed to O.Bee as performer"
+},
+"fd22a14e": {
+"v": "reject",
+"kind": "other",
+"reason": "No clear attribution to O.Bee as performer"
+},
+"8c6ea0a4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Yoyaku"
+},
+"d1128344": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Garden, Italy"
+},
+"6f5e3da5": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set at H\u00d6R Berlin"
+},
+"ec738370": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set at H\u00d6R Berlin"
+},
+"f0ab3fab": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with O.Bee"
+},
+"4039c193": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room Istanbul set"
+},
+"f14de3a3": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set at Lion's Milk"
+},
+"d42eb715": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Dimensions"
+},
+"ba1dfd6a": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with O.Bee"
+},
+"2514ccc6": {
+"v": "reject",
+"kind": "other",
+"reason": "Radio show, not a DJ set"
+},
+"0042e2e4": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"f985cd9e": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Namesake for different person"
+},
+"44f355f2": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix with O.BEE featured"
+},
+"864ecf3e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live b2b set at Mu Raki"
+},
+"1a1a1106": {
+"v": "keep",
+"kind": "set",
+"reason": "Live opening party with Tomas Station"
+},
+"225f38b9": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set at ReSolute"
+},
+"50fd4abf": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix titled Dreamscape"
+},
+"e73e0414": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance at Waking Life"
+},
+"e85f459c": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with Tomas Station"
+},
+"e3b562c1": {
+"v": "reject",
+"kind": "other",
+"reason": "Traditional movie recap, unrelated"
+},
+"095e88ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with O.BEE & Tomas"
+},
+"82cba03f": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with O.BEE & Tomas"
+},
+"4cccbacc": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix of the week by O.BEE"
+},
+"6c9295eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance visual"
+},
+"841d454b": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with O.BEE"
+},
+"1bc43659": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show on Circoloco"
+},
+"03e4173d": {
+"v": "keep",
+"kind": "set",
+"reason": "In-store session with O.BEE"
+},
+"86a2c676": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B live set with Tomas Station"
+},
+"4c3dee9a": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with O.BEE"
+},
+"d11a642f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Umbrella Nights"
+},
+"c34bac6a": {
+"v": "reject",
+"kind": "other",
+"reason": "Feat. implies collaboration, not solo set"
+},
+"a21b8f57": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Condition, Umbrella Friends"
+},
+"a0cf4241": {
+"v": "keep",
+"kind": "set",
+"reason": "Live online set at Umbrella Nights"
+},
+"4b0ecfce": {
+"v": "keep",
+"kind": "set",
+"reason": "Live vinyl set at Apotheke"
+},
+"e268318b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Apotheke, date specified"
+},
+"27a21222": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Bloom SD, Mindfruit SD"
+},
+"dd9b4ab2": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Hokum"
+},
+"6567c54e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live and real session with Taylor"
+},
+"baff6710": {
+"v": "keep",
+"kind": "set",
+"reason": "Live stream at Mindfruit SD"
+},
+"5fed148c": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+}
+},
+"timings": [
+{
+"n": 12,
+"sec": 74.0,
+"usage": {
+"completion_tokens": 385,
+"prompt_tokens": 667,
+"total_tokens": 1052,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 137.5,
+"usage": {
+"completion_tokens": 673,
+"prompt_tokens": 1013,
+"total_tokens": 1686,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 2,
+"sec": 54.9,
+"usage": {
+"completion_tokens": 465,
+"prompt_tokens": 382,
+"total_tokens": 847,
+"prompt_tokens_details": {
+"cached_tokens": 305
+}
+}
+},
+{
+"n": 20,
+"sec": 140.5,
+"usage": {
+"completion_tokens": 657,
+"prompt_tokens": 1101,
+"total_tokens": 1758,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 2,
+"sec": 50.2,
+"usage": {
+"completion_tokens": 412,
+"prompt_tokens": 429,
+"total_tokens": 841,
+"prompt_tokens_details": {
+"cached_tokens": 331
+}
+}
+},
+{
+"n": 20,
+"sec": 139.2,
+"usage": {
+"completion_tokens": 645,
+"prompt_tokens": 1095,
+"total_tokens": 1740,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 18,
+"sec": 232.5,
+"usage": {
+"completion_tokens": 1300,
+"prompt_tokens": 1061,
+"total_tokens": 2361,
+"prompt_tokens_details": {
+"cached_tokens": 336
+}
+}
+},
+{
+"n": 11,
+"sec": 70.6,
+"usage": {
+"completion_tokens": 344,
+"prompt_tokens": 691,
+"total_tokens": 1035,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+}
+]
+}

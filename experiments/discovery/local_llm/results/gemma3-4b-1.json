@@ -1,0 +1,1336 @@
+{
+"model": "gemma3-4b",
+"shard": 1,
+"verdicts": {
+"e9b53bc6": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with Appleblim's mix."
+},
+"8ba0f348": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast featuring Appleblim."
+},
+"3d9ea692": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room live set with Second Storey."
+},
+"28735c37": {
+"v": "keep",
+"kind": "set",
+"reason": "Resident Advisor DJ set by Appleblim."
+},
+"ee49bb34": {
+"v": "unsure",
+"kind": "other",
+"reason": "Podcast - content not explicitly a set."
+},
+"0af446b2": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast with Appleblim guest."
+},
+"f3662d75": {
+"v": "keep",
+"kind": "set",
+"reason": "Boogie Box podcast featuring Appleblim."
+},
+"52ddca1f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set from Ministry of Sound."
+},
+"0c3f93a5": {
+"v": "keep",
+"kind": "set",
+"reason": "Fabric DJ mix by Appleblim."
+},
+"ba201bbd": {
+"v": "unsure",
+"kind": "other",
+"reason": "Compilation - not a direct set."
+},
+"d9a331b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast with Also (Appleblim + Second Storey)."
+},
+"46068349": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sneaker Social Club."
+},
+"4503a849": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast featuring Appleblim."
+},
+"bf87bcc6": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast with Appleblim and guests."
+},
+"ae976adc": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room DJ set by Appleblim."
+},
+"c21f12da": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room DJ set by Appleblim."
+},
+"55f4ffaf": {
+"v": "unsure",
+"kind": "other",
+"reason": "Interview - not a DJ set recording."
+},
+"2220f8a1": {
+"v": "keep",
+"kind": "set",
+"reason": "Rough Radio broadcast by Appleblim."
+},
+"65c852d7": {
+"v": "keep",
+"kind": "set",
+"reason": "H\u00d6R BERLIN broadcast by Appleblim."
+},
+"a3099f13": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast featuring Appleblim."
+},
+"c67f3100": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show featuring Appleblim's selections."
+},
+"a324dde8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set performed by Appleblim."
+},
+"d5411934": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Corner Klub."
+},
+"a4a17ed4": {
+"v": "unsure",
+"kind": "other",
+"reason": "Podcast with Second Storey, not a set."
+},
+"f7ecbea0": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Compilation of tracks by various artists."
+},
+"f97315fc": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast with Appleblim & Second Story."
+},
+"ab3b086f": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at H\u00d6R Berlin."
+},
+"3b5a67f4": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast featuring Appleblim."
+},
+"92b76ed5": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM podcast featuring Appleblim."
+},
+"f26cf797": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at H\u00d6R Berlin."
+},
+"b5c6ef66": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix of tracks by Paul Woolford and others."
+},
+"d6fc1c54": {
+"v": "keep",
+"kind": "set",
+"reason": "explicitly labeled 'DJ set' on youtube"
+},
+"ab689385": {
+"v": "keep",
+"kind": "set",
+"reason": "H\u00d6R is a known DJ channel"
+},
+"8a7ec05d": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set with Francesco Farfa"
+},
+"3a856d8b": {
+"v": "keep",
+"kind": "set",
+"reason": "explicitly labeled 'DJ set'"
+},
+"c3079eb1": {
+"v": "keep",
+"kind": "set",
+"reason": "CD release, likely a DJ set"
+},
+"835f77f2": {
+"v": "keep",
+"kind": "set",
+"reason": "'Mixmag The Lab' is a DJ show"
+},
+"6cde0a56": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast episode featuring D'Julz"
+},
+"b5b7d656": {
+"v": "keep",
+"kind": "set",
+"reason": "labeled as a DJ set"
+},
+"54de2769": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM is a radio channel"
+},
+"3854e27c": {
+"v": "keep",
+"kind": "set",
+"reason": "explicitly labeled 'DJ set'"
+},
+"ec0be405": {
+"v": "keep",
+"kind": "set",
+"reason": "featuring D'Julz and Telford"
+},
+"e7be372b": {
+"v": "keep",
+"kind": "set",
+"reason": "Dimensions Festival event - set"
+},
+"981f8f6e": {
+"v": "unsure",
+"kind": "other",
+"reason": "channel and length are missing"
+},
+"e9a80187": {
+"v": "unsure",
+"kind": "other",
+"reason": "channel and length are missing"
+},
+"4fa6e5fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Home Diggin' is a show hosted by D'Julz"
+},
+"0fbfab1e": {
+"v": "keep",
+"kind": "set",
+"reason": "Diaries from the Underground - set"
+},
+"d611381e": {
+"v": "keep",
+"kind": "set",
+"reason": "Watergate Podcast - DJ set"
+},
+"b6038af9": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room event - DJ set"
+},
+"987047f1": {
+"v": "keep",
+"kind": "set",
+"reason": "Nightclubber Podcast - DJ set"
+},
+"7ee243af": {
+"v": "unsure",
+"kind": "other",
+"reason": "channel and length are missing"
+},
+"39062729": {
+"v": "keep",
+"kind": "set",
+"reason": "long-running show, typical of D'Julz"
+},
+"e88ff372": {
+"v": "keep",
+"kind": "set",
+"reason": "instore session, featuring D'Julz"
+},
+"a03289e5": {
+"v": "keep",
+"kind": "set",
+"reason": "instore session, featuring D'Julz"
+},
+"f250e8ba": {
+"v": "unsure",
+"kind": "other",
+"reason": "podcast, but not explicitly a set"
+},
+"5782f754": {
+"v": "keep",
+"kind": "set",
+"reason": "podcast, featuring D'Julz's mix"
+},
+"de07ee2b": {
+"v": "keep",
+"kind": "set",
+"reason": "guest mix on a radio show"
+},
+"355a3320": {
+"v": "unsure",
+"kind": "other",
+"reason": "compilation, not a DJ set"
+},
+"bd854646": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Weekly podcast, featuring D'Julz"
+},
+"4c5a222f": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at a club venue"
+},
+"2f329be2": {
+"v": "keep",
+"kind": "set",
+"reason": "Circoloco event, featuring D'Julz"
+},
+"183022e2": {
+"v": "keep",
+"kind": "set",
+"reason": "radio show with a DJ guest"
+},
+"a76db9b4": {
+"v": "keep",
+"kind": "set",
+"reason": "live set from Radio FG"
+},
+"4e55787f": {
+"v": "keep",
+"kind": "set",
+"reason": "Home Diggin' show, a regular feature"
+},
+"a27e9976": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Sebo K"
+},
+"2ee3ff98": {
+"v": "keep",
+"kind": "set",
+"reason": "radio show, guest mix by D'Julz"
+},
+"a755c209": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio FG show featuring D'Julz"
+},
+"4067ea49": {
+"v": "keep",
+"kind": "set",
+"reason": "fabric promo mix by D'Julz"
+},
+"a88b3760": {
+"v": "keep",
+"kind": "set",
+"reason": "Quirk radio show, featuring D'Julz"
+},
+"e9af6682": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio FG show featuring D'Julz"
+},
+"5685403a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Basics club"
+},
+"17230db8": {
+"v": "keep",
+"kind": "other",
+"reason": "CD release, not a DJ set."
+},
+"8922002c": {
+"v": "keep",
+"kind": "set",
+"reason": "Circoloco DC10 - Ibiza set."
+},
+"f75a4639": {
+"v": "keep",
+"kind": "set",
+"reason": "Yoyaku instore session - DJ set."
+},
+"8f9d19ce": {
+"v": "keep",
+"kind": "set",
+"reason": "Club FG - Radio show with D'Julz."
+},
+"5f5bd54d": {
+"v": "keep",
+"kind": "set",
+"reason": "Crew Savage Podcast - DJ set."
+},
+"ca4501eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Mixmag - On Rotation DJ set."
+},
+"f53b6356": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse France - Home Diggin' DJ set."
+},
+"b163ec8f": {
+"v": "keep",
+"kind": "set",
+"reason": "Soundcloud - Live set performance."
+},
+"1981f153": {
+"v": "keep",
+"kind": "set",
+"reason": "Soundcloud - Live set performance."
+},
+"5e4bfe52": {
+"v": "keep",
+"kind": "set",
+"reason": "Soundcloud - Live set performance."
+},
+"bb0f5966": {
+"v": "keep",
+"kind": "set",
+"reason": "Soundcloud - Podcast DJ set."
+},
+"021f538f": {
+"v": "keep",
+"kind": "set",
+"reason": "Soundcloud - Live set performance."
+},
+"b60b05ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Youtube - Radio show with D'Julz."
+},
+"ff98b160": {
+"v": "keep",
+"kind": "set",
+"reason": "Youtube - Live set performance."
+},
+"f34e2b0e": {
+"v": "keep",
+"kind": "set",
+"reason": "Youtube - DJ set with MIA MAO."
+},
+"ad21835d": {
+"v": "keep",
+"kind": "set",
+"reason": "Soundcloud - DJ set at fabric."
+},
+"518242cc": {
+"v": "keep",
+"kind": "set",
+"reason": "Soundcloud - DJ set with Cassy."
+},
+"e8d344eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Youtube - Cocoon Ibiza set."
+},
+"4ffe36fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Soundcloud - DJ set Cadenza."
+},
+"e7421263": {
+"v": "keep",
+"kind": "set",
+"reason": "Youtube - Radio show with D'Julz."
+},
+"00571fb7": {
+"v": "keep",
+"kind": "set",
+"reason": "Collaboration with Phil Weeks, study/gaming context"
+},
+"3527614e": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio mix explicitly by D'Julz"
+},
+"911ae968": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring D'Julz as a guest"
+},
+"69257136": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show featuring D'Julz's performance"
+},
+"3c1288ba": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring D'Julz as a guest"
+},
+"e2f0cdb6": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show featuring D'Julz's performance"
+},
+"5439d4a9": {
+"v": "keep",
+"kind": "set",
+"reason": "D'Julz set within a b2b broadcast"
+},
+"bc17a307": {
+"v": "keep",
+"kind": "set",
+"reason": "D'Julz set at a specific event"
+},
+"70e8a2ab": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring D'Julz as a guest"
+},
+"fd5588f1": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set featuring D'Julz"
+},
+"0a236912": {
+"v": "keep",
+"kind": "set",
+"reason": "Show title indicates a D'Julz set"
+},
+"2d5831bd": {
+"v": "keep",
+"kind": "set",
+"reason": "Festival DJ set by D'Julz"
+},
+"f177a401": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by D'Julz at a festival"
+},
+"2517589b": {
+"v": "keep",
+"kind": "set",
+"reason": "Mixed by D'Julz, showcasing his selections"
+},
+"f2b70b05": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set title, Fort Romeau's performance."
+},
+"52bb8f22": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau's set on The Vinyl Factory."
+},
+"333f93f5": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix performed by Fort Romeau."
+},
+"761fe71a": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau's mix for GETME!."
+},
+"62f03ba1": {
+"v": "keep",
+"kind": "set",
+"reason": "Dekmantel radio show with Fort Romeau."
+},
+"ae37e1aa": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau's personal soundcloud set."
+},
+"82ff71df": {
+"v": "keep",
+"kind": "set",
+"reason": "Yoyaku instore session with Fort Romeau."
+},
+"2604a866": {
+"v": "keep",
+"kind": "set",
+"reason": "H\u00d6R radio show featuring Fort Romeau."
+},
+"3b3a1f31": {
+"v": "keep",
+"kind": "set",
+"reason": "Phonica Mix Series featuring Fort Romeau."
+},
+"c0c3c9b6": {
+"v": "keep",
+"kind": "set",
+"reason": "Sub Club radio show with Fort Romeau."
+},
+"2d91349e": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix performed by Fort Romeau."
+},
+"eb09170a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Lost Village."
+},
+"1d935486": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room set by Fort Romeau."
+},
+"c1221e2b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Avant Garde, featuring others."
+},
+"c0e0c91d": {
+"v": "keep",
+"kind": "set",
+"reason": "DGTL Amsterdam set by Fort Romeau."
+},
+"50feca8f": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse France show with Fort Romeau."
+},
+"b78b70ff": {
+"v": "unsure",
+"kind": "other",
+"reason": "Podcast with multiple artists, not a set."
+},
+"30b48e72": {
+"v": "keep",
+"kind": "set",
+"reason": "Digweed transitions with Fort Romeau."
+},
+"1425756d": {
+"v": "keep",
+"kind": "set",
+"reason": "Resident Advisor mix by Fort Romeau."
+},
+"6047180d": {
+"v": "unsure",
+"kind": "other",
+"reason": "Radio show with multiple artists, not a set."
+},
+"1603bce2": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room set, consistent with artist."
+},
+"f8a68faf": {
+"v": "keep",
+"kind": "set",
+"reason": "Mixmag show featuring Fort Romeau."
+},
+"a7e59c28": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Axel Boman."
+},
+"8cfbd76b": {
+"v": "keep",
+"kind": "set",
+"reason": "Deep SloMo Mix by Fort Romeau."
+},
+"3e676cc6": {
+"v": "keep",
+"kind": "set",
+"reason": "Groove Magazin podcast featuring Fort Romeau."
+},
+"3d37ce8b": {
+"v": "keep",
+"kind": "set",
+"reason": "Essential Mix by Fort Romeau on BBC Radio 1."
+},
+"e18f6131": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Mixmag's The Lab NYC."
+},
+"5d27e23c": {
+"v": "keep",
+"kind": "set",
+"reason": "Sub Club set with Harri."
+},
+"bae14b0f": {
+"v": "keep",
+"kind": "set",
+"reason": "Essential Mix by Fort Romeau on BBC Radio 1."
+},
+"f47ce109": {
+"v": "keep",
+"kind": "set",
+"reason": "XLR8R podcast by Fort Romeau."
+},
+"67981723": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room DJ Set by Fort Romeau."
+},
+"18d4b8e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Dekmantel podcast featuring Fort Romeau."
+},
+"8d27807c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at The Lot Radio."
+},
+"8c10138e": {
+"v": "keep",
+"kind": "set",
+"reason": "Music Special featuring Fort Romeau."
+},
+"6d82cf65": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Mixmag's The Lab LDN."
+},
+"c3c30c77": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room mix by Fort Romeau."
+},
+"d76a038d": {
+"v": "unsure",
+"kind": "other",
+"reason": "Radio show, not a DJ set."
+},
+"e1714a64": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Pional."
+},
+"03926edd": {
+"v": "unsure",
+"kind": "other",
+"reason": "Multi-artist compilation, not a solo set."
+},
+"ca0ccde5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at DJ Mag HQ."
+},
+"4f64bdea": {
+"v": "keep",
+"kind": "other",
+"reason": "Radio show, not a DJ set."
+},
+"3910356b": {
+"v": "keep",
+"kind": "other",
+"reason": "Radio show, not a DJ set."
+},
+"9de3c406": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B set with another DJ."
+},
+"21a2727f": {
+"v": "keep",
+"kind": "other",
+"reason": "Interview/discussion, not a DJ set."
+},
+"515c24a9": {
+"v": "keep",
+"kind": "other",
+"reason": "Mix of tracks, not a DJ set."
+},
+"1f0e876e": {
+"v": "keep",
+"kind": "other",
+"reason": "DJ set, festival performance."
+},
+"e2102ef0": {
+"v": "keep",
+"kind": "other",
+"reason": "DJ set, Boiler Room recording."
+},
+"76568617": {
+"v": "keep",
+"kind": "other",
+"reason": "DJ mix, Resident Advisor recording."
+},
+"b98d383d": {
+"v": "keep",
+"kind": "other",
+"reason": "DJ mix, Crosstown Rebels recording."
+},
+"493cf7a5": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a Korsakow recording, podcast content."
+},
+"82734d87": {
+"v": "reject",
+"kind": "other",
+"reason": "Rimsky-Korsakow, not Korsakow's music."
+},
+"58311758": {
+"v": "keep",
+"kind": "tracklist",
+"reason": "Korsakow mix for Recorder.13 podcast."
+},
+"b4a809b7": {
+"v": "reject",
+"kind": "other",
+"reason": "Duplicate SoundCloud listing, not a mix."
+},
+"e265483a": {
+"v": "unsure",
+"kind": "other",
+"reason": "Florian Thalhofer's show, not Korsakow's."
+},
+"5db8a8d9": {
+"v": "reject",
+"kind": "other",
+"reason": "Rimsky-Korsakow symphony, unrelated artist."
+},
+"d7e4fd47": {
+"v": "unsure",
+"kind": "other",
+"reason": "Mix with multiple artists, not Korsakow."
+},
+"560fe5bc": {
+"v": "reject",
+"kind": "other",
+"reason": "Rimsky-Korsakow symphony, unrelated artist."
+},
+"da562a88": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"dd327fe5": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"1a61f21b": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"65f154b4": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"2e26a6f9": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"06d9f84f": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"39aa1c4a": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"9783083a": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"d85c4d5d": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"ab62942b": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"8a82114e": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b with Tornado Wallace - Paradigm Festival"
+},
+"27eb2368": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance by Sin\u00e9ad O'Connor"
+},
+"470bf1bc": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Sin\u00e9ad McCarthy"
+},
+"720061a1": {
+"v": "reject",
+"kind": "track",
+"reason": "Single track, not a DJ set"
+},
+"91fa2254": {
+"v": "reject",
+"kind": "other",
+"reason": "Author interview, not a DJ set"
+},
+"84e57df3": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by Sin\u00e9ad McCarthy"
+},
+"054b3b98": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance by Sin\u00e9ad O'Connor"
+},
+"d40265a9": {
+"v": "keep",
+"kind": "set",
+"reason": "Full concert - DJ set by Sin\u00e9ad"
+},
+"0321762b": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast interview, not a DJ set"
+},
+"74849402": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast interview, not a DJ set"
+},
+"272c13a0": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, interview with another artist."
+},
+"beb79c13": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a DJ set, personal story podcast."
+},
+"84476269": {
+"v": "keep",
+"kind": "tracklist",
+"reason": "Fault Radio DJ set by Sin\u00e9ad."
+},
+"e5d5e639": {
+"v": "keep",
+"kind": "tracklist",
+"reason": "Fault Radio DJ set by Sin\u00e9ad."
+},
+"09deed8f": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, interview with another artist."
+},
+"8e3d4497": {
+"v": "keep",
+"kind": "tracklist",
+"reason": "Live set by Sin\u00e9ad on HydeFM."
+},
+"34f13633": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, interview with another artist."
+},
+"76f372d0": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, featuring two artists."
+},
+"0637e8d0": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, interview with another artist."
+},
+"95fbced8": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, featuring another artist."
+},
+"69b417e4": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, business interview."
+},
+"74606c81": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, acoustic performance."
+},
+"f32d1b4b": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, podcast interview."
+},
+"3da474e9": {
+"v": "keep",
+"kind": "tracklist",
+"reason": "Fault Radio DJ set by Sin\u00e9ad."
+},
+"4afbd58e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Live concert, not a DJ set."
+},
+"5c74c8d0": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set, interview with another artist."
+},
+"9f34ed33": {
+"v": "keep",
+"kind": "tracklist",
+"reason": "The Lot Radio show by Sin\u00e9ad."
+},
+"c43037ea": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Album, not a DJ set."
+},
+"a397ef73": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Album, not a DJ set."
+},
+"e6d6d03a": {
+"v": "unsure",
+"kind": "other",
+"reason": "Podcast, not a DJ set."
+},
+"f655e879": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"c22f5f01": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad guest on The Lot Radio."
+},
+"440607d4": {
+"v": "reject",
+"kind": "other",
+"reason": "Sinead O'Connor, not the DJ."
+},
+"6e04d44c": {
+"v": "unsure",
+"kind": "other",
+"reason": "Interview, not a DJ set."
+},
+"00084378": {
+"v": "unsure",
+"kind": "other",
+"reason": "Not a DJ set or mix."
+},
+"3518f437": {
+"v": "unsure",
+"kind": "other",
+"reason": "Podcast interview, not a DJ set."
+},
+"7785e48d": {
+"v": "reject",
+"kind": "other",
+"reason": "Sinead O'Connor, not the DJ."
+},
+"e3aef6e8": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad guest on The Lot Radio."
+},
+"f927b23d": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad guest on The Lot Radio."
+},
+"f1b4648b": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad McCarthy on Arno & Burto Radio."
+},
+"cc0328b0": {
+"v": "unsure",
+"kind": "other",
+"reason": "Sewing vlog, not a DJ set."
+},
+"460a4324": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad set on themuddshow."
+},
+"b26882cb": {
+"v": "reject",
+"kind": "other",
+"reason": "Sinead O'Connor album, not a DJ set."
+},
+"eb5cac92": {
+"v": "reject",
+"kind": "other",
+"reason": "Sinead O'Connor album, not a DJ set."
+},
+"66e15554": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad guest on The Lot Radio."
+},
+"7cf9b702": {
+"v": "reject",
+"kind": "other",
+"reason": "Sinead O'Connor live, not the DJ."
+},
+"2ea3898e": {
+"v": "unsure",
+"kind": "other",
+"reason": "Podcast, not a DJ set."
+},
+"c9cd8283": {
+"v": "unsure",
+"kind": "other",
+"reason": "Hegarty's channel, not a DJ set."
+},
+"350c84e4": {
+"v": "reject",
+"kind": "other",
+"reason": "Sinead O'Connor live, not the DJ."
+},
+"a5474025": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad and S\u00e1nlo on Fault Radio."
+},
+"f03d7795": {
+"v": "unsure",
+"kind": "talk",
+"reason": "Interview, not a DJ set."
+},
+"8f614fea": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a DJ set or mix."
+},
+"7a651b3c": {
+"v": "unsure",
+"kind": "talk",
+"reason": "Interview, not a DJ set."
+},
+"cc892c15": {
+"v": "keep",
+"kind": "set",
+"reason": "Fault Radio show featuring Sin\u00e9ad."
+},
+"55fa64b9": {
+"v": "reject",
+"kind": "other",
+"reason": "Tarot reading, not a DJ set."
+},
+"2fc57cba": {
+"v": "reject",
+"kind": "other",
+"reason": "Music discussion, not a DJ set."
+},
+"7ababc78": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad b2b with maara."
+},
+"baa2cbdb": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "R&B playlist, not a DJ mix."
+},
+"7de0b592": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by Sin\u00e9ad and Sweet6teen."
+},
+"abdfc4f8": {
+"v": "keep",
+"kind": "set",
+"reason": "Polifonic podcast featuring Sin\u00e9ad."
+}
+},
+"timings": [
+{
+"n": 20,
+"sec": 116.7,
+"usage": {
+"completion_tokens": 955,
+"prompt_tokens": 977,
+"total_tokens": 1932,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 11,
+"sec": 59.9,
+"usage": {
+"completion_tokens": 467,
+"prompt_tokens": 705,
+"total_tokens": 1172,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+},
+{
+"n": 20,
+"sec": 113.9,
+"usage": {
+"completion_tokens": 929,
+"prompt_tokens": 981,
+"total_tokens": 1910,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 118.4,
+"usage": {
+"completion_tokens": 961,
+"prompt_tokens": 1018,
+"total_tokens": 1979,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+},
+{
+"n": 20,
+"sec": 116.9,
+"usage": {
+"completion_tokens": 944,
+"prompt_tokens": 1024,
+"total_tokens": 1968,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+},
+{
+"n": 14,
+"sec": 78.5,
+"usage": {
+"completion_tokens": 607,
+"prompt_tokens": 844,
+"total_tokens": 1451,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+},
+{
+"n": 20,
+"sec": 118.6,
+"usage": {
+"completion_tokens": 954,
+"prompt_tokens": 1017,
+"total_tokens": 1971,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 118.5,
+"usage": {
+"completion_tokens": 963,
+"prompt_tokens": 985,
+"total_tokens": 1948,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+},
+{
+"n": 9,
+"sec": 54.0,
+"usage": {
+"completion_tokens": 431,
+"prompt_tokens": 590,
+"total_tokens": 1021,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+},
+{
+"n": 8,
+"sec": 48.7,
+"usage": {
+"completion_tokens": 364,
+"prompt_tokens": 638,
+"total_tokens": 1002,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 72.0,
+"usage": {
+"completion_tokens": 497,
+"prompt_tokens": 1015,
+"total_tokens": 1512,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 122.1,
+"usage": {
+"completion_tokens": 972,
+"prompt_tokens": 1033,
+"total_tokens": 2005,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+},
+{
+"n": 20,
+"sec": 116.9,
+"usage": {
+"completion_tokens": 928,
+"prompt_tokens": 1007,
+"total_tokens": 1935,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+},
+{
+"n": 10,
+"sec": 60.9,
+"usage": {
+"completion_tokens": 468,
+"prompt_tokens": 672,
+"total_tokens": 1140,
+"prompt_tokens_details": {
+"cached_tokens": 1
+}
+}
+}
+]
+}

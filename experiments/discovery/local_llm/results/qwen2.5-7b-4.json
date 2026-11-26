@@ -1,0 +1,1142 @@
+{
+"model": "qwen2.5-7b",
+"shard": 4,
+"verdicts": {
+"45d385a8": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on SoundCloud"
+},
+"caea1e0f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Low Steppa"
+},
+"985f3e78": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on SoundCloud"
+},
+"92e3e653": {
+"v": "reject",
+"kind": "talk",
+"reason": "B2B with Harrison BDP"
+},
+"0bc37207": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set on YouTube"
+},
+"d556ab4f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Cover mix"
+},
+"1ad5a9f9": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast on SoundCloud"
+},
+"78ecb9a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast on SoundCloud"
+},
+"bde6a691": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast on SoundCloud"
+},
+"fb746ff8": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on SoundCloud"
+},
+"1d10f679": {
+"v": "reject",
+"kind": "talk",
+"reason": "Guestmix with SlothBoogie"
+},
+"d2661bb6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Guestmix with Eekoethee"
+},
+"f8064ad4": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on SoundCloud"
+},
+"5d48c6eb": {
+"v": "reject",
+"kind": "talk",
+"reason": "Tracklist"
+},
+"6d3a0f79": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on SoundCloud"
+},
+"b7f7fc2d": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on YouTube"
+},
+"b282d22f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Future date"
+},
+"8fe34abc": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with Ba Dum Tish"
+},
+"7f61e913": {
+"v": "reject",
+"kind": "talk",
+"reason": "Turned On podcast"
+},
+"c6ffd4c1": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"f11963a9": {
+"v": "keep",
+"kind": "other",
+"reason": "Extended guest mix"
+},
+"2769c831": {
+"v": "reject",
+"kind": "other",
+"reason": "Namesake"
+},
+"21a63474": {
+"v": "reject",
+"kind": "other",
+"reason": "Namesake"
+},
+"9677badd": {
+"v": "keep",
+"kind": "other",
+"reason": "Podcast"
+},
+"5f7bf37d": {
+"v": "keep",
+"kind": "other",
+"reason": "House mix"
+},
+"402ad61b": {
+"v": "keep",
+"kind": "other",
+"reason": "Live at Badaboum"
+},
+"09284bcd": {
+"v": "keep",
+"kind": "other",
+"reason": "House mix"
+},
+"5b562c8d": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B mix"
+},
+"83c6dca0": {
+"v": "keep",
+"kind": "other",
+"reason": "Live at Sub Club"
+},
+"c10ad308": {
+"v": "keep",
+"kind": "other",
+"reason": "Radio show"
+},
+"04f6c02f": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B live"
+},
+"6a99be30": {
+"v": "keep",
+"kind": "other",
+"reason": "Live at Bass Coast"
+},
+"f8ed1ff9": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B live"
+},
+"e6be7294": {
+"v": "reject",
+"kind": "other",
+"reason": "Namesake"
+},
+"6c8a6389": {
+"v": "keep",
+"kind": "other",
+"reason": "Festival archive"
+},
+"173abac7": {
+"v": "keep",
+"kind": "other",
+"reason": "Live at The Lot Radio"
+},
+"77ab10a4": {
+"v": "keep",
+"kind": "other",
+"reason": "Mix"
+},
+"dbeeeca4": {
+"v": "keep",
+"kind": "other",
+"reason": "B2B live"
+},
+"2eaee7b3": {
+"v": "keep",
+"kind": "other",
+"reason": "Live from Sydney"
+},
+"d7070fb0": {
+"v": "keep",
+"kind": "other",
+"reason": "Live at House of Love"
+},
+"1ad2a178": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"6d219f97": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by others"
+},
+"7e45b08a": {
+"v": "reject",
+"kind": "other",
+"reason": "Future date"
+},
+"7d34b3af": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set"
+},
+"7ac4d5b3": {
+"v": "reject",
+"kind": "other",
+"reason": "Live set"
+},
+"3365ff50": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set"
+},
+"0329f3cc": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview"
+},
+"37187e10": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"4de6199f": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by others"
+},
+"25d83dcf": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"19401777": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"e2155220": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by others"
+},
+"cdaf2d08": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"5d62a5cd": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"57c37415": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set"
+},
+"1e5a4663": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview"
+},
+"152d268b": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"c141339c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"3dcff972": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set"
+},
+"02310061": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"9f59d0c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Guestmix by Black Loops"
+},
+"8bb1c4e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Guestmix by Black Loops"
+},
+"cfe5f51c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Live performance, not a set"
+},
+"fd085236": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast by Black Loops"
+},
+"50046ae7": {
+"v": "reject",
+"kind": "set",
+"reason": "B2B mix, not solo"
+},
+"b57eac95": {
+"v": "reject",
+"kind": "track",
+"reason": "Hype Mix, not a set"
+},
+"c160f86c": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix by Black Loops"
+},
+"58ea368a": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B mix by Black Loops"
+},
+"c68f647a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Live performance, not a set"
+},
+"2b83f47b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast, not a set"
+},
+"9f42e623": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sisyphos"
+},
+"273efb0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sisyphos"
+},
+"6046a7ab": {
+"v": "reject",
+"kind": "talk",
+"reason": "Live performance, not a set"
+},
+"744c2b2b": {
+"v": "keep",
+"kind": "set",
+"reason": "Mega Mix"
+},
+"316283f9": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast, not a set"
+},
+"9c389c1b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Djoon"
+},
+"5fd026a9": {
+"v": "reject",
+"kind": "track",
+"reason": "Mix with others, not a set"
+},
+"338b001e": {
+"v": "reject",
+"kind": "set",
+"reason": "B2B mix, not solo"
+},
+"9705e268": {
+"v": "keep",
+"kind": "set",
+"reason": "Live recording"
+},
+"a4d0f34e": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B mix, live at Watergate"
+},
+"a0feb041": {
+"v": "keep",
+"kind": "other",
+"reason": "Namesake, not a set."
+},
+"95c51bc0": {
+"v": "keep",
+"kind": "other",
+"reason": "Namesake, not a set."
+},
+"46eab399": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Black Loops."
+},
+"46093b20": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Set by Black Loops."
+},
+"cf41d8f9": {
+"v": "keep",
+"kind": "other",
+"reason": "Namesake, not a set."
+},
+"fbf46082": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Black Loops."
+},
+"69367330": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Black Loops."
+},
+"0c9e6713": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Black Loops."
+},
+"ccc104d4": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix with others."
+},
+"24dbd067": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix with others."
+},
+"6623b421": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast with others."
+},
+"ee2d6098": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Black Loops."
+},
+"08b353ec": {
+"v": "reject",
+"kind": "other",
+"reason": "Podcast with others."
+},
+"f6bcef92": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set for Junction 2 Festival"
+},
+"e1bd4534": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Adam Pits"
+},
+"9668e3f3": {
+"v": "keep",
+"kind": "set",
+"reason": "Further Future mix"
+},
+"70624d82": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Set for Pirate Live"
+},
+"7132e4c2": {
+"v": "keep",
+"kind": "set",
+"reason": "DIM168 mix"
+},
+"1fca4bfd": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with others"
+},
+"a5455d1a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with others"
+},
+"7f50f1af": {
+"v": "keep",
+"kind": "set",
+"reason": "XLR8R+ Radio show"
+},
+"e33dd8b4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with others"
+},
+"442c3bc3": {
+"v": "keep",
+"kind": "set",
+"reason": "Self-Portrait mix"
+},
+"04dc7e77": {
+"v": "keep",
+"kind": "set",
+"reason": "Magnetic Mag mix"
+},
+"b5fcdf03": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM mix"
+},
+"5d53cee2": {
+"v": "keep",
+"kind": "set",
+"reason": "DTRH mix"
+},
+"49bd2658": {
+"v": "keep",
+"kind": "set",
+"reason": "DHA mix"
+},
+"4eeee2fd": {
+"v": "reject",
+"kind": "other",
+"reason": "Rinse FM show"
+},
+"f29798c7": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM mix"
+},
+"637afc5f": {
+"v": "keep",
+"kind": "set",
+"reason": "Walk Through mix"
+},
+"2f978f3c": {
+"v": "keep",
+"kind": "set",
+"reason": "Codex Naturae mix"
+},
+"f8212e31": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with others"
+},
+"3dc03315": {
+"v": "keep",
+"kind": "set",
+"reason": "DIM067 mix"
+},
+"af338bba": {
+"v": "keep",
+"kind": "other",
+"reason": "b2b mix"
+},
+"59de86b9": {
+"v": "keep",
+"kind": "other",
+"reason": "live stream"
+},
+"7ad7272c": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"8875f877": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast"
+},
+"565821fc": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview"
+},
+"0aedbdba": {
+"v": "keep",
+"kind": "other",
+"reason": "live mix"
+},
+"88dc1cad": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview"
+},
+"86502462": {
+"v": "keep",
+"kind": "other",
+"reason": "podcast"
+},
+"b18d8695": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"cebf8a61": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"ee083a06": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"24e5f9b5": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast"
+},
+"2a53b7d1": {
+"v": "reject",
+"kind": "talk",
+"reason": "mixtape"
+},
+"c00e1824": {
+"v": "keep",
+"kind": "other",
+"reason": "radio show"
+},
+"cec329ba": {
+"v": "keep",
+"kind": "other",
+"reason": "mix"
+},
+"dc697030": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on The Lot Radio"
+},
+"c9eef617": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Club Space Miami"
+},
+"a3d2a365": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Jamie 376"
+},
+"3a1e9041": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with The Ghost"
+},
+"cfc212ac": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Josh Baker"
+},
+"842dcf2e": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room set"
+},
+"9ee318d6": {
+"v": "keep",
+"kind": "set",
+"reason": "Exclusive set for OCHO"
+},
+"2696e4f3": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast by Gene On Earth"
+},
+"7f41ed66": {
+"v": "keep",
+"kind": "set",
+"reason": "Limousine Dream set"
+},
+"10de0b88": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set on The Lot Radio"
+},
+"40724818": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Dimensions Festival"
+},
+"20fac57a": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room set"
+},
+"f68347fe": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Dyed Soundorom"
+},
+"b02c115e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist for others"
+},
+"ae972018": {
+"v": "keep",
+"kind": "set",
+"reason": "Dimensions Festival set"
+},
+"b7b9747c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with GHOSTCAST"
+},
+"6887d563": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Banana Box TV"
+},
+"7a89a5a4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Stuart Hunter"
+},
+"f0fe8d65": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Romanian Club Culture"
+},
+"7365f61b": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set at Dimensions Festival"
+},
+"cce49a66": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview/talk"
+},
+"b718a06b": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"c7f3bb68": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set"
+},
+"93813adb": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"f8a30311": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set"
+},
+"ea918579": {
+"v": "keep",
+"kind": "set",
+"reason": "Live rooftop set by Pierre Marty"
+},
+"08e46d66": {
+"v": "reject",
+"kind": "other",
+"reason": "Brahms piece by Jean Pierre Marty"
+},
+"abf29969": {
+"v": "reject",
+"kind": "talk",
+"reason": "Psychoanalysis talk"
+},
+"3baa6f99": {
+"v": "keep",
+"kind": "set",
+"reason": "Live act by Pierre Marty"
+},
+"f96b1ab9": {
+"v": "reject",
+"kind": "other",
+"reason": "TV interview"
+},
+"5e3953c0": {
+"v": "reject",
+"kind": "other",
+"reason": "Oboe concerto performance"
+},
+"f5449280": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Paul van Bellen, not Joost"
+},
+"19c58a67": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ mix by Joost"
+},
+"c2cefc30": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with The Rad Pack"
+},
+"55bdfb0e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at ADE"
+},
+"6ee906e7": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sensation White"
+},
+"27721c88": {
+"v": "keep",
+"kind": "set",
+"reason": "Solo set at Rauw"
+},
+"f25f478c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview, not music"
+},
+"91ca32ae": {
+"v": "reject",
+"kind": "other",
+"reason": "Windsurfing video"
+},
+"42bf87e4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Free 4 you!"
+},
+"9e7f4c79": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix from Roxy Amsterdam"
+},
+"8f138a97": {
+"v": "reject",
+"kind": "talk",
+"reason": "Windsurfing podcast"
+},
+"8ec5348e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Roxy Amsterdam"
+},
+"19e2e229": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix from Rauw"
+},
+"eaa19ca2": {
+"v": "reject",
+"kind": "other",
+"reason": "Guide, not mix"
+},
+"9d95a07f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Rauw"
+},
+"1206cccb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at 3FM"
+},
+"57b29bb3": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix from Roxy Amsterdam"
+},
+"fe3712b5": {
+"v": "reject",
+"kind": "talk",
+"reason": "Windsurfing video"
+},
+"371b5bca": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix from Roxy Amsterdam"
+},
+"77ef2616": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Chemistry"
+},
+"1b7628b8": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Roxy Amsterdam"
+},
+"418882e1": {
+"v": "reject",
+"kind": "other",
+"reason": "Collaboration, not solo"
+},
+"3e03009b": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix on radio show"
+},
+"f419d8f8": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a DJ set"
+},
+"6b51652e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"efc67a7a": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Roxy Amsterdam"
+},
+"892d855a": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a DJ set"
+},
+"64d80bcb": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Speedfreaks"
+},
+"2a137184": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a DJ set"
+},
+"43907e68": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"904c23a0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Mary Go Wild"
+},
+"20cb3068": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Melkweg"
+},
+"2ae4144b": {
+"v": "reject",
+"kind": "other",
+"reason": "Not related to DJ"
+},
+"74ff3c76": {
+"v": "reject",
+"kind": "other",
+"reason": "Not related to DJ"
+},
+"847c31c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Free Your Mind Festival"
+},
+"675a4cc1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at De Waakzaamheid"
+},
+"b24fce17": {
+"v": "reject",
+"kind": "other",
+"reason": "Not a DJ set"
+},
+"cfdaf04d": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set on radio show"
+},
+"92071b83": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set on radio show"
+}
+},
+"timings": [
+{
+"n": 20,
+"sec": 108.4,
+"usage": {
+"completion_tokens": 594,
+"prompt_tokens": 1005,
+"total_tokens": 1599,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 104.2,
+"usage": {
+"completion_tokens": 600,
+"prompt_tokens": 1055,
+"total_tokens": 1655,
+"prompt_tokens_details": {
+"cached_tokens": 324
+}
+}
+},
+{
+"n": 20,
+"sec": 104.9,
+"usage": {
+"completion_tokens": 585,
+"prompt_tokens": 1067,
+"total_tokens": 1652,
+"prompt_tokens_details": {
+"cached_tokens": 324
+}
+}
+},
+{
+"n": 20,
+"sec": 120.8,
+"usage": {
+"completion_tokens": 656,
+"prompt_tokens": 1130,
+"total_tokens": 1786,
+"prompt_tokens_details": {
+"cached_tokens": 324
+}
+}
+},
+{
+"n": 13,
+"sec": 68.7,
+"usage": {
+"completion_tokens": 423,
+"prompt_tokens": 789,
+"total_tokens": 1212,
+"prompt_tokens_details": {
+"cached_tokens": 324
+}
+}
+},
+{
+"n": 20,
+"sec": 111.0,
+"usage": {
+"completion_tokens": 613,
+"prompt_tokens": 936,
+"total_tokens": 1549,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 15,
+"sec": 74.4,
+"usage": {
+"completion_tokens": 437,
+"prompt_tokens": 852,
+"total_tokens": 1289,
+"prompt_tokens_details": {
+"cached_tokens": 316
+}
+}
+},
+{
+"n": 20,
+"sec": 110.7,
+"usage": {
+"completion_tokens": 629,
+"prompt_tokens": 993,
+"total_tokens": 1622,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 5,
+"sec": 24.6,
+"usage": {
+"completion_tokens": 156,
+"prompt_tokens": 493,
+"total_tokens": 649,
+"prompt_tokens_details": {
+"cached_tokens": 309
+}
+}
+},
+{
+"n": 6,
+"sec": 37.3,
+"usage": {
+"completion_tokens": 193,
+"prompt_tokens": 553,
+"total_tokens": 746,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 115.2,
+"usage": {
+"completion_tokens": 627,
+"prompt_tokens": 1132,
+"total_tokens": 1759,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 19,
+"sec": 106.6,
+"usage": {
+"completion_tokens": 608,
+"prompt_tokens": 1102,
+"total_tokens": 1710,
+"prompt_tokens_details": {
+"cached_tokens": 340
+}
+}
+}
+]
+}

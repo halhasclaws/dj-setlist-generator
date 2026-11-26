@@ -1,0 +1,1060 @@
+{
+"model": "qwen3-4b",
+"shard": 5,
+"verdicts": {
+"c3f3f0d4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a DJ set"
+},
+"cce43d2a": {
+"v": "unsure",
+"kind": "other",
+"reason": "Radio show with Pharoahe Monch, unclear format"
+},
+"70a24698": {
+"v": "keep",
+"kind": "set",
+"reason": "DMC finals live set with Boogie Blind"
+},
+"829df72a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode, not a DJ set"
+},
+"37f9d565": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode, not a DJ set"
+},
+"9bfe345f": {
+"v": "keep",
+"kind": "set",
+"reason": "Japan tour live set"
+},
+"76a2f99a": {
+"v": "keep",
+"kind": "set",
+"reason": "X-Men mix, likely live or recorded set"
+},
+"e227d06e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Hosted by Lord Finesse, not Boogie Blind"
+},
+"d1bd117e": {
+"v": "reject",
+"kind": "track",
+"reason": "Mix by OutCyde, not Boogie Blind"
+},
+"1b8ea57c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode, not a DJ set"
+},
+"536e58fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room NYC live set"
+},
+"33e9aba8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Blackout Radio Croatia"
+},
+"fa02b53a": {
+"v": "keep",
+"kind": "set",
+"reason": "Definitive DITC mix, likely live or curated"
+},
+"5f84364c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Turntable Lab"
+},
+"abf8085a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live X-Men set at Fresh 45s"
+},
+"d58d8f53": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Fresh 45s"
+},
+"203d991e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Fresh 45s"
+},
+"33c60480": {
+"v": "reject",
+"kind": "track",
+"reason": "Set by Ximeno, not Boogie Blind"
+},
+"7d95e94a": {
+"v": "keep",
+"kind": "set",
+"reason": "Definitive DITC mix, likely live or curated"
+},
+"8f51e918": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"ae9b9492": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Rehearsal mix, unclear if performance or practice"
+},
+"264aab9b": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio episode featuring Boogie Blind"
+},
+"13268cdd": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix of Pharcyde's tracks, not his own set"
+},
+"1648a96e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a performance"
+},
+"2a1c3865": {
+"v": "unsure",
+"kind": "other",
+"reason": "Rehearsal, not a live set"
+},
+"c59fe9c5": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix of VIC's discography, not his own"
+},
+"017959e8": {
+"v": "keep",
+"kind": "set",
+"reason": "Self-hosted mix, likely DJ set"
+},
+"2d020c48": {
+"v": "keep",
+"kind": "set",
+"reason": "Live mixtape, likely DJ performance"
+},
+"ba6e59a2": {
+"v": "keep",
+"kind": "set",
+"reason": "Live b2b set with Pharaoh Monch"
+},
+"57cb1309": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show about him, not a performance"
+},
+"efe88834": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview about music and new album"
+},
+"68b70274": {
+"v": "reject",
+"kind": "other",
+"reason": "group mixtape, not DJ set"
+},
+"0cc8be8d": {
+"v": "reject",
+"kind": "track",
+"reason": "single track, not a set"
+},
+"c1cef45f": {
+"v": "reject",
+"kind": "other",
+"reason": "feature in mixtape, not DJ set"
+},
+"8ddd1d4e": {
+"v": "reject",
+"kind": "other",
+"reason": "group performance, not DJ set"
+},
+"0d9a36ab": {
+"v": "reject",
+"kind": "other",
+"reason": "group performance, not DJ set"
+},
+"c926cb90": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview with Talib Kweli"
+},
+"26ad1797": {
+"v": "reject",
+"kind": "talk",
+"reason": "talk about new album"
+},
+"96fbe357": {
+"v": "keep",
+"kind": "set",
+"reason": "all 45 set, matches profile"
+},
+"16147175": {
+"v": "reject",
+"kind": "talk",
+"reason": "interview with Talib Kweli"
+},
+"380c88ec": {
+"v": "unsure",
+"kind": "other",
+"reason": "live performance, unclear if DJ set"
+},
+"cb4cc54b": {
+"v": "unsure",
+"kind": "other",
+"reason": "live performance, no DJ set details"
+},
+"073023e5": {
+"v": "reject",
+"kind": "other",
+"reason": "group mixtape"
+},
+"c52c3e13": {
+"v": "reject",
+"kind": "other",
+"reason": "feature in mixtape"
+},
+"6ffbd48e": {
+"v": "reject",
+"kind": "other",
+"reason": "anniversary mixtape"
+},
+"19dca07f": {
+"v": "reject",
+"kind": "talk",
+"reason": "podcast interview"
+},
+"7a771280": {
+"v": "reject",
+"kind": "other",
+"reason": "battle match"
+},
+"8040c0a6": {
+"v": "reject",
+"kind": "talk",
+"reason": "talk about history and new project"
+},
+"01e2fbd1": {
+"v": "keep",
+"kind": "set",
+"reason": "live at Hip Hop Kemp, festival DJ set"
+},
+"f1cbb0e2": {
+"v": "keep",
+"kind": "set",
+"reason": "all 45 set at Plan B, matches profile"
+},
+"64736954": {
+"v": "keep",
+"kind": "set",
+"reason": "Diamond D & Large Professor playing 45s in Manchester"
+},
+"f88baffc": {
+"v": "keep",
+"kind": "set",
+"reason": "Diamond D at A3C festival, live DJ set"
+},
+"dbe10227": {
+"v": "keep",
+"kind": "set",
+"reason": "Diamond D's all 45 DJ set in San Diego"
+},
+"cc645f2e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview, not a DJ set"
+},
+"1ed1c1e8": {
+"v": "reject",
+"kind": "other",
+"reason": "Mixtape with many artists, not Diamond D's set"
+},
+"da681faa": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by Marco Fregonese, not Diamond D"
+},
+"dbe42dee": {
+"v": "reject",
+"kind": "other",
+"reason": "Salsa mix by DJ Diamond D, not hip hop 45s set"
+},
+"ab3c2afa": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix with many artists, not Diamond D's set"
+},
+"3aed76ca": {
+"v": "keep",
+"kind": "set",
+"reason": "Diamond D & Mark the 45 King in 45 sessions"
+},
+"4f76ab06": {
+"v": "keep",
+"kind": "set",
+"reason": "Live show for Stunts Blunts anniversary"
+},
+"82945818": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview on 30 years in the game"
+},
+"26cfbe53": {
+"v": "reject",
+"kind": "talk",
+"reason": "Behind the Beats documentary, not a DJ set"
+},
+"868e614f": {
+"v": "reject",
+"kind": "other",
+"reason": "45 show with multiple DJs, not Diamond D solo"
+},
+"258f77f3": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"a0486db2": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Coymix LTD with Guy Contact, not solo set"
+},
+"b454b43d": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at H\u00d6R Berlin"
+},
+"c8131c1d": {
+"v": "keep",
+"kind": "set",
+"reason": "Origins Tapes live set"
+},
+"6b3779b6": {
+"v": "keep",
+"kind": "set",
+"reason": "Pitch Music & Arts 2025 live set"
+},
+"68051a0f": {
+"v": "reject",
+"kind": "track",
+"reason": "PN 129 is a mix, not a live set"
+},
+"24402fb6": {
+"v": "keep",
+"kind": "set",
+"reason": "Live from Skylab Radio"
+},
+"b73f0532": {
+"v": "reject",
+"kind": "other",
+"reason": "Festival set, not clearly attributed"
+},
+"ff3d677f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Seoul Community Radio"
+},
+"017da1ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room live set"
+},
+"78bb28d1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Paper-Cuts"
+},
+"a11ce268": {
+"v": "keep",
+"kind": "set",
+"reason": "Butter Mix live set"
+},
+"d82dd860": {
+"v": "keep",
+"kind": "set",
+"reason": "Dimensions Festival live set"
+},
+"8c6d7906": {
+"v": "keep",
+"kind": "set",
+"reason": "Essential Mix live set"
+},
+"1a89172c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at System X ONO"
+},
+"2211ba52": {
+"v": "reject",
+"kind": "other",
+"reason": "Live with Spinifex, not solo"
+},
+"a0e1d35e": {
+"v": "reject",
+"kind": "other",
+"reason": "Neurocrank mix, not live"
+},
+"15034aa6": {
+"v": "keep",
+"kind": "set",
+"reason": "Live from Music Room"
+},
+"6ac308fc": {
+"v": "keep",
+"kind": "set",
+"reason": "HORS-SOL Australian takeover"
+},
+"81511c7a": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"5b0bd737": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh & Piticu live set at venue"
+},
+"3a1a2c1b": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Petre Inspirescu at ZebraRec"
+},
+"861dfd66": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Cocoon Green&Blue 2011"
+},
+"72fa31bb": {
+"v": "reject",
+"kind": "other",
+"reason": "Ricardo Villalobos & Raresh, but date is 2006, venue not confirmed"
+},
+"fadf883c": {
+"v": "reject",
+"kind": "other",
+"reason": "Pedro and Raresh, but not solo or clear Raresh set"
+},
+"830a3fca": {
+"v": "reject",
+"kind": "other",
+"reason": "Albin Kaczka's set with Raresh, not Raresh solo"
+},
+"254ec3a7": {
+"v": "reject",
+"kind": "other",
+"reason": "Live before Raresh, not a set by Raresh"
+},
+"2341fe91": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh at Montanejos 2023"
+},
+"59b0c6dc": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh & [arpiar] at DC10 Ibiza"
+},
+"e9ac948a": {
+"v": "keep",
+"kind": "set",
+"reason": "Ricardo Villalobos & Raresh at Caprices 2025"
+},
+"0526f252": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh at Sunrise Hub opening"
+},
+"a36b27e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh & Villalobos minimal techno set"
+},
+"7e30ab65": {
+"v": "keep",
+"kind": "set",
+"reason": "Recorded at Houghton 2023"
+},
+"1a4f4c81": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush EP guest mix, not Raresh set"
+},
+"48dd177e": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh & Praslea, not solo set"
+},
+"800fe15f": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Pedro at DC10, not solo"
+},
+"9a981d1d": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Pedro, not solo set"
+},
+"7da7ea31": {
+"v": "reject",
+"kind": "other",
+"reason": "Praslea & Raresh, not solo"
+},
+"5f5b36fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Fine Days Festival"
+},
+"0f1254a4": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"f623ab16": {
+"v": "keep",
+"kind": "set",
+"reason": "Promo mix by Raresh at fabric"
+},
+"24baff4c": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh b2b Cap at Playa9 live set"
+},
+"c0c81496": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh b2b Arapu live at Monteoru"
+},
+"a7fe765f": {
+"v": "reject",
+"kind": "other",
+"reason": "Guest mix by Dan Medesan, not by Raresh"
+},
+"e68f220e": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush live, not Raresh"
+},
+"e426e57f": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush, not Raresh"
+},
+"29dedf2a": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush, not Raresh"
+},
+"80df34d2": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh b2b Cap 2020 at Playa9"
+},
+"cf285393": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush, not Raresh"
+},
+"7a899358": {
+"v": "reject",
+"kind": "other",
+"reason": "Praslesh (Raresh & Praslea), but not a solo set by Raresh"
+},
+"75eda512": {
+"v": "reject",
+"kind": "other",
+"reason": "[a:rpia:r] set, not solo Raresh"
+},
+"5e194e4f": {
+"v": "reject",
+"kind": "other",
+"reason": "Curated by F\u00e0bregas, not Raresh"
+},
+"07f87cc4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live studio session by Raresh"
+},
+"dfdb6854": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sunwaves with [a:rpia:r]"
+},
+"f0387ffa": {
+"v": "reject",
+"kind": "other",
+"reason": "Guest mix by Roberth"
+},
+"fea709ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh live at Zebra Club"
+},
+"2dd0db0b": {
+"v": "keep",
+"kind": "set",
+"reason": "[a:rpia:r] live at Caprices Morocco"
+},
+"00962c30": {
+"v": "unsure",
+"kind": "other",
+"reason": "Future event, no confirmation"
+},
+"842ca2c3": {
+"v": "keep",
+"kind": "set",
+"reason": "Mixed by Raresh for Green & Blue"
+},
+"dc911b0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Arpiar including Raresh"
+},
+"ca8d7a31": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Guest mix, not by Raresh"
+},
+"20506b01": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Guest mix, not by Raresh"
+},
+"f9abcd91": {
+"v": "keep",
+"kind": "set",
+"reason": "Live trio set at Snagov"
+},
+"20311dfb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with Raresh"
+},
+"9acf20ad": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Guest mix, not by Raresh"
+},
+"83882fe8": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"f3967e3b": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B live set"
+},
+"b1f407cf": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sunwaves"
+},
+"3d606cd1": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B live set"
+},
+"5cbd8756": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B live set"
+},
+"8c37a20a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sunrise afterparty"
+},
+"17dcafd5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live show at Cluj"
+},
+"f24bc3b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live show at private party"
+},
+"026df9ea": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix by 430, Raresh appears"
+},
+"55671cc2": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with Rhadoo and Pedro"
+},
+"4f9069ef": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Guest mix, not by Raresh"
+},
+"f21c0c5b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Dimensions"
+},
+"dd6a1a11": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Cocoon Ibiza"
+},
+"32a100d0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at DC10"
+},
+"eceb5086": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"2f8ae4d9": {
+"v": "reject",
+"kind": "other",
+"reason": "Ricardo Villalobos b2b Raresh is a mix by Villalobos, not Raresh's set"
+},
+"820ce230": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush is a different artist; mix is not by Raresh"
+},
+"5a350f62": {
+"v": "reject",
+"kind": "other",
+"reason": "Praslesh b2b Raresh is a guest mix; not Raresh's own set"
+},
+"c8c0eada": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush guest mix; not Raresh's own mix"
+},
+"198cc181": {
+"v": "reject",
+"kind": "other",
+"reason": "Ambient mix by unknown; not Raresh's set"
+},
+"2e151d9a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance at Nights.Ro awards in Bucharest"
+},
+"9f60cfbe": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush guest mix; not Raresh's own set"
+},
+"aa9dfe52": {
+"v": "reject",
+"kind": "other",
+"reason": "Praslesh b2b Raresh at festival; not Raresh's own set"
+},
+"2fe24b14": {
+"v": "keep",
+"kind": "set",
+"reason": "Ricardo Villalobos b2b Raresh at ADE; live set"
+},
+"e6366c3a": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh b2b Cezar live in London"
+},
+"14aef4e2": {
+"v": "keep",
+"kind": "set",
+"reason": "Fabric 78 full mix by Raresh (2014)"
+},
+"c9af8640": {
+"v": "reject",
+"kind": "other",
+"reason": "Mix by Dan Medesan and Raresh Rush; not Raresh's solo set"
+},
+"3757d32b": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh live at Houghton, 2025 (future date, but confirmed performance)"
+},
+"d131f1a8": {
+"v": "reject",
+"kind": "other",
+"reason": "[a:rpia:r] live set; Raresh is part of trio, not solo"
+},
+"8f8231fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Zebra Club Bacau, Romania"
+},
+"227cd023": {
+"v": "reject",
+"kind": "other",
+"reason": "Radio station mix with multiple artists; not Raresh's set"
+},
+"583f1f2a": {
+"v": "keep",
+"kind": "set",
+"reason": "Raresh b2b Cezar live at picnic festival"
+},
+"9aaccd7f": {
+"v": "reject",
+"kind": "other",
+"reason": "Raresh Rush home mix; not Raresh's own mix"
+},
+"109e0dc8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Lima, 2026"
+},
+"8cdf01fd": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Iasi 2012"
+},
+"341b65de": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast interview"
+},
+"b6ee4398": {
+"v": "keep",
+"kind": "set",
+"reason": "Afterparty live set"
+},
+"2f360e7c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sunwaves 2023"
+},
+"0d30083c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Secret Solstice 2018"
+},
+"b41128d2": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sunwaves 2023"
+},
+"1d6b7327": {
+"v": "reject",
+"kind": "other",
+"reason": "B2B with Arapu, not a:rpia:r set"
+},
+"17b2679e": {
+"v": "reject",
+"kind": "other",
+"reason": "RPR showcase, not a:rpia:r set"
+},
+"0cd4995e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sonar 2015"
+},
+"3b59d50a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Secret Solstice 2018"
+},
+"91ead215": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Secret Solstice 2018"
+},
+"b9bec2f9": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at GH 2025"
+},
+"73708bcc": {
+"v": "reject",
+"kind": "other",
+"reason": "Live with Jetru, not solo a:rpia:r"
+},
+"25d67dd5": {
+"v": "reject",
+"kind": "other",
+"reason": "Live with Jetru, not solo"
+},
+"f439b526": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at 12HDM Iasi 2012"
+},
+"e20668be": {
+"v": "reject",
+"kind": "other",
+"reason": "Live in Chile, not confirmed a:rpia:r"
+},
+"5baa1680": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at BPM Festival 2013"
+},
+"1d96f412": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Fabric 2018"
+},
+"731e51e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at London home party"
+},
+"4cfd1c65": {
+"v": "keep",
+"kind": "set",
+"reason": "Live RPR Soundsystem set at release party"
+},
+"2357ffa7": {
+"v": "keep",
+"kind": "set",
+"reason": "Live trio set at Sunwaves festival"
+},
+"eed05482": {
+"v": "keep",
+"kind": "set",
+"reason": "Live RPR Soundsystem set at release party"
+}
+},
+"timings": [
+{
+"n": 20,
+"sec": 135.3,
+"usage": {
+"completion_tokens": 682,
+"prompt_tokens": 1035,
+"total_tokens": 1717,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 154.2,
+"usage": {
+"completion_tokens": 1083,
+"prompt_tokens": 675,
+"total_tokens": 1758,
+"prompt_tokens_details": {
+"cached_tokens": 308
+}
+}
+},
+{
+"n": 20,
+"sec": 240.6,
+"usage": {
+"completion_tokens": 1295,
+"prompt_tokens": 1133,
+"total_tokens": 2428,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 14,
+"sec": 126.6,
+"usage": {
+"completion_tokens": 765,
+"prompt_tokens": 905,
+"total_tokens": 1670,
+"prompt_tokens_details": {
+"cached_tokens": 349
+}
+}
+},
+{
+"n": 19,
+"sec": 118.0,
+"usage": {
+"completion_tokens": 611,
+"prompt_tokens": 877,
+"total_tokens": 1488,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 152.2,
+"usage": {
+"completion_tokens": 722,
+"prompt_tokens": 1166,
+"total_tokens": 1888,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 20,
+"sec": 185.6,
+"usage": {
+"completion_tokens": 994,
+"prompt_tokens": 1202,
+"total_tokens": 2196,
+"prompt_tokens_details": {
+"cached_tokens": 374
+}
+}
+},
+{
+"n": 20,
+"sec": 239.7,
+"usage": {
+"completion_tokens": 1344,
+"prompt_tokens": 1151,
+"total_tokens": 2495,
+"prompt_tokens_details": {
+"cached_tokens": 374
+}
+}
+},
+{
+"n": 18,
+"sec": 177.4,
+"usage": {
+"completion_tokens": 1018,
+"prompt_tokens": 1085,
+"total_tokens": 2103,
+"prompt_tokens_details": {
+"cached_tokens": 374
+}
+}
+},
+{
+"n": 20,
+"sec": 163.2,
+"usage": {
+"completion_tokens": 726,
+"prompt_tokens": 1303,
+"total_tokens": 2029,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 3,
+"sec": 55.2,
+"usage": {
+"completion_tokens": 412,
+"prompt_tokens": 544,
+"total_tokens": 956,
+"prompt_tokens_details": {
+"cached_tokens": 374
+}
+}
+}
+]
+}

@@ -196,6 +196,8 @@ def rec_fs(index, key, offset, fskew=0.0):
 
 
 D07C_OFF = {**PROFILE, 'SAMPLE_YIELD_MAX_AGREEING': 0, 'LOOP_RESCUE_RUN': 0}
+# sample yield ships off: it dropped Joshwa - Freaks on Sinead, a correct entry
+YIELD_ON = {**PROFILE, 'SAMPLE_YIELD_MAX_AGREEING': 6}
 
 
 class SampleYieldTests(unittest.TestCase):
@@ -215,8 +217,11 @@ class SampleYieldTests(unittest.TestCase):
         titles = [t.title for t in build(self.recs(), **D07C_OFF)]
         self.assertIn('ts', titles)
 
+    def test_off_in_shipped_profile(self):
+        self.assertIn('ts', [t.title for t in build(self.recs(), **PROFILE)])
+
     def test_sample_yields_and_host_takes_its_span(self):
-        tracks = build(self.recs(), **PROFILE)
+        tracks = build(self.recs(), **YIELD_ON)
         self.assertEqual([t.title for t in tracks], ['th'])
         self.assertEqual((tracks[0].start_time, tracks[0].end_time), (15.0, 285.0))
 
@@ -224,13 +229,13 @@ class SampleYieldTests(unittest.TestCase):
         # 8 agreeing detections is above the cap: no yield even when wrapped
         recs = [rec(i, 's', 100.0 + 15 * i) for i in (1, 2, 3, 14, 15, 16, 17, 18)] + \
                [rec(i, 'h', 15.0 * i) for i in (6, 7, 8)]
-        self.assertIn('ts', [t.title for t in build(recs, **PROFILE)])
+        self.assertIn('ts', [t.title for t in build(recs, **YIELD_ON)])
 
     def test_far_away_detections_do_not_stretch_host(self):
         # the weak track's detections are far from the host: no wrap, no yield
         recs = [rec(1, 's', 10.0), rec(2, 's', 25.0), rec(60, 's', 300.0), rec(61, 's', 1.0),
                 rec(62, 's', 400.0)] + [rec(i, 'h', 15.0 * i) for i in (30, 31, 32)]
-        tracks = build(recs, **PROFILE)
+        tracks = build(recs, **YIELD_ON)
         host = [t for t in tracks if t.title == 'th'][0]
         self.assertEqual(host.start_time, 450.0)
 
@@ -255,6 +260,20 @@ class LoopRescueTests(unittest.TestCase):
     def test_pitched_run_is_not_rescued(self):
         recs = [rec_fs(i, 'p', o, 0.03) for i, o, _ in self.she_knew]
         self.assertEqual(build(recs, **PROFILE), [])
+
+    def test_slightly_pitched_run_is_not_rescued(self):
+        # Dyed Soundorom TPF-008 1:31:30, Sellens - Back Down: judged wrong by ear
+        sellens = [(373, 311.67, -0.0059), (374, 196.98, -0.0050), (375, 84.23, -0.0041),
+                   (376, 396.32, -0.0033), (377, 119.05, -0.0045)]
+        recs = [rec_fs(i, 'w', o, f) for i, o, f in sellens]
+        self.assertEqual(build(recs, **PROFILE), [])
+
+    def test_unpitched_loop_is_kept(self):
+        # Ben UFO, Live on planet Flexmodia 51:00, Spooky Bizzle - Lick Shots: judged right by ear
+        lick = [(204, 20.53, 0.0008), (205, 254.78, 0.0004), (206, 105.18, 0.0), (207, 175.04, 0.0006),
+                (208, 25.51, 0.0002)]
+        recs = [rec_fs(i, 'l', o, f) for i, o, f in lick]
+        self.assertEqual([(t.title, t.start_time) for t in build(recs, **PROFILE)], [('tl', 3060.0)])
 
     def test_short_run_is_not_rescued(self):
         recs = [rec_fs(i, 'k', o, f) for i, o, f in self.she_knew[:4]]

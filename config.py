@@ -129,12 +129,13 @@ class Config:
     # windows, its offsets jump around (no step between consecutive windows
     # moves less than LOOP_RESCUE_FROZEN_SECONDS, i.e. not one short fragment
     # matched over and over) and it is not pitched (|frequencyskew| below
-    # LOOP_RESCUE_MAX_FSKEW). Looped D&B sections match different places in the
+    # LOOP_RESCUE_MAX_FSKEW; 0.004 keeps She Knew and Ben UFO's Lick Shots and drops
+    # Dyed Soundorom's Sellens add, all three judged by ear). Looped D&B sections match different places in the
     # track, so no two detections agree (Highkin Sunday 30:15, Pappa Gee &
     # J-Rize - She Knew). 0 disables.
     LOOP_RESCUE_RUN = int(os.getenv('LOOP_RESCUE_RUN', '0'))
     LOOP_RESCUE_FROZEN_SECONDS = float(os.getenv('LOOP_RESCUE_FROZEN_SECONDS', '8'))
-    LOOP_RESCUE_MAX_FSKEW = float(os.getenv('LOOP_RESCUE_MAX_FSKEW', '0.01'))
+    LOOP_RESCUE_MAX_FSKEW = float(os.getenv('LOOP_RESCUE_MAX_FSKEW', '0.004'))
 
     # Duplicate-version merge (D07): entries with the same artist and the same
     # title before any bracketed version tag, starting within this many seconds,
@@ -193,8 +194,9 @@ CLUSTERING_PROFILES = {
         'OFFSET_TIMING_EXTEND_WINDOWS': 8,
         'OFFSET_TIMING_EXTEND_MODE': 'span',
         # D07c: a weak sample wrapped around a verified track yields to it, and a
-        # 5-window looped run is kept when nothing verified is playing.
-        'SAMPLE_YIELD_MAX_AGREEING': 6,
+        # 5-window looped run is kept when nothing verified is playing. Sample yield
+        # stays off: on Hal's 45-mix scoring it dropped a correct Joshwa entry.
+        'SAMPLE_YIELD_MAX_AGREEING': 0,
         'LOOP_RESCUE_RUN': 5,
         'DUPLICATE_MERGE_SECONDS': 300.0,
         'FALSE_POSITIVE_SCORE_MIN': 0.30,

@@ -1,0 +1,95 @@
+name: local-llm-eval
+
+# Experiment: can a free local model on the GitHub runner judge discovery
+# candidates as well as the Claude check? Uses no secrets and no database.
+on:
+  push:
+    branches: [experiment/discovery-search]
+    paths:
+      - experiments/discovery/local_llm/run_eval.py
+      - experiments/discovery/local_llm/data.json
+      - .github/workflows/local-llm-eval.yml
+  workflow_dispatch:
+
+concurrency:
+  group: local-llm-eval
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        model:
+          - {name: qwen3-4b, url: "https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/resolve/main/Qwen3-4B-Instruct-2507-Q4_K_M.gguf"}
+          - {name: qwen2.5-7b, url: "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf"}
+          - {name: gemma3-4b, url: "https://huggingface.co/unsloth/gemma-3-4b-it-GGUF/resolve/main/gemma-3-4b-it-Q4_K_M.gguf"}
+        shard: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Machine
+        run: nproc; free -g
+
+      - name: Get llama.cpp
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p llama && cd llama
+          gh release download --repo ggml-org/llama.cpp --pattern '*-bin-ubuntu-x64.zip' --pattern '*-bin-ubuntu-x64.tar.gz' || true
+          ls -la
+          for f in *.zip; do [ -e "$f" ] && unzip -q "$f"; done
+          for f in *.tar.gz; do [ -e "$f" ] && tar xzf "$f"; done
+          SERVER=$(find . -type f -name llama-server | head -1)
+          echo "SERVER=$PWD/${SERVER#./}" >> "$GITHUB_ENV"
+          echo "LIBDIR=$(dirname "$PWD/${SERVER#./}")" >> "$GITHUB_ENV"
+
+      - name: Get model
+        run: curl -fsSL --retry 3 -o model.gguf "${{ matrix.model.url }}" && ls -la model.gguf
+
+      - name: Start llama-server
+        run: |
+          export LD_LIBRARY_PATH="$LIBDIR:${LD_LIBRARY_PATH:-}"
+          nohup "$SERVER" -m model.gguf -c 8192 -t "$(nproc)" --host 127.0.0.1 --port 8080 --jinja > server.log 2>&1 &
+          for i in $(seq 1 120); do curl -fs http://127.0.0.1:8080/health && exit 0; sleep 2; done
+          cat server.log; exit 1
+
+      - name: Judge the backtest sets
+        env:
+          MODEL_NAME: ${{ matrix.model.name }}
+          SHARD: ${{ matrix.shard }}
+          SHARDS: "6"
+        run: python3 experiments/discovery/local_llm/run_eval.py
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: llm-${{ matrix.model.name }}-${{ matrix.shard }}
+          path: experiments/discovery/local_llm/results/
+
+  collect:
+    needs: eval
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: dl
+      - name: Commit results to the experiment branch
+        run: |
+          mkdir -p experiments/discovery/local_llm/results
+          find dl -name '*.json' -exec cp {} experiments/discovery/local_llm/results/ \;
+          git config user.name "discovery-experiment-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/discovery/local_llm/results || true
+          if git diff --cached --quiet; then echo "no results"; exit 0; fi
+          git commit -m "experiment: local model results (run ${{ github.run_id }})"
+          for i in 1 2 3; do git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0; sleep 5; done
+          exit 1

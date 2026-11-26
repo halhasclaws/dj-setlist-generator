@@ -1,0 +1,3199 @@
+{
+ "stamp": "20261126-000347",
+ "secs": 220,
+ "rows": 11002,
+ "yt_proxy": true,
+ "log": [
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 5.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 6.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" live",
+   "n": 20,
+   "err": "",
+   "secs": 3.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 5.5
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" HÖR Berlin",
+   "n": 2,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Boiler Room",
+   "n": 9,
+   "err": "",
+   "secs": 2.5
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 9.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 3.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Resident Advisor",
+   "n": 2,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" XLR8R",
+   "n": 2,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Dimensions Festival",
+   "n": 3,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Robot Heart",
+   "n": 0,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Rinse FM",
+   "n": 5,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Desert Hearts",
+   "n": 0,
+   "err": "",
+   "secs": 0.7
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" MEOKO",
+   "n": 12,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Fort Romeau\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 1.9
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep",
+   "query": "ytsearch100:\"Fort Romeau\"",
+   "n": 100,
+   "err": "",
+   "secs": 3.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Fort Romeau\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 3.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Fort Romeau\" live",
+   "n": 60,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "sc_user",
+   "query": "https://soundcloud.com/fortromeau/tracks",
+   "n": 84,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep",
+   "query": "scsearch60:\"Fort Romeau\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 5.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep",
+   "query": "scsearch60:\"Fort Romeau\" live",
+   "n": 60,
+   "err": "",
+   "secs": 6.7
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 4.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep",
+   "query": "scsearch60:\"Fort Romeau\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 10.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 4.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" live",
+   "n": 20,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 5.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 5.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" live",
+   "n": 20,
+   "err": "",
+   "secs": 4.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 4.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep",
+   "query": "scsearch100:\"Fort Romeau\"",
+   "n": 100,
+   "err": "",
+   "secs": 18.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" HÖR Berlin",
+   "n": 15,
+   "err": "",
+   "secs": 2.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Resident Advisor",
+   "n": 7,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 3.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Dimensions Festival",
+   "n": 3,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Rinse FM",
+   "n": 11,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" MEOKO",
+   "n": 19,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 3.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Robot Heart",
+   "n": 10,
+   "err": "",
+   "secs": 2.7
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 5.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 6.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Daniel Bell\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Desert Hearts",
+   "n": 12,
+   "err": "",
+   "secs": 4.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Daniel Bell\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Daniel Bell\" live",
+   "n": 60,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep",
+   "query": "ytsearch100:\"Daniel Bell\"",
+   "n": 100,
+   "err": "",
+   "secs": 5.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "alias",
+   "query": "ytsearch60:\"DBX\"",
+   "n": 60,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "alias",
+   "query": "ytsearch20:\"DBX\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep",
+   "query": "scsearch60:\"Daniel Bell\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 9.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "alias",
+   "query": "ytsearch20:\"DBX\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep",
+   "query": "scsearch60:\"Daniel Bell\" live",
+   "n": 60,
+   "err": "",
+   "secs": 8.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep",
+   "query": "scsearch60:\"Daniel Bell\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 10.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep",
+   "query": "scsearch100:\"Daniel Bell\"",
+   "n": 100,
+   "err": "",
+   "secs": 13.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "alias",
+   "query": "scsearch20:\"DBX\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 4.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "alias",
+   "query": "ytsearch20:\"DBX\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "sc_user",
+   "query": "https://soundcloud.com/daniel-bell-143401415/tracks",
+   "n": 6,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "alias",
+   "query": "scsearch20:\"DBX\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 3.6
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "alias",
+   "query": "scsearch20:\"DBX\" live",
+   "n": 20,
+   "err": "",
+   "secs": 4.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "alias",
+   "query": "scsearch60:\"DBX\"",
+   "n": 60,
+   "err": "",
+   "secs": 11.9
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 5.5
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 5.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 3.9
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 6.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" live",
+   "n": 20,
+   "err": "",
+   "secs": 3.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 5.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" HÖR Berlin",
+   "n": 1,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 4.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Resident Advisor",
+   "n": 3,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 2.8
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" themuddshow",
+   "n": 15,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 5.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Dimensions Festival",
+   "n": 5,
+   "err": "",
+   "secs": 1.9
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" XLR8R",
+   "n": 12,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" MEOKO",
+   "n": 3,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Robot Heart",
+   "n": 3,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Desert Hearts",
+   "n": 4,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" XLR8R",
+   "n": 9,
+   "err": "",
+   "secs": 4.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Adam Pits\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep",
+   "query": "ytsearch100:\"Adam Pits\"",
+   "n": 100,
+   "err": "",
+   "secs": 3.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Adam Pits\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Adam Pits\" live",
+   "n": 60,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "sc_user",
+   "query": "https://soundcloud.com/adampits/tracks",
+   "n": 8,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 8.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep",
+   "query": "scsearch60:\"Adam Pits\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 9.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 4.6
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep",
+   "query": "scsearch60:\"Adam Pits\" live",
+   "n": 60,
+   "err": "",
+   "secs": 8.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep",
+   "query": "scsearch60:\"Adam Pits\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 9.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" live set",
+   "n": 18,
+   "err": "",
+   "secs": 5.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" live",
+   "n": 20,
+   "err": "",
+   "secs": 2.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 5.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 5.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 5.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Boiler Room",
+   "n": 6,
+   "err": "",
+   "secs": 1.8
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep",
+   "query": "scsearch100:\"Adam Pits\"",
+   "n": 100,
+   "err": "",
+   "secs": 18.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" HÖR Berlin",
+   "n": 5,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Resident Advisor",
+   "n": 0,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Dekmantel",
+   "n": 6,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Mixmag",
+   "n": 14,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" themuddshow",
+   "n": 10,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Dimensions Festival",
+   "n": 3,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Dimensions Festival",
+   "n": 6,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" fabric",
+   "n": 6,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" XLR8R",
+   "n": 0,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Rinse FM",
+   "n": 0,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" XLR8R",
+   "n": 3,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Robot Heart",
+   "n": 0,
+   "err": "",
+   "secs": 0.7
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Robot Heart",
+   "n": 7,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Desert Hearts",
+   "n": 0,
+   "err": "",
+   "secs": 0.7
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" MEOKO",
+   "n": 6,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Desert Hearts",
+   "n": 7,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Rinse FM",
+   "n": 7,
+   "err": "",
+   "secs": 2.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Ida Daugaard\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Ida Daugaard\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep",
+   "query": "ytsearch100:\"Ida Daugaard\"",
+   "n": 100,
+   "err": "",
+   "secs": 3.6
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "sc_user",
+   "query": "https://soundcloud.com/ida-daugaard/tracks",
+   "n": 13,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Ida Daugaard\" live",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep",
+   "query": "scsearch60:\"Ida Daugaard\" DJ set",
+   "n": 43,
+   "err": "",
+   "secs": 5.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 2.5
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep",
+   "query": "scsearch60:\"Ida Daugaard\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 7.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep",
+   "query": "scsearch60:\"Ida Daugaard\" live",
+   "n": 60,
+   "err": "",
+   "secs": 7.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 4.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep",
+   "query": "scsearch100:\"Ida Daugaard\"",
+   "n": 79,
+   "err": "",
+   "secs": 11.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 3.5
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Cercle",
+   "n": 1,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 3.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" live",
+   "n": 20,
+   "err": "",
+   "secs": 4.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Dekmantel",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Mixmag",
+   "n": 1,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" themuddshow",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 5.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" fabric",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 6.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" XLR8R",
+   "n": 0,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 4.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" MEOKO",
+   "n": 0,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" MEOKO",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 4.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 4.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 4.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 5.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep",
+   "query": "ytsearch100:\"Sinéad\"",
+   "n": 100,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 4.7
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Sinéad\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Sinéad\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep",
+   "query": "ytsearch60:\"Sinéad\" live",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "alias",
+   "query": "ytsearch60:\"Sinead\"",
+   "n": 60,
+   "err": "",
+   "secs": 2.5
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "alias",
+   "query": "ytsearch20:\"Sinead\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "alias",
+   "query": "scsearch20:\"Sinead\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "alias",
+   "query": "ytsearch20:\"Sinead\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep",
+   "query": "scsearch60:\"Sinéad\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 11.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "alias",
+   "query": "ytsearch20:\"Sinead\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "alias",
+   "query": "scsearch20:\"Sinead\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep",
+   "query": "scsearch60:\"Sinéad\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 11.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "alias",
+   "query": "scsearch60:\"Sinead\"",
+   "n": 60,
+   "err": "",
+   "secs": 9.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "alias",
+   "query": "scsearch20:\"Sinead\" live",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep",
+   "query": "scsearch60:\"Sinéad\" live",
+   "n": 60,
+   "err": "",
+   "secs": 12.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 4.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 4.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.7
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" live",
+   "n": 20,
+   "err": "",
+   "secs": 3.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 5.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep",
+   "query": "scsearch100:\"Sinéad\"",
+   "n": 100,
+   "err": "",
+   "secs": 24.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 3.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 4.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 3.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 4.7
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 4.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 4.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 5.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" XLR8R",
+   "n": 3,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Rinse FM",
+   "n": 14,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Robot Heart",
+   "n": 14,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 5.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" MEOKO",
+   "n": 1,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Desert Hearts",
+   "n": 17,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 5.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 4.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 5.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep",
+   "query": "ytsearch60:\"DJ Pipe\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep",
+   "query": "ytsearch100:\"DJ Pipe\"",
+   "n": 100,
+   "err": "",
+   "secs": 3.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep",
+   "query": "ytsearch60:\"DJ Pipe\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 5.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep",
+   "query": "ytsearch60:\"DJ Pipe\" live",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep",
+   "query": "scsearch60:\"DJ Pipe\" DJ set",
+   "n": 60,
+   "err": "",
+   "secs": 7.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep",
+   "query": "scsearch60:\"DJ Pipe\" live",
+   "n": 60,
+   "err": "",
+   "secs": 7.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep",
+   "query": "scsearch60:\"DJ Pipe\" mix",
+   "n": 60,
+   "err": "",
+   "secs": 10.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep",
+   "query": "scsearch100:\"DJ Pipe\"",
+   "n": 100,
+   "err": "",
+   "secs": 25.7
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "own_auto",
+   "query": "accounts",
+   "n": 3,
+   "err": "",
+   "secs": 0,
+   "accounts": [
+    "https://soundcloud.com/fortromeau",
+    "https://www.youtube.com/@fortromeau7673",
+    "https://www.youtube.com/channel/UCALDy9kZ9trfzXzxfxVtW9g"
+   ]
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@fortromeau7673/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @fortromeau7673: This channel does not have a streams tab",
+   "secs": 0.8
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/channel/UCALDy9kZ9trfzXzxfxVtW9g/videos",
+   "n": 1,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/channel/UCALDy9kZ9trfzXzxfxVtW9g/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] UCALDy9kZ9trfzXzxfxVtW9g: This channel does not have a streams tab",
+   "secs": 1.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@fortromeau7673/videos",
+   "n": 1,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/fortromeau/tracks",
+   "n": 84,
+   "err": "",
+   "secs": 2.7
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Fort Romeau",
+   "n": 64,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "nts",
+   "query": "nts:Fort Romeau",
+   "n": 20,
+   "err": "",
+   "secs": 0.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "accounts",
+   "n": 14,
+   "err": "",
+   "secs": 0,
+   "accounts": [
+    "https://soundcloud.com/daniel-bell-421314799",
+    "https://soundcloud.com/daniel-bell-983860691",
+    "https://soundcloud.com/danielbell-319527507",
+    "https://soundcloud.com/danielbell10",
+    "https://www.youtube.com/@AfgahnTramp",
+    "https://www.youtube.com/@VelitationKnight",
+    "https://www.youtube.com/@d_verse_85",
+    "https://www.youtube.com/@dandydan1001",
+    "https://www.youtube.com/@danielbell10",
+    "https://www.youtube.com/@danielbell2606",
+    "https://www.youtube.com/@danielbell334",
+    "https://www.youtube.com/@danielbell4381",
+    "https://www.youtube.com/@dogsbody5780",
+    "https://www.youtube.com/@sails180"
+   ]
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@AfgahnTramp/videos",
+   "n": 6,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@AfgahnTramp/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @AfgahnTramp: This channel does not have a streams tab",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/danielbell10/tracks",
+   "n": 3,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/daniel-bell-421314799/tracks",
+   "n": 5,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/danielbell-319527507/tracks",
+   "n": 3,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/daniel-bell-983860691/tracks",
+   "n": 3,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@VelitationKnight/videos",
+   "n": 16,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@VelitationKnight/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @VelitationKnight: This channel does not have a streams tab",
+   "secs": 0.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@d_verse_85/videos",
+   "n": 1,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@d_verse_85/streams",
+   "n": 7,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@dandydan1001/videos",
+   "n": 9,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@dandydan1001/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @dandydan1001: This channel does not have a streams tab",
+   "secs": 1.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@danielbell10/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @danielbell10: This channel does not have a streams tab",
+   "secs": 0.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@danielbell10/videos",
+   "n": 32,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@danielbell2606/videos",
+   "n": 29,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@danielbell2606/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @danielbell2606: This channel does not have a streams tab",
+   "secs": 0.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@danielbell334/videos",
+   "n": 19,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@danielbell334/streams",
+   "n": 26,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@danielbell4381/videos",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @danielbell4381: This channel does not have a videos tab",
+   "secs": 0.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@danielbell4381/streams",
+   "n": 14,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@dogsbody5780/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @dogsbody5780: This channel does not have a streams tab",
+   "secs": 0.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@dogsbody5780/videos",
+   "n": 31,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@sails180/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @sails180: This channel does not have a streams tab",
+   "secs": 0.7
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@sails180/videos",
+   "n": 278,
+   "err": "",
+   "secs": 3.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Daniel Bell",
+   "n": 167,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "mixcloud",
+   "query": "mixcloud:DBX",
+   "n": 300,
+   "err": "",
+   "secs": 3.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "nts",
+   "query": "nts:Daniel Bell",
+   "n": 180,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "nts",
+   "query": "nts:DBX",
+   "n": 1,
+   "err": "",
+   "secs": 0.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "own_auto",
+   "query": "accounts",
+   "n": 1,
+   "err": "",
+   "secs": 0,
+   "accounts": [
+    "https://soundcloud.com/adampits"
+   ]
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/adampits/tracks",
+   "n": 8,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Adam Pits",
+   "n": 38,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "nts",
+   "query": "nts:Adam Pits",
+   "n": 180,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "own_auto",
+   "query": "accounts",
+   "n": 1,
+   "err": "",
+   "secs": 0,
+   "accounts": [
+    "https://soundcloud.com/ida-daugaard"
+   ]
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/ida-daugaard/tracks",
+   "n": 13,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Ida Daugaard",
+   "n": 27,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "nts",
+   "query": "nts:Ida Daugaard",
+   "n": 12,
+   "err": "",
+   "secs": 0.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "own_auto",
+   "query": "accounts",
+   "n": 1,
+   "err": "",
+   "secs": 0,
+   "accounts": [
+    "https://soundcloud.com/sinead-999486091"
+   ]
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/sinead-999486091/tracks",
+   "n": 1,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Sinéad",
+   "n": 300,
+   "err": "",
+   "secs": 4.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Sinead",
+   "n": 300,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "nts",
+   "query": "nts:Sinéad",
+   "n": 8,
+   "err": "",
+   "secs": 0.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "nts",
+   "query": "nts:Sinead",
+   "n": 8,
+   "err": "",
+   "secs": 0.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "accounts",
+   "n": 15,
+   "err": "",
+   "secs": 0,
+   "accounts": [
+    "https://soundcloud.com/dj-piipemix",
+    "https://soundcloud.com/dj-pipe-007",
+    "https://soundcloud.com/dj-pipe-3",
+    "https://soundcloud.com/dj-pipe-7",
+    "https://soundcloud.com/dj-pipe-89761774",
+    "https://soundcloud.com/djj-piipee",
+    "https://soundcloud.com/djpipe-sc",
+    "https://soundcloud.com/djpipezz",
+    "https://soundcloud.com/filip-dropulja",
+    "https://soundcloud.com/iamdjpipe",
+    "https://soundcloud.com/pipe237",
+    "https://www.youtube.com/@djpipe4216",
+    "https://www.youtube.com/@djpipenyc",
+    "https://www.youtube.com/@pipedjoficial",
+    "https://www.youtube.com/@studioantares"
+   ]
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/dj-pipe-7/tracks",
+   "n": 6,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/dj-pipe-007/tracks",
+   "n": 1,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/dj-pipe-89761774/tracks",
+   "n": 5,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/dj-piipemix/tracks",
+   "n": 5,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/djj-piipee/tracks",
+   "n": 12,
+   "err": "",
+   "secs": 1.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/dj-pipe-3/tracks",
+   "n": 33,
+   "err": "",
+   "secs": 1.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/djpipe-sc/tracks",
+   "n": 4,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/djpipezz/tracks",
+   "n": 7,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@djpipe4216/videos",
+   "n": 9,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/filip-dropulja/tracks",
+   "n": 1,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/pipe237/tracks",
+   "n": 31,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://soundcloud.com/iamdjpipe/tracks",
+   "n": 3,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@djpipe4216/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @djpipe4216: This channel does not have a streams tab",
+   "secs": 0.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@djpipenyc/videos",
+   "n": 2,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@studioantares/videos",
+   "n": 7,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@djpipenyc/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @djpipenyc: This channel does not have a streams tab",
+   "secs": 1.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@pipedjoficial/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @pipedjoficial: This channel does not have a streams tab",
+   "secs": 1.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@studioantares/streams",
+   "n": 0,
+   "err": "ERROR: [youtube:tab] @studioantares: This channel does not have a streams tab",
+   "secs": 0.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "own_auto",
+   "query": "https://www.youtube.com/@pipedjoficial/videos",
+   "n": 66,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "mixcloud",
+   "query": "mixcloud:DJ Pipe",
+   "n": 300,
+   "err": "",
+   "secs": 4.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "nts",
+   "query": "nts:DJ Pipe",
+   "n": 180,
+   "err": "",
+   "secs": 1.4
+  }
+ ]
+}

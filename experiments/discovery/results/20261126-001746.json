@@ -1,0 +1,2568 @@
+{
+ "stamp": "20261126-001746",
+ "secs": 396,
+ "rows": 9751,
+ "yt_proxy": true,
+ "log": [
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.8
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 3.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 5.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" live",
+   "n": 20,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" HÖR Berlin",
+   "n": 2,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Boiler Room",
+   "n": 9,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 5.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 8.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Resident Advisor",
+   "n": 2,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.8
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" XLR8R",
+   "n": 2,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Dimensions Festival",
+   "n": 3,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Rinse FM",
+   "n": 5,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Robot Heart",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" Desert Hearts",
+   "n": 0,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" MEOKO",
+   "n": 12,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "ytsearch20:\"Fort Romeau\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "base",
+   "query": "scsearch20:\"Fort Romeau\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Fort Romeau\" mix",
+   "n": 100,
+   "err": "",
+   "secs": 8.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Fort Romeau\" radio",
+   "n": 100,
+   "err": "",
+   "secs": 7.8
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Fort Romeau\" set",
+   "n": 100,
+   "err": "",
+   "secs": 9.6
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Fort Romeau\" podcast",
+   "n": 100,
+   "err": "",
+   "secs": 9.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Fort Romeau\" live",
+   "n": 100,
+   "err": "",
+   "secs": 10.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Fort Romeau\" live set",
+   "n": 60,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:ytsearch100",
+   "query": "ytsearch100:\"Fort Romeau\" DJ set",
+   "n": 100,
+   "err": "",
+   "secs": 3.4
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Fort Romeau\" boiler room",
+   "n": 60,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Fort Romeau\" radio",
+   "n": 60,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 3.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 3.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 3.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 4.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 5.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" live",
+   "n": 20,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 3.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 3.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" HÖR Berlin",
+   "n": 15,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Resident Advisor",
+   "n": 7,
+   "err": "",
+   "secs": 1.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Dimensions Festival",
+   "n": 3,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Rinse FM",
+   "n": 11,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 3.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "deep2:scsearch200",
+   "query": "scsearch200:\"Fort Romeau\"",
+   "n": 200,
+   "err": "",
+   "secs": 27.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" MEOKO",
+   "n": 19,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Robot Heart",
+   "n": 10,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "ytsearch20:\"Daniel Bell\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 4.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 4.4
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "base",
+   "query": "scsearch20:\"Daniel Bell\" Desert Hearts",
+   "n": 12,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Daniel Bell\" podcast",
+   "n": 100,
+   "err": "",
+   "secs": 11.6
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Daniel Bell\" live",
+   "n": 100,
+   "err": "",
+   "secs": 13.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Daniel Bell\" set",
+   "n": 100,
+   "err": "",
+   "secs": 12.8
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Daniel Bell\" mix",
+   "n": 100,
+   "err": "",
+   "secs": 13.7
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Daniel Bell\" live set",
+   "n": 60,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Daniel Bell\" radio",
+   "n": 100,
+   "err": "",
+   "secs": 13.0
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Daniel Bell\" boiler room",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:ytsearch100",
+   "query": "ytsearch100:\"Daniel Bell\" DJ set",
+   "n": 100,
+   "err": "",
+   "secs": 3.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Daniel Bell\" radio",
+   "n": 60,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 4.7
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 4.9
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 3.5
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "deep2:scsearch200",
+   "query": "scsearch200:\"Daniel Bell\"",
+   "n": 200,
+   "err": "",
+   "secs": 21.7
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 5.6
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 3.5
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" live",
+   "n": 20,
+   "err": "",
+   "secs": 2.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 3.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" HÖR Berlin",
+   "n": 1,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 4.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 101.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Resident Advisor",
+   "n": 3,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 2.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" themuddshow",
+   "n": 15,
+   "err": "",
+   "secs": 1.8
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" live",
+   "n": 20,
+   "err": "",
+   "secs": 120.9
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 121.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Dimensions Festival",
+   "n": 5,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 121.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" XLR8R",
+   "n": 12,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 121.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" MEOKO",
+   "n": 3,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Robot Heart",
+   "n": 3,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 121.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" XLR8R",
+   "n": 9,
+   "err": "",
+   "secs": 3.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "ytsearch20:\"Adam Pits\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Desert Hearts",
+   "n": 4,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "base",
+   "query": "scsearch20:\"Adam Pits\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 7.8
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Adam Pits\" podcast",
+   "n": 100,
+   "err": "",
+   "secs": 9.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Adam Pits\" set",
+   "n": 100,
+   "err": "",
+   "secs": 9.9
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Adam Pits\" live set",
+   "n": 60,
+   "err": "",
+   "secs": 2.4
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:ytsearch100",
+   "query": "ytsearch100:\"Adam Pits\" DJ set",
+   "n": 100,
+   "err": "",
+   "secs": 3.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Adam Pits\" radio",
+   "n": 100,
+   "err": "",
+   "secs": 9.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Adam Pits\" boiler room",
+   "n": 60,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Adam Pits\" mix",
+   "n": 100,
+   "err": "",
+   "secs": 14.7
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Adam Pits\" radio",
+   "n": 60,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Adam Pits\" live",
+   "n": 100,
+   "err": "",
+   "secs": 18.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 3.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" live set",
+   "n": 18,
+   "err": "",
+   "secs": 4.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" live",
+   "n": 20,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 1.9
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 4.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Boiler Room",
+   "n": 6,
+   "err": "",
+   "secs": 1.5
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "deep2:scsearch200",
+   "query": "scsearch200:\"Adam Pits\"",
+   "n": 200,
+   "err": "",
+   "secs": 23.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" HÖR Berlin",
+   "n": 5,
+   "err": "",
+   "secs": 1.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 1.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Resident Advisor",
+   "n": 0,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 1.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Dekmantel",
+   "n": 6,
+   "err": "",
+   "secs": 1.7
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Dimensions Festival",
+   "n": 3,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" XLR8R",
+   "n": 3,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Dimensions Festival",
+   "n": 6,
+   "err": "",
+   "secs": 2.7
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" fabric",
+   "n": 6,
+   "err": "",
+   "secs": 2.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" themuddshow",
+   "n": 10,
+   "err": "",
+   "secs": 3.9
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" XLR8R",
+   "n": 0,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Robot Heart",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 1.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Rinse FM",
+   "n": 7,
+   "err": "",
+   "secs": 2.5
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "scsearch20:\"Ida Daugaard\" Desert Hearts",
+   "n": 0,
+   "err": "",
+   "secs": 0.7
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Robot Heart",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" Robot Heart\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Rinse FM",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" Rinse FM\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Mixmag",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" Mixmag\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 12.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" Desert Hearts",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" Desert Hearts\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "base",
+   "query": "ytsearch20:\"Ida Daugaard\" MEOKO",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" MEOKO\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:scsearch200",
+   "query": "scsearch200:\"Ida Daugaard\"",
+   "n": 79,
+   "err": "",
+   "secs": 9.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Ida Daugaard\" set",
+   "n": 100,
+   "err": "",
+   "secs": 8.1
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Ida Daugaard\" mix",
+   "n": 100,
+   "err": "",
+   "secs": 11.3
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Ida Daugaard\" podcast",
+   "n": 100,
+   "err": "",
+   "secs": 10.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:ytsearch100",
+   "query": "ytsearch100:\"Ida Daugaard\" DJ set",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" DJ set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.8
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Ida Daugaard\" radio",
+   "n": 100,
+   "err": "",
+   "secs": 12.4
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Ida Daugaard\" live",
+   "n": 100,
+   "err": "",
+   "secs": 16.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Ida Daugaard\" live set",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" live set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.0
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Ida Daugaard\" radio",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" radio\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" DJ set",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" DJ set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.2
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Ida Daugaard\" boiler room",
+   "n": 0,
+   "err": "ERROR: query \"\"Ida Daugaard\" boiler room\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 10.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 3.5
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 3.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" live set",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" live set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 10.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 3.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" b2b",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" b2b\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" mix",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" mix\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 10.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" guest mix",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" guest mix\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" live",
+   "n": 20,
+   "err": "",
+   "secs": 3.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 3.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" live",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" live\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" podcast",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" podcast\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Cercle",
+   "n": 1,
+   "err": "",
+   "secs": 1.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 5.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Boiler Room",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Boiler Room\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 4.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Dekmantel",
+   "n": 0,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Cercle",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Cercle\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 5.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Mixmag",
+   "n": 1,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" HÖR Berlin",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" HÖR Berlin\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" themuddshow",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Resident Advisor",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Resident Advisor\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 3.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" fabric",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Dekmantel",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Dekmantel\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Mixmag",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Mixmag\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Dimensions Festival",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Dimensions Festival\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 4.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" themuddshow",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" themuddshow\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 10.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" fabric",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" fabric\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.3
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Rinse FM",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Rinse FM\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 5.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" MEOKO",
+   "n": 0,
+   "err": "",
+   "secs": 0.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 4.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 3.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" XLR8R",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" XLR8R\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" MEOKO",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" MEOKO\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "scsearch20:\"Sinéad\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 4.0
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Robot Heart",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Robot Heart\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.2
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Sinéad\" set",
+   "n": 15,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "base",
+   "query": "ytsearch20:\"Sinéad\" Desert Hearts",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" Desert Hearts\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Sinéad\" podcast",
+   "n": 82,
+   "err": "",
+   "secs": 9.5
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Sinéad\" live",
+   "n": 100,
+   "err": "",
+   "secs": 16.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:ytsearch100",
+   "query": "ytsearch100:\"Sinéad\" DJ set",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" DJ set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.4
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Sinéad\" mix",
+   "n": 100,
+   "err": "",
+   "secs": 17.5
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Sinéad\" live set",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" live set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.9
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"Sinéad\" radio",
+   "n": 100,
+   "err": "",
+   "secs": 15.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Sinéad\" boiler room",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" boiler room\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" DJ set",
+   "n": 20,
+   "err": "",
+   "secs": 4.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" live set",
+   "n": 20,
+   "err": "",
+   "secs": 3.1
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"Sinéad\" radio",
+   "n": 0,
+   "err": "ERROR: query \"\"Sinéad\" radio\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 10.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" DJ set",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" DJ set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" live set",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" live set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" mix",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" mix\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" guest mix",
+   "n": 20,
+   "err": "",
+   "secs": 4.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" b2b",
+   "n": 20,
+   "err": "",
+   "secs": 4.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" live",
+   "n": 20,
+   "err": "",
+   "secs": 3.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" guest mix",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" guest mix\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" b2b",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" b2b\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" live",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" live\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 5.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Boiler Room",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" podcast",
+   "n": 20,
+   "err": "",
+   "secs": 3.8
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "deep2:scsearch200",
+   "query": "scsearch200:\"Sinéad\"",
+   "n": 200,
+   "err": "",
+   "secs": 44.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" podcast",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" podcast\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" HÖR Berlin",
+   "n": 20,
+   "err": "",
+   "secs": 4.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Boiler Room",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Boiler Room\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" HÖR Berlin",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" HÖR Berlin\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Cercle",
+   "n": 20,
+   "err": "",
+   "secs": 3.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Cercle",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Cercle\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 5.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Resident Advisor",
+   "n": 20,
+   "err": "",
+   "secs": 3.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Mixmag",
+   "n": 20,
+   "err": "",
+   "secs": 2.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Dekmantel",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Dekmantel\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" themuddshow",
+   "n": 20,
+   "err": "",
+   "secs": 1.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Dekmantel",
+   "n": 20,
+   "err": "",
+   "secs": 5.4
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Resident Advisor",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Resident Advisor\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 10.0
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Mixmag",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Mixmag\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 8.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Dimensions Festival",
+   "n": 20,
+   "err": "",
+   "secs": 4.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" fabric",
+   "n": 20,
+   "err": "",
+   "secs": 2.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" themuddshow",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" themuddshow\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Dimensions Festival",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Dimensions Festival\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" fabric",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" fabric\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" XLR8R",
+   "n": 20,
+   "err": "",
+   "secs": 3.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Rinse FM",
+   "n": 20,
+   "err": "",
+   "secs": 3.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" MEOKO",
+   "n": 20,
+   "err": "",
+   "secs": 1.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Robot Heart",
+   "n": 20,
+   "err": "",
+   "secs": 4.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Rinse FM",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Rinse FM\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.2
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" XLR8R",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" XLR8R\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 9.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Robot Heart",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Robot Heart\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" MEOKO",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" MEOKO\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.8
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "scsearch20:\"DJ Pipe\" Desert Hearts",
+   "n": 20,
+   "err": "",
+   "secs": 4.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "base",
+   "query": "ytsearch20:\"DJ Pipe\" Desert Hearts",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" Desert Hearts\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"DJ Pipe\" live",
+   "n": 100,
+   "err": "",
+   "secs": 11.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"DJ Pipe\" set",
+   "n": 100,
+   "err": "",
+   "secs": 12.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"DJ Pipe\" mix",
+   "n": 100,
+   "err": "",
+   "secs": 15.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"DJ Pipe\" radio",
+   "n": 100,
+   "err": "",
+   "secs": 12.6
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:scsearch100",
+   "query": "scsearch100:\"DJ Pipe\" podcast",
+   "n": 100,
+   "err": "",
+   "secs": 13.5
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:ytsearch100",
+   "query": "ytsearch100:\"DJ Pipe\" DJ set",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" DJ set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.1
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"DJ Pipe\" live set",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" live set\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"DJ Pipe\" radio",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" radio\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 6.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:ytsearch60",
+   "query": "ytsearch60:\"DJ Pipe\" boiler room",
+   "n": 0,
+   "err": "ERROR: query \"\"DJ Pipe\" boiler room\" page 1: Unable to download API page: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)",
+   "secs": 7.9
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "deep2:scsearch200",
+   "query": "scsearch200:\"DJ Pipe\"",
+   "n": 200,
+   "err": "",
+   "secs": 37.3
+  },
+  {
+   "artist": "Fort Romeau",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Fort Romeau",
+   "n": 64,
+   "err": "",
+   "secs": 0.9
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Daniel Bell",
+   "n": 167,
+   "err": "",
+   "secs": 2.1
+  },
+  {
+   "artist": "Daniel Bell",
+   "strategy": "mixcloud",
+   "query": "mixcloud:DBX",
+   "n": 300,
+   "err": "",
+   "secs": 3.3
+  },
+  {
+   "artist": "Adam Pits",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Adam Pits",
+   "n": 38,
+   "err": "",
+   "secs": 0.7
+  },
+  {
+   "artist": "Ida Daugaard",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Ida Daugaard",
+   "n": 27,
+   "err": "",
+   "secs": 0.6
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Sinéad",
+   "n": 300,
+   "err": "",
+   "secs": 3.7
+  },
+  {
+   "artist": "Sinéad",
+   "strategy": "mixcloud",
+   "query": "mixcloud:Sinead",
+   "n": 300,
+   "err": "",
+   "secs": 3.3
+  },
+  {
+   "artist": "DJ Pipe",
+   "strategy": "mixcloud",
+   "query": "mixcloud:DJ Pipe",
+   "n": 300,
+   "err": "",
+   "secs": 3.7
+  }
+ ]
+}

@@ -1,0 +1,1495 @@
+{
+"model": "qwen2.5-7b",
+"shard": 1,
+"profiles": {
+"Appleblim": "Appleblim is a prominent dubstep and grime producer and DJ based in London. Known for his energetic live sets and studio productions, he has been active since the early 2000s and is associated with the UK's dubstep and grime scenes.\nPerforms as: Appleblim\nTheir channels, stations, shows, clubs, labels, collaborators: Keep Hush; fabric; Boiler Room; H\u00d6R BERLIN; Rinse FM; Sameheads TV; ROUGH RADIO; Breezeblock; Red Bull Music Academy; Charles Mazzola; KyTrici\u00f3; UNDER MY FEET.; ILIAN TAPE; OpenLab Radio; NLDC; Sub FM; DUBSTEP.FM; WARP4.52; Ruffage Sessions; All Massive; New Music Worldwide\nOther people with the name (not this artist): Appleblim (musician) - Based in London, UK, known for dubstep and grime productions and DJ sets.; Appleblim (fruit) - A type of apple, not related to the musician.",
+"D'Julz": "D'Julz is an electronic music DJ and producer known for his home diggin' series, which features deep house and tech-house sounds. He primarily operates in the Paris and London scenes, with appearances at notable clubs and festivals in Europe.\nPerforms as: D'Julz\nTheir channels, stations, shows, clubs, labels, collaborators: Rinse France; D'Julz; Home Diggin' series; Bass Culture Records; Fabric; Yoyaku Record Store; The Lot Radio; Boiler Room; SomaTV; XLR8R Podcast\nOther people with the name (not this artist): D'Julz (musician) - Active in the Paris and London scenes, known for home diggin' series and deep house/tech-house sounds.; D'Julz (musician) - Active in the Berlin scene, known for live performances and collaborations with Malika.",
+"Fort Romeau": "Fort Romeau is an electronic music producer and DJ known for his deep house and techno sounds. He is active in the London and Berlin electronic music scenes, often performing at clubs like The Lot and playing on radio stations such as Radio 1001 and Boiler Room.\nPerforms as: Fort Romeau\nTheir channels, stations, shows, clubs, labels, collaborators: Fort Romeau; Radio 1001; Boiler Room; The Lot Radio; Mixmag; DGTL Festival; Red Light Radio; The Vinyl Factory; Permanent Vacation; FIRES L.A. Radio; Bungalo Disco; Lost Village; Gus Emmett (Official); Crosstown Rebels; Ghostly; The FADER; GETME!; DMY; Phonica Records; Balamii; OpenLab Radio; Beats In Space; Diynamic Music; Ninja Tune\nOther people with the name (not this artist): Fort Romeau (musician) - Active in the London and Berlin scenes, known for deep house and techno.; Fort Romeau (American musician) - Known for rock and alternative music, based in the United States.",
+"Korsakow": "Korsakow is an electronic music artist known for their work in the experimental and ambient genres. They are based in Germany and are associated with the Berlin electronic music scene, performing at clubs like Berghain and playing for labels such as Mille Plateaux.\nPerforms as: Korsakow\nTheir channels, stations, shows, clubs, labels, collaborators: Florian Thalhofer (Korsakow); Lech; Recorder.13; Pazuzu; Mille Plateaux\nOther people with the name (not this artist): Miko\u0142aj Rimski-Korsakow (composer) - Russian composer known for classical works like Scheherazade.; Korsakow (amnesia) - A medical condition, not related to the electronic music artist.",
+"Sin\u00e9ad": "Sin\u00e9ad is an electronic DJ and producer known for her work on The Lot Radio, Fault Radio, and HydeFM. She primarily plays in the trance, progressive, and melodic house genres, and is based in Dublin, Ireland.\nPerforms as: Sin\u00e9ad, Sinead\nTheir channels, stations, shows, clubs, labels, collaborators: The Lot Radio; Fault Radio; HydeFM; themuddshow; Seac (Shaq) Cannon; Clermont Ave 11 Live; Sin\u00e9ad McCarthy; \u00d3rlaigh Sin\u00e9ad\nOther people with the name (not this artist): Sin\u00e9ad O'Connor - A singer and activist known for her music and political activism, primarily based in Ireland.; Sin\u00e9ad O'Brien - A singer and actress known for her work in the music industry, primarily based in the UK."
+},
+"verdicts": {
+"e9b53bc6": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Breezeblock, not Appleblim."
+},
+"8ba0f348": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Rinse FM, not Appleblim."
+},
+"3d9ea692": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Appleblim and Boiler Room."
+},
+"28735c37": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Appleblim and Resident Advisor."
+},
+"ee49bb34": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Appleblim and soapz."
+},
+"0af446b2": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Rinse FM and Youngsta, not Appleblim."
+},
+"f3662d75": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Boogie Box and Appleblim."
+},
+"52ddca1f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Rinse FM and Appleblim, and is a live set from Ministry of Sound."
+},
+"0c3f93a5": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Appleblim and NY Crate Digging Mix, not a set."
+},
+"ba201bbd": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Appleblim and Dubstep Allstars, not a set."
+},
+"d9a331b3": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"46068349": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Appleblim."
+},
+"4503a849": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Appleblim."
+},
+"bf87bcc6": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Appleblim."
+},
+"ae976adc": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by Appleblim."
+},
+"c21f12da": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by Appleblim."
+},
+"55f4ffaf": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show about Appleblim."
+},
+"2220f8a1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Appleblim."
+},
+"65c852d7": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Appleblim."
+},
+"a3099f13": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show about Appleblim."
+},
+"c67f3100": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not specify Appleblim playing."
+},
+"a324dde8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies Appleblim playing live."
+},
+"d5411934": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies Appleblim playing live."
+},
+"a4a17ed4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies Appleblim playing in a podcast."
+},
+"f7ecbea0": {
+"v": "reject",
+"kind": "track",
+"reason": "Title specifies a mix made by Appleblim, not playing live."
+},
+"f97315fc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies Appleblim playing in a podcast."
+},
+"ab3b086f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies Appleblim playing live."
+},
+"3b5a67f4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies Appleblim playing in a podcast."
+},
+"92b76ed5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies Appleblim playing in a podcast."
+},
+"f26cf797": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies Appleblim playing live."
+},
+"b5c6ef66": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a mix featuring Appleblim, not a solo set."
+},
+"d6fc1c54": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by D'Julz"
+},
+"ab689385": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by D'Julz"
+},
+"8a7ec05d": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with D'Julz"
+},
+"3a856d8b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance by D'Julz"
+},
+"c3079eb1": {
+"v": "reject",
+"kind": "track",
+"reason": "Track, not a DJ set"
+},
+"835f77f2": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix for a lab event by D'Julz"
+},
+"6cde0a56": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast mix by D'Julz"
+},
+"b5b7d656": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by D'Julz"
+},
+"54de2769": {
+"v": "keep",
+"kind": "set",
+"reason": "Club recording by D'Julz"
+},
+"3854e27c": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"ec0be405": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions D'Julz and is a mix series episode."
+},
+"e7be372b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions D'Julz and is a live set from a festival."
+},
+"981f8f6e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions D'Julz and is an instore session."
+},
+"e9a80187": {
+"v": "reject",
+"kind": "set",
+"reason": "Date is in the future and no channel is specified."
+},
+"4fa6e5fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions D'Julz and is a Home Diggin' episode."
+},
+"0fbfab1e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions D'Julz and is a podcast about his diaries."
+},
+"d611381e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions D'Julz and is a Boiler Room set."
+},
+"b6038af9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions D'Julz and is a podcast from Nightclubber.ro."
+},
+"987047f1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions D'Julz and is an instore session."
+},
+"7ee243af": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"39062729": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not specify D'Julz as the DJ."
+},
+"e88ff372": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies D'Julz as the DJ."
+},
+"a03289e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies D'Julz as the DJ."
+},
+"f250e8ba": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies D'Julz as the DJ."
+},
+"5782f754": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies D'Julz as the DJ."
+},
+"de07ee2b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies D'Julz as the DJ."
+},
+"355a3320": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not specify D'Julz as the DJ."
+},
+"bd854646": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies D'Julz as the DJ."
+},
+"4c5a222f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies D'Julz as the DJ."
+},
+"2f329be2": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not specify D'Julz as the DJ."
+},
+"183022e2": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a podcast mix with D'Julz as a guest, not a DJ set."
+},
+"a76db9b4": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a live set by D'Julz."
+},
+"4e55787f": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a Home Diggin' series presentation by D'Julz."
+},
+"a27e9976": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a b2b set featuring D'Julz."
+},
+"2ee3ff98": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a guest mix by D'Julz."
+},
+"a755c209": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a radio show by D'Julz."
+},
+"4067ea49": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a promo mix for D'Julz at Fabric."
+},
+"a88b3760": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a mix by D'Julz."
+},
+"e9af6682": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a radio show by D'Julz."
+},
+"5685403a": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a live set by D'Julz."
+},
+"17230db8": {
+"v": "reject",
+"kind": "track",
+"reason": "CD release, not a DJ set."
+},
+"8922002c": {
+"v": "reject",
+"kind": "track",
+"reason": "DJ set by Circoloco, not D'Julz."
+},
+"f75a4639": {
+"v": "reject",
+"kind": "talk",
+"reason": "Instore session, not a DJ set."
+},
+"8f9d19ce": {
+"v": "reject",
+"kind": "track",
+"reason": "DJ set, but not by D'Julz."
+},
+"5f5bd54d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast, not a DJ set."
+},
+"ca4501eb": {
+"v": "reject",
+"kind": "track",
+"reason": "Mixmag's rotation, not a DJ set."
+},
+"f53b6356": {
+"v": "keep",
+"kind": "set",
+"reason": "D'Julz DJ set with Cassy."
+},
+"b163ec8f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set."
+},
+"1981f153": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set."
+},
+"5e4bfe52": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set at Circoloco."
+},
+"bb0f5966": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names D'Julz as the DJ."
+},
+"021f538f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names D'Julz as the DJ."
+},
+"b60b05ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names D'Julz as the DJ."
+},
+"ff98b160": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names D'Julz as the DJ."
+},
+"f34e2b0e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Namesake: Different person with the same name."
+},
+"ad21835d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names D'Julz as the DJ."
+},
+"518242cc": {
+"v": "reject",
+"kind": "talk",
+"reason": "Namesake: Different person with the same name."
+},
+"e8d344eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names D'Julz as the DJ."
+},
+"4ffe36fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names D'Julz as the DJ."
+},
+"e7421263": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names D'Julz as the DJ."
+},
+"00571fb7": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake, as Phil Weeks is also mentioned."
+},
+"3527614e": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"911ae968": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"69257136": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"3c1288ba": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"e2f0cdb6": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"5439d4a9": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"bc17a307": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"70e8a2ab": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"fd5588f1": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"0a236912": {
+"v": "keep",
+"kind": "set",
+"reason": "Title matches the artist's name and channel."
+},
+"2d5831bd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title matches the artist's name and festival location."
+},
+"f177a401": {
+"v": "keep",
+"kind": "set",
+"reason": "Title matches the artist's name and festival location, and is described as a live set."
+},
+"2517589b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title matches the artist's name and channel, and is described as a mix set."
+},
+"f2b70b05": {
+"v": "reject",
+"kind": "track",
+"reason": "Ambient mix, not a DJ set"
+},
+"52bb8f22": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"333f93f5": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"761fe71a": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"62f03ba1": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"ae37e1aa": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"82ff71df": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"2604a866": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"3b3a1f31": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"c0c3c9b6": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"2d91349e": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Fort Romeau"
+},
+"eb09170a": {
+"v": "keep",
+"kind": "set",
+"reason": "B2b set with Fort Romeau"
+},
+"1d935486": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room set by Fort Romeau"
+},
+"c1221e2b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Avant Garde with Fort Romeau"
+},
+"c0e0c91d": {
+"v": "keep",
+"kind": "set",
+"reason": "Set by Fort Romeau at DGTL Amsterdam"
+},
+"50feca8f": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse France show with Fort Romeau"
+},
+"b78b70ff": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast mix featuring Fort Romeau"
+},
+"30b48e72": {
+"v": "reject",
+"kind": "talk",
+"reason": "Transitions mix with Fort Romeau, but not by Fort Romeau"
+},
+"1425756d": {
+"v": "keep",
+"kind": "set",
+"reason": "Set by Fort Romeau at Junction 2"
+},
+"6047180d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Radio show with Fort Romeau, but not by Fort Romeau"
+},
+"1603bce2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as the DJ."
+},
+"f8a68faf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as the subject of the mix."
+},
+"a7e59c28": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as one of the DJs."
+},
+"8cfbd76b": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists Fort Romeau among many artists, not a mix by Fort Romeau."
+},
+"3e676cc6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as the DJ."
+},
+"3d37ce8b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as the DJ."
+},
+"e18f6131": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as the DJ."
+},
+"5d27e23c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as the DJ."
+},
+"bae14b0f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as the DJ."
+},
+"f47ce109": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fort Romeau as the DJ."
+},
+"67981723": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau is named in the title."
+},
+"18d4b8e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau is named in the title."
+},
+"8d27807c": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau is named in the title."
+},
+"8c10138e": {
+"v": "reject",
+"kind": "track",
+"reason": "Fort Romeau is named in the title, but it's a 30-minute special, which is shorter than typical DJ sets."
+},
+"6d82cf65": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau is named in the title."
+},
+"c3c30c77": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau is named in the title."
+},
+"d76a038d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Fort Romeau is named in the title, but the date is in the future, which is unusual for a recording."
+},
+"e1714a64": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau is named in the title."
+},
+"03926edd": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Fort Romeau is named in the title, but it's a compilation of multiple artists."
+},
+"ca0ccde5": {
+"v": "keep",
+"kind": "set",
+"reason": "Fort Romeau is named in the title."
+},
+"4f64bdea": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not a DJ set, but a mix for B Traits BBC Radio One."
+},
+"3910356b": {
+"v": "reject",
+"kind": "talk",
+"reason": "A radio vacation show with Fort Romeau as a guest."
+},
+"9de3c406": {
+"v": "keep",
+"kind": "set",
+"reason": "A club recording with Fort Romeau as a guest."
+},
+"21a2727f": {
+"v": "reject",
+"kind": "talk",
+"reason": "An interview or podcast episode, not a DJ set."
+},
+"515c24a9": {
+"v": "reject",
+"kind": "track",
+"reason": "A FADER mix, not a DJ set."
+},
+"1f0e876e": {
+"v": "keep",
+"kind": "set",
+"reason": "A live performance at BBK Live 2019, not a DJ set."
+},
+"e2102ef0": {
+"v": "keep",
+"kind": "set",
+"reason": "A 30-minute Boiler Room DJ set by Fort Romeau."
+},
+"76568617": {
+"v": "reject",
+"kind": "track",
+"reason": "A long mix show, not a DJ set."
+},
+"b98d383d": {
+"v": "keep",
+"kind": "set",
+"reason": "A Crosstown Rebels mix show with Fort Romeau."
+},
+"493cf7a5": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a talk show, not a DJ set or live performance."
+},
+"82734d87": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a track by a different person with the same name."
+},
+"58311758": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a live set by Korsakow."
+},
+"b4a809b7": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a live set by Korsakow."
+},
+"e265483a": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a talk show, not a DJ set or live performance."
+},
+"5db8a8d9": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a track by a different person with the same name."
+},
+"d7e4fd47": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "This is a tracklist by someone else, not a DJ set or live performance."
+},
+"560fe5bc": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a track by a different person with the same name."
+},
+"da562a88": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not Sin\u00e9ad"
+},
+"dd327fe5": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not Sin\u00e9ad"
+},
+"1a61f21b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not Sin\u00e9ad"
+},
+"65f154b4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not Sin\u00e9ad"
+},
+"2e26a6f9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Not Sin\u00e9ad"
+},
+"06d9f84f": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad"
+},
+"39aa1c4a": {
+"v": "keep",
+"kind": "set",
+"reason": "Sin\u00e9ad"
+},
+"9783083a": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Not Sin\u00e9ad"
+},
+"d85c4d5d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not Sin\u00e9ad"
+},
+"ab62942b": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"8a82114e": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Sin\u00e9ad"
+},
+"27eb2368": {
+"v": "reject",
+"kind": "talk",
+"reason": "Different person with the same name"
+},
+"470bf1bc": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Guest mix by Sinead McCarthy, not Sin\u00e9ad"
+},
+"720061a1": {
+"v": "reject",
+"kind": "track",
+"reason": "Single track"
+},
+"91fa2254": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Sin\u00e9ad O'Connor"
+},
+"84e57df3": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "DJ set by Sin\u00e9ad McCarthy, not Sin\u00e9ad"
+},
+"054b3b98": {
+"v": "reject",
+"kind": "talk",
+"reason": "Different person with the same name"
+},
+"d40265a9": {
+"v": "reject",
+"kind": "talk",
+"reason": "Live concert by Sin\u00e9ad O'Connor"
+},
+"0321762b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show about AI and education"
+},
+"74849402": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode featuring Sin\u00e9ad Walsh, not Sin\u00e9ad"
+},
+"272c13a0": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"beb79c13": {
+"v": "reject",
+"kind": "set",
+"reason": "Talk: Interview or conversation."
+},
+"84476269": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set: Fault TV DJ Set in Oakland."
+},
+"e5d5e639": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set: Fault Radio DJ Set."
+},
+"09deed8f": {
+"v": "reject",
+"kind": "set",
+"reason": "Talk: Interview or conversation."
+},
+"8e3d4497": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set: Live on hydeFM."
+},
+"34f13633": {
+"v": "reject",
+"kind": "set",
+"reason": "Talk: Interview or conversation."
+},
+"76f372d0": {
+"v": "reject",
+"kind": "set",
+"reason": "Talk: Interview or conversation."
+},
+"0637e8d0": {
+"v": "reject",
+"kind": "set",
+"reason": "Talk: Interview or conversation."
+},
+"95fbced8": {
+"v": "reject",
+"kind": "set",
+"reason": "Tracklist: Rinse FM set featuring Sinead Harnett and Yasmin."
+},
+"69b417e4": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"74606c81": {
+"v": "reject",
+"kind": "set",
+"reason": "Talk: Acoustic set, not a DJ set."
+},
+"f32d1b4b": {
+"v": "reject",
+"kind": "set",
+"reason": "Talk: Podcast episode, not a DJ set."
+},
+"3da474e9": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set: Fault Radio DJ Set."
+},
+"4afbd58e": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"5c74c8d0": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"9f34ed33": {
+"v": "reject",
+"kind": "set",
+"reason": "Future date: Not a current DJ set."
+},
+"c43037ea": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"a397ef73": {
+"v": "reject",
+"kind": "set",
+"reason": "Track: Full album, not a DJ set."
+},
+"e6d6d03a": {
+"v": "reject",
+"kind": "set",
+"reason": "Podcast: Not a DJ set."
+},
+"f655e879": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Sinead Halpin Maynard, not a DJ set."
+},
+"c22f5f01": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with Sinead on The Lot Radio."
+},
+"440607d4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Full show by Sinead O'Connor, not the same artist."
+},
+"6e04d44c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Gary Vee speaking about AI, not a DJ set."
+},
+"00084378": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode with Sinead Mac Manus, not a DJ set."
+},
+"3518f437": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode with Sinead Mac Manus, not a DJ set."
+},
+"7785e48d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Virgin Rock, not a DJ set."
+},
+"e3aef6e8": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with Sinead on The Lot Radio."
+},
+"f927b23d": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with Sinead on The Lot Radio."
+},
+"f1b4648b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Radio episode featuring Sin\u00e9ad McCarthy, not the same artist."
+},
+"cc0328b0": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a vlog about sewing a leather jacket, not a DJ set."
+},
+"460a4324": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a themuddshow mix by Sin\u00e9ad."
+},
+"b26882cb": {
+"v": "reject",
+"kind": "set",
+"reason": "This is about Sin\u00e9ad O'Connor, not Sin\u00e9ad the DJ."
+},
+"eb5cac92": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a greatest hits album by Sin\u00e9ad O'Connor."
+},
+"66e15554": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a future date for The Lot Radio, not a current set."
+},
+"7cf9b702": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a live set by Sin\u00e9ad O'Connor, not Sin\u00e9ad the DJ."
+},
+"2ea3898e": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a chat with Sin\u00e9ad, not a DJ set."
+},
+"c9cd8283": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a talk show with Sin\u00e9ad, not a DJ set."
+},
+"350c84e4": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a live set by Sin\u00e9ad O'Connor, not Sin\u00e9ad the DJ."
+},
+"a5474025": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a mix by j.u.g.\u00f3 and Sin\u00e9ad."
+},
+"f03d7795": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not mention Sin\u00e9ad."
+},
+"8f614fea": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Sinead Hegarty, not Sin\u00e9ad."
+},
+"7a651b3c": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Sinead Bovell, not Sin\u00e9ad."
+},
+"cc892c15": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Sin\u00e9ad and is from Fault Radio."
+},
+"55fa64b9": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Sin\u00e9ad O'Connor, not Sin\u00e9ad."
+},
+"2fc57cba": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Sin\u00e9ad O'Connor, not Sin\u00e9ad."
+},
+"7ababc78": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Sin\u00e9ad and is a live performance."
+},
+"baa2cbdb": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Sinead Harnett, not Sin\u00e9ad."
+},
+"7de0b592": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Sin\u00e9ad but is a future date."
+},
+"abdfc4f8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Sin\u00e9ad."
+}
+},
+"timings": [
+{
+"profile": "Appleblim",
+"sec": 140.8
+},
+{
+"n": 10,
+"sec": 109.4,
+"usage": {
+"completion_tokens": 450,
+"prompt_tokens": 854,
+"total_tokens": 1304,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 83.4,
+"usage": {
+"completion_tokens": 409,
+"prompt_tokens": 899,
+"total_tokens": 1308,
+"prompt_tokens_details": {
+"cached_tokens": 534
+}
+}
+},
+{
+"n": 10,
+"sec": 87.4,
+"usage": {
+"completion_tokens": 431,
+"prompt_tokens": 905,
+"total_tokens": 1336,
+"prompt_tokens_details": {
+"cached_tokens": 534
+}
+}
+},
+{
+"n": 1,
+"sec": 11.7,
+"usage": {
+"completion_tokens": 62,
+"prompt_tokens": 574,
+"total_tokens": 636,
+"prompt_tokens_details": {
+"cached_tokens": 534
+}
+}
+},
+{
+"profile": "D'Julz",
+"sec": 211.0
+},
+{
+"n": 10,
+"sec": 86.8,
+"usage": {
+"completion_tokens": 309,
+"prompt_tokens": 870,
+"total_tokens": 1179,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 83.0,
+"usage": {
+"completion_tokens": 428,
+"prompt_tokens": 803,
+"total_tokens": 1231,
+"prompt_tokens_details": {
+"cached_tokens": 499
+}
+}
+},
+{
+"n": 10,
+"sec": 87.8,
+"usage": {
+"completion_tokens": 442,
+"prompt_tokens": 848,
+"total_tokens": 1290,
+"prompt_tokens_details": {
+"cached_tokens": 499
+}
+}
+},
+{
+"n": 10,
+"sec": 91.2,
+"usage": {
+"completion_tokens": 461,
+"prompt_tokens": 857,
+"total_tokens": 1318,
+"prompt_tokens_details": {
+"cached_tokens": 499
+}
+}
+},
+{
+"n": 10,
+"sec": 83.7,
+"usage": {
+"completion_tokens": 421,
+"prompt_tokens": 838,
+"total_tokens": 1259,
+"prompt_tokens_details": {
+"cached_tokens": 499
+}
+}
+},
+{
+"n": 10,
+"sec": 87.6,
+"usage": {
+"completion_tokens": 436,
+"prompt_tokens": 877,
+"total_tokens": 1313,
+"prompt_tokens_details": {
+"cached_tokens": 499
+}
+}
+},
+{
+"n": 10,
+"sec": 73.6,
+"usage": {
+"completion_tokens": 346,
+"prompt_tokens": 894,
+"total_tokens": 1240,
+"prompt_tokens_details": {
+"cached_tokens": 499
+}
+}
+},
+{
+"n": 4,
+"sec": 37.7,
+"usage": {
+"completion_tokens": 198,
+"prompt_tokens": 649,
+"total_tokens": 847,
+"prompt_tokens_details": {
+"cached_tokens": 499
+}
+}
+},
+{
+"profile": "Fort Romeau",
+"sec": 157.1
+},
+{
+"n": 10,
+"sec": 75.4,
+"usage": {
+"completion_tokens": 241,
+"prompt_tokens": 861,
+"total_tokens": 1102,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 79.2,
+"usage": {
+"completion_tokens": 370,
+"prompt_tokens": 960,
+"total_tokens": 1330,
+"prompt_tokens_details": {
+"cached_tokens": 541
+}
+}
+},
+{
+"n": 10,
+"sec": 86.7,
+"usage": {
+"completion_tokens": 440,
+"prompt_tokens": 893,
+"total_tokens": 1333,
+"prompt_tokens_details": {
+"cached_tokens": 541
+}
+}
+},
+{
+"n": 10,
+"sec": 80.8,
+"usage": {
+"completion_tokens": 399,
+"prompt_tokens": 893,
+"total_tokens": 1292,
+"prompt_tokens_details": {
+"cached_tokens": 541
+}
+}
+},
+{
+"n": 9,
+"sec": 81.5,
+"usage": {
+"completion_tokens": 416,
+"prompt_tokens": 827,
+"total_tokens": 1243,
+"prompt_tokens_details": {
+"cached_tokens": 541
+}
+}
+},
+{
+"profile": "Korsakow",
+"sec": 54.8
+},
+{
+"n": 8,
+"sec": 93.7,
+"usage": {
+"completion_tokens": 371,
+"prompt_tokens": 812,
+"total_tokens": 1183,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"profile": "Sin\u00e9ad",
+"sec": 228.2
+},
+{
+"n": 10,
+"sec": 80.8,
+"usage": {
+"completion_tokens": 277,
+"prompt_tokens": 849,
+"total_tokens": 1126,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 86.7,
+"usage": {
+"completion_tokens": 428,
+"prompt_tokens": 858,
+"total_tokens": 1286,
+"prompt_tokens_details": {
+"cached_tokens": 488
+}
+}
+},
+{
+"n": 10,
+"sec": 86.5,
+"usage": {
+"completion_tokens": 421,
+"prompt_tokens": 873,
+"total_tokens": 1294,
+"prompt_tokens_details": {
+"cached_tokens": 488
+}
+}
+},
+{
+"n": 10,
+"sec": 87.2,
+"usage": {
+"completion_tokens": 432,
+"prompt_tokens": 854,
+"total_tokens": 1286,
+"prompt_tokens_details": {
+"cached_tokens": 488
+}
+}
+},
+{
+"n": 10,
+"sec": 94.6,
+"usage": {
+"completion_tokens": 463,
+"prompt_tokens": 871,
+"total_tokens": 1334,
+"prompt_tokens_details": {
+"cached_tokens": 488
+}
+}
+},
+{
+"n": 10,
+"sec": 96.8,
+"usage": {
+"completion_tokens": 490,
+"prompt_tokens": 824,
+"total_tokens": 1314,
+"prompt_tokens_details": {
+"cached_tokens": 488
+}
+}
+},
+{
+"n": 10,
+"sec": 91.1,
+"usage": {
+"completion_tokens": 450,
+"prompt_tokens": 858,
+"total_tokens": 1308,
+"prompt_tokens_details": {
+"cached_tokens": 488
+}
+}
+}
+]
+}

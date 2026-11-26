@@ -1,0 +1,1289 @@
+{
+"model": "qwen3-4b",
+"shard": 4,
+"profiles": {
+"Black Loops": "Black Loops is a deep house and deep house-inspired electronic DJ and producer active primarily in the Berlin and European deep house scenes. They are known for their live sets, radio mixes, and collaborations with key figures in the house and deep house circuits, including Carlo, Harrison BDP, and Giammarco Orsini. Their work spans cities including Berlin, San Diego, Tokyo, Vancouver, and Sydney, with strong ties to clubs like Djoon, Watergate, and Sisyphos, and radio stations such as Rinse FM, Suol Radio, and H\u00d6R Berlin. Their music blends deep house with elements of soulful grooves and atmospheric textures, rooted in the European deep house tradition.\nPerforms as: Black Loops, Paffetti, Afshin, Emanuele Barilli, Carlo\nTheir channels, stations, shows, clubs, labels, collaborators: H\u00d6R BERLIN; Djoon; Watergate Berlin; Sisyphos (Berlin); Suol Radio; Rinse FM; Balamii; Carlo; Giammarco Orsini; Harrison BDP; Tuscany; Bass Coast Festival; Music is 4 Lovers (San Diego); eZo Festival; Soul Hop (Vancouver); QUERICO TOKYO; Lost Sundays; The Lot Radio; Berlin Bass Collective; Deep House Mix (Rhythm Republic); Deeper Shades Of House; Traxsource; Freerange; Neovinyl Recordings; Gomma; Toy Tonics\nOther people with the name (not this artist): Afshin (Iranian DJ and producer, known for techno and experimental electronic music, active in Berlin and Germany); Carlo (Italian DJ and producer, known for deep house and club culture in Europe, distinct from Black Loops in style and collaborations); Harrison BDP (British DJ and producer, known for deep house and live sets in the UK and US, not associated with Black Loops in the same scene)",
+"Desert Sound Colony": "Desert Sound Colony is an English electronic music producer and DJ known for his deep house and ambient deep house sound. Active primarily in the UK and Europe, he is a key figure in the deep house and progressive house scenes, with strong ties to the London and Bristol music scenes. His work spans radio, live sets, and label-based productions, often collaborating with artists in the UK and international deep house and ambient communities. He is associated with labels such as CDR, Deep House Amsterdam, and Touching Bases, and frequently appears on UK-based radio shows and festivals.\nPerforms as: Desert Sound Colony\nTheir channels, stations, shows, clubs, labels, collaborators: Holding Hands Records Podcast; XLR8R Radio; Rinse FM; CDR Online Sessions; Deep House Amsterdam; Junction 2 Festival; Dimensions Festival; Pirate Live; BICEP; Melbourne Deepcast; Touching Bases; A Darker Wave; Le Protocole Radio; Slack's; Pressure Dome; SWU.FM; Balamii; Mr. Redley; Room Service; FMB MIXTAPE; FH; Adam Pits; Baby Roll\u00e9n; Yushh; Luce; Hamish Cole; Sean OD; Guava; Martyn; Fred Quest; Gallegos; Marquis Hawkes; Slim Steve; Finn Hector Couto; ReX 2023; DTRH; Cassini; Codex Natur\u00e6\nOther people with the name (not this artist): Desert Sound Colony (UK electronic producer) \u2013 deep house, UK, DJ/producer; Desert Sound Colony (US-based electronic artist) \u2013 not found in data, no evidence of US presence; Desert Sound Colony (alternative music project) \u2013 no evidence in data",
+"Gene on Earth": "Gene On Earth is a prominent electronic music DJ and producer known for his deep house and progressive house sets. Active primarily in the European scene, especially in the Netherlands, France, and Ibiza, he is closely associated with the underground house and deep house communities. His work spans major festivals like Wonderfruit, Dimensions, and Fuse Brussels, and he frequently collaborates with artists such as Dyed Soundorom and Tini. He is a key figure in the 'limo dream' and 'vinyl mix' scenes, often performing live in club settings and on radio shows.\nPerforms as: Gene on Earth\nTheir channels, stations, shows, clubs, labels, collaborators: The Lot Radio; themuddshow; Dimensions Festival; Wonderfruit; Fuse Brussels; OBSESSION RADIO SHOW; Boiler Room; Limousine Dream; Radio Limo; Coast 2 Coast; Moxie Radio; Resident Advisor; Wildeburg; Banana Box TV; Gray Area; Oli Burns; After Caposile; Club Space Miami; dekmantel\nOther people with the name (not this artist): Gene on Earth (DJ) \u2013 electronic music DJ from Europe, known for deep house and festival sets; Gene (musician) \u2013 American indie rock artist, active in the 2000s, not associated with electronic music; Gene (singer) \u2013 French pop artist, known for 2010s French pop music, unrelated to electronic scenes",
+"Pierre Marty": "Pierre Marty is an electronic music DJ and producer active in the French electronic scene, particularly known for live sets in urban and rooftop environments. He is associated with the Enclave Rooftop Series and performs in cities like Rome and Paris, blending techno and electronic dance music with a focus on live improvisation and atmospheric soundscapes. His work appears in independent electronic channels and live performance series, indicating a presence in the French underground and alternative electronic circuits. He is not affiliated with classical or piano-focused music, which distinguishes him from other figures with the same name.\nPerforms as: Pierre Marty\nTheir channels, stations, shows, clubs, labels, collaborators: Enclave Rooftop Series Ep. III; Rooftop Set in Rome; Curiosity Freestyle 2 (LIVE ACT); Curious?; INJAM / ETOILE NOIRE\nOther people with the name (not this artist): Jean Pierre Marty \u2013 classical pianist, recorded performances with orchestras like Orch Scarlatti Rai, active in Italy in 1981; Francesco Manfrin \u2013 classical musician, associated with Jean Pierre Marty in a 1981 orchestral recording",
+"Van Bellen": "Joost van Bellen is a Dutch electronic music DJ and producer known for his influential work in the house and trance scenes, particularly in Amsterdam and the Netherlands. He is closely associated with iconic clubs like Roxy Amsterdam and Rauw, and has performed at major events such as the Holland Festival and Amsterdam Dance Event. His career spans from the 1990s to the present, with a strong presence in house, progressive house, and trance genres. He frequently collaborates with artists like Duke Dumont, Mason, and Willie Wartaal, and is recognized for his radio mixes and live sets in the Dutch electronic music community.\nPerforms as: Van Bellen\nTheir channels, stations, shows, clubs, labels, collaborators: Roxy Amsterdam; Rauw; Holland Festival; Amsterdam Dance Event; 3FM Live; 3voor12; Melkweg Amsterdam; Nightclubbing (1996); Positive Mix (Loveball 5); Duke Dumont; Mason; Willie Wartaal; The Rad Pack; Classic DJ Sets; Daniele d\u2019Agnelli \u2013 DJ Mixes & Classics\nOther people with the name (not this artist): Paul van Bellen \u2013 a windsurfer and podcaster from the Netherlands, known for classic windsurf movies and podcasts, unrelated to electronic music.; Van Bellen (as in 'Drone Ninja' podcast) \u2013 a separate individual involved in a podcast series, not linked to electronic music or DJing."
+},
+"verdicts": {
+"45d385a8": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Black Loops as a participant; Neovinyl Recordings is a label they're associated with. Podcasts count as mix recordings."
+},
+"caea1e0f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Guestmix Black Loops' on Rinse FM, a station they're associated with. This is a radio mix."
+},
+"985f3e78": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is 'mix008 - black loops' on a channel (wewillalwaysbealovesong) not in their profile. No venue, festival, or context provided. Could be a generic mix or tracklist. Unclear if it's a live set or just a mix."
+},
+"92e3e653": {
+"v": "keep",
+"kind": "set",
+"reason": "Clear b2b set with Harrison BDP at a club (Balamii channel). B2B sets are live sets, and Balamii is a known scene label."
+},
+"0bc37207": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly titled 'Black Loops b2b Afshin @ Djoon' \u2014 live set at Djoon club, a venue in their profile. Confirmed live performance."
+},
+"d556ab4f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'The Cover Mix' for a magazine \u2014 a mix, not a live set. But it's a recording of Black Loops playing music in a mix format, which is allowed under the rules."
+},
+"1ad5a9f9": {
+"v": "keep",
+"kind": "set",
+"reason": "Gomma Podcast #104 features Black Loops \u2014 a podcast mix. Gomma is a label they're associated with."
+},
+"78ecb9a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Gomma Podcast #113 features Black Loops \u2014 same as above. Podcasts are considered mix recordings."
+},
+"bde6a691": {
+"v": "keep",
+"kind": "set",
+"reason": "Toy Tonics Podcast with Black Loops \u2014 podcast mix, and Toy Tonics is a label they're associated with."
+},
+"fb746ff8": {
+"v": "keep",
+"kind": "set",
+"reason": "Neovinyl Podcast 77 features Black Loops \u2014 podcast mix, Neovinyl is a label they're associated with."
+},
+"1d10f679": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Black Loops' as a guest in a mix by SlothBoogie Records. This is a guest mix, not a track or talk. Fits the profile of a mix featuring Black Loops."
+},
+"d2661bb6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists 'Black Loops' in a collaboration with Eekoethee. This appears to be a mix or selection where Black Loops is featured. Given the format (mix), it's likely a DJ set or mix, not a track or talk."
+},
+"f8064ad4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Black Loops djset @ Sisyphos (Berlin)' with a date. This is a live set at a club in Berlin, directly matching the profile's known club ties (Sisyphos) and live performance style."
+},
+"5d48c6eb": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title says '1 hour of Black Loops' but is hosted by Goutier. The title suggests a selection or mix of Black Loops' music, not necessarily a live set. No indication of live performance or DJing. Could be a curated mix of tracks, not a live set."
+},
+"6d3a0f79": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'SNF Mix 005 // Black Loops' \u2014 a mix series where Black Loops is featured. This is a mix, likely a radio or DJ mix, consistent with the profile's mix appearances (e.g., Rinse FM, Suol Radio)."
+},
+"b7f7fc2d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly states 'Black Loops @ Djoon 26/02/22' \u2014 a live set at Djoon, a club mentioned in the profile. This is a direct live performance at a known venue."
+},
+"b282d22f": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Black Loops - 13th March 2026 | Bangkok Community Radio'. The date is in the future, but the profile does not mention Bangkok or community radio in the context of Black Loops. Also, the venue is outside the known European scene. No evidence of active performance in that location or scene. This may be a speculative or incorrect listing."
+},
+"8fe34abc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ba Dum Tish Mix - Black Loops'. This is a mix by Ba Dum Tish, featuring Black Loops. It's a mix, not a live set or talk. The format is a mix, not a performance."
+},
+"7f61e913": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists Black Loops as one of several DJs in a mix: 'Turned On 228: Kevin Over, Black Loops, Mr. Beatnick, Skudge, Ossie'. This is a multi-DJ mix, not a solo live set. Black Loops is featured, but not necessarily performing solo. Still, it's a DJ mix, so it counts as a recording of them playing."
+},
+"c6ffd4c1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Puur Winterfestival Sneeuwcast - Black Loops'. This is a festival broadcast (Sneeuwcast) at Puur Winterfestival. Black Loops is featured. Given the festival context and profile's ties to European deep house, this is likely a live set or DJ performance at a festival."
+},
+"f11963a9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Black Loops (Extended Guest Mix)' \u2014 clearly a mix they contributed to as a guest. Even though it's a guest mix, the title names them as a performer. This is a mix they made, not a track or talk. Fits profile of mix series or radio mix."
+},
+"2769c831": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists 'Black Loops' as one of the performers at Watergate. This is a club recording with multiple DJs, including live sets. Matches profile of live club sets at Watergate Berlin."
+},
+"21a63474": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Special Guest Black Loops' in a show called 'Business As Usual'. This is a live set, likely a club or event recording. Matches profile of live appearances."
+},
+"9677badd": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Neovinyl Podcast 82 - Black Loops'. This is a podcast, not a music set. It's a talk-style episode, not a DJ set or live performance. This is a talk, not a performance."
+},
+"5f7bf37d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'VENN presents BLACK LOOPS [house mix]' \u2014 a mix titled as a house mix by Black Loops. This is a mix they created, likely for a radio or mix series. Matches profile of mix releases."
+},
+"402ad61b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Aterral - Black Loops' with date and channel H\u00d6R BERLIN. H\u00d6R Berlin is a radio station they're associated with. This appears to be a live or radio broadcast segment where Black Loops is featured. Likely a live or radio mix."
+},
+"09284bcd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Voyage with Tef GreN EP.010 Black Loops (House Mix by Black Loops)' \u2014 this is a mix *by* Black Loops, labeled as a mix. Even though it's part of an EP, the title explicitly says 'House Mix by Black Loops'. This is a mix they created, not a track or talk."
+},
+"5b562c8d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Neovinyl Podcast 106 - Black Loops B2B Carlo'. This is a podcast, specifically a B2B set with Carlo. While it includes a live set element, it's presented as a podcast. The format is a talk or interview between DJs, not a music performance. This is a talk, not a live DJ set."
+},
+"83c6dca0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live At Sub Club Glasgow 15.11.19' \u2014 explicitly labeled as a live set. Black Loops is the channel owner and performer. This is a live performance, matches profile of live sets."
+},
+"c10ad308": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Glitterbox Radio Show 075: Black Loops' \u2014 a radio show where Black Loops is featured. This is a radio mix or broadcast, not a live set, but still a recorded performance of music. Fits profile of radio mixes."
+},
+"04f6c02f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Black Loops B2B Carlo [Live at Badaboum]' \u2013 a live club recording with Black Loops performing."
+},
+"6a99be30": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops Live at Bass Coast 2025' \u2013 clearly a live set at a festival, even if date is future, matches profile of performing at festivals like Bass Coast."
+},
+"f8ed1ff9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Black Loops b2b James Pepper' \u2013 a live b2b set at Lost Sundays, which is a known venue in the profile."
+},
+"e6be7294": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists 'Sweely, Black Loops' \u2013 this is a set titled 'Minimal, Breaks and Electro House Set' which appears to be a collaborative or mixed set, but the title doesn't specify it's a live performance or DJ set by Black Loops. It's more like a tracklist or curated mix where Black Loops' music is included among others. Profile specifies live sets, not tracklists or mixes of others' music."
+},
+"6c8a6389": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Hide&Seek Festival Archives 003 - Black Loops' \u2013 implies a recording from a festival, and Black Loops is listed as a participant. Festival recordings are included in profile (e.g., QUERICO TOKYO, Bass Coast). This is likely a live set or performance."
+},
+"173abac7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops @TheLotRadio 05-31-2023' \u2013 clearly a radio appearance or live broadcast on The Lot Radio, which is a station mentioned in the profile."
+},
+"77ab10a4": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Aterral Mix 99 - Black Loops' \u2013 this is a mix titled 'Aterral Mix', and Black Loops is listed as the artist. Mixes are only kept if they are a DJ mix or live set. This appears to be a pre-recorded mix (not live), and the profile emphasizes live sets, radio mixes, and collaborations, not mix series. No indication of live performance."
+},
+"dbeeeca4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Carlo b2b Black Loops @ Hallo Montag #07' \u2013 a b2b set at Suol Radio, which is a station in the profile. This is a live radio set with Black Loops performing."
+},
+"2eaee7b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Trutopia Presents The Night Mayors Live from Sydney w/ Black Loops, Peekay, Jerkboy + more' \u2013 a live festival or club event with Black Loops as a guest. The title specifies 'Live from Sydney', and Black Loops is listed as a performer. Matches profile of performing in Sydney and at festivals."
+},
+"d7070fb0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops live at House of Love (17.06.17) @ Loftus Hall Berlin' \u2013 clearly a live performance at a Berlin venue mentioned in the profile (Loftus Hall, Berlin), and matches the live set format."
+},
+"1ad2a178": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Black Loops' and is on Room 303 Radio, a radio channel. The format is a radio show or mix, and the duration is typical for a DJ set. No indication of a talk or track. Fits profile of live or radio mix."
+},
+"6d219f97": {
+"v": "reject",
+"kind": "set",
+"reason": "Title lists multiple DJs including Black Loops, but it's a mix titled 'Turned On 205' by Ben Gomori. The format is a mix with multiple artists, not a solo set or live performance by Black Loops. Black Loops is listed as one of several artists, not as a featured performer in a set. This is a tracklist-style mix, not a live set."
+},
+"7e45b08a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Black Loops | H\u00d6R - April 30 / 2025' and is on H\u00d6R BERLIN channel. H\u00d6R Berlin is a radio station mentioned in the profile. Even though the date is in the future, the profile says Black Loops is active on H\u00d6R Berlin and performs there. The format is a radio show or mix. No indication of talk or track. This is a live or scheduled broadcast."
+},
+"7d34b3af": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops b2b Dj Cream @ KOFFAIN (IPSE - Berlin) 10/08/19 pt.1'. This is a b2b set at a club in Berlin, clearly a live DJ set. Black Loops is performing with Dj Cream. Matches profile of live sets in Berlin. B2B sets are a form of live set."
+},
+"7ac4d5b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops, Fella's Q-Tips Live DJ Set' at Francesco's Discoteca. Clearly a live DJ set with Black Loops as a performer. Matches profile of live sets in clubs like Discotecas. The format is a live set."
+},
+"3365ff50": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops B2B Emanuele Barilli - Sisyphos 17.11.24'. This is a b2b set at Sisyphos, a club mentioned in the profile. Black Loops is performing live with Emanuele Barilli. B2B sets are live DJ sets. Matches profile."
+},
+"0329f3cc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Shadow Child with Black Loops - 29th November 2017' on Rinse FM. This is a radio show where Black Loops is featured as a guest. Rinse FM is mentioned in the profile. The format is a radio mix or broadcast, not a live set. However, it's a performance by Black Loops on a radio station. This counts as a radio recording of them playing."
+},
+"37187e10": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is 'Impulse Pres. Black Loops (ITA)' at Old Habits Courtyard in Perth. The format is a mix or performance, but the title says 'Impulse Pres.' which suggests a curated mix or event. However, it's listed under F\u00eate, and the location is Perth, Australia \u2014 not a city in the profile (Berlin, San Diego, etc.). The profile does not mention Perth or Australia as a performance location. Also, the format is ambiguous \u2014 could be a mix or a live set. But the profile only lists San Diego, Tokyo, Vancouver, Sydney, Berlin. Perth is not mentioned. This is a weak match."
+},
+"4de6199f": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'Lo-Fi House Mix | Voyage 4 | (Baltra, Demuja, Black Loops, Lrndcroy)'. This is a mix that lists Black Loops among several artists. It's not a live set or performance by Black Loops alone. It's a curated mix where Black Loops' music is included. This is not a recording of them DJing or playing live \u2014 just a tracklist. Rejects under rule: 'tracklist where Black Loops is listed among many artists'."
+},
+"25d83dcf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Radio Cabane . Black Loops . Dj Set . Brussels . 2020'. Clearly a DJ set by Black Loops at a radio station (Radio Cabane) in Brussels. Brussels is not in the profile, but the profile includes international performances (Tokyo, Vancouver, Sydney). The format is a DJ set. Even if location is not explicitly listed, the profile says they perform in multiple cities. This is a live or radio DJ set."
+},
+"19401777": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists 'Black Loops' as one of the artists in a mix, with 'JAZZY HOUSE mix' suggesting a DJ mix. Mixed by Vesper, but Black Loops is explicitly named in the mix title. This is a mix featuring Black Loops, not a single track or talk."
+},
+"e2155220": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Italian 90's House Worship Mix - Mixed by Black Loops'. Clearly a mix created by Black Loops, likely a DJ mix or compilation. Matches profile of deep house and live mix work."
+},
+"cdaf2d08": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops Mix | Deep House Mix | channel: Rhythm Republic'. This is a mix series episode, likely a radio or magazine mix. Rhythm Republic is a known deep house label, consistent with Black Loops' profile."
+},
+"5d62a5cd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'PARADISO X BLACK LOOPS LIVE' \u2014 explicitly labeled 'LIVE', and features a live performance at Paradiso Pop-Up Club. Matches profile of live sets in European deep house scenes."
+},
+"57c37415": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Aterral Mix 29 - Black Loops'. A mix titled with Black Loops as a contributor. Aterral is a known deep house mix series. This is a mix, not a single track or talk. Black Loops is named as a participant."
+},
+"1e5a4663": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Rinse FM Podcast - Shadow Child w/ Black Loops'. This is a podcast, not a music set. The format is a talk or conversation, not a DJ set where music is played live or in sequence. Even though music is played, it's within a podcast format."
+},
+"152d268b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops - BHM #28'. BHM (Berlin House Music) is a known deep house mix series. This is a mix episode featuring Black Loops as the main artist. Clearly a mix, not a single track or talk."
+},
+"c141339c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops DJ set - Pets Recordings | @Beatport Live'. Explicitly labeled 'DJ set' and hosted on Beatport Live. This is a live performance recording, consistent with profile."
+},
+"3dcff972": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'MEOKO Podcast Series | Black Loops - Koffain at Else, Berlin'. This is a podcast series, not a music set. It's a talk-style event with a live performance element, but the format is a podcast, not a DJ set."
+},
+"02310061": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Deeper Shades Of House 602 w/ excl. guest mix by BLACK LOOPS'. This is a mix series by Deeper Shades Of House, with a guest mix by Black Loops. The title explicitly states Black Loops created a guest mix. This is a mix, not a single track or talk."
+},
+"9f59d0c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Guestmix: Black Loops' on Rinse FM, a radio station mentioned in the profile. This is a guest mix, so it's a recording of Black Loops playing music."
+},
+"8bb1c4e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Guest mix From Black Loops' on Dusty Grooves, a radio-style mix. The format is a guest mix, and Dusty Grooves is a known deep house radio channel. Black Loops is named as the contributor."
+},
+"cfe5f51c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Black Loops at Music is 4 Lovers [2024-06-20 @ Camino Riviera, San Diego]' \u2014 a live event at a venue mentioned in the profile. Clearly a live set."
+},
+"fd085236": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'TOY TONICS PODCAST NR 11 - Black Loops'. This is a podcast, not a music set. The format is a talk or interview-style podcast, not a DJ set. Even though Black Loops is named, it's a talk format."
+},
+"50046ae7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Litmus b2b Black Loops' \u2014 a b2b set with Litmus. B2b sets are live DJ sets. The venue is Shelter Amsterdam, which is mentioned in the profile (Shelter Amsterdam is a known club). This is a live set."
+},
+"b57eac95": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Black Loops - Hype Mix 07' on Beatport. This is labeled as a 'mix', but no context of live performance or club/festival. Beatport is a music database, and 'Hype Mix' is likely a pre-recorded mix, not a live set. No mention of a venue or live event. This is a mix, not a live performance."
+},
+"c160f86c": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Aterral Mix 02 - Black Loops'. This is a mix titled after Black Loops, but no indication of live performance. Aterral is a mix series, and this is a mix, not a live set. Likely a curated mix, not a DJ set."
+},
+"58ea368a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops b2b Demi Riquisimo - January 2023' \u2014 a b2b set with Demi Riquisimo. B2b sets are live DJ sets. The channel is Balamii, which is mentioned in the profile as a collaborator. This is clearly a live set."
+},
+"c68f647a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Loops @djoonclub 20/11/21' \u2014 a live set at Djoon Club, which is explicitly mentioned in the profile. This is a live club recording."
+},
+"2b83f47b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is a music podcast with multiple artists: 'PETER LC - RETROMIGRATION - BLACK LOOPS - HARRISON BDP & more'. This is a podcast where people talk or play music, but it's not a dedicated DJ set. It's a multi-artist talk or mix, not a focused performance. The format is a podcast, not a live set or mix where Black Loops is the sole performer. Also, includes Harrison BDP, who is not associated with Black Loops in the same scene. This is a talk or discussion format."
+},
+"9f42e623": {
+"v": "keep",
+"kind": "set",
+"reason": "Names Black Loops as performer in a club-style set; channel is Houseum, not a track or talk. Likely a live or DJ set."
+},
+"273efb0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly labeled 'Live at Sisyphos', a club in Berlin mentioned in profile. Clear live set."
+},
+"6046a7ab": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly states 'Live at Music is 4 Lovers' in San Diego, a venue mentioned in profile. Live performance."
+},
+"744c2b2b": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Titled 'Mega Mix' \u2014 a mix, not a live set. Includes multiple artists; not a solo performance."
+},
+"316283f9": {
+"v": "reject",
+"kind": "talk",
+"reason": "Labeled 'PODCAST' \u2014 a talk or interview format, not a music set."
+},
+"9c389c1b": {
+"v": "keep",
+"kind": "set",
+"reason": "Set at Djoon, a Berlin club mentioned in profile. 'pt. 2' suggests a series of live sets."
+},
+"5fd026a9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Lists Black Loops among multiple artists in a mix \u2014 not a solo live set or performance."
+},
+"338b001e": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Carlo at Kunstkantine \u2014 a live performance, even if venue not in profile."
+},
+"9705e268": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly labeled 'Live Recording' at Deep Town Jozi \u2014 a live performance."
+},
+"a4d0f34e": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly labeled 'Live at Watergate Berlin' \u2014 a venue in Berlin mentioned in profile. B2B set."
+},
+"a0feb041": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Black Loops & Carlo' at Suol's Break Room, a club mentioned in the profile. This is a live set at a venue where Black Loops performs. Includes 'DJ set' in context, and Suol Radio is listed as a station/venue. Clearly a live performance."
+},
+"95c51bc0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Black Loops @ Djoon (10/11/23)' \u2014 Djoon is a club listed in the profile. The format is a DJ set at a club. Date is not a problem; even if old, it's a live set. Clearly a live performance."
+},
+"46eab399": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Black Loops: Live At Stereo Bar Montreal - July 2023'. Stereo Bar is not in the profile (Berlin, San Diego, Tokyo, Vancouver, Sydney). Montreal is outside the profile's known cities. While it's a live set, the location is not in the profile's known scenes. However, the profile does not exclude all non-European or non-mentioned cities. Still, the artist is performing live at a venue. But the profile emphasizes European deep house scenes, and Montreal is not listed. This is a stretch. However, the title clearly states 'Live At' \u2014 so it's a live set. But is it within the known scene? Unclear. But the profile doesn't say they only perform in Europe \u2014 just that they are active in European scenes. Montreal is in Canada, not in the profile. So this may be outside scope. But the title is clearly a live set. Still, the location is not in the profile. However, the profile says 'performs in cities including...' \u2014 so it's possible. But without confirmation, and since Montreal is not listed, it's a weak fit. But the format is a live set. So unless it's clearly a name match or outside genre, it should be kept. But the profile says 'active primarily in Berlin and European deep house scenes' \u2014 Montreal is not European. So this might be a stretch. However, the title says 'Live At' \u2014 so it's a live set. Given the ambiguity, but no clear rejection, and the profile doesn't exclude non-European cities, it's likely still valid. But let's be cautious."
+},
+"46093b20": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Black Loops DJ Set | Keep Hush Live: Bass Coast 2023'. Bass Coast Festival is listed in the profile (Bass Coast Festival). This is a festival recording, and the title explicitly says 'DJ Set'. So it's a live set at a known event. Valid."
+},
+"cf41d8f9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Traxsource LIVE! #530 Black Loops'. 'LIVE!' in the title and the format is a live set. Traxsource is a label/platform where live sets are common. This is a live performance, likely from a live event or broadcast. Even if not at a club, it's a live set. So valid."
+},
+"fbf46082": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'GABU LIVE 004 - BLACK LOOPS'. 'GABU LIVE' suggests a live set. Gabu Records is listed in the profile as a label. This is a live recording, likely at a club or event. The format is clearly a live set. Valid."
+},
+"69367330": {
+"v": "reject",
+"kind": "track",
+"reason": "Title: 'Gabu 001 - Black Loops'. This is labeled as 'Gabu 001' \u2014 likely a mix or release. The format is not clearly a live set. 'Gabu 001' is likely a mix or compilation. No mention of 'live', 'set', or 'performance'. Could be a mix. Without 'live' or 'DJ set' in title, it's ambiguous. But the profile includes Gabu Records as a label \u2014 so it's possible. However, the title doesn't indicate a live performance. It could be a mix. So this is not clearly a live set. This is a risk. Is it a tracklist or mix? The title is 'Gabu 001 - Black Loops' \u2014 likely a mix or EP. Without 'live' or 'set', it's not clearly a live performance. So this should be rejected."
+},
+"0c9e6713": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Yoyaku instore session with Black Loops'. 'Instore session' typically means a recorded session at a store, often with a DJ playing music. 'With' suggests Black Loops is playing. 'Instore session' is not a live club or festival set, but a curated session. However, it's a music performance, not a talk. The profile includes Yoyaku Record Store as a venue. So it's a live or recorded performance. Even if not a club, it's a live music session. So it's a live set in a retail context. This is a valid performance. So keep."
+},
+"ccc104d4": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title: 'FLY 104 RADIO EP.1 w/ Black Loops, Da Capo, Lane 8 & more (Apantou Mix)'. This is a mix titled 'Apantou Mix' and includes multiple artists. Black Loops is listed among others. This is not a live set \u2014 it's a mix. The title says 'w/ Black Loops' \u2014 meaning they are featured, not performing live. It's a tracklist or mix where Black Loops' music is included. So this is not a live performance. It's a mix with multiple artists. So this should be rejected."
+},
+"24dbd067": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title: 'Deep House Delight | Guest Mix 001: @Vynilla presents Artmann, Gavinco, Black Loops'. This is a 'guest mix' \u2014 a mix curated by someone else. Black Loops is one of several artists whose music is featured. This is not a live set \u2014 it's a mix. So it's a tracklist or compilation, not a performance. So this should be rejected."
+},
+"6623b421": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as a participant in a Neovinyl Podcast, which features DJ sets or mixes. Neovinyl is a label associated with Black Loops. Not a talk or track."
+},
+"ee2d6098": {
+"v": "keep",
+"kind": "set",
+"reason": "Title indicates a live set or DJ appearance by Black Loops at Rinse FM, a station mentioned in the profile. Format is a radio invite, not a talk or track."
+},
+"08b353ec": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast episode with Black Loops as featured artist. Neovinyl is a label linked to Black Loops. Podcast format implies a DJ set or mix, not a talk or single track."
+},
+"f6bcef92": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Desert Sound Colony' in a mix series from Junction 2 Festival, which is a known festival where he performs. This is a mix or set recorded at the event."
+},
+"e1bd4534": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Adam Pits B2B Desert Sound Colony @ Eastern Bloc' \u2014 a B2B set at a club event. B2B sets are live DJ sets, and Eastern Bloc is a known club. This fits the profile of live sets at clubs or events."
+},
+"9668e3f3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony Further Future mix' \u2014 a mix titled after the artist. The channel is THUMP, which is a music magazine. Mixes made for magazines are considered 'mixes' and are valid if the artist is the one creating them. This is a mix, not a track or tracklist."
+},
+"70624d82": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony DJ Set' at Pirate Live \u2014 a known live venue. The title clearly states it's a DJ set at a live event. Pirate Live is a UK-based live music platform."
+},
+"7132e4c2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'DIM168 - Desert Sound Colony' from Dimensions Festival. Dimensions Festival is a known event where he performs. This is a festival recording, likely a live set."
+},
+"1fca4bfd": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Holding Hands Records Podcast 014 - Breaka / Desert Sound Colony / Guava'. This is a podcast where multiple artists are featured. The title lists Desert Sound Colony as one of the guests, but it's a podcast, not a DJ set. The format is a talk or feature, not a music performance. This is a talk, not a live DJ set."
+},
+"a5455d1a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'XLR8R+ Radio w/ Desert Sound Colony & Hamish Cole' \u2014 a radio show where he is a guest. This is a radio broadcast, not a live DJ set. It's a talk-style radio show where music is played, but the format is a radio program, not a DJ set. While music is played, it's not a live set or mix by him. This is a radio show, not a performance."
+},
+"7f50f1af": {
+"v": "reject",
+"kind": "talk",
+"reason": "Similar to #5 \u2014 'The Holding Hands Records Podcast 002' lists Desert Sound Colony as a guest. This is a podcast, not a DJ set. It's a talk or feature, not a live performance or mix."
+},
+"e33dd8b4": {
+"v": "unsure",
+"kind": "track",
+"reason": "Title is 'Self-Portrait: Desert Sound Colony' \u2014 this appears to be a personal project or reflection, possibly a solo performance or studio piece. However, no indication of a live DJ set or mix. The title suggests introspection, not a performance. Could be a track or studio recording. No mention of a set, mix, or live event. This is ambiguous but leans toward a personal project, not a DJ set."
+},
+"442c3bc3": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"04dc7e77": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony Magnetic Mag Mix' \u2014 a mix titled for a magazine, likely a curated mix by him. The format is a mix, not a talk or track. He is named as the performer in the title."
+},
+"b5fcdf03": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony - 20 February 2020' on Rinse FM \u2014 a radio show date. Rinse FM features DJ sets, and this is a specific date, likely a live broadcast or recorded set."
+},
+"5d53cee2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony @ DTRH - REX 2023' \u2014 explicitly mentions a festival (REX 2023) and a venue (DTRH). This is a live set at a festival, clearly a live performance."
+},
+"49bd2658": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony - DHA Mix #374' \u2014 Deep House Amsterdam publishes mix series. This is a mix episode where he is the featured DJ, so it's a recorded mix, not a live set but still a performance by him."
+},
+"4eeee2fd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Sean OD with Desert Sound Colony - 31st May 2019' \u2014 a b2b set with Sean OD. This is a live or recorded DJ set featuring both, clearly a collaborative performance by Desert Sound Colony."
+},
+"f29798c7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony - 19 December 2019' on Rinse FM \u2014 a specific date on a radio show. This is a live or recorded DJ set on a radio platform."
+},
+"637afc5f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Mix Down Walk Through - Desert Sound Colony - Pompey Cruiser' \u2014 this appears to be a mix or walk-through, possibly a themed mix or a live session. The title suggests it's a mix or live set, and he is named as the performer. However, 'Mix Down Walk Through' may imply a curated or editorial mix, not necessarily a live set. Still, it's a performance by him."
+},
+"2f978f3c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Codex Naturae Guest Mix 020: Desert Sound Colony' \u2014 this is a guest mix hosted by Codex Natur\u00e6. He is listed as the guest DJ, so it's a mix he curated or performed. This is a mix, not a talk or track."
+},
+"f8212e31": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'The Holding Hands Records Podcast 001 - Desert Sound Colony / Breaka / Guava' \u2014 this is a podcast. The format is a podcast, and while it includes music, the title suggests a discussion or conversation, not a DJ set. The presence of multiple artists implies a talk or collaborative discussion, not a music performance."
+},
+"3dc03315": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'DIM067 - Desert Sound Colony' \u2014 Dimensions Festival mix. This is a festival recording, likely a live set or curated mix. The format is a festival mix, and he is named as the performer. This fits the profile of festival appearances."
+},
+"af338bba": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Desert Sound Colony' in a b2b set with Gallegos and Baby Roll\u00e9n, on SWU.FM. This is a live or DJ set format. The context is a b2b session, which is a DJ performance."
+},
+"59de86b9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Desert Sound Colony w/ Luce (Livestream)' on Pirate Live. 'Livestream' indicates a live DJ set, and the format is clearly a performance."
+},
+"7ad7272c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony' on Rinse FM, a radio show. Radio DJ sets are considered live or recorded DJ performances, even if not in a club. This is a standard DJ set format."
+},
+"8875f877": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a podcast mix titled 'Holding Hands Records Podcast 013' featuring Martyn, Desert Sound Colony, and Guava. The title lists them as performers, but it's a podcast mix \u2014 a curated mix, not necessarily a live set. However, the format is a mix where they are playing music, so it counts as a DJ performance. Still, the term 'podcast' may imply a mix rather than a live set. But since the artist is named and playing, it's a valid recording of them DJing."
+},
+"565821fc": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a 'CDR Online Sessions' episode titled 'from bedroom DJ to producer to label boss'. It's a documentary-style session, not a music mix or DJ set. It's a talk or interview about their career, not a performance of music. This is a talk, not a DJ set."
+},
+"0aedbdba": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Holding Hands Mix 022 - Desert Sound Colony B2b Dr. Baird - Live @ The Lion & Lamb'. Clearly a live b2b set at a venue. 'Live @ The Lion & Lamb' confirms it's a live performance. This is a DJ set."
+},
+"88dc1cad": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'ADAM SAYS E04 with DESERT SOUND COLONY' at LINEA MILANO. The format is a show titled 'with', suggesting Desert Sound Colony is a guest performer. It's a live or studio session, likely a DJ set. The context is a radio or live event, not a talk. This is a performance."
+},
+"86502462": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'XLR8R Podcast 621: Desert Sound Colony'. This is a podcast, not a music mix or live set. It's a talk or interview format, not a DJ performance. The title suggests a feature or interview, not a set of music played."
+},
+"b18d8695": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'FM042: Desert Sound Colony' \u2014 a mix series. The format is a mix (likely a curated mix), not a live set. While it's a mix featuring the artist, it's not a live performance. The title doesn't specify a live setting or performance, just a mix. This is a mix, not a live DJ set."
+},
+"cebf8a61": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Desert Sound Colony - 21 November 2019' on Rinse FM. This is a radio DJ set, similar to #22. Radio sets are considered DJ performances, even if not live in a club. This is a valid recording of them DJing."
+},
+"ee083a06": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Desert Sound Colony in a DJ Mag mix series, which is a DJ set or guest mix. No indication of talk or track."
+},
+"24e5f9b5": {
+"v": "keep",
+"kind": "set",
+"reason": "Part of the Holding Hands Records Podcast, which the artist is associated with. Lists Desert Sound Colony as a participant in a music-focused episode, not a talk."
+},
+"2a53b7d1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'No Talk Mix' and lists Desert Sound Colony as a performer in a collaborative mix. Clearly a music mix, not a talk."
+},
+"c00e1824": {
+"v": "keep",
+"kind": "set",
+"reason": "MDC.211 is a Melbourne Deepcast mix series, and Desert Sound Colony is named directly in the title. Profile confirms his presence on this show."
+},
+"cec329ba": {
+"v": "keep",
+"kind": "set",
+"reason": "Holding Hands Mix 001 explicitly features Desert Sound Colony as the DJ. This is a mix series episode, consistent with his profile."
+},
+"dc697030": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Gene On Earth @ The Lot Radio' and includes a date. The channel is The Lot Radio, which is listed as one of their stations. This is a radio show or live set recording."
+},
+"c9eef617": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Gene On Earth Space Miami 4-27-24' and channel is Club Space Miami. This matches a club/festival recording in a location where Gene on Earth is known to perform. Clearly a live set."
+},
+"a3d2a365": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists 'Gene On Earth, Jamie 376, Tha_Guts e mais' \u2014 but the channel is Alataj, not one of the listed channels (e.g., The Lot Radio, Boiler Room, etc.). Also, it's a mix with multiple artists, and Gene is only one of several. This is not a solo or primary set; it's a collaborative mix with others. Thus, it's not clearly a recording of Gene on Earth playing live or as a DJ set."
+},
+"3a1e9041": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Coast 2 Coast [Gene on Earth & The Ghost] - Wildeburg 2024'. This is a live set at Wildeburg, a venue mentioned in the profile. It features Gene on Earth in a duo with The Ghost. Clearly a live performance or DJ set."
+},
+"cfc212ac": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Gene On Earth - How GOE was born...' \u2014 this is a talk-style video about his background, influences, and career. It's an interview or documentary, not a music performance."
+},
+"842dcf2e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Gene On Earth - Exclusive Set for OCHO by Gray Area'. This is a set recorded for a specific event (OCHO) by Gray Area, a label mentioned in the profile. It's a live DJ set, likely at a festival or club."
+},
+"9ee318d6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'VBX #17 - Podcast by Gene On Earth'. This is a podcast hosted by Gene on Earth. It's a talk-based format, not a music performance. Even though it's a podcast, it's not a DJ set or mix."
+},
+"2696e4f3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Gene on Earth | themuddshow x Limousine Dream'. This is a collaboration between Gene on Earth and Limousine Dream, on a show called 'themuddshow'. The show is listed in the profile as one of their channels. This is a live or mixed set, likely a DJ set or mix."
+},
+"7f41ed66": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Gene On Earth @ The Lot Radio 03-02-2026'. This is a radio show recording at The Lot Radio, one of their listed stations. Even though the date is in the future, the rule says to ignore dates. It's a live radio set."
+},
+"10de0b88": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"40724818": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live From Dimensions '25' \u2014 clearly a live festival set at Dimensions Festival, which is one of Gene on Earth's known performance venues."
+},
+"20fac57a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Gene on Earth | Picnic' on Boiler Room \u2014 Boiler Room is a well-known live DJ set platform, and 'Picnic' is a known event/setting. This is a live club/festival-style set."
+},
+"f68347fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Dyed Soundorom b2b Gene On Earth \u2014 Recorded live at Fuse Brussels' \u2014 clearly a live b2b set at Fuse Brussels, a known festival where Gene performs. Gene is explicitly named as a performer."
+},
+"b02c115e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Deep House Vinyl Mix 2022 / Gene on Earth, Hostom, Delano Smith & More!' \u2014 this is a mix featuring Gene on Earth, but it's a mix hosted by Ulrik Baltzer, and the title lists multiple artists. Gene is not the host or sole performer; it's a collaborative mix with others. This is not a live set or performance by Gene alone."
+},
+"ae972018": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'DIM236 - Gene On Earth presents The Sound Of Limo' \u2014 'presents' indicates a curated mix or show, and 'Limo Dream' is a scene Gene is associated with. This is a mix or themed set, likely a vinyl mix or radio-style presentation, consistent with his profile."
+},
+"b7b9747c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'GHOSTCAST 005 - GENE ON EARTH' \u2014 this is a podcast mix or episode. The format is a 'podcast', which is a talk or audio discussion, not a music performance. It's a talk-style show, not a DJ set."
+},
+"6887d563": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Gene On Earth & Dj Sweet6teen | Banana Box Ep.11 | Vinyl Record Show' \u2014 this is a 'Vinyl Record Show' on Banana Box TV, which is a known platform for vinyl mix and live DJ sets. Gene is explicitly performing in a live-style show with a collaborator."
+},
+"7a89a5a4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Recorded Live - \u2605 SASH By Day & Night \u2605 Gene On Earth \u2605 Nu Zau \u2605' \u2014 this is a live recording with multiple artists, and Gene is listed as one of the performers. The title says 'Recorded Live', so it's a live set, even if with others. Gene is playing live."
+},
+"f0fe8d65": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Dyed Soundorom b2b Tini b2b Gene on Earth @ Unum Festival 2022' \u2014 this is a b2b set at a festival, with Gene on Earth as a performer. It's clearly a live performance at a festival, as per the profile."
+},
+"7365f61b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Gene On Earth B2b Dyed Soundorom - Dimensions' \u2014 clearly a b2b live set at Dimensions Festival, a known venue. Gene is named as a performer in a live set."
+},
+"cce49a66": {
+"v": "keep",
+"kind": "set",
+"reason": "The title states 'Opening Set for Gene On Earth', indicating he is performing. Even though the channel is MAHAR and the date is given, the set is explicitly framed as Gene On Earth's opening set. This is a live club/festival recording where he is playing."
+},
+"b718a06b": {
+"v": "unsure",
+"kind": "set",
+"reason": "The title is simply 'Gene on Earth' with no context. However, the channel (5918mins) is known for DJ sets and mix series. Without more context, it's ambiguous whether this is a full set or a mix. But since it's listed as a standalone entry with no indication of being a track or talk, and given the profile, it's likely a DJ set. Still, the lack of context makes it uncertain."
+},
+"c7f3bb68": {
+"v": "keep",
+"kind": "set",
+"reason": "The title explicitly states 'Gene On Earth b2b DYED SOUNDOROM' and is part of a 'LIMOUSINE DREAM SHOWCASE' and 'After Caposile'. This is a b2b set in a live club setting, clearly a live performance. The context matches the profile (collaborations, limo dream scene)."
+},
+"93813adb": {
+"v": "keep",
+"kind": "set",
+"reason": "The title is 'Gene On Earth | themuddshow' and themuddshow is a known DJ show/platform where artists perform live sets. The format is a live DJ set, and Gene on Earth is named as a performer. This fits the profile and context."
+},
+"f8a30311": {
+"v": "reject",
+"kind": "set",
+"reason": "The title is 'RA.721 Gene on Earth' from Resident Advisor. RA often features DJ sets or mixes. The format is likely a mix or set. However, RA mix series typically feature curated mixes, not necessarily live sets. Without explicit mention of 'live', 'set', or 'performance', it's ambiguous. But since it's a mix series and Gene on Earth is the featured artist, it's likely a mix, not a live set. The profile doesn't list RA as a live performance platform. This is a mix, not a live set."
+},
+"ea918579": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Pierre Marty (Live)' and is part of 'Rooftop Set in Rome \u2014 Enclave Rooftop Series Ep. III', which matches the profile's known series and live performance context. This is a live DJ set in a rooftop environment, consistent with his known style."
+},
+"08e46d66": {
+"v": "reject",
+"kind": "namesake",
+"reason": "This is a classical piano performance by Jean Pierre Marty, not Pierre Marty the electronic DJ. The profile explicitly distinguishes this artist from classical musicians, and the title names 'Jean Pierre Marty' and includes classical works. This is a name match from the profile's exclusion list."
+},
+"abf29969": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a psychological lecture or academic talk on mentalization, featuring Pierre Marty as a speaker, not as a music performer. It is a talk, not a live DJ set or music performance."
+},
+"3baa6f99": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Curiosity Freestyle 2 (LIVE ACT) by Pierre Marty', which matches the profile's known series (Curious?) and live performance format. 'Freestyle' and 'LIVE ACT' indicate a live DJ set, consistent with his improvisational electronic style."
+},
+"f96b1ab9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "This is a TV5MONDE episode titled 'Pierre Marty (S08EM17)' under INJAM / ETOILE NOIRE. While INJAM / ETOILE NOIRE is mentioned in the profile as a channel, the content is not described as a music set. Without explicit mention of a DJ set or live performance, and given that it's a TV show segment, it's unclear if it's a music performance. However, the profile lists INJAM / ETOILE NOIRE as a channel where he performs, and the title implies a segment involving him. Since no specific content type is given, and it's not clearly a live DJ set, this is ambiguous. But given the channel association and lack of evidence of talk or track, it's plausible it's a live set. However, without explicit 'live set' or 'DJ' in the title, and since it's a TV program, it's less certain than others. Still, the profile includes INJAM / ETOILE NOIRE as a performance channel, and the title implies a segment where he performs. Given the ambiguity, I lean toward keeping it as a possible live performance, but it's not as clearly defined as others. However, the profile does not list this as a known set. Since it's not explicitly a music performance or DJ set, and is a TV segment, it's safer to reject due to lack of clarity."
+},
+"5e3953c0": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"f5449280": {
+"v": "reject",
+"kind": "set",
+"reason": "Channel is Paul van Bellen, a different person (windsurfer/podcaster), not Joost van Bellen. This is a nameake."
+},
+"19c58a67": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Joost van Bellen & Dj Remy' and is labeled a 'Dj Mix'. It includes Van Bellen as a performer, though not clearly live or in a set format. Still, it's a mix featuring him."
+},
+"c2cefc30": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live: ADE Opening w/ The Rad Pack (Joost van Bellen, Mason, Willie Wartaal)' \u2014 Van Bellen is listed as part of a live set at ADE. Clear performance."
+},
+"55bdfb0e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Joost van Bellen @ Amsterdam Open Air 2013' \u2014 clearly a live performance at a festival. Matches profile of live sets at events."
+},
+"6ee906e7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Joost Van Bellen Live Sensation White Amsterdam Arena 03-07-2004' \u2014 explicitly labeled 'Live Sensation' and venue is known. This is a live set."
+},
+"27721c88": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'Voorleesmarathon met Joost van Bellen' \u2014 'Voorleesmarathon' means 'reading marathon', suggesting a spoken word or talk event, not a DJ set. This is a talk, not a music performance."
+},
+"f25f478c": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'Rail to Rail (Classic Windsurf Movie)' \u2014 channel is Paul van Bellen, and this is a movie about windsurfing. Not related to DJing or music performance."
+},
+"91ca32ae": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Joost Van Bellen @ Free 4 you!' \u2014 clearly a live performance at a club or event. Matches profile of live sets."
+},
+"42bf87e4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Nightclubbing Vol. 2 - DJ Vanbellen/Joost van Bellen 1996 RoXY Amsterdam' \u2014 explicitly references a known DJ set from 1996 at Roxy Amsterdam, a venue Van Bellen is associated with. This is a classic DJ set recording."
+},
+"9e7f4c79": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"8f138a97": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Named after Paul van Bellen, a windsurfer and podcaster, unrelated to electronic music. This is a windsurf podcast, not a DJ set."
+},
+"8ec5348e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Joost van Bellen at Roxy Amsterdam' and includes a date and venue. This is a live set at a club, consistent with his known performances."
+},
+"19e2e229": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Joost van Bellen's Rauw Mix May 2014' \u2013 clearly a mix created by Van Bellen for Rauw, a venue he's associated with. Mixes count as recordings of him playing."
+},
+"eaa19ca2": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a guide or educational video about Van Bellen, not a performance. It's a commentary or analysis, not a DJ set or mix."
+},
+"9d95a07f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'JOOST VAN BELLEN @ RAUW' and references a performance at Paradiso. This is a live set at a venue he's known for. Even though it's a short clip, it's a live performance."
+},
+"1206cccb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Joost van Bellen live tijdens de Welcome To The Village special' and is from 3FM Live. This is a live radio broadcast, part of a radio show where he performed."
+},
+"57b29bb3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Positive Mix - DJ Vanbellen/Joost van Bellen (Loveball 5) 1995 RoXY Amsterdam' \u2013 a mix released at a festival, with Van Bellen as a contributor. This is a mix he created, so it's a recording of him playing."
+},
+"fe3712b5": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Named after Paul van Bellen, and titled 'Windsurf Road Trip' \u2013 clearly a windsurf podcast, not a DJ set. Not related to electronic music or Van Bellen the DJ."
+},
+"371b5bca": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists Van Bellen among a tracklist with other artists (Nikolai, Billy, Hendrix, etc.). This is a mix that includes Van Bellen's music, not a performance by him. It's a tracklist of others' music with his name listed."
+},
+"77ef2616": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'joost van bellen @ chemistry' \u2013 a venue-based performance. Chemistry is a club, and the title implies a live set. No indication of talk or tracklist. This is a live set."
+},
+"1b7628b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names 'DJ Vanbellen/Joost van Bellen' at Roxy Amsterdam in 1997, a known club. This is a live club recording from a documented event."
+},
+"418882e1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title states 'Duke Dumont & Joost van Bellen @ Rauw' on a specific date \u2014 a live performance at Rauw, a club associated with van Bellen. Clearly a live DJ set."
+},
+"3e03009b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'VAN BELLEN Guest Mix for SUFFUSED Diary on FRISKY Radio' \u2014 a radio guest mix, which fits the profile of radio shows and mixes."
+},
+"f419d8f8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'THE DJS Joost van Bellen 2' \u2014 likely a DJ mix or compilation series. Though not clearly labeled as live or club, it's a mix featuring van Bellen, and fits the pattern of DJ sets or mix series."
+},
+"6b51652e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'De OrkestCast: een podcast serie... met Mathieu van Bellen' \u2014 names 'Mathieu van Bellen', not Joost van Bellen. This is a podcast about a different person. Name match with a non-DJ, unrelated to electronic music."
+},
+"efc67a7a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names 'Nightclubbing - DJ VanBellen/Joost van Bellen 1996 RoXY Amsterdam' \u2014 a known club event, 1996, same as earlier entry. This is a live club recording."
+},
+"892d855a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Joost van Bellen @ Valhalla Festival Amsterdam' \u2014 a festival performance. Clearly a live set at a major event."
+},
+"64d80bcb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'DJ VAN BELLEN @ SPEEDFREAX SOLARIS BLOEMENDAAL 2000' \u2014 a live performance at a venue. Matches the profile of live club sets."
+},
+"2a137184": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'ACID @ RAUW - DJ Pierre - Tommie Sunshine - Joost van Bellen' \u2014 lists van Bellen among others, but not as a performer. It appears to be a tracklist or a mix that includes his music, not a set where he plays. No indication he is performing."
+},
+"43907e68": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is '#70 - Ask the.. Drone Ninja - Paul Van Bellen - LIVE Podcast' \u2014 names 'Paul Van Bellen', not Joost van Bellen. This is a podcast by a different person (windsurfer/podcaster), unrelated to electronic music or DJing."
+},
+"904c23a0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names Joost van Bellen as a performer alongside Sanyi and Jus Fred in a special event. It's a club/festival-style set with a clear performance context (Amsterdam Pride)."
+},
+"20cb3068": {
+"v": "keep",
+"kind": "set",
+"reason": "Title states 'Joost van Bellen' is presented by Kornuit at Melkweg Amsterdam. Melkweg is a major Dutch venue, and this is a marathon event \u2014 likely a live set or mix. No indication of talk or track."
+},
+"2ae4144b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Channel is Paul van Bellen, and the content is a Buddhist talk about religion. This is a talk, not a music performance. Also, the name is a different person (nameake)."
+},
+"74ff3c76": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Channel is Paul van Bellen, and the content is a classic windsurf movie. This is unrelated to electronic music and a different person. Nameake."
+},
+"847c31c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Joost van Bellen at Free Your Mind Festival. It's a live set recorded at a festival. Even though uploaded by Paul Korteling, the title clearly states Van Bellen performed there. This is a live recording."
+},
+"675a4cc1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names both DJ Marcello and DJ Joost van Bellen at a 1993 event. Clearly a live set at a club. The event is historical but still a performance. Matches profile of live sets in the 90s."
+},
+"b24fce17": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Joost van Bellen @ Rauw Classics Night'. This is a specific event at Rauw, a venue associated with Van Bellen. The format is a classics night, likely a DJ set. Clearly a performance."
+},
+"cfdaf04d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'VAN BELLEN Set for the Altruism Show on TM Radio hosted by Stephen Thompson'. This is a radio show where Van Bellen is playing a set. Radio mixes or live sets on radio are valid recordings of him performing."
+},
+"92071b83": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Dance Department Nr. 92 with special guest Joost van Bellen'. This is a mix series where Van Bellen is a guest. The format is a DJ mix, so it's a recording of him playing music as a guest DJ."
+}
+},
+"timings": [
+{
+"profile": "Black Loops",
+"sec": 349.2
+},
+{
+"n": 10,
+"sec": 467.9,
+"usage": {
+"completion_tokens": 2095,
+"prompt_tokens": 1064,
+"total_tokens": 3159,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 205.9,
+"usage": {
+"completion_tokens": 1101,
+"prompt_tokens": 1063,
+"total_tokens": 2164,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"n": 10,
+"sec": 250.1,
+"usage": {
+"completion_tokens": 1276,
+"prompt_tokens": 1085,
+"total_tokens": 2361,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"n": 10,
+"sec": 207.3,
+"usage": {
+"completion_tokens": 1075,
+"prompt_tokens": 1092,
+"total_tokens": 2167,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"n": 10,
+"sec": 283.9,
+"usage": {
+"completion_tokens": 1407,
+"prompt_tokens": 1119,
+"total_tokens": 2526,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"n": 10,
+"sec": 204.0,
+"usage": {
+"completion_tokens": 1060,
+"prompt_tokens": 1070,
+"total_tokens": 2130,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"n": 10,
+"sec": 240.3,
+"usage": {
+"completion_tokens": 1220,
+"prompt_tokens": 1120,
+"total_tokens": 2340,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"n": 10,
+"sec": 303.8,
+"usage": {
+"completion_tokens": 1498,
+"prompt_tokens": 1132,
+"total_tokens": 2630,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"n": 10,
+"sec": 391.4,
+"usage": {
+"completion_tokens": 1858,
+"prompt_tokens": 1083,
+"total_tokens": 2941,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"n": 3,
+"sec": 136.9,
+"usage": {
+"completion_tokens": 802,
+"prompt_tokens": 828,
+"total_tokens": 1630,
+"prompt_tokens_details": {
+"cached_tokens": 719
+}
+}
+},
+{
+"profile": "Desert Sound Colony",
+"sec": 176.0
+},
+{
+"n": 10,
+"sec": 248.7,
+"usage": {
+"completion_tokens": 1118,
+"prompt_tokens": 985,
+"total_tokens": 2103,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 236.9,
+"usage": {
+"completion_tokens": 1206,
+"prompt_tokens": 985,
+"total_tokens": 2191,
+"prompt_tokens_details": {
+"cached_tokens": 671
+}
+}
+},
+{
+"n": 10,
+"sec": 253.7,
+"usage": {
+"completion_tokens": 1179,
+"prompt_tokens": 1044,
+"total_tokens": 2223,
+"prompt_tokens_details": {
+"cached_tokens": 671
+}
+}
+},
+{
+"n": 5,
+"sec": 222.4,
+"usage": {
+"completion_tokens": 1164,
+"prompt_tokens": 842,
+"total_tokens": 2006,
+"prompt_tokens_details": {
+"cached_tokens": 671
+}
+}
+},
+{
+"profile": "Gene on Earth",
+"sec": 130.5
+},
+{
+"n": 10,
+"sec": 226.2,
+"usage": {
+"completion_tokens": 998,
+"prompt_tokens": 950,
+"total_tokens": 1948,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 219.4,
+"usage": {
+"completion_tokens": 1083,
+"prompt_tokens": 962,
+"total_tokens": 2045,
+"prompt_tokens_details": {
+"cached_tokens": 610
+}
+}
+},
+{
+"n": 5,
+"sec": 127.7,
+"usage": {
+"completion_tokens": 709,
+"prompt_tokens": 794,
+"total_tokens": 1503,
+"prompt_tokens_details": {
+"cached_tokens": 610
+}
+}
+},
+{
+"profile": "Pierre Marty",
+"sec": 51.6
+},
+{
+"n": 6,
+"sec": 179.1,
+"usage": {
+"completion_tokens": 834,
+"prompt_tokens": 816,
+"total_tokens": 1650,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"profile": "Van Bellen",
+"sec": 156.7
+},
+{
+"n": 10,
+"sec": 193.6,
+"usage": {
+"completion_tokens": 821,
+"prompt_tokens": 1004,
+"total_tokens": 1825,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 192.6,
+"usage": {
+"completion_tokens": 932,
+"prompt_tokens": 1028,
+"total_tokens": 1960,
+"prompt_tokens_details": {
+"cached_tokens": 616
+}
+}
+},
+{
+"n": 10,
+"sec": 199.0,
+"usage": {
+"completion_tokens": 937,
+"prompt_tokens": 1031,
+"total_tokens": 1968,
+"prompt_tokens_details": {
+"cached_tokens": 616
+}
+}
+},
+{
+"n": 9,
+"sec": 180.2,
+"usage": {
+"completion_tokens": 895,
+"prompt_tokens": 971,
+"total_tokens": 1866,
+"prompt_tokens_details": {
+"cached_tokens": 616
+}
+}
+}
+]
+}

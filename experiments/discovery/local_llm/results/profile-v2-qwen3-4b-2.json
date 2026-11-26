@@ -1,0 +1,728 @@
+{
+"model": "qwen3-4b",
+"shard": 2,
+"profiles": {
+"Baby Rollen": "Baby Rollen is a British electronic music DJ and producer active in the UK's underground and experimental electronic scenes. They are known for blending ambient, techno, and experimental house elements, often with a focus on atmospheric textures and deep, evolving rhythms. Their work is prominent in London-based radio shows and club nights, particularly associated with the Balamii and Rinse FM scenes. They frequently collaborate with artists from the UK and international experimental electronic circles.\nPerforms as: Baby Rollen\nTheir channels, stations, shows, clubs, labels, collaborators: Rinse FM; Balamii; Mulholland Radio; SWU.FM; Planet GRN; Gottwood; Swoose; Suki; Glen S; Salomo; Demir Riqu\u00edsimo; Ollie Rant; Polifonic Podcast\nOther people with the name (not this artist): Baby Rollen (UK electronic DJ); Baby Rollen (American DJ); Baby Rollen (musician in Berlin); Baby Rollen (singer in Sweden)",
+"DJ Pipe": "DJ Pipe is a Colombian electronic music producer and DJ active in the Latin house, baile funk, and tropical house scenes. They are known for their work in Colombia and across Latin America, particularly in cities like Freamunde, S\u00e3o Carlos, and Bogot\u00e1. Their sets blend house, Afro-Latin, pop, and funk elements, often featuring regional Colombian sounds and rhythms. They are associated with live performances and radio mixes in both Colombia and international festivals and clubs.\nPerforms as: DJ Pipe, Pipe Murillo, Pipe Sierra, DJ Pipe Alvarez, DJ Pipe Henao, DJ Pipe Mc, DJ Pipe Sandoval, DJ Pipe Jimenez\nTheir channels, stations, shows, clubs, labels, collaborators: P I P E (YouTube channel); Room 303 Radio; themuddshow; Dimensions Festival; The Lot Radio; Rysh Ratchayothin (Thailand); Emanuel S'; Operator; The Ghost; Al otro lado de la m\u00fasica; Made in Colombia TV; Live @ Hoppetosse, Berlin; Live @ The Lion & Lamb, London; DIM334; GHOSTCAST 019; SUGAR VOL007; LEVELS VOL006; CHUPA VOL001; MITR STREET VOL001; O.S.S BAR VOL006; Olympus; The Rancherito Leodan; Epil\u00e9f Enganchados\nOther people with the name (not this artist): DJ Pierre O Bom (Brazilian DJ, known for B2B sets and electronic music in S\u00e3o Carlos); Pipe Murillo (Colombian DJ, associated with 'Clasic Time Session' mixes, possibly a different artist); DJ Pipe Sandoval (Colombian live set performer, associated with The Olympus live set); DJ Pipe Henao (Colombian DJ known for Halloween mixes and guaracha tracks); DJ Pipe Mc (Colombian reggaeton DJ, known for 'Live Music Reggaeton Vol.1' mixes)",
+"Frank and Tony": "Frank & Tony are a British electronic music duo known for their deep house and progressive house productions, active primarily in the US and UK scenes. They are closely associated with the deep house and club culture of Dallas, Texas, and have a strong presence in the US deep house and live club circuit. Their work is frequently featured at major venues like Creme de la Creme and in radio mixes on BBC Radio 1 and Resident Advisor. They are also linked to labels such as Proton and FACT, and are known for their live sets and podcast appearances in the deep house community.\nPerforms as: Frank and Tony, Frank & Tony\nTheir channels, stations, shows, clubs, labels, collaborators: Boiler Room (NYC); Creme de la Creme (Dallas, TX); FACT Mix (FACT Radio); BBC Radio 1; Resident Advisor (RA); Proton (label and channel); Scissor and Thread (S&T Podcast); The BPM Festival; Fabric (promotional mix); Robot Heart (Oakland residency); XLR8R Podcast; Groove Magazine; The Panther Room (CATCAST)\nOther people with the name (not this artist): Anthony Collins (UK, DJ, deep house producer, known for CRANKS album with Frank & Tony); Frank (as in Frank Ocean, US, R&B singer), not related to electronic music; Tony (as in Tony Allen, British drummer, not electronic music)",
+"O.Bee": "O.Bee is an electronic music DJ and producer active primarily in the deep house and progressive house scenes, known for his work in Europe and the US. He frequently performs at festivals and radio shows in cities such as Istanbul, Ibiza, Venice, and New York, with strong ties to the ReSolute, Waking Life, and The Lot Radio scenes. His collaborations with Tomas Station and appearances on shows like 'Can You Jigit?' and 'Lions Milk' indicate a deep involvement in the European underground electronic circuit.\nPerforms as: O.Bee, aR.o.Bee\nTheir channels, stations, shows, clubs, labels, collaborators: The Lot Radio (multiple episodes, 2019\u20132026); Circoloco (Ibiza, 2024); ReSolute (NYC, 2018, 2015); Waking Life (Brazil, 2022, 2023); Polifonic Festival (Italy, 2018); Boiler Room (Istanbul); Dimensions Festival (2015); Tomas Station (collaborator in multiple sets); Lions Milk (radio show, 2019\u20132023); aR.o.Bee (label and project, 2023\u20132026)\nOther people with the name (not this artist): aR.o.Bee (producer from 2HeartsMusic, Germany, known for deep house and progressive house tracks, active in 2023\u20132026); O.Bee (a different artist, appears in a short 36-minute set on a channel named 'Bee', possibly unrelated)",
+"Taylor Houseman": "Taylor Houseman is an electronic music DJ and producer active in the Los Angeles-based underground electronic scene, known for live sets in the house and deep house genres. He frequently performs at venues like Apotheke Bar and Planet Umbrella, and is closely associated with the Umbrella Nights and Sunday Sessions LA events. His work spans both live club sets and streamed sessions, often featuring collaborations with other artists in the local scene.\nPerforms as: Taylor Houseman\nTheir channels, stations, shows, clubs, labels, collaborators: Sunday Sessions LA; Apotheke Bar; Planet Umbrella; Umbrella Nights; Mindfruit SD; Afternoon Umbrella Friends (UFTV); The Overcast \u2602; Hokum; Class-A Deviants\nOther people with the name (not this artist): Taylor Houseman (UK-based singer-songwriter); Taylor Houseman (American indie folk musician); Taylor Houseman (musician in the UK electronic scene)"
+},
+"verdicts": {
+"6f384594": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Baby Rollen' with channel Rinse FM \u2014 matches profile (Rinse FM is a key platform for Baby Rollen). No indication of talk or track. Likely a DJ set."
+},
+"92b7efba": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as entry 0 \u2014 identical title and channel. Likely a duplicate or repeated upload. Still clearly a recording of Baby Rollen on Rinse FM."
+},
+"58ebd3d5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Baby Rollen DJ Set' within a live event (Keep Hush Live: Banoffee Pies Takeover). Clearly a live DJ set in a club or live format. Matches profile's live appearances."
+},
+"ce803008": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Title is 'FOLD // LIFT011 // Baby Rollen' \u2014 this appears to be a collaborative mix or project by FOLD, with Baby Rollen as one of the contributors. However, it's not clearly a DJ set or live performance; more like a mix or tracklist. The format is ambiguous, but since it's not explicitly a 'DJ set' or 'live set', and is part of a project (FOLD), it may be a track or mix rather than a performance."
+},
+"5efef638": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as entry 0 \u2014 identical title and channel. Likely a duplicate recording of Baby Rollen on Rinse FM."
+},
+"572cfa3d": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title has 'Baby Roll\u00e9n' \u2014 likely a spelling variation (possibly a typo or misrendering of 'Baby Rollen'). Channel is unknown. If it's a mix series, and the name is misspelled, it may not be Baby Rollen. Also, no clear indication of performance. Given the misspelling and lack of context, this is likely not the correct artist or not a performance."
+},
+"b67a3bd5": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as entry 2 \u2014 'Baby Rollen DJ Set' in a live event. Clear indication of a live DJ set in a live format. Matches profile."
+},
+"8885e1e4": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Same as entry 3 \u2014 'FOLD // LIFT011 // Baby Rollen'. Structure suggests a collaborative mix or project, not a live DJ set. No clear performance context. Likely a mix or tracklist."
+},
+"6de5a96e": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as entry 2 \u2014 'Baby Rollen DJ Set' in a live event. Clear live DJ set context. Matches profile."
+},
+"2b3df618": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"cd526ac0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names Baby Rollen as a performer in a mix or set format; channel is FOLD, not a nameake; format is not a track or talk; fits with profile of DJing in experimental electronic scenes."
+},
+"0ef9fabe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title states 'Ollie Rant with Baby Rollen', indicating a collaborative DJ set; Ollie Rant is a known collaborator; recorded on Rinse FM, a profiled station; format is clearly a live or mixed DJ set."
+},
+"ce9b6a34": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'cumbias bailables mix dj pipe' \u2014 clearly a mix featuring DJ Pipe. Channel is Radio Tapihue, which is a radio station. Mixes are included in the profile (e.g., Room 303 Radio). This is a mix, not a track or talk."
+},
+"1c8d1f81": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'dj pipe @ The Lot Radio 04-10-2026' \u2014 appears to be a live or recorded set at The Lot Radio. The Lot Radio is listed in the profile as a station where DJ Pipe performs. Even though the date is in the future, the profile says to ignore dates. It's a radio set, likely a DJ set."
+},
+"a181089c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'DJ Pipe \uff5c2025\u5e748\u670814\u65e5\uff5c#downtempo #house #experimental' \u2014 listed under Room 303 Radio, which is a known channel for DJ Pipe. The title names DJ Pipe and includes a date, but the profile says to ignore dates. It's a mix or set, likely a radio mix or live set."
+},
+"691dd658": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Submid w/ DJ PIPE' \u2014 'w/ DJ PIPE' indicates DJ Pipe is performing alongside someone. Channel is Operator, which is listed in the profile. This is a collaborative set, likely a live or mix set. The format is a 'submid' (likely a mix or set), and DJ Pipe is named as a performer."
+},
+"7dcc7e9a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'DIM334 - DJ Pipe' \u2014 DIM334 is a Dimensions Festival mix. Dimensions Festival is listed in the profile. This is a festival recording, and DJ Pipe is named directly. Likely a live or curated set."
+},
+"4f3d1d03": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'GHOSTCAST 019 - DJ PIPE' \u2014 GHOSTCAST is listed in the profile (GHOSTCAST 019). This is a podcast-style mix or show where DJ Pipe is featured. The format is a mix or guest appearance, and DJ Pipe is named as a performer."
+},
+"4291b641": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title: 'WALKING ON THE MOON - PIPE SANDOVAL (LIVE SET)' \u2014 the performer is listed as 'PIPE SANDOVAL', not DJ Pipe. The profile notes that DJ Pipe Sandoval is a live set performer, but this is a different name (Pipe Sandoval). The title says 'PIPE SANDOVAL', which matches the name of a different person (as per profile: 'DJ Pipe Sandoval' is a live set performer, but not confirmed to be the same). This is a nameake case \u2014 different person with same name pattern."
+},
+"067d58f5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Submid Radio - DJ Pipe' \u2014 channel is Submid, which is listed in the profile. The title names DJ Pipe as a performer. This is a radio mix or set, likely a live or curated set. Even though the channel is Submid, it's listed in the profile as a place where DJ Pipe performs."
+},
+"1fea8465": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Lo que no sabiamos de DJ PIPE!!!' \u2014 this is a title that translates to 'What We Didn't Know About DJ Pipe!!!'. It's likely a documentary, talk, or feature piece, not a music set. The format is informational, not a DJ set or mix. This is a talk or feature, not a performance."
+},
+"77a99756": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"f4f4bc47": {
+"v": "reject",
+"kind": "set",
+"reason": "Title says 'Night Live Dj Pipe' and is uploaded by Andres Vasquez Dj. The name 'Dj Pipe' appears, but the channel is not theirs. No indication that DJ Pipe performed. Likely a mix or set by another DJ using the name. No evidence of DJ Pipe as performer. This is a namesake or misattribution."
+},
+"b3b301fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'live @ the lion & lamb, london (14102023)' and channel is 'dj pipe / global north'. The venue is a known club, and the format is clearly a live set. DJ Pipe is listed as the performer. Matches profile of live performances in international clubs."
+},
+"86d21c8c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'DJ Pipe Set Prog Minimal 2015' and channel is 'DJ PIPE - Start The Track'. The title indicates a DJ set, and the name is used directly. Despite the date, it's a set recording. Profile includes live sets and mixes. No indication of being a different person or a talk."
+},
+"38e8202b": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'MIX REGGAETON NEW SCHOOL V/S OLD SCHOOL' and credits 'DJ ASSIS PICHARA !' with 'DJ PIPE PICHARA'. This appears to be a mix by another DJ (Pichara), with 'DJ Pipe' in the title as a possible name match. However, the performer is listed as Pichara, not DJ Pipe. This is a mix by someone else, possibly a namesake or collaboration. Not a performance by DJ Pipe."
+},
+"9e0ec90c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Saludcita para todos los envidiosos - Dj Pipe Jim\u00e9nez \ud83c\udf7b' and channel is 'dj pipe jimenez'. This is a live set by Dj Pipe Jim\u00e9nez, which is one of the aliases listed in the profile (DJ Pipe Jimenez). The format is a live set, and the name matches an alias they use. This is a performance by one of their known personas."
+},
+"3a504874": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'TRIP DANCEHALL MIX DJ PIPE' and channel is 'DJ PIPE'. The title clearly names DJ Pipe as the mixer. It's a mix, not a track or talk. Mixes are included in the profile (e.g., 'something podcast 093 - dj pipe'). This fits the profile of DJ Pipe creating mixes."
+},
+"1cf0214b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'THE OLYMPUS - PIPE SANDOVAL (LIVE SET)' and channel is 'DJ PIPE SANDOVAL'. This is a live set by DJ Pipe Sandoval, which is one of the aliases listed in the profile. The format is a live set, and the name matches a known alias. This is a performance by one of their personas."
+},
+"6310de1a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Al otro lado de la m\u00fasica | Cap 36 Dj Pipe Sierra'. This is a radio show episode, and 'Dj Pipe Sierra' is one of the aliases listed in the profile. The show is explicitly mentioned in the profile (Al otro lado de la m\u00fasica). This is a recorded performance or segment by DJ Pipe Sierra, a known alias."
+},
+"d8fa5fe7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Bad Bunny Weekend | Jumpin Jay & DJ Pipe'. This is a collaboration with Jumpin Jay, and DJ Pipe is listed as a participant. The event is a festival, and the format is a DJ set. This matches the profile of DJ Pipe performing at festivals and clubs. The name is used as a performer."
+},
+"ff465bf5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Set Live By Dj Javi VoL & Dj Pipe' \u2014 but the channel is not theirs, and the set is described as a birthday celebration with other artists. The title says 'Dj Pipe' is part of a live set, but the channel is 'Atrapados en los 90's By Fun-Qpo & MDC AL-City'. This is a collaborative set, and while DJ Pipe is named, it's not clear if they were the main performer or just a guest. However, the title says 'Set Live By Dj Javi VoL & Dj Pipe', indicating they were part of a live set. Given the profile includes live sets and collaborations, and the name is used as a performer, this should be kept."
+},
+"ecf9a588": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'SET PIPEFEST #1' featuring Afro, rancha, champeta \u2014 aligns with DJ Pipe's Afro-Latin and Colombian roots. Channel is 'DJ PIPE MIX', and the title names DJ Pipe in a set context. This is a live or club set recording."
+},
+"972fde98": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'MIX 1 BAILABLE RANCHERAS DJ PIPE' \u2014 clearly a mix created by DJ Pipe, with content relevant to Afro-Latin and Colombian rhythms. Channel is 'DJ PIPE MIX', and DJ Pipe is named as the performer. This is a mix, not a talk or track."
+},
+"92fbab4c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Frank & Tony Fact BBC Radio 1 Mix' \u2014 a radio mix featuring them, likely a DJ set recorded for BBC Radio 1. Matches profile of appearances on BBC Radio 1 and mix series."
+},
+"715a48b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live @ Creme de la Creme, Dallas, TX' \u2014 a live set at a venue they are strongly associated with. Clearly a live performance, matches profile of live club circuit presence."
+},
+"26032e96": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Frank and Tony Boiler Room NYC Skyy Stream DJ Set' \u2014 Boiler Room is a well-known DJ set platform, and this is a DJ set streamed live. Matches profile of Boiler Room appearances."
+},
+"8948694a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Frank and Tony's Blues at Manifest Open Mike' \u2014 'Open Mike' suggests a talk or performance style, not a DJ set. 'Blues' and 'Open Mike' implies a talk or live act, not music DJing. Likely a talk or performance, not a music set."
+},
+"97ec7456": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'CDLC 014 - Frank & Tony - Live at Cr\u00e8me De La Cr\u00e8me - Part 1' \u2014 clearly a live set at a venue they are known for. Matches profile of live club appearances at Creme de la Creme."
+},
+"eab16b48": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'CDLC 023 - Frank & Tony - Live at Cr\u00e8me De La Cr\u00e8me' \u2014 again, a live set at a venue central to their profile. Even though it's a CDLC mix, it's presented as a live set."
+},
+"bf572733": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'RA.446 Frank & Tony' \u2014 Resident Advisor mix, likely a DJ mix or guest mix. Matches profile of RA appearances and mix features."
+},
+"e9fbe1d9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'S&T Podcast 05 | Frank & Tony' \u2014 Scissor and Thread podcast, and they are named as participants. Podcasts are listed in profile as a key presence. Even if it's a podcast, the title says they are playing, so it's a live or DJ set within the podcast context."
+},
+"d4988e83": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'S & T Podcast | 23 mixed by Frank & Tony' \u2014 this says they *mixed* the podcast, not that they performed a set. 'Mixed by' implies they curated or produced a mix, not that they DJed live. This is a mix, not a live set. Profile says they are known for live sets and podcast appearances, but this is a mix, not a performance."
+},
+"e21e5dc7": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"ded1cc6d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Frank & Tony as performers in a CATCAST episode at The Panther Room, a known venue. This is a live or podcast set."
+},
+"e41f65e8": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly titled 'Live at Cr\u00e8me De La Cr\u00e8me', a major Dallas venue. Clear live set recording."
+},
+"84e52c21": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as 11 \u2014 part of a live event at Cr\u00e8me De La Cr\u00e8me. Part 1 of a live set."
+},
+"d8fc1562": {
+"v": "keep",
+"kind": "set",
+"reason": "A promotional mix for Fabric, consistent with their presence in the live club circuit and radio mix appearances."
+},
+"51e30549": {
+"v": "keep",
+"kind": "set",
+"reason": "Recorded during a residency at Robot Heart in Oakland \u2014 a live performance set."
+},
+"199cd9e1": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast titled 'Live from Creme de la Creme' \u2014 clearly a live recording of their performance."
+},
+"e518fe0c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Involves Anthony Collins and Francis Harris in a session titled 'FRANK n TONY ON A BOAT'. This is a collaborative session, not a standalone DJ set by Frank & Tony. It's a talk or session, not a music performance."
+},
+"dd53a569": {
+"v": "keep",
+"kind": "set",
+"reason": "Title states 'Live at Treehouse Miami' \u2014 a live performance recorded in a club setting."
+},
+"b2a31ca2": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly titled 'Live @ Creme de la Creme, Dallas, TX' \u2014 a live set at a major venue."
+},
+"3efc598a": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast episode featuring Frank & Tony \u2014 likely a mix or live set, given their presence in podcast communities."
+},
+"c9323559": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live at Cr\u00e8me De La Cr\u00e8me' with Frank & Tony as performers; matches profile venues and format; clearly a live DJ set."
+},
+"5f0ec5ce": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is a podcast episode; while XLR8R is listed in profile, such episodes are typically interviews or talks, not music sets; no indication of DJ performance or music playback."
+},
+"c922d1d0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'O.BEE at Polifonic Festival 2018' \u2014 a festival recording with O.Bee performing. Matches profile's known festival appearances (Polifonic Festival 2018)."
+},
+"554b8e03": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is 'O.BEE | themuddshow x Lazarus Killed Jazz' \u2014 a collaborative set, likely a mix or live set. However, 'themuddshow' is a channel, and the format is not clearly a DJ set or performance by O.Bee. The title suggests a mix or collaboration, but no explicit performance context. Profile does not mention themuddshow or Lazarus Killed Jazz. Unclear if it's a live set or mix. No clear indication of O.Bee performing live or as a DJ."
+},
+"78f4a879": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Can You Jigit? Radioshow with O.Bee @ The Lot Radio' \u2014 explicitly states O.Bee is on a radio show at The Lot Radio, which is a known scene in the profile. This is a radio show, which counts as a recording of O.Bee performing (as a guest)."
+},
+"020d041a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'O.Bee vs Tomas Station - Live from Circoloco DC-10 Ibiza' \u2014 clearly a live set at Circoloco (Ibiza), which is a known venue in the profile. The format is live, and O.Bee is directly named. This matches the profile's known collaboration with Tomas Station at Circoloco (2024)."
+},
+"938ab60f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'O.BEE - Why So Serious!? - November 1st, 2015' \u2014 appears to be a set at ReSolute (profile mentions ReSolute 2015). The title suggests a live set, and O.Bee is named. ReSolute is a known venue in the profile. Even though the date is old, profile says to ignore dates. This is a live set."
+},
+"3dbd08bb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'O.BEE- Suma Beach 25072015' \u2014 likely a live set from Suma Beach (a known festival or event). Profile does not mention Suma Beach, but the format is a live recording with O.Bee. No indication it's a track or mix. Given the format and name, it's likely a live set. However, no direct link to profile venues. Still, it's a live performance by O.Bee."
+},
+"c611c115": {
+"v": "reject",
+"kind": "track",
+"reason": "Title: 'FG Guest Mix - 04032013 | channel: O.BEE' \u2014 this is a guest mix *by* O.BEE, not a recording of O.Bee performing. The title says 'FG Guest Mix', meaning it's a mix curated by someone else, and O.BEE is the channel. This is not a performance by O.Bee, but a mix they created. Profile does not list this as a performance. This is a mix, not a live set or DJ set."
+},
+"005acadf": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title: 'O.Bee - Live from Trotamundo Festival Vol 2' \u2014 explicitly states 'Live from Trotamundo Festival', which is a festival. O.Bee is named as the performer. However, profile does not list Trotamundo Festival. No mention of this event in the profile. While it's a live set, the venue is not in the profile's known circuit (profile mentions Istanbul, Ibiza, Venice, NYC, Brazil). This is a potential name match or outlier. Since the profile only confirms specific venues, and this one is not listed, it's not confirmed to be part of O.Bee's known circuit."
+},
+"fd22a14e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Sheik 'N' Beik Floatcast #014 with O.bee & Tomas Station, at Panther Room, Part I' \u2014 explicitly names O.Bee and Tomas Station performing together at Panther Room. Profile confirms collaboration with Tomas Station and presence in scenes like The Lot Radio and Waking Life. Panther Room is not in the profile, but the collaboration is noted. The format is a radio or podcast-style floatcast, which may be a live or recorded set. However, it's a 'floatcast' \u2014 a type of podcast or radio show \u2014 not a traditional DJ set. Profile includes 'Lions Milk' (radio show), so radio-style content is acceptable. This is a live or recorded performance in a radio context."
+},
+"8c6ea0a4": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"d1128344": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'O.BEE' and is on Rinse FM, a radio station. However, the title is 'Yoyaku with O.BEE' \u2014 this suggests a set with Yoyaku, possibly a DJ or artist, and O.Bee as a collaborator or guest. Since the profile confirms O.Bee's involvement in radio shows and collaborations, and this is a radio set, it's likely a live or DJ set. However, the phrasing 'with O.BEE' implies co-performance, not necessarily a solo set. Still, it's a performance context. No evidence of a talk or track. Profile supports radio involvement."
+},
+"6f5e3da5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'O.BEE & TOMAS STATION \u2022 AFTER CAPOSILE \u2022 Garden \u2022 Musile di Piave'. This is a B2B set at a venue (Garden, Musile di Piave). The context is a live performance at a location. Profile confirms collaboration with Tomas Station and live appearances. This is clearly a live DJ set."
+},
+"ec738370": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Love On The Rocks - O.bee B2B Tomas Station' \u2014 clearly a B2B set. 'B2B' indicates a live DJ set between two artists. Profile confirms O.Bee's collaborations with Tomas Station and live performances. This is a live set."
+},
+"f0ab3fab": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Can You Jigit? with O.BEE, Tomas Station and Adi @TheLotRadio 04-21-2023'. This is a radio show (Can You Jigit?) hosted by The Lot Radio, and O.Bee is listed as a participant. Profile confirms O.Bee's involvement in The Lot Radio. This is a live or recorded radio show where music is played, not a talk. It's a performance context."
+},
+"4039c193": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'O.BEE Boiler Room Istanbul DJ Set' \u2014 Boiler Room is a well-known club event, and this is explicitly a DJ set in Istanbul. Profile confirms O.Bee performs at Boiler Room (Istanbul). This is a live club recording."
+},
+"f14de3a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Lions Milk #94 with O.BEE & Tomas Station' \u2014 Lions Milk is a radio show, and O.Bee is listed as a performer. Profile confirms O.Bee's appearances on Lions Milk. This is a radio show where music is played, not a talk. It's a live or recorded performance."
+},
+"d42eb715": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'O.BEE - Live From Dimensions 25' \u2014 clearly a live set from Dimensions Festival. Profile confirms O.Bee performed at Dimensions Festival (2015). This is a live festival recording."
+},
+"ba1dfd6a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Can You Jigit? with O.BEE and Y Bulbul @TheLotRadio 03-18-2024' \u2014 again, a radio show with O.Bee as a participant. Profile confirms O.Bee's involvement in The Lot Radio. This is a performance-based radio show."
+},
+"2514ccc6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'NewSpeak Radio Show 017 - O.BEE' \u2014 this is a radio show where O.Bee is the featured artist. Profile does not mention NewSpeak Radio, but O.Bee is known for radio appearances. The title implies a live or recorded performance. No indication of talk or track. Given the format, it's a DJ set or mix."
+},
+"0042e2e4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'O.bee & Tomas Station at Outro Lado - Waking Life '23' \u2014 this is a live performance at Waking Life (Brazil), which is listed in the profile as a venue where O.Bee performs. The title specifies a live event. This is a live set."
+},
+"f985cd9e": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title mentions 'Beard O Bees' \u2014 likely a namesake or unrelated group. 'O.Bee' is not clearly named as a performer; 'Beard O Bees' suggests a different artist or band. No indication of O.Bee performing. Also, channel is Ser Clave, not linked to O.Bee's known scenes."
+},
+"44f355f2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Lions Milk #83 with O.BEE' \u2014 clearly a radio show episode where O.Bee is featured as a guest. Lions Milk is a show O.Bee is known to appear on (profile: 2019\u20132023). This is a live or recorded radio set where music is played."
+},
+"864ecf3e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Can You Jigit? Radioshow with O BEE @TheLotRadio' \u2014 matches profile: O.Bee appears on 'Can You Jigit?' and 'The Lot Radio' shows. This is a radio show where O.Bee is performing live or playing mixes."
+},
+"1a1a1106": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Mu Raki (warming up set) / Hertzz Niseko Opening Party With O.BEE & Tomas Station' \u2014 explicitly states O.BEE is performing at a party with Tomas Station. This is a live set at a club/event, consistent with O.Bee\u2019s live performance history."
+},
+"225f38b9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'O.BEE DJ Set at ReSolute - June 29th, 2018' \u2014 directly states it's a DJ set at ReSolute, a venue O.Bee has performed at (profile: 2015, 2018). Clearly a live set."
+},
+"50fd4abf": {
+"v": "reject",
+"kind": "track",
+"reason": "Title: 'O.BEE\u2019s Dreamscape [21:22:28] The Space Between' \u2014 this appears to be a track or segment from a tracklist or audio piece, not a DJ set. The title format suggests a track or audio clip, not a live performance. No indication of a set or mix."
+},
+"e73e0414": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'O.bee at Floresta - Waking Life '22' \u2014 explicitly states O.Bee is performing at Waking Life (Brazil, 2022), a festival O.Bee has been involved with. This is a live set at a festival."
+},
+"e85f459c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Love Injection at Lot Radio w/ O.BEE & Tomas Station' \u2014 this is a live radio show at The Lot Radio featuring O.Bee and Tomas Station. O.Bee is clearly performing live in a radio context."
+},
+"e3b562c1": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title: 'Mizo Movie Recap | Will-O-Bee Chhungkua leh SaiAr Chhungkua' \u2014 'Will-O-Bee' is a name match, but it's a traditional movie recap in a Mizo language context. This is not a music performance. Likely a namesake or unrelated content."
+},
+"095e88ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Can You Jigit x Global Swing with Garrett David, O BEE & Tomas Station @TheLotRadio' \u2014 O.Bee is listed as a performer in a joint show at The Lot Radio. This is a live radio or live set event, consistent with O.Bee\u2019s known appearances."
+},
+"82cba03f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names O.BEE as a performer in a radio show with Tomas Station and Kyle Toole at The Lot Radio. This matches the profile's known collaborations and radio appearances."
+},
+"4cccbacc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'O.BEE Autobrennt Mix Of The Week' \u2014 a mix series hosted by O.Bee. Mixes are considered recordings of DJing, even if not live. Profile confirms O.Bee produces and mixes."
+},
+"6c9295eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'O.BEE | Resolute Stays Home' and is from Dance TV. Resolute is a known venue where O.Bee has performed (2015, 2018). This is a visual recording of a live set or event."
+},
+"841d454b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists O.BEE as one of the performers in a The Lot Radio session with others. The profile confirms O.Bee's participation in The Lot Radio shows. This is a live set or DJ session."
+},
+"1bc43659": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Circoloco Radio 210 - O.BEE'. Circoloco is a known festival/venue where O.Bee has performed (Ibiza, 2024). This is a radio session or DJ set on a station where O.Bee plays."
+},
+"03e4173d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Yoyaku instore session with O.BEE'. An 'instore session' typically involves a DJ playing live in a store setting. This fits the profile of O.Bee performing live in various venues."
+},
+"86a2c676": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Rocket Radio X Polifonic : O.BEE b2b TOMAS STATION'. 'b2b' means a live DJ set with another artist. O.Bee and Tomas Station are known collaborators. This is a live set."
+},
+"4c3dee9a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Can you Jigit? Radio Show with O.Bee @TheLotRadio'. Matches profile: O.Bee appears on 'Can You Jigit?' at The Lot Radio. This is a radio show where O.Bee performs."
+},
+"d11a642f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live @ Umbrella Nights #5' and includes Taylor Houseman as a performer. This is a live club set at a known event in the profile."
+},
+"c34bac6a": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title says 'Bubble Session 015 Feat. Taylor Houseman' \u2014 'feat.' implies he is a featured artist, not necessarily performing a live set. This is likely a mix or tracklist where his music is included, not a live performance."
+},
+"a21b8f57": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Title says 'Taylor Houseman @ Condition' \u2014 'Condition' is not a venue mentioned in the profile. No clear indication of a live set or performance. Also, 'On Demand' suggests a recorded session, but no confirmation of live performance. Uncertain due to lack of venue or context."
+},
+"a0cf4241": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Taylor Houseman - Live @ Umbrella Nights Online' \u2014 clearly indicates a live performance at Umbrella Nights, a venue mentioned in the profile. 'Online' just means streamed, not a talk or track."
+},
+"4b0ecfce": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live vinyl dj set' at Apotheke Bar, a venue in the profile. This is a confirmed live DJ set at a known venue."
+},
+"e268318b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Taylor Houseman / Apotheke Bar / 04.23.23 / Los Angeles' \u2014 includes venue and event context. Clearly a live set at a venue in the profile. Date is ignored as per rules."
+},
+"27a21222": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Taylor Houseman live at Bloom SD 12.31.18' \u2014 'live at' suggests a live performance. Bloom SD is a venue associated with Mindfruit SD, which is listed in the profile. This is a live set at a known venue."
+},
+"dd9b4ab2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'The Untouched Session (Live and Real) with Taylor Houseman' \u2014 'Live and Real' suggests a live performance. Hokum is listed as a collaborator in the profile. This is a live session with Taylor Houseman."
+},
+"6567c54e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Taylor Houseman @ Planet Umbrella 2 [Desert Hearts TV]' \u2014 Planet Umbrella is a venue in the profile. 'Live' is implied by the context and venue. This is a live set at a known venue."
+},
+"baff6710": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"5fed148c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names Taylor Houseman in a stream on Mindfruit SD, a channel listed in their profile. Stream context indicates a live or recorded DJ set, not a talk, track, or tracklist. No name conflict or genre mismatch."
+}
+},
+"timings": [
+{
+"profile": "Baby Rollen",
+"sec": 57.0
+},
+{
+"n": 10,
+"sec": 173.7,
+"usage": {
+"completion_tokens": 884,
+"prompt_tokens": 835,
+"total_tokens": 1719,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 2,
+"sec": 117.0,
+"usage": {
+"completion_tokens": 747,
+"prompt_tokens": 594,
+"total_tokens": 1341,
+"prompt_tokens_details": {
+"cached_tokens": 521
+}
+}
+},
+{
+"profile": "DJ Pipe",
+"sec": 178.7
+},
+{
+"n": 10,
+"sec": 256.1,
+"usage": {
+"completion_tokens": 1261,
+"prompt_tokens": 1028,
+"total_tokens": 2289,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 257.3,
+"usage": {
+"completion_tokens": 1328,
+"prompt_tokens": 1132,
+"total_tokens": 2460,
+"prompt_tokens_details": {
+"cached_tokens": 722
+}
+}
+},
+{
+"n": 2,
+"sec": 117.4,
+"usage": {
+"completion_tokens": 697,
+"prompt_tokens": 799,
+"total_tokens": 1496,
+"prompt_tokens_details": {
+"cached_tokens": 722
+}
+}
+},
+{
+"profile": "Frank and Tony",
+"sec": 93.7
+},
+{
+"n": 10,
+"sec": 203.5,
+"usage": {
+"completion_tokens": 992,
+"prompt_tokens": 956,
+"total_tokens": 1948,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 343.4,
+"usage": {
+"completion_tokens": 1744,
+"prompt_tokens": 1026,
+"total_tokens": 2770,
+"prompt_tokens_details": {
+"cached_tokens": 602
+}
+}
+},
+{
+"n": 2,
+"sec": 92.6,
+"usage": {
+"completion_tokens": 589,
+"prompt_tokens": 700,
+"total_tokens": 1289,
+"prompt_tokens_details": {
+"cached_tokens": 602
+}
+}
+},
+{
+"profile": "O.Bee",
+"sec": 222.3
+},
+{
+"n": 10,
+"sec": 284.1,
+"usage": {
+"completion_tokens": 1359,
+"prompt_tokens": 1047,
+"total_tokens": 2406,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 240.9,
+"usage": {
+"completion_tokens": 1250,
+"prompt_tokens": 1052,
+"total_tokens": 2302,
+"prompt_tokens_details": {
+"cached_tokens": 666
+}
+}
+},
+{
+"n": 10,
+"sec": 215.9,
+"usage": {
+"completion_tokens": 1129,
+"prompt_tokens": 1080,
+"total_tokens": 2209,
+"prompt_tokens_details": {
+"cached_tokens": 666
+}
+}
+},
+{
+"n": 8,
+"sec": 169.3,
+"usage": {
+"completion_tokens": 910,
+"prompt_tokens": 985,
+"total_tokens": 1895,
+"prompt_tokens_details": {
+"cached_tokens": 666
+}
+}
+},
+{
+"profile": "Taylor Houseman",
+"sec": 50.0
+},
+{
+"n": 10,
+"sec": 185.4,
+"usage": {
+"completion_tokens": 924,
+"prompt_tokens": 862,
+"total_tokens": 1786,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 1,
+"sec": 42.0,
+"usage": {
+"completion_tokens": 277,
+"prompt_tokens": 545,
+"total_tokens": 822,
+"prompt_tokens_details": {
+"cached_tokens": 506
+}
+}
+}
+]
+}

@@ -1,0 +1,1195 @@
+{
+"model": "qwen2.5-7b",
+"shard": 5,
+"profiles": {
+"Boogie Blind": "Boogie Blind is an electronic DJ and producer known for his seamless and energetic sets. He primarily operates in the hip-hop and electronic music scenes, with a focus on turntablism and DJ battles. He is based in New York City and has performed in various clubs and radio stations in the area.\nPerforms as: Boogie Blind\nTheir channels, stations, shows, clubs, labels, collaborators: Boogie Blind Boiler Room NYC DJ Set; LIVE! AT THE LAB w/ Boogie Blind; Dj Boogie Blind (X-Ecutioners) live dj set; The CABIN Broadcast; The Listening Xperience; The Boombox; BIG CROWN RECORDS; Carhartt WIP Radio Tour Special: DJ Boogie Blind - Pharoahe Monch Show; Phat Phillie; X FACTOR BOOGIE BLIND\nOther people with the name (not this artist): Boogie Blind (X-Men) - A producer who mixed at Blackout Radio Croatia in 2012, distinct from the DJ by the different context and date of the recordings.",
+"Diamond D": "Diamond D is a hip-hop producer and DJ known for his work with D.I.T.C. and his own productions. He primarily operates in the hip-hop scene, particularly in New York City and Atlanta.\nPerforms as: Diamond D\nTheir channels, stations, shows, clubs, labels, collaborators: DITC; Tortilla Crew; Blowin Wax; dsquizzy5000; soundbarmars; DJ Xcel; Soul Rebel Rise; HeadBanga Boogie; 33jones; Chris Read; Nas Kingston; The Ripp Ranch; Digital Hustle Films; ILL Mannered Films; Do You Want More?!!!??!; SWAY'S UNIVERSE; HOT 97; vekap dj; DJ DIAMOND 'D'; 90shiphopjunkie; VIBEMagazine; The Premium Pete Show; SOLE DXB RADIO\nOther people with the name (not this artist): Diamond D (hip-hop producer) - Active in hip-hop, based in New York City and Atlanta, known for D.I.T.C. and solo productions.; Diamond D (rapper) - Active in hip-hop, based in the UK, known for his solo career and collaborations with artists like Talib Kweli.",
+"Guy Contact": "Guy Contact is an electronic DJ and producer known for his deep house and tech house sounds. He is based in Berlin and plays in the Berlin club scene, often collaborating with local labels and radio stations.\nPerforms as: Guy Contact\nTheir channels, stations, shows, clubs, labels, collaborators: H\u00d6R BERLIN; Boiler Room; M\u2022D; ONO Records; Skylab Radio; Refuge Worldwide; Seoul Community Radio; BUTTER SESSIONS; Neurocrank; Melbourne Deepcast; Dimensions Festival; Pitch Music & Arts; Sonar GC; SUPER Daronne; Rinse France; Pjenne; Oddysee; BEATS OF NO NATION; Aaja Music; Torture the Artist; Bethany\nOther people with the name (not this artist): Guy Contact (musician) - Berlin-based, plays deep house and tech house.; Guy Contact (notable) - No specific details found, possibly a different person.",
+"Raresh": "Raresh is a prominent electronic music DJ and producer known for his minimal techno and microhouse sets. He is active in various scenes, particularly in Romania and Ibiza, and has performed at notable festivals and clubs such as Sunrise, Amnesia, and Cocoon. Raresh is also recognized for his collaborations with Ricardo Villalobos and other minimal house producers.\nPerforms as: Raresh\nTheir channels, stations, shows, clubs, labels, collaborators: Raresh Rush; RareshEN; Sunrise; Amnesia; Cocoon; Sunwaves; Zone Club; Cap; Playa9; Rote Sonne; Zebra Club; Cubecast; Raresh & Arapu; Ricardo Villalobos & Raresh; Praslesh (Raresh & Praslea)\nOther people with the name (not this artist): Raresh (electronic music artist) - Known for minimal techno and microhouse, active in Romania and Ibiza.; Raresh (Romanian footballer) - Played for FC U Craiova and FC Cluj, born in 1989.",
+"[a:rpia:r]": "Raresh, also known as A:RPIA:R, is a Romanian electronic music producer and DJ. He is known for his work in deep house and minimal techno genres, performing in various cities such as Bucharest, Romania, and Ibiza, Spain.\nPerforms as: [a:rpia:r], a:rpia:r, arpiar, [arpiar], A:RPIA:R\nTheir channels, stations, shows, clubs, labels, collaborators: CIRCOLOCO; Sunwaves Festival; Mamaia, Romania; Undergroundtapeable; Romanian Club Culture; RPR Soundsystem; Petre Inspirescu; Rhadoo\nOther people with the name (not this artist): Arpiar Saunders - A British radio personality and DJ, known for his work in the UK and different genre of electronic music.; Arpiar Petrosyan - An Armenian DJ and producer, known for his work in Armenian electronic music scenes."
+},
+"verdicts": {
+"c3f3f0d4": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a podcast episode, not a DJ set."
+},
+"cce43d2a": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a radio show where Boogie Blind played."
+},
+"70a24698": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "This is a DMC US Finals event, not a DJ set by Boogie Blind."
+},
+"829df72a": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a podcast episode, not a DJ set."
+},
+"37f9d565": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a podcast episode, not a DJ set."
+},
+"9bfe345f": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a mix by another artist featuring Boogie Blind."
+},
+"76a2f99a": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"e227d06e": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a mix by Boogie Blind featuring X-ECUTIONER'S."
+},
+"d1bd117e": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a live recording of Boogie Blind's set."
+},
+"1b8ea57c": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a mix by another artist featuring Boogie Blind."
+},
+"536e58fe": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title mentions Boogie Blind but it's a podcast episode, not a DJ set."
+},
+"33e9aba8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title and channel clearly indicate a DJ set by Boogie Blind."
+},
+"fa02b53a": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Different person with the same name (Boogie Blind from X-Men)."
+},
+"5f84364c": {
+"v": "reject",
+"kind": "track",
+"reason": "Title indicates a mixtape, not a DJ set."
+},
+"abf8085a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title and channel clearly indicate a DJ set by Boogie Blind."
+},
+"d58d8f53": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Different channel and title indicates a live set by someone else named Boogie Blind."
+},
+"203d991e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title and channel clearly indicate a DJ set by Boogie Blind."
+},
+"33c60480": {
+"v": "keep",
+"kind": "set",
+"reason": "Title and channel clearly indicate a DJ set by Boogie Blind."
+},
+"7d95e94a": {
+"v": "reject",
+"kind": "track",
+"reason": "Title indicates a mixtape, not a DJ set."
+},
+"8f51e918": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title mentions Boogie Blind but it's a podcast episode, not a DJ set."
+},
+"ae9b9492": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'X FACTOR BOOGIE BLIND' but does not specify Boogie Blind DJing."
+},
+"264aab9b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly states 'DJ Boogie Blind'."
+},
+"13268cdd": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'DJ Boogie Blind' but the mix is for 'The Pharcyde'."
+},
+"1648a96e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly states 'BOOGIE BLIND'."
+},
+"2a1c3865": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'X FACTOR BOOGIE BLIND' but does not specify Boogie Blind DJing."
+},
+"c59fe9c5": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'Mixed by DJ Boogie Blind' but the mix is for 'The Mighty VIC'."
+},
+"017959e8": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is just 'WAR TAPE MIXXIE.mp3' and does not specify Boogie Blind DJing."
+},
+"2d020c48": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'DJ Boogie Blind' and is for 'Dilla Day'."
+},
+"ba6e59a2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly states 'DJ Boogie Blind'."
+},
+"57cb1309": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'Boogie Blind' but is a battle mix, not a DJ set."
+},
+"efe88834": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"68b70274": {
+"v": "reject",
+"kind": "track",
+"reason": "Mixtape featuring Diamond D"
+},
+"0cc8be8d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"c1cef45f": {
+"v": "reject",
+"kind": "track",
+"reason": "Mix featuring Diamond D"
+},
+"8ddd1d4e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Diamond D"
+},
+"0d9a36ab": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"c926cb90": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Diamond D"
+},
+"26ad1797": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"96fbe357": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by Diamond D"
+},
+"16147175": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"380c88ec": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"cb4cc54b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set by Diamond D"
+},
+"073023e5": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mixtape featuring Diamond D"
+},
+"c52c3e13": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mixtape featuring Diamond D"
+},
+"6ffbd48e": {
+"v": "reject",
+"kind": "track",
+"reason": "Mixtape mixed by Chris Read featuring Diamond D"
+},
+"19dca07f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"7a771280": {
+"v": "keep",
+"kind": "set",
+"reason": "Competition mix featuring Diamond D"
+},
+"8040c0a6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Diamond D"
+},
+"01e2fbd1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance by Diamond D"
+},
+"f1cbb0e2": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance of Diamond D's 45s"
+},
+"64736954": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Large Professor"
+},
+"f88baffc": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at A3C"
+},
+"dbe10227": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set in San Diego"
+},
+"cc645f2e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode featuring Diamond D"
+},
+"1ed1c1e8": {
+"v": "reject",
+"kind": "track",
+"reason": "Mixtape featuring Diamond D"
+},
+"da681faa": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by DIID featuring Marco Fregonese"
+},
+"dbe42dee": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ Diamond D's Salsa Mix"
+},
+"ab3c2afa": {
+"v": "reject",
+"kind": "track",
+"reason": "Mixtape featuring Diamond D"
+},
+"3aed76ca": {
+"v": "keep",
+"kind": "set",
+"reason": "45 session with Mark the 45 King"
+},
+"4f76ab06": {
+"v": "keep",
+"kind": "set",
+"reason": "Live show for Stunts Blunts and HipHop 25 year anniversary concert"
+},
+"82945818": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is an interview and talk show, not a DJ set."
+},
+"26cfbe53": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a behind-the-scenes look at Diamond D's work, not a DJ set."
+},
+"868e614f": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "This is a show featuring multiple DJs and MCs, not a DJ set by Diamond D."
+},
+"258f77f3": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is an interview and talk show, not a DJ set."
+},
+"a0486db2": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' but the channel is Rinse France, not Guy Contact's channel."
+},
+"b454b43d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and the channel is H\u00d6R BERLIN."
+},
+"c8131c1d": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title mentions 'Guy Contact' but it's a tracklist."
+},
+"6b3779b6": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' but the year 2025 is not in the current timeline."
+},
+"68051a0f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and the channel is Pjenne."
+},
+"24402fb6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and the channel is Dimensions Festival."
+},
+"b73f0532": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and the channel is Skylab Radio."
+},
+"ff3d677f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and the channel is SUPER Daronne."
+},
+"017da1ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and the channel is Seoul Community Radio."
+},
+"78bb28d1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and the channel is Boiler Room."
+},
+"a11ce268": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Paper-Cuts, Miscellania"
+},
+"d82dd860": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix series episode"
+},
+"8c6d7906": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Dimensions Festival"
+},
+"1a89172c": {
+"v": "keep",
+"kind": "set",
+"reason": "Essential Mix on M\u2022D channel"
+},
+"2211ba52": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at System X ONO"
+},
+"a0e1d35e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Refuge Worldwide"
+},
+"15034aa6": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix series episode"
+},
+"6ac308fc": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Skylab Radio"
+},
+"81511c7a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Rinse France"
+},
+"5b0bd737": {
+"v": "keep",
+"kind": "set",
+"reason": "Namesake"
+},
+"3a1a2c1b": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"861dfd66": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"72fa31bb": {
+"v": "keep",
+"kind": "set",
+"reason": "Namesake"
+},
+"fadf883c": {
+"v": "keep",
+"kind": "set",
+"reason": "Namesake"
+},
+"830a3fca": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"254ec3a7": {
+"v": "keep",
+"kind": "set",
+"reason": "Namesake"
+},
+"2341fe91": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk"
+},
+"59b0c6dc": {
+"v": "keep",
+"kind": "set",
+"reason": "Namesake"
+},
+"e9ac948a": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"0526f252": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Ricardo Villalobos at a festival"
+},
+"a36b27e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sunrise Hub"
+},
+"7e30ab65": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Ricardo Villalobos"
+},
+"1a4f4c81": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set recorded at Houghton"
+},
+"48dd177e": {
+"v": "reject",
+"kind": "track",
+"reason": "Guest mix by Carlos featuring Raresh"
+},
+"800fe15f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with Pedro and Rhadoo at KaZantip"
+},
+"9a981d1d": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Pedro at DC10, Ibiza"
+},
+"7da7ea31": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Praslesh"
+},
+"5f5b36fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Fine Days Festival"
+},
+"0f1254a4": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Arapu at Space Miami"
+},
+"f623ab16": {
+"v": "reject",
+"kind": "set",
+"reason": "Promotional mix, not a full set."
+},
+"24baff4c": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Cap at Playa9."
+},
+"c0c81496": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Arapu at Monteoru."
+},
+"a7fe765f": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Dan Medesan featuring Raresh Rush."
+},
+"e68f220e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at a private party."
+},
+"e426e57f": {
+"v": "reject",
+"kind": "set",
+"reason": "After party mix, not a full set."
+},
+"29dedf2a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Stufaris Sic, Romania."
+},
+"80df34d2": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Cap at Playa9."
+},
+"cf285393": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at a private party."
+},
+"7a899358": {
+"v": "reject",
+"kind": "set",
+"reason": "Collaboration with Praslea, not a full set."
+},
+"75eda512": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at a festival"
+},
+"5e194e4f": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist with multiple artists"
+},
+"07f87cc4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live studio session"
+},
+"dfdb6854": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at a festival"
+},
+"f0387ffa": {
+"v": "reject",
+"kind": "track",
+"reason": "Guest mix by another DJ"
+},
+"fea709ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at a club"
+},
+"2dd0db0b": {
+"v": "reject",
+"kind": "set",
+"reason": "Live set at a festival (future date)"
+},
+"00962c30": {
+"v": "reject",
+"kind": "set",
+"reason": "Future date"
+},
+"842ca2c3": {
+"v": "reject",
+"kind": "track",
+"reason": "Track (CD mix)"
+},
+"dc911b0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at a club"
+},
+"ca8d7a31": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Raresh Rush"
+},
+"20506b01": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Raresh Rush"
+},
+"f9abcd91": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance with other artists"
+},
+"20311dfb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance with other artists"
+},
+"9acf20ad": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Raresh Rush"
+},
+"83882fe8": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast mix featuring Raresh"
+},
+"f3967e3b": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Priku"
+},
+"b1f407cf": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Praslea"
+},
+"3d606cd1": {
+"v": "reject",
+"kind": "talk",
+"reason": "Future event (2025)"
+},
+"5cbd8756": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Cap"
+},
+"8c37a20a": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake, as Ricardo Villalobos is mentioned, not Raresh."
+},
+"17dcafd5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live show by Raresh Rush."
+},
+"f24bc3b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live show by Raresh Rush."
+},
+"026df9ea": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist, as it's a mix by someone else featuring Raresh."
+},
+"55671cc2": {
+"v": "reject",
+"kind": "set",
+"reason": "Live set by multiple artists, not just Raresh."
+},
+"4f9069ef": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Raresh Rush."
+},
+"f21c0c5b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Raresh."
+},
+"dd6a1a11": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Markus Fix & Raresh."
+},
+"32a100d0": {
+"v": "reject",
+"kind": "set",
+"reason": "Live set by multiple artists, not just Raresh."
+},
+"eceb5086": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast featuring Raresh, not a DJ set."
+},
+"2f8ae4d9": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Raresh mentioned"
+},
+"820ce230": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Raresh Rush"
+},
+"5a350f62": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring a B2B mix with Raresh"
+},
+"c8c0eada": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Raresh Rush"
+},
+"198cc181": {
+"v": "reject",
+"kind": "track",
+"reason": "Ambient mix, not a DJ set"
+},
+"2e151d9a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Nights.Ro Awards event, not a DJ set"
+},
+"9f60cfbe": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Raresh Rush"
+},
+"aa9dfe52": {
+"v": "reject",
+"kind": "track",
+"reason": "B2B mix with Raresh, not a DJ set"
+},
+"2fe24b14": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Raresh mentioned"
+},
+"e6366c3a": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Raresh mentioned"
+},
+"14aef4e2": {
+"v": "reject",
+"kind": "track",
+"reason": "Full mix album, not a DJ set."
+},
+"c9af8640": {
+"v": "reject",
+"kind": "set",
+"reason": "Full mix by Raresh Rush, not Raresh."
+},
+"3757d32b": {
+"v": "reject",
+"kind": "set",
+"reason": "Future date, not a current event."
+},
+"d131f1a8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance with other artists."
+},
+"8f8231fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance at Zebra Club."
+},
+"227cd023": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist with multiple artists."
+},
+"583f1f2a": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set with Cezar Lazar."
+},
+"9aaccd7f": {
+"v": "reject",
+"kind": "set",
+"reason": "Home mix by Raresh Rush, not Raresh."
+},
+"109e0dc8": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a DJ set."
+},
+"8cdf01fd": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a DJ set."
+},
+"341b65de": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not a DJ set, but a podcast episode."
+},
+"b6ee4398": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a DJ set."
+},
+"2f360e7c": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a DJ set."
+},
+"0d30083c": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a showcase."
+},
+"b41128d2": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a DJ set."
+},
+"1d6b7327": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a DJ set."
+},
+"17b2679e": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a DJ set."
+},
+"0cd4995e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Names match but it's a radio show."
+},
+"3b59d50a": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake, different person with the same name."
+},
+"91ead215": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake, different person with the same name."
+},
+"b9bec2f9": {
+"v": "reject",
+"kind": "set",
+"reason": "Future date, not a past event."
+},
+"73708bcc": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with [a:rpia:r]."
+},
+"25d67dd5": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake, different person with the same name."
+},
+"f439b526": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with [a:rpia:r]."
+},
+"e20668be": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with [a:rpia:r]."
+},
+"5baa1680": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with [a:rpia:r]."
+},
+"1d96f412": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with [a:rpia:r]."
+},
+"731e51e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with [a:rpia:r]."
+},
+"4cfd1c65": {
+"v": "keep",
+"kind": "set",
+"reason": "The title mentions [a:rpia:r] as the release party DJ."
+},
+"2357ffa7": {
+"v": "keep",
+"kind": "set",
+"reason": "The title clearly names [a:rpia:r] as one of the DJs."
+},
+"eed05482": {
+"v": "keep",
+"kind": "set",
+"reason": "The title mentions [a:rpia:r] as the release party DJ."
+}
+},
+"timings": [
+{
+"profile": "Boogie Blind",
+"sec": 105.5
+},
+{
+"n": 10,
+"sec": 93.9,
+"usage": {
+"completion_tokens": 347,
+"prompt_tokens": 913,
+"total_tokens": 1260,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 93.4,
+"usage": {
+"completion_tokens": 477,
+"prompt_tokens": 888,
+"total_tokens": 1365,
+"prompt_tokens_details": {
+"cached_tokens": 533
+}
+}
+},
+{
+"n": 10,
+"sec": 100.2,
+"usage": {
+"completion_tokens": 510,
+"prompt_tokens": 900,
+"total_tokens": 1410,
+"prompt_tokens_details": {
+"cached_tokens": 533
+}
+}
+},
+{
+"profile": "Diamond D",
+"sec": 116.6
+},
+{
+"n": 10,
+"sec": 85.0,
+"usage": {
+"completion_tokens": 284,
+"prompt_tokens": 941,
+"total_tokens": 1225,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 73.7,
+"usage": {
+"completion_tokens": 338,
+"prompt_tokens": 991,
+"total_tokens": 1329,
+"prompt_tokens_details": {
+"cached_tokens": 570
+}
+}
+},
+{
+"n": 10,
+"sec": 87.1,
+"usage": {
+"completion_tokens": 423,
+"prompt_tokens": 969,
+"total_tokens": 1392,
+"prompt_tokens_details": {
+"cached_tokens": 570
+}
+}
+},
+{
+"n": 4,
+"sec": 40.3,
+"usage": {
+"completion_tokens": 208,
+"prompt_tokens": 735,
+"total_tokens": 943,
+"prompt_tokens_details": {
+"cached_tokens": 570
+}
+}
+},
+{
+"profile": "Guy Contact",
+"sec": 87.6
+},
+{
+"n": 10,
+"sec": 110.9,
+"usage": {
+"completion_tokens": 480,
+"prompt_tokens": 802,
+"total_tokens": 1282,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 9,
+"sec": 71.7,
+"usage": {
+"completion_tokens": 366,
+"prompt_tokens": 791,
+"total_tokens": 1157,
+"prompt_tokens_details": {
+"cached_tokens": 502
+}
+}
+},
+{
+"profile": "Raresh",
+"sec": 244.0
+},
+{
+"n": 10,
+"sec": 79.9,
+"usage": {
+"completion_tokens": 249,
+"prompt_tokens": 949,
+"total_tokens": 1198,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 88.7,
+"usage": {
+"completion_tokens": 438,
+"prompt_tokens": 915,
+"total_tokens": 1353,
+"prompt_tokens_details": {
+"cached_tokens": 532
+}
+}
+},
+{
+"n": 10,
+"sec": 89.2,
+"usage": {
+"completion_tokens": 437,
+"prompt_tokens": 924,
+"total_tokens": 1361,
+"prompt_tokens_details": {
+"cached_tokens": 532
+}
+}
+},
+{
+"n": 10,
+"sec": 84.2,
+"usage": {
+"completion_tokens": 394,
+"prompt_tokens": 976,
+"total_tokens": 1370,
+"prompt_tokens_details": {
+"cached_tokens": 532
+}
+}
+},
+{
+"n": 10,
+"sec": 83.8,
+"usage": {
+"completion_tokens": 408,
+"prompt_tokens": 912,
+"total_tokens": 1320,
+"prompt_tokens_details": {
+"cached_tokens": 532
+}
+}
+},
+{
+"n": 10,
+"sec": 90.0,
+"usage": {
+"completion_tokens": 437,
+"prompt_tokens": 937,
+"total_tokens": 1374,
+"prompt_tokens_details": {
+"cached_tokens": 532
+}
+}
+},
+{
+"n": 10,
+"sec": 87.6,
+"usage": {
+"completion_tokens": 430,
+"prompt_tokens": 920,
+"total_tokens": 1350,
+"prompt_tokens_details": {
+"cached_tokens": 532
+}
+}
+},
+{
+"n": 8,
+"sec": 70.0,
+"usage": {
+"completion_tokens": 340,
+"prompt_tokens": 863,
+"total_tokens": 1203,
+"prompt_tokens_details": {
+"cached_tokens": 532
+}
+}
+},
+{
+"profile": "[a:rpia:r]",
+"sec": 156.2
+},
+{
+"n": 10,
+"sec": 99.2,
+"usage": {
+"completion_tokens": 346,
+"prompt_tokens": 1000,
+"total_tokens": 1346,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 93.6,
+"usage": {
+"completion_tokens": 440,
+"prompt_tokens": 979,
+"total_tokens": 1419,
+"prompt_tokens_details": {
+"cached_tokens": 521
+}
+}
+},
+{
+"n": 3,
+"sec": 33.3,
+"usage": {
+"completion_tokens": 161,
+"prompt_tokens": 691,
+"total_tokens": 852,
+"prompt_tokens_details": {
+"cached_tokens": 521
+}
+}
+}
+]
+}

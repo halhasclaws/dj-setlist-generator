@@ -4,12 +4,13 @@ from __future__ import annotations
 
 import argparse
 
+import discovery_review
 from checkpoint_manager import ArtistManager
 from config import Config
 from source_url_normalizer import resolve_canonical_source_url
 from worker.callbacks import post_callback
 from worker.config import get_settings
-from worker.db import execute, fetch_one, finalize_submission_from_runs, insert_worker_event, json_value, mark_submission
+from worker.db import execute, fetch_all, fetch_one, finalize_submission_from_runs, insert_worker_event, json_value, mark_submission
 from worker.providers.ytdlp import DjSetDiscoverer
 
 
@@ -23,6 +24,88 @@ def _dispatch_pending() -> None:
         "/api/internal/dispatch-pending",
         timeout=30,
     ).raise_for_status()
+
+
+def _prior_runs(artist_name: str, submission_id: str) -> tuple[set[str], list[discovery_review.Candidate]]:
+    """Sources cancelled for this artist before, and sets already accepted for them.
+
+    A source that was cancelled in an earlier discovery and never completed is
+    skipped, so re-running discovery for an artist (to pick up new sets) does
+    not queue the wrong matches again.
+    """
+    rows = fetch_all(
+        """
+        select r.source_url, r.status, r.set_title, r.source_metadata
+        from ops.set_runs r
+        join ops.submissions s on s.id = r.submission_id
+        where lower(s.artist_name) = lower(%s)
+          and r.submission_id <> %s
+          and r.status in ('cancelled', 'completed')
+        order by r.created_at desc
+        limit 2000
+        """,
+        (artist_name, submission_id),
+    )
+    cancelled: set[str] = set()
+    completed: set[str] = set()
+    accepted: list[discovery_review.Candidate] = []
+    for row in rows:
+        url = row.get("source_url") or ""
+        if row.get("status") == "completed":
+            completed.add(url)
+            meta = row.get("source_metadata") or {}
+            if not isinstance(meta, dict):
+                meta = {}
+            accepted.append(
+                discovery_review.Candidate(
+                    title=row.get("set_title") or "",
+                    channel=str(meta.get("event") or ""),
+                    minutes=meta.get("duration_minutes"),
+                    year=meta.get("year"),
+                    url=url,
+                )
+            )
+        else:
+            cancelled.add(url)
+    return cancelled - completed, accepted
+
+
+def _ai_review(
+    submission_id: str,
+    artist_name: str,
+    aliases: list[str],
+    candidates: list[discovery_review.Candidate],
+    accepted: list[discovery_review.Candidate],
+) -> list[discovery_review.Verdict] | None:
+    """Ask Claude which candidates are this artist's sets. None means no review ran."""
+    if Config.DISCOVERY_AI_REVIEW == "off" or not candidates:
+        return None
+    if not discovery_review.available():
+        insert_worker_event(
+            submission_id=submission_id,
+            event_type="submission.discovery.review_skipped",
+            message="AI review skipped: claude CLI not installed",
+        )
+        return None
+    try:
+        profile = discovery_review.build_profile(
+            artist_name, aliases, candidates, accepted=accepted, web=not accepted
+        )
+        verdicts = discovery_review.review(artist_name, profile["profile"], candidates)
+    except Exception as exc:  # the review is an extra filter; discovery still works without it
+        insert_worker_event(
+            submission_id=submission_id,
+            event_type="submission.discovery.review_failed",
+            message=f"AI review failed, queuing without it: {exc}"[:500],
+        )
+        return None
+    insert_worker_event(
+        submission_id=submission_id,
+        event_type="submission.discovery.reviewed",
+        message=f"AI review rejected {sum(v.verdict == 'reject' for v in verdicts)} of {len(verdicts)} candidates",
+        details={"profile": profile.get("profile"), "namesakes": profile.get("namesakes")},
+    )
+    return verdicts
 
 
 def run(submission_id: str) -> None:
@@ -87,7 +170,56 @@ def run(submission_id: str) -> None:
                 )
             canonical_sets.append((candidate, canonical_url, canonical_source_links))
 
+        skip_urls, accepted = _prior_runs(artist_name, submission_id)
+        skipped = [entry for entry in canonical_sets if entry[1] in skip_urls]
+        canonical_sets = [entry for entry in canonical_sets if entry[1] not in skip_urls]
+
+        verdicts = _ai_review(
+            submission_id,
+            artist_name,
+            search_names[1:],
+            [
+                discovery_review.Candidate(
+                    title=candidate.title,
+                    channel=candidate.event or "",
+                    minutes=candidate.duration_minutes,
+                    year=candidate.year,
+                    url=canonical_url,
+                )
+                for candidate, canonical_url, _ in canonical_sets
+            ],
+            accepted,
+        )
+        rejected = []
+        if verdicts is not None:
+            rejected = [(entry, v) for entry, v in zip(canonical_sets, verdicts) if v.verdict == "reject"]
+            canonical_sets = [entry for entry, v in zip(canonical_sets, verdicts) if v.verdict != "reject"]
+        sets = [candidate for candidate, _, _ in canonical_sets]
+
         execute("delete from ops.discovery_candidates where submission_id = %s", (submission_id,))
+
+        dropped = [(entry, "skipped", "cancelled in an earlier discovery") for entry in skipped]
+        dropped += [(entry, "rejected", f"AI review: {v.kind}: {v.reason}") for entry, v in rejected]
+        for (candidate, canonical_url, _), status, reason in dropped:
+            execute(
+                """
+                insert into ops.discovery_candidates (
+                  submission_id, source_url, source_platform, source_title,
+                  duration_seconds, status, rejection_reason, metadata
+                )
+                values (%s, %s, %s, %s, %s, %s, %s, %s)
+                """,
+                (
+                    submission_id,
+                    canonical_url,
+                    candidate.platform,
+                    candidate.title,
+                    candidate.duration_minutes * 60 if candidate.duration_minutes else None,
+                    status,
+                    reason[:500],
+                    json_value({"primary_source_url": canonical_url, "is_primary": True}),
+                ),
+            )
 
         for candidate, canonical_url, source_links in canonical_sets:
             for source_link in source_links:
@@ -124,11 +256,14 @@ def run(submission_id: str) -> None:
                 )
 
         if not sets:
-            mark_submission(submission_id, status="failed", error_summary="No DJ sets discovered")
+            message = "No DJ sets discovered"
+            if dropped:
+                message = f"No new DJ sets ({len(skipped)} cancelled before, {len(rejected)} rejected by AI review)"
+            mark_submission(submission_id, status="failed", error_summary=message)
             insert_worker_event(
                 submission_id=submission_id,
                 event_type="submission.discovery.empty",
-                message="No DJ sets discovered",
+                message=message,
             )
             return
 

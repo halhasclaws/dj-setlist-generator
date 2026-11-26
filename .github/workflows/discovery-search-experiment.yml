@@ -8,6 +8,7 @@ on:
     paths:
       - experiments/discovery/config.json
       - experiments/discovery/search_experiment.py
+      - experiments/discovery/real_discovery.py
       - .github/workflows/discovery-search-experiment.yml
 
 concurrency:
@@ -50,11 +51,10 @@ jobs:
           done
           exit 1
 
-      - name: Run searches
+      - name: Run the real discovery search code
         env:
-          YT_PROXY: ${{ steps.warp.outputs.proxy }}
-          WORKERS: "6"
-        run: python experiments/discovery/search_experiment.py
+          HTTPS_PROXY: ${{ steps.warp.outputs.proxy }}
+        run: python experiments/discovery/real_discovery.py
 
       - name: Commit results to the experiment branch
         if: always()

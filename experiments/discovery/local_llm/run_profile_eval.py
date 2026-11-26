@@ -73,7 +73,7 @@ def main():
                 res[c["id"]] = {"v": v.get("verdict"), "kind": v.get("kind"), "reason": v.get("reason")}
     os.makedirs(os.path.join(HERE, "results"), exist_ok=True)
     json.dump({"model": R.MODEL, "shard": R.SHARD, "profiles": profiles, "verdicts": res, "timings": timings},
-              open(os.path.join(HERE, "results", f"profile-{R.MODEL}-{R.SHARD}.json"), "w"), indent=0)
+              open(os.path.join(HERE, "results", f"profile-{R.PROMPT}-{R.MODEL}-{R.SHARD}.json"), "w"), indent=0)
 
 
 if __name__ == "__main__":

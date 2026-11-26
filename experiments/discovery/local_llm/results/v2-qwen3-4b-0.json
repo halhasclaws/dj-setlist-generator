@@ -1,0 +1,2113 @@
+{
+"model": "qwen3-4b",
+"shard": 0,
+"verdicts": {
+"0d66e26a": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set at Hyderabad, matches tour history and is clearly a DJ set with Adam Pits as performer."
+},
+"cf11c6b3": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title format is ambiguous; lacks clear indication of a DJ set or live performance, possibly a mix or tracklist."
+},
+"9a66b001": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set on a French radio show with Adam Pits as performer, consistent with profile."
+},
+"b29afccf": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix titled 'Holding Hands Mix 002' by Adam Pits \u2014 a DJ mix, not a track or talk."
+},
+"89bce906": {
+"v": "keep",
+"kind": "set",
+"reason": "space\u2022cast is a known series linked to Space Cadets, which Adam Pits co-runs; this is a mix or podcast-style set."
+},
+"709be3a2": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM monthly show, clearly a live DJ set with Adam Pits."
+},
+"98bac0ac": {
+"v": "keep",
+"kind": "set",
+"reason": "Festival recording at Dimensions, one of the venues listed in profile."
+},
+"40351e84": {
+"v": "keep",
+"kind": "set",
+"reason": "Navigare Audio is a radio/record label; this is a mix or radio show featuring Adam Pits."
+},
+"29b33d48": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly labeled as a 'Closing Set' at NUDE Berlin, a venue in profile, indicating a live performance."
+},
+"457d0eca": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a mini mix featuring multiple artists; Adam Pits is listed among others, not as the sole performer or DJ set. This is a tracklist-style mix, not a recording of Adam Pits DJing."
+},
+"6472f47e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Adam Pits in a mix series (Deep Space Series), which is a DJ mix series. Likely a DJ set."
+},
+"717422b5": {
+"v": "keep",
+"kind": "set",
+"reason": "Clearly labeled 'recorded live from fabric' \u2014 a live club set."
+},
+"da700015": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; this is a scheduled radio show featuring Adam Pits."
+},
+"bbb83f04": {
+"v": "keep",
+"kind": "set",
+"reason": "Fur:ther Sessions is a known DJ mix series; Adam Pits is named in title, indicating a DJ set."
+},
+"5e970df1": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; this is a scheduled radio show featuring Adam Pits."
+},
+"b9636ecd": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title indicates a talk show about music community \u2014 not a music performance."
+},
+"4877eca2": {
+"v": "keep",
+"kind": "set",
+"reason": "Ambient Sauna is a known event; Adam Pits is listed as performer, likely a live or mix set."
+},
+"cdf1a8ad": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; this is a scheduled radio show featuring Adam Pits."
+},
+"1105ae4d": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; this is a scheduled radio show featuring Adam Pits."
+},
+"23e881c6": {
+"v": "keep",
+"kind": "set",
+"reason": "Do\u00fcbiance is a known mix series; Adam Pits is named in title, likely a mix or live set."
+},
+"22088714": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; clearly a DJ set."
+},
+"96385471": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B at Desert Sound Colony festival \u2014 live DJ set at a venue he tours to."
+},
+"2288963c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast format \u2014 talk-based, not a music performance."
+},
+"1c6990ed": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at DJ Mag HQ with multiple DJs, including Adam Pits."
+},
+"76aa1de3": {
+"v": "keep",
+"kind": "set",
+"reason": "Spotlight mix for Farron \u2014 a mix recorded by Adam Pits."
+},
+"81051d6d": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM monthly show \u2014 consistent with profile."
+},
+"c75c6480": {
+"v": "keep",
+"kind": "set",
+"reason": "Live recording at Bengaluru \u2014 matches tour history."
+},
+"0be50397": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs with Paramida on Rinse FM \u2014 live DJ set."
+},
+"f5b5827c": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B at Dimensions \u2014 venue where he performs."
+},
+"14d0168c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with Lisene and Alex T on Rinse FM."
+},
+"3a3c68be": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; clear DJ set recording."
+},
+"663675b5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Dimensions festival, which is listed in profile as a venue they play at."
+},
+"4eb5cdeb": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast mix featuring Adam Pits; podcast mixes are allowed under rules."
+},
+"1f5be378": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show on 08 July 2023; part of regular monthly series."
+},
+"8897fd1c": {
+"v": "keep",
+"kind": "set",
+"reason": "Joint DJ set with Craigie Knowes on Rinse FM; valid b2b set."
+},
+"05636971": {
+"v": "keep",
+"kind": "set",
+"reason": "Segment of Limbo Radio, which Adam Pits co-runs; radio show content."
+},
+"02001ab7": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show on 13 April 2024; part of regular monthly series."
+},
+"4fc690f5": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM show on 9 December 2023; part of regular monthly series."
+},
+"040d6930": {
+"v": "keep",
+"kind": "set",
+"reason": "Space Cadets mix with Lisene, which Adam Pits co-runs; part of their series."
+},
+"aaa98af8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set at KAUZ Zurich, a venue listed in profile; date is in future but ignored per rules."
+},
+"1dab346d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Adam Pits in a mix series, indicating a curated DJ set."
+},
+"32f379d9": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; clearly a scheduled DJ set."
+},
+"495a9142": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly labeled 'Live @ Nowadays' with Adam Pits as performer."
+},
+"45b43f30": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Adam Pits set' in a venue (The Lab LDN), matching profile genres and location."
+},
+"7765a8b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; clearly a DJ set."
+},
+"2aa5033c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast series \u2014 involves talk, not music performance."
+},
+"5227c63a": {
+"v": "keep",
+"kind": "set",
+"reason": "Ciel with Adam Pits \u2014 likely a DJ set, not a talk."
+},
+"d456987c": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set with Adam Pits \u2014 clearly a DJ set with another DJ."
+},
+"873e453e": {
+"v": "keep",
+"kind": "set",
+"reason": "Rinse FM regular with monthly show; clearly a DJ set."
+},
+"efbdebe6": {
+"v": "keep",
+"kind": "set",
+"reason": "MNMT 502 mix series \u2014 likely a mix curated by Adam Pits, a DJ mix."
+},
+"a3e931fc": {
+"v": "keep",
+"kind": "set",
+"reason": "Named as playing in a DJ set on a radio show; clearly a music performance."
+},
+"75fda636": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Chez Damier in a mix series; likely a DJ set or mix."
+},
+"aa45468b": {
+"v": "reject",
+"kind": "track",
+"reason": "Uses 'Feat' indicating a featured track, not a live DJ set."
+},
+"dc6d7847": {
+"v": "reject",
+"kind": "track",
+"reason": "Uses 'ft.' indicating a featured artist in a mix, not a live performance."
+},
+"20f09f5f": {
+"v": "reject",
+"kind": "track",
+"reason": "Title includes 'ft.' indicating feature, not live DJing."
+},
+"69282cee": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title indicates a talk or interview about his career, not music playing."
+},
+"7d1a337a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title indicates a talk or interview about his roots and creativity."
+},
+"f204c563": {
+"v": "reject",
+"kind": "set",
+"reason": "Labeled as 'Live 6 Pack Mixes' \u2013 a mix, not a live DJ set."
+},
+"2d315921": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "No clear indication of live performance; title suggests a mix or compilation."
+},
+"dd4ae2b2": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"efe86e8c": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a talk show from Red Bull Music Academy featuring Ron Trent discussing Chez Damier and making music. It's an interview, not a DJ set or music performance."
+},
+"4fd209cc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Chez Damier Live' at a party in Leeds with a date. Includes live performance context and is uploaded by a channel that likely documents live events."
+},
+"6848a9a1": {
+"v": "keep",
+"kind": "set",
+"reason": "Circoloco Radio is a radio show; the title includes 'Chez Damier' and is formatted as a radio episode. This is a radio recording where he is playing music."
+},
+"b531685d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly states 'Chez Damier Live' at Garito Cafe in Palma, with a date. This is a live club performance."
+},
+"c3f263f1": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'SWOOSE LOVES: CHEZ DAMIER' \u2014 this appears to be a fan or curated content piece, possibly a short mix or tribute. No indication of a live set or DJ performance. Likely a tracklist or promotional content, not a DJ set."
+},
+"bb1fbafa": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is '148 - LWE Mix - Chez Damier'. This is a mix by LWE that includes Chez Damier's music. It's not a recording of Chez Damier playing \u2014 it's a mix that features him."
+},
+"fc185717": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Chez Damier Live 4.2020' \u2014 clearly a live set with a date. Even though the date is in the future, the title indicates a live performance."
+},
+"0cdc455c": {
+"v": "keep",
+"kind": "set",
+"reason": "Rexcast is a mix series; 'CHEZ DAMIER' is listed as a featured DJ. This is a mix episode where he is playing, likely a DJ set or mix."
+},
+"422b1a6a": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a b2b set between Kerris Chandler and Chez Damier at a festival. The title specifies 'b2b house set', which is a live DJ performance."
+},
+"84e0a15d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Chez Damier Opening Mix - Jan 11, 2025'. This is a mix titled as an opening mix, likely a DJ set or mix for a show. Even though the date is in the future, it's clearly a mix by Chez Damier."
+},
+"22010891": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names Chez Damier as the creator of a mix, indicating a DJ mix recording."
+},
+"088a6f1f": {
+"v": "unsure",
+"kind": "set",
+"reason": "The title refers to a set 'after' Chez Damier, not one in which he is performing. Unclear if he is playing or just referenced."
+},
+"52fb1666": {
+"v": "keep",
+"kind": "set",
+"reason": "Titled 'Livingroom Session with Chez Damier', indicating a live or recorded performance where he is the main artist."
+},
+"ff0ca833": {
+"v": "reject",
+"kind": "set",
+"reason": "Podcast format suggests a talk or interview, not a music performance."
+},
+"a4328383": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly titled 'Live The Bus 1994', indicating a live performance by Chez Damier."
+},
+"1bc98761": {
+"v": "reject",
+"kind": "set",
+"reason": "Features Chez Damier as a guest in a set with others; not a recording of him playing as the main DJ."
+},
+"f4269a48": {
+"v": "keep",
+"kind": "set",
+"reason": "Listed as one of multiple DJs in a group set, suggesting he is performing live."
+},
+"855495d1": {
+"v": "reject",
+"kind": "set",
+"reason": "Podcast format indicates a talk or interview, not a music set."
+},
+"c61af2ab": {
+"v": "keep",
+"kind": "set",
+"reason": "Titled with 'GUEST: CHEZ DAMIER', indicating a B2B or guest set where he is playing."
+},
+"2e056989": {
+"v": "reject",
+"kind": "set",
+"reason": "Podcast format suggests a talk or interview, not a music performance."
+},
+"340842cb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Chez Damier live @ Eastern Electrics Festival UK' \u2013 clear live festival set."
+},
+"17b50e75": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Chez Damier @ Obsession strings of life, reading 1993 side B' \u2013 'side B' suggests a side of a mix or tape, likely a radio or club recording from 1993, which fits the profile's 1993 radio/club tapes."
+},
+"f3112d2d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'CHEZ DAMIER @ Club La Gare' \u2013 clearly a club recording, even if short. Matches profile of club performances in Berlin, Paris, etc."
+},
+"82c7165f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'The pHactory w/dESUS & Guest Chez Damier' \u2013 'guest' implies he is playing, not the main act. Still a live DJ set, likely a b2b or collaborative set. Fits profile of live appearances."
+},
+"d865f0d1": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title says 'Kai Galactic DJ Set Chez Damier Japan Tour...' \u2013 this is a set **organized by** Kai Galactic and DAYBREAK, and Chez Damier is listed as part of the tour. But the title is phrased as 'Kai Galactic DJ Set', not 'Chez Damier DJ Set'. It's ambiguous whether Chez Damier is playing or just mentioned. No clear indication he is performing. Likely a misattribution or name confusion."
+},
+"05434e90": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ron Trent & Chez Damier Live Radio FG Paris 1993' \u2013 clearly a live radio broadcast, with both artists playing. Matches profile of radio shows and live performances in Paris."
+},
+"adaac28c": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Chez Damier & Ralph Lawson' \u2013 this is a collaborative mix, likely a mix or tracklist, not a live DJ set. The format is a 'Full Circle' mix, suggesting a studio mix or compilation, not live performance."
+},
+"604333af": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Chez Damier on the healing power of music...' \u2013 this is a talk or interview, not a music performance. Clearly a talk show or discussion."
+},
+"7be40dc9": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Chez Damier on The Chicago-Detroit Axis...' \u2013 this is a lecture or talk from Red Bull Music Academy, not a DJ set or music performance."
+},
+"ac7f9946": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Chez Damier DJ Set at FREAKIN (Ziggys Nightclub) 1/11/2013' \u2013 clearly a live DJ set at a nightclub, matches profile of club performances."
+},
+"0e6c5ded": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names Chez Damier as the DJ in a mix. This is a DJ mix, not a track or talk."
+},
+"68b38a59": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes Chez Damier at a specific event (OBSESSION Strings Of Life) in 1993, indicating a live performance."
+},
+"91faf38d": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast episode features Chez Damier, and given the format, it likely includes a DJ segment or mix, not a talk."
+},
+"649da9d5": {
+"v": "keep",
+"kind": "set",
+"reason": "RA.305 is a mix series episode by Resident Advisor, and the title names Chez Damier as the contributor. This is a DJ mix."
+},
+"9229d4d9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Uses 'ft.' (featured), indicating his music is included, not a live set he performed in. This is a tracklist or mix with multiple artists."
+},
+"ee0c2db8": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Listed among multiple artists in a mix; 'Chez Damier' is not performing, just featured. This is a tracklist or collaborative mix."
+},
+"a4dcd8bf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Chez Damier 12.2020' \u2014 likely a live DJ set from December 2020."
+},
+"bdca08e1": {
+"v": "keep",
+"kind": "set",
+"reason": "Recorded at The Lot Radio, a radio show. Even with a future date, it's a radio performance of Chez Damier playing."
+},
+"1631528b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Floating Points live at Corsica Studios 2012' \u2014 clearly a live set. Channel is NTS Monday, which aligns with his known radio ties."
+},
+"d7493c6b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title includes 'Floating Points' but is framed as a talk or critique ('Self-Education and F***ing Floating Points') with Eduardo Rafael. This appears to be a discussion or commentary, not a music set."
+},
+"451017a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'THUMP Sessions Floating Points Live HD' \u2014 'Live' and 'THUMP Sessions' implies a live DJ set. THUMP is a known club/recorded music series, and Floating Points is listed as performing."
+},
+"0a398a06": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Floating Points w/Four Tet & Caribou (@NTS radio)' \u2014 clearly a live performance at NTS Radio, consistent with known collaborations and radio appearances. Includes live set context."
+},
+"e397588f": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'VACUUM BOOGIE : A FLOATING POINTS MIX : Mixed by AllyAl' \u2014 this is a mix created by AllyAl, and Floating Points is listed as the subject of the mix, not performing. It's a mix, not a live set or DJ performance."
+},
+"ece29212": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Reflections - Mojave Desert Continuous Mix' and the channel is Floating Points. However, the mix is titled after another project, and it's a mix (not a live set). The artist is listed as the mixer, not performing live. This is a mix, not a live performance."
+},
+"4883529a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Floating Points & MCDE at Dimensions Festival 2014' \u2014 clearly a live festival performance. Includes live context and festival setting, matching known festival appearances."
+},
+"c2692e0e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'FLOATING POINTS - Rough Trade Exclusive Bonus Mix' \u2014 this is a mix, not a live set. The artist is the one who created the mix, not performing live. It's a mix, not a live performance."
+},
+"9b3f8ef7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Boiler Zoom: Floating Points featuring KDV Dance Ensemble & Friends' \u2014 Boiler Room is a live club event, and Floating Points is featured. This is a live DJ set with collaborators, consistent with known live performances."
+},
+"c80f5d38": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"8b8a00fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Floating Points w/ Charlie King' and is a WKCR radio show segment. Radio shows where a DJ plays music count as recordings of the artist performing (even if not live)."
+},
+"82404041": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists Floating Points as one of several artists in a mix. The format is a mix with multiple artists, not a solo set or live performance. This is a tracklist-style mix where Floating Points is just one of many featured, not necessarily playing. This is a 'tracklist' type entry."
+},
+"cb609cf9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Floating Points in a DJ set at DGTL with Orbital and Ame. It's a live DJ set at an event (DGTL X Orbital), so it's a live set. Even though it's a multi-artist event, Floating Points is playing as a DJ."
+},
+"155df719": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'RA Live: Floating Points At Printworks 2019' \u2014 clearly a live performance at a venue. This is a documented live set."
+},
+"1f9a55c2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points - My Plastic People Mix' \u2014 this is a mix made for Plastic People, likely a curated mix where Floating Points is the host or contributor. It's a mix, not a live set. But the title implies it's a mix created by Floating Points, not a live performance. Still, mix recordings are kept if they are his own mix."
+},
+"c8f65654": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points & Four Tet - Final Plastic People [2015-01-02]' \u2014 this is a collaborative mix or event, likely a mix compilation. The format is a mix, not a live set. It's a mix made for a show, so it's a mix recording."
+},
+"0dd62c8f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Mr Scruff & Floating Points DJ set from Plastic People' \u2014 explicitly states it's a DJ set from Plastic People. This is a live DJ set featuring both artists. So it's a live set with Floating Points playing."
+},
+"c923bf84": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points live at Mode Festival Sydney (Full Set)' \u2014 explicitly states it's a live set at a festival. This is a live performance."
+},
+"211dd4cd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live DJ MIX"
+},
+"c1640a04": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points \u2013 Essential Mix 2015-11-28' \u2014 this is a mix series, specifically an 'Essential Mix' hosted by Floating Points. These are mix recordings where the artist curates and plays music. These are considered mix recordings, not live sets, but they are still recordings of Floating Points DJing."
+},
+"0d350896": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title mentions 'Rob's Set Before Floating Points' \u2014 implies Floating Points is present, but not clearly as a performer. 'With Only Staff and Band In Attendance' suggests it's a live event, but Floating Points is not explicitly playing. The title structure suggests a set before him, not by him. Ambiguous."
+},
+"0e2e4b5a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Floating Points - Promises (Live in Los Angeles 9/20/2023)' \u2014 clearly a live performance. The format is a live set, and the artist is named as performing."
+},
+"87339b4a": {
+"v": "keep",
+"kind": "set",
+"reason": "RA.301 Floating Points \u2014 Resident Advisor mix series. RA often features DJ mixes. The title names Floating Points as the featured artist in a mix, likely a DJ mix or radio-style set. No indication of talk or track."
+},
+"a013af90": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Floating Points & Spencer - Numbers x Pleasure Principle on Rinse FM' \u2014 this is a Rinse FM broadcast, a radio show. Floating Points is listed as a performer. Radio shows count as recordings of DJing or live sets in context."
+},
+"1f74bc25": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Floating Points @ Sunflower Sound System, Glastonbury 2025' \u2014 clearly a festival performance. Even though the date is in the future, the profile confirms Floating Points has played at Glastonbury's Sunflower Sound System. The title names the artist and event. Accepts future dates per instructions."
+},
+"9620f864": {
+"v": "keep",
+"kind": "set",
+"reason": "Title 'Floating Points @TheLotRadio 07-11-2025' \u2014 clearly a live set at a radio station. The artist is named and performing. Radio sets are valid under the rules."
+},
+"048bc158": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Jamie xx, Floating Points, Daphni, Live from Coachella 2024' \u2014 this is a multi-artist live set. Floating Points is listed as one of the performers. The format is a live festival set, so it counts as a live set even if shared with others."
+},
+"a949dfbc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Floating Points & Four Tet Live Plastic People Closing Party London 2.1.2015' \u2014 clearly a live performance at a London event. Floating Points is explicitly named as a performer in a live set."
+},
+"fc4b2ebe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Floating Points - Fatima AlexNut RINSE FM - 14th March' \u2014 this appears to be a Rinse FM broadcast. Floating Points is listed as performing. Even though it's a mix with others, the title indicates Floating Points is playing on the show. Radio mix counts as a DJ set."
+},
+"7c48b3d0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Floating Points - Live at Far Away 2019' \u2014 explicitly a live performance at a venue. Matches profile of live sets in London and festivals. Clearly a live set."
+},
+"fd902dca": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists Floating Points as one of the performers in a DJ set with others; clearly a DJ set recording."
+},
+"426f808c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Full Performance (Live on KEXP)' \u2014 a live performance at a radio station, which counts as a live set."
+},
+"b30c26a6": {
+"v": "keep",
+"kind": "set",
+"reason": "Boiler Room is a club event; 'Floating Points' is listed as a performer in a Boiler Room set, which is a DJ set."
+},
+"3e7848d0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies a b2b set with Caribou and Palms Trax \u2014 Floating Points is explicitly part of a live b2b set."
+},
+"5cc205c6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points @ Sunflower Gala' \u2014 a festival performance, clearly a live set."
+},
+"c4d746e9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Recorded Live at Brilliant Corners Pt. 1' \u2014 a live performance at a venue, confirmed as a live set."
+},
+"0bb8f88a": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "This is a podcast titled '#24' with multiple artists; Floating Points is listed among others, but it's a podcast mix, not a live or DJ set where music is played in sequence. It's a tracklist-style mix, not a performance."
+},
+"8c4eb1ba": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Live at The Shrine' \u2014 a live performance, even if uploaded by Daniel Kirby, it's a live set by Floating Points."
+},
+"cc460294": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Live From #DJMagHQ ADE Special' \u2014 a live performance at a music event, clearly a live set."
+},
+"cef02602": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'J'adore Amore B2B Floating Points Glastonbury' \u2014 a b2b set at Glastonbury, clearly a live DJ set."
+},
+"7a178f3f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Caribou - Lyon Live stream 24th october' and includes 'Floating Points' as a performer. This is a live stream from Lyon, consistent with Floating Points' known live performances in Europe. The channel is Jamie, but the content is clearly a live set involving Floating Points."
+},
+"f839b736": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points - FABRIC MIX'. FABRIC is a well-known club venue, and 'mix' implies a DJ set. The format is a mix, not a track or album, and Floating Points is named as the main artist. This fits the profile of a DJ mix."
+},
+"5b8bf208": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'SET FLOATING POINTS- BY MEDINA DEEJAY'. The phrasing suggests Medina is the DJ, and Floating Points is being set by her \u2014 this implies a mix or performance where Floating Points is featured, but not necessarily playing. The title structure indicates it's a mix created by Medina, not a set by Floating Points. No indication Floating Points is performing."
+},
+"efff72db": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a full album titled 'Promises' featuring Floating Points alongside Pharoah Sanders and the London Symphony Orchestra. It's an album, not a DJ set or mix. The format is a full album, not a live or mix recording."
+},
+"33d34cca": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Floating Points Only DJ mix' by avion aka Takashi Sekiguchi. The mix is created by Takashi Sekiguchi, and while it features Floating Points, it's a mix *by* another DJ. Floating Points is not performing here. This is a tracklist of music by others, not a set by Floating Points."
+},
+"1e8fbbbb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points 130223' and channel is 'NTS Monday'. NTS Radio has long-standing ties to Floating Points, and this is a known format (NTS Monday shows). The title implies a live or recorded DJ set from NTS, consistent with the profile. Date is not a red flag."
+},
+"f5053648": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Mix 74: Floating Points - Works 2016-2024' \u2014 this is a mix series that includes Floating Points' works, but it's a curated mix by TheDaddyO44, not a set by Floating Points. The format is a tracklist of works, not a performance. Floating Points is being featured, not performing."
+},
+"191cc97e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points (Live at Primavera Sound 2025 Barcelona)' \u2014 this is a live performance at a festival, and the date is in the future (2025). However, the rule says: 'ignore dates' \u2014 so even if the date is future, it's still a live set. Floating Points is listed as performing live at a festival, which matches the profile."
+},
+"1a525f98": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Floating Points - Cascade (Full Album)' \u2014 this is a full album, not a DJ set or mix. It's a studio album, not a live or mix recording."
+},
+"07426265": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Hidden By Sound Podcast EP 1' featuring Floating Points. This is a podcast, not a music set. It's a talk-based episode with a guest list, including Floating Points. The format is a conversation, not a DJ performance."
+},
+"7b28772e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Floating Points @ The Lot Radio' \u2014 clearly a radio DJ set. Radio shows are valid under the profile's links to NTS and other radio platforms."
+},
+"e08b6716": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is '206 - The Boom Room - Floating Points [30m Special]' \u2014 a special episode featuring Floating Points, likely a DJ set or mix. The format suggests a curated set, not a talk or track."
+},
+"d2208212": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Ben UFO w/ Four Tet, Pearson Sound & Floating Points' \u2014 Floating Points is listed as a collaborator in a set. This is a live set on Rinse FM, which aligns with his known live appearances. The format is a multi-artist set, but Floating Points is playing."
+},
+"edab4a14": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Mr Scruff, Floating Points, Tom Smith & MC Kwasi on the Dub Smugglers Sound System, Dimensions 2013' \u2014 clearly a festival recording with Floating Points as a performer. Dimensions is a known festival where he has played."
+},
+"39fc0171": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Four Tet + Floating Points @ Forest Hills Stadium' \u2014 a live set at a stadium, clearly a live performance. Matches profile's live appearances and collaborations."
+},
+"527ca495": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Under The Needle, Episode 58 - Floating Points' \u2014 this is a podcast episode. The format is a talk show or interview, not a music set. Even if music is played, it's not a DJ set or live performance."
+},
+"acde1e15": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points BBC 1Xtra Deviation Mix' \u2014 a mix released by Floating Points for a radio station. Mixes are valid under the profile's radio ties (e.g., NTS, BBC). This is a mix, not a live set, but still a recording of them playing."
+},
+"319e48e9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'MOB b2b GVR LIVE @ St John May Ball '14 /w Oneman & Floating Points' \u2014 clearly a live b2b set with Floating Points. B2B sets are valid under the profile's known collaborations and live appearances."
+},
+"ea93ac55": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points b2b Mr Wonderful NTS set' \u2014 a b2b set on NTS, which is directly linked to Floating Points in the profile. B2B sets are valid and fall under live or DJ set recordings."
+},
+"86fe753b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Again.. Floating Points & Caribou - USB002 - Live at Lyon.mp3' \u2014 this is a live performance at Lyon, and Floating Points is listed as a performer. The title explicitly says 'Live at Lyon', confirming a live set. Even though uploaded by Arpit Verma, the content is of a live performance by Floating Points."
+},
+"f4432acd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists 'FLOATING POINTS' as one of the artists in a mix with others; the mix is attributed to Marco Weibel, but includes Floating Points. This is a mix featuring Floating Points, not a track or talk."
+},
+"c44a1f29": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Floating Points @ Dekmantel Festival S\u00e3o Paulo 2018' \u2014 a festival performance, clearly a live set."
+},
+"27ed306d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'BBC Radio 1 Essential Mix' with Floating Points as a featured artist \u2014 this is a radio show mix, not a live set or track, and Floating Points is playing music."
+},
+"d2860381": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists 'Floating Points' in a DJ set with Death Grips, Aphex Twin, etc. \u2014 this is a DJ set featuring Floating Points, even if shared with others. The title indicates a set where he is playing."
+},
+"3c1ba2d2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live from the Adriatic 2018: Four Tet & Floating Points' \u2014 clearly a live performance at a festival, jointly performed by both artists."
+},
+"6e1cbcd0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points (5 Hour Set)' at Boiler Room New York \u2014 Boiler Room is a DJ set format, and the title explicitly names Floating Points as the performer in a long set."
+},
+"a096776c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Rush Hour ADE IN-STORE w/ FLOATING POINTS / TWICE' \u2014 'w/' indicates a set with Floating Points, and it's an in-store DJ session, so a live DJ set."
+},
+"423ebd51": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Floating Points & Four Tet NTS Radio (15.06.2015)' \u2014 this is a radio show recording where Floating Points is playing, part of a live broadcast."
+},
+"9c049c74": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Floating Points - 'Crush' (Full Album)' \u2014 this is an album, not a DJ set or live performance. It's a track release."
+},
+"1de4eedf": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is 'Floating Points - Glastonbury 2025' \u2014 this is a future date (2025), and though it's a festival, the title is speculative and not confirmed. However, the profile says Floating Points has played at Glastonbury, and this is a festival recording. But the date is in the future \u2014 and the profile says he has played in the past. Still, the title names him as performing at Glastonbury. However, since it's a future event and not yet happened, and no evidence of actual recording, it's ambiguous. But the profile says he's played at Glastonbury, and this is a hypothetical. Given the ambiguity, it's not clearly a recorded performance. However, the title implies a live set. But the date is in the future \u2014 and we are told to ignore dates only if they look old or future. Here, it's future \u2014 and we are instructed to reject only if clearly not a recording. But since it's not confirmed, and the date is future, it's not a real recording. So it's uncertain."
+},
+"0555ab6e": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a tutorial video using Floating Points as an example, not a recording of them performing music. It's instructional, not a DJ set or mix."
+},
+"e59a78c4": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a 'Late Night Tales' radio mix featuring Floating Points as the DJ, with ambient and nu-jazz content matching their style. It's a recorded DJ set."
+},
+"5dfc7e75": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a talk or lecture from Red Bull Music Academy about record collecting, not a music performance. No music is played."
+},
+"7ea29125": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a multi-artist set from NTS Latest, featuring Floating Points as a performer. Given the context and channel, it's a live or DJ set."
+},
+"23499d82": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'sound(ge)cloud 088 by Ida Daugaard \u2013 Deep Thinking' and includes her name as the artist. The context suggests a DJ set, likely a mix, given the format and title. Channel is Elektro Uwe, but the title names her as the creator. No indication of talk or track. Fits profile."
+},
+"1a5546f5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ida Daugaard RTS.FM X Dialogue Sound 22.03.2019' \u2013 clearly a radio show segment where she is featured. Profile confirms she has guest mixed for RTS.FM. This is a radio broadcast, not a talk, and she is performing music. Even though it's a radio show, it's a DJ set within the show."
+},
+"af169954": {
+"v": "keep",
+"kind": "set",
+"reason": "KaterCast 12 - Ida Daugaard - Kiosk Edition. Kater_Club is a podcast/radio show where she has guest mixed. The title explicitly names her as a contributor. This is a podcast mix, not a talk or track. Fits profile."
+},
+"4041da40": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ida Daugaard at Plan:et C \u2022 Turmb\u00fchne \u2022 Fusion Festival 2021' \u2013 clearly a live performance at a festival. Matches her known festival appearances (Fusion). Directly states she performed there. Live set."
+},
+"2e91ca61": {
+"v": "keep",
+"kind": "set",
+"reason": "L.E.T Podcast #31 - Ida Daugaard. L.E.T. is a Zurich-based podcast where she is a guest. Profile confirms she plays in Zurich and has guest mixed for L.E.T. This is a podcast featuring her mix, not a talk. It's a guest mix."
+},
+"acc4e825": {
+"v": "unsure",
+"kind": "track",
+"reason": "Title: 'IDA DAUGAARD [DEU]' \u2013 very vague. No indication of a set, mix, or performance. Just a label tag. Could be a track, artist page, or promotional content. No mention of DJing, live, or mix. Likely not a recording of her playing. Cannot confirm performance."
+},
+"feeb671c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ida Daugaard b2b Daniel Czerner - Su\u0308dpol Hamburg May 2018 - Deep Afterhour Nr. 312' \u2013 clearly a b2b set at Su\u0308dpol (Hamburg), which is one of her known clubs. B2B sets are live DJ sets. Profile confirms she plays at S\u00fcdpol. This is a live set."
+},
+"bdcf137c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Deepist Podcast 091 Tessellate // Guestmix by Ida Daugaard' \u2013 explicitly states 'Guestmix by Ida Daugaard'. This is a mix she created for a podcast. Profile confirms she has guest mixed for shows. This is a mix, not a talk or track."
+},
+"d18dd105": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ida Daugaard - Meini's Secret Garden Katerblau 27.12.15 Shortcut' \u2013 clearly a live set at Katerblau, one of her known clubs. The venue and date are specific. Profile confirms she plays at Katerblau. This is a live performance."
+},
+"e0771a57": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"c4089e5c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'w/ Ida Daugaard' in a club recording context, indicating a live DJ set."
+},
+"e0519c4f": {
+"v": "keep",
+"kind": "set",
+"reason": "Labeled as 'Guest Artist' in a podcast episode, indicating a DJ performance or mix."
+},
+"08c4c4fc": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly titled 'Guest Mix By Ida Daugaard' \u2013 a mix she created for a radio show."
+},
+"33308c49": {
+"v": "keep",
+"kind": "set",
+"reason": "Title indicates a live set at MS Artville, a venue in Copenhagen where she performs."
+},
+"d28c3f0e": {
+"v": "keep",
+"kind": "set",
+"reason": "Yard Stories is a podcast series; 'with Ida Daugaard' implies a live or DJ session."
+},
+"4a85f003": {
+"v": "keep",
+"kind": "set",
+"reason": "Part of a mix series with her name and country (DK), likely a live or extended DJ set."
+},
+"c8af9a5f": {
+"v": "keep",
+"kind": "set",
+"reason": "Lokocast is a podcast; episode titled with her name, indicating a DJ appearance."
+},
+"448dd512": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Ida Daugaard \u2013 Zu Hause' and is from Witness This, a radio show where she appears as a DJ."
+},
+"77737585": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Livingroom Session with Ida Daugaard' \u2013 a live or intimate DJ session."
+},
+"2c50f9db": {
+"v": "keep",
+"kind": "set",
+"reason": "She 'presents' a podcast episode, indicating she is curating or performing a DJ set."
+},
+"be6632e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Ida Daugaard @ Housefrau @ Culture Box' and is labeled as a DJ SET. Culture Box is a venue in Copenhagen mentioned in the profile. Matches profile context."
+},
+"c9d231a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ida Daugaard @ Beatverliebt (2016)' \u2014 Beatverliebt is a Berlin club mentioned in profile. No indication of talk or track; context suggests a live set."
+},
+"c53282ef": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ida Daugaard at Garbicz \u2022 Wald-floor 2019' \u2014 Garbicz is a festival mentioned in profile. Clearly a live performance at a festival."
+},
+"a63d1776": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title: 'Trommel.097 - Ida Daugaard' \u2014 this is labeled as a mix, but the format is 'Trommel.097' which is a mix series. The title does not say 'DJ set' or 'live', and it's a mix by Trommel, not a recording where Ida Daugaard performs. This appears to be a mix that features her music, not her playing."
+},
+"e761021b": {
+"v": "keep",
+"kind": "other",
+"reason": "Title: 'Ida Daugaard RTS.FM Berlin 01.07.15' \u2014 RTS.FM is a radio show mentioned in profile where she has guest mixed. Radio show = guest mix, which is valid under profile."
+},
+"c6a5f3ce": {
+"v": "keep",
+"kind": "other",
+"reason": "Title: 'RecordMix 037 : Ida Daugaard (Recordeep)' \u2014 'RecordMix' is a mix series, and the title indicates she is the featured DJ. Recordeep is a label known for deep house, matching her style. This is a mix she made, likely a guest mix or her own mix."
+},
+"39c8998b": {
+"v": "keep",
+"kind": "other",
+"reason": "Title: 'Podcast Series 074 - Ida Daugaard' \u2014 explicitly a podcast series, and the profile mentions she has guest mixed for podcasts like 'Witness This' and 'Kater_Club'. This fits."
+},
+"60e4b7c2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Soundtape #179 by Ida Daugaard ( L.E.T  WIDE\u2022AWAKE l DK )' \u2014 'by Ida Daugaard' indicates she is the creator. L.E.T. is a venue in Zurich mentioned in profile. This is a live or recorded set from a venue she plays at."
+},
+"39a78e3d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Alonso @ The Living Room w/ Ida Daugaard & Markovela' \u2014 clearly a b2b set with Ida Daugaard. The venue (Technotunnel) is in Berlin, a city she plays in. This is a live set with her."
+},
+"c8d0dab6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ida Daugaard b2b Casimir von Oettingen at Hoppetosse 2026' \u2014 b2b set at Hoppetosse, a Berlin club mentioned in profile. However, the date is 2026, which is in the future. The profile says she plays at Hoppetosse, but the date is future. However, the instruction says: 'never reject because a date looks old or in the future'. So we must keep it if it's clearly a performance by her."
+},
+"8f492a1d": {
+"v": "keep",
+"kind": "set",
+"reason": "Clear live performance at Fusion Festival, channel is hers, venue and event specified."
+},
+"65c07be9": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Title lists Ida Daugaard as featured in a mix series, but does not specify she performed or mixed; channel is not hers; likely a compilation or tracklist."
+},
+"2480fa81": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly states she performed at Club der Visionaere, channel is hers, live set."
+},
+"debbbf8c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'presents' and 'live @ Werkstatt', indicating she is the DJ performing live."
+},
+"9620eef0": {
+"v": "keep",
+"kind": "set",
+"reason": "Clear live performance at Fusion Festival, channel is hers, venue and event specified."
+},
+"3ed0cb4e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'live at 10 days off (belguim)' with Ricardo Villalobos as the performer. This is a live club recording, matching the profile's live set context."
+},
+"d5794e9b": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title says 'Este fue mi R\u00e9cord pinchando con Ricardo Villalobos' (This was my record playing with Ricardo Villalobos), but the main artist is LUCIANO. The mix is attributed to SAFE TRIP TALK, and the title implies it's a mix by Luciano featuring Villalobos. Since it's a mix listing Villalobos as someone playing, but not as the primary performer, and the context is unclear if it's a live set or a mix, and the main artist is Luciano, this is likely a tracklist or mix where Villalobos is included, not a recording of him performing."
+},
+"863edd74": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly states 'Ricardo Villalobos | DJ Set @ Sundeck Chile (2019)' \u2014 a live DJ set at a venue in Chile, directly matching the profile's Chilean circuit connection."
+},
+"bda27c03": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos b2b Amir Javasoul (Live in Montreal)' \u2014 a b2b live set with Amir Javasoul, clearly a live performance by Villalobos at a club or festival."
+},
+"468a618d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'richie hawtin vs ricardo villalobos' \u2014 this is a b2b set between two DJs, but the title is phrased as a competition or matchup. However, it's still a live DJ set involving both artists. Since Villalobos is named as one of the performers, and it's a live set, it should be kept."
+},
+"1d62abf3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos vs Luciano @ Cocoon Closing Party at Amnesia, Ibiza 2008' \u2014 clearly a live b2b set at a major club, part of the Cocoon scene mentioned in the profile. This is a live performance by Villalobos."
+},
+"51fcc3f1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Live at 102 FM, Tel-Aviv 03-08-2007' \u2014 explicitly a live performance at a radio station, which counts as a live set or radio broadcast. This is a live recording of him performing."
+},
+"31932b3b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Electrozona live @ Radio Concierto 1997' \u2014 a live performance at a radio station in Chile. Though the date is early (1997), the profile mentions Chilean circuit, and this is a live set. Even though it's from 1997, it's still a live performance by Villalobos."
+},
+"1b69d050": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Live at Sonne Mond Sterne - 2002-08-10 (2 parts)' \u2014 a live set at Sonne Mond Sterne, a festival mentioned in the profile (Sonne Mond Sterne is one of the festivals he plays). This is a live performance."
+},
+"aa0e8517": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"0feca59e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live @ Skyrave (2004)' and includes Ricardo Villalobos as the performer. Even though the date is early, it's a live set. No indication of a name match or talk. Fits profile of live performance in Berlin/Chile circuit."
+},
+"d6d2666d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'RICARDO VILLALOBOS & SETH TROXLER @ futur_festival 2019' \u2014 clearly a live set with two DJs. The festival context and joint performance confirm it's a live DJ set. Not a talk or track."
+},
+"5b600d0a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Steve Bug & Ricardo Villalobos Live @ Tresor, Berlin Germany' \u2014 explicitly a live set at Tresor, a venue mentioned in the profile. Includes both artists as performers. Clearly a live DJ performance."
+},
+"524e1170": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos B2B RARESH @ CAPRICES FESTIVAL Switzerland 2025' \u2014 B2B indicates a live DJ set with another artist. Festival context and profile link to Romanian minimal scene (Rarsh/Rhadoo). Clearly a live performance."
+},
+"bf77ec01": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos EXTENDED SET - Ruta 5 at Sacr\u00e9 Paris' \u2014 clearly a live DJ set at a venue. 'Extended set' implies a full performance. Venue and format match profile."
+},
+"e9e53495": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says '#009 RICARDO VILLALOBOS @ PYRAMID IBIZA | DJ SET' \u2014 explicitly labeled as a DJ set at Pyramid Ibiza, a venue in the profile. Clear live performance."
+},
+"d2538164": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Rhadoo b2b Ricardo Villalobos at Sunwaves 13 Afterhours (part4)' \u2014 B2B at Sunwaves, a festival mentioned in profile. Clearly a live DJ set with Rhadoo. Format is live."
+},
+"7460d6d4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos b2b tINI Live @ Circoloco Ibiza [Official Mix]' \u2014 'Live @ Circoloco' and 'b2b' indicate a live DJ set. Circoloco is a venue in the profile. Even though labeled 'Official Mix', it's a live set recording."
+},
+"f331219d": {
+"v": "reject",
+"kind": "track",
+"reason": "Title says 'Ricardo Villalobos exclusive, Vinyl Only Mix' \u2014 labeled as a 'mix', not a live set. It's a mix (possibly a studio mix or exclusive release), not a live performance. The term 'Vinyl Only Mix' suggests it's a curated mix, not a live recording. This is a mix, not a live set."
+},
+"0eab8729": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos & A:rpia:r | Circo Loco | Ibiza' \u2014 clearly a live set at Circoloco, a venue mentioned in profile. Joint performance with another artist. Format is live DJ set."
+},
+"81e97f39": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Live @ Tresor, Berlin' with both Richie Hawtin and Ricardo Villalobos. This is a live club event, clearly a DJ set involving Villalobos. Even though it's a duo set, it includes him performing live in a club setting."
+},
+"ab45933d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title states 'Ricardo Villalobos b2b Nina Kraviz @ Pyramid Ibiza' \u2014 a b2b set at a festival. B2b sets are live DJ sets. The venue and context confirm it's a live performance."
+},
+"b7c17a75": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos vs Marco Carola' at Cocorico. 'Vs' implies a live DJ set, likely a competitive or collaborative live performance. The venue is a club, and the format is live."
+},
+"b2b304b6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Cocoon CLUB 23.03.2007'. Cocoon is a well-known club scene in Frankfurt/Ibiza. This is a club recording, likely a live set. The format matches known live club recordings."
+},
+"c81b0603": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Ricardo Villalobos Mix'. This is a mix, not a live set. The term 'mix' without reference to a live event or performance suggests it's a curated mix, possibly a studio mix or compilation. No live context is given."
+},
+"0260a117": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos, Sven V\u00e4th @ Tresor, Berlin'. This is a live event at Tresor, a known techno club. The format is a live set with two DJs. Clearly a live performance."
+},
+"26189c2d": {
+"v": "keep",
+"kind": "other",
+"reason": "Title is 'Ricardo Villalobos b2b Raresh @ Amnesia Ibiza - Essential Mix 2020 BBC Radio 1'. This is a BBC Radio 1 broadcast, part of a radio mix. While it's a mix, it's a live or studio mix where he performs. The context is a radio show, not a talk or track. It's a performance, even if on radio."
+},
+"602636aa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos @ 7th Anniversary Fabric London (2006)'. Fabric is a major club. This is a live performance at a festival/club event. Clearly a live DJ set."
+},
+"22c0e5a9": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Ricardo Villalobos - Dependent And Happy (Mixed CD)'. This is a mixed CD, a compilation of tracks. It's not a live set or performance. It's a tracklist or album, not a DJ set."
+},
+"a68c477d": {
+"v": "unsure",
+"kind": "other",
+"reason": "Title is 'Ricardo Villalobos & Raresh | Minimal Techno'. This is a video titled with two artists and a genre. No venue, date, or performance context is given. It could be a mix or a video of a live set, but without clear performance context, it's ambiguous. However, the format suggests a video of a performance (possibly live or studio). Given the lack of clarity, it's uncertain."
+},
+"052820dc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Ricardo Villalobos | Kristal Glam Club | Bucharest (Romania)' \u2014 a club in Romania, known for Romanian minimal scene. Matches profile's ties to Romanian minimal scene. Clearly a live club recording."
+},
+"d3d65944": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'RICARDO VILLALOBOS CHICAGO 21 02 07' \u2014 includes location and date. Likely a live set in Chicago. Profile mentions no Chicago circuit, but does not exclude it. Still, it's a live DJ set in a city where he may have played. No indication of talk or track. Likely a live set."
+},
+"282fac45": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'S3-Ep. 06- Ricardo Villalobos and Manny Lamarre | Podcast' \u2014 explicitly labeled as a podcast. This is a talk or conversation format, not a music set. Violates rule: 'talk' must be rejected."
+},
+"bc4584fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Richie Hawtin & Ricardo Villalobos - Live at Tresor Closing Part 1' \u2014 this is a b2b live set at Tresor, a scene mentioned in profile. Both artists are named, and it's a live event. Clearly a live DJ set with Villalobos playing."
+},
+"4dfe452a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos & Luciano Live @ Love Parade, Berlin Germany' \u2014 a live festival event in Berlin, a city tied to his early career. Clearly a live DJ set with Villalobos playing."
+},
+"0bd6ca11": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos @ Club Fabric London' \u2014 a live club set in London. Profile doesn't mention London, but doesn't exclude it. It's a live club recording, so it's a valid live set."
+},
+"3f0234e4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos Live @ Awakenings Festival' \u2014 Awakenings is a festival mentioned in profile. Clearly a live festival set with Villalobos playing."
+},
+"b5d4a325": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos & DJ Sebbo @ Love Park Hanau' \u2014 a live set with another DJ. Profile doesn't mention Hanau, but it's a live event. Villalobos is named as a performer. This is a live DJ set."
+},
+"d1bb3e46": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos Taka Taka CoCoon' \u2014 'CoCoon' is a venue (Frankfurt/Ibiza), mentioned in profile. 'Taka Taka' may be a mix or event name. The title lacks clear indication of being a live set or mix. However, it's likely a mix or set recorded at CoCoon. Given the venue and profile, it's plausible to be a live or mix set. But no explicit 'live' or 'set' label. Still, context suggests a DJ performance. More ambiguous than others."
+},
+"12339779": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo villalobos live 21 oct 06' \u2014 clearly labeled 'live' with date. A live performance. Profile doesn't mention this date/location, but live sets are valid if Villalobos is playing. No indication of talk or track."
+},
+"e3ab5182": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Ricardo Villalobos (30M Special)' and is labeled as a set from The Boom Room \u2014 a club/venue context. Sounds like a DJ set, likely live or curated. No indication of a track or talk."
+},
+"216a9594": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos special set vinyl only' \u2014 implies a live or curated set, likely a DJ set. 'Vinyl only' suggests a physical release, possibly a live recording. No mention of a track or talk."
+},
+"5c79df73": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Ricardo Villalobos - Panorama Bar, Berghain, Berlin' \u2014 a specific club and location. This is clearly a live DJ set recorded at a venue."
+},
+"bcf49379": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos B2B Umho - Diciembre 2014 Club La Feria' \u2014 a B2B set at a club. B2B implies a live DJ set with another artist. Clearly a live performance."
+},
+"9799790c": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a CD2 from 'In The Mix - Green & Blue' [2005] \u2014 a mix compilation. The title is a tracklist or mix of multiple artists, not a set by Villalobos. It's a track or mix, not a live performance. Also, it's from 2005, but still \u2014 it's not a set he played live."
+},
+"a519574c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos @ 538 Dance Department 17-09-2006' \u2014 a specific venue and date. This is clearly a live DJ set at a club."
+},
+"7204c3b7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos b2b DJ Sneak @ Pyramid - Amnesia Ibiza Opening 2018' \u2014 a B2B set at a major festival. Clearly a live DJ performance."
+},
+"6d812644": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos [24h Berlin]' \u2014 likely a 24-hour live set at Berlin's 24-hour club. This is a live DJ set, even if not explicitly named as such."
+},
+"7fbd8ef0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos - Live at Awakenings Festival 01-07-2006' \u2014 explicitly states 'Live at' a festival. This is a live performance."
+},
+"ad2ff3d7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos & Luciano Live @ Mutek Valpara\u00edso, Chile 2004' \u2014 clearly a live performance at a festival. Mutek is a known event, and both artists are named. This is a live set."
+},
+"484208e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Ricardo Villalobos @ Cockies Berlin' \u2014 a club setting with a clear live DJ set. No indication of talk or track. Matches profile of live club performance."
+},
+"347c6004": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos Live @ Life Festival' \u2014 clearly a live festival performance. Matches profile of festival appearances (e.g., Sunwaves, Time Warp)."
+},
+"e8c3b525": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos b2b Maher Daniel_mstr' \u2014 a b2b set, which is a type of live DJ set. Even though the date is in the future (2025), the profile says to ignore dates. Villalobos is explicitly named as a performer."
+},
+"54ce1995": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'LUCIANO B2B RICARDO VILLALOBOS @ MAGIK GARDEN Santiago CHILE' \u2014 a b2b set between Luciano and Villalobos. Clearly a live DJ performance. Profile mentions Chilean circuit (Luciano, Santiago), so context fits."
+},
+"d34afcbc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos & Ambiq - Electronic Live Set In Berlin!' \u2014 explicitly labeled as a 'live set'. Includes both artists, but the format is a live DJ set. Not a track or talk."
+},
+"61ab68c4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'THIS IS WHY RICARDO VILLALOBOS IS A F****** LEGEND' \u2014 this is a talk-style title, likely a commentary or promotional video. No music playing, just a narrative. This is a talk, not a DJ set."
+},
+"d9c28a43": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos Live @ Sunwaves Festival, Mamaia, Romania' \u2014 a festival live set. Profile mentions Romanian minimal scene and Sunwaves, so this fits. Clearly a live performance."
+},
+"22d697bc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos Live @ Fabric 7th' \u2014 a live set at a well-known club. Fabric is a major club in the UK, and Villalobos has played in Berlin and international scenes. This is a live DJ set."
+},
+"90033839": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos Live at Cocoon Loves Tresor Berlin 2005' \u2014 a live set at a known Berlin club scene (Cocoon, Tresor). Profile mentions Tresor and Cocoon scenes. Even though it's a compilation, the title indicates a live performance."
+},
+"c62b7e0a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos  Luciano Love Family Park Mainz DJ Set DanceTrippin' \u2014 includes 'DJ Set' and features Villalobos. Context is a park event in Mainz, which fits the profile of live performances. Clearly a live DJ set."
+},
+"6f09e355": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Ricardo Villalobos and Luciano' performing at Love Parade 2006. This is a festival recording with two DJs. Matches profile (Berlin/Tresor scene, festival context)."
+},
+"c3f0246b": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'The Sinner In Me | All Villalobos Mix' \u2014 this sounds like a mix compilation, not a live set. The phrase 'All Villalobos Mix' suggests a curated mix, possibly of tracks by him, not a live performance. No indication of live DJing or set. Likely a tracklist or mix compilation."
+},
+"471f5fd5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos \ud83c\udde8\ud83c\uddf1 DANCE DEPARTMENT 2007' \u2014 includes location (Chile) and event. 'Dance Department' is likely a club or event. The inclusion of country code suggests it's a live performance. Profile mentions Chilean circuit, so plausible. Clearly a live set."
+},
+"72893e33": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos Dj-Set - Amore 015 - Roma' \u2014 clearly states 'Dj-Set' and location (Roma). This is a live DJ set at a club or event. Matches profile (European club scenes)."
+},
+"fb3462ee": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos | 1st DJ Set @ hr XXL Clubnight' \u2014 explicitly states '1st DJ Set' and venue. This is a live set at a club. Profile mentions Berlin scenes (XXL is Berlin-based)."
+},
+"d96ea692": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'DJ MIX #581 - Argenis Brito ... with Unreleased works of Ricardo Villalobos'. This is a mix by Argenis Brito that includes unreleased Villalobos works. It's not a live set; it's a mix that features his music. He is not performing live here. This is a mix compilation, not a DJ set he played."
+},
+"fb20e40b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - DJ Set @ BigCityBeats FM 2006-11-03'. Clearly states 'DJ Set' and radio station. Radio DJ sets are considered live performances in context. Profile includes Berlin and radio exposure. Valid live set."
+},
+"22ba7d2e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Steve Bug & Ricardo Villalobos @ Tresor Berlin'. This is a b2b set at Tresor, a venue mentioned in the profile. Both are DJs performing together. Clearly a live DJ set. Profile confirms Tresor scene connection."
+},
+"a35700eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos, Rhadoo, Raresh @ Snagov Afterparty 2006'. All three are DJs from the Romanian minimal scene, which the profile explicitly links to. This is a live set at an afterparty. Clearly a live performance by Villalobos in a scene he's tied to."
+},
+"5cfe4bb4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Live @ Phlegmatic Dog Pub (Moscow) 2005'. Explicitly states 'Live' and venue. This is a live performance outside Berlin, in Moscow. Profile mentions international touring and connections. Valid live set."
+},
+"44963d9c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Ricardo Villalobos | Time Warp 2014 \"The Lost Tapes\"' \u2014 a festival recording with a clear live set context. Time Warp is a known club/festival event where DJs perform live sets. No indication of talk or tracklist."
+},
+"605e12ce": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Ricardo Villalobos @ Cocoon Loves Tresor Berlin 2003' \u2014 Cocoon is a well-known club scene in Frankfurt/Ibiza, and this is a live set at a major event. The phrase 'Loves Tresor' suggests a themed set, but still a live DJ performance. Clearly a live set."
+},
+"3a968392": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Ricardo Villalobos 2702 febrero 2012 aniversario vol 3 podcast' \u2014 includes 'podcast' and is labeled as a podcast episode. Even though he is named, it's a podcast, not a music set. Podcasts are talks or discussions, not DJ sets. This is a talk format."
+},
+"28fdc4c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos Rocks UnderVR...' \u2014 'Rocks' suggests a performance, and UnderVR is a hybrid music festival. The title implies a live DJ set in a festival context. No indication of talk or tracklist. Likely a live set."
+},
+"fb10078e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Rinse FM Podcast - #SaveFabric - Ricardo Villalobos - 3rd September 2016' \u2014 clearly a podcast. The format is a talk or discussion, not a DJ set. Even if he plays music, it's within a podcast context, not a live performance."
+},
+"504b9bd2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Richie Hawtin & Ricardo Villalobos - Live @ T in the Park' \u2014 explicitly a live set at a major festival. The title includes 'Live @ T in the Park', which is a known live performance event. This is a live DJ set, even if co-performed."
+},
+"53591577": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos - Live at VOLTT Amsterdam (2005)' \u2014 clearly labeled as a live set at a venue. VOLTT is a known club in Amsterdam. This is a live performance."
+},
+"f9f64241": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos @...get perlonized! - Panorama Bar' \u2014 'Panorama Bar' is a venue in Berlin, and the format is a live set at a club. The title implies a live DJ performance at a venue."
+},
+"ddcae608": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos b2b Raresh / FRRC @Lofi / ADE 21-10-2023' \u2014 'b2b' means a DJ set with another artist (Raresh), at ADE (a major festival). This is a live set, clearly a performance. Even with 'Lofi' in title, it's likely a mislabeling or typo; context is a live b2b set."
+},
+"cdf5988e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos at Exit Festival 2010' \u2014 Exit Festival is a major European festival where DJs perform live sets. This is a clear live performance at a festival."
+},
+"3d631948": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Ricardo Villalobos Live Tresor Berlin' \u2014 a live club setting, matches his known scenes (Tresor, Berlin). Clearly a live DJ set."
+},
+"3616e42f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos Time Warp 2023' \u2014 Time Warp is a festival he regularly performs at. This is a festival recording, likely a live set."
+},
+"a095ac41": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists 'Ricardo Villalobos, Rhadoo, Petre Inspirescu, Raresh at DC 10 Ibiza' \u2014 multiple artists performing together at a festival. This is a joint set, but Villalobos is named as a performer. Since it's a festival recording with him playing, it counts as a live set."
+},
+"902c7dbe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos | Sunwaves | Mamaia (Romania)' \u2014 Sunwaves is a festival he's associated with, and Romania is part of his minimal scene ties. This is a live festival recording."
+},
+"99396d9a": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a b2b set between Luciano and Ricardo Villalobos at a festival. The title clearly states both DJs are performing. It's a live DJ set, even if co-performed."
+},
+"c4df9299": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos Live at Voltt Paradiso Amsterdam' \u2014 a live performance at a club in Amsterdam. Matches his known circuit and live performance history."
+},
+"7a437bde": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Steve Bug, Ricardo Villalobos @ Solid Loveparade, Tresor, Berlin' \u2014 a live event at Tresor, where both DJs perform. Clearly a live set with Villalobos playing."
+},
+"3aa56714": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Ricardo Villalobos - Und Obenix Lim (Unreleased)' \u2014 this is a track title, not a set. It's a single track or unreleased mix, not a live performance."
+},
+"021a6040": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title says 'Die Clique @ Kompass Klub... b2b Edward' \u2014 this is a b2b set with Edward, hosted by Die Clique. The title does not name Ricardo Villalobos as a performer. It's a set by Die Clique, with a b2b with Edward. No mention of Villalobos playing. Likely a misattribution or confusion."
+},
+"ac43a0c7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Ricardo Villalobos @ LIVE SONNE, MOND & STERNE FESTIVAL SUMMER 2006' \u2014 a festival he's known to play at. Clearly a live performance."
+},
+"24f3db66": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Ricardo Villalobos - DJ Set @ Lowlands' \u2014 a festival club recording. Matches profile of live sets at events like Sunwaves, Time Warp. Even if date is 2004, it's a live set."
+},
+"d5a8e83d": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title says 'Ricardo Villalobos \u2013 long minimal techno tracks' \u2014 this sounds like a curated selection of tracks, not a live DJ set. The phrase 'long minimal techno tracks' suggests a tracklist or mix, not performance. No mention of 'set', 'live', or 'b2b'."
+},
+"ae7bfd1b": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a remix titled 'Ricardo Villalobos Remix' of a track by Tony Allen. It's a single track or remix, not a DJ set or live performance. Clearly a track, not a set."
+},
+"e998ce5c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos b2b Zip @ Sunwaves 19' \u2014 a b2b set at Sunwaves, a festival mentioned in profile. B2b sets are live DJ sets. Clearly a live performance."
+},
+"13f95dd1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Tu Actitud (unreleased edit) (set rip)' \u2014 the term 'set rip' suggests a recording of a set, possibly from a live session. Even if it's an edit, it's derived from a live performance. 'Set rip' implies a live set was recorded and cut. Likely a live set."
+},
+"8f474262": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Live At Time Warp USA (20.11.2015)' \u2014 explicitly states 'Live At' and venue. Time Warp is a festival mentioned in profile. Clearly a live performance."
+},
+"2d473cc1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos & Raresh Live at Sunrise Event NYE, Kristal Glam Club' \u2014 explicitly says 'Live at' and venue. Sunrise events are part of Romanian minimal scene, which Villalobos is tied to. This is a live performance."
+},
+"5de00b7e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos @ CHANGE YOUR MIND party LE VELE ALASSIO ITALY closing party 2022 by LUCA DEA' \u2014 the channel is Luca Dea, but the title names Villalobos as performing at a party. 'Closing party' implies a live DJ set. Even if uploaded by another, the title states he played."
+},
+"8f9ab5dd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Live DJ Session, Radio 3 (19.11.2006)' \u2014 explicitly says 'Live DJ Session'. Radio sessions are live performances. Matches profile of live appearances."
+},
+"5c88830e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'LUCIANO b2b RICARDO VILLALOBOS @capricesfestivalch' \u2014 this is a b2b set between Luciano and Villalobos. The title names both artists and the event. It's a live DJ set, even if uploaded by Luca Dea. Villalobos is clearly performing in a b2b set."
+},
+"dda85c64": {
+"v": "reject",
+"kind": "track",
+"reason": "Title mentions 'Ricardo Villalobos Edit' \u2014 this is an edit of a track by Fink, not a DJ set. It's a single track, not a live or DJ performance. This is a remix or edited track, not a set."
+},
+"8161d291": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos B2b Luciano MagikGarden 2023' \u2014 clearly a b2b set between Villalobos and Luciano, recorded at MagikGarden. This is a live DJ set, as per the profile (he plays residencies and festivals)."
+},
+"fb8425a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos @ Awakenings Festival 16/04/2005' \u2014 festival recording with Villalobos playing. Awakenings is listed in the profile as one of his festival appearances. Even though the date is old, it's a festival recording of him performing."
+},
+"69647099": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos & Raresh @ Sunrise Bucharest Afterparty 2006' \u2014 both artists are named, and Sunrise Bucharest is mentioned in the profile as part of his Romanian minimal scene ties. This is a live set at a festival/afterparty."
+},
+"d273e998": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Live @ Studio Martin, Bucharest, Sunrise Event 25-03-2006' \u2014 explicitly labeled 'Live' at a Sunrise event in Bucharest, which is part of the Romanian minimal scene he's tied to. This is a live performance."
+},
+"795e77d1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Sonne Mond & Sterne Festival' \u2014 Sonne Mond & Sterne is listed in the profile as one of his festival appearances. This appears to be a festival recording of him playing."
+},
+"ce982a46": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos @ Panorama Bar/Berghain, Berlin - 04.04.2008' \u2014 a club recording at a Berlin venue, which aligns with his Berlin-based scene and performances. Clearly a live DJ set."
+},
+"4f8ddffe": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Ricardo Villalobos - Widodo' \u2014 no context given. 'Widodo' is likely a track or remix title. No indication of a set, live performance, or DJ session. This appears to be a track or remix."
+},
+"e5fb4be7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos - Live 7 Years Fabric Weekender 21.10.2006' \u2014 explicitly labeled 'Live' at Fabric Weekender, which is listed in the profile as a venue where he plays residencies. This is a live set."
+},
+"54f11d5d": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'ricardo villalobos fabric 36 mixed' \u2014 this is a mix titled 'mixed', likely a mix compilation or curated set. However, it's not clear if it's a live set or a mix made by him. The title suggests it's a mix, possibly for a magazine or event. Since it's not explicitly labeled as a live set or DJ performance, and the term 'mixed' implies it's a curated mix, not necessarily a live set. But the profile says he plays residencies and festivals \u2014 if it's a mix series, it may still be a recording of him playing. However, the title doesn't specify it's a live set or a performance. It's ambiguous. Given that it's a mix and not clearly a live set, and no indication of performance, this is borderline. But since it's not a track or talk, and the artist is named, and it's a mix series, it may still count as a mix he made. However, the profile doesn't mention mix series. The safest interpretation is that it's a mix, not a live set. So, it's not clearly a live performance. Therefore, it's not a 'set' in the live sense. This is a mix, not a live set. So, reject."
+},
+"da45c6a1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Ricardo Villalobos live at Voltt Paradiso Amsterdam' \u2014 clearly a live set in a club context."
+},
+"347bdd05": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Sven V\u00e4th & Ricardo Villalobos @Tresor Floor' \u2014 a live DJ set at Tresor, a known techno club. This is a live performance, and both DJs are named."
+},
+"53dc001e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Aniversario 2702 Podcast' \u2014 includes 'Podcast' in title, so it's a talk or discussion format, not a music set. Even though Villalobos is mentioned, it's not a DJ set."
+},
+"6305ef94": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists multiple artists including 'Ricardo Villalobos' and 'Raresh' in a radio station context. But it's described as a 'radio station' tracklist \u2014 implies a compilation or tracklist, not a live DJ set. He is listed among others, not performing as a set."
+},
+"9d48ef4a": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Ricardo Villalobos \u2013 In The Mix: Taka Taka (2003)' \u2014 this is a remix or mix of a track, not a live DJ set. It's a single track or mix of a track, not a performance."
+},
+"b23e25fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos at BBC Radio 1 Essential Mix 2018' \u2014 this is a radio show mix, where he performs as a guest DJ. This is a mix series episode, and he is playing music live in a broadcast format."
+},
+"8cdf3b02": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'RADIO TECHNODEPENDENCE Ricardo Villalobos & kalabrese Streetparade 2011' \u2014 a live event at Streetparade, a festival. It's a live performance at a festival, clearly a DJ set."
+},
+"78c5c887": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Ricardo Villalobos - The Contempt (Trip Through Tools Mix)' \u2014 this is a remix or track mix, not a live DJ set. It's a single track or remix."
+},
+"27b63d33": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'De Berlin \u00e0 Detroit - \u00e9pisode 1 - L'Eclectique Ricardo Villalobos' \u2014 this is a podcast episode, clearly a talk or discussion, not a music performance."
+},
+"81269d27": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos Live @ Fabric, London' \u2014 explicitly a live performance at a club, clearly a live DJ set."
+},
+"7b3e5422": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Ricardo Villalobos & Franco Cinelli : House Music Special' \u2014 clearly a collaborative DJ set, likely a live or studio mix. The format is a 'special' by Codex, which suggests a curated DJ set. Both artists are DJs in the house scene, and the context fits Villalobos' known style. No indication of a talk or track."
+},
+"111e8a4c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ricardo Villalobos Mix' by Sound of Frankfurt \u2014 explicitly a mix, and the channel is known for such content. Mixes are considered valid if the artist is named as playing. No indication of talk or track."
+},
+"9fc3887c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos vs Luciano Live @ Cocoon Closing Party' \u2014 clearly a live performance, with 'vs' indicating a b2b or live set. Cocoon is a venue he's associated with. The date is 2008, which is within his active period. This is a live set, not a talk or track."
+},
+"89bbf81e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos @ Kappa FuturFestival 2016' \u2014 clearly a festival appearance. The format is a live set at a festival. No mention of talk or track. Matches his known festival circuit."
+},
+"4e5baeaf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos B2B Raresh UNUM Music Festival Pine Stage Albania 2025' \u2014 B2B indicates a live set with Raresh. Festival context is clear. Even though the date is in the future, the profile says he's tied to Romanian minimal scene (Raresh), so this is plausible. The format is a live set."
+},
+"43f9a5d5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos | OBO&HOBOS | Deep Mix Moscow Radio (24.04.2005)' \u2014 this is a radio mix, not a live set. However, the format is a 'deep mix' on a radio show, which is a mix made for a radio station. The profile includes radio shows as valid. So it's a mix he made, even if not live. Still, it's a recording of him playing music."
+},
+"c4836a5d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Live at TRAUM: Warm-up Set (Ricardo Villalobos Night)' \u2014 explicitly labeled as a 'live' warm-up set. The venue and context are consistent with his known performances. Even if the date is 2025 (future), the profile says he performs at events like Time Warp, Awakenings, etc. So it's a live set."
+},
+"e000c58e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Richie Hawtin vs Ricardo Villalobos - Live @ Estacion Mapocho, Santiago de Chile 9.1.2005' \u2014 this is a live b2b set between two DJs. The format is live, and both are DJs in the scene. The location (Santiago) matches his Chilean roots. This is a live set, not a talk or track."
+},
+"0ceb0a17": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: '15.00 - 17.00 Ricardo Villalobos live @ Awakenings Festival 03-07-2004' \u2014 clearly a live set at a festival. Awakenings is one of the festivals he's known to play. The format is live, and the title specifies 'live'. Even though the date is in the past, it's still a valid live performance."
+},
+"e0f15400": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Ricardo Villalobos, Vs DJ Karotte - Live Mix 2006' \u2014 'Live Mix' suggests a live set or mix recorded live. The format is a b2b or live set with DJ Karotte. This fits his known collaborations. The term 'Live Mix' implies a live performance, not a pre-recorded track or talk."
+}
+},
+"timings": [
+{
+"n": 10,
+"sec": 344.9,
+"usage": {
+"completion_tokens": 1670,
+"prompt_tokens": 764,
+"total_tokens": 2434,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 279.8,
+"usage": {
+"completion_tokens": 1430,
+"prompt_tokens": 739,
+"total_tokens": 2169,
+"prompt_tokens_details": {
+"cached_tokens": 429
+}
+}
+},
+{
+"n": 10,
+"sec": 300.1,
+"usage": {
+"completion_tokens": 1505,
+"prompt_tokens": 777,
+"total_tokens": 2282,
+"prompt_tokens_details": {
+"cached_tokens": 429
+}
+}
+},
+{
+"n": 10,
+"sec": 301.5,
+"usage": {
+"completion_tokens": 1511,
+"prompt_tokens": 774,
+"total_tokens": 2285,
+"prompt_tokens_details": {
+"cached_tokens": 429
+}
+}
+},
+{
+"n": 10,
+"sec": 307.2,
+"usage": {
+"completion_tokens": 1527,
+"prompt_tokens": 764,
+"total_tokens": 2291,
+"prompt_tokens_details": {
+"cached_tokens": 429
+}
+}
+},
+{
+"n": 10,
+"sec": 226.6,
+"usage": {
+"completion_tokens": 1138,
+"prompt_tokens": 783,
+"total_tokens": 1921,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 169.5,
+"usage": {
+"completion_tokens": 903,
+"prompt_tokens": 788,
+"total_tokens": 1691,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 259.5,
+"usage": {
+"completion_tokens": 1340,
+"prompt_tokens": 790,
+"total_tokens": 2130,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 189.6,
+"usage": {
+"completion_tokens": 978,
+"prompt_tokens": 825,
+"total_tokens": 1803,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 8,
+"sec": 237.7,
+"usage": {
+"completion_tokens": 1262,
+"prompt_tokens": 702,
+"total_tokens": 1964,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 172.1,
+"usage": {
+"completion_tokens": 876,
+"prompt_tokens": 785,
+"total_tokens": 1661,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 195.4,
+"usage": {
+"completion_tokens": 993,
+"prompt_tokens": 825,
+"total_tokens": 1818,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 200.9,
+"usage": {
+"completion_tokens": 1014,
+"prompt_tokens": 841,
+"total_tokens": 1855,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 140.6,
+"usage": {
+"completion_tokens": 720,
+"prompt_tokens": 835,
+"total_tokens": 1555,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 236.4,
+"usage": {
+"completion_tokens": 1125,
+"prompt_tokens": 788,
+"total_tokens": 1913,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 196.4,
+"usage": {
+"completion_tokens": 1015,
+"prompt_tokens": 809,
+"total_tokens": 1824,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 214.2,
+"usage": {
+"completion_tokens": 1043,
+"prompt_tokens": 821,
+"total_tokens": 1864,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 4,
+"sec": 197.8,
+"usage": {
+"completion_tokens": 999,
+"prompt_tokens": 582,
+"total_tokens": 1581,
+"prompt_tokens_details": {
+"cached_tokens": 432
+}
+}
+},
+{
+"n": 10,
+"sec": 223.8,
+"usage": {
+"completion_tokens": 1085,
+"prompt_tokens": 859,
+"total_tokens": 1944,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 276.2,
+"usage": {
+"completion_tokens": 1333,
+"prompt_tokens": 814,
+"total_tokens": 2147,
+"prompt_tokens_details": {
+"cached_tokens": 463
+}
+}
+},
+{
+"n": 10,
+"sec": 225.5,
+"usage": {
+"completion_tokens": 1099,
+"prompt_tokens": 861,
+"total_tokens": 1960,
+"prompt_tokens_details": {
+"cached_tokens": 463
+}
+}
+},
+{
+"n": 5,
+"sec": 205.4,
+"usage": {
+"completion_tokens": 1104,
+"prompt_tokens": 664,
+"total_tokens": 1768,
+"prompt_tokens_details": {
+"cached_tokens": 463
+}
+}
+},
+{
+"n": 10,
+"sec": 225.6,
+"usage": {
+"completion_tokens": 1102,
+"prompt_tokens": 918,
+"total_tokens": 2020,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 229.0,
+"usage": {
+"completion_tokens": 1149,
+"prompt_tokens": 912,
+"total_tokens": 2061,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 218.5,
+"usage": {
+"completion_tokens": 1113,
+"prompt_tokens": 892,
+"total_tokens": 2005,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 227.4,
+"usage": {
+"completion_tokens": 1150,
+"prompt_tokens": 896,
+"total_tokens": 2046,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 193.2,
+"usage": {
+"completion_tokens": 993,
+"prompt_tokens": 885,
+"total_tokens": 1878,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 208.6,
+"usage": {
+"completion_tokens": 1057,
+"prompt_tokens": 896,
+"total_tokens": 1953,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 228.0,
+"usage": {
+"completion_tokens": 1143,
+"prompt_tokens": 880,
+"total_tokens": 2023,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 235.9,
+"usage": {
+"completion_tokens": 1179,
+"prompt_tokens": 880,
+"total_tokens": 2059,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 224.6,
+"usage": {
+"completion_tokens": 1126,
+"prompt_tokens": 910,
+"total_tokens": 2036,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 236.7,
+"usage": {
+"completion_tokens": 1171,
+"prompt_tokens": 928,
+"total_tokens": 2099,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 278.9,
+"usage": {
+"completion_tokens": 1337,
+"prompt_tokens": 879,
+"total_tokens": 2216,
+"prompt_tokens_details": {
+"cached_tokens": 472
+}
+}
+},
+{
+"n": 10,
+"sec": 215.9,
+"usage": {
+"completion_tokens": 1000,
+"prompt_tokens": 902,
+"total_tokens": 1902,
+"prompt_tokens_details": {
+"cached_tokens": 473
+}
+}
+},
+{
+"n": 10,
+"sec": 292.6,
+"usage": {
+"completion_tokens": 1346,
+"prompt_tokens": 914,
+"total_tokens": 2260,
+"prompt_tokens_details": {
+"cached_tokens": 473
+}
+}
+}
+]
+}

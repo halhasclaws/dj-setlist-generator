@@ -1,0 +1,1461 @@
+{
+"model": "qwen3-4b",
+"shard": 1,
+"verdicts": {
+"e9b53bc6": {
+"v": "unsure",
+"kind": "namesake",
+"reason": "Title mentions 'Appleblim Radio 1 Breezeblock/Experimental mix' \u2014 this is a mix, likely a radio show or mix compilation. Breezeblock is a radio station, and 'Radio 1' suggests a broadcast. No indication of live performance or DJ set, and the mix is experimental, not clearly a live set. However, it's a mix featuring Appleblim, and given the context, it's likely a recorded mix. But the profile doesn't mention Breezeblock or experimental mixes. Still, if Appleblim is playing, it counts as a mix. But the title doesn't specify he is performing \u2014 just that it's a mix. Unclear if he is actually DJing or just featured. This is ambiguous."
+},
+"8ba0f348": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Appleblim - Apr 29 08 - Rinse FM Podcast' \u2014 this is a podcast. The format is a podcast, not a live set or music performance. The term 'podcast' implies a talk or interview format, not a DJ set. Even if Appleblim is playing, it's within a podcast, which is a talk format. This is a talk, not a music performance."
+},
+"3d9ea692": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'ALSO [Appleblim + Second Storey] Boiler Room London Live Set' \u2014 explicitly names Appleblim and Second Storey as a duo (ALSO), and it's a 'live set' at Boiler Room. Matches profile: Appleblim collaborates with Second Storey. Clearly a live performance. This is a confirmed live set."
+},
+"28735c37": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'RA.110 Appleblim' \u2014 Resident Advisor mix. RA is known for publishing DJ mixes. This is a mix episode, likely a curated DJ set. Appleblim is the featured artist, and RA features DJ sets. This is a mix, not a talk or track. Profile confirms he plays on RA. This is a valid recording of Appleblim DJing."
+},
+"ee49bb34": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Appleblim .025 podcast' \u2014 the term 'podcast' indicates a talk or interview format. Even if Appleblim is playing music, it's within a podcast. This is a talk format, not a live DJ set."
+},
+"0af446b2": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Boogie Box Podcast 016: Appleblim' \u2014 again, 'podcast' implies a talk or interview. Appleblim is the subject, not necessarily performing live music. This is a talk format, not a music set."
+},
+"f3662d75": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Rinse FM Podcast - Appleblim (LIVE From Ministry Of Sound)' \u2014 explicitly says 'LIVE from Ministry Of Sound'. This is a live performance at a club, and the format is a live set. Appleblim is performing live. Matches profile: plays at Ministry of Sound. Clearly a live set."
+},
+"52ddca1f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Appleblim - NY Crate Digging Mix' \u2014 this is a 'mix', likely a curated mix. The term 'crate digging' suggests a DJ mix. It's not a live set, but a mix. However, the title doesn't specify if it's a live set or a studio mix. But it's a mix made by Appleblim, so it's a recording of him DJing. Profile doesn't exclude mix recordings. This is a mix, not a talk or track."
+},
+"0c3f93a5": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title: 'Appleblim - Dubstep Allstars Vol. 6 [HD]' \u2014 this is a compilation titled 'Dubstep Allstars', which is a tracklist of multiple artists. Appleblim is listed among others, not performing. This is not a live set or a DJ set \u2014 it's a tracklist of a compilation. Appleblim is not playing; his music is being featured. This is a tracklist, not a performance."
+},
+"ba201bbd": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"d9a331b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Also (Appleblim + Second Storey)' \u2014 clearly a joint DJ set on a podcast. Matches profile of Appleblim playing with Second Storey."
+},
+"46068349": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Live At Sneaker Social Club (Appleblim, Cocktail Party Effect)' \u2014 includes Appleblim in a live setting, likely a DJ set. No indication of talk or tracklist. Context fits live performance."
+},
+"4503a849": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Rinse FM Podcast - Appleblim - 27th February 2015' \u2014 a podcast featuring Appleblim as a DJ. Even though it's a podcast, it's a DJ set broadcast, not a talk. Matches profile of him playing on Rinse FM."
+},
+"bf87bcc6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Rinse FM Podcast - Appleblim w/ Wallwork + TSVI' \u2014 Appleblim is playing with other DJs in a podcast mix. This is a DJ set, not a talk. Profile confirms he plays on Rinse FM."
+},
+"ae976adc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Appleblim 35 min Boiler Room DJ Set' \u2014 clearly a DJ set recorded at Boiler Room. Matches profile of Appleblim playing at Boiler Room."
+},
+"c21f12da": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Appleblim Aus Music Boiler Room London DJ Set' \u2014 explicitly a Boiler Room set in London, with Aus Music affiliation. This is a live DJ set."
+},
+"55f4ffaf": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Appleblim on Dubstep, Skull Disco and Apple Pips' \u2014 this is a lecture-style talk at Red Bull Music Academy. It's not a DJ set; it's a talk about music, not music playing. Rejects under 'talk' rule."
+},
+"2220f8a1": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Title is 'APPLEBLIM | ROUGH RADIO | channel: ROUGH RADIO' \u2014 no specific content described, but ROUGH RADIO is a radio show. If it's a DJ set, it would be implied. However, no mention of playing or set content. Could be a talk or segment. Without clear indication of music playing, it's ambiguous. But given the profile, Appleblim is known to play on such shows. Still, no explicit 'DJ set' or 'live' label. This is uncertain."
+},
+"65c852d7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Appleblim / October 30 / 5pm-6pm | channel: H\u00d6R BERLIN' \u2014 clearly a scheduled slot on H\u00d6R Berlin, a radio show. Likely a DJ set. Profile confirms he plays on H\u00d6R Berlin. No indication of talk or tracklist."
+},
+"a3099f13": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Title is 'I Love: Dubstep - Appleblim - 03 April 2008' \u2014 this appears to be a themed segment or show, possibly a mix. However, the format is 'I Love: Dubstep' \u2014 a show format. But the title doesn't specify that Appleblim is playing a DJ set; it's ambiguous. Also, the date (2008) is early in his career, but still possible. However, the format is more like a curated show than a live set. Without explicit 'DJ set' or 'live', it's unclear. But since it's a show featuring Appleblim, and he's known to play on Rinse FM, it's plausible. Still, the title doesn't say he's playing \u2014 it's a show titled after a genre. This is ambiguous."
+},
+"c67f3100": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Appleblim and is a radio show (Heads Radio), which is a valid recording of him playing music."
+},
+"a324dde8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names Appleblim and is labeled as 'Keep Hush Live', indicating a live performance."
+},
+"d5411934": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Appleblim with a specific time and venue (Corner Klub, H\u00d6R Berlin), indicating a club recording."
+},
+"a4a17ed4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Appleblim and Second Storey in a podcast, indicating a b2b set."
+},
+"f7ecbea0": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a mix compilation titled 'Mixed By Appleblim' \u2014 not a live set or performance, but a curated mix (like a tracklist or album), so it's not a recording of him DJing live."
+},
+"f97315fc": {
+"v": "keep",
+"kind": "set",
+"reason": "A podcast featuring Appleblim and Second Storey playing music together, clearly a live or DJ mix in a podcast format."
+},
+"ab3b086f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Appleblim with a specific time and venue (H\u00d6R Berlin), indicating a club recording."
+},
+"3b5a67f4": {
+"v": "keep",
+"kind": "set",
+"reason": "A Rinse FM podcast featuring Appleblim, where he plays music."
+},
+"92b76ed5": {
+"v": "keep",
+"kind": "set",
+"reason": "Another Rinse FM podcast with Appleblim, a radio show where he plays music."
+},
+"f26cf797": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Appleblim with a specific time and venue (H\u00d6R Berlin), indicating a club recording."
+},
+"b5c6ef66": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"d6fc1c54": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'D'Julz (DJ set)' on Rinse France, which he hosts. Clear performance recording."
+},
+"ab689385": {
+"v": "keep",
+"kind": "set",
+"reason": "D'Julz performing at H\u00d6R Berlin, a venue he plays at per profile."
+},
+"8a7ec05d": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with D'Julz at La Terrrazza Barcelona \u2014 clearly a live DJ set with him as performer."
+},
+"3a856d8b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sound Factory with D'Julz as performer. Matches profile of live performances."
+},
+"c3079eb1": {
+"v": "reject",
+"kind": "track",
+"reason": "CD release title \u2014 not a recording of a DJ set or performance. It's a product."
+},
+"835f77f2": {
+"v": "keep",
+"kind": "set",
+"reason": "D'Julz performing at Mixmag The Lab in London \u2014 a DJ mix event. Channel is D'Julz's own, so likely his mix."
+},
+"6cde0a56": {
+"v": "keep",
+"kind": "set",
+"reason": "D'Julz in a Groove Podcast \u2014 podcast mix where he is the DJ. Podcast mixes are allowed under rules."
+},
+"b5b7d656": {
+"v": "keep",
+"kind": "set",
+"reason": "D'Julz on Rinse FM \u2014 he hosts 'Home Diggin'' there, so this is a live or recorded set."
+},
+"54de2769": {
+"v": "keep",
+"kind": "set",
+"reason": "D'julz Club Paris \u2014 likely a live set at a Paris club, consistent with his early work and profile."
+},
+"3854e27c": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"ec0be405": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'D'Julz & Telford' in a SomaTV session \u2014 clearly a DJ set featuring D'Julz playing music with another DJ. SomaTV is a club/festival recording platform. This is a live DJ set."
+},
+"e7be372b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live From Dimensions '25' \u2014 explicitly labeled 'live' and refers to a festival. D'Julz is named as a performer. This is a live set at a festival."
+},
+"981f8f6e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Yoyaku instore session with D'Julz' \u2014 'instore session' typically refers to a live DJ set in a store or venue. D'Julz is explicitly named as a participant. This is a live DJ performance."
+},
+"e9a80187": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'JULZ @ Refuge -New York - 24 01 2026' \u2014 includes a venue (Refuge) and date. Even though the date is in the future, it's clearly a live set at a club. D'Julz is named as the performer. This is a live set."
+},
+"4fa6e5fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz 'Home Diggin' Episode 1' \u2014 this is directly from the profile: D'Julz hosts the Home Diggin' show on Rinse France. This is a radio show or podcast mix where he plays music. It's a recorded DJ set."
+},
+"0fbfab1e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'D'Julz - Diaries from the Underground' \u2014 this appears to be a documentary or personal project. The title suggests a narrative or talk-based content, not a DJ set. No indication of music performance. Likely a talk or documentary."
+},
+"d611381e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Watergate Podcast #17 - D'Julz' \u2014 this is a podcast. The format is a podcast, not a music set. Even if D'Julz plays music, it's within a talk or interview format. The title indicates a podcast, not a DJ set."
+},
+"b6038af9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz Boiler Room Paris DJ Set' \u2014 Boiler Room is a live DJ set series. This is explicitly a DJ set at a known venue. Clearly a live performance."
+},
+"987047f1": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'D'JULZ Nightclubber Podcast 220' \u2014 this is a podcast. The format is a podcast, not a live DJ set. Even if music is played, it's within a talk or interview format."
+},
+"7ee243af": {
+"v": "keep",
+"kind": "set",
+"reason": "Duplicate of entry 12. Same title and format \u2014 'Yoyaku instore session with D'Julz'. Already evaluated as a live session. This is redundant but still valid."
+},
+"39062729": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Le sac a disques' and features D'Julz, likely a live or DJ set in a record store context. The channel is 'Le sac \u00e0 disques', suggesting a live or curated session. No indication of talk or track. Matches profile of DJing."
+},
+"e88ff372": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Yoyaku instore session with D'Julz' \u2014 clearly a session where D'Julz is playing. 'Instore session' implies a live DJ set in a store. Matches profile of live performances."
+},
+"a03289e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'yoyaku instore session : D'julz' \u2014 same as 21, clearly a live DJ session. Channel is Yoyaku Record Store, likely a live set. Confirmed as a performance."
+},
+"f250e8ba": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Distrikt Podcast 001: D'julz' \u2014 this is a podcast, not a music set. The format is a podcast, so it's a talk or interview format, not DJing. Even if D'Julz is featured, it's not a set. Rejects under 'talk' rule."
+},
+"5782f754": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'D'Julz - Movement Croatia Podcast' \u2014 again, labeled as a podcast. The format is a podcast, not a DJ set. Even if D'Julz is playing, it's within a talk format. Reject under 'talk' rule."
+},
+"de07ee2b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Guest Mix D'Julz' \u2014 this is a guest mix, likely a mix made by D'Julz for a radio show. Even if it's a mix, it's a DJ mix, not a talk or track. Profile includes mix series. Should be kept as a mix."
+},
+"355a3320": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is '349 - Magic Garden Presents D'julz Boxes - Disc 1 (2000)' \u2014 this is a boxed mix compilation from 2000. It's a pre-recorded mix, likely a mixtape or CD release. The title says 'D'julz Boxes', which implies a mix, but it's not a live set or session. It's a tracklist or compilation, not a live performance. Reject under 'tracklist' or 'track' rule."
+},
+"bd854646": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'DJ Weekly Podcast: D'Julz' \u2014 clearly a podcast. Format is talk-based, not a music set. Even if D'Julz plays music, it's within a talk show. Reject under 'talk' rule."
+},
+"4c5a222f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'JULZ tech-house DJ set in The Lab LDN' \u2014 explicitly states 'DJ set' in London. This is a live performance at a club. Matches profile of live sets."
+},
+"2f329be2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'The Terrace - Circoloco D'julz' \u2014 likely a session at Circoloco in Ibiza, where D'Julz is performing. 'Circoloco' is a known club event. This is a live set at a venue. Matches profile."
+},
+"183022e2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Subb-an w/ D'Julz + Victor (Ibiza Special)' \u2014 clearly a podcast featuring D'Julz as a guest DJ in a live or set context. Rinse FM podcast format typically features DJ sets or live performances."
+},
+"a76db9b4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'julz - Live @ FG 18-01-2002' \u2014 explicitly labeled 'Live @ FG', and FG is Radio FG, where D'Julz started. This is a live performance recording from his early days."
+},
+"4e55787f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz Presents HOME DIGGIN' #6' \u2014 this is a direct reference to his long-running show on Rinse France. The format is a mix show or DJ set hosted by him."
+},
+"a27e9976": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Sebo K b2b D'Julz' \u2014 a b2b set at Watergate in Barcelona. B2B sets are live DJ sets where two DJs perform together. Clearly a live set."
+},
+"2ee3ff98": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Release Yourself Radioshow #685 - Guest Mix From D'Julz' \u2014 this is a guest mix *from* D'Julz, meaning it's a mix he created for a radio show. Even though it's a mix, it's a recording of him playing music as a DJ."
+},
+"a755c209": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz (Radio FG) 09.07.2005' \u2014 clearly a recording from Radio FG, where D'Julz was a regular DJ. This is a radio show or broadcast, which counts as a DJ performance."
+},
+"4067ea49": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz Sundays at fabric Promo Mix' \u2014 a promotional mix for Fabric's Sunday session. This is a mix created by D'Julz for a venue, indicating a DJ set or mix."
+},
+"a88b3760": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'QUIRKS 10 - D'Julz' \u2014 Quirks is a mix series. This is a mix episode hosted by D'Julz, so it's a DJ mix or set."
+},
+"e9af6682": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz 2004 Radio FG | channel: da Finko Deejay' \u2014 a recording from Radio FG, where D'Julz was a regular DJ. Even though the channel is not his, the title names him as the performer."
+},
+"5685403a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz - Live @ Basics (2010)' \u2014 explicitly labeled 'Live @ Basics', a venue where DJs perform. This is a live set."
+},
+"17230db8": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'D'Julz Boxes CD.02 (2001)' \u2014 a CD release, likely a compilation or box set. No indication of a DJ set, live performance, or mix. CD titles are typically not recordings of DJing. This is a product, not a performance."
+},
+"8922002c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'D'Julz - Circoloco DC10 - Ibiza' \u2014 clearly references a venue and event. D'Julz is named as a performer. Matches his known performances at Circoloco in Ibiza. Strong evidence of a live DJ set."
+},
+"f75a4639": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Yoyaku instore session with D'Julz' \u2014 'instore session' suggests a retail or store-based session, possibly a live set. 'With D'Julz' implies he is performing. Given his profile, this is likely a live DJ set in a store setting."
+},
+"8f9d19ce": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Club FG presente le dancefloor: D'julz (2005)' \u2014 'Club FG' is a radio station where D'Julz started. This is a radio show or broadcast, not a live DJ set. The format is a radio program, not a performance recording. It's a radio show, not a DJ set in the club sense."
+},
+"5f5bd54d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'D'Julz - Crew Savage Podcast 004' \u2014 this is a podcast. The format is a podcast, not a music performance. Even if D'Julz is featured, it's not a DJ set or live performance. It's a talk or discussion format."
+},
+"ca4501eb": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title: 'On Rotation 033: D'Julz' \u2014 this is a mix from Mixmag, a magazine. The title suggests a mix featuring D'Julz's music, not that he is playing live. It's a curated mix, not a live set. The format is a mix, not a performance."
+},
+"f53b6356": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'HOME DIGGIN' - D'Julz Invite Cassy (DJ set)' \u2014 explicitly states 'DJ set' and is from Rinse France, where D'Julz hosts the Home Diggin' show. This is a live set from his own show. Clear match."
+},
+"b163ec8f": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title: 'D'JULZ - Tuesday 16th August' \u2014 no venue or context given. Could be a live set, but lacks venue or event context. However, the title format suggests a live performance. Given D'Julz's live performance history, this is likely a live set, though context is minimal."
+},
+"1981f153": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'D'julz Live @ Siesta After Hours' \u2014 explicitly states 'Live @' and venue. This is a live performance at a club. Matches D'Julz's live performance history. Strong evidence of a live set."
+},
+"5e4bfe52": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: '((SEP)) EP231 - D'Julz - Live @ Circoloco (DC10, Ibiza)' \u2014 explicitly states 'Live @ Circoloco (DC10, Ibiza)', a venue D'Julz performs at. Clearly a live set. Matches his known performances."
+},
+"bb0f5966": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'D'Julz' in a podcast titled 'Tsugi Podcast 537'. Podcasts are considered recordings of DJing if the artist is listed as playing. Tsugi is a known DJ/producer, and this is a podcast format where D'Julz is featured as a guest. This is a live or recorded DJ set in context."
+},
+"021f538f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Recorded Live @ Freak Chic - D-EDGE 30/06/23 W/ D'Julz'. Clearly states a live recording with D'Julz participating. 'W/' indicates collaboration, and it's a live club setting. Matches profile of live DJing."
+},
+"b60b05ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz @ RIOT - C\u00f3rdoba, Argentina'. This is a live set at a club in Argentina. The format is a live recording at a venue. D'Julz is explicitly named as performing."
+},
+"ff98b160": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz [MIA MAO live] DJ set | House | channel: MIA MAO'. Clearly labeled as a 'DJ set' at MIA MAO, a live event. The phrase 'live' confirms it's a live performance. D'Julz is the performer."
+},
+"f34e2b0e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz [MIA MAO live] DJ set | House | channel: MIA MAO'. This is identical to 53 \u2014 already covered. Repeated entry. Still valid as a live DJ set."
+},
+"ad21835d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz Deep Summer fabric Podcast | channel: fabric'. Fabric has a podcast series, and this is a podcast mix featuring D'Julz. Podcasts are considered recordings of DJing if the artist is playing. This is a mix, not a talk or track."
+},
+"518242cc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Cassy vs. D'Julz - Live @ All Night Long (Rex Club, Paris) - 2013-08-22'. This is a live set at Rex Club, Paris, with D'Julz performing in a b2b or collaborative set. Clearly a live DJ performance."
+},
+"e8d344eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'julz - In The Mix - Cocoon Ibiza 2018 | channel: Cocooneros'. 'In The Mix' is a mix format, and it's at Cocoon Ibiza, a known club. D'Julz is listed as performing. This is a mix, likely a DJ set recorded at the event."
+},
+"4ffe36fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Cadenza Podcast | 060 - D'Julz (Cycle)'. This is a podcast episode where D'Julz is featured. The format is a podcast, not a talk or track. If D'Julz is playing music, it's a DJ set. The title implies a mix or performance, not a talk."
+},
+"e7421263": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'PLANET X presents Minimal Madness Radio Show 116 Part 1 (Guest Mix D'Julz)'. This is a radio show guest mix. D'Julz is listed as a guest mixer. A guest mix is a recording of a DJ playing music, so it counts as a DJ set."
+},
+"00571fb7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title lists D'Julz and Phil Weeks as performers in a 'For Study & Gaming' mix. This is a mix featuring D'Julz, likely a DJ set or mix. Even though the purpose is unclear, D'Julz is explicitly named as a performer in the mix. Not a track or talk."
+},
+"3527614e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Redbull Music Academy Radio Mix' and features D'Julz. This is a radio mix, specifically a mix created for a radio show. D'Julz is clearly performing as a DJ in this context."
+},
+"911ae968": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Soundwall Podcast 08: D'Julz'. The format is a podcast, and D'Julz is named as a guest. If it's a podcast, it may involve talk or commentary, not necessarily music playing. Without confirmation of music performance, this is ambiguous. However, the title suggests a feature or interview, not a DJ set."
+},
+"69257136": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'Julz (Radio FG) 20.08.2004' \u2014 clearly a radio broadcast from Radio FG where D'Julz was a DJ. This is a recorded radio show where he played music. Matches profile of early career on Radio FG."
+},
+"3c1288ba": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Cadenza Podcast 060 - D'Julz (Source)'. The term 'source' suggests a feature or interview, possibly a talk or commentary. Podcasts like this often involve discussion, not live DJ sets. No indication of music performance."
+},
+"e2f0cdb6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'FG DJ Radio 2004: Sound of D'Julz' \u2014 this is a radio show from Radio FG, where D'Julz is the subject. It's a radio recording of his DJ set or performance. Matches profile of early career."
+},
+"5439d4a9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'D'julz (D'julz Set)' \u2014 explicitly states it's a set. The event is Bastille Circus, a club/festival. D'Julz is named as a performer. This is a live set, even if with others."
+},
+"bc17a307": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'D'JULZ et SALVATORE FREDA au Cercle de Lausanne...' \u2014 clearly a live event with D'Julz and Salvatore Freda. The event is a soir\u00e9e at a club. This is a live performance."
+},
+"70e8a2ab": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'XLR8R Podcast 476: D'Julz'. This is a podcast, likely featuring an interview or discussion. No indication of music performance. Podcasts are typically talk-based unless specified as a mix or set."
+},
+"fd5588f1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'GEDA LIVE DJ SET @ CLOSING HI BEACH PARTY W/ Cassy D'julz AnjaSchneider'. Explicitly labeled 'LIVE DJ SET' and includes D'Julz as a performer. This is a live set at a festival. Even with co-performers, D'Julz is playing."
+},
+"0a236912": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'D'julz' and 'Home Diggin #7', which is a show hosted by D'Julz on Rinse France as per the profile. This is a recorded radio show or mix series."
+},
+"2d5831bd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'D'Julz @ Sonus Festival 2018', and Sonus Festival is listed in the profile as one of the festivals he performs at. This is a festival recording of a live DJ set."
+},
+"f177a401": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'D'Julz Live From The Social Festival, UK (DJ Set)', indicating a live DJ performance. Though not listed in the profile, the profile confirms D'Julz performs at festivals, and this is clearly a live set."
+},
+"2517589b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'D'julz Presents The Sound Of Bass Culture (Mixed By D'julz)', indicating a mix curated and produced by D'Julz. This is a mix, not a live performance, but still a recording of him playing music as a DJ."
+},
+"f2b70b05": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ambient Mix IX - Fort Romeau' and recorded at 'Live At Robert Johnson'. The venue suggests a live performance, and the mix format implies a DJ set. Even though it's a mix, it's presented as a live set at a venue. Fits profile of live club performance."
+},
+"52bb8f22": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fort Romeau at Phonica' \u2014 clearly a live set at a venue. Phonica is a London record store/venue known for live DJ sets. Matches profile of live performances in London."
+},
+"333f93f5": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Dummy Mix 186 // Fort Romeau'. This is a mix by DMY (a label or mix series), and the title lists Fort Romeau as one of the artists featured. This is a mix compilation, not a live set or DJ performance by him. It's a tracklist of music, not a set he played. Falls under 'tracklist' category."
+},
+"761fe71a": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'GETME! Guest Mix 51 : Fort Romeau'. This is a guest mix by GETME! featuring Fort Romeau. The format is a mix, not a live set. It's a curated mix, not a performance. Even though he's featured, it's not a recording of him DJing live."
+},
+"62f03ba1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Dekmantel Radio w/ Fort Romeau & Chida (09/09/2016)'. This is a radio show with Fort Romeau as a guest. It's a radio broadcast, not a live DJ set. It's a talk-style or curated radio segment, not a performance where he plays music live. Falls under 'radio show' \u2014 but not a live set. Still, it's a recording of him playing music in a radio context. Since it's a DJ performance on air, it counts as a live-style set in a broadcast. Profile mentions Dekmantel, so this fits."
+},
+"ae37e1aa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Yoyaku Instore Session with Fort Romeau'. 'Instore session' typically refers to a live DJ set in a store. Yoyaku is a record store in Japan. This is a live performance setting. Matches profile of live club/festival appearances. Even if in Japan, it's a live DJ set."
+},
+"82ff71df": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fort Romeau | H\u00d6R - Jul 4 / 2022'. H\u00d6R is a radio show where DJs perform live sets. This is a live radio broadcast, so it's a recording of a live DJ set. Profile mentions H\u00d6R as a regular platform. Fits perfectly."
+},
+"2604a866": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Phonica Mix Series 15: Fort Romeau'. This is a mix series by Phonica Records. The title indicates it's a mix curated by them, featuring Fort Romeau. This is not a live set \u2014 it's a pre-recorded mix. It's a mix, not a performance. So, it's a tracklist or mix, not a live set."
+},
+"3b3a1f31": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Subsonic Transmissions 19.87 FM: Subculture with Fort Romeau & Harri #007 >>> HARRI'. This is a radio show titled 'Subculture' with two DJs. The format is a talk-style or themed radio segment. It's not a music performance \u2014 it's a conversation or discussion. The title includes 'with' and 'Subculture', suggesting a talk show. Not a DJ set where music is played live."
+},
+"c0c3c9b6": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"2d91349e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Guest Mix 124 - Fort Romeau' and is hosted on BOXOUT.FM. This is a mix featuring Fort Romeau as a guest, likely a DJ set or mix. Given his profile, this fits a mix format he's known for."
+},
+"eb09170a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live from the Village - Pional b2b Fort Romeau'. This is a b2b set at Lost Village, a festival. Fort Romeau is listed as a performer in a live setting. Clearly a live DJ set."
+},
+"1d935486": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fort Romeau Boiler Room X Bowers & Wilkins Primavera Sound DJ Set'. Boiler Room is a live DJ set platform. This is a recorded live set from a major platform where he performs. Matches profile."
+},
+"c1221e2b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'LIVE SET @ Avant Garde, Bankside Vaults w/ John Talabot, Roman Flugel, Fort Romeau'. Clearly a live set at a venue with multiple DJs, including Fort Romeau. Describes a live performance."
+},
+"c0e0c91d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fort Romeau @ DGTL Amsterdam 2017'. This is a festival recording where he performed. Matches profile of festival appearances."
+},
+"50feca8f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Rinse France Show - Slowciety w/ Fort Romeau'. This is a show hosted by Slowciety featuring Fort Romeau as a guest. The 'w/' indicates he is performing, likely a DJ set in a live or broadcast format."
+},
+"b78b70ff": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a podcast titled 'Daft Punk - Soul Central - ... - Fort Romeau'. The format is a music podcast where multiple artists are featured. The title lists Fort Romeau as one of the names, but it's not a DJ set \u2014 it's a talk-style podcast where music is played as part of a conversation. This is not a performance or set, but a talk show with music segments. REJECT."
+},
+"30b48e72": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'John Digweed - Transitions 769 (with Fort Romeau)'. This is a mix titled after John Digweed, with Fort Romeau as a collaborator. The format is a mix (likely a mix show or compilation), and 'with' suggests he contributed to the mix. This is a mix, not a live set. However, the profile includes mix appearances (e.g., Essential Mix). Since it's a mix with him, and not a talk or track, it's a valid mix. KEEP."
+},
+"1425756d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fort Romeau - Junction 2 | channel: Resident Advisor'. Junction 2 is a mix series by Resident Advisor. This is a mix episode where Fort Romeau is featured. It's a mix, not a live set, but fits the profile of his appearances on RA mix series. KEEP."
+},
+"6047180d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: '808 Radio #449 / Actress x Suzanne Ciani, Fort Romeau, Fireground\u2026 / Radio CLM \u2013 25/4/2026'. This is a radio show with multiple artists listed. Fort Romeau is listed among others, but it's a radio broadcast with music segments. The format is a radio show, not a live DJ set. While he may have played, the title does not indicate he performed a set \u2014 it's a curated radio show. This is not a DJ set, but a radio program. REJECT."
+},
+"1603bce2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Guest Mix - Fort Romeau' on BOXOUT FM. This is a mix show where Fort Romeau is a guest contributor. Given the format, it's a DJ mix, not a talk or track. Even though it's a guest mix, it's still a recording of him playing music."
+},
+"f8a68faf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'MOTW: FORT ROMEAU' on Mixmag. MOTW stands for 'Most Outstanding Track' or similar, but in context of Mixmag, such entries often feature a DJ set or mix. Mixmag Lab is a known platform for DJ sets. This is likely a mix or set featuring Fort Romeau."
+},
+"a7e59c28": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Axel Boman b2b Fort Romeau @ Aura, Lisbon'. This is a b2b set at a club in Lisbon. Clearly a live DJ set with two DJs. The location and format confirm it's a live performance."
+},
+"8cfbd76b": {
+"v": "reject",
+"kind": "track",
+"reason": "Title includes 'Deep SloMo Mix Gulivert Fort Romeau' \u2014 this appears to be a track mix or remix of a track, with Fort Romeau's name in the title. The structure suggests a remix or track release, not a DJ set. The name is used as part of a mix title, not as a DJ performing a set."
+},
+"3e676cc6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Groove Podcast 67 - Fort Romeau'. The term 'podcast' suggests a talk or interview format, not a music set. Even if it's a music-focused podcast, the format is not a DJ set but a conversation or feature."
+},
+"3d37ce8b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is '#27 2018/07/07 Fort Romeau Essential Mix'. This matches the profile: BBC Radio 1 Essential Mix in July 2018. The profile explicitly mentions this. It is a radio mix, which is a recorded DJ set."
+},
+"e18f6131": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'FORT ROMEAU in The Lab NYC'. Mixmag Lab is a known DJ set series. This is a live set recorded at a venue in NYC. Clearly a live DJ performance."
+},
+"5d27e23c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Subsonic Transmissions... with Fort Romeau & Harri'. This is a radio show or broadcast with two DJs. The format is a live or recorded radio session where music is played. It's not a talk, but a DJ set with two performers. The title includes 'with' and is a radio transmission."
+},
+"bae14b0f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Essential Mix - BBC Radio 1 [July 2018] | channel: Fort Romeau'. This matches the profile exactly: Fort Romeau did an Essential Mix on BBC Radio 1 in July 2018. It's a recorded radio DJ set."
+},
+"f47ce109": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'XLR8R Podcast [March 2015] | channel: Fort Romeau'. The term 'podcast' indicates a talk or interview format. Even if music is played, it's not a DJ set \u2014 it's a conversation. This is a talk show, not a music performance."
+},
+"67981723": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Fort Romeau Boiler Room DJ Set' \u2014 a well-known Boiler Room session, which matches the profile. This is a live DJ set recorded at the Boiler Room platform."
+},
+"18d4b8e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Dekmantel Podcast 040 - Fort Romeau'. Dekmantel hosts a podcast series where DJs are featured. The title names Fort Romeau as a guest, and such podcasts typically include DJ sets or mixes. Given the profile, this is likely a DJ set or mix."
+},
+"8d27807c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fort Romeau @TheLotRadio 04-15-2023' \u2014 clearly indicates a live set at The Lot Radio, a radio station that features DJs. The format is a live broadcast, consistent with the profile."
+},
+"8c10138e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: '245 - The Boom Room - Fort Romeau [30m Music Special]' \u2014 includes 'Fort Romeau' in a music special. The '30m Music Special' format typically features DJ sets. The channel is The Boom Room, which hosts DJ sets. This is a DJ set."
+},
+"6d82cf65": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'FORT ROMEAU deep space house DJ set in The Lab LDN' \u2014 explicitly states a DJ set in Mixmag Lab, a known platform where Fort Romeau performs. Matches profile and format."
+},
+"c3c30c77": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fort Romeau 45 min Boiler Room mix' \u2014 this is a mix, not a live set. However, the profile notes he is a regular on Boiler Room, and such mixes are part of the platform. The title says 'mix', which may imply a curated mix rather than a live set. But since it's a Boiler Room mix and he is the main performer, it's still a DJ set in format. The profile includes 'Essential Mix' which is a mix, so this fits."
+},
+"d76a038d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fort Romeau | Deep House, Deep Techno, Minimal | Radio 1001 | 06.03.2026' \u2014 includes a date in the future (2026). The profile says he did an Essential Mix on BBC Radio 1 in 2018, but this is on Radio 1001. However, the title names him as a performer and is formatted like a radio show. Even with a future date, if it's a radio broadcast where he plays, it counts. But the profile doesn't mention Radio 1001. Still, the format is a radio set. Since it's a live broadcast, and he is the performer, it should be kept unless it's clearly a talk or track. No indication of talk or track. So, likely a live set."
+},
+"e1714a64": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fort Romeau b2b Pional - May 2022' \u2014 clearly a b2b (behind the scenes) set with Pional. This is a live DJ set format, common in the electronic music scene. Matches profile and known collaborations."
+},
+"03926edd": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title: 'Fort Romeau, James Rod, Ajello, The Soviet Union, Daniel Monaco, Kendal, Ma Spaventi, Rigopolar #23' \u2014 this is a mix that lists multiple artists. The title does not specify that Fort Romeau is playing a set; it lists him among others. This is a tracklist of a mix, not a DJ set where he is the sole performer. Therefore, it's not a recording of him DJing."
+},
+"ca0ccde5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fort Romeau Live From DJ Mag HQ' \u2014 explicitly states 'Live From DJ Mag HQ', indicating a live performance. This matches the profile of live sets in London and other cities. DJ Mag hosts live sets, and Fort Romeau has performed there."
+},
+"4f64bdea": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title says 'Future 12 Mix for B Traits BBC Radio One' and lists 'channel: Fort Romeau'. This is a mix for a radio show, and Fort Romeau is listed as the channel, not as a performer. There's no indication he played in this mix. This appears to be a mix curated by someone else, with Fort Romeau's channel name used as a label. Not a recording of him DJing."
+},
+"3910356b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Radio On Vacation with Fort Romeau' \u2014 this is a radio show where Fort Romeau is a guest. The format is a live radio broadcast, likely featuring a DJ set. Given the context of radio shows and his known appearances, this is a live set or radio performance."
+},
+"9de3c406": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Club Room 056 (with guest Fort Romeau)' \u2014 explicitly states 'with guest Fort Romeau', indicating he is a guest performer in a club recording. This is a live club set with a guest appearance, fitting the profile of live club recordings."
+},
+"21a2727f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'art:cast #100 by Fort Romeau' \u2014 this is a mix series by Fort Romeau. The format is a mix, likely a curated set. The term 'by' suggests authorship, and given the context of mix series, this is a DJ mix, possibly a live or studio mix. No indication it's a talk or track."
+},
+"515c24a9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'FADER Mix: Fort Romeau' \u2014 this is a mix published by FADER magazine. The title indicates it's a mix created by Fort Romeau, likely a curated DJ set. This fits the profile of a mix made for a magazine."
+},
+"1f0e876e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fort Romeau - BBK Live 2019' \u2014 clearly refers to a festival performance at BBK Live. This is a live festival recording, directly matching the profile of live festival sets."
+},
+"e2102ef0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fort Romeau 30 min Boiler Room DJ Set' \u2014 explicitly states it's a Boiler Room DJ set. Boiler Room is known for live DJ sets, and this is a direct recording of a live set."
+},
+"76568617": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'RA.807 Fort Romeau' \u2014 Resident Advisor has a mix series, and this is likely a mix episode featuring Fort Romeau. RA mix episodes are typically curated DJ sets, not interviews or talks. This is a mix series episode where he is the featured DJ."
+},
+"b98d383d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fort Romeau: The Crosstown Mix Show 064' \u2014 this is a mix show series, and Fort Romeau is the featured artist. Mix shows are typically DJ sets, even if titled as 'mix show'. This is a recorded DJ set."
+},
+"493cf7a5": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is about a talk on 'Situationskomik und Image-Problem' in a healthcare context; channel is 'PflegeFaktisch' \u2014 clearly a talk or discussion, not a music set. No indication of DJing or music performance."
+},
+"82734d87": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Channel is 'rimsky_korsakow' \u2014 likely a reference to Rimsky-Korsakow, the composer. The title is about a symphony piece. This is clearly a music composition or classical performance, not a DJ set or electronic music performance by Korsakow."
+},
+"58311758": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Korsakow (DE) #169' \u2014 matches the format of the Recorder.13 podcast mix mentioned in the profile. This is a mix episode, likely a DJ set, and the title directly names Korsakow as the performer. Even without date, it fits the profile."
+},
+"b4a809b7": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as #2 \u2014 identical title and format. Another entry for Korsakow (DE) #169. Likely a duplicate or another upload of the same mix. Still a mix featuring Korsakow as performer."
+},
+"e265483a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Channel is Florian Thalhofer (Korsakow) \u2014 this suggests the person is Korsakow, but the title is 'Mexico Talk - Mono- and Multiperspective'. This is a talk or discussion, not a music set. The format is clearly a talk, not a DJ performance."
+},
+"5db8a8d9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is a mix titled 'Tech house mix (2)' with multiple artists listed, including Korsakow. However, Korsakow is listed as one of many contributors \u2014 not as the primary DJ or performer. This is a tracklist of a mix by someone else, not a set where Korsakow is playing. Does not meet 'Korsakow playing' criteria."
+},
+"d7e4fd47": {
+"v": "reject",
+"kind": "namesake",
+"reason": "This is a classical piece by Rimsky-Korsakow, performed by a symphony orchestra. The name is a homonym \u2014 clearly not a DJ set or electronic music performance by Korsakow. This is a classical music recording."
+},
+"560fe5bc": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"da562a88": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title says 'Sinead Toomey Podcast Live' \u2014 includes 'Podcast Live', suggesting a live talk or conversation, not a DJ set. No indication of music performance. Likely a talk show or interview."
+},
+"dd327fe5": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is about 'Sin\u00e9ad Burke\u2019s Journey of Disability Activism' \u2014 clearly a talk or interview on activism, not a music performance. Not a DJ set."
+},
+"1a61f21b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Craft 'n' Chat with Sin\u00e9ad' \u2014 'chat' implies conversation, not music performance. This is a talk-style podcast."
+},
+"65f154b4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'The Studio Meala Podcast #005 - 'Crows' with Sin\u00e9ad O'Regan' \u2014 'podcast' and 'with' suggest a talk or interview, not a DJ set. Also, name is O'Regan, not Sin\u00e9ad as per profile (profile says Sin\u00e9ad, not Sin\u00e9ad O'Regan)."
+},
+"2e26a6f9": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'Year of the Horse - Sinead O'Connor, Full Concert (VHS)' \u2014 this is a concert by Sinead O'Connor, a singer, not a house DJ. Name mismatch and genre mismatch (pop/rock vs house)."
+},
+"06d9f84f": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'Progressive House, Melodic Techno & Trance DJ Set' by Sin\u00e9ad McCarthy \u2014 name is Sin\u00e9ad McCarthy, not Sin\u00e9ad. Different person. Profile specifies Sin\u00e9ad (house DJ), not Sin\u00e9ad McCarthy (unknown genre)."
+},
+"39aa1c4a": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Same as above \u2014 'Sin\u00e9ad McCarthy' again. Not the artist in profile. Profile is about Sin\u00e9ad (house DJ), not Sin\u00e9ad McCarthy. Genre and name mismatch."
+},
+"9783083a": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title mentions 'Sinead Reel' in context of a GAC (Gaelic Athletic Club) podcast \u2014 likely a local sports/organization event. Name is Sinead Reel, not Sin\u00e9ad (the house DJ). No music performance indicated. Name mismatch."
+},
+"d85c4d5d": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is about 'Microsoft AI CEO' and 'Sinead Bovell' \u2014 Sinead Bovell is not the house DJ Sin\u00e9ad. This is a tech/CEO talk, not a music performance. Name mismatch."
+},
+"ab62942b": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"8a82114e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'b2b Sin\u00e9ad' at 'Paradigm Festival 2025', matching her known b2b with Tornado Wallace and festival performances. This is a live DJ set in the correct genre and context."
+},
+"27eb2368": {
+"v": "reject",
+"kind": "talk",
+"reason": "Names 'Sinead O'Connor', a singer from the 1990s, not the house DJ from San Francisco. This is a name match with a different person."
+},
+"470bf1bc": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Names 'Sinead McCarthy', not Sin\u00e9ad (the house DJ). Profile does not mention this person. This is a guest mix by a different artist."
+},
+"720061a1": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is a single track ('Hush a Bye Baby 1990'), not a DJ set or mix. It is a music track, not a performance."
+},
+"91fa2254": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a talk stream about an author, not a DJ set. It is a conversation, not a music performance."
+},
+"84e57df3": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Names 'Sinead McCarthy' and genre is Trance & Progressive, not house. Profile specifies house DJ from SF/NY. Not a match."
+},
+"054b3b98": {
+"v": "reject",
+"kind": "talk",
+"reason": "Names 'Sinead O'Connor', a different person. Not the house DJ. This is a concert by a singer, not a DJ set."
+},
+"d40265a9": {
+"v": "reject",
+"kind": "talk",
+"reason": "Names 'Sinead O'Connor' and is a 1997 concert. Not the house DJ. Name match with different person."
+},
+"0321762b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Sinead Bovell is a speaker at SXSW. This is a talk show, not a DJ set. Name match with different person."
+},
+"74849402": {
+"v": "reject",
+"kind": "talk",
+"reason": "Sin\u00e9ad Walsh is a different person. This is a podcast talk, not a DJ set. Name match and talk format."
+},
+"272c13a0": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title names Sin\u00e9ad O'Connor, but the profile specifies Sin\u00e9ad the house DJ. Sin\u00e9ad O'Connor is a well-known singer, not a house DJ. This is a namesake match."
+},
+"beb79c13": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title mentions 'Sinead & Gemma Say too much' \u2014 this appears to be a personal or narrative piece, likely a talk or story, not a DJ set. No indication of music performance."
+},
+"84476269": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Sinead | Fault TV DJ Set in Oakland' \u2014 matches the profile's mention of Fault Radio sets in Oakland. Fault Radio is listed as a platform where her Bay Area roots show. This is a DJ set in a location consistent with her background."
+},
+"e5d5e639": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Sinead | Fault Radio DJ Set | Relief Sessions in San Jose, California (May 2, 2020)' \u2014 directly matches the profile's mention of Fault Radio sets in San Jose and Oakland. This is a live DJ set in a Bay Area location."
+},
+"09deed8f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'AI Is Coming For Your Job\u2026 Everyone Will Be Forced To Become Entrepreneurs (w/ Sin\u00e9ad Bovell)' \u2014 this is a talk show with Sin\u00e9ad Bovell, not a music performance. The name is likely a namesake (Bovell vs. Sin\u00e9ad the DJ)."
+},
+"8e3d4497": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Black Sugar w/ Sin\u00e9ad | Live on hydeFM | 07/16/20' \u2014 includes 'Live on hydeFM' and features Sin\u00e9ad in a live setting. The profile mentions her hosting HydeFM shows with Siah Shekar. This is a live DJ set in a context consistent with her profile."
+},
+"34f13633": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'The AI Economist: The Skill You Need to Stay Employed in the Age of AI | channel: Sinead Bovell' \u2014 this is a talk show, not a music performance. Namesake issue (Bovell vs. Sin\u00e9ad the DJ)."
+},
+"76f372d0": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'Set Fire to the Construct with Anthony Miller and Sin\u00e9ad Whelehan' \u2014 names Sin\u00e9ad Whelehan, not Sin\u00e9ad the house DJ. This is a different person with the same name pattern. Namesake."
+},
+"0637e8d0": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Everything You\u2019re Afraid To Ask About AI, Answered By Expert Sinead Bovell' \u2014 again, a talk show with Sinead Bovell, not a music performance. Namesake."
+},
+"95fbced8": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'Sinead Harnett & Yasmin - Boxfresh Pres. Rinse @ Notting Hill Carnival' \u2014 names 'Sinead Harnett', not Sin\u00e9ad the house DJ. This is a different person. Namesake."
+},
+"69b417e4": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Sinead Fitzmaurice is a former CEO of TransferMate; this is a business talk about leadership, not a music set. Not a DJ performance."
+},
+"74606c81": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Sinead Harnett performs an 'acoustic set' \u2014 not electronic house or DJing. Acoustic sets are not DJ sets, and the genre doesn't match Sin\u00e9ad's profile."
+},
+"f32d1b4b": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a podcast episode with Dr. Sin\u00e9ad Moriarty discussing literature \u2014 a talk show, not a music set. No DJing or music performance."
+},
+"3da474e9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Fault Radio DJ Set at Aurora Alimentari' \u2014 Fault Radio is a known platform where Sin\u00e9ad has played, and this is a DJ set. Matches her profile and activity."
+},
+"4afbd58e": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Sinead O'Connor is a singer; this is a full concert from 1990, not a house DJ set. Clearly a different person with the same name."
+},
+"5c74c8d0": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Channel is Sinead Hegarty \u2014 different person. Title is 'WAP or Waters?' \u2014 likely a talk or commentary, not a DJ set. No music performance context."
+},
+"9f34ed33": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Prince Language with Sinead @The Lot Radio 12-18-2024' \u2014 The Lot Radio is one of the platforms Sin\u00e9ad regularly plays on. 'Prince Language' may be a mix or set title. This is a live radio set, likely a DJ set. Matches profile."
+},
+"c43037ea": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Sinead O'Connor \u2014 again, a singer. 'Year of the horse full video' is a concert or album video, not a DJ set."
+},
+"a397ef73": {
+"v": "reject",
+"kind": "track",
+"reason": "Full album of Sinead O'Connor \u2014 not a DJ set or live performance. This is a tracklist or album release."
+},
+"e6d6d03a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast titled 'Sir Stevo & Lady Sinead Nora' \u2014 clearly a talk show, not a music performance. No DJing or set context."
+},
+"f655e879": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title refers to Sinead Halpin Maynard in a talk about her journey and business \u2014 this is a talk show, not a music set. Also, no indication of DJing or music performance."
+},
+"c22f5f01": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names 'Sinead and Regularfantasy @TheLotRadio' \u2014 The Lot Radio is one of the platforms Sin\u00e9ad regularly plays on. This is a DJ set recorded live on air."
+},
+"440607d4": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Sinead O'Connor is a singer from the 1990s; this is a full show from 1990 in D\u00fcsseldorf. Not related to the house DJ Sin\u00e9ad from San Francisco. Name match but different person and genre."
+},
+"6e04d44c": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a talk by Gary Vee, hosted by Sinead Bovell \u2014 a different person (likely a writer or business person), not a music DJ set. No music performance."
+},
+"00084378": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a podcast about art and science with Sinead of Gullrock Fibres \u2014 a craft/artisan, not a DJ. Not related to electronic music or DJing."
+},
+"3518f437": {
+"v": "reject",
+"kind": "talk",
+"reason": "Sinead Mac Manus is a different person (likely academic or business). This is a podcast talk, not a music set."
+},
+"7785e48d": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Nothing Compares To Sin\u00e9ad' \u2014 likely a single or promotional video, not a DJ set. No indication of music performance or DJing."
+},
+"e3aef6e8": {
+"v": "keep",
+"kind": "set",
+"reason": "Sinead and Daizz @TheLotRadio \u2014 The Lot Radio is a known platform for Sin\u00e9ad\u2019s sets. This is a live DJ set with a collaborator."
+},
+"f927b23d": {
+"v": "keep",
+"kind": "set",
+"reason": "Sine\u0301ad x Will Dimaggio @TheLotRadio \u2014 again, The Lot Radio, a platform Sin\u00e9ad regularly performs on. This is a b2b set with Will Dimaggio, consistent with her profile."
+},
+"f1b4648b": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Arno & Burto Radio episode with Sin\u00e9ad McCarthy \u2014 this is a radio show with a guest. Sin\u00e9ad McCarthy is not the same as Sin\u00e9ad the house DJ. Name match but different person (likely from another field)."
+},
+"cc0328b0": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is a vlog about sewing a jacket, with 'Sinead Jacket' as a product name. No indication of music performance. 'Sin\u00e9ad' is used as a name in a product, not as a DJ. This is a vlog, not a set."
+},
+"460a4324": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Title is 'Sin\u00e9ad | themuddshow' \u2014 likely a mix or set on a channel. 'themuddshow' is a known DJ/producer, and the title suggests a set featuring Sin\u00e9ad. However, no clear indication of her performing as a DJ or in a live set. Could be a mix or guest appearance. But since it's not specified as a DJ set, radio, or live performance, and the context is unclear, it's ambiguous."
+},
+"b26882cb": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'ICONS: Sin\u00e9ad O'Conner' \u2014 clearly refers to Sin\u00e9ad O'Conner, the singer, not the house DJ. This is a namesake conflict. The profile specifies Sin\u00e9ad as a house DJ, not a singer. This is a different person."
+},
+"eb5cac92": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is a full album of Sin\u00e9ad O'Connor's hits. This is a music album, not a DJ set or live performance. It's a track collection, not a mix or set where she is playing music as a DJ."
+},
+"66e15554": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Sin\u00e9ad @TheLotRadio 04-04-2026' \u2014 this is a direct reference to her performing on The Lot Radio, which is explicitly mentioned in the profile as one of her regular platforms. Even though the date is in the future, the profile says she has a long run of sets on The Lot Radio, so this is a valid recording of her DJing. The format is a radio show, which counts as a recording of her playing."
+},
+"7cf9b702": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'Sinead O'Connor - Dublin 2002' \u2014 again, this is Sin\u00e9ad O'Connor, the singer, not the house DJ. This is a live concert from a different artist and genre. Namesake conflict."
+},
+"2ea3898e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Craft "
+},
+"c9cd8283": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'PUMP OR DUMP?' by Sinead Hegarty \u2014 this is a person with a similar name but different surname. Sinead Hegarty is not the same as Sin\u00e9ad (the house DJ). This is a namesake conflict."
+},
+"350c84e4": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is a live set by Sinead O'Connor at Glastonbury 2013 \u2014 again, this is the singer, not the house DJ. Namesake conflict. Not a house DJ set."
+},
+"a5474025": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'j.u.g.\u00f3 with S\u00e1nlo & Sin\u00e9ad' on Fault Radio, March 2023. Fault Radio is mentioned in the profile as a show where she has recorded sets in San Jose and Oakland. She hosted shows with Siah Shekar on HydeFM. This is a radio show where she is listed as a performer. It is a live set or DJ set on a radio platform. Even though it's a collaborative set, she is clearly playing as part of the performance."
+},
+"f03d7795": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Raw Talks Podcast: Sinead' \u2014 likely a talk or interview format, not a music set. Podcasts where people talk are rejected unless clearly a DJ set."
+},
+"8f614fea": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Nothing Off Limits ... Postpartum Unfiltered' by Sinead Hegarty \u2014 clearly a personal talk or unfiltered conversation, not a DJ set."
+},
+"7a651b3c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is a talk show with Sinead Bovell \u2014 a conversation about AI and the future, not a music performance."
+},
+"cc892c15": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Sin\u00e9ad | Novemer 20, 2022 | WOMEN.LIFE.FREEDOM | channel: Fault Radio' \u2014 Fault Radio is a radio show, and Sin\u00e9ad is listed as playing. This matches her Bay Area roots and radio appearances (e.g., Fault Radio in San Jose/Oakland). It's a radio recording of her DJing."
+},
+"55fa64b9": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title references Sin\u00e9ad O\u2019Connor \u2014 a famous singer, not a house DJ. This is a tarot reading, not a music set. Namesake mismatch."
+},
+"2fc57cba": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title references Sin\u00e9ad O\u2019Connor again \u2014 a singer, not a house DJ. This is a narrative about her death, not a music performance. Namesake."
+},
+"7ababc78": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'subfeels at squish x fluxions with maara (live), sedef adas\u00ef, sin\u00e9ad' \u2014 clearly a live event with multiple performers. Sin\u00e9ad is listed as part of a live set, so it's a live performance. Matches her live appearances."
+},
+"baa2cbdb": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'r&b playlist \u2022 sinead harnett' \u2014 this is a playlist by a different person (Sinead Harnett), not Sin\u00e9ad the house DJ. Also, genre mismatch (R&B vs house). Likely a tracklist or unrelated artist."
+},
+"7de0b592": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'dj sweet6teen b2b Sin\u00e9ad @ coppi 11.09.2025' \u2014 this is a b2b set with Sin\u00e9ad at Coppi. Matches her known b2b with Scarlett O'Malley on Rinse FM. B2B sets are valid DJ recordings."
+},
+"abdfc4f8": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Polifonic Podcast 049 - Sin\u00e9ad' \u2014 a podcast, not a music set. Podcasts where people talk are rejected unless clearly a DJ mix or set."
+}
+},
+"timings": [
+{
+"n": 10,
+"sec": 213.4,
+"usage": {
+"completion_tokens": 1341,
+"prompt_tokens": 762,
+"total_tokens": 2103,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 177.5,
+"usage": {
+"completion_tokens": 1195,
+"prompt_tokens": 807,
+"total_tokens": 2002,
+"prompt_tokens_details": {
+"cached_tokens": 442
+}
+}
+},
+{
+"n": 10,
+"sec": 252.0,
+"usage": {
+"completion_tokens": 1644,
+"prompt_tokens": 813,
+"total_tokens": 2457,
+"prompt_tokens_details": {
+"cached_tokens": 442
+}
+}
+},
+{
+"n": 1,
+"sec": 698.5,
+"usage": {}
+},
+{
+"n": 10,
+"sec": 241.4,
+"usage": {
+"completion_tokens": 1443,
+"prompt_tokens": 833,
+"total_tokens": 2276,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 151.4,
+"usage": {
+"completion_tokens": 1038,
+"prompt_tokens": 766,
+"total_tokens": 1804,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 10,
+"sec": 180.7,
+"usage": {
+"completion_tokens": 1194,
+"prompt_tokens": 811,
+"total_tokens": 2005,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 10,
+"sec": 146.3,
+"usage": {
+"completion_tokens": 963,
+"prompt_tokens": 820,
+"total_tokens": 1783,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 10,
+"sec": 178.8,
+"usage": {
+"completion_tokens": 1178,
+"prompt_tokens": 801,
+"total_tokens": 1979,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 10,
+"sec": 174.2,
+"usage": {
+"completion_tokens": 1126,
+"prompt_tokens": 840,
+"total_tokens": 1966,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 10,
+"sec": 173.4,
+"usage": {
+"completion_tokens": 1108,
+"prompt_tokens": 857,
+"total_tokens": 1965,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 4,
+"sec": 160.8,
+"usage": {
+"completion_tokens": 1165,
+"prompt_tokens": 612,
+"total_tokens": 1777,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 10,
+"sec": 216.6,
+"usage": {
+"completion_tokens": 1311,
+"prompt_tokens": 750,
+"total_tokens": 2061,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 204.0,
+"usage": {
+"completion_tokens": 1278,
+"prompt_tokens": 849,
+"total_tokens": 2127,
+"prompt_tokens_details": {
+"cached_tokens": 430
+}
+}
+},
+{
+"n": 10,
+"sec": 180.3,
+"usage": {
+"completion_tokens": 1176,
+"prompt_tokens": 782,
+"total_tokens": 1958,
+"prompt_tokens_details": {
+"cached_tokens": 430
+}
+}
+},
+{
+"n": 10,
+"sec": 211.4,
+"usage": {
+"completion_tokens": 1347,
+"prompt_tokens": 782,
+"total_tokens": 2129,
+"prompt_tokens_details": {
+"cached_tokens": 430
+}
+}
+},
+{
+"n": 9,
+"sec": 151.4,
+"usage": {
+"completion_tokens": 1014,
+"prompt_tokens": 716,
+"total_tokens": 1730,
+"prompt_tokens_details": {
+"cached_tokens": 430
+}
+}
+},
+{
+"n": 8,
+"sec": 156.1,
+"usage": {
+"completion_tokens": 892,
+"prompt_tokens": 784,
+"total_tokens": 1676,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 164.6,
+"usage": {
+"completion_tokens": 929,
+"prompt_tokens": 808,
+"total_tokens": 1737,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 251.1,
+"usage": {
+"completion_tokens": 1548,
+"prompt_tokens": 817,
+"total_tokens": 2365,
+"prompt_tokens_details": {
+"cached_tokens": 447
+}
+}
+},
+{
+"n": 10,
+"sec": 176.1,
+"usage": {
+"completion_tokens": 1097,
+"prompt_tokens": 832,
+"total_tokens": 1929,
+"prompt_tokens_details": {
+"cached_tokens": 447
+}
+}
+},
+{
+"n": 10,
+"sec": 150.6,
+"usage": {
+"completion_tokens": 949,
+"prompt_tokens": 813,
+"total_tokens": 1762,
+"prompt_tokens_details": {
+"cached_tokens": 447
+}
+}
+},
+{
+"n": 10,
+"sec": 154.5,
+"usage": {
+"completion_tokens": 959,
+"prompt_tokens": 830,
+"total_tokens": 1789,
+"prompt_tokens_details": {
+"cached_tokens": 447
+}
+}
+},
+{
+"n": 10,
+"sec": 190.4,
+"usage": {
+"completion_tokens": 1202,
+"prompt_tokens": 783,
+"total_tokens": 1985,
+"prompt_tokens_details": {
+"cached_tokens": 447
+}
+}
+},
+{
+"n": 10,
+"sec": 156.0,
+"usage": {
+"completion_tokens": 968,
+"prompt_tokens": 817,
+"total_tokens": 1785,
+"prompt_tokens_details": {
+"cached_tokens": 447
+}
+}
+}
+]
+}

@@ -1,0 +1,1168 @@
+{
+"model": "qwen2.5-7b",
+"shard": 5,
+"verdicts": {
+"c3f3f0d4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show"
+},
+"cce43d2a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"70a24698": {
+"v": "reject",
+"kind": "talk",
+"reason": "DMC finals, not a DJ set"
+},
+"829df72a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode"
+},
+"37f9d565": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast episode"
+},
+"9bfe345f": {
+"v": "reject",
+"kind": "track",
+"reason": "Mix by someone else"
+},
+"76a2f99a": {
+"v": "keep",
+"kind": "set",
+"reason": "Tour performance"
+},
+"e227d06e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"d1bd117e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"1b8ea57c": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"536e58fe": {
+"v": "reject",
+"kind": "talk",
+"reason": "Namesake, as it features Boogie Blind but is an interview/podcast episode."
+},
+"33e9aba8": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"fa02b53a": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"5f84364c": {
+"v": "reject",
+"kind": "track",
+"reason": "Track, as it's a mixtape."
+},
+"abf8085a": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"d58d8f53": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"203d991e": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"33c60480": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"7d95e94a": {
+"v": "reject",
+"kind": "track",
+"reason": "Track, as it's a mixtape."
+},
+"8f51e918": {
+"v": "reject",
+"kind": "talk",
+"reason": "Namesake, as it features Boogie Blind but is an interview/podcast episode."
+},
+"ae9b9492": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not clearly indicate Boogie Blind is playing."
+},
+"264aab9b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly indicates Boogie Blind is playing."
+},
+"13268cdd": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not clearly indicate Boogie Blind is playing."
+},
+"1648a96e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly indicates Boogie Blind is playing."
+},
+"2a1c3865": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not clearly indicate Boogie Blind is playing."
+},
+"c59fe9c5": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not clearly indicate Boogie Blind is playing."
+},
+"017959e8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly indicates Boogie Blind is playing."
+},
+"2d020c48": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly indicates Boogie Blind is playing."
+},
+"ba6e59a2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title clearly indicates Boogie Blind is playing."
+},
+"57cb1309": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not clearly indicate Boogie Blind is playing."
+},
+"efe88834": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"68b70274": {
+"v": "reject",
+"kind": "track",
+"reason": "Mixtape featuring Diamond D"
+},
+"0cc8be8d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"c1cef45f": {
+"v": "reject",
+"kind": "track",
+"reason": "Mixtape featuring Diamond D"
+},
+"8ddd1d4e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Diamond D"
+},
+"0d9a36ab": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"c926cb90": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Diamond D"
+},
+"26ad1797": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast featuring Diamond D"
+},
+"96fbe357": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by Diamond D"
+},
+"16147175": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"380c88ec": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"cb4cc54b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set with Diamond D"
+},
+"073023e5": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mixtape featuring Diamond D"
+},
+"c52c3e13": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mixtape featuring Diamond D"
+},
+"6ffbd48e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mixtape featuring Diamond D"
+},
+"19dca07f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk show with Diamond D"
+},
+"7a771280": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mixtape featuring Diamond D"
+},
+"8040c0a6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview with Diamond D"
+},
+"01e2fbd1": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set with Diamond D"
+},
+"f1cbb0e2": {
+"v": "keep",
+"kind": "set",
+"reason": "Live DJ set with Diamond D"
+},
+"64736954": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"f88baffc": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Diamond D"
+},
+"dbe10227": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Diamond D"
+},
+"cc645f2e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Talk: Interview with Diamond D."
+},
+"1ed1c1e8": {
+"v": "reject",
+"kind": "track",
+"reason": "Track: Mixtape featuring Diamond D."
+},
+"da681faa": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"dbe42dee": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"ab3c2afa": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist: Mixtape featuring Diamond D."
+},
+"3aed76ca": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Diamond D"
+},
+"4f76ab06": {
+"v": "reject",
+"kind": "talk",
+"reason": "Live show: Diamond D performing live."
+},
+"82945818": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is an interview with Diamond D discussing his career and new album."
+},
+"26cfbe53": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a behind-the-scenes look at Diamond D's scratch techniques."
+},
+"868e614f": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a 45 Vinyl Show featuring Diamond D along with other DJs."
+},
+"258f77f3": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is an interview with Diamond D discussing hip hop history."
+},
+"a0486db2": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title mentions 'Guy Contact' but it's a tracklist by Rinse France"
+},
+"b454b43d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and it's a live set at Ha\u0175s"
+},
+"c8131c1d": {
+"v": "reject",
+"kind": "track",
+"reason": "Title mentions 'Guy Contact' but it's a mix series episode"
+},
+"6b3779b6": {
+"v": "reject",
+"kind": "track",
+"reason": "Title mentions 'Guy Contact' but the date is in the future and it's a mix"
+},
+"68051a0f": {
+"v": "reject",
+"kind": "track",
+"reason": "Title mentions 'Guy Contact' but it's a track"
+},
+"24402fb6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and it's a live set at Dimensions Festival"
+},
+"b73f0532": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and it's a live set at Skylab Radio"
+},
+"ff3d677f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and it's a live set at SUPERCAMP Festival"
+},
+"017da1ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and it's a live set at Seoul Community Radio"
+},
+"78bb28d1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Guy Contact' and it's a Boiler Room recording"
+},
+"a11ce268": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Paper-Cuts"
+},
+"d82dd860": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix series episode"
+},
+"8c6d7906": {
+"v": "keep",
+"kind": "set",
+"reason": "Festival recording"
+},
+"1a89172c": {
+"v": "keep",
+"kind": "set",
+"reason": "Essential Mix"
+},
+"2211ba52": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Refuge Worldwide"
+},
+"a0e1d35e": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Refuge Worldwide"
+},
+"15034aa6": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix series episode"
+},
+"6ac308fc": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Skylab Radio"
+},
+"81511c7a": {
+"v": "keep",
+"kind": "set",
+"reason": "Festival recording"
+},
+"5b0bd737": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Piticu is a different person."
+},
+"3a1a2c1b": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"861dfd66": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"72fa31bb": {
+"v": "keep",
+"kind": "set",
+"reason": "Date: 2006, but the profile mentions recent performances."
+},
+"fadf883c": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"830a3fca": {
+"v": "keep",
+"kind": "set",
+"reason": ""
+},
+"254ec3a7": {
+"v": "keep",
+"kind": "set",
+"reason": "Date: 2008, but the profile mentions recent performances."
+},
+"2341fe91": {
+"v": "keep",
+"kind": "set",
+"reason": "Date: 2023, but the profile mentions recent performances."
+},
+"59b0c6dc": {
+"v": "keep",
+"kind": "set",
+"reason": "Date: 2023, but the profile mentions recent performances."
+},
+"e9ac948a": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"0526f252": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Ricardo Villalobos at Caprices Festival"
+},
+"a36b27e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Telurian party"
+},
+"7e30ab65": {
+"v": "reject",
+"kind": "set",
+"reason": "B2B set with Ricardo Villalobos, but not by Raresh"
+},
+"1a4f4c81": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Houghton"
+},
+"48dd177e": {
+"v": "reject",
+"kind": "track",
+"reason": "Guest mix by Raresh Rush, not by Raresh"
+},
+"800fe15f": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with Pedro and Rhadoo at KaZantip Afterparty"
+},
+"9a981d1d": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Pedro at DC10, Ibiza"
+},
+"7da7ea31": {
+"v": "reject",
+"kind": "track",
+"reason": "Not by Raresh, but by Praslesh (Praslea & Raresh)"
+},
+"5f5b36fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Fine Days Festival"
+},
+"0f1254a4": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Arapu at Space Miami"
+},
+"f623ab16": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a mix by Raresh for fabric 78."
+},
+"24baff4c": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a b2b set with Cap by Raresh."
+},
+"c0c81496": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a b2b set with Arapu by Raresh."
+},
+"a7fe765f": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a guest mix by Raresh, not a DJ set."
+},
+"e68f220e": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a live set by Raresh."
+},
+"e426e57f": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is a mix by someone else named Raresh."
+},
+"29dedf2a": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a live set by Raresh."
+},
+"80df34d2": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a b2b set with Cap by Raresh."
+},
+"cf285393": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a live set by Raresh."
+},
+"7a899358": {
+"v": "reject",
+"kind": "track",
+"reason": "This is a mix by someone else named Praslesh, featuring Raresh."
+},
+"75eda512": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sunwaves Festival"
+},
+"5e194e4f": {
+"v": "reject",
+"kind": "track",
+"reason": "Track by multiple artists, not a mix"
+},
+"07f87cc4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live studio session"
+},
+"dfdb6854": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sunwaves Festival"
+},
+"f0387ffa": {
+"v": "reject",
+"kind": "track",
+"reason": "Guest mix by another DJ"
+},
+"fea709ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Zebra Club"
+},
+"2dd0db0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Caprices Festival"
+},
+"00962c30": {
+"v": "reject",
+"kind": "talk",
+"reason": "Future event, not a mix"
+},
+"842ca2c3": {
+"v": "reject",
+"kind": "track",
+"reason": "Track mix, not a DJ set"
+},
+"dc911b0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Midi Club"
+},
+"ca8d7a31": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Raresh as the guest mix artist."
+},
+"20506b01": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Raresh as the guest mix artist."
+},
+"f9abcd91": {
+"v": "reject",
+"kind": "set",
+"reason": "Title names Raresh as one of the performers, but the date is in the future, which is unusual."
+},
+"20311dfb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Raresh as one of the performers."
+},
+"9acf20ad": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Raresh as the guest mix artist."
+},
+"83882fe8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Raresh as the guest mix artist."
+},
+"f3967e3b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Raresh as one of the performers."
+},
+"b1f407cf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Raresh as one of the performers."
+},
+"3d606cd1": {
+"v": "reject",
+"kind": "set",
+"reason": "Title names Raresh as one of the performers, but the date is in the future, which is unusual."
+},
+"5cbd8756": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Raresh as one of the performers."
+},
+"8c37a20a": {
+"v": "reject",
+"kind": "set",
+"reason": "Part of a collaboration with Ricardo Villalobos, not solely Raresh."
+},
+"17dcafd5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live show by Raresh Rush, likely a pseudonym or alias."
+},
+"f24bc3b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live show by Raresh Rush, likely a pseudonym or alias."
+},
+"026df9ea": {
+"v": "reject",
+"kind": "set",
+"reason": "Mix made for a mix series, not a live set or DJ set."
+},
+"55671cc2": {
+"v": "reject",
+"kind": "set",
+"reason": "Live set with multiple artists, not solely Raresh."
+},
+"4f9069ef": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Raresh Rush, likely a pseudonym or alias."
+},
+"f21c0c5b": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Raresh at Dimensions."
+},
+"dd6a1a11": {
+"v": "reject",
+"kind": "set",
+"reason": "Live set with Markus Fix, not solely Raresh."
+},
+"32a100d0": {
+"v": "reject",
+"kind": "set",
+"reason": "Collaboration with other artists, not solely Raresh."
+},
+"eceb5086": {
+"v": "reject",
+"kind": "set",
+"reason": "Podcast episode featuring Raresh, not a DJ set."
+},
+"2f8ae4d9": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Ricardo Villalobos at Amnesia Ibiza"
+},
+"820ce230": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix for KARESMA"
+},
+"5a350f62": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast with Praslesh (Raresh B2B Praslea)"
+},
+"c8c0eada": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix for Radio Deep"
+},
+"198cc181": {
+"v": "reject",
+"kind": "track",
+"reason": "Ambient mix"
+},
+"2e151d9a": {
+"v": "keep",
+"kind": "set",
+"reason": "Awards performance at Nights.Ro"
+},
+"9f60cfbe": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix for HORATIUS"
+},
+"aa9dfe52": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Praslea at Summer of Love Festival"
+},
+"2fe24b14": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Ricardo Villalobos at Lofi / ADE"
+},
+"e6366c3a": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Cezar and Stump in London"
+},
+"14aef4e2": {
+"v": "reject",
+"kind": "track",
+"reason": "Full mix album"
+},
+"c9af8640": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"3757d32b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Future date"
+},
+"d131f1a8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"8f8231fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set"
+},
+"227cd023": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist"
+},
+"583f1f2a": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set"
+},
+"9aaccd7f": {
+"v": "reject",
+"kind": "track",
+"reason": "Home mix"
+},
+"109e0dc8": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a long set."
+},
+"8cdf01fd": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a long set."
+},
+"341b65de": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not a set, but a podcast episode."
+},
+"b6ee4398": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a long set."
+},
+"2f360e7c": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match, but it's a short set."
+},
+"0d30083c": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match, but it's a short set."
+},
+"b41128d2": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match and it's a long set."
+},
+"1d6b7327": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match, but it's a short set."
+},
+"17b2679e": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match, but it's a long set."
+},
+"0cd4995e": {
+"v": "keep",
+"kind": "set",
+"reason": "Names match, but it's a short set."
+},
+"3b59d50a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions [a:rpia:r] as the performers."
+},
+"91ead215": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions [a:rpia:r] as the performers."
+},
+"b9bec2f9": {
+"v": "reject",
+"kind": "set",
+"reason": "Future date, cannot be verified."
+},
+"73708bcc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions [a:rpia:r] as the performers."
+},
+"25d67dd5": {
+"v": "reject",
+"kind": "talk",
+"reason": "Different artist (Jetru) mentioned in the title."
+},
+"f439b526": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions [a:rpia:r] as the performers."
+},
+"e20668be": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions [a:rpia:r] as the performers."
+},
+"5baa1680": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions [a:rpia:r] as the performers."
+},
+"1d96f412": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions [a:rpia:r] as the performers."
+},
+"731e51e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions [a:rpia:r] as the performers."
+},
+"4cfd1c65": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'RPR Soundsystem' but not [a:rpia:r]."
+},
+"2357ffa7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title and channel clearly indicate [a:rpia:r] performing."
+},
+"eed05482": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions 'RPR Soundsystem' but not [a:rpia:r]."
+}
+},
+"timings": [
+{
+"n": 10,
+"sec": 75.1,
+"usage": {
+"completion_tokens": 269,
+"prompt_tokens": 810,
+"total_tokens": 1079,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 64.0,
+"usage": {
+"completion_tokens": 318,
+"prompt_tokens": 785,
+"total_tokens": 1103,
+"prompt_tokens_details": {
+"cached_tokens": 430
+}
+}
+},
+{
+"n": 10,
+"sec": 83.7,
+"usage": {
+"completion_tokens": 436,
+"prompt_tokens": 797,
+"total_tokens": 1233,
+"prompt_tokens_details": {
+"cached_tokens": 430
+}
+}
+},
+{
+"n": 10,
+"sec": 78.4,
+"usage": {
+"completion_tokens": 284,
+"prompt_tokens": 839,
+"total_tokens": 1123,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 80.9,
+"usage": {
+"completion_tokens": 402,
+"prompt_tokens": 889,
+"total_tokens": 1291,
+"prompt_tokens_details": {
+"cached_tokens": 468
+}
+}
+},
+{
+"n": 10,
+"sec": 83.1,
+"usage": {
+"completion_tokens": 420,
+"prompt_tokens": 867,
+"total_tokens": 1287,
+"prompt_tokens_details": {
+"cached_tokens": 468
+}
+}
+},
+{
+"n": 4,
+"sec": 37.3,
+"usage": {
+"completion_tokens": 200,
+"prompt_tokens": 633,
+"total_tokens": 833,
+"prompt_tokens_details": {
+"cached_tokens": 468
+}
+}
+},
+{
+"n": 10,
+"sec": 93.8,
+"usage": {
+"completion_tokens": 418,
+"prompt_tokens": 715,
+"total_tokens": 1133,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 9,
+"sec": 56.1,
+"usage": {
+"completion_tokens": 287,
+"prompt_tokens": 704,
+"total_tokens": 991,
+"prompt_tokens_details": {
+"cached_tokens": 415
+}
+}
+},
+{
+"n": 10,
+"sec": 84.8,
+"usage": {
+"completion_tokens": 303,
+"prompt_tokens": 910,
+"total_tokens": 1213,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 89.2,
+"usage": {
+"completion_tokens": 462,
+"prompt_tokens": 876,
+"total_tokens": 1338,
+"prompt_tokens_details": {
+"cached_tokens": 493
+}
+}
+},
+{
+"n": 10,
+"sec": 89.2,
+"usage": {
+"completion_tokens": 459,
+"prompt_tokens": 885,
+"total_tokens": 1344,
+"prompt_tokens_details": {
+"cached_tokens": 493
+}
+}
+},
+{
+"n": 10,
+"sec": 82.9,
+"usage": {
+"completion_tokens": 404,
+"prompt_tokens": 937,
+"total_tokens": 1341,
+"prompt_tokens_details": {
+"cached_tokens": 493
+}
+}
+},
+{
+"n": 10,
+"sec": 89.1,
+"usage": {
+"completion_tokens": 460,
+"prompt_tokens": 873,
+"total_tokens": 1333,
+"prompt_tokens_details": {
+"cached_tokens": 493
+}
+}
+},
+{
+"n": 10,
+"sec": 90.7,
+"usage": {
+"completion_tokens": 463,
+"prompt_tokens": 898,
+"total_tokens": 1361,
+"prompt_tokens_details": {
+"cached_tokens": 493
+}
+}
+},
+{
+"n": 10,
+"sec": 87.5,
+"usage": {
+"completion_tokens": 447,
+"prompt_tokens": 881,
+"total_tokens": 1328,
+"prompt_tokens_details": {
+"cached_tokens": 493
+}
+}
+},
+{
+"n": 8,
+"sec": 52.0,
+"usage": {
+"completion_tokens": 244,
+"prompt_tokens": 824,
+"total_tokens": 1068,
+"prompt_tokens_details": {
+"cached_tokens": 493
+}
+}
+},
+{
+"n": 10,
+"sec": 96.4,
+"usage": {
+"completion_tokens": 351,
+"prompt_tokens": 987,
+"total_tokens": 1338,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 81.7,
+"usage": {
+"completion_tokens": 388,
+"prompt_tokens": 966,
+"total_tokens": 1354,
+"prompt_tokens_details": {
+"cached_tokens": 508
+}
+}
+},
+{
+"n": 3,
+"sec": 31.9,
+"usage": {
+"completion_tokens": 162,
+"prompt_tokens": 678,
+"total_tokens": 840,
+"prompt_tokens_details": {
+"cached_tokens": 508
+}
+}
+}
+]
+}

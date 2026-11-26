@@ -1,0 +1,1262 @@
+{
+"model": "qwen2.5-7b",
+"shard": 4,
+"verdicts": {
+"45d385a8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"caea1e0f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"985f3e78": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"92e3e653": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"0bc37207": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"d556ab4f": {
+"v": "reject",
+"kind": "track",
+"reason": "Title names Black Loops"
+},
+"1ad5a9f9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"78ecb9a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"bde6a691": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"fb746ff8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops"
+},
+"1d10f679": {
+"v": "keep",
+"kind": "set",
+"reason": "Guestmix by Black Loops"
+},
+"d2661bb6": {
+"v": "keep",
+"kind": "set",
+"reason": "Collaboration with Eekoethee"
+},
+"f8064ad4": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Sisyphos"
+},
+"5d48c6eb": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by Black Loops"
+},
+"6d3a0f79": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix by Black Loops"
+},
+"b7f7fc2d": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set at Djoon"
+},
+"b282d22f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Future date, not a current set"
+},
+"8fe34abc": {
+"v": "reject",
+"kind": "talk",
+"reason": "Not a DJ set"
+},
+"7f61e913": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Mix with multiple artists"
+},
+"c6ffd4c1": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"f11963a9": {
+"v": "keep",
+"kind": "set",
+"reason": "Extended Guest Mix"
+},
+"2769c831": {
+"v": "keep",
+"kind": "set",
+"reason": "Multiple DJs, including Black Loops"
+},
+"21a63474": {
+"v": "unsure",
+"kind": "set",
+"reason": "Special Guest Black Loops, but not clear if Black Loops is the main DJ"
+},
+"9677badd": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast mix"
+},
+"5f7bf37d": {
+"v": "keep",
+"kind": "set",
+"reason": "House mix by Black Loops"
+},
+"402ad61b": {
+"v": "unsure",
+"kind": "set",
+"reason": "Aterral - Black Loops, not clear if Black Loops is the DJ"
+},
+"09284bcd": {
+"v": "keep",
+"kind": "set",
+"reason": "Black Loops (House Mix by Black Loops)"
+},
+"5b562c8d": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B mix with Black Loops"
+},
+"83c6dca0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Sub Club Glasgow"
+},
+"c10ad308": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with Black Loops"
+},
+"04f6c02f": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Carlo, live at Badaboum"
+},
+"6a99be30": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Bass Coast 2025"
+},
+"f8ed1ff9": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with James Pepper, live at Lost Sundays"
+},
+"e6be7294": {
+"v": "keep",
+"kind": "set",
+"reason": "Sweely and Black Loops, minimal, breaks and electro house set"
+},
+"6c8a6389": {
+"v": "keep",
+"kind": "set",
+"reason": "Black Loops at Hide&Seek Festival"
+},
+"173abac7": {
+"v": "keep",
+"kind": "set",
+"reason": "Black Loops on The Lot Radio"
+},
+"77ab10a4": {
+"v": "keep",
+"kind": "set",
+"reason": "Black Loops mix"
+},
+"dbeeeca4": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with Carlo, live at Hallo Montag"
+},
+"2eaee7b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Live from Sydney with Black Loops, Peekay, Jerkboy"
+},
+"d7070fb0": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at House of Love, Berlin"
+},
+"1ad2a178": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ."
+},
+"6d219f97": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as one of the DJs."
+},
+"7e45b08a": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ, but the date seems future and the duration is unusually short."
+},
+"7d34b3af": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as one of the DJs."
+},
+"7ac4d5b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ."
+},
+"3365ff50": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as one of the DJs."
+},
+"0329f3cc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ."
+},
+"37187e10": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ."
+},
+"4de6199f": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists Black Loops among many artists, not as the DJ."
+},
+"25d83dcf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ."
+},
+"19401777": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix includes Black Loops"
+},
+"e2155220": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix is by Black Loops"
+},
+"cdaf2d08": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix is by Black Loops"
+},
+"5d62a5cd": {
+"v": "keep",
+"kind": "set",
+"reason": "Live performance by Black Loops"
+},
+"57c37415": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix is by Black Loops"
+},
+"1e5a4663": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Black Loops"
+},
+"152d268b": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix is by Black Loops"
+},
+"c141339c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set by Black Loops"
+},
+"3dcff972": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix is by Black Loops"
+},
+"02310061": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Black Loops"
+},
+"9f59d0c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Guestmix by Black Loops"
+},
+"8bb1c4e6": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest mix by Black Loops"
+},
+"cfe5f51c": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Black Loops"
+},
+"fd085236": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Black Loops"
+},
+"50046ae7": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set by Black Loops"
+},
+"b57eac95": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix by Black Loops"
+},
+"c160f86c": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix by Black Loops"
+},
+"58ea368a": {
+"v": "keep",
+"kind": "set",
+"reason": "b2b set by Black Loops"
+},
+"c68f647a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set by Black Loops"
+},
+"2b83f47b": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Black Loops"
+},
+"9f42e623": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and Houseum"
+},
+"273efb0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and Live at Sisyphos"
+},
+"6046a7ab": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and Live at Music is 4 Lovers"
+},
+"744c2b2b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and is a mix"
+},
+"316283f9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and is a podcast"
+},
+"9c389c1b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and is a live recording"
+},
+"5fd026a9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists Black Loops among many artists"
+},
+"338b001e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and is a b2b set"
+},
+"9705e268": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and is a live recording"
+},
+"a4d0f34e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Black Loops and is a live recording"
+},
+"a0feb041": {
+"v": "reject",
+"kind": "set",
+"reason": "Namesake: Different person with the same name."
+},
+"95c51bc0": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Black Loops"
+},
+"46eab399": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Black Loops"
+},
+"46093b20": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Black Loops"
+},
+"cf41d8f9": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Black Loops"
+},
+"fbf46082": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Black Loops"
+},
+"69367330": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Black Loops"
+},
+"0c9e6713": {
+"v": "keep",
+"kind": "set",
+"reason": "Performs as: Black Loops"
+},
+"ccc104d4": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Tracklist: Mix with multiple artists."
+},
+"24dbd067": {
+"v": "reject",
+"kind": "track",
+"reason": "Track: Single guest mix."
+},
+"6623b421": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ."
+},
+"ee2d6098": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ."
+},
+"08b353ec": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Black Loops as the DJ."
+},
+"f6bcef92": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Desert Sound Colony as the DJ."
+},
+"e1bd4534": {
+"v": "keep",
+"kind": "set",
+"reason": "Names Desert Sound Colony as one of the DJs."
+},
+"9668e3f3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Desert Sound Colony as the DJ."
+},
+"70624d82": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Desert Sound Colony as the DJ."
+},
+"7132e4c2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Desert Sound Colony as the DJ."
+},
+"1fca4bfd": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Desert Sound Colony."
+},
+"a5455d1a": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Desert Sound Colony."
+},
+"7f50f1af": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Desert Sound Colony."
+},
+"e33dd8b4": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Desert Sound Colony."
+},
+"442c3bc3": {
+"v": "keep",
+"kind": "set",
+"reason": "Self-portrait mix by Desert Sound Colony."
+},
+"04dc7e77": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"b5fcdf03": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"5d53cee2": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"49bd2658": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"4eeee2fd": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"f29798c7": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"637afc5f": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"2f978f3c": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"f8212e31": {
+"v": "reject",
+"kind": "talk",
+"reason": "Desert Sound Colony is mentioned as a guest on the podcast."
+},
+"3dc03315": {
+"v": "keep",
+"kind": "set",
+"reason": "Desert Sound Colony is mentioned as the DJ."
+},
+"af338bba": {
+"v": "keep",
+"kind": "set",
+"reason": "B2b set with Desert Sound Colony"
+},
+"59de86b9": {
+"v": "keep",
+"kind": "set",
+"reason": "Live stream with Desert Sound Colony"
+},
+"7ad7272c": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with Desert Sound Colony"
+},
+"8875f877": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Desert Sound Colony"
+},
+"565821fc": {
+"v": "reject",
+"kind": "talk",
+"reason": "Interview about Desert Sound Colony"
+},
+"0aedbdba": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set with Desert Sound Colony"
+},
+"88dc1cad": {
+"v": "reject",
+"kind": "talk",
+"reason": "Podcast with Desert Sound Colony"
+},
+"86502462": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Desert Sound Colony"
+},
+"b18d8695": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Desert Sound Colony"
+},
+"cebf8a61": {
+"v": "keep",
+"kind": "set",
+"reason": "DJ set with Desert Sound Colony"
+},
+"ee083a06": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Desert Sound Colony as the DJ."
+},
+"24e5f9b5": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast featuring Desert Sound Colony."
+},
+"2a53b7d1": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix featuring Desert Sound Colony, but not named as DJ."
+},
+"c00e1824": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Desert Sound Colony as the DJ."
+},
+"cec329ba": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix named after Desert Sound Colony."
+},
+"dc697030": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Gene On Earth"
+},
+"c9eef617": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Gene On Earth"
+},
+"a3d2a365": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title does not name Gene On Earth"
+},
+"3a1e9041": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Gene On Earth"
+},
+"cfc212ac": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is an interview"
+},
+"842dcf2e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Gene On Earth"
+},
+"9ee318d6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Gene On Earth"
+},
+"2696e4f3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Gene On Earth"
+},
+"7f41ed66": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Gene On Earth"
+},
+"10de0b88": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"40724818": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set from Dimensions Festival"
+},
+"20fac57a": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set from Boiler Room"
+},
+"f68347fe": {
+"v": "keep",
+"kind": "set",
+"reason": "Back-to-back set with Dyed Soundorom at Fuse Brussels"
+},
+"b02c115e": {
+"v": "keep",
+"kind": "set",
+"reason": "Mix series episode featuring Gene on Earth"
+},
+"ae972018": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set from Dimensions Festival"
+},
+"b7b9747c": {
+"v": "keep",
+"kind": "set",
+"reason": "Podcast episode featuring Gene on Earth"
+},
+"6887d563": {
+"v": "keep",
+"kind": "set",
+"reason": "Back-to-back set with Dj Sweet6teen at Banana Box TV"
+},
+"7a89a5a4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set featuring Gene on Earth"
+},
+"f0fe8d65": {
+"v": "keep",
+"kind": "set",
+"reason": "Back-to-back set with Dyed Soundorom and Tini at Unum Festival"
+},
+"7365f61b": {
+"v": "keep",
+"kind": "set",
+"reason": "Back-to-back set with Dyed Soundorom at Dimensions"
+},
+"cce49a66": {
+"v": "reject",
+"kind": "set",
+"reason": "This is a set for Gene On Earth, but the title suggests it's an opening set by MAHAR."
+},
+"b718a06b": {
+"v": "keep",
+"kind": "set",
+"reason": "This is clearly a DJ set by Gene On Earth."
+},
+"c7f3bb68": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a b2b set between Gene On Earth and Dyed Soundorom."
+},
+"93813adb": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a DJ set by Gene On Earth."
+},
+"f8a30311": {
+"v": "keep",
+"kind": "set",
+"reason": "This is a DJ set by Gene On Earth."
+},
+"ea918579": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set in Rome for Enclave Rooftop Series"
+},
+"08e46d66": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Different person with the same name (piano player)"
+},
+"abf29969": {
+"v": "reject",
+"kind": "talk",
+"reason": "Lecture on mentalization in psychoanalysis"
+},
+"3baa6f99": {
+"v": "keep",
+"kind": "set",
+"reason": "Live act on SoundCloud"
+},
+"f96b1ab9": {
+"v": "reject",
+"kind": "talk",
+"reason": "TV show interview"
+},
+"5e3953c0": {
+"v": "reject",
+"kind": "track",
+"reason": "Music performance by another artist"
+},
+"f5449280": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not mention Van Bellen"
+},
+"19c58a67": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Van Bellen but the channel name is different"
+},
+"c2cefc30": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Van Bellen and The Rad Pack"
+},
+"55bdfb0e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Van Bellen and the location"
+},
+"6ee906e7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Van Bellen and the location"
+},
+"27721c88": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Van Bellen and the location"
+},
+"f25f478c": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title mentions Joost van Bellen but is a talk show"
+},
+"91ca32ae": {
+"v": "reject",
+"kind": "set",
+"reason": "Title does not mention Van Bellen"
+},
+"42bf87e4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Van Bellen and the location"
+},
+"9e7f4c79": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Van Bellen and the location"
+},
+"8f138a97": {
+"v": "reject",
+"kind": "set",
+"reason": "Not clearly attributed to Van Bellen"
+},
+"8ec5348e": {
+"v": "keep",
+"kind": "set",
+"reason": "Specific date and location, likely a recording of Van Bellen"
+},
+"19e2e229": {
+"v": "keep",
+"kind": "set",
+"reason": "Clearly named as Joost van Bellen's mix"
+},
+"eaa19ca2": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Van Bellen but seems to be a guide or compilation"
+},
+"9d95a07f": {
+"v": "keep",
+"kind": "set",
+"reason": "Specific event and location, likely a recording of Van Bellen"
+},
+"1206cccb": {
+"v": "keep",
+"kind": "set",
+"reason": "Live recording from 3FM, likely a recording of Van Bellen"
+},
+"57b29bb3": {
+"v": "keep",
+"kind": "set",
+"reason": "Specific date and location, likely a recording of Van Bellen"
+},
+"fe3712b5": {
+"v": "reject",
+"kind": "set",
+"reason": "Not clearly attributed to Van Bellen"
+},
+"371b5bca": {
+"v": "reject",
+"kind": "set",
+"reason": "Title mentions Van Bellen but seems to be a compilation of tracks"
+},
+"77ef2616": {
+"v": "keep",
+"kind": "set",
+"reason": "Clearly named as Joost van Bellen"
+},
+"1b7628b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Van Bellen as a DJ"
+},
+"418882e1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Van Bellen as a DJ"
+},
+"3e03009b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Van Bellen as a DJ and mentions a guest mix for a radio show"
+},
+"f419d8f8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Van Bellen as a DJ"
+},
+"6b51652e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is a podcast interview"
+},
+"efc67a7a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Van Bellen as a DJ"
+},
+"892d855a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Van Bellen as a DJ"
+},
+"64d80bcb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Van Bellen as a DJ"
+},
+"2a137184": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Van Bellen as a DJ"
+},
+"43907e68": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is a podcast interview"
+},
+"904c23a0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Joost van Bellen as one of the DJs."
+},
+"20cb3068": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Joost van Bellen as the DJ."
+},
+"2ae4144b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is a talk show with a different person named Paul van Bellen."
+},
+"74ff3c76": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is a movie and not a music set."
+},
+"847c31c0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Joost van Bellen as the DJ."
+},
+"675a4cc1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Joost van Bellen as one of the DJs."
+},
+"b24fce17": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Joost van Bellen as the DJ."
+},
+"cfdaf04d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Joost van Bellen as the DJ."
+},
+"92071b83": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Joost van Bellen as a special guest."
+}
+},
+"timings": [
+{
+"n": 10,
+"sec": 109.2,
+"usage": {
+"completion_tokens": 316,
+"prompt_tokens": 791,
+"total_tokens": 1107,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 75.9,
+"usage": {
+"completion_tokens": 304,
+"prompt_tokens": 790,
+"total_tokens": 1094,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 10,
+"sec": 100.6,
+"usage": {
+"completion_tokens": 430,
+"prompt_tokens": 812,
+"total_tokens": 1242,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 10,
+"sec": 102.1,
+"usage": {
+"completion_tokens": 448,
+"prompt_tokens": 819,
+"total_tokens": 1267,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 10,
+"sec": 106.0,
+"usage": {
+"completion_tokens": 451,
+"prompt_tokens": 846,
+"total_tokens": 1297,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 10,
+"sec": 81.3,
+"usage": {
+"completion_tokens": 335,
+"prompt_tokens": 797,
+"total_tokens": 1132,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 10,
+"sec": 86.3,
+"usage": {
+"completion_tokens": 338,
+"prompt_tokens": 847,
+"total_tokens": 1185,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 10,
+"sec": 93.9,
+"usage": {
+"completion_tokens": 379,
+"prompt_tokens": 859,
+"total_tokens": 1238,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 10,
+"sec": 97.4,
+"usage": {
+"completion_tokens": 417,
+"prompt_tokens": 810,
+"total_tokens": 1227,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 3,
+"sec": 31.4,
+"usage": {
+"completion_tokens": 139,
+"prompt_tokens": 555,
+"total_tokens": 694,
+"prompt_tokens_details": {
+"cached_tokens": 446
+}
+}
+},
+{
+"n": 10,
+"sec": 122.2,
+"usage": {
+"completion_tokens": 409,
+"prompt_tokens": 752,
+"total_tokens": 1161,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 96.9,
+"usage": {
+"completion_tokens": 439,
+"prompt_tokens": 752,
+"total_tokens": 1191,
+"prompt_tokens_details": {
+"cached_tokens": 438
+}
+}
+},
+{
+"n": 10,
+"sec": 83.7,
+"usage": {
+"completion_tokens": 337,
+"prompt_tokens": 811,
+"total_tokens": 1148,
+"prompt_tokens_details": {
+"cached_tokens": 438
+}
+}
+},
+{
+"n": 5,
+"sec": 47.4,
+"usage": {
+"completion_tokens": 220,
+"prompt_tokens": 609,
+"total_tokens": 829,
+"prompt_tokens_details": {
+"cached_tokens": 438
+}
+}
+},
+{
+"n": 10,
+"sec": 102.9,
+"usage": {
+"completion_tokens": 288,
+"prompt_tokens": 771,
+"total_tokens": 1059,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 88.3,
+"usage": {
+"completion_tokens": 366,
+"prompt_tokens": 783,
+"total_tokens": 1149,
+"prompt_tokens_details": {
+"cached_tokens": 431
+}
+}
+},
+{
+"n": 5,
+"sec": 53.1,
+"usage": {
+"completion_tokens": 248,
+"prompt_tokens": 615,
+"total_tokens": 863,
+"prompt_tokens_details": {
+"cached_tokens": 431
+}
+}
+},
+{
+"n": 6,
+"sec": 89.3,
+"usage": {
+"completion_tokens": 252,
+"prompt_tokens": 672,
+"total_tokens": 924,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 132.3,
+"usage": {
+"completion_tokens": 422,
+"prompt_tokens": 850,
+"total_tokens": 1272,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 108.4,
+"usage": {
+"completion_tokens": 454,
+"prompt_tokens": 874,
+"total_tokens": 1328,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 10,
+"sec": 104.7,
+"usage": {
+"completion_tokens": 429,
+"prompt_tokens": 877,
+"total_tokens": 1306,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+},
+{
+"n": 9,
+"sec": 95.8,
+"usage": {
+"completion_tokens": 411,
+"prompt_tokens": 817,
+"total_tokens": 1228,
+"prompt_tokens_details": {
+"cached_tokens": 462
+}
+}
+}
+]
+}

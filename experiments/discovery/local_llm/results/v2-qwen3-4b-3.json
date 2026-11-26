@@ -1,0 +1,2373 @@
+{
+"model": "qwen3-4b",
+"shard": 3,
+"verdicts": {
+"b5180bb4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live At Dekmantel Festival 2014' and Ben UFO is listed as performing. This is a live club/festival set."
+},
+"f4e02dc9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Boiler Room x Sugar Mountain 2025: Melbourne' \u2014 includes Ben UFO in the event. Boiler Room is a known DJ set platform. Even though the date is in the future, the profile says he performs at Boiler Room, and the format is a DJ set."
+},
+"83952902": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Movement Selects Vol.3' \u2014 this is a curated mix compilation. The channel is Sheehy, and it's not clear Ben UFO is performing or playing a set. The title suggests a mix series, and it lists only the volume, not that he is the DJ. This is likely a tracklist or mix by someone else featuring his music."
+},
+"344e3229": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Fabriclive 67 - Ben UFO (2013) Full Mix Album' \u2014 labeled as a 'Full Mix Album'. This is a mix album, not a live set or DJ performance. It's a compilation of tracks, not a live set or mix by him in real time."
+},
+"b88657c7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO - Live at The Shrine 4/30/2016' \u2014 clearly a live set at a venue. The format is live, and the artist is named directly. Matches profile of live performances."
+},
+"2c48795a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Hessle Audio with Ben UFO live at Hot Mass - 24 October 2022' \u2014 this is a live performance on a radio show (Hessle Audio on Rinse FM), which matches his known radio show and live appearances. It's a live set in a broadcast context."
+},
+"d236275c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO Boiler Room London DJ Set' \u2014 Boiler Room is a known DJ set platform. This is clearly a live DJ set at a venue, as per his performance history."
+},
+"8caa1b80": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live from the Adriatic 2018: Ben UFO & Craig Richards' \u2014 includes both DJs. This is a live festival set with two artists. Since Ben UFO is listed as playing, and it's a live event, it counts as a live set, even with a co-performer."
+},
+"62b1443f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO at RADAR | Dekmantel Festival 2026' \u2014 mentions a future festival (2026), but the format is a festival appearance. However, the date is in the future, and the profile says he performs at Dekmantel. Still, the title names him as playing at a festival. Even if speculative, it's a live set reference."
+},
+"ae080b41": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"75f3d071": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Ben UFO' in a live setting with Caribou in New York; includes 'live in New York' and 'USB002' suggesting a live DJ set. Even though the date is in the future (2026), the profile doesn't reject future dates. The context implies a live performance."
+},
+"6a19a4f0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Hessle Audio feat. Ben UFO' and specifies 'recorded live at Open Ground'. This is a live recording, and Hessle Audio is Ben UFO's label. The phrase 'feat.' might suggest collaboration, but in DJ context, it often means he's performing. Given the live setting, it's likely a live set."
+},
+"1d6de2e8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Ben UFO Feat Asbo' and 'B2B' in a Sub FM session. Sub FM had 'Ruffage Sessions' which Ben UFO participated in. 'B2B' indicates a live DJ set with another artist. This is a live session, clearly a DJ set."
+},
+"14a92d51": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is simply 'Ben UFO' and lists a date (2024.10.6) and channel (Chengdu Community Radio). No context about content. Could be a mix or a set, but no indication of format. Without more context, it's ambiguous whether it's a live set or a mix. However, since it's under a radio channel and named after Ben UFO, it's likely a DJ set or mix."
+},
+"56a77e45": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO x Paul Woolford B2B / Hessle Audio / Rinse FM'. B2B clearly indicates a live DJ set with Paul Woolford. The label and radio show context support this being a live performance. This is a confirmed B2B set."
+},
+"9f400b05": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Mix For Hessle Audio W/ Ben UFO' by Mor Elian. This is a mix made for a label, and 'W/' suggests Ben UFO contributed, but it's not clear if he played live or just provided tracks. The title implies a mix, not a live DJ set. This is a mix, not a live performance."
+},
+"1fed688b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Ben UFO - Resident Advisor 500 (28 December 2015)' \u2014 this is a feature in a magazine. RA 500 is a curated list or feature, not a live set or DJ performance. It's a tracklist or editorial feature, not a DJ set. This is not a live or performance recording."
+},
+"08982519": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO b2b Jackmaster b2b Oneman 3 hour Boiler Room 1st Birthday DJ Set'. Clearly a B2B set at Boiler Room, a major club event. The title explicitly states it's a DJ set. This is a live performance."
+},
+"be9b0c69": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Dekmantel Selectors 2019 (Closing set)' and the channel is Ben UFO. This is a closing set at Dekmantel, a major festival. The channel being Ben UFO suggests he performed it. This is a live set at a festival."
+},
+"cc669b24": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO @TheLotRadio 03-01-2023'. This is a live set on The Lot Radio, a known DJ platform. The format is clearly a live radio broadcast, which is a form of DJing. This is a live performance."
+},
+"a8e4c9a0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'b2b Ben UFO' and 'Live at ZeeZout 09.14 (Night)' \u2014 this is a live set with Ben UFO as one of the performers. Even though Joy Orbison is listed as the channel, the title indicates a live DJ set featuring Ben UFO."
+},
+"17787b42": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Ben UFO | Kiosk Radio x The Lot Radio x Horst Festival 2024' \u2014 clearly a live event at a festival, with Ben UFO performing. The format is a live set at a festival, hosted by radio stations."
+},
+"c9197746": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO | Kiosk Radio | November 10 2021' \u2014 this is a live recording from a radio show. Ben UFO is playing on Kiosk Radio, which matches his known performances. Radio shows count as recordings of him DJing."
+},
+"ac700ddb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO @BBC R1 Residency - Show 1' \u2014 this is a direct reference to his BBC Radio 1 residency, which is a live DJ set. The title clearly indicates a live performance."
+},
+"49254747": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'MIX100 \u2013 Ben UFO (\u502b\u6566) [Live at \u5b80]' \u2014 this is a live set at a club in London, with Ben UFO performing. The 'Live at' designation confirms it's a live recording. Even though it's part of a mix series, the title specifies he is playing live."
+},
+"5c398258": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Rinse FM Podcast - Hessle Audio w/ Ben UFO, Peder Mannerfelt, Fabric & _moonraker' \u2014 this is a podcast, and the format is a talk or discussion, not music playing. The word 'podcast' and the presence of 'w/' indicate a talk show, not a DJ set."
+},
+"9c1da31e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'RA.500 Ben UFO' \u2014 Resident Advisor features a mix or review of Ben UFO's work. This is a magazine-style feature, likely a mix or editorial, not a live DJ set. It's not a recording of him playing live or on air, but a curated feature."
+},
+"529f9be0": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'RA.238 Ben UFO' \u2014 similar to 26, this is a Resident Advisor mix or feature. RA often publishes mix series or reviews, not live recordings. No indication of live performance or DJ set. This is a mix or editorial, not a live set."
+},
+"cfcdc119": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO @TheLotRadio 04-23-2025' \u2014 this is a future date (2025), but the format is a live set at The Lot Radio. Even though the date is in the future, the title clearly indicates a live performance by Ben UFO on a radio show. The profile confirms he plays at The Lot Radio."
+},
+"9e4c89f9": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Hessle Audio feat. Ben UFO: Recorded Live at Corsica Studios, 2026 - 02 March 2026' \u2014 this is a live recording, but the title says 'feat.' which implies Ben UFO is a featured artist, not necessarily the main DJ. Also, it's a studio recording, not a live club or radio set. 'Feat.' suggests he's not the primary performer. This is ambiguous, but given the profile, Hessle Audio shows are often DJ sets. However, 'feat.' and studio setting suggest it's not a live DJ set. More likely a studio mix or feature."
+},
+"bbc6ebac": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Ben UFO in an Essential Mix, which matches his BBC Essential Mix history."
+},
+"2c954464": {
+"v": "keep",
+"kind": "set",
+"reason": "Essential Mix 2013 matches his BBC Essential Mix (2013) residency."
+},
+"5a03b632": {
+"v": "keep",
+"kind": "set",
+"reason": "Sustain Release is a known mix series by Ben UFO, likely a curated live or mix set."
+},
+"11a66b99": {
+"v": "keep",
+"kind": "set",
+"reason": "Ben UFO is listed in a Boiler Room x Dekmantel set, which he performs at."
+},
+"df95e1d1": {
+"v": "keep",
+"kind": "set",
+"reason": "Ben UFO is listed in a Boiler Room x Dekmantel set, confirmed in profile."
+},
+"cc03583f": {
+"v": "keep",
+"kind": "set",
+"reason": "BBC Essential Mix 2013 is explicitly mentioned in his profile."
+},
+"ce33b1c5": {
+"v": "keep",
+"kind": "set",
+"reason": "Live at Factory, Osaka \u2014 a documented international live performance, though venue not in profile, still valid live set."
+},
+"6d36a6c2": {
+"v": "keep",
+"kind": "set",
+"reason": "Ben UFO performs at The Lot Radio, as per profile."
+},
+"81173822": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B with Joy Orbison at XOYO, confirmed in profile as a collaboration venue."
+},
+"db08e4aa": {
+"v": "unsure",
+"kind": "set",
+"reason": "No known real venue or performance context; 'planet Flexmodia' is fictional or unclear."
+},
+"8f5bd7d3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Hessle Audio feat. Ben UFO' and specifies 'Recorded At Sustain Release 2025' \u2014 this is a mix or set featuring Ben UFO, likely a live or DJ set. Hessle Audio is his label, and he regularly performs on it. The context suggests a DJ set."
+},
+"f710db13": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'The Cover Mix: Ben UFO' \u2014 this is a mix series, and 'Cover Mix' typically refers to a DJ mix. Mixmag is a music magazine that publishes DJ mixes. Ben UFO is the featured artist, so this is a mix he created or curated."
+},
+"eaae8387": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live at Meredith Festival 2016' and the channel is Ben UFO \u2014 this is a live performance at a festival, clearly a live set by Ben UFO."
+},
+"6bb15d26": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO - UK Techno & Bass Set 2025 (RALLY Festival)' \u2014 explicitly states it's a set at a festival, and Ben UFO is the performer. Even though the channel is TechnoHypnosis, the title names him as the DJ."
+},
+"0857ac73": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO Gimme5 Outlook Festival Mix' \u2014 clearly a mix for a festival, and Ben UFO is the DJ. 'Gimme5' is a festival, and this is a mix he made for it."
+},
+"f8c40e6f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO Boiler Room DJ Set at Warehouse Project 2012' \u2014 explicitly a DJ set at Boiler Room, a well-known club event. This is a live set by Ben UFO."
+},
+"d9298c6b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Ben UFO - London in Transmission Podcast 001' \u2014 this is a podcast. The format is a podcast, not a music set. It's a talk or conversation, not DJing or playing music as a set."
+},
+"971c1507": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO at Dekmantel Festival 2023' \u2014 clearly a live performance at a festival. The channel is dekmantel, which hosts such events. This is a live set by Ben UFO."
+},
+"c64a9ff9": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Ben UFO - Dekmantel Podcast 154A' \u2014 this is a podcast, not a music set. The format is a talk or discussion, not a DJ set or live performance."
+},
+"5cbbc43f": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Hessle Audio mix for Ben UFO on Rinse FM' \u2014 this is a mix *for* Ben UFO, not by him. It's a mix created by someone else (ne\u0131nzer) for Ben UFO. The artist is not performing; it's a mix *of* his music. This is not a recording of Ben UFO DJing."
+},
+"71d5bcf0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Ben UFO' as a participant in a Rinse FM podcast, specifically a 'SaveFabric' event. This is a radio show or live event recording where he is actively playing music. Matches profile of radio show involvement."
+},
+"47bd730d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'B2B with G\u042fEG' recorded live at Rex, Paris. B2B sets are live DJ sets. Ben UFO is listed as one of the performers. Clearly a live set."
+},
+"68244fd6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO 30 min Boiler Room mix' \u2014 Boiler Room is a club/venue known for DJ sets. The term 'mix' here refers to a DJ set, not a track. Matches profile of Boiler Room performances."
+},
+"cbcc7804": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Ben UFO - Climate Of Fear - April '22'. Climate of Fear is a music project, not a venue or radio show. The title suggests a release or track, not a DJ set. No indication of a live performance or mix. Likely a track or EP, not a DJ set."
+},
+"79f6ea68": {
+"v": "keep",
+"kind": "set",
+"reason": "BR #47 Ben UFO \u2014 Boiler Room mix series. Boiler Room regularly features DJ sets. This is a mix episode, clearly a DJ set recording. Matches profile."
+},
+"3189ab6c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO 4 Hour Boiler Room DJ Set' \u2014 clearly a live DJ set at Boiler Room. Matches profile of performances at Boiler Room."
+},
+"72715e1f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO @TheLotRadio 10-24-2023' \u2014 The Lot Radio is a radio station. This is a live radio broadcast or recording of a DJ set. Matches profile of radio appearances."
+},
+"537fa0bb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO (Hessle Audio) @ Fabric 15.05.09 - Zonic radio show'. This is a radio show, not a live DJ set. The format is a radio show, and the title specifies it's a 'radioshow'. While he is playing, it's a radio broadcast, not a live club set. Still, it's a live performance in a radio context. Profile includes radio shows, so this counts."
+},
+"031e66cd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO - Essential Mix 1441 BBC Radio 1' \u2014 BBC Essential Mix is a well-known radio show where DJs play sets. This is a recorded radio mix, part of a regular show. Matches profile of BBC Essential Mix participation."
+},
+"2941f891": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO at RADAR | Dekmantel Festival 2026'. Festival date is in the future (2026), but the profile says he performs at Dekmantel. However, the title says 'at RADAR | Dekmantel Festival' \u2014 this is a festival appearance. But the date is in the future, and the profile doesn't mention future events. However, the rule says: 'never reject because a date looks old or in the future'. So even if future, it's still a live set. Also, it's a festival performance, which matches profile."
+},
+"39b25b8f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Guest Mix Ben UFO Opus' and is on Pete Tong's Radio 1 Show. Ben UFO is explicitly named as a guest contributor in a mix, which is a mix episode featuring his music. This is a mix, not a track or talk."
+},
+"a4386f4e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Rally Festival 2025 (Visionaire stage)' and channel is Ben UFO. Clearly a festival performance, likely a live DJ set. No ambiguity \u2014 Ben UFO is the performer at a live event."
+},
+"2852b0c1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO - Club Qu [CQ2]'. The format is a club recording with Ben UFO as the main artist. This is a DJ set recorded at Club Qu, likely a live set. Even though channel is Club Qu, the title names Ben UFO as the performer."
+},
+"8b85ff74": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'RA Live - 2016.06.17 - Ben UFO b2b Helena Hauff, S\u00f3nar Festival, Barcelona'. This is a b2b set at a festival, clearly a live DJ performance. Ben UFO is listed as a performer in a live set."
+},
+"9d20625f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Boiler Room #25 Hessle Audio Takeover w/ James Blake, Untold, Elgato & Ben UFO'. This is a Boiler Room set that includes Ben UFO as a featured DJ. It's a live club recording with Ben UFO performing."
+},
+"a60b3300": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is 'Hessle Audio feat. Ben UFO (recorded live at Oil, Shenzhen) - 01 December 2025'. The phrase 'feat.' suggests Ben UFO is a featured artist, not necessarily the main DJ. However, given the context of Hessle Audio shows and Ben UFO's role as co-founder, and the live recording at Oil, it's likely a live set. But 'feat.' is ambiguous \u2014 could imply he's a guest, not the main performer. Still, the recording is live and Ben UFO is involved. However, 'feat.' is a red flag \u2014 it may indicate he's not the primary DJ. This is a gray area."
+},
+"d7990094": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'Rinse FM - Hessle Audio Special - Ben UFO, Pearson Sound, Pangaea, Four Tet, Caribou + Joy Orbison'. This is a radio show featuring multiple DJs. The title lists Ben UFO as one of several performers. It's a radio show, not a live set. The format is a curated mix, not a live performance. This is a mix series episode, not a live DJ set."
+},
+"ad9cc8e0": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'Radio 1 guest mix for Ahadadream - Jan 2026 | channel: Ben UFO'. This is a guest mix *for* Ahadadream, uploaded by Ben UFO. The title says Ben UFO is the one making the mix. It's a mix, not a live set. But it's a mix created by Ben UFO, so it's a mix episode. This is a mix, not a live performance."
+},
+"1f7e87b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO (Live from Unsound Festival) - 24th December 2018'. Clearly a live performance at a festival. The phrase 'Live from' confirms it's a live set. Ben UFO is the performer."
+},
+"7edf3028": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Hessle Audio presents Ben UFO B2B Pearson Sound - 19 December 2024'. This is a b2b set, clearly a live DJ performance. Ben UFO is the main DJ, with Pearson Sound as a collaborator. This is a live set."
+},
+"a214a09a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Ben UFO 50 min Boiler Room DJ Set' \u2014 clearly a DJ set at Boiler Room, a venue he performs at. Matches profile."
+},
+"aef389ff": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Dirtybird Radio 360 - Ben UFO' \u2014 a radio show segment where Ben UFO is featured. Radio shows are included in the profile (e.g., Rinse FM, BBC)."
+},
+"4f76e99f": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Pitch Perfect 2023 EP.002 \u2014 Ben UFO' \u2014 includes 'EP' and 'tracklist' in the name. This is likely a track release or EP, not a DJ set or mix. Profile says to reject tracks or EPs."
+},
+"b6956198": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO - BBC R1 Residency - Show 2' \u2014 directly references a BBC Radio 1 residency, which is mentioned in the profile. This is a live set or recorded show."
+},
+"69d4e715": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO @ The Lot Radio 01-24-2020' \u2014 clearly a live recording from The Lot Radio, a venue he plays at. Radio show or live set."
+},
+"354f90d3": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Issue 136 Cover Mix: Hessle Audio (Ben UFO, Pearson Sound & Pangaea)' \u2014 this is a cover mix by a magazine, featuring multiple artists. Ben UFO is listed as part of a mix, but not necessarily playing. It's a tracklist-style mix, not a DJ set where he performs. Profile says to reject such tracklists."
+},
+"bd421d3e": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Ben UFO - Residency 2022-05-05 | channel: Seth Troxler \u2013 Essential Mix 2022' \u2014 this is a mix by Seth Troxler, and Ben UFO is listed as part of the mix. It's not a set he performed in; it's a mix made by another DJ. Profile says to reject if it's someone else's mix listing him."
+},
+"d7b12e28": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Myers Mix For Ben UFO on Rinse FM' \u2014 this is a mix *for* Ben UFO, created by E. Myers. It's not a set where Ben UFO plays. It's a mix of music *for* him, not a performance by him."
+},
+"17034f91": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Ben UFO - Recorded Live at fabric 15th Birthday Weekend' \u2014 clearly a live recording at fabric, a venue he performs at. Matches profile."
+},
+"fc1f9e0b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Hessle Audio with Ben UFO (Live Recording from Lost Village 2017)' \u2014 explicitly states 'live recording' and includes Ben UFO as the performer. A live set at Lost Village, which is a festival/club event. Matches profile."
+},
+"650b536c": {
+"v": "keep",
+"kind": "set",
+"reason": "Ben UFO is listed as a performer in a Boiler Room event, which is a club recording of a live DJ set."
+},
+"3796ef3e": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly labeled as a live performance at Lovebox with Ben UFO as a performer in an Essential Mix."
+},
+"5b024405": {
+"v": "keep",
+"kind": "set",
+"reason": "Hessle Audio is a radio show Ben UFO co-hosts; 'feat.' indicates he is a featured performer."
+},
+"64a29100": {
+"v": "reject",
+"kind": "track",
+"reason": "Title includes a track name ('Never Went to Blue Note'), suggesting a single or track, not a DJ set."
+},
+"1cd8c918": {
+"v": "keep",
+"kind": "set",
+"reason": "Ben UFO is the main performer in a long-duration live set at Nowadays Nonstop."
+},
+"7cf8f29a": {
+"v": "keep",
+"kind": "set",
+"reason": "Clearly labeled as a live performance at XOYO during a Hessle Audio show."
+},
+"15f0d91b": {
+"v": "keep",
+"kind": "set",
+"reason": "A mix titled with Ben UFO and Akanbi, indicating a collaborative DJ mix."
+},
+"fb50cad0": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title indicates a talk or lecture about DJing, not a music performance."
+},
+"cd9f1147": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Daniel Bell 60 Minute Mix' and is from Boiler Room, a known DJ mix series. Clearly a mix featuring Daniel Bell as a DJ."
+},
+"ca32b480": {
+"v": "keep",
+"kind": "set",
+"reason": "Title references Daniel Bell at Tresor Berlin, a well-known club. The date is 2001, which is within his active period. Even though it's from a historical archive, it's a recorded set at a club."
+},
+"1ce9c664": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Live @ WMF Berlin - Daniel Bell & Dave Turov'. This is a live set at a major techno festival, with Daniel Bell explicitly playing. The channel is Dave Turov's, but the content is a live performance."
+},
+"a1186025": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Daniel Bell DJ Set at ReSolute - October 17, 2015'. Clearly a DJ set at a club in NYC. Matches profile of live club performance."
+},
+"193e662f": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is a track titled 'Button-Down Mind Strikes Back!' (2003) \u2014 this is a single track, not a mix or set. Even though Daniel Bell is listed, it's a track, not a DJ set or mix."
+},
+"84b04286": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'DANIEL BELL STARCLUB 2001' \u2014 StarClub is a known club in Berlin. This appears to be a live set, though the channel is vintage. No indication of a talk or track. Likely a live performance."
+},
+"8ba075b4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Live @ Detroit Love, Canibal Royal Beach Club (Mexico)' \u2014 a live performance in Mexico. Daniel Bell is listed as playing. This is a live set in a club context."
+},
+"e405b436": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is a live set at Tresor Berlin, with Daniel Bell and others. This is a live performance at a major techno venue. Even though it's part of a larger event, it's a live set."
+},
+"7e4062bb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is a live set at Tresor Berlin, with Daniel Bell and others. This is a live performance at a major techno venue. Even though it's part of a larger event, it's a live set."
+},
+"18e14cca": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is a talk titled 'Daniel Bell: China's Meritocracy & Economic Statecraft' \u2014 this is a lecture or talk, not a music performance. Clearly not a DJ set."
+},
+"0a33ba99": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Daniel Bell @ Studio Mix 2010' \u2014 a mix titled with Daniel Bell as performer. Studio mixes are typically DJ sets. Even though the channel is Andreas W, the title explicitly names Daniel Bell as part of the mix."
+},
+"d9c6fc32": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Daniel Bell' at 'LA BOUM DE LUXE FM4, VIENNA-AUSTRIA' \u2014 a radio show or broadcast. The context is a radio program (FM4), and the format is a collection of techno tracks. Given Daniel Bell's profile, this fits a radio or live broadcast context. The date is 2001, but we ignore dates."
+},
+"89bd9ac0": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is a talk show: 'Daniel Bell Reveals How He Discovered His Ridiculous Strength' \u2014 clearly a talk or interview about fitness, not a music performance. This is a name match but in a non-music context."
+},
+"5ee4acfe": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Daniel Bell - Fuse In Festival, Detroit (28.05.2005)' \u2014 explicitly a festival in Detroit, where Daniel Bell is known to perform. This is a live festival recording."
+},
+"91099a5d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Daniel Bell (DBX) @ Neue Heimat, Stuttgart 18/07/1998' \u2014 specifies a venue and date, and Daniel Bell is listed as DBX, which matches his alias. This is a live club set in Stuttgart, consistent with his touring history."
+},
+"a39c1632": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Live @ S.A.S.H By Day - 3/12/17 w/ Daniel Bell' \u2014 clearly a live set with Daniel Bell as a performer. 'Live' and 'w/' indicate a DJ set at a venue."
+},
+"b2b7e93e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Rich Korach B2B Sassmouth at AYLI with Robag Wruhme & Daniel Bell' \u2014 a B2B set (two DJs playing together), with Daniel Bell as a collaborator. This is a live DJ set in a club context."
+},
+"dc3f3b71": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Party Lovers Mix' \u2014 uploaded by Daniel Bell, but the title is just 'Party Lovers Mix', not specifying that he is playing. It's a mix, but no indication of him performing. Could be a mix he made, but without explicit performance context, it's ambiguous. However, since it's a mix uploaded by him, and no other artist is named, it's likely a mix he created \u2014 possibly a DJ mix. Still, the title doesn't say 'DJ set' or 'live'. This is a risk. But in the profile, he produces and mixes. Mixes are included in the profile as valid recordings. So unless it's a tracklist or single, it's acceptable."
+},
+"9f41ab76": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Daniel Bell on Censorship, Governance, Surveillance...' \u2014 clearly a talk or lecture, not a music performance. This is a talk show or interview, not a DJ set."
+},
+"ac9006b1": {
+"v": "reject",
+"kind": "track",
+"reason": "Title: 'Daniel Bell \u2013 The Lost Traxx E.P.' \u2014 this is an EP, a single release, not a DJ set or live performance. It's a track or album, not a mix or set."
+},
+"87d00187": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Daniel Bell' in a session labeled 'instore session' at Yoyaku Record Store, which is a music-focused session. Given the context of record stores and DJ sessions, this is likely a DJ set or mix."
+},
+"8d2d30b4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions Daniel Bell at 'la boum deluxe fm4 Vienna' on Feb 2, 2001. This is a club/festival event in Austria, and the format is a live recording. Though the date is early, the profile confirms Daniel Bell performs in Europe, including Austria via FM4 circuits."
+},
+"cda9ba99": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'What The West Get Wrong About China - Professor Daniel Bell'. This is clearly an academic talk by a professor, not a music performance. The profile specifies a techno DJ, not a scholar."
+},
+"0ad36f55": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Adam X meets Daniel Bell - Sonic Groove Podcast SGX011'. This is a podcast where two DJs are featured, likely in conversation. The format is a podcast, and the structure suggests talk or discussion, not a DJ set or music performance."
+},
+"137bbe21": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Daniel Bell 2st set 6/3/16' \u2014 '2st set' likely means second set. This is clearly a live DJ set at a venue, likely a club or festival. Matches profile of performing live sets."
+},
+"f0355eae": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is '2.7.2005 \u2013 Live @ Club Distillery, Leipzig \u2013 Daniel Bell'. Explicitly labeled as a live set at a club in Leipzig, Germany. Distillery Leipzig is a known techno venue. Matches profile of live performances in Germany."
+},
+"baff7b59": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Daniel Bell @ RTS.FM Berlin Studio - 14.01.2010: Dj Set'. Clearly labeled as a DJ set at a radio station in Berlin. Matches profile of radio and club performances."
+},
+"4e296bd6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Beijing Does Not Want To Rule The World | Prof. Daniel Bell'. Again, this is a professor discussing political topics \u2014 not a music performance. Not a DJ or techno set."
+},
+"ec05af56": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Daniel Bell @ Blackred Pres. DanceMaterial - Distillery Leipzig 2005 - Detroit Techno - Dub Techno'. Clearly a live performance at a techno venue in Leipzig. The genre matches his known style. Even though it's a mix of events, the title indicates a live DJ set."
+},
+"ba33e0a7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Daniel Bell (DBX) mix on tape'. This is a mix, possibly a recorded set or mixtape. The format is a mix, and it's attributed to Daniel Bell (as DBX), which aligns with his work. Though labeled 'on tape', it's likely a DJ mix or set."
+},
+"00b74cab": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'XLR8R Podcast 448: Daniel Bell' \u2014 clearly a podcast featuring Daniel Bell as a guest, likely playing music. XLR8R is known for techno and DJ content. This fits the profile of a podcast mix or guest appearance."
+},
+"d49a3f04": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Daniel Bell @ The Vault Radio Show (2002)' \u2014 specifies a radio show appearance. Radio shows where DJs play music are valid recordings. Even though the date is early (2002), the profile allows recordings from 1998 to 2026, and the format is a radio set."
+},
+"8d1c1460": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Daniel Bell: The Destruction of Addiction - PART 1' \u2014 this is a talk show or educational segment, not a music set. The content is about addiction, not DJing or playing music."
+},
+"8abd4c08": {
+"v": "reject",
+"kind": "track",
+"reason": "Title: 'Daniel Bell \u2013 The Button Down Mind Of Daniel Bell' \u2014 this appears to be a mix or themed compilation, possibly a mixtape or podcast. However, the title suggests a conceptual or personal project, and the phrase 'The Button Down Mind' is likely a track or theme, not a DJ set. No indication of live performance or club context. Could be a tracklist or mix of his own music, not a DJ set."
+},
+"1cfd6021": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: '#497 Daniel Bell - Just Hierarchy: Why Social Hierarchies Matter...' \u2014 this is a talk or lecture on social theory, clearly not a music performance. Daniel Bell is the name of a sociologist here, not a DJ."
+},
+"f52b6869": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Daniel Bell @ Silo 23-06-2007' \u2014 'Silo' is a well-known techno club in Berlin. The format is a live set at a venue. This matches the profile of a live club recording in Germany."
+},
+"089a119e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Daniel Bell @ Tresor, Berlin @ 13 Jahre Tresor, Tresor Berlin 12.3.2004' \u2014 Tresor is a major techno festival/club in Berlin. This is a live set at a major venue, clearly a club recording. Even though it's from 2004, it's within the profile's timeline and context."
+},
+"d4f354a1": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Dabbin Daniel Podcast Episode #6 Peer Pressure' \u2014 this is a podcast hosted by Daniel Bell, but the title is about a topic (peer pressure), not music. It's a talk or discussion, not a DJ set."
+},
+"0eb8c7d0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Daniel Bell - Globus Mix Vol 4 - The Button Down Mind Of Daniel Bell' \u2014 this is a mix titled 'Globus Mix Vol 4', and includes 'The Button Down Mind Of Daniel Bell'. The format is a mix compilation, likely a mix by Daniel Bell. Mixes are valid if they are DJ sets or mixes he made. This is a mix series, not a single track or talk."
+},
+"4a1f4710": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: '15 Minutes with Andy *Season 3: Podcast #3* with Daniel Bell' \u2014 this is a podcast interview, not a music performance. The format is a talk, not a DJ set."
+},
+"bfaf745f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Daniel Bell Live Stream' and specifies a venue (The Stillery, Nashville), which is a club/festival setting. The format is a live stream, indicating a live DJ set. Matches profile of performing in US (Nashville)."
+},
+"42d3aaf4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title states 'Daniel Bell @ 12 Years Tresor, Tresor, Berlin 15.3.2003' \u2014 Tresor is a well-known Berlin techno club. The mention of a specific date and venue strongly indicates a live DJ set at a major techno event. Fits profile of performing in Germany (Berlin)."
+},
+"2bd88ef1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Daniel Bell @ Somewhere in aalborg - 16.09.05' \u2014 a location in Scandinavia (Aalborg, Denmark). The format suggests a live set at a club or event. Though the date is early (2005), the profile includes Scandinavia and live performances. No indication of talk or track. Matches known performance circuits."
+},
+"ab61b1a1": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Dabbin Daniel Podcast Episode #3 Black Entrepreneurship & Ownership' \u2014 this is a podcast episode discussing entrepreneurship. The name 'Daniel Bell' appears, but it's not as Daniel Bell the DJ; instead, it's a podcast about a topic, and the name is likely a name match or confusion. The format is a talk, not a music set. Rejects as talk."
+},
+"43c03210": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'DANIEL BELL (Accelerate/USA) @ CLOSER || EPISODE 10 || 28.11.2014' \u2014 'Closer' is a podcast/mix series, and the title explicitly states Daniel Bell is featured. Given the format (episode of a mix series), this is a podcast mix where he plays music. Fits profile of guest mixes and podcast appearances."
+},
+"fb7bd6d7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live at Igloofest 2015' and is uploaded by fredeverything channel. This is a live DJ set at a festival, consistent with his style and known performances."
+},
+"137ba738": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Fred Everything (Episode #12, Live from The Basement)' and is from Defected Broadcasting House. This is a live broadcast episode, clearly a live DJ set, and matches his radio ties. The format is a live set, not a talk."
+},
+"7a492289": {
+"v": "reject",
+"kind": "set",
+"reason": "Title says 'ft. Fred Everything (Warm-Up Set)' \u2014 'ft.' indicates he is a guest, not the main performer. The set is Tony H's warm-up, so Fred Everything is not the primary DJ. This is not a recording of him playing live as a main act."
+},
+"70604c60": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title says 'Live @ Comics Club, Bulgaria' and includes Fred Everything. However, the date is 2004 \u2014 which is 20 years before the profile's start (2010). Profile says he plays in Montreal, NYC, etc., but doesn't mention Bulgaria. Also, 'Comics Club' is not a known house club venue. No evidence of such a performance in his known circuit. Possible namesake or outlier."
+},
+"cce065f1": {
+"v": "reject",
+"kind": "set",
+"reason": "Title is 'Lazy Dubs Sessions Mixed by Fred Everything' \u2014 this is a mix, not a live set. The term 'mixed by' implies it's a curated mix, not a live performance. Also, 'Continuous Mix' suggests it's a compilation, not a live set. This is a mix, not a live recording."
+},
+"d7edda69": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything B2B Trevor - Salon Daom\u00e9 03.14.22 PT1' \u2014 clearly a back-to-back set with Trevor Walker at Salon Daom\u00e9, a venue mentioned in the profile. B2B sets are a known format for Fred Everything. Uploaded by his channel. This is a live set."
+},
+"0a34aa75": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything DJ set at 93 Feet East with SoulFreakah + DJ Dubois' \u2014 this is a live DJ set at a venue, with co-performers. Matches his style of long sets and collaborations. Uploaded by Deep into Soul, but the title names him as the DJ. This is a live set."
+},
+"f00432e9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything B2B Bowly OJPB @ Purr & Lazy Days Pied - Du - Courant' \u2014 B2B with another DJ, at a venue mentioned in the profile (Purr & Lazy Days Pied). This is a live back-to-back set, consistent with his known performances. Uploaded by his channel."
+},
+"0bdbecf7": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is 'Fred Everything Vinyl Jam Summer 2025' \u2014 this is a future date (2025), which is not possible. The profile doesn't mention a 2025 event. Also, 'Vinyl Jam' is likely a session or mix, not a live set. The future date makes it speculative. Cannot confirm it's a real live set."
+},
+"4b27b60b": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"b1d85949": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Fred Everything KCRW Mix' and is uploaded by fredeverything channel. Mixes are live or DJ recordings. KCRW is a radio station, so this is a radio DJ set."
+},
+"d97b8cfa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Traxsource LIVE! #30 with Fred Everything' \u2014 'LIVE!' indicates a live DJ set. Traxsource hosts live DJ sets. Fred Everything is named as a participant, so this is a live set."
+},
+"1aec3c23": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Lazy Days Podcast 61 /// Fred Everything' \u2014 this is a podcast episode. The profile says Fred Everything hosted the Lazy Days Podcast (100 episodes, 2010\u20132021). Podcasts are talk shows, not music sets. This is a talk, not a DJ performance."
+},
+"74ddac74": {
+"v": "reject",
+"kind": "talk",
+"reason": "Same as #12 \u2014 'Lazy Days Podcast 20' with Fred Everything. Podcast episode. Not a music performance; it's a talk show. Even though he hosts, the format is conversation, not DJing."
+},
+"0e710224": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Sonar Kollektiv Radio 11 \u2013 Fred Everything'. Radio show. Radio recordings are typically DJ sets. Fred Everything is featured, likely as a DJ. This is a radio DJ set."
+},
+"d4506a56": {
+"v": "reject",
+"kind": "talk",
+"reason": "Same as #12 and #13 \u2014 Lazy Days Podcast episode with Fred Everything. Podcast format, not a music performance. It's a talk show, not a DJ set."
+},
+"5f0f34e5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything The Goods guest mix on CKUT 90.3 FM Pt 1'. 'Guest mix' implies a DJ mix recorded for a radio station. CKUT is a radio station. This is a mix, likely a DJ set."
+},
+"fb96df41": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Puls Kluba #006 - Atjazz b2b Fred Everything (Live @ Peti Kupe, Zagreb)'. Explicitly labeled 'Live @ Peti Kupe, Zagreb' and 'b2b' with Atjazz. This is a live back-to-back set at a club. Clearly a live DJ performance."
+},
+"a06a8131": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything - Razor'N'Tape In The Shop (Vinyl Set)'. The phrase 'Vinyl Set' suggests a curated collection of vinyl tracks, possibly a set of music played in a shop. However, it's not clear if it's a live DJ set or a pre-recorded tracklist. The format is ambiguous \u2014 could be a vinyl shop mix or a tracklist. But since it's labeled as a 'set' and Fred Everything is the name, and he's known for vinyl-based house, this is likely a DJ set in a shop context."
+},
+"0ec3672e": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Son of Man - Fred Everything - Shur-I-Kan - Jimpster \u25c6 True Romance (Remi G Mix)'. This is a track or remix title. It references Fred Everything as a contributor to a track, not as a DJ playing a set. It's a single track, not a DJ performance. The format is a remix of a track, not a live or mix set."
+},
+"d3bf6ac7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Lazy Days Podcast 28' and Fred Everything is listed as a participant. The Lazy Days Podcast is hosted by him and features his DJing and commentary. This is a podcast mix where he plays music, consistent with his profile."
+},
+"e23bf8d9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Lazy Days Podcast 49' and 'Fred Everything, August 2015'. Podcast episodes are part of his long-running show where he plays music. Even though the date is in the past, it's clearly a podcast mix where he DJs."
+},
+"d545338e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Mixed by Fred Everything' \u2014 this is a session mix, likely a DJ mix for Cromarti Records. Since he is explicitly named as the mixer, it's a recorded set, even if not a live club session. Fits his profile as a DJ and producer."
+},
+"d1233eff": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title includes 'D Fred everything, maceo plex & more' in a b2b context. However, it's a mix titled 'VINYL MIX- BrunoNumerouno and Danny Chase b2b Deep' \u2014 Fred Everything is listed as a guest, not the primary mixer or performer. This is a mix by others, with Fred as a guest. Not a recording where he plays as a main DJ."
+},
+"f58520fb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Atjazz & Fred Everything' with a date in the future (April 2026). This is a b2b set with Atjazz, which matches his known back-to-back performances. Even though the date is future, the title clearly indicates a live DJ set with Fred Everything."
+},
+"92ed63be": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Deeper Shades Of House 573 w/ excl. guest mix by FRED EVERYTHING' \u2014 explicitly states 'guest mix by Fred Everything'. This is a mix he created for a magazine/show, not a live set. Still a DJ mix, and he is the one producing it. Fits his profile as a DJ and mix producer."
+},
+"4e4b418c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'FRED EVERYTHING LIVE AT STEREO NOV 23 2024 (OPENING FOR HONEY DIJON)' \u2014 clearly a live performance at Stereo, a venue mentioned in his profile. 'Live at' confirms it's a live set. Even if the date is in the future, it's a live recording."
+},
+"d6a12c94": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Toru S. Best of Classic N Deep HOUSE Dj Mix June 18 2026 ft. Fred Everything, Todd Terry, Dj Pierre' \u2014 Fred Everything is listed as a guest feature, not the one mixing or playing. This is a mix by Toru S., with him as a guest. Not a recording where he plays."
+},
+"9b0f4888": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is '20 years of Lazy Days/30 years of Fred Everything Live @ Pik Nic Electronik 05/25/25' \u2014 explicitly says 'Live' and references his long-running podcast and live events. This is a live set at a venue, consistent with his profile. Even though the date is in the future, it's clearly a live performance."
+},
+"a3e6000e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Lazy Days Podcast 32 /// Fred Everything, February 2013' \u2014 part of the podcast series he hosted. This is a podcast where he plays music and discusses house music. It's a mix of music and commentary, but the core is DJing."
+},
+"444a7c40": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Fred Everything x Ralph Lawson' and is labeled as a podcast ('The BoAt Pod'). Since it's a podcast mix and Fred Everything is named as a participant, it's a mix or live set in a podcast format."
+},
+"55c4a996": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title says 'Live in Montreal' and is uploaded by the channel 'Mixtape Magic'. However, no clear indication that it's a performance by Fred Everything \u2014 could be a mix or compilation. No direct mention of Fred Everything playing in the title or description. Unlikely to be confirmed."
+},
+"bae5fe20": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Fred Everything Live At Cercle, Quebec City, Dec 4th 2016' and is uploaded by the artist's own channel. This is a clear live set recording."
+},
+"4fb8e0f0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Lazy Days Recordings 20th Anniversary with AtJazz and Fred Everything' \u2014 Fred Everything is named as a participant in a live event. This is a live set, likely a back-to-back or joint performance."
+},
+"248dd21b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything Defected Broadcasting House Show #11 May 2023' \u2014 this is a radio show hosted by Defected, featuring Fred Everything. It's a live broadcast or radio mix, which counts as a DJ set."
+},
+"969c7301": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything - Live Session Maison Vol 5' \u2014 'Live Session' implies a live performance, and it's under the artist's channel. This is clearly a live set."
+},
+"da4ae11f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything guest mix on KaySoul show @ Oroko.live Ghana' \u2014 this is a guest mix on another DJ's show. A mix is a DJ set, even if it's a guest appearance."
+},
+"4aa44f45": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything - Mix for The Shelter Liverpool radio show on SVARA 19-07-25' \u2014 this is a mix made for a radio show, which is a DJ set, even if it's a pre-recorded mix for broadcast."
+},
+"eeb9aae2": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is 'Fred Everything - DJ Set 01 [2001]' \u2014 despite the date, it's labeled as a DJ set. However, the channel is 'polarbear', not the artist's own. No confirmation that Fred Everything played it. Could be a tracklist or compilation. Unlikely to be a live set by him."
+},
+"bed1493c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Traxsource LIVE! (#0242) [House channel] (guest Fred Everything)' \u2014 Fred Everything is listed as a guest, and it's a live radio session. This is a live set, even if it's a guest appearance on a channel."
+},
+"d3fbf47d": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title mentions 'Music and Football 1:1 with Fred Everything' \u2014 this is a talk-style segment combining music and football, not a DJ set. The format suggests a conversation, not music performance."
+},
+"f33356eb": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live Session Maison Vol 2' by fredeverything \u2014 'Live Session' implies a live DJ set, and the channel is his own. Matches profile of live performances at venues like Maison."
+},
+"495a8928": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Digging Deep #5 w/ Fred Everything' \u2014 'w/' indicates collaboration, and 'Digging Deep' is a radio show format. Radio show with Fred Everything playing music, likely a DJ set."
+},
+"0bf00747": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything \u2022 DJ Set \u2022 Le Mellotron' \u2014 clearly a DJ set at Le Mellotron, a venue mentioned in the profile. Direct match."
+},
+"4f58f711": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Dirty Disco 645: Deep House Warmth, Barcelona Energy & Atjazz x Fred Everything\u2019s 8 Days' \u2014 includes 'Atjazz x Fred Everything\u2019s 8 Days', indicating a collaborative set or mix. Fred Everything is featured in a set, likely a back-to-back or mix. Matches profile of B2B with Atjazz."
+},
+"05dc5bb1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything - Live Session Maison Vol 3' \u2014 same format as #41, live session at Maison, a venue mentioned in profile. Clearly a live set."
+},
+"7b64e125": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything B2B Trevor - Salon Daom\u00e9 03.14.22 PT2' \u2014 explicitly a B2B set with Trevor Walker at Salon Daom\u00e9, a venue mentioned in profile. Matches known back-to-backs."
+},
+"43eb0245": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Atjazz B2b Fred Everything @ Peti Kupe Zagreb Jan 26 2024' \u2014 B2B with Atjazz at Peti Kupe in Zagreb, a city mentioned in profile. Clearly a live set with Fred Everything."
+},
+"1e60650e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Lost My Dogcast 006 - Fred Everything' \u2014 'Dogcast' is a podcast, and the format is a podcast episode. While it may include music, it's a talk-style podcast, not a DJ set. No indication of music performance."
+},
+"2704cbf0": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Cadenza Podcast | 178 - Fred Everything (Source)' \u2014 clearly a podcast episode. The format is a talk or interview, not a DJ set. Even if he plays music, it's within a talk show."
+},
+"2a41ea9a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything | House of OM | 2005' \u2014 includes Fred Everything as performer. Despite date being early (2005), profile confirms OM Records ties and Montreal-based house DJ activity. No indication it's a track or talk. Likely a DJ set."
+},
+"b4eb5cfa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fred Everything (Episode #10) - Defected Broadcasting House'. Defected Broadcasting House is a radio show where Fred Everything is listed as a guest. This is a podcast/radio mix, not a talk or track. Profile confirms Defected ties."
+},
+"774583d0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Defected In The House Radio Show 11.07.16 Guest Mix Fred Everything'. This is a radio show guest mix. Profile confirms Fred Everything has appeared on Defected Broadcasting House. A mix hosted by Defected, featuring Fred's set \u2014 counts as a mix or radio show. Falls under podcast/mix category."
+},
+"06c98ea6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fred Everything Live @ Gorg-O-Mish October 12th 2025'. Clearly labeled 'Live' and includes Fred Everything. Date is in the future, but profile says ignore dates. This is a live club performance. Even if future, it's a live set."
+},
+"dea15a26": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Defected In The House Radio 15.02.16 Guest Mix Fred Everything'. Similar to #52 \u2014 a radio guest mix. Profile confirms Defected ties. This is a radio mix, not a talk or track. Fred is a guest performer."
+},
+"bb827199": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fred Everything Live @ Salted Music Party - Winter Music Conference 2015'. Clearly labeled 'Live' at a music event. Profile confirms live performances. Even if from a third-party channel, it's a live set."
+},
+"971ed9da": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Om:Masters by Fred Everything (Continuous Mix)'. Fred Everything is the creator and title owner. This is a continuous mix, likely a DJ set. Profile confirms Om Records ties. This is a mix made by Fred Everything, not a tracklist or talk."
+},
+"9eb759fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Traxsource LIVE! 481 with Fred Everything'. 'LIVE!' and 'with Fred Everything' indicates a live DJ set. Profile confirms Traxsource as a platform where he performs. This is a live set."
+},
+"63ce085c": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title: 'Vinyl Dj Set 2020 - Deep House/ Funky House (MAW, Fred Everything, Lawnchair Generals)'. This is a set with multiple artists listed. Fred Everything is only one of several DJs. The title lists a group, not a solo set. This is a tracklist or collaborative mix, not a solo performance. REJECT."
+},
+"1e1c3785": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Fred Everything Live @ OM Miami 2010'. Clearly labeled 'Live' at OM Miami. Profile confirms OM Records ties and live performances. Even though it's from 2010, date is ignored. This is a live set."
+},
+"fe2a4cbf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything guest mix on CKUT' \u2014 a guest mix implies he played music, even if not the host. Mixes are valid if he is listed as playing."
+},
+"e0ba143a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything Live @ fabric' \u2014 clearly a live DJ set at a venue. Matches profile of live performances."
+},
+"d97af673": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Atjazz B2B Fred Everything Live @ In My System Worcester' \u2014 B2B live set with Fred Everything. Explicitly a live performance."
+},
+"64d3372a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything | Shift Radio' \u2014 radio show mix, likely a DJ set broadcast. Radio shows are valid if music is played."
+},
+"44c03dba": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything Live DJ set @ THIS! for Viva Recordings' \u2014 explicitly a live DJ set. Even if date is in future, profile says he plays long sets and back-to-backs, so valid."
+},
+"62965988": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Lazy Days Podcast 85 /// Fred Everything' \u2014 this is a podcast episode, not a music set. It's a talk show, not a DJ performance."
+},
+"6286077d": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title says 'Fred Everything - Live Mix Part 1 (2001)' \u2014 labeled as a 'live mix', but channel is 'Golden Yearz', not Fred Everything's. Also, 2001 is early, and profile says he started in 2010. Possible name conflict or misattribution."
+},
+"31815e45": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Trevor Walker B2B Fred Everything' \u2014 a b2b set with Trevor Walker. Profile confirms he often plays back-to-backs with them. Clearly a live DJ set."
+},
+"2eb5e17b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything - Guest mix on Metropolis KCRW' \u2014 a guest mix on a radio station. Mixes are valid if he is playing music."
+},
+"33f31d42": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Lazy Days Podcast 54 /// Fred Everything' \u2014 again, a podcast episode. Not a music set or live performance. It's a talk show."
+},
+"ef635e1e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Fred Everything (Canada)' and is labeled as a 'Deep House Set' on a channel (Mr Vinyl) known for vinyl-only DJ sets. Matches profile of vinyl-based house DJ."
+},
+"976cfda5": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title lists Fred Everything among other artists in a 'History of House Music' tracklist. This is a compilation of tracks, not a DJ set or performance. No indication of live or DJ activity."
+},
+"d563bf1a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Fred Everything \u2022 DJ set' and is posted on Le Mellotron, a venue/location associated with Montreal house music. Matches profile of live DJ sets at venues like Sans Soleil or Salon Daom\u00e9."
+},
+"dba3863c": {
+"v": "keep",
+"kind": "set",
+"reason": "SlothBoogie Guestmix #281 - Fred Everything. This is a guest mix, meaning Fred Everything contributed a mix to a mix series. A mix is a curated set, even if not live. Profile includes guest mixes."
+},
+"d92f76ee": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Live Set from Soul Hop presents Fred Everything @ Open Studios'. Clearly a live performance at a venue. Matches profile of live sets and back-to-backs."
+},
+"ed57de50": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything - Live Session Maison Vol 8 05/23/20' and posted on fredeverything's own channel. 'Live Session' implies a live performance, likely at Maison, a known Montreal venue."
+},
+"9a99e8dd": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is the Lazy Days Podcast, which Fred Everything hosted (100 episodes, 2010\u20132021). It is a talk-based podcast, not a music performance. Talks are rejected per rules."
+},
+"0854575b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Deeper Shades Of House #851 w/ exclusive guest mix by FRED EVERYTHING'. This is a guest mix, not a live set or performance. A mix series episode where he contributed a mix. Profile includes such mixes."
+},
+"fc072463": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Fred Everything - DJ Mix' for a 2025 event. The event is in the future (Rave the Planet 2025), but the profile says he plays mixes. However, it's a mix for a show, not a live set. Still, it's a DJ mix, which fits the profile. Even if future, it's a mix, not a track or talk."
+},
+"17706284": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"c4461199": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Fred Everything as a performer in a DJ mix titled 'Lazydaze 12', with a long duration (120 min), and the channel is known for DJ sets. Matches profile of deep, vinyl-based house DJ playing live sets."
+},
+"f5a5bd34": {
+"v": "reject",
+"kind": "talk",
+"reason": "This is an episode of the Lazy Days Podcast, which is a talk show hosted by Fred Everything. It involves conversation, not music performance. Matches rejection criteria for 'talk' content."
+},
+"062910a3": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly labeled as a 'Live from Sans Soleil, Montreal' mix by Fred Everything. Matches profile of live house DJ performances at venues like Sans Soleil. Clearly a live DJ set."
+},
+"a983f0ec": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Phil Weeks @ H2O Club' and includes a date and location. Matches profile of Paris-based DJ playing at H2O Club. Clearly a live set."
+},
+"29e3c97e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Phil Weeks Live @ Get Underground - Rex Club/Paris' \u2014 matches profile locations and live format. Channel is Phil Weeks' own. Clearly a live set."
+},
+"26c799d2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live - Unreleased Robsoul' \u2014 explicitly states Phil Weeks is playing live, and it's under Robsoul, his label. Even if unreleased, it's a live recording."
+},
+"af7f6110": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks @ Magna Carta - Sankeys Ibiza' \u2014 matches profile of playing in Ibiza. Location and name confirm live DJ set."
+},
+"2f672e74": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Arturo Garces @ Robsoul Live / San Francisco' \u2014 features Arturo Garces, not Phil Weeks. This is a name mismatch. Phil Weeks is not the performer here."
+},
+"89dba21f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Cadenza Podcast | 093 - Phil Weeks (Cycle)' \u2014 this is a podcast episode where Phil Weeks is a guest. It's a podcast, not a music set. Talks about music, not live DJing."
+},
+"83eaea86": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live @ Robsoul Party - Rex Club' \u2014 clearly a live set at a known venue in Paris. Matches profile and location."
+},
+"1da75bc6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'C.J. Larsen @ Robsoul Live / San Francisco' \u2014 features C.J. Larsen, not Phil Weeks. Name mismatch. Not Phil Weeks performing."
+},
+"16ef413e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks NYE Session (31.12.2020)' \u2014 clearly a session by Phil Weeks, likely a live or DJ set during NYE. Matches profile of live performances."
+},
+"7273ea10": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"9a173bf3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'mixed by PHIL WEEKS' and is a podcast episode \u2014 clearly a mix or podcast mix featuring Phil Weeks as the mixer, consistent with his live or DJ mix style."
+},
+"c3ee3a0e": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title says 'Ric Viera Live Set (USA)' and the channel is 'Phil Weeks'. This implies Phil Weeks is not performing \u2014 it's Ric Viera's set. No mention of Phil Weeks playing. Likely a name confusion or misattribution."
+},
+"37655268": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Phil Weeks B2b Joss Moog' \u2014 a b2b set at NouveauCasino. Clearly a live DJ set with Phil Weeks performing."
+},
+"45505092": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Live from Fabric London' and includes 'Phil Weeks (Live from Fabric London)' \u2014 clearly a live performance by Phil Weeks at Fabric. Matches profile of live PA sets."
+},
+"8ab08a54": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Phil Weeks LIVE PA (MPC3000+TR909) @ Rex Club - Paris' \u2014 matches his equipment and known venues. A live PA set, as per profile."
+},
+"7b7dde6f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Phil Weeks @ Elrow - Barcelona' \u2014 a club recording in a city he plays in. No indication of talk or track \u2014 clearly a live DJ set."
+},
+"2afa1480": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Phil Weeks Mix @ Thuishaven - Amsterdam' \u2014 a mix at a venue he plays in. Mixes are acceptable if he is the one mixing, which fits his profile."
+},
+"bef0f1c7": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Phil Weeks Live Smoke & Chat #7' \u2014 'Smoke & Chat' is a live interaction format, often involving DJing and conversation. While it has 'chat', the title includes 'Live' and is attributed to Phil Weeks, suggesting a live DJ set with interaction. Not a talk show per se \u2014 more a live performance with chat."
+},
+"47af027e": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as #17 \u2014 'Live Smoke & Chat #10' with Phil Weeks. Again, a live performance format with chat, not a talk show. Fits his live PA style."
+},
+"cbba0e9a": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title says 'Phil Weeks @ Djoon - 30 Years of Rex Club' \u2014 but the channel is 'Djoon', not Phil Weeks. The set is hosted by Djoon, and Phil Weeks is mentioned in context. This is a tribute event, not a performance by Phil Weeks. Likely a documentary or retrospective, not a live DJ set by him."
+},
+"f43a9b24": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Phil Weeks' and is labeled as a 'House Saladcast' \u2014 a known podcast/mix series focused on house music. This is a mix or set format, not a single track or talk. Phil Weeks is named as a participant, indicating a live or curated DJ set."
+},
+"5a0068d4": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'EXPLOITED Records Podcast 17: PHIL WEEKS (OLDSCHOOL SESSIONS)' \u2014 clearly a podcast episode. The format is a talk-style session, not a music set. The term 'session' suggests a conversation or interview, not a live DJ performance."
+},
+"cbe54d31": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Phil Weeks Appreciation Mix' \u2014 this is a mix made for a label (Rob Wu), likely a tribute or retrospective mix. While it may feature Phil Weeks' music, the title does not indicate that he is performing live or DJing. It's a pre-recorded mix, not a live set. Also, it's not a live performance or club recording."
+},
+"40b44177": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks @ Watergate - Berlin (26.01.2013)' \u2014 includes a venue, date, and Phil Weeks as performer. The channel is 'PHIL WEEKS (ROBSOUL REC.)', suggesting a recording from his own label or archive. This is clearly a live club set in Berlin."
+},
+"d2683f50": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks Live @ Take A Trip 3-8-11' \u2014 explicitly labeled 'Live' and includes a venue and date. The channel is micasa999, not his own, but the title names him as performing live. This fits the profile of a live DJ set."
+},
+"bc489315": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks @ Push - BlackBox/Gussola (08.04.2016)' \u2014 includes venue, date, and Phil Weeks as performer. The channel is 'Phil Weeks', suggesting it's his own recording. This is a live club set at Push, a major house event."
+},
+"97c62f4f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks Live @ Freak To This - San Francisco (22.11.2019)' \u2014 explicitly labeled 'Live' with venue and date. Channel is 'PHIL WEEKS (ROBSOUL REC.)', indicating a recording from his own archive. This is a live set."
+},
+"7a3c9dbc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'MyNightlife.FM Show132 w. Tuncay Celik & Phil Weeks' \u2014 includes a co-performer and a radio show format. While it's a radio show, it features Phil Weeks as a guest DJ. The format is a live broadcast, not a talk or tracklist. This is a live DJ set in a radio context."
+},
+"0adaa122": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'PHIL WEEKS DJ set in The Lab LDN (FULL SET)' \u2014 explicitly states 'DJ set' and venue (The Lab, London). Channel is Mixmag, but the title names Phil Weeks as performing. This is a live DJ set recorded at a club."
+},
+"cbd7dac5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks @ Salon Zur Wilden Renate - Berlin (19.10.2012)' \u2014 includes venue, date, and Phil Weeks as performer. Channel is 'PHIL WEEKS (ROBSOUL REC.)', indicating a recording from his own label or archive. This is a live club set."
+},
+"29231b88": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Phil Weeks Live & Chat' \u2013 includes 'Live' and 'Chat', suggesting interaction. However, 'Live' in title and channel ownership implies a live performance with chat. Profile says he plays live at clubs, so live sets with chat are still live DJ sets. Not a talk show per se. Still a live set."
+},
+"8440b854": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'PHIL WEEKS DJ set in The Lab LDN (FULL SET)' \u2013 clearly states Phil Weeks is playing a DJ set in London. Channel is IDBR, not his own, but the title names him as the performer. This is a club recording, not a talk or track."
+},
+"6c9715b7": {
+"v": "reject",
+"kind": "track",
+"reason": "Title: 'Voyage with Tef GReN EP.024 Phil Weeks (House mix by Phil Weeks)' \u2013 this is a mix *by* Phil Weeks, labeled as a 'house mix'. The title says 'mix by', which indicates it's a production, not a live DJ set. It's a tracklist or mix compilation, not a live performance. This is a single mix, not a live set."
+},
+"f5279ef4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks Live (13.05.2020)' \u2013 clearly a live set, channel is Phil Weeks. Matches profile of live performances. No indication of talk or track."
+},
+"57410972": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks Live (29.04.2020)' \u2013 explicitly 'Live', channel is PHIL WEEKS (ROBSOUL REC.) \u2013 consistent with profile. Even though channel is under Robsoul, it's still a live set by him. No indication of talk or track."
+},
+"3ef6f963": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'Gangstercast 04 - Phil Weeks' \u2013 this is a podcast or talk show (Gangstercast is a podcast). The format is a talk or interview, not a music set. Profile does not mention podcasting or talk shows. This is a talk, not a live DJ set."
+},
+"477399cc": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title: '1WaterPlease 001 - Dublin House | D'Julz, Phil Weeks | For Study & Gaming' \u2013 this is a mix that lists two artists (D'Julz and Phil Weeks). The title says 'For Study & Gaming', indicating it's not a live set. It's a mix that includes Phil Weeks' music, not a performance by him. This is a tracklist or mix with his music, not a live set."
+},
+"f7288208": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks @ Boat Party - Paris (22.08.2017)' \u2013 clearly a live set at a Paris event. Channel is Phil Weeks. Matches profile of live performances in Paris. No indication of talk or track."
+},
+"2cc7a691": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks @ Get Underground - Rex Club (10.03.2016)' \u2013 explicitly a live set at a known club (Rex Club) in Paris. Channel is Phil Weeks. Matches profile of live performances at Rex Club. This is a live set."
+},
+"fe5bc2c8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks Christmas Live (23.12.2022)' \u2013 clearly a live set, channel is Phil Weeks. Christmas live set fits profile of live performances. No indication of talk or track."
+},
+"6f63cefd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title specifies 'Phil Weeks @ Industria Club - Porto' with a date and channel 'Phil Weeks'. This is a club recording with a clear live DJ set context."
+},
+"030ff91b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title 'Phil Weeks - Live @ Panorama Bar/Berlin' explicitly states a live performance at a club in Berlin. Channel is Phil Weeks, so it's a live set."
+},
+"32fff6ef": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is '466 - Robsoul's Most Wanted Vol. 2 - Phil Weeks (2006)'. This is a mix compilation titled after a track/artist, and the format is a 'Classic Mix CD Series'. It's not a live set; it's a curated mix, likely a studio mix or compilation. No indication of live performance. Also, 2006 is early, but profile doesn't rule out early work. However, it's not a live set or performance \u2014 it's a mix featuring Phil Weeks' music, not him performing live."
+},
+"d6d28b22": {
+"v": "keep",
+"kind": "set",
+"reason": "Title 'Phil Weeks @ We Love International - Bologna' indicates a live performance at a club in Bologna. Channel is Phil Weeks. Clearly a live DJ set."
+},
+"33d42ba5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title 'Phil Weeks @ Chalet Club/Berlin Part 1' and channel 'PHIL WEEKS (ROBSOUL REC.)' suggest a live set at a club. Part 1 implies a series, likely a live DJ set. Matches profile of live club performances."
+},
+"3ac5f4e8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title 'Phil Weeks Vinyl Set @ Clubbing TV' \u2014 this is a vinyl set recorded for a TV show. Clubbing TV is a channel that features DJ sets. The term 'Vinyl Set' suggests a curated performance, but it's presented as a set. Given the context and channel, it's a live DJ set recorded for broadcast."
+},
+"345a06d4": {
+"v": "keep",
+"kind": "set",
+"reason": "Same as 44 \u2014 'Phil Weeks @ Chalet Club/Berlin Part 2' is a continuation of a live set. Clearly a live performance at a club."
+},
+"75da99ba": {
+"v": "keep",
+"kind": "set",
+"reason": "Title 'Phil Weeks Livestream (20.02.2021)' explicitly states a livestream. This is a live performance, even if remote. Matches profile of live sets."
+},
+"4764fd9a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title 'Phil Weeks Christmas Live (23.12.2022) [Live Replay]' clearly indicates a live performance, even if it's a replay. The term 'Live' confirms it's a live set."
+},
+"b61527b6": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title 'Phil Weeks Live & Chat (17.03.2020)' includes 'Live & Chat' \u2014 this suggests a mix of live music and conversation. The presence of 'Chat' indicates a talk element, which falls under the rejection criteria (talk shows)."
+},
+"f460db06": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Phil Weeks' and is labeled as a 'Dogcast' \u2014 likely a podcast or mix series where he is a guest. The format is a mix, not a talk or track. Given the context of live sets and club culture, this is likely a live or curated set."
+},
+"0b3abcf6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live [2021.02.20]' \u2014 explicitly states 'Live' and includes a date. Matches profile of live sets. Channel is Hot DefiniSound, but the title clearly indicates a live performance."
+},
+"15fed1f3": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'The Survival Series EP005 Phil Weeks & Oscar de Lima' \u2014 includes a joint title, and 'EP' suggests a release, not a live set. Also, it's an EP (album/EP format), not a DJ set. This is a tracklist or release, not a performance."
+},
+"2a5cdaba": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live (10.12.2020)' \u2014 clearly a live set, with date and name. Channel is Phil Weeks' own, so likely a personal live recording. Fits profile of live performances."
+},
+"311d5367": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live @ Scenario - Watergate / Berlin (07.12.2013)' \u2014 explicitly a live set at a venue. Includes location and date. Matches known performance history in Berlin. Even though it's from 2013, it's a live set."
+},
+"505a2d8e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'CUFF Cast 008 - Phil Weeks' \u2014 'CUFF Cast' is a mix series, likely a podcast or mix. Phil Weeks is named as a participant. This is a mix, not a talk, and fits the format of a DJ set or guest mix."
+},
+"8f639631": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'db Artists Musique Podcast - 031 - Phil Weeks @ Rex Club - Paris - 23.09.2017' \u2014 clearly a podcast featuring Phil Weeks at Rex Club, a known venue in Paris. This is a live club recording or podcast mix of a set."
+},
+"6a5e6bc8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live Smoke & Chat #7 (15.09.2013)' \u2014 'Live' and 'Smoke & Chat' suggests a live set with chat, but the core is a live performance. The format is a live set, even if with chat. Not a talk or track."
+},
+"83cac749": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live at Music is 4 Lovers [2021-12-12 @ FIREHOUSE, San Diego]' \u2014 explicitly 'Live' at a venue. Matches profile of live performances in San Francisco and other cities. This is a live set."
+},
+"c79b2a43": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Rinse FM Podcast - Shadow Child w/ Phil Weeks - 22nd February 2017' \u2014 this is a podcast where Phil Weeks is a guest, but the format is a talk or interview (with 'Shadow Child'). It's not a DJ set; it's a conversation. This is a talk, not a performance."
+},
+"b7189368": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'P&D B2B (Phil Weeks & Didier Allyne)' and is a podcast for Rex Club \u2014 a venue mentioned in the profile. B2B sets are live DJ sets, and the channel is RexClub, which is one of his home scenes. This is clearly a live or club recording involving Phil Weeks as a performer."
+},
+"2f131f9b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live (03.04.2020)' and hosted by Phil Weeks on his channel. The term 'Live' strongly indicates a live DJ set. No indication of talk or tracklist."
+},
+"0fefeb45": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Phil Weeks Christallization Podcast' \u2014 the word 'podcast' suggests a talk or discussion format, not a music set. Even though it's under his channel, it's not a DJ set or mix; it's a podcast. This is a talk format, not a performance."
+},
+"9c0fcbfa": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Robsoul 15 Years Vol.3 (2010 - 2014)' \u2014 this is a retrospective compilation of label history, not a recording of Phil Weeks performing. It's a curated collection of tracks, not a live set or DJ performance. The title lists no live performance or set, and it's a historical archive."
+},
+"52d391b6": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Live @ H2O - 23.06.2012' \u2014 explicitly states 'Live @ H2O', a venue mentioned in the profile. This is a live set at a club he regularly performs at. Clearly a live DJ set."
+},
+"de1c711c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks - Pimpcast Episode #1 - Recorded Live @ Paradox - Egg London' \u2014 explicitly states 'Recorded Live' at a venue (Paradox, London) where he plays. This is a live set, even if part of a podcast format. The key phrase 'Recorded Live' confirms it's a performance."
+},
+"162142c2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks Making a Beat Live on MPC3000 (Full Uncut)' \u2014 explicitly states 'Making a Beat Live on MPC3000', which aligns with his production style and live performance. This is a live production session, not a track or talk. It's a live set where he's creating music in real time."
+},
+"086dcc51": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks @ Lovefest - Serbia' \u2014 clearly a live performance at a festival. Lovefest is mentioned in the profile as a venue he plays at. This is a live DJ set."
+},
+"84b00b8b": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Best of PHIL WEEKS & ROBSOUL RECORDS | Club Music Mix' \u2014 this is a mix curated by 'Good House Music' and titled as a 'Best of' compilation. It's not a live set or performance by Phil Weeks; it's a mix of tracks from the label. The title lists him and Robsoul, but it's a mix, not a live DJ set. This is a tracklist-style compilation."
+},
+"35827f46": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Phil Weeks \u2013 Deep House Mix | Beats & Beyond #020' \u2014 this is a mix episode from a magazine or mix series. While it features Phil Weeks, it's a pre-recorded mix, not a live set. The format is a 'mix' series, not a live performance. It's a curated selection of tracks, not a live DJ set."
+},
+"37264381": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Christmas, Phil Weeks performing, uploaded by his channel. Clearly a live DJ set."
+},
+"b9b943f4": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at 0ES3 in Palma, Phil Weeks performing, uploaded by his channel."
+},
+"18fcb9b8": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Sacr\u00e9 in Paris, Phil Weeks performing, uploaded by his channel."
+},
+"ca544751": {
+"v": "keep",
+"kind": "set",
+"reason": "Live set at Cafeloco in Reggio Emilia, Phil Weeks performing, uploaded by his channel."
+},
+"2a967827": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B set with DJ Sneak at Sankeys podcast \u2014 clearly a live DJ set featuring both artists."
+},
+"3a013346": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title includes 'Podcast' and 'Mix' \u2014 it's a curated mix, not a live performance. Channel is not Phil Weeks' \u2014 it's '2 Phunkee 4 U'."
+},
+"99c392ed": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Making a Beat Live' \u2014 this is a demo or instructional video of gear use, not a DJ set in a club or festival."
+},
+"5fc5f589": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Title is 'L!TO Live Set' \u2014 no mention of Phil Weeks performing. Channel is Phil Weeks, but performer is unclear. Could be a mix or set under a different name."
+},
+"53f958a8": {
+"v": "keep",
+"kind": "set",
+"reason": "Clear performance by Phil Weeks at MDLBEAST Freqways online event."
+},
+"20ece171": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Uploaded by a user, not Phil Weeks' channel. No confirmation it's a recording of Phil Weeks performing at H2O Club. Channel mismatch."
+},
+"f9a463b5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Phil Weeks @ Supervibe 6th Anniversary - Marrakesh' \u2014 a club event in Marrakesh. This is a live DJ set at a venue, clearly a live performance."
+},
+"035f7552": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Robsoul 15 Years Vol.2 (2005-2009)' \u2014 a retrospective compilation of Robsoul Recordings. This is a curated collection of tracks, not a live set or DJ performance. It's a tracklist of music, not a live set by Phil Weeks."
+},
+"71a68d1a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks @ Delta Funk & Moulton Music/SF(29.04.2017)' \u2014 clearly indicates a live performance at a venue in San Francisco. The channel is listed as PHIL WEEKS (ROBSOUL REC.), which aligns with his label and presence. This is a live DJ set."
+},
+"bd2b2d2e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'DNZ Agency presenta Phil Weeks 03 10 2026' \u2014 includes a future date (2026), but the title names Phil Weeks as the performer in a presentation. However, the date is in the future, and the format is ambiguous. Still, it's a presentation of a DJ set, likely a live or recorded set. Given the profile, this is likely a live set, even if dated future."
+},
+"63df96c4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks @ Replay - Madrid Part 1' \u2014 clearly a live DJ set at a club in Madrid. This matches his performance history in Spain and Europe."
+},
+"32f8f3c5": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title: 'PHIL WEEKS OTR PODCAST #115' \u2014 this is a podcast episode. The format is a talk or discussion, not a music set. Even though it features Phil Weeks, it's a podcast, not a live DJ performance."
+},
+"63a650f3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks @ Get Underground - Rex Club/Paris (23.10.2014)' \u2014 clearly a live set at a known venue in Paris, consistent with his profile. This is a live DJ set."
+},
+"c2768a50": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Phil Weeks Live (18.05.2021)' \u2014 explicitly labeled 'Live', and the title indicates a live performance. This is a live DJ set."
+},
+"6505b3b1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'Mark Farina B2B Phil Weeks @ Rex Club - Paris (16.06.2018)' \u2014 this is a B2B set (Mark Farina with Phil Weeks) at a club. The title names both DJs and the venue. This is a live DJ set, consistent with the profile."
+},
+"f5af72f2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title: 'DJ Sneak / Phil Weeks / Charlie Sputnik in Hollywood, CA 21NOV2019 - Full Show' \u2014 this is a full show featuring multiple DJs. The title says 'Full Show', and includes Phil Weeks. It's a live performance at a venue. Even though uploaded by Charlie Sputnik, the title explicitly names Phil Weeks as a performer in a live show."
+},
+"fa460579": {
+"v": "reject",
+"kind": "set",
+"reason": "The title is 'Reda daRE Live Set' \u2014 Phil Weeks is the channel owner, not the performer. No mention of Phil Weeks playing."
+},
+"e71954ea": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Phil Weeks Live @ Moxy Muzik - London' \u2014 clear live DJ set."
+},
+"6c022f2a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Phil Weeks at ADE (Robsoul Party) \u2014 live club set in line with profile."
+},
+"55c6d2e1": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Phil Weeks with TR909 @ Prince Charles' \u2014 consistent with his gear and live performance."
+},
+"1e982059": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Phil Weeks at Wilde Renate in Berlin \u2014 live set in profile locations."
+},
+"91b07ba5": {
+"v": "reject",
+"kind": "set",
+"reason": "Channel is RTS.FM (radio station), title is a radio broadcast in St. Petersburg \u2014 not a live club or festival set; profile doesn't mention radio work."
+},
+"db439bb8": {
+"v": "keep",
+"kind": "set",
+"reason": "Phil Weeks at Pl\u00f6tzlich Am Meer Festival \u2014 live festival set in profile locations."
+},
+"a22bf5a6": {
+"v": "keep",
+"kind": "set",
+"reason": "Phil Weeks @ Replay - Madrid Part 2 \u2014 live set at venue in profile list."
+},
+"499dbd0a": {
+"v": "keep",
+"kind": "set",
+"reason": "Mark Farina B2B Phil Weeks at Get Underground \u2014 clear b2b live set in Paris, matches profile."
+},
+"9b83b126": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names Phil Weeks at Bateaux Mouches in Paris \u2014 live performance, even if channel is Cercle."
+},
+"afc08bfd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks \u2014 House Mix' and hosted by Jedsa Soundorom. Mixes are typically DJ sets. No indication of being a track or talk. The format matches a DJ mix."
+},
+"7d11efa5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Phil Weeks @ Moxy Muzik / Fabric London' \u2014 a specific club location and date. Fabric London is a known club, and this is a live set recorded at a venue. Clearly a live DJ set."
+},
+"b35f1bcf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks @ Magna Carta - Studio 338/London' with a date. Studio 338 is a venue in London. This is a live set at a club, consistent with his performance history."
+},
+"bbe4a35d": {
+"v": "unsure",
+"kind": "set",
+"reason": "Title is 'House Heroes - Phil Weeks'. This is a mix titled 'House Heroes' and hosted by House Salad Music. The format is a mix, but the title suggests it's part of a series or curated content. However, it does not explicitly say 'DJ set' or 'live'. Could be a mix compilation. But since it's named after Phil Weeks and in a mix series, and no indication of being a track or talk, it's likely a mix he curated. Still, the title is ambiguous \u2014 is it a live set or a mix of tracks? Given the lack of 'live' or 'set' in title, and the presence of a series name, it's less clear."
+},
+"e296df7b": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is '\ud83d\udd34 Phil Weeks / Cocoon Recordings & Old School House' by nasser alazzawi. The channel is not Phil Weeks. The title lists Phil Weeks but is hosted by another person. This is likely a mix or compilation where Phil Weeks is featured, not necessarily performing. No indication of live set or DJ performance. This is a tracklist or curated mix, not a live set. Also, the format is not clearly a performance."
+},
+"851d84cd": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks 4H Set @ Sugar Factory - Amsterdam' with date. '4H Set' is a known format for live DJ sets. Sugar Factory is a venue in Amsterdam. This is clearly a live DJ set at a club, consistent with his performance history."
+},
+"9f5ec552": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Phil Weeks @ RIOT - Porto Club, C\u00f3rdoba'. This is a venue-specific performance. The channel is 'Riot Producciones', which may be a local producer, not Phil Weeks. However, the title names Phil Weeks as performing at a club. If the title says he played, it counts even if uploaded by another channel. The format is likely a live set. No indication of talk or track."
+},
+"f7e15f8b": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'HAWTCAST 236: PHIL WEEKS' \u2014 a podcast episode. The format is a podcast, not a music set. This is a talk or interview format, not a DJ set where music is played live. This is a talk show."
+},
+"352fc79c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Clash DJ Mix - Phil Weeks'. This is a mix for Clash Magazine. It's a DJ mix, likely curated by Phil Weeks. The format is a mix, not a live set, but it's a mix he made. Since it's a mix and not a live performance, it's not a live set. However, the profile says he produces and plays live sets. A mix could be a recorded set. But the title is 'Clash DJ Mix', which implies a mix, not a live performance. Still, if it's a mix he made, it's a recording of his work. Given that it's a mix and not a live set, it's not a live set. But the profile says he produces mixes. So this could be a mix he created. However, the instruction says to keep if it's a mix made for a magazine or label. So this should be kept as a mix."
+},
+"85ed6aa3": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'PHIL WEEKS - OTR PODCAST GUEST #115 (France)'. This is a podcast episode. It's a guest appearance, not a music set. It's a talk or interview format. The format is a talk, not a DJ set where music is played live."
+},
+"d304102f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names 'Mark Farina & Phil Weeks' at a live club event (Rex Club, Get Underground) in Paris, which is a known venue in Phil Weeks' home scene. This is a clear live DJ set with Phil Weeks performing."
+},
+"888df87e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title names 'Phil Weeks @ RARA 3rd edition - Rio De Janeiro' \u2014 a live event where Phil Weeks is playing. While Rio is not explicitly listed in the profile's known cities, the profile does not exclude international performances, and there's no evidence it's a different person with the same name. The format is a live DJ set, not a talk or track. It is not clearly a namesake or outside the scope of his known activity."
+},
+"06fc17bc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Tornado Wallace' as a DJ set on H\u00d6R Berlin, a radio show. This is a live or recorded DJ set in a club/radio context."
+},
+"04acdf4c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'BP Podcast No. 24 - Tornado Wallace' \u2014 a podcast mix. The format is a podcast, which implies a mix or DJ set, and Tornado Wallace is named as a participant. This fits the profile of a mix or podcast mix."
+},
+"e1322732": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tia Cousins b2b Tornado Wallace' at a festival. This is a b2b set at Sameheads, clearly a live DJ set with Tornado Wallace playing. The context is a festival and includes a b2b format."
+},
+"e49006cf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'SUN DOWN CIRCLE #006 with TORNADO WALLACE' \u2014 a mix series with Tornado Wallace. This is a mix episode, likely a DJ set or curated mix, and matches the profile of a mix series."
+},
+"26afbad8": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace Boiler Room x Generator Berlin DJ Set' \u2014 clearly a DJ set recorded at Boiler Room, a well-known DJ set platform. This is a live or recorded DJ set."
+},
+"52b94dd8": {
+"v": "unsure",
+"kind": "tracklist",
+"reason": "Title is 'Dummy Mix 253 // Tornado Wallace' \u2014 this is a mix titled with Tornado Wallace, but the format is a 'dummy mix' which may be a mix by someone else. The title lists him, but it's not clear if he is playing. However, the format is a mix, and if it's a mix made for a label or series, it could be a guest mix. But 'Dummy Mix' suggests it's not a live set. Without explicit indication of him playing, this is ambiguous. However, the profile says he is a regular on NTS, Dekmantel, etc., and such mix series may feature him. Still, the title doesn't say he is performing \u2014 just listed. This is a risk of being a tracklist or mix with his music, not his own set."
+},
+"1d37b0c9": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace b2b Fantastic Man @ Sonder Festival 2026' \u2014 clearly a b2b set at a festival. The context is live, festival-based, and Tornado Wallace is named as a performer. Even though the date is in the future, we ignore dates. This is a live set."
+},
+"21b01d19": {
+"v": "reject",
+"kind": "namesake",
+"reason": "Title is 'Tomato Wallet @ Imaginary Friend, Berlin 08.06.24' \u2014 the artist is 'Tomato Wallet', not Tornado Wallace. This is a recording of someone else playing. Tornado Wallace is not named as a performer. This is a namesake or misattribution."
+},
+"c4867fdc": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace - Heads Radio 0055 - 10.03.2021 - @ Sameheads' \u2014 this is a radio show segment, likely a DJ set on Heads Radio. Tornado Wallace is named as a participant. Radio shows count as recordings of DJing."
+},
+"3e11c868": {
+"v": "unsure",
+"kind": "other",
+"reason": "missing"
+},
+"db9af510": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly names Tornado Wallace at a club in Melbourne, fits profile of live sets."
+},
+"163389f1": {
+"v": "keep",
+"kind": "set",
+"reason": "Tornado Wallace appears on The Lot Radio, a radio show, with no indication of talk or track."
+},
+"9deaab8d": {
+"v": "keep",
+"kind": "set",
+"reason": "Tornado Wallace featured on IBIZA SONICA RADIO \u2014 likely a DJ set or broadcast."
+},
+"addefbae": {
+"v": "keep",
+"kind": "set",
+"reason": "Explicitly labeled 'b2b' at a festival, live performance context."
+},
+"ba3dcfdb": {
+"v": "keep",
+"kind": "set",
+"reason": "Directly titled 'Tornado Wallace Boiler Room Australia DJ Set' \u2014 classic DJ set."
+},
+"4d5be58b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Tornado Wallace & Fantastic Man' \u2014 joint live set."
+},
+"a0e69267": {
+"v": "keep",
+"kind": "set",
+"reason": "Radio show with Tornado Wallace and David Vunk \u2014 DJ performance."
+},
+"eb28d0bc": {
+"v": "keep",
+"kind": "set",
+"reason": "Guest appearance on Seoul Community Radio \u2014 likely a live DJ set."
+},
+"bf3759be": {
+"v": "keep",
+"kind": "set",
+"reason": "B2B at SUBCLUB \u2014 live club performance."
+},
+"44482d10": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Part Nine (FULL EP)' \u2014 a music release, not a DJ set or performance."
+},
+"67cf6bc5": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Mimi invite Tornado Wallace' \u2014 implies a DJ set where Tornado Wallace is playing, likely a club or festival set. The channel is Rinse France, which hosts DJ sets. No indication of talk or tracklist. Tornado Wallace is named as a performer."
+},
+"0ec16b67": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'Live at Studio Namsan' and includes Tornado Wallace. This is a live recording at a venue, consistent with the profile of live sets in Europe. Clearly a live set."
+},
+"40d77509": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Recorded Live at Rollover' and includes Tornado Wallace. Rollover is a club in Milan, so this is a live club recording. Matches profile of live sets in Europe."
+},
+"9db325b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace Boiler Room Sugar Mountain Melbourne DJ Set' \u2014 Boiler Room is a well-known DJ set series, and this is a specific set in Melbourne. Clearly a DJ set where Tornado Wallace is playing."
+},
+"02cbc6fa": {
+"v": "keep",
+"kind": "set",
+"reason": "Title says 'Tornado Wallace At Rainbow Serpent Festival 2015' \u2014 this is a festival recording, and the profile mentions Rainbow Serpent Festival. Clearly a live festival set."
+},
+"510d387f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'RDC 040 - Tornado Wallace' \u2014 RDC is a radio show or mix series. The format is likely a DJ mix, and Tornado Wallace is the featured DJ. This is a mix, not a talk or tracklist, and he is the main performer."
+},
+"4e16c83f": {
+"v": "reject",
+"kind": "talk",
+"reason": "Title is 'Juno Plus Podcast 57: Tornado Wallace' \u2014 this is a podcast, and the format is a talk or interview, not a music set. The profile says he plays music, not talks. This is a talk, not a DJ set."
+},
+"74b04680": {
+"v": "reject",
+"kind": "tracklist",
+"reason": "Title is 'Best of 2011 | History of House Music | Miguel Migs, Tornado Wallace, Jazzanova' \u2014 this is a tracklist or compilation of multiple artists. Tornado Wallace is listed among others, not as a performing DJ. This is not a set he played, but a curated tracklist."
+},
+"11513c3d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live from the Adriatic 2024: Fantastic Man b2b Tornado Wallace' \u2014 this is a b2b set (back-to-back), with Tornado Wallace playing. The profile mentions he plays in back-to-backs and festivals. This is a live set, even if with a b2b partner."
+},
+"ac72c04a": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'BSRMIX #150 - Tornado Wallace' \u2014 this is a mix series, likely a mix made by someone else or a label. The title names Tornado Wallace, but it's a mix series, not a live set. Unless specified as a live set, it's a mix. Profile says he plays live sets, but this is a mix. However, if it's a mix he made, it could be a mix he created. But the title is 'BSRMIX #150 - Tornado Wallace', which suggests it's a mix *by* him, not a set he played live. The profile doesn't specify mix creation, only live sets. But the profile says he 'plays warm, slow-burning, eclectic house' \u2014 so mixes are plausible. However, the format is a mix series, not a live set. Without more context, it's ambiguous. But since it's titled as a mix (BSRMIX), and not a live event, and the profile emphasizes live sets, this may be a mix he created. But the instruction says: keep if it's a mix *made for* a show, label, or magazine \u2014 and this is a mix series. So if it's a mix he made, it should be kept. However, the title doesn't say 'Tornado Wallace mixes' or 'his mix', just 'BSRMIX #150 - Tornado Wallace'. This could be a mix where he is featured, not the creator. But without more, it's ambiguous. Given that the profile says he is a regular on NTS, Dekmantel, etc., and these are mix platforms, it's plausible he made a mix. But the title format suggests it's a mix series, not a live set. Since the instruction says to keep if it's a mix *he made* or *he played in*, and this title names him, it's likely a mix he created. So it should be kept as a mix. However, the profile emphasizes live sets, not mix creation. But the profile says he is a regular on radio shows and mix series. So this fits. Therefore, it's a mix he made \u2014 a mix series episode. So keep."
+},
+"1dd4cfc4": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Tornado Wallace' and is on a YouTube channel (themuddshow). The format is a 57-minute recording, likely a DJ set. No indication it's a talk or track. No evidence of a name match or talk format. Context suggests a live or DJ set."
+},
+"4c2aac7e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title includes 'Tornado Wallace B2B Yamarchy' \u2014 clearly a B2B set with another DJ. B2B sets are live DJ sets. The format is a long mix (158 min), likely a club recording. Matches profile of live sets and club circuits."
+},
+"53bb3a23": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace @ Hopkins Creek 24.11.2019' \u2014 clearly a live performance at a venue. The channel is Tornado Wallace's own, and it's a long set (216 min). Matches profile of live sets and festival/club circuits."
+},
+"2e62407c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace @ H\u00d6R BERLIN' \u2014 H\u00d6R is a radio station known for DJ sets. The format is a 55-minute recording, likely a live or studio DJ set. Profile confirms he's a regular on H\u00d6R. This is a set, not a talk or track."
+},
+"13f3565f": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Live from The Patio \u2013 Tornado Wallace' \u2014 explicitly labeled 'live'. Channel is GALA Festival. Matches profile of festival performances. Clearly a live set."
+},
+"77e59a8b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace @ New Dance Fantasy Summer Festival 08.07.2016' \u2014 festival performance. Channel is Tornado Wallace's own. Long set (147 min). Matches profile of festival circuits and live sets."
+},
+"2ca38a3b": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace | Fault Radio DJ Set at Vinyl Dreams, San Francisco' \u2014 explicitly a DJ set at a venue. Fault Radio is a radio station, and this is a recorded set. Matches profile of appearances on radio shows like NTS, H\u00d6R, etc."
+},
+"d9634c1c": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'OPEN PORT CLUB Mix Series \u2013 Tornado Wallace' \u2014 a mix series episode where Tornado Wallace is the featured DJ. Mix series episodes are considered DJ sets, especially if curated by them. Profile confirms he's on mix series like NTS, Dekmantel, etc."
+},
+"fcae2a6d": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Jamie Tiller & Tornado Wallace - Heads Radio 0030' \u2014 a B2B set with Jamie Tiller. B2B sets are live DJ sets. Profile confirms he's on radio shows like Heads Radio. This is a joint set, but still a live DJ performance."
+},
+"4dd402b3": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace B2B Yamarchy aka 'Tiger Brothers'' \u2014 same as 31. B2B set with Yamarchy. Clearly a live DJ set. Matches profile of club and festival circuits. The name 'Tiger Brothers' is used as a duo name, not a namesake or track."
+},
+"b0f26abf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title explicitly states 'w/ Tornado Wallace B2B' and is an NTS Radio Show episode. This is a radio broadcast where Tornado Wallace is playing as a DJ in a B2B set. Fits profile of regular on NTS, and B2B is a valid DJ set format."
+},
+"c7a2ee0e": {
+"v": "keep",
+"kind": "set",
+"reason": "Title mentions 'Live at Spice Cellar w/ Lewie Day/Tornado Wallace, Sydney' \u2014 clearly a live set at a venue in Sydney. Includes both artists and specifies live setting. Matches profile of Melbourne/Sydney roots and live performances."
+},
+"dfd52de0": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Na Manteiga 072 - Tornado Wallace' \u2014 a radio show episode. Na Manteiga is a radio station known for electronic music. The format is a radio mix or show, and Tornado Wallace is named as a participant. Fits profile of appearances on radio shows like H\u00d6R, NTS."
+},
+"0bf95235": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace @ Kiosk Radio 20.09.2019' \u2014 a radio broadcast where Tornado Wallace is playing. Kiosk Radio is a known electronic music radio station. This is a DJ set on a radio show, consistent with profile."
+},
+"e2cd73c2": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace - North America Tour Mix 2012'. This is a mix made for a tour, likely a compilation or promotional mix. While it may be a mix, the title indicates it's a tour mix, which is typically a DJ set or curated selection. However, it's not clearly a live set or radio show \u2014 it's a mix titled after the artist and tour. But since it's a mix *by* Tornado Wallace and not a tracklist or interview, and given the context of tour mixes, it's likely a DJ mix. Still, the term 'mix' without specifying 'live' or 'radio' is ambiguous. However, the profile includes tour-related activity, and such mixes are common. But note: the profile says he plays in long sets and back-to-backs \u2014 tour mixes may not be live sets. This is a borderline case. However, since it's not a tracklist or talk, and is a mix attributed to him, and given the context, it's likely a DJ mix. Still, the format is less clear than others. But it's not a track or talk. Given the ambiguity, it's still a recording of him playing music. So, keep."
+},
+"2b6e4527": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace B2B Telephones All Night Long @ Savage, Hanoi - 01.11.24'. This is a B2B set at a venue (Savage) in Hanoi, which matches the profile of performing in Asia and in back-to-backs. Clearly a live set at a club/festival. Even though the date is in the future, we are told to ignore dates. The format is a live B2B set, which is a valid DJ set format. This is a clear match."
+},
+"94742901": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'TP541 Tornado Wallace (Love International Sunrise Sessions)'. This is a session from Love International, which is a festival/club circuit mentioned in the profile. The format is a 'Sunrise Sessions' \u2014 typically a DJ set or mix. The title names Tornado Wallace as a participant. This is a live or curated DJ set from a known venue in the profile. Fits the profile of performing at Love International and on radio shows."
+},
+"ff11f1cf": {
+"v": "keep",
+"kind": "set",
+"reason": "Title is 'Tornado Wallace 020821 | channel: NTS Monday'. This is an NTS Monday show, which is a regular radio program. Tornado Wallace is featured. NTS is mentioned in the profile as a regular. This is a radio show where he is playing music. Even though it's a short format, it's a DJ set on a radio show."
+},
+"569679c4": {
+"v": "reject",
+"kind": "track",
+"reason": "Title is 'Tornado Wallace \u2013 Tornado Never Dies'. This is a track title, not a set or mix. It's a single track, likely a song or remix. The format is a track, not a DJ set, live performance, or mix. This is a single, not a set or radio show. Therefore, it does not qualify as a recording of him DJing or playing live."
+}
+},
+"timings": [
+{
+"n": 10,
+"sec": 141.3,
+"usage": {
+"completion_tokens": 948,
+"prompt_tokens": 777,
+"total_tokens": 1725,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 167.9,
+"usage": {
+"completion_tokens": 1170,
+"prompt_tokens": 858,
+"total_tokens": 2028,
+"prompt_tokens_details": {
+"cached_tokens": 452
+}
+}
+},
+{
+"n": 10,
+"sec": 168.4,
+"usage": {
+"completion_tokens": 1211,
+"prompt_tokens": 826,
+"total_tokens": 2037,
+"prompt_tokens_details": {
+"cached_tokens": 452
+}
+}
+},
+{
+"n": 10,
+"sec": 226.9,
+"usage": {
+"completion_tokens": 1586,
+"prompt_tokens": 788,
+"total_tokens": 2374,
+"prompt_tokens_details": {
+"cached_tokens": 452
+}
+}
+},
+{
+"n": 10,
+"sec": 146.0,
+"usage": {
+"completion_tokens": 1074,
+"prompt_tokens": 777,
+"total_tokens": 1851,
+"prompt_tokens_details": {
+"cached_tokens": 452
+}
+}
+},
+{
+"n": 10,
+"sec": 150.5,
+"usage": {
+"completion_tokens": 1089,
+"prompt_tokens": 806,
+"total_tokens": 1895,
+"prompt_tokens_details": {
+"cached_tokens": 452
+}
+}
+},
+{
+"n": 10,
+"sec": 170.5,
+"usage": {
+"completion_tokens": 1192,
+"prompt_tokens": 857,
+"total_tokens": 2049,
+"prompt_tokens_details": {
+"cached_tokens": 452
+}
+}
+},
+{
+"n": 10,
+"sec": 143.9,
+"usage": {
+"completion_tokens": 1033,
+"prompt_tokens": 809,
+"total_tokens": 1842,
+"prompt_tokens_details": {
+"cached_tokens": 452
+}
+}
+},
+{
+"n": 8,
+"sec": 191.8,
+"usage": {
+"completion_tokens": 1376,
+"prompt_tokens": 740,
+"total_tokens": 2116,
+"prompt_tokens_details": {
+"cached_tokens": 452
+}
+}
+},
+{
+"n": 10,
+"sec": 140.7,
+"usage": {
+"completion_tokens": 916,
+"prompt_tokens": 855,
+"total_tokens": 1771,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 164.6,
+"usage": {
+"completion_tokens": 1170,
+"prompt_tokens": 799,
+"total_tokens": 1969,
+"prompt_tokens_details": {
+"cached_tokens": 425
+}
+}
+},
+{
+"n": 10,
+"sec": 143.8,
+"usage": {
+"completion_tokens": 1036,
+"prompt_tokens": 785,
+"total_tokens": 1821,
+"prompt_tokens_details": {
+"cached_tokens": 425
+}
+}
+},
+{
+"n": 10,
+"sec": 172.9,
+"usage": {
+"completion_tokens": 1211,
+"prompt_tokens": 794,
+"total_tokens": 2005,
+"prompt_tokens_details": {
+"cached_tokens": 425
+}
+}
+},
+{
+"n": 5,
+"sec": 86.8,
+"usage": {
+"completion_tokens": 690,
+"prompt_tokens": 634,
+"total_tokens": 1324,
+"prompt_tokens_details": {
+"cached_tokens": 425
+}
+}
+},
+{
+"n": 10,
+"sec": 183.0,
+"usage": {
+"completion_tokens": 1188,
+"prompt_tokens": 831,
+"total_tokens": 2019,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 160.1,
+"usage": {
+"completion_tokens": 1112,
+"prompt_tokens": 835,
+"total_tokens": 1947,
+"prompt_tokens_details": {
+"cached_tokens": 461
+}
+}
+},
+{
+"n": 10,
+"sec": 180.2,
+"usage": {
+"completion_tokens": 1217,
+"prompt_tokens": 868,
+"total_tokens": 2085,
+"prompt_tokens_details": {
+"cached_tokens": 461
+}
+}
+},
+{
+"n": 10,
+"sec": 140.5,
+"usage": {
+"completion_tokens": 987,
+"prompt_tokens": 828,
+"total_tokens": 1815,
+"prompt_tokens_details": {
+"cached_tokens": 461
+}
+}
+},
+{
+"n": 10,
+"sec": 154.4,
+"usage": {
+"completion_tokens": 1070,
+"prompt_tokens": 830,
+"total_tokens": 1900,
+"prompt_tokens_details": {
+"cached_tokens": 461
+}
+}
+},
+{
+"n": 10,
+"sec": 181.2,
+"usage": {
+"completion_tokens": 1241,
+"prompt_tokens": 811,
+"total_tokens": 2052,
+"prompt_tokens_details": {
+"cached_tokens": 461
+}
+}
+},
+{
+"n": 10,
+"sec": 125.5,
+"usage": {
+"completion_tokens": 865,
+"prompt_tokens": 846,
+"total_tokens": 1711,
+"prompt_tokens_details": {
+"cached_tokens": 461
+}
+}
+},
+{
+"n": 10,
+"sec": 134.1,
+"usage": {
+"completion_tokens": 930,
+"prompt_tokens": 833,
+"total_tokens": 1763,
+"prompt_tokens_details": {
+"cached_tokens": 461
+}
+}
+},
+{
+"n": 3,
+"sec": 89.7,
+"usage": {
+"completion_tokens": 726,
+"prompt_tokens": 576,
+"total_tokens": 1302,
+"prompt_tokens_details": {
+"cached_tokens": 461
+}
+}
+},
+{
+"n": 10,
+"sec": 125.7,
+"usage": {
+"completion_tokens": 796,
+"prompt_tokens": 823,
+"total_tokens": 1619,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 138.6,
+"usage": {
+"completion_tokens": 963,
+"prompt_tokens": 801,
+"total_tokens": 1764,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 179.3,
+"usage": {
+"completion_tokens": 1189,
+"prompt_tokens": 843,
+"total_tokens": 2032,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 181.2,
+"usage": {
+"completion_tokens": 1221,
+"prompt_tokens": 803,
+"total_tokens": 2024,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 170.2,
+"usage": {
+"completion_tokens": 1133,
+"prompt_tokens": 839,
+"total_tokens": 1972,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 178.3,
+"usage": {
+"completion_tokens": 1167,
+"prompt_tokens": 842,
+"total_tokens": 2009,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 181.7,
+"usage": {
+"completion_tokens": 1219,
+"prompt_tokens": 803,
+"total_tokens": 2022,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 304.5,
+"usage": {
+"completion_tokens": 1856,
+"prompt_tokens": 871,
+"total_tokens": 2727,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 181.2,
+"usage": {
+"completion_tokens": 1181,
+"prompt_tokens": 836,
+"total_tokens": 2017,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 318.9,
+"usage": {
+"completion_tokens": 1938,
+"prompt_tokens": 853,
+"total_tokens": 2791,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 10,
+"sec": 209.9,
+"usage": {
+"completion_tokens": 1371,
+"prompt_tokens": 808,
+"total_tokens": 2179,
+"prompt_tokens_details": {
+"cached_tokens": 435
+}
+}
+},
+{
+"n": 2,
+"sec": 482.6,
+"usage": {
+"completion_tokens": 2914,
+"prompt_tokens": 531,
+"total_tokens": 3445,
+"prompt_tokens_details": {
+"cached_tokens": 436
+}
+}
+},
+{
+"n": 10,
+"sec": 172.5,
+"usage": {
+"completion_tokens": 1095,
+"prompt_tokens": 779,
+"total_tokens": 1874,
+"prompt_tokens_details": {
+"cached_tokens": 0
+}
+}
+},
+{
+"n": 10,
+"sec": 243.4,
+"usage": {
+"completion_tokens": 1571,
+"prompt_tokens": 788,
+"total_tokens": 2359,
+"prompt_tokens_details": {
+"cached_tokens": 437
+}
+}
+},
+{
+"n": 10,
+"sec": 222.5,
+"usage": {
+"completion_tokens": 1465,
+"prompt_tokens": 772,
+"total_tokens": 2237,
+"prompt_tokens_details": {
+"cached_tokens": 437
+}
+}
+},
+{
+"n": 10,
+"sec": 162.4,
+"usage": {
+"completion_tokens": 1096,
+"prompt_tokens": 806,
+"total_tokens": 1902,
+"prompt_tokens_details": {
+"cached_tokens": 437
+}
+}
+},
+{
+"n": 9,
+"sec": 195.5,
+"usage": {
+"completion_tokens": 1310,
+"prompt_tokens": 748,
+"total_tokens": 2058,
+"prompt_tokens_details": {
+"cached_tokens": 437
+}
+}
+}
+]
+}

@@ -123,6 +123,9 @@ class Run:
             tasks += [(name, "deep", f'ytsearch100:"{name}"'), (name, "deep", f'scsearch100:"{name}"')]
             for t in ["DJ set", "mix", "live"]:
                 tasks += [(name, "deep", f'ytsearch60:"{name}" {t}'), (name, "deep", f'scsearch60:"{name}" {t}')]
+        if "deep2" in strategies:
+            for target in self.config.get("deep2", []):
+                tasks.append((name, "deep2:" + target.split(":")[0], target.replace("{name}", name)))
         if "alias" in strategies:
             for al in aliases:
                 tasks += [(name, "alias", f'ytsearch60:"{al}"'), (name, "alias", f'scsearch60:"{al}"')]

@@ -1,12 +1,70 @@
 {
-  "note": "Search-only experiment. Writes candidate lists under experiments/discovery/results. Touches no database.",
-  "artists": [
-    {"name": "Fort Romeau", "aliases": [], "sc_users": ["fortromeau"], "mixcloud_users": []},
-    {"name": "Daniel Bell", "aliases": ["DBX"], "sc_users": ["daniel-bell-143401415"], "mixcloud_users": []},
-    {"name": "Adam Pits", "aliases": [], "sc_users": ["adampits"], "mixcloud_users": []},
-    {"name": "Ida Daugaard", "aliases": [], "sc_users": ["ida-daugaard"], "mixcloud_users": []},
-    {"name": "Sinéad", "aliases": ["Sinead"], "sc_users": [], "mixcloud_users": []},
-    {"name": "DJ Pipe", "aliases": [], "sc_users": [], "mixcloud_users": []}
-  ],
-  "strategies": ["base", "deep", "alias", "sc_user", "own_auto", "mixcloud", "nts"]
+ "note": "Search-only experiment. Writes candidate lists under experiments/discovery/results. Touches no database.",
+ "artists": [
+  {
+   "name": "Fort Romeau",
+   "aliases": [],
+   "sc_users": [
+    "fortromeau"
+   ],
+   "mixcloud_users": []
+  },
+  {
+   "name": "Daniel Bell",
+   "aliases": [
+    "DBX"
+   ],
+   "sc_users": [
+    "daniel-bell-143401415"
+   ],
+   "mixcloud_users": []
+  },
+  {
+   "name": "Adam Pits",
+   "aliases": [],
+   "sc_users": [
+    "adampits"
+   ],
+   "mixcloud_users": []
+  },
+  {
+   "name": "Ida Daugaard",
+   "aliases": [],
+   "sc_users": [
+    "ida-daugaard"
+   ],
+   "mixcloud_users": []
+  },
+  {
+   "name": "Sinéad",
+   "aliases": [
+    "Sinead"
+   ],
+   "sc_users": [],
+   "mixcloud_users": []
+  },
+  {
+   "name": "DJ Pipe",
+   "aliases": [],
+   "sc_users": [],
+   "mixcloud_users": []
+  }
+ ],
+ "strategies": [
+  "base",
+  "deep2",
+  "mixcloud"
+ ],
+ "deep2": [
+  "scsearch200:\"{name}\"",
+  "scsearch100:\"{name}\" live",
+  "scsearch100:\"{name}\" mix",
+  "scsearch100:\"{name}\" set",
+  "scsearch100:\"{name}\" podcast",
+  "scsearch100:\"{name}\" radio",
+  "ytsearch100:\"{name}\" DJ set",
+  "ytsearch60:\"{name}\" live set",
+  "ytsearch60:\"{name}\" boiler room",
+  "ytsearch60:\"{name}\" radio"
+ ]
 }
